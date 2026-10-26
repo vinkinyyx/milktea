@@ -1,0 +1,3 @@
+render_fps,render_frames,simulated_seconds,expected_clock_steps,actual_clock_steps,actual_clock_ticks,box2d_world_steps,final_model_y,final_model_velocity,repeatable_across_cadence,status,notes
+30,60,2,120,120,120,,8023.666666666667,-1959.9999999999966,true,LOGIC_PASS,"FixedClock with deterministic callback model only; not Cocos/Box2D runtime."
+60,120,2,120,120,120,,8023.666666666667,-1959.9999999999966,true,LOGIC_PASS,"FixedClock with deterministic callback model only; not Cocos/Box2D runtime."

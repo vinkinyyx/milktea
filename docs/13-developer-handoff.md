@@ -1,6 +1,6 @@
 # 初级开发者交接入口
 
-交接版本 v0.2；当前只有规格、契约与文档工具，没有 Cocos 游戏工程。下面的工程路径是要创建的目标路径，不能当作已存在的可运行程序。
+交接版本 v0.2；P1-A 已建立 `client/` 下的 Cocos Creator 工程骨架、PhysicsLab 场景源、配置/坐标/时钟核心模块和 Box2D 适配器。当前环境没有安装 Creator，场景导入、运行与引擎物理验收仍未完成；不能把纯逻辑检查视作运行通过。打开步骤见 [client/README](../client/README.md)，逐项结果见 [P1-A 证据](../evidence/P1-A/20261027-p1a-foundation/acceptance.md)。
 
 ## 1. 开工顺序
 

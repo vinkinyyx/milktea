@@ -1,0 +1,10 @@
+Static structure verification: PASS
+Scope: client/assets resources and P1-A evidence JSON/CSV
+Parsed scene/json/meta resources: PASS
+Asset files with matching .meta files: PASS
+Unique resource UUID count: 20
+Boot.scene and PhysicsLab.scene local __id__ references: PASS
+Scene script UUID references resolved to .ts.meta: PASS
+Evidence JSON parses: PASS
+Evidence CSV column counts: PASS
+Creator editor importer/runtime compatibility: NOT RUN (Creator unavailable)

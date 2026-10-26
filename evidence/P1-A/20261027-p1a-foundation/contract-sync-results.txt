@@ -1,0 +1,6 @@
+Command: python tools/sync_client_contracts.py --check
+Result: PASS
+Source: contracts/types.ts
+Client mirror: client/assets/scripts/contracts/types.ts
+Byte equality: true
+SHA-256: da462b5e3b438d70b667925aef1aac17a0cc240c9121dda31b4ce1404ad4e23f

@@ -1,0 +1,19 @@
+Environment probe, 2026-10-27, PowerShell:
+
+Checked command discovery:
+  Get-Command CocosCreator,CocosCreator.exe -ErrorAction SilentlyContinue
+Result: no matching command found.
+
+Checked top-level directories in:
+  C:\Program Files
+  C:\Program Files (x86)
+  %LOCALAPPDATA%\Programs
+Filtered directory names containing "Cocos".
+Result: no matching directory found.
+
+Available independent runtimes:
+  node --version  -> v24.13.0
+  npm --version   -> 11.6.2
+  python --version -> Python 3.14.3
+
+Conclusion: Creator editor patch, integrated Box2D backend, preview runtime and build targets are not available for verification in this environment.

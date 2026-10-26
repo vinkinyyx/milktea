@@ -1,0 +1,21 @@
+{
+  "config": "PASS",
+  "validationErrors": "PASS",
+  "cadence30": {
+    "y": 8023.666666666667,
+    "velocity": -1959.9999999999966,
+    "steps": 120,
+    "tick": 120
+  },
+  "cadence60": {
+    "y": 8023.666666666667,
+    "velocity": -1959.9999999999966,
+    "steps": 120,
+    "tick": 120
+  },
+  "repeatability30": "PASS",
+  "pauseResumeAndOverload": "PASS",
+  "coordinateMapping": "PASS",
+  "cupGeometry": "PASS",
+  "narrowestCupFit": "PASS"
+}

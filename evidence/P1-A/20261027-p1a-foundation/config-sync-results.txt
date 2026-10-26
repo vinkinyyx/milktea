@@ -1,0 +1,6 @@
+Command: python tools/sync_design_config.py --check
+Result: PASS
+Source: config/design-baseline.json
+Client resource: client/assets/resources/config/design-baseline.json
+Byte equality: true
+SHA-256: 973eae177ac05c4a7076543323f7af479d4aaf065c3a2e380a6655df3ce6747f
