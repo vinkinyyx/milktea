@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "design_rules_version": "design-v0.1",
+  "status": "unimplemented_tuning_seed",
+  "baseline_date": "2026-10-26",
+  "product": {
+    "working_title": "奶茶挤挤",
+    "primary_platform": "douyin_minigame",
+    "rendering": "2d_with_volumetric_art",
+    "prototype_stage": "classic",
+    "prototype_ads": false,
+    "prototype_network": false
+  },
+  "viewport": {
+    "width_du": 750,
+    "height_du": 1334,
+    "world_origin": "bottom_left",
+    "ui_origin": "top_left",
+    "du_per_spec_physics_unit": 100
+  },
+  "physics": {
+    "fixed_hz": 60,
+    "gravity": {
+      "x": 0,
+      "y": -9.8
+    },
+    "backend": "creator_integrated_box2d_pending_spike",
+    "density_relative": 1,
+    "friction": 0.25,
+    "restitution": 0.12,
+    "linear_damping": 0.05,
+    "angular_damping": 0.25,
+    "max_linear_speed": 12,
+    "max_angular_speed": 12,
+    "velocity_iterations": 8,
+    "position_iterations": 8,
+    "max_catchup_steps": 5,
+    "shape": "circle",
+    "sleep": true
+  },
+  "cup": {
+    "center_x_du": 375,
+    "inner_bottom_y_du": 260,
+    "inner_top_y_du": 1060,
+    "bottom_width_du": 360,
+    "top_width_du": 520,
+    "spawn_y_du": 1130,
+    "danger_line_y_du": 1000
+  },
+  "drop": {
+    "min_interval_seconds": 0.45,
+    "generator": "xorshift32_v1_nonzero_seed",
+    "spawn_levels": [
+      {
+        "level": 1,
+        "weight": 55
+      },
+      {
+        "level": 2,
+        "weight": 30
+      },
+      {
+        "level": 3,
+        "weight": 15
+      }
+    ],
+    "next_preview_count": 1
+  },
+  "danger": {
+    "continuous_seconds": 3,
+    "spawn_grace_seconds": 0.75,
+    "spill_grace_seconds": 0.5,
+    "merge_child_inherits_eligibility": true,
+    "paused_time_counts": false,
+    "shake_time_counts": true
+  },
+  "shake": {
+    "base_per_run": 2,
+    "extra_max_per_run": 5,
+    "duration_seconds": 0.8,
+    "cooldown_seconds": 0.5,
+    "acceleration_amplitude": 3.2,
+    "frequency_hz": 2.5,
+    "visual_offset_max_du": 6,
+    "guaranteed_merge": false
+  },
+  "reward": {
+    "stage": "P3",
+    "channel": "published_gameplay_video",
+    "daily_grant_limit": 5,
+    "timezone": "Asia/Shanghai",
+    "expires_at_next_local_midnight": true,
+    "max_rewards_per_run": 1,
+    "one_reward_per_content": true,
+    "server_authoritative": true
+  },
+  "ingredients": [
+    {
+      "level": 1,
+      "id": "sago",
+      "name": "西米团",
+      "radius_du": 18,
+      "merge_score": 0,
+      "units": 1
+    },
+    {
+      "level": 2,
+      "id": "red_bean",
+      "name": "红豆团",
+      "radius_du": 24,
+      "merge_score": 10,
+      "units": 2
+    },
+    {
+      "level": 3,
+      "id": "small_pearl",
+      "name": "小珍珠",
+      "radius_du": 32,
+      "merge_score": 30,
+      "units": 4
+    },
+    {
+      "level": 4,
+      "id": "coconut",
+      "name": "椰果",
+      "radius_du": 42,
+      "merge_score": 60,
+      "units": 8
+    },
+    {
+      "level": 5,
+      "id": "large_pearl",
+      "name": "大珍珠",
+      "radius_du": 55,
+      "merge_score": 100,
+      "units": 16
+    },
+    {
+      "level": 6,
+      "id": "grass_jelly",
+      "name": "仙草冻",
+      "radius_du": 70,
+      "merge_score": 150,
+      "units": 32
+    },
+    {
+      "level": 7,
+      "id": "pudding",
+      "name": "布丁",
+      "radius_du": 89,
+      "merge_score": 210,
+      "units": 64
+    },
+    {
+      "level": 8,
+      "id": "taro",
+      "name": "芋泥球",
+      "radius_du": 112,
+      "merge_score": 280,
+      "units": 128
+    },
+    {
+      "level": 9,
+      "id": "mochi",
+      "name": "麻薯团",
+      "radius_du": 140,
+      "merge_score": 360,
+      "units": 256
+    }
+  ],
+  "stages": [
+    {
+      "id": "classic",
+      "name": "经典原味奶茶",
+      "phase": "P1",
+      "cup_width_scale": 1,
+      "unlock_previous": null,
+      "unlock_score": 0
+    },
+    {
+      "id": "coconut_green",
+      "name": "椰果清香奶绿",
+      "phase": "P3",
+      "cup_width_scale": 0.95,
+      "unlock_previous": "classic",
+      "unlock_score": 500
+    },
+    {
+      "id": "taro_boba",
+      "name": "芋泥波波奶茶",
+      "phase": "P3",
+      "cup_width_scale": 0.9,
+      "unlock_previous": "coconut_green",
+      "unlock_score": 800
+    },
+    {
+      "id": "brown_sugar",
+      "name": "黑糖厚乳奶茶",
+      "phase": "P3",
+      "cup_width_scale": 0.85,
+      "unlock_previous": "taro_boba",
+      "unlock_score": 1100
+    },
+    {
+      "id": "mochi_special",
+      "name": "麻薯满满特调",
+      "phase": "P3",
+      "cup_width_scale": 0.8,
+      "unlock_previous": "brown_sugar",
+      "unlock_score": 1400
+    }
+  ],
+  "daily_challenge": {
+    "phase": "P4",
+    "drop_budget": 120,
+    "base_shakes": 2,
+    "extra_shakes": 0,
+    "settle_max_seconds": 5,
+    "retries": "unlimited_best",
+    "submission_policy": "same_beijing_calendar_day"
+  },
+  "audio": {
+    "music_default_gain": 0.35,
+    "sfx_default_gain": 0.7,
+    "total_voice_cap": 8,
+    "collision_global_per_second": 6,
+    "collision_body_interval_ms": 120,
+    "collision_min_normal_speed": 0.5,
+    "download_budget_mib": 2
+  },
+  "presentation": {
+    "particles_cap": 48,
+    "normal_squash_max": 0.08,
+    "mochi_squash_max": 0.12,
+    "danger_pulse_max_hz": 2
+  },
+  "budgets": {
+    "status": "provisional_report_only",
+    "gate": false,
+    "render_hz_primary": 60,
+    "render_hz_compatibility": 30,
+    "frame_p95_ms_primary": 20,
+    "frame_p95_ms_compatibility": 36,
+    "input_visible_p95_ms": 100,
+    "initial_package_mib": 3,
+    "initial_total_download_mib": 8,
+    "memory_peak_mib": 256,
+    "decoded_textures_mib": 32,
+    "stress_dynamic_bodies": 200
+  }
+}
+

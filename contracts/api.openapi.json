@@ -1,0 +1,4821 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Milktea design API",
+    "version": "0.2.0",
+    "description": "Contract-only. API routes not implemented. Errors use error.code; schemas and types.ts must stay synchronized."
+  },
+  "servers": [
+    {
+      "url": "https://api.example.invalid",
+      "description": "Placeholder; set real HTTPS host at P3."
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/v1/sessions/exchange": {
+      "post": {
+        "operationId": "op1_exchange",
+        "summary": "exchange platform login code",
+        "tags": [
+          "auth"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Session"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "platform",
+                  "appId",
+                  "code"
+                ],
+                "properties": {
+                  "platform": {
+                    "const": "douyin"
+                  },
+                  "appId": {
+                    "type": "string"
+                  },
+                  "code": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs": {
+      "post": {
+        "operationId": "op2_start",
+        "summary": "start authoritative run",
+        "tags": [
+          "runs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/RunStarted"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunStart"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{runId}/checkpoints": {
+      "put": {
+        "operationId": "op3_save",
+        "summary": "save checkpoint with CAS",
+        "tags": [
+          "runs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UUID"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Acknowledgement"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "expectedRevision",
+                  "snapshot"
+                ],
+                "properties": {
+                  "expectedRevision": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "snapshot": {
+                    "$ref": "#/components/schemas/Snapshot"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{runId}/commands": {
+      "get": {
+        "operationId": "op4_get",
+        "summary": "get committed commands",
+        "tags": [
+          "runs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UUID"
+            }
+          },
+          {
+            "name": "afterSequence",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": -1,
+              "default": -1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "commands"
+                      ],
+                      "properties": {
+                        "commands": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Command"
+                          }
+                        }
+                      }
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{runId}/finish": {
+      "post": {
+        "operationId": "op5_finish",
+        "summary": "finish and verify run",
+        "tags": [
+          "runs"
+        ],
+        "description": "Returns PENDING; poll result. Same log hash returns same settlement; differing finish body is409.",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UUID"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/RunResult"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Finish"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{runId}/result": {
+      "get": {
+        "operationId": "op6_get",
+        "summary": "get verification result",
+        "tags": [
+          "runs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UUID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/RunResult"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/progress": {
+      "get": {
+        "operationId": "op7_get",
+        "summary": "get authoritative progress",
+        "tags": [
+          "progress"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CloudProgress"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/progress/cloud-save": {
+      "put": {
+        "operationId": "op8_update",
+        "summary": "update progress with CAS",
+        "tags": [
+          "progress"
+        ],
+        "description": "Client cannot set server best_scores or coupons. Imported local unlocks marked noncompetitive origin.",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CloudProgress"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "expectedRevision",
+                  "settings",
+                  "activeRun",
+                  "importedLocalStageIds"
+                ],
+                "properties": {
+                  "expectedRevision": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "settings": {
+                    "$ref": "#/components/schemas/Settings"
+                  },
+                  "activeRun": {
+                    "anyOf": [
+                      {
+                        "$ref": "#/components/schemas/Snapshot"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "importedLocalStageIds": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/StageId"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/share-rewards/prepare": {
+      "post": {
+        "operationId": "op9_prepare",
+        "summary": "prepare share reward intent",
+        "tags": [
+          "rewards"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/RewardIntent"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "runId"
+                ],
+                "properties": {
+                  "runId": {
+                    "$ref": "#/components/schemas/UUID"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/share-rewards/claim": {
+      "post": {
+        "operationId": "op10_verify",
+        "summary": "verify share and grant once",
+        "tags": [
+          "rewards"
+        ],
+        "description": "Must verify provider proof and ownership before a transaction; no client-only success. DAILY_LIMIT and ALREADY_CLAIMED are409 codes.",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/RewardGrant"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RewardClaim"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/coupons": {
+      "get": {
+        "operationId": "op11_get",
+        "summary": "get usable coupon balance",
+        "tags": [
+          "rewards"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CouponBalance"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{runId}/shakes": {
+      "post": {
+        "operationId": "op12_consume",
+        "summary": "consume one coupon and commit command",
+        "tags": [
+          "rewards"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UUID"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ShakeConsumed"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "commandId",
+                  "sequence",
+                  "tick"
+                ],
+                "properties": {
+                  "commandId": {
+                    "$ref": "#/components/schemas/UUID"
+                  },
+                  "sequence": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "tick": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/leaderboards": {
+      "get": {
+        "operationId": "op13_get",
+        "summary": "get verified leaderboard",
+        "tags": [
+          "ranking"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "stageId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/StageId"
+            }
+          },
+          {
+            "name": "rulesVersion",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "boardType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/BoardType"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50,
+              "default": 20
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Leaderboard"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/daily-challenges/today": {
+      "get": {
+        "operationId": "op14_get",
+        "summary": "get Beijing daily challenge",
+        "tags": [
+          "challenges"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Daily"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/friend-challenges": {
+      "post": {
+        "operationId": "op15_create",
+        "summary": "create fixed budget challenge",
+        "tags": [
+          "challenges"
+        ],
+        "description": "Source must be verified daily/friend-mode standard run with120-drop budget; no classic random assisted run may seed unequal challenge.",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/FriendChallenge"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "sourceRunId"
+                ],
+                "properties": {
+                  "sourceRunId": {
+                    "$ref": "#/components/schemas/UUID"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/friend-challenges/{challengeId}/join": {
+      "post": {
+        "operationId": "op16_join",
+        "summary": "join challenge once",
+        "tags": [
+          "challenges"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "challengeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UUID"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/FriendChallenge"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/friend-challenges/{challengeId}": {
+      "get": {
+        "operationId": "op17_get",
+        "summary": "get challenge current status",
+        "tags": [
+          "challenges"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "challengeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UUID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/FriendChallenge"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/catalog": {
+      "get": {
+        "operationId": "op18_get",
+        "summary": "get cosmetic catalog and inventory",
+        "tags": [
+          "collection"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Catalog"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cosmetics/equip": {
+      "post": {
+        "operationId": "op19_equip",
+        "summary": "equip owned cosmetic",
+        "tags": [
+          "collection"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Acknowledgement"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "cosmeticId"
+                ],
+                "properties": {
+                  "cosmeticId": {
+                    "type": "string",
+                    "maxLength": 64
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/rewarded-ads/prepare": {
+      "post": {
+        "operationId": "op20_prepare",
+        "summary": "prepare ad intent when enabled",
+        "tags": [
+          "ads"
+        ],
+        "description": "Feature disabled until reward policy approved; does not issue shake coupons.",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/RewardIntent"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "placementId",
+                  "policyVersion"
+                ],
+                "properties": {
+                  "placementId": {
+                    "type": "string"
+                  },
+                  "policyVersion": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/rewarded-ads/claim": {
+      "post": {
+        "operationId": "op21_verify",
+        "summary": "verify completed ad and grant",
+        "tags": [
+          "ads"
+        ],
+        "description": "Disabled unless a nonzero explicit cosmetic-token policy exists; never modifies ranked scores or share coupon quota.",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Envelope; serverTime uses UTC ISO8601.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/AdGrant"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "intentId",
+                  "providerProof"
+                ],
+                "properties": {
+                  "intentId": {
+                    "$ref": "#/components/schemas/UUID"
+                  },
+                  "providerProof": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{runId}/logs": {
+      "post": {
+        "operationId": "appendRunLogs",
+        "summary": "Append a bounded command/event batch before finishing a long run",
+        "tags": [
+          "runs"
+        ],
+        "description": "Player ownership, contiguous sequences, predecessor hash and canonical hash required. Idempotent by (runId,firstSequence,batchHash). Same sequence with changed payload is 409. Existing authorized coupon commands must match, not be inserted twice. Body limit 5 MiB.",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UUID"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128
+            },
+            "description": "Same player+operation+key with different body returns409; retain records at least7days; financial uniqueness persists."
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid fields or unsupported rules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Session expired or invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Capability or policy unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing resource or not owned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency body conflict / stale revision / quota conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request larger than5MiB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary dependency failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Batch acknowledged",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "data",
+                    "requestId",
+                    "serverTime"
+                  ],
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/LogReceipt"
+                    },
+                    "requestId": {
+                      "$ref": "#/components/schemas/UUID"
+                    },
+                    "serverTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogBatch"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Opaque random session token; server stores only hash."
+      }
+    },
+    "schemas": {
+      "UUID": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "StageId": {
+        "type": "string",
+        "enum": [
+          "classic",
+          "coconut_green",
+          "taro_boba",
+          "brown_sugar",
+          "mochi_special"
+        ]
+      },
+      "BoardType": {
+        "type": "string",
+        "enum": [
+          "standard",
+          "assisted"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "error",
+          "requestId",
+          "serverTime"
+        ],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": [
+              "code",
+              "message",
+              "retryable"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "retryable": {
+                "type": "boolean"
+              }
+            }
+          },
+          "requestId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "serverTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Session": {
+        "type": "object",
+        "required": [
+          "playerId",
+          "accessToken",
+          "expiresAt"
+        ],
+        "properties": {
+          "playerId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "accessToken": {
+            "type": "string",
+            "description": "Opaque access token; store in memory/secure platform storage; never log."
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "RunStart": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stageId",
+          "mode",
+          "rulesVersion"
+        ],
+        "properties": {
+          "stageId": {
+            "$ref": "#/components/schemas/StageId"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "classic",
+              "daily",
+              "friend"
+            ]
+          },
+          "rulesVersion": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "challengeId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "dailyId": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        }
+      },
+      "RunStarted": {
+        "type": "object",
+        "required": [
+          "runId",
+          "seed",
+          "rulesVersion",
+          "boardType",
+          "baseShakes",
+          "extraShakeLimit",
+          "dropBudget"
+        ],
+        "properties": {
+          "runId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "seed": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4294967295
+          },
+          "rulesVersion": {
+            "type": "string"
+          },
+          "boardType": {
+            "$ref": "#/components/schemas/BoardType"
+          },
+          "baseShakes": {
+            "type": "integer",
+            "const": 2
+          },
+          "extraShakeLimit": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "dropBudget": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          }
+        }
+      },
+      "Snapshot": {
+        "type": "object",
+        "description": "Exact wire fields mirror RunSnapshot in types.ts; all physics coordinates DU. Schema is not a substitute for server verification.",
+        "required": [
+          "saveSchemaVersion",
+          "rulesVersion",
+          "runId",
+          "epoch",
+          "revision",
+          "stageId",
+          "mode",
+          "boardType",
+          "state",
+          "tick",
+          "nextEntityId",
+          "nextCommandSequence",
+          "score",
+          "maxLevel",
+          "dropIndex",
+          "currentLevel",
+          "nextLevel",
+          "rng",
+          "ingredients",
+          "shake",
+          "dangerTicks",
+          "terminalReason",
+          "checksum",
+          "appVersion",
+          "lastDropTick",
+          "settleStartedTick",
+          "challenge"
+        ],
+        "properties": {
+          "saveSchemaVersion": {
+            "type": "integer",
+            "const": 1
+          },
+          "rulesVersion": {
+            "type": "string"
+          },
+          "appVersion": {
+            "type": "string"
+          },
+          "runId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "epoch": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "stageId": {
+            "$ref": "#/components/schemas/StageId"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "classic",
+              "daily",
+              "friend"
+            ]
+          },
+          "boardType": {
+            "$ref": "#/components/schemas/BoardType"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "BOOT",
+              "LOADING",
+              "MENU",
+              "PLAYING",
+              "PAUSED",
+              "SETTLING",
+              "RESULTS"
+            ]
+          },
+          "tick": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "nextEntityId": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "nextCommandSequence": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "score": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "maxLevel": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "dropIndex": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "currentLevel": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "nextLevel": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "rng": {
+            "type": "object",
+            "required": [
+              "algorithm",
+              "state",
+              "drawCount"
+            ],
+            "properties": {
+              "algorithm": {
+                "const": "xorshift32_v1_nonzero_seed"
+              },
+              "state": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 4294967295
+              },
+              "drawCount": {
+                "type": "integer",
+                "minimum": 2
+              }
+            }
+          },
+          "ingredients": {
+            "type": "array",
+            "maxItems": 2000,
+            "items": {
+              "$ref": "#/components/schemas/IngredientState"
+            }
+          },
+          "shake": {
+            "type": "object",
+            "required": [
+              "baseUsed",
+              "extraUsed",
+              "activeStartTick",
+              "cooldownUntilTick"
+            ],
+            "properties": {
+              "baseUsed": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "extraUsed": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 5
+              },
+              "activeStartTick": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "cooldownUntilTick": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "dangerTicks": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 180
+          },
+          "terminalReason": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "CUP_FULL",
+              "SPILLED",
+              "BUDGET_EXHAUSTED",
+              "ABANDONED",
+              "TECHNICAL_ERROR",
+              null
+            ]
+          },
+          "checksum": {
+            "type": "string"
+          },
+          "lastDropTick": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "settleStartedTick": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "challenge": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "deadlineAt",
+              "dropBudget"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "deadlineAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "dropBudget": {
+                "const": 120
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Vec2": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "x",
+          "y"
+        ],
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
+        }
+      },
+      "IngredientState": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "entityId",
+          "level",
+          "positionDu",
+          "velocityDuPerSecond",
+          "angleRadians",
+          "angularVelocity",
+          "bornTick",
+          "dangerEligible",
+          "hasEnteredCup",
+          "spillTicks",
+          "sleeping"
+        ],
+        "properties": {
+          "entityId": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "positionDu": {
+            "$ref": "#/components/schemas/Vec2"
+          },
+          "velocityDuPerSecond": {
+            "$ref": "#/components/schemas/Vec2"
+          },
+          "angleRadians": {
+            "type": "number"
+          },
+          "angularVelocity": {
+            "type": "number"
+          },
+          "bornTick": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "dangerEligible": {
+            "type": "boolean"
+          },
+          "hasEnteredCup": {
+            "type": "boolean"
+          },
+          "spillTicks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sleeping": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Command": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "runId",
+              "commandId",
+              "sequence",
+              "tick",
+              "kind",
+              "xDu"
+            ],
+            "properties": {
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "commandId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "sequence": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "DROP"
+              },
+              "xDu": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 750
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "runId",
+              "commandId",
+              "sequence",
+              "tick",
+              "kind",
+              "source"
+            ],
+            "properties": {
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "commandId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "sequence": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "SHAKE"
+              },
+              "source": {
+                "const": "base"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "runId",
+              "commandId",
+              "sequence",
+              "tick",
+              "kind",
+              "source",
+              "consumeEventId"
+            ],
+            "properties": {
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "commandId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "sequence": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "SHAKE"
+              },
+              "source": {
+                "const": "coupon"
+              },
+              "consumeEventId": {
+                "$ref": "#/components/schemas/UUID"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "runId",
+              "commandId",
+              "sequence",
+              "tick",
+              "kind"
+            ],
+            "properties": {
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "commandId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "sequence": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "PAUSE"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "runId",
+              "commandId",
+              "sequence",
+              "tick",
+              "kind"
+            ],
+            "properties": {
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "commandId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "sequence": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "RESUME"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "runId",
+              "commandId",
+              "sequence",
+              "tick",
+              "kind"
+            ],
+            "properties": {
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "commandId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "sequence": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "ABANDON"
+              }
+            }
+          }
+        ]
+      },
+      "Event": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "eventId",
+              "runId",
+              "tick",
+              "kind",
+              "entityId",
+              "level",
+              "dropIndex"
+            ],
+            "properties": {
+              "eventId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "IngredientDropped"
+              },
+              "entityId": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "level": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "dropIndex": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "eventId",
+              "runId",
+              "tick",
+              "kind",
+              "parents",
+              "childId",
+              "childLevel",
+              "scoreDelta",
+              "units",
+              "positionDu"
+            ],
+            "properties": {
+              "eventId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "MergeCommitted"
+              },
+              "parents": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "childId": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "childLevel": {
+                "type": "integer",
+                "minimum": 2,
+                "maximum": 9
+              },
+              "scoreDelta": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "units": {
+                "type": "integer",
+                "minimum": 2,
+                "maximum": 256
+              },
+              "positionDu": {
+                "$ref": "#/components/schemas/Vec2"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "eventId",
+              "runId",
+              "tick",
+              "kind",
+              "source"
+            ],
+            "properties": {
+              "eventId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "ShakeConsumed"
+              },
+              "source": {
+                "const": "base"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "eventId",
+              "runId",
+              "tick",
+              "kind",
+              "source",
+              "consumeEventId"
+            ],
+            "properties": {
+              "eventId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "ShakeConsumed"
+              },
+              "source": {
+                "const": "coupon"
+              },
+              "consumeEventId": {
+                "$ref": "#/components/schemas/UUID"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "eventId",
+              "runId",
+              "tick",
+              "kind",
+              "dangerTicks"
+            ],
+            "properties": {
+              "eventId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "DangerChanged"
+              },
+              "dangerTicks": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 180
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "eventId",
+              "runId",
+              "tick",
+              "kind",
+              "reason",
+              "score"
+            ],
+            "properties": {
+              "eventId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "runId": {
+                "$ref": "#/components/schemas/UUID"
+              },
+              "tick": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "const": "RunEnded"
+              },
+              "reason": {
+                "enum": [
+                  "CUP_FULL",
+                  "SPILLED",
+                  "BUDGET_EXHAUSTED",
+                  "ABANDONED",
+                  "TECHNICAL_ERROR"
+                ]
+              },
+              "score": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        ]
+      },
+      "Finish": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "finalSnapshot",
+          "commands",
+          "events",
+          "clientScore",
+          "terminalReason"
+        ],
+        "properties": {
+          "finalSnapshot": {
+            "$ref": "#/components/schemas/Snapshot"
+          },
+          "commands": {
+            "type": "array",
+            "maxItems": 1000,
+            "items": {
+              "$ref": "#/components/schemas/Command"
+            }
+          },
+          "events": {
+            "type": "array",
+            "maxItems": 2000,
+            "items": {
+              "$ref": "#/components/schemas/Event"
+            }
+          },
+          "clientScore": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "terminalReason": {
+            "enum": [
+              "CUP_FULL",
+              "SPILLED",
+              "BUDGET_EXHAUSTED",
+              "ABANDONED",
+              "TECHNICAL_ERROR"
+            ]
+          }
+        },
+        "description": "Final small log tail plus final snapshot. Earlier commands/events must be acknowledged using POST logs. Server verifies complete stored sequence; never silently truncates a long unlimited run."
+      },
+      "RunResult": {
+        "type": "object",
+        "required": [
+          "runId",
+          "status",
+          "score",
+          "maxLevel",
+          "boardType",
+          "unlockedStageIds"
+        ],
+        "properties": {
+          "runId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "status": {
+            "enum": [
+              "LOCAL_ONLY",
+              "PENDING",
+              "STRUCTURAL_ONLY",
+              "VERIFIED",
+              "REJECTED"
+            ]
+          },
+          "score": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "maxLevel": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1,
+            "maximum": 9
+          },
+          "boardType": {
+            "$ref": "#/components/schemas/BoardType"
+          },
+          "unlockedStageIds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StageId"
+            }
+          },
+          "rejectionCode": {
+            "type": "string"
+          }
+        }
+      },
+      "Settings": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "musicGain",
+          "sfxGain",
+          "reducedMotion",
+          "dropMode",
+          "tutorialCompleted"
+        ],
+        "properties": {
+          "musicGain": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "sfxGain": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "reducedMotion": {
+            "type": "boolean"
+          },
+          "dropMode": {
+            "enum": [
+              "drag_release",
+              "tap_confirm"
+            ]
+          },
+          "tutorialCompleted": {
+            "type": "boolean"
+          }
+        }
+      },
+      "CloudProgress": {
+        "type": "object",
+        "required": [
+          "revision",
+          "unlockedStageIds",
+          "discoveredLevels",
+          "settings",
+          "activeRun"
+        ],
+        "properties": {
+          "revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "unlockedStageIds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StageId"
+            }
+          },
+          "discoveredLevels": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9
+            }
+          },
+          "settings": {
+            "$ref": "#/components/schemas/Settings"
+          },
+          "activeRun": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Snapshot"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "CouponBalance": {
+        "type": "object",
+        "required": [
+          "beijingDay",
+          "dailyGranted",
+          "dailyLimit",
+          "available",
+          "expiresAt"
+        ],
+        "properties": {
+          "beijingDay": {
+            "type": "string",
+            "format": "date"
+          },
+          "dailyGranted": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "dailyLimit": {
+            "type": "integer",
+            "const": 5
+          },
+          "available": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "expiresAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      },
+      "RewardIntent": {
+        "type": "object",
+        "required": [
+          "intentId",
+          "expiresAt",
+          "policyVersion"
+        ],
+        "properties": {
+          "intentId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "policyVersion": {
+            "type": "string"
+          }
+        }
+      },
+      "RewardClaim": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "intentId",
+          "runId",
+          "providerContentId",
+          "providerProof"
+        ],
+        "properties": {
+          "intentId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "runId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "providerContentId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "providerProof": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16384
+          }
+        }
+      },
+      "RewardGrant": {
+        "type": "object",
+        "required": [
+          "grantId",
+          "duplicate",
+          "granted",
+          "balance"
+        ],
+        "properties": {
+          "grantId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "duplicate": {
+            "type": "boolean"
+          },
+          "granted": {
+            "type": "integer",
+            "const": 1
+          },
+          "balance": {
+            "$ref": "#/components/schemas/CouponBalance"
+          }
+        }
+      },
+      "ShakeConsumed": {
+        "type": "object",
+        "required": [
+          "consumeEventId",
+          "duplicate",
+          "runExtraUsed",
+          "boardType",
+          "balance"
+        ],
+        "properties": {
+          "consumeEventId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "duplicate": {
+            "type": "boolean"
+          },
+          "runExtraUsed": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "boardType": {
+            "const": "assisted"
+          },
+          "balance": {
+            "$ref": "#/components/schemas/CouponBalance"
+          }
+        }
+      },
+      "LeaderboardEntry": {
+        "type": "object",
+        "required": [
+          "playerId",
+          "displayName",
+          "avatarUrl",
+          "score",
+          "rank",
+          "isSelf"
+        ],
+        "properties": {
+          "playerId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "avatarUrl": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "score": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "rank": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "isSelf": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Leaderboard": {
+        "type": "object",
+        "required": [
+          "entries",
+          "self",
+          "totalPlayers",
+          "strictlyBelowSelf",
+          "asOf",
+          "nextCursor"
+        ],
+        "properties": {
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LeaderboardEntry"
+            }
+          },
+          "self": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LeaderboardEntry"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "totalPlayers": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "strictlyBelowSelf": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "asOf": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nextCursor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "Daily": {
+        "type": "object",
+        "required": [
+          "dailyId",
+          "stageId",
+          "rulesVersion",
+          "seed",
+          "dropBudget",
+          "baseShakes",
+          "extraShakes",
+          "startsAt",
+          "submitBefore"
+        ],
+        "properties": {
+          "dailyId": {
+            "type": "string",
+            "format": "date"
+          },
+          "stageId": {
+            "$ref": "#/components/schemas/StageId"
+          },
+          "rulesVersion": {
+            "type": "string"
+          },
+          "seed": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "dropBudget": {
+            "type": "integer",
+            "const": 120
+          },
+          "baseShakes": {
+            "const": 2
+          },
+          "extraShakes": {
+            "const": 0
+          },
+          "startsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "submitBefore": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "FriendChallenge": {
+        "type": "object",
+        "required": [
+          "challengeId",
+          "stageId",
+          "rulesVersion",
+          "seed",
+          "dropBudget",
+          "baseShakes",
+          "extraShakes",
+          "expiresAt",
+          "status",
+          "result"
+        ],
+        "properties": {
+          "challengeId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "stageId": {
+            "$ref": "#/components/schemas/StageId"
+          },
+          "rulesVersion": {
+            "type": "string"
+          },
+          "seed": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "dropBudget": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "baseShakes": {
+            "const": 2
+          },
+          "extraShakes": {
+            "const": 0
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "closed"
+            ]
+          },
+          "result": {
+            "enum": [
+              "pending",
+              "win",
+              "tie",
+              "loss"
+            ]
+          }
+        }
+      },
+      "Catalog": {
+        "type": "object",
+        "required": [
+          "items",
+          "ownedIds",
+          "equippedId"
+        ],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "cosmeticId",
+                "artAssetId",
+                "unlockKind",
+                "unlockKey"
+              ],
+              "properties": {
+                "cosmeticId": {
+                  "type": "string"
+                },
+                "artAssetId": {
+                  "type": "string"
+                },
+                "unlockKind": {
+                  "enum": [
+                    "achievement",
+                    "default"
+                  ]
+                },
+                "unlockKey": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "ownedIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "equippedId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "Acknowledgement": {
+        "type": "object",
+        "required": [
+          "accepted"
+        ],
+        "properties": {
+          "accepted": {
+            "type": "boolean"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "AdGrant": {
+        "type": "object",
+        "required": [
+          "grantId",
+          "duplicate",
+          "policyVersion",
+          "rewardKind",
+          "amount"
+        ],
+        "properties": {
+          "grantId": {
+            "$ref": "#/components/schemas/UUID"
+          },
+          "duplicate": {
+            "type": "boolean"
+          },
+          "policyVersion": {
+            "type": "string"
+          },
+          "rewardKind": {
+            "const": "cosmetic_token"
+          },
+          "amount": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      },
+      "LogBatch": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "firstSequence",
+          "previousBatchHash",
+          "commands",
+          "events",
+          "batchHash"
+        ],
+        "properties": {
+          "firstSequence": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "previousBatchHash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "commands": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1000,
+            "items": {
+              "$ref": "#/components/schemas/Command"
+            }
+          },
+          "events": {
+            "type": "array",
+            "maxItems": 2000,
+            "items": {
+              "$ref": "#/components/schemas/Event"
+            }
+          },
+          "batchHash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      },
+      "LogReceipt": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "lastSequence",
+          "batchHash",
+          "duplicate"
+        ],
+        "properties": {
+          "lastSequence": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "batchHash": {
+            "type": "string"
+          },
+          "duplicate": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

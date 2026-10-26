@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "authored_markdown_files": 38,
+  "local_links_checked": 168,
+  "skills_read_and_snapshotted": 13,
+  "snapshot_files": 18,
+  "ingredients": 9,
+  "stages": 5,
+  "requirements": 30,
+  "merge_area_release_percent_range": [
+    11.11,
+    21.88
+  ],
+  "full_level_one_to_mochi_score": 9680,
+  "errors": [],
+  "not_run": [
+    "game_implementation",
+    "physics_integration",
+    "engine_build",
+    "device_performance",
+    "game_art_visual_review",
+    "audio_listening",
+    "human_playtest",
+    "platform_review"
+  ],
+  "phase_designs": 13,
+  "image_items": 213,
+  "image_methods": {
+    "new_draw": 137,
+    "derived": 55,
+    "engine": 16,
+    "platform": 5
+  },
+  "api_operations": 22,
+  "api_local_refs_checked": 306,
+  "wire_fixture_checks": 12,
+  "phase_acceptance_cases": 45,
+  "schema_validation_scope": "Authored JSON-schema subset, internal refs and fixtures only; not a full OpenAPI certification"
+}

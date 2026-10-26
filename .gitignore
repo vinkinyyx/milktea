@@ -1,0 +1,21 @@
+# Local automation traces and caches; project evidence under output/ is retained.
+.playwright-cli/
+.playwright/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+node_modules/
+library/
+temp/
+local/
+build/
+dist/
+coverage/
+*.log
+*.pem
+*.key
+

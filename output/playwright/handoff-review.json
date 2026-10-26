@@ -1,0 +1,97 @@
+{
+  "version": "handoff-v0.2",
+  "date": "2026-10-27",
+  "status": "pass",
+  "scope": "documentation_and_inventory_only",
+  "browser": "Microsoft Edge via Playwright CLI",
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      375,
+      812
+    ]
+  ],
+  "checks": [
+    {
+      "id": "handbook_sections",
+      "actual": 14,
+      "status": "pass"
+    },
+    {
+      "id": "desktop_navigation",
+      "actual": "#phase-3 / P1-B",
+      "status": "pass"
+    },
+    {
+      "id": "handbook_overflow",
+      "actual": {
+        "desktop": 1440,
+        "mobile": 375
+      },
+      "status": "pass"
+    },
+    {
+      "id": "image_catalog_total",
+      "actual": 213,
+      "status": "pass"
+    },
+    {
+      "id": "combined_filter",
+      "input": {
+        "search": "spr_ing_",
+        "phase": "P1",
+        "method": "new_draw"
+      },
+      "actual": 9,
+      "status": "pass"
+    },
+    {
+      "id": "no_result_search",
+      "input": "no_such_asset_zz",
+      "actual": 0,
+      "status": "pass"
+    },
+    {
+      "id": "catalog_mobile",
+      "actual": {
+        "scrollWidth": 375,
+        "firstField": "类别"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "complete_design",
+      "actual": {
+        "sections": 17,
+        "wireframeLoaded": true,
+        "scrollWidth": 1440
+      },
+      "status": "pass"
+    },
+    {
+      "id": "console",
+      "actual": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "status": "pass"
+    }
+  ],
+  "screenshots": [
+    "handoff-desktop.png",
+    "handoff-mobile.png",
+    "image-catalog-desktop.png",
+    "image-catalog-mobile.png"
+  ],
+  "not_run": [
+    "game",
+    "physics_integration",
+    "device_game_performance",
+    "SQL_migration",
+    "real_platform_publish_or_rewards",
+    "final_game_art_or_audio"
+  ]
+}

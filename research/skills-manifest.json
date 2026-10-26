@@ -1,0 +1,168 @@
+{
+  "observed_date": "2026-10-26",
+  "purpose": "只读学习快照，未安装到全局技能目录，未执行上游脚本",
+  "files": [
+    {
+      "repo": "Fable-Forge/cocos-creator-mobile-game",
+      "path": "SKILL.md",
+      "ref": "2909edb86273a011b1d877b79bc0eaceb0f6dacb",
+      "blob_sha": "eae6235488d7009ef7e2b348d485df010537503d",
+      "source_url": "https://github.com/Fable-Forge/cocos-creator-mobile-game/blob/2909edb86273a011b1d877b79bc0eaceb0f6dacb/SKILL.md",
+      "local_path": "research/upstream/Fable-Forge/cocos-creator-mobile-game/SKILL.md",
+      "snapshot_sha256": "a768e3b0a76d0dadf3df8942877236c910aa10497f424e092f448339a6a6fe1f"
+    },
+    {
+      "repo": "Fable-Forge/cocos-creator-mobile-game",
+      "path": "references/cocos-workflow.md",
+      "ref": "2909edb86273a011b1d877b79bc0eaceb0f6dacb",
+      "blob_sha": "20db8c5dd6bf278885c08c3050dd4fb368864f85",
+      "source_url": "https://github.com/Fable-Forge/cocos-creator-mobile-game/blob/2909edb86273a011b1d877b79bc0eaceb0f6dacb/references/cocos-workflow.md",
+      "local_path": "research/upstream/Fable-Forge/cocos-creator-mobile-game/references/cocos-workflow.md",
+      "snapshot_sha256": "d5979a54bfa0a947c21dcc5671fc9bd5415541a57f76cdfd02db624e8266ac1f"
+    },
+    {
+      "repo": "edhahn/agent-skills",
+      "path": "game-designer/SKILL.md",
+      "ref": "ffc6fc4bf1408bc3cac522916bb58e603f39ab45",
+      "blob_sha": "510dcf75cb2c44c244ea14b5a3724e71024043ed",
+      "source_url": "https://github.com/edhahn/agent-skills/blob/ffc6fc4bf1408bc3cac522916bb58e603f39ab45/game-designer/SKILL.md",
+      "local_path": "research/upstream/edhahn/agent-skills/game-designer/SKILL.md",
+      "snapshot_sha256": "0d3ec7a894991056dd4d4352565c835114052ff9d52effdc29c2aa4bf3eee370"
+    },
+    {
+      "repo": "edhahn/agent-skills",
+      "path": "eval-driven-game-development/SKILL.md",
+      "ref": "ffc6fc4bf1408bc3cac522916bb58e603f39ab45",
+      "blob_sha": "c6cf6f931df2ad3f92951c86755348b5036ad17a",
+      "source_url": "https://github.com/edhahn/agent-skills/blob/ffc6fc4bf1408bc3cac522916bb58e603f39ab45/eval-driven-game-development/SKILL.md",
+      "local_path": "research/upstream/edhahn/agent-skills/eval-driven-game-development/SKILL.md",
+      "snapshot_sha256": "d6d0b96ce12e28e05c96cd0b5c31e1edba6df481004c35fc9b7efdb0bf83a3b5"
+    },
+    {
+      "repo": "jammyfu/open-game-skills",
+      "path": "skills/disciplines/physics-interaction/SKILL.md",
+      "ref": "b6847e82aa16e0e00c36b251e1fbf1dd5656456e",
+      "blob_sha": "8e2e79ce7cda82c3e3c9efc5b39b5ea70642671a",
+      "source_url": "https://github.com/jammyfu/open-game-skills/blob/b6847e82aa16e0e00c36b251e1fbf1dd5656456e/skills/disciplines/physics-interaction/SKILL.md",
+      "local_path": "research/upstream/jammyfu/open-game-skills/skills/disciplines/physics-interaction/SKILL.md",
+      "snapshot_sha256": "f58cd479707e48499c45833f00ed27c699702bf09dfcbdc40aaf1c4b1a0740d5"
+    },
+    {
+      "repo": "jammyfu/open-game-skills",
+      "path": "skills/disciplines/audio-feel/SKILL.md",
+      "ref": "b6847e82aa16e0e00c36b251e1fbf1dd5656456e",
+      "blob_sha": "0bb5284fce20759b6bd8a5b552100c420245cda6",
+      "source_url": "https://github.com/jammyfu/open-game-skills/blob/b6847e82aa16e0e00c36b251e1fbf1dd5656456e/skills/disciplines/audio-feel/SKILL.md",
+      "local_path": "research/upstream/jammyfu/open-game-skills/skills/disciplines/audio-feel/SKILL.md",
+      "snapshot_sha256": "7cf030f99b34fd79613f99f7a6a0bf77976e4877a0ac8d420cfe961c0b072ff7"
+    },
+    {
+      "repo": "jammyfu/open-game-skills",
+      "path": "skills/disciplines/game-state-flow/SKILL.md",
+      "ref": "b6847e82aa16e0e00c36b251e1fbf1dd5656456e",
+      "blob_sha": "9b41b7decb12fd82d7cc8cda042be1f72fa72291",
+      "source_url": "https://github.com/jammyfu/open-game-skills/blob/b6847e82aa16e0e00c36b251e1fbf1dd5656456e/skills/disciplines/game-state-flow/SKILL.md",
+      "local_path": "research/upstream/jammyfu/open-game-skills/skills/disciplines/game-state-flow/SKILL.md",
+      "snapshot_sha256": "09ffe76fe7698c2ece50b72440111a1f8b2e569378d1e4358d2adfca2d9b6554"
+    },
+    {
+      "repo": "jammyfu/open-game-skills",
+      "path": "skills/disciplines/performance-budget/SKILL.md",
+      "ref": "b6847e82aa16e0e00c36b251e1fbf1dd5656456e",
+      "blob_sha": "b054b87371738fe6b6a2f32cd844acf734666818",
+      "source_url": "https://github.com/jammyfu/open-game-skills/blob/b6847e82aa16e0e00c36b251e1fbf1dd5656456e/skills/disciplines/performance-budget/SKILL.md",
+      "local_path": "research/upstream/jammyfu/open-game-skills/skills/disciplines/performance-budget/SKILL.md",
+      "snapshot_sha256": "012642d9f28aa53c5b2637a85a6e1e7b8f5b66371c90daa5a70257fd829d849c"
+    },
+    {
+      "repo": "jammyfu/open-game-skills",
+      "path": "skills/assets/art-bible/SKILL.md",
+      "ref": "b6847e82aa16e0e00c36b251e1fbf1dd5656456e",
+      "blob_sha": "48e1ed28d186882981ead4152f2cba88e2a05e9b",
+      "source_url": "https://github.com/jammyfu/open-game-skills/blob/b6847e82aa16e0e00c36b251e1fbf1dd5656456e/skills/assets/art-bible/SKILL.md",
+      "local_path": "research/upstream/jammyfu/open-game-skills/skills/assets/art-bible/SKILL.md",
+      "snapshot_sha256": "1f1a80f7168cf4d5b5c63db148c382e54551d59b6292c83798f1df9d6dfae0e8"
+    },
+    {
+      "repo": "jammyfu/open-game-skills",
+      "path": "skills/engines/cocos/SKILL.md",
+      "ref": "b6847e82aa16e0e00c36b251e1fbf1dd5656456e",
+      "blob_sha": "3fd0b359c6e05a1b1b3d1827a567eccc65e764c0",
+      "source_url": "https://github.com/jammyfu/open-game-skills/blob/b6847e82aa16e0e00c36b251e1fbf1dd5656456e/skills/engines/cocos/SKILL.md",
+      "local_path": "research/upstream/jammyfu/open-game-skills/skills/engines/cocos/SKILL.md",
+      "snapshot_sha256": "6b25ae00adfc5c632d6a39f3660f45b07a1909e2fd7b8524c98a83fefebb67f6"
+    },
+    {
+      "repo": "vudovn/ag-kit",
+      "path": ".agents/skills/game-development/2d-games/SKILL.md",
+      "ref": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "blob_sha": "a3f8d24b4b328b27db5d0c415b57b252e007a118",
+      "source_url": "https://github.com/vudovn/ag-kit/blob/549ba3dc2eb1d40fccb5b6d792eba4101c80cd69/.agents/skills/game-development/2d-games/SKILL.md",
+      "local_path": "research/upstream/vudovn/ag-kit/.agents/skills/game-development/2d-games/SKILL.md",
+      "snapshot_sha256": "f31d95e041d06f018620fc697f25a32ea115b4ec577d9f448f714eeeb606363d"
+    },
+    {
+      "repo": "vudovn/ag-kit",
+      "path": ".agents/skills/game-development/game-art/SKILL.md",
+      "ref": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "blob_sha": "87a6ab3cf1447a6f54600550d078cc1a5135205b",
+      "source_url": "https://github.com/vudovn/ag-kit/blob/549ba3dc2eb1d40fccb5b6d792eba4101c80cd69/.agents/skills/game-development/game-art/SKILL.md",
+      "local_path": "research/upstream/vudovn/ag-kit/.agents/skills/game-development/game-art/SKILL.md",
+      "snapshot_sha256": "ab7029cb91c498c6469137f7b8b1575fdc7a97db3cc338c5cd2f0edc2ac2888a"
+    },
+    {
+      "repo": "vudovn/ag-kit",
+      "path": ".agents/skills/game-development/game-audio/SKILL.md",
+      "ref": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "blob_sha": "77ad3c257a12c7a88740161f3c086203fd2775db",
+      "source_url": "https://github.com/vudovn/ag-kit/blob/549ba3dc2eb1d40fccb5b6d792eba4101c80cd69/.agents/skills/game-development/game-audio/SKILL.md",
+      "local_path": "research/upstream/vudovn/ag-kit/.agents/skills/game-development/game-audio/SKILL.md",
+      "snapshot_sha256": "5cfa7e0a750c202ce81dde7aef8ebbd6e9954ece42ce47ed1619163d217a48c3"
+    },
+    {
+      "repo": "vudovn/ag-kit",
+      "path": ".agents/skills/game-development/mobile-games/SKILL.md",
+      "ref": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "blob_sha": "f91d0065a6273a16425c3e4c54ad900bfe91a956",
+      "source_url": "https://github.com/vudovn/ag-kit/blob/549ba3dc2eb1d40fccb5b6d792eba4101c80cd69/.agents/skills/game-development/mobile-games/SKILL.md",
+      "local_path": "research/upstream/vudovn/ag-kit/.agents/skills/game-development/mobile-games/SKILL.md",
+      "snapshot_sha256": "43db8fb50830a99fb14ace08cb29cc60cd7f51a240c5ae73dbe5b31da704f24f"
+    },
+    {
+      "repo": "Fable-Forge/cocos-creator-mobile-game",
+      "path": "LICENSE",
+      "ref": "2909edb86273a011b1d877b79bc0eaceb0f6dacb",
+      "blob_sha": "40208f9c4cbdee6609def7b1e4b3ed863bda1e39",
+      "source_url": "https://github.com/Fable-Forge/cocos-creator-mobile-game/blob/2909edb86273a011b1d877b79bc0eaceb0f6dacb/LICENSE",
+      "local_path": "research/upstream/Fable-Forge/cocos-creator-mobile-game/LICENSE",
+      "snapshot_sha256": "1ed681b3c74712d510ab404df3f2f807668b5d33174aed2ac0d0284115e91c78"
+    },
+    {
+      "repo": "edhahn/agent-skills",
+      "path": "LICENSE",
+      "ref": "ffc6fc4bf1408bc3cac522916bb58e603f39ab45",
+      "blob_sha": "83f1d6feb03077a655cccdf3ba89c5e5306e3a56",
+      "source_url": "https://github.com/edhahn/agent-skills/blob/ffc6fc4bf1408bc3cac522916bb58e603f39ab45/LICENSE",
+      "local_path": "research/upstream/edhahn/agent-skills/LICENSE",
+      "snapshot_sha256": "467db7ed5dd56f2ca25ec66384aa481089d3308df78361c66071f5376674158c"
+    },
+    {
+      "repo": "jammyfu/open-game-skills",
+      "path": "LICENSE",
+      "ref": "b6847e82aa16e0e00c36b251e1fbf1dd5656456e",
+      "blob_sha": "4dc60b54893a7f9957aadc02f86f5e98fc2c1235",
+      "source_url": "https://github.com/jammyfu/open-game-skills/blob/b6847e82aa16e0e00c36b251e1fbf1dd5656456e/LICENSE",
+      "local_path": "research/upstream/jammyfu/open-game-skills/LICENSE",
+      "snapshot_sha256": "92d740b066b19628f9c5e48e32d52bb7d7dae0cc7e32a98b71bf02b6df1b5fd8"
+    },
+    {
+      "repo": "vudovn/ag-kit",
+      "path": "LICENSE",
+      "ref": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "blob_sha": "b9e27390981ba03d4842c1c2a045e18043044de9",
+      "source_url": "https://github.com/vudovn/ag-kit/blob/549ba3dc2eb1d40fccb5b6d792eba4101c80cd69/LICENSE",
+      "local_path": "research/upstream/vudovn/ag-kit/LICENSE",
+      "snapshot_sha256": "fc18dc816be16d21676a4d8a6f6ea5625c0fcf6a2c32e52d06b62145544eeaf7"
+    }
+  ]
+}

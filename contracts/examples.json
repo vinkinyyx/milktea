@@ -1,0 +1,115 @@
+{
+  "version": "0.2",
+  "status": "design_expectations_not_game_tests",
+  "rng": {
+    "seed": 1,
+    "first_u32": [
+      270369,
+      67634689,
+      2647435461,
+      307599695,
+      2398689233
+    ],
+    "first_levels": [
+      1,
+      1,
+      2,
+      1,
+      2
+    ]
+  },
+  "scores": {
+    "two_sago_pairs_then_red_bean_pair": 50,
+    "one_mochi_from_256_level_one_units": 9680
+  },
+  "ticks": {
+    "hz": 60,
+    "drop_interval": 27,
+    "spawn_grace": 45,
+    "danger": 180,
+    "shake_duration": 48,
+    "shake_cooldown": 30,
+    "spill_grace": 30
+  },
+  "rank": {
+    "scores": [
+      1200,
+      1000,
+      1000,
+      800
+    ],
+    "expected_ranks": [
+      1,
+      2,
+      2,
+      4
+    ],
+    "self_score": 1000,
+    "strictly_below": 1,
+    "other_players": 3,
+    "exceeds_ratio": 0.3333333333333333
+  },
+  "coupons": [
+    {
+      "name": "fifth_grant",
+      "before": {
+        "dailyGranted": 4,
+        "available": 2
+      },
+      "expected": {
+        "dailyGranted": 5,
+        "available": 3
+      }
+    },
+    {
+      "name": "sixth_grant",
+      "before": {
+        "dailyGranted": 5,
+        "available": 3
+      },
+      "error": "DAILY_LIMIT"
+    },
+    {
+      "name": "same_content_again",
+      "error": "ALREADY_CLAIMED"
+    },
+    {
+      "name": "cross_midnight_same_run",
+      "before": {
+        "extraUsed": 5,
+        "dailyGranted": 0,
+        "available": 5
+      },
+      "error": "RUN_EXTRA_LIMIT"
+    }
+  ],
+  "sample_run_start": {
+    "stageId": "classic",
+    "mode": "classic",
+    "rulesVersion": "design-v0.1"
+  },
+  "sample_run_started": {
+    "runId": "11111111-1111-4111-8111-111111111111",
+    "seed": 1,
+    "rulesVersion": "design-v0.1",
+    "boardType": "standard",
+    "baseShakes": 2,
+    "extraShakeLimit": 5,
+    "dropBudget": null
+  },
+  "sample_coupon_balance": {
+    "beijingDay": "2026-10-27",
+    "dailyGranted": 2,
+    "dailyLimit": 5,
+    "available": 1,
+    "expiresAt": "2026-10-27T16:00:00Z"
+  },
+  "reward_policy": {
+    "enabled": false,
+    "policyVersion": "unconfigured-v1",
+    "rewardKind": "unconfigured",
+    "amount": 0,
+    "dailyLimit": 0,
+    "affectsRankedRun": false
+  }
+}

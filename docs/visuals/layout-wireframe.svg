@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="1334" viewBox="0 0 750 1334" role="img" aria-labelledby="title desc">
+  <title id="title">奶茶挤挤主界面区域线框</title>
+  <desc id="desc">750乘1334逻辑设计坐标。展示分数、下一份、透明杯、警戒线、合成顺序和晃杯按钮。仅作规格示意，不是最终美术。</desc>
+  <rect width="750" height="1334" fill="#fff7ec"/>
+  <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#3d2a23">
+    <text x="40" y="62" font-size="25">奶茶挤挤 · 布局线框</text>
+    <text x="40" y="110" font-size="32">本局 1280</text>
+    <text x="330" y="110" font-size="25">纪录 1460</text>
+    <rect x="600" y="60" width="100" height="96" rx="20" fill="#f1e2cf" stroke="#8b4e2f"/>
+    <text x="650" y="116" font-size="28" text-anchor="middle">暂停</text>
+    <text x="60" y="210" font-size="25">当前</text>
+    <circle cx="375" cy="204" r="27" fill="#81503e" stroke="#3d2a23" stroke-width="2"/>
+    <path d="M375 239V270" stroke="#8b4e2f" stroke-width="3" stroke-dasharray="5 6"/>
+    <text x="520" y="210" font-size="25">下一份</text>
+    <circle cx="660" cy="200" r="20" fill="#b96360" stroke="#3d2a23"/>
+    <path d="M115 274L195 1074Q375 1100 555 1074L635 274Z" fill="#ebd4b7" stroke="#8b4e2f" stroke-width="5"/>
+    <ellipse cx="375" cy="274" rx="260" ry="22" fill="#fff7ec" stroke="#8b4e2f" stroke-width="4"/>
+    <path d="M121 334H629" stroke="#b93838" stroke-width="3" stroke-dasharray="12 8"/>
+    <text x="375" y="369" font-size="24" text-anchor="middle" fill="#a52b2b">警戒线：UI y=334 / 物理 y=1000</text>
+    <text x="375" y="505" font-size="30" text-anchor="middle">主要物理与操作区域</text>
+    <text x="375" y="547" font-size="23" text-anchor="middle">固定杯尺寸，屏幕只做等比适配</text>
+    <circle cx="300" cy="1000" r="67" fill="#aa87be" stroke="#694c7b" stroke-width="3"/>
+    <circle cx="451" cy="1005" r="58" fill="#e6be65" stroke="#8b4e2f" stroke-width="3"/>
+    <circle cx="380" cy="901" r="35" fill="#563b30" stroke="#3d2a23" stroke-width="3"/>
+    <text x="375" y="1137" font-size="24" text-anchor="middle">九级合成顺序（示意区域）</text>
+    <rect x="225" y="1172" width="300" height="100" rx="28" fill="#8b4e2f"/>
+    <text x="375" y="1216" font-size="31" text-anchor="middle" fill="#ffffff">晃一晃</text>
+    <text x="375" y="1252" font-size="24" text-anchor="middle" fill="#ffffff">基础剩余 2 次</text>
+    <text x="375" y="1310" font-size="21" text-anchor="middle">实际布局须避开平台胶囊及系统安全区</text>
+  </g>
+</svg>

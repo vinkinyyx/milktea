@@ -1,0 +1,18 @@
+cue_id,phase,variants,duration_ms,event,runtime_format,priority,status,license_status
+bgm_classic,P1,1,60000-90000,run_start_resume,MP3 44.1kHz stereo ~96kbps,music,planned,not_acquired
+ui_tap,P1,2,40-100,accepted_ui_action,WAV PCM16 44.1kHz mono,high,planned,not_acquired
+drop,P1,2,70-140,IngredientDropped,WAV PCM16 44.1kHz mono,medium,planned,not_acquired
+collision_soft,P1,3,80-180,qualified_contact,WAV PCM16 44.1kHz mono,low,planned,not_acquired
+collision_pearl,P1,3,70-160,qualified_pearl_contact,WAV PCM16 44.1kHz mono,low,planned,not_acquired
+merge_small,P1,3,120-220,MergeCommitted_level_2_4,WAV PCM16 44.1kHz mono,high,planned,not_acquired
+merge_large,P1,3,160-300,MergeCommitted_level_5_8,WAV PCM16 44.1kHz mono,high,planned,not_acquired
+merge_mochi,P1,1,500-800,MergeCommitted_level_9,WAV PCM16 44.1kHz mono,highest,planned,not_acquired
+shake_start,P1,2,500-800,ShakeConsumed,WAV PCM16 44.1kHz mono,medium,planned,not_acquired
+danger_tick,P1,1,70-130,danger_integer_change,WAV PCM16 44.1kHz mono,highest,planned,not_acquired
+result,P1,1,400-700,RunEnded,WAV PCM16 44.1kHz mono,high,planned,not_acquired
+record,P1,1,350-650,new_personal_record,WAV PCM16 44.1kHz mono,highest,planned,not_acquired
+unlock,P3,1,350-700,StageUnlocked,format_to_validate,high,deferred,not_acquired
+reward_grant,P3,1,150-300,ShareRewardGranted,format_to_validate,high,deferred,not_acquired
+coupon_use,P3,1,100-250,coupon_consumed,format_to_validate,medium,deferred,not_acquired
+challenge_result,P4,3,350-700,win_tie_loss,format_to_validate,high,deferred,not_acquired
+

@@ -1,0 +1,23 @@
+{
+  "scope": "设计文档HTML阅读版；不是游戏运行验证",
+  "baseline": "design-v0.1",
+  "browser": "Microsoft Edge via cached Playwright CLI",
+  "network": "localhost only; no external assets required",
+  "viewports": [
+    {"width": 1440, "height": 1000, "document_width": 1440, "screenshot": "reading-desktop.png"},
+    {"width": 375, "height": 812, "document_width": 375, "screenshot": "reading-mobile.png"}
+  ],
+  "checks": {
+    "section_count": 12,
+    "navigation_link_count": 12,
+    "clicked_physics_navigation_target": "#d03",
+    "wireframe_loaded": true,
+    "page_horizontal_overflow": false,
+    "tables_have_scroll_containers": true,
+    "console_errors_final_context": 0,
+    "console_warnings_final_context": 0,
+    "desktop_and_mobile_screenshots_visually_inspected": true
+  },
+  "resolved_issue": "阅读版添加内联空favicon，消除初次检查的favicon.ico 404",
+  "not_tested": ["游戏美术", "游戏物理", "手机真机", "音效听感", "玩家试玩", "平台提审"]
+}

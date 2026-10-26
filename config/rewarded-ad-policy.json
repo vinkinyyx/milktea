@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "policyVersion": "unconfigured-v1",
+  "rewardKind": "unconfigured",
+  "amount": 0,
+  "dailyLimit": 0,
+  "affectsRankedRun": false
+}
