@@ -1,0 +1,7 @@
+{"at":"2026-10-28T18:53:24.409Z","event":"tracer-started","port":17820}
+{"at":"2026-10-28T18:53:28.184Z","event":"target-attached","sessionId":"ECCA4F3E4473CAA7CB4A244EC9006512","targetInfo":{"targetId":"66E50D9C46510578F9BAF1061EFE614C","type":"page","title":"","url":""}}
+{"at":"2026-10-28T18:53:28.185Z","event":"target-hook-error","sessionId":"ECCA4F3E4473CAA7CB4A244EC9006512","error":"Error: CDP socket not open"}
+{"at":"2026-10-28T18:53:28.740Z","event":"target-attached","sessionId":"0A22E53531B35CDC4267E2C74C2C0651","targetInfo":{"targetId":"C904BE50668A57239F198480736A4FB4","type":"page","title":"","url":""}}
+{"at":"2026-10-28T18:53:28.740Z","event":"target-hook-error","sessionId":"0A22E53531B35CDC4267E2C74C2C0651","error":"Error: CDP socket not open"}
+{"at":"2026-10-28T18:53:28.865Z","event":"target-attached","sessionId":"123A89F2DC1EAA50D1E2F9A50F3CF7C5","targetInfo":{"targetId":"CA67C1FEF195A9B6422937CF9E5BE2BA","type":"page","title":"","url":""}}
+{"at":"2026-10-28T18:53:28.865Z","event":"target-hook-error","sessionId":"123A89F2DC1EAA50D1E2F9A50F3CF7C5","error":"Error: CDP socket not open"}

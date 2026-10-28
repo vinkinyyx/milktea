@@ -1,0 +1,3 @@
+﻿asset_id,first_phase,name_zh,production_method,source,exports,qa_status,platform_dependency
+ui_icon_ad_play,P4-C,自愿看视频,new_draw,source_svg/ui_icon_ad_play.svg,export_png/96/ui_icon_ad_play.png; export_png/48/ui_icon_ad_play.png,PASS_STATIC,none
+platform_ad_badge,P4-C,平台广告标识,platform,platform/platform_ad_badge.CONTRACT.json,(runtime) — official platform source only,WAIT_PLATFORM,must supply licensed asset or SDK UI

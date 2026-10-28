@@ -1,0 +1,596 @@
+[
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_coconut_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 189619,
+        "alpha_range": [
+          0,
+          27
+        ],
+        "rgba_pixel_sha256": "ec7225103a4c03bb940b56ca4152af432fd4e6b3a8eafee0bbee7b274f429e02"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 205328,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "50df6a18c6bebd5531bb53879b5b4d8d4f193119defbcc986065815f43f00aed"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 672931,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "ebc7209ef8a3b2956a7207421b374e48fac678c246b5b13a1eb5a9acd1c7879f"
+      }
+    ],
+    "merged_matches_current_master": false
+  },
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_grass_jelly_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 87575,
+        "alpha_range": [
+          0,
+          71
+        ],
+        "rgba_pixel_sha256": "fd8a2bf25520a07fbbf791b9bcf2e8230031589377174e99c7b2fbdf492ce757"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 262438,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "95783ee66e2ba4318c082a63b729f22c92943d8eaa8e2ecbfbb98c866f50db5b"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 673741,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "00e48c3b91700d4e3f7e80060301d634b5255d96a4a38d8db5a1a1600d542831"
+      }
+    ],
+    "merged_matches_current_master": false
+  },
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_large_pearl_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 92068,
+        "alpha_range": [
+          0,
+          71
+        ],
+        "rgba_pixel_sha256": "8b8f375434b0533bda34be54fc8dd3910250d6e042cd14a955b07da159f8f03e"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 189708,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "2000be4336588593ae089d6ce57fb8a97b997596985a72bc61707645e62f2c67"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 674394,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "b4eeb981ec187d19dde81ea843b2ab3b4de5e983f5080a37d59ea1f7b4ecbe0f"
+      }
+    ],
+    "merged_matches_current_master": false
+  },
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_mochi_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 198027,
+        "alpha_range": [
+          0,
+          28
+        ],
+        "rgba_pixel_sha256": "8b0778293404269ef64ea42460059ac0d69823b7212949469578559891e8d000"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 238752,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "98e24cae8872fb1f27b4ae2505e480f2b7d9f3d77201137bfac203f730664a94"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 672581,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "f05598fbdcce4263b88f717c9f235ac1180d71a8de88765a3ca9e2c9a024887e"
+      }
+    ],
+    "merged_matches_current_master": false
+  },
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_pudding_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 207918,
+        "alpha_range": [
+          0,
+          59
+        ],
+        "rgba_pixel_sha256": "09713ba86815fe4a296ac3f23636e504f8a12da3157c3d84c548958d42dd061a"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 179436,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "cecb899325300556d8f2b52e314ef4908eefbd1cc9f77ff23af9d44725412ebc"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 672390,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "2d73ede4b6354a91c99ad867b14f0242911185ceded1b10703b718f2cad5b3b6"
+      }
+    ],
+    "merged_matches_current_master": false
+  },
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_red_bean_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 91818,
+        "alpha_range": [
+          0,
+          71
+        ],
+        "rgba_pixel_sha256": "796c6afa733a949adea002f95e7da9eaa94f37013f87dbfd8ea62bc84f3a4493"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 424532,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "4496f46e8aafd4ebe6f845e6df588f1e718679e60fd274d4f46139f55e440eda"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 673111,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "4a953fc09896ef963c3060dd23ff0f975ce5e16c2cf2b08abd8418c30abf9aee"
+      }
+    ],
+    "merged_matches_current_master": false
+  },
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_sago_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 198477,
+        "alpha_range": [
+          0,
+          38
+        ],
+        "rgba_pixel_sha256": "244b9ba89a49ba77b7aa99cbbc100295d496cd0b9fa5bc3488fa1de174851adc"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 194580,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "77c42e76838f570f74726822bc85d906ffd6af22bea7d05cec908556cad6d2be"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 673261,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "70c3753a4e293c40b688b4eca58522b16c8d0b4303a246b3d12c3132d664ce80"
+      }
+    ],
+    "merged_matches_current_master": false
+  },
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_small_pearl_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 68504,
+        "alpha_range": [
+          0,
+          71
+        ],
+        "rgba_pixel_sha256": "872e91e3a6fd4a44c08db8479ea8b54b69a8f7535aae4c6d85bb54910c216cc6"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 169604,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "45aa04f236b7612cb7887d078afbc1ac9829a7b06452c96cf7af14b2b9597247"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 675665,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "343fcd907e186f69c64816bcc05f52658bcfc7848645d7d8be4d7e22b715c433"
+      }
+    ],
+    "merged_matches_current_master": false
+  },
+  {
+    "file": "assets\\补\\assets\\P1\\P1-01_layered_recovery\\spr_ing_taro_base.ora",
+    "canvas": [
+      "1024",
+      "1024"
+    ],
+    "layers": [
+      {
+        "name": "optional_face",
+        "visible": "hidden",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 0,
+        "alpha_range": [
+          0,
+          0
+        ],
+        "rgba_pixel_sha256": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+      },
+      {
+        "name": "highlight",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 210287,
+        "alpha_range": [
+          0,
+          71
+        ],
+        "rgba_pixel_sha256": "6cae1bf4d9a5a55fc8f026a548bb2575379136d1ee1e752e77b48be5d2a9b8c3"
+      },
+      {
+        "name": "texture",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 220038,
+        "alpha_range": [
+          0,
+          92
+        ],
+        "rgba_pixel_sha256": "3617ffb8275a4507942f58e25bcee30ba2a54a763e7e768daafcf4d562dd2819"
+      },
+      {
+        "name": "base",
+        "visible": "visible",
+        "size": [
+          1024,
+          1024
+        ],
+        "nonempty_pixels": 673225,
+        "alpha_range": [
+          0,
+          255
+        ],
+        "rgba_pixel_sha256": "d7ec60fb5518c8d7f9f1039db0fb8ca4e729915a9038787a74f6b29304abb31d"
+      }
+    ],
+    "merged_matches_current_master": false
+  }
+]

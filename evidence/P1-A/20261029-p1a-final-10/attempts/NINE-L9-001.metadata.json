@@ -1,0 +1,17 @@
+{
+  "caseId": "level-drop-9",
+  "attemptId": "NINE-L9-001",
+  "buildId": "20261029-p1a-final-10",
+  "embeddedBuildId": "20261029-p1a-final-10",
+  "expectedBuildId": "20261029-p1a-final-10",
+  "probe": "off",
+  "url": "http://127.0.0.1:8780/?p1aCase=level-drop-9&attemptId=NINE-L9-001&expectedBuildId=20261029-p1a-final-10&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-10%2Fraw%2FNINE-L9-001",
+  "cliExitCode": 0,
+  "acceptance": "PASS",
+  "pass": true,
+  "resultParseError": null,
+  "stderr": "",
+  "artifacts": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\P1-A\\20261029-p1a-final-10\\raw\\NINE-L9-001",
+  "recordedAt": "2026-10-29T03:00:56.8162694+08:00",
+  "playwrightCommand": "node C:/Program Files/nodejs/node_modules/npm/bin/npx-cli.js --yes @playwright/cli -s=p1a-final10 --raw run-code --filename D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\p1a-runtime-case.js"
+}

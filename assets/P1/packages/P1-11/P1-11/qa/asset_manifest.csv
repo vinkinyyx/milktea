@@ -1,0 +1,8 @@
+﻿asset_id,name_zh,batch,production_method,runtime_du,export_spec,source_file,preview_png,acceptance
+gen_danger_line,警戒线,P1-11,engine,layout-dependent,none,src/gen_danger_line.mjs,preview/gen_danger_line_PREVIEW_ONLY.png,static tests + browser visualization; game integration pending
+gen_drop_guide,落点虚线,P1-11,engine,layout-dependent,none,src/gen_drop_guide.mjs,preview/gen_drop_guide_PREVIEW_ONLY.png,static tests + browser visualization; game integration pending
+gen_score_text,当前分/飘分/纪录,P1-11,engine,layout-dependent,none,src/gen_score_text.mjs,preview/gen_score_text_PREVIEW_ONLY.png,static tests + browser visualization; game integration pending
+gen_danger_countdown,三秒倒计时,P1-11,engine,layout-dependent,none,src/gen_danger_countdown.mjs,preview/gen_danger_countdown_PREVIEW_ONLY.png,static tests + browser visualization; game integration pending
+gen_shake_count,晃杯剩余和冷却,P1-11,engine,layout-dependent,none,src/gen_shake_count.mjs,preview/gen_shake_count_PREVIEW_ONLY.png,static tests + browser visualization; game integration pending
+gen_modal_dim,弹窗遮罩,P1-11,engine,layout-dependent,none,src/gen_modal_dim.mjs,preview/gen_modal_dim_PREVIEW_ONLY.png,static tests + browser visualization; game integration pending
+gen_loading_spinner,加载转圈,P1-11,engine,layout-dependent,none,src/gen_loading_spinner.mjs,preview/gen_loading_spinner_PREVIEW_ONLY.png,static tests + browser visualization; game integration pending

@@ -1,0 +1,30 @@
+{
+  "cup": "mochi_special",
+  "scale": 0.8,
+  "world_origin": [
+    0,
+    200
+  ],
+  "top_inside_world": [
+    [
+      167.0,
+      1060
+    ],
+    [
+      583.0,
+      1060
+    ]
+  ],
+  "bottom_inside_world": [
+    [
+      231.0,
+      260
+    ],
+    [
+      519.0,
+      260
+    ]
+  ],
+  "safe_line_y_world": 1000,
+  "source": "14-image-production.md reconstruction; NOT authoritative engine export"
+}

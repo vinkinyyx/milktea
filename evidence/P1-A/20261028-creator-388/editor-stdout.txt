@@ -1,0 +1,350 @@
+
+init **** success
+Arguments:
+  C:\ProgramData\cocos\editors\Creator\3.8.8\CocosCreator.exe: true
+  project: D:\Workspace\TapTap\奶茶挤挤\client
+  dev: false
+  home: C:\Users\vinki\.CocosCreator
+ 
+[Package] metrics@1.0.0 enable
+[Package] menu@1.0.0 enable
+[Package] profile@1.0.0 enable
+[Package] project@1.0.6 enable
+[Package] messages@1.0.0 enable
+[Package] utils@1.0.0 enable
+[Package] program@1.0.4 enable
+[Package] tester@1.0.0 enable
+[Package] information@1.0.1 enable
+[Package] preferences@1.0.0 enable
+[EditorQuickCompiler]Version information looks good.
+Note, quick compiler does not get launched.
+engine:compile-builtin-engine-success (198ms)
+Load engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine
+Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\native
+[Package] engine@1.0.12 enable
+[Package] programming@1.0.0 enable
+[Package] window@1.0.0 enable
+Request namespace: device-list
+[Package] device@1.0.1 enable
+[Package] ui-kit@1.0.1 enable
+[Package] asset-db@1.0.0 enable
+[Package] scene@1.0.3 enable
+[Package] server@1.0.0 enable
+[Package] preview@1.0.1 enable
+Preview import map: {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "cc/env": "cc/editor/populate-internal-constants",
+    "cce.env": "cc/editor/populate-internal-constants",
+    "cc/userland/macro": "./userland/macro"
+  }
+}
+[Package] animator@1.0.0 enable
+[Build] internalRegister pkg(scene) in android platform success!
+[Package] builder@1.3.9 enable
+[Build] internalRegister pkg(scene) in google-play platform success!
+[Build] internalRegister pkg(scene) in ohos platform success!
+[Build] internalRegister pkg(scene) in harmonyos-next platform success!
+[Build] internalRegister pkg(scene) in huawei-agc platform success!
+[Build] internalRegister pkg(scene) in ios platform success!
+[Build] internalRegister pkg(scene) in windows platform success!
+[Build] internalRegister pkg(scene) in mac platform success!
+[Build] internalRegister pkg(scene) in linux platform success!
+[Build] internalRegister pkg(scene) in alipay-mini-game platform success!
+[Build] internalRegister pkg(scene) in taobao-creative-app platform success!
+[Build] internalRegister pkg(scene) in taobao-mini-game platform success!
+[Build] internalRegister pkg(scene) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(scene) in oppo-mini-game platform success!
+[Build] internalRegister pkg(scene) in huawei-quick-game platform success!
+[Build] internalRegister pkg(scene) in migu-mini-game platform success!
+[Build] internalRegister pkg(scene) in honor-mini-game platform success!
+[Build] internalRegister pkg(scene) in vivo-mini-game platform success!
+[Build] internalRegister pkg(scene) in xiaomi-quick-game platform success!
+[Build] internalRegister pkg(scene) in baidu-mini-game platform success!
+[Build] internalRegister pkg(scene) in wechatgame platform success!
+[Build] internalRegister pkg(scene) in wechatprogram platform success!
+[Build] internalRegister pkg(scene) in link-sure platform success!
+[Build] internalRegister pkg(scene) in qtt platform success!
+[Build] internalRegister pkg(scene) in fb-instant-games platform success!
+[Build] internalRegister pkg(scene) in web-desktop platform success!
+[Build] internalRegister pkg(scene) in web-mobile platform success!
+[Build] internalRegister pkg(scene) in cocos-runtime platform success!
+[Build] internalRegister pkg(scene) in platform-example platform success!
+[Build] internalRegister pkg(scene) in online platform success!
+[Build] internalRegister pkg(scene) in xr-meta platform success!
+[Build] internalRegister pkg(scene) in xr-huaweivr platform success!
+[Build] internalRegister pkg(scene) in xr-pico platform success!
+[Build] internalRegister pkg(scene) in xr-rokid platform success!
+[Build] internalRegister pkg(scene) in xr-monado platform success!
+[Build] internalRegister pkg(scene) in xr-spaces platform success!
+[Build] internalRegister pkg(scene) in xr-seed platform success!
+[Build] internalRegister pkg(scene) in ar-android platform success!
+[Build] internalRegister pkg(scene) in ar-ios platform success!
+[Build] internalRegister pkg(scene) in xr-gsxr platform success!
+[Build] internalRegister pkg(scene) in xr-yvr platform success!
+[Build] internalRegister pkg(scene) in xr-htc platform success!
+[Build] internalRegister pkg(scene) in xr-iqiyi platform success!
+[Build] internalRegister pkg(scene) in xr-skyworth platform success!
+[Build] internalRegister pkg(scene) in xr-ffalcon platform success!
+[Build] internalRegister pkg(scene) in xr-nreal platform success!
+[Build] internalRegister pkg(scene) in xr-inmo platform success!
+[Build] internalRegister pkg(scene) in xr-lenovo platform success!
+[Build] internalRegister pkg(scene) in android-hmi platform success!
+[Build-plugin] register pkg scene: 59ms
+Builder PluginManager init: 60ms
+[Package] shortcuts@1.0.1 enable
+[Package] animation-graph@1.0.0 enable
+[Package] about@1.0.0 enable
+[Package] assets@1.0.0 enable
+[Package] console@1.0.0 enable
+[Package] crash-reporter@1.0.0 enable
+[Package] extension@3.1.4 enable
+[Package] feedback@1.0.0 enable
+[Package] hierarchy@1.0.0 enable
+[Package] inspector@1.0.0 enable
+[Package] light-probe@1.0.4 enable
+[Package] lightmap@1.0.4 enable
+[Package] node-library@1.0.1 enable
+[Package] package-asset@1.0.3 enable
+[Package] process@1.0.0 enable
+[Package] reference-image@1.0.0 enable
+[Package] reflection-probe@1.0.4 enable
+[Package] engine-extends@1.0.0 enable
+[Package] adsense-h5g-plugin@1.0.1 enable
+[Build] internalRegister pkg(adsense-h5g-plugin) in android platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in google-play platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ohos platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in harmonyos-next platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in huawei-agc platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ios platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in windows platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in mac platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in linux platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in alipay-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in taobao-creative-app platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in taobao-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in oppo-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in huawei-quick-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in migu-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in honor-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in vivo-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xiaomi-quick-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in baidu-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in wechatgame platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in wechatprogram platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in link-sure platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in qtt platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in fb-instant-games platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-desktop platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-mobile platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in cocos-runtime platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in platform-example platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in online platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-meta platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-huaweivr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-pico platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-rokid platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-monado platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-spaces platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-seed platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ar-android platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ar-ios platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-gsxr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-yvr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-htc platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-iqiyi platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-skyworth platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-ffalcon platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-nreal platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-inmo platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-lenovo platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in android-hmi platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-desktop platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-mobile platform success!
+[Build-plugin] register pkg adsense-h5g-plugin: 19ms
+[Package] alipay-mini-game@1.0.2 enable
+[Build] internalRegister pkg(alipay-mini-game) in alipay-mini-game platform success!
+[Build-plugin] register pkg alipay-mini-game: 8ms
+[Package] android@1.0.1 enable
+[Build] internalRegister pkg(android) in android platform success!
+[Build] internalRegister pkg(android) in huawei-agc platform success!
+[Build-plugin] register pkg android: 10ms
+[Package] bytedance-mini-game@1.0.3 enable
+[Build] internalRegister pkg(bytedance-mini-game) in bytedance-mini-game platform success!
+[Build-plugin] register pkg bytedance-mini-game: 7ms
+[Package] certificate@1.0.0 enable
+[Package] channel-upload-tools@1.0.0 enable
+[Package] fb-instant-games@1.0.0 enable
+[Build] internalRegister pkg(fb-instant-games) in fb-instant-games platform success!
+[Build-plugin] register pkg fb-instant-games: 6ms
+[Package] google-play@1.0.1 enable
+[Build] internalRegister pkg(google-play) in google-play platform success!
+[Build-plugin] register pkg google-play: 6ms
+[Package] harmonyos-next@1.0.0 enable
+[Build] internalRegister pkg(harmonyos-next) in harmonyos-next platform success!
+[Build-plugin] register pkg harmonyos-next: 7ms
+[Package] honor-mini-game@1.0.0 enable
+[Build] internalRegister pkg(honor-mini-game) in honor-mini-game platform success!
+[Build-plugin] register pkg honor-mini-game: 6ms
+[Package] huawei-agc@1.0.0 enable
+[Build] internalRegister pkg(huawei-agc) in huawei-agc platform success!
+[Build-plugin] register pkg huawei-agc: 5ms
+[Package] huawei-quick-game@1.0.3 enable
+[Build] internalRegister pkg(huawei-quick-game) in huawei-quick-game platform success!
+[Build-plugin] register pkg huawei-quick-game: 8ms
+[Package] ios@1.0.1 enable
+[Build-plugin] register pkg ios: 6ms
+[Package] linux@1.0.0 enable
+平台 linux 不存在，无法添加该平台
+[Package] mac@1.0.0 enable
+[Build-plugin] register pkg mac: 5ms
+[Package] migu-mini-game@1.0.0 enable
+[Build] internalRegister pkg(migu-mini-game) in migu-mini-game platform success!
+[Build-plugin] register pkg migu-mini-game: 5ms
+[Package] native@1.0.2 enable
+[Build] internalRegister pkg(native) in ios platform success!
+[Build] internalRegister pkg(native) in android platform success!
+[Build] internalRegister pkg(native) in huawei-agc platform success!
+[Build] internalRegister pkg(native) in windows platform success!
+[Build] internalRegister pkg(native) in mac platform success!
+[Build] internalRegister pkg(native) in google-play platform success!
+[Build] internalRegister pkg(native) in ohos platform success!
+[Build] internalRegister pkg(native) in harmonyos-next platform success!
+平台 linux 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(native) in xr-huaweivr platform success!
+[Build] internalRegister pkg(native) in xr-meta platform success!
+[Build] internalRegister pkg(native) in xr-pico platform success!
+[Build] internalRegister pkg(native) in xr-rokid platform success!
+[Build] internalRegister pkg(native) in xr-monado platform success!
+[Build] internalRegister pkg(native) in ar-android platform success!
+[Build] internalRegister pkg(native) in ar-ios platform success!
+[Build] internalRegister pkg(native) in xr-spaces platform success!
+[Build] internalRegister pkg(native) in xr-seed platform success!
+[Build] internalRegister pkg(native) in xr-gsxr platform success!
+[Build] internalRegister pkg(native) in xr-yvr platform success!
+[Build] internalRegister pkg(native) in xr-htc platform success!
+[Build] internalRegister pkg(native) in xr-iqiyi platform success!
+[Build] internalRegister pkg(native) in xr-skyworth platform success!
+[Build] internalRegister pkg(native) in xr-ffalcon platform success!
+[Build] internalRegister pkg(native) in xr-nreal platform success!
+[Build] internalRegister pkg(native) in xr-inmo platform success!
+[Build] internalRegister pkg(native) in xr-lenovo platform success!
+[Build-plugin] register pkg native: 17ms
+[Package] ohos@1.0.0 enable
+[Build] internalRegister pkg(ohos) in ohos platform success!
+[Build-plugin] register pkg ohos: 5ms
+[Package] oppo-mini-game@1.0.3 enable
+[Build] internalRegister pkg(oppo-mini-game) in oppo-mini-game platform success!
+[Build-plugin] register pkg oppo-mini-game: 12ms
+[Package] runtime-dev-tools@1.0.0 enable
+[Package] taobao-mini-game@1.0.1 enable
+[Build] internalRegister pkg(taobao-mini-game) in taobao-mini-game platform success!
+[Build-plugin] register pkg taobao-mini-game: 4ms
+[Package] vivo-mini-game@1.0.3 enable
+[Build] internalRegister pkg(vivo-mini-game) in vivo-mini-game platform success!
+[Build-plugin] register pkg vivo-mini-game: 5ms
+[Package] web-desktop@1.0.1 enable
+[Build] internalRegister pkg(web-desktop) in web-desktop platform success!
+[Build-plugin] register pkg web-desktop: 7ms
+[Package] web-mobile@1.0.1 enable
+[Build] internalRegister pkg(web-mobile) in web-mobile platform success!
+[Build-plugin] register pkg web-mobile: 6ms
+[Package] wechatgame@1.0.4 enable
+[Build] internalRegister pkg(wechatgame) in wechatgame platform success!
+[Build-plugin] register pkg wechatgame: 5ms
+[Package] wechatprogram@1.0.2 enable
+平台 wechatprogram 不存在，无法添加该平台
+[Package] windows@1.0.1 enable
+[Build] internalRegister pkg(windows) in windows platform success!
+[Build-plugin] register pkg windows: 7ms
+[Package] xiaomi-quick-game@1.0.2 enable
+[Build] internalRegister pkg(xiaomi-quick-game) in xiaomi-quick-game platform success!
+[Build-plugin] register pkg xiaomi-quick-game: 7ms
+[Package] cocos-service@3.0.9 enable
+[Build] internalRegister pkg(cocos-service) in android platform success!
+[Build] internalRegister pkg(cocos-service) in google-play platform success!
+[Build] internalRegister pkg(cocos-service) in ohos platform success!
+[Build] internalRegister pkg(cocos-service) in harmonyos-next platform success!
+[Build] internalRegister pkg(cocos-service) in huawei-agc platform success!
+[Build] internalRegister pkg(cocos-service) in ios platform success!
+[Build] internalRegister pkg(cocos-service) in windows platform success!
+[Build] internalRegister pkg(cocos-service) in mac platform success!
+[Build] internalRegister pkg(cocos-service) in linux platform success!
+[Build] internalRegister pkg(cocos-service) in alipay-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in taobao-creative-app platform success!
+[Build] internalRegister pkg(cocos-service) in taobao-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in oppo-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in huawei-quick-game platform success!
+[Build] internalRegister pkg(cocos-service) in migu-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in honor-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in vivo-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in xiaomi-quick-game platform success!
+[Build] internalRegister pkg(cocos-service) in baidu-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in wechatgame platform success!
+[Build] internalRegister pkg(cocos-service) in wechatprogram platform success!
+[Build] internalRegister pkg(cocos-service) in link-sure platform success!
+[Build] internalRegister pkg(cocos-service) in qtt platform success!
+[Build] internalRegister pkg(cocos-service) in fb-instant-games platform success!
+[Build] internalRegister pkg(cocos-service) in web-desktop platform success!
+[Build] internalRegister pkg(cocos-service) in web-mobile platform success!
+[Build] internalRegister pkg(cocos-service) in cocos-runtime platform success!
+[Build] internalRegister pkg(cocos-service) in platform-example platform success!
+[Build] internalRegister pkg(cocos-service) in online platform success!
+[Build] internalRegister pkg(cocos-service) in xr-meta platform success!
+[Build] internalRegister pkg(cocos-service) in xr-huaweivr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-pico platform success!
+[Build] internalRegister pkg(cocos-service) in xr-rokid platform success!
+[Build] internalRegister pkg(cocos-service) in xr-monado platform success!
+[Build] internalRegister pkg(cocos-service) in xr-spaces platform success!
+[Build] internalRegister pkg(cocos-service) in xr-seed platform success!
+[Build] internalRegister pkg(cocos-service) in ar-android platform success!
+[Build] internalRegister pkg(cocos-service) in ar-ios platform success!
+[Build] internalRegister pkg(cocos-service) in xr-gsxr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-yvr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-htc platform success!
+[Build] internalRegister pkg(cocos-service) in xr-iqiyi platform success!
+[Build] internalRegister pkg(cocos-service) in xr-skyworth platform success!
+[Build] internalRegister pkg(cocos-service) in xr-ffalcon platform success!
+[Build] internalRegister pkg(cocos-service) in xr-nreal platform success!
+[Build] internalRegister pkg(cocos-service) in xr-inmo platform success!
+[Build] internalRegister pkg(cocos-service) in xr-lenovo platform success!
+[Build] internalRegister pkg(cocos-service) in android-hmi platform success!
+[Build-plugin] register pkg cocos-service: 12ms
+[Package] im-plugin@3.0.14 enable
+[Package] placeholder@1.0.0 enable
+init builder manager success
+[[Facet.reload]], before lock, count: 1
+[[Facet.reload]], after lock, count: 1
+[[Facet.reload]], before unlock, count: 1
+[[Facet.reload]], after unlock, count: 1
+trackTimeEnd failed! Can not find the track time asset-db:worker-startup-database[internal] start
+auto refresh because script compiled or scene changed
+trackTimeEnd failed! Can not find the track time asset-db:worker-startup-database[assets] start
+asset-db is ready!
+start preview settings manager
+[[Facet.reload]], before lock, count: 2
+[[Facet.reload]], after lock, count: 2
+[[Facet.reload]], before unlock, count: 2
+[[Facet.reload]], after unlock, count: 2
+auto refresh because script compiled or scene changed
+[Scene] meshopt wasm decoder initialized
+[Scene] [bullet]:bullet wasm lib loaded.
+[Scene] [box2d]:box2d wasm lib loaded.
+[Scene] [PHYSICS]: using builtin.
+[Scene] Cocos Creator v3.8.8
+[Scene] Using custom pipeline: Builtin
+[Scene] [PHYSICS]: switch from builtin to bullet.
+[Scene] [PHYSICS2D]: switch from builtin to box2d.
+Preview import map: {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "cc/env": "cc/editor/populate-internal-constants",
+    "cce.env": "cc/editor/populate-internal-constants",
+    "cc/userland/macro": "./userland/macro"
+  }
+}
+[preview] runHooks (browser-settings) from plugin cocos-service success!
+[preview] runHooks (browser-settings) from plugin cocos-service success!
+[preview] runHooks (browser-settings) from plugin cocos-service success!

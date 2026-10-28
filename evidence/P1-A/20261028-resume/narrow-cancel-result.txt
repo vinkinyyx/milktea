@@ -1,0 +1,1 @@
+{"narrow":{"message":"已恢复（后台时间未补算）","tick":418,"paused":false,"entities":1,"contacts":1,"states":[{"state":{"entityId":1,"positionDu":{"x":375,"y":400.7996244430542},"velocityDuPerSecond":{"x":0,"y":0},"angleRadians":0,"angularVelocity":0,"sleeping":true},"radius":140}]},"cancel":{"message":"物理世界已重建","entities":0,"contacts":0,"listeners":3}}

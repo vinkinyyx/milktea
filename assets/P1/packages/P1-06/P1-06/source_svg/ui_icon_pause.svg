@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+  <title>暂停双条 | ui_icon_pause</title>
+  <desc>奶茶游戏 UI icon. Original editable vector. Transparent 192x192 canvas. 96px/48px exports. sRGB deep-brown. No dynamic text.</desc>
+
+  <defs>
+   <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+   </linearGradient>
+  </defs>
+
+  <g id="ui_icon_pause_paint" stroke-linejoin="round">
+
+      <rect x="50" y="43" width="32" height="106" rx="10" fill="url(#brown)" stroke="#3F281E" stroke-width="7" />
+      <rect x="110" y="43" width="32" height="106" rx="10" fill="url(#brown)" stroke="#3F281E" stroke-width="7" />
+      <path d="M60 56 V127 M120 56 V127" stroke="#EAC197" opacity=".66" stroke-width="4" stroke-linecap="round"/>
+    
+  </g>
+</svg>

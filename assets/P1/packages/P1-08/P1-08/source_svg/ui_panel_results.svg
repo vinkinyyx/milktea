@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="820" viewBox="0 0 330 410" version="1.1" role="img">
+<title>结算面板 / ui_panel_results</title><desc>独立可编辑矢量母版，2x逻辑源尺寸 660x820; 运行PNG 330x410; 九切 36,36,36,36 像素。所有运行时标题、分数、头像、数字由程序绘制。色彩空间 sRGB。</desc>
+<defs>
+<linearGradient id="results_paper" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+<stop offset="0%" stop-color="#FFF8EA"/><stop offset="49%" stop-color="#F3E2C8"/><stop offset="100%" stop-color="#E1BF93"/></linearGradient>
+<linearGradient id="results_shine" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#FFF" stop-opacity=".54"/><stop offset="18%" stop-color="#FFF" stop-opacity=".13"/><stop offset="65%" stop-color="#FFF" stop-opacity="0"/><stop offset="100%" stop-color="#623B21" stop-opacity=".045"/></linearGradient>
+</defs>
+<g id="layer_01_soft_contact_shadow"><rect x="3" y="5" width="324" height="402" rx="33" fill="#593721" opacity=".11"/></g>
+<g id="layer_02_paper_base"><rect x="3" y="3" width="324" height="404" rx="33" fill="url(#results_paper)" stroke="#744B35" stroke-width="2.8"/></g>
+<g id="layer_03_soft_surface_highlight"><rect x="5" y="5" width="320" height="400" rx="30" fill="url(#results_shine)" opacity=".35"/></g>
+<g id="layer_04_inside_bevel"><rect x="7" y="7" width="316" height="396" rx="29" fill="none" stroke="#FFFDF6" stroke-width="2" opacity=".84"/></g>
+<g id="layer_05_fine_trim"><rect x="10" y="10" width="310" height="390" rx="26" fill="none" stroke="#BC8B58" stroke-width="1.1" opacity=".43"/></g>
+<g id="layer_06_fixed_corner_accents"><circle cx="28" cy="28" r="2.25" fill="#BC8B58" opacity=".65"/><circle cx="302" cy="28" r="2.25" fill="#BC8B58" opacity=".65"/><circle cx="28" cy="382" r="2.25" fill="#BC8B58" opacity=".65"/><circle cx="302" cy="382" r="2.25" fill="#BC8B58" opacity=".65"/><path d="M 15 26 Q 17 17 26 15" fill="none" stroke="#BC8B58" stroke-width="1.5" stroke-linecap="round" opacity=".54"/><path d="M 315 26 Q 313 17 304 15" fill="none" stroke="#BC8B58" stroke-width="1.5" stroke-linecap="round" opacity=".54"/><path d="M 15 384 Q 17 393 26 395" fill="none" stroke="#BC8B58" stroke-width="1.5" stroke-linecap="round" opacity=".54"/><path d="M 315 384 Q 313 393 304 395" fill="none" stroke="#BC8B58" stroke-width="1.5" stroke-linecap="round" opacity=".54"/></g>
+</svg>

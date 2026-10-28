@@ -1,0 +1,17 @@
+{
+  "caseId": "pressure-original",
+  "attemptId": "STR-01-P2-001",
+  "buildId": "20261029-p1a-final-14",
+  "embeddedBuildId": "20261029-p1a-final-14",
+  "expectedBuildId": "20261029-p1a-final-14",
+  "probe": "legacy",
+  "url": "http://127.0.0.1:8784/?p1aCase=pressure-original&attemptId=STR-01-P2-001&expectedBuildId=20261029-p1a-final-14&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=legacy&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-14%2Fraw%2FSTR-01-P2-001",
+  "cliExitCode": 0,
+  "acceptance": "PASS",
+  "pass": true,
+  "resultParseError": null,
+  "stderr": "",
+  "artifacts": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\P1-A\\20261029-p1a-final-14\\raw\\STR-01-P2-001",
+  "recordedAt": "2026-10-29T04:03:53.2752002+08:00",
+  "playwrightCommand": "node C:/Program Files/nodejs/node_modules/npm/bin/npx-cli.js --yes @playwright/cli -s=p1a-final14 --raw run-code --filename D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\p1a-runtime-case.js"
+}

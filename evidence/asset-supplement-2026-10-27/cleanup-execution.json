@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "action": "reversible_move",
+  "archived_files": 301,
+  "archived_bytes": 10710405.0,
+  "entries": 12,
+  "archive_hashes_verified": 301,
+  "backup_root": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2",
+  "permanently_deleted_files": 0
+}

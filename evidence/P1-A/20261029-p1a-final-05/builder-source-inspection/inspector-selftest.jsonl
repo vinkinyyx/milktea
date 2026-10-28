@@ -1,0 +1,3 @@
+{"at":"2026-10-28T18:39:35.307Z","event":"inspector-hook-installed","installed":true,"pid":25816,"execPath":"C:\\Program Files\\nodejs\\node.exe","argv":["C:\\Program Files\\nodejs\\node.exe"]}
+{"event":"child-kill-request","at":"2026-10-28T18:39:37.273Z","ownerPid":25816,"childPid":4840,"signal":"SIGTERM","callStack":["    at prototype.kill (<anonymous>:11:20)","    at Timeout._onTimeout ([eval]:1:148)","    at listOnTimeout (node:internal/timers:605:17)","    at process.processTimers (node:internal/timers:541:7)"]}
+{"event":"child-exit-after-kill","at":"2026-10-28T18:39:37.279Z","ownerPid":25816,"childPid":4840,"code":null,"signal":"SIGTERM"}

@@ -1,0 +1,12 @@
+import {strict as assert} from 'node:assert';
+import {drawAlbumQuestion, ASSET_ID} from '../runtime/gen_album_question.mjs';
+const calls=[];
+const ctx={save(){calls.push('save')},restore(){calls.push('restore')},strokeText(...v){calls.push(['stroke',...v])},fillText(...v){calls.push(['fill',...v])}};
+assert.equal(ASSET_ID,'gen_album_question');
+drawAlbumQuestion(ctx,10,30,96);
+assert.equal(calls[0],'save');assert.equal(calls.at(-1),'restore');
+assert.equal(calls[1][1],'?');assert.equal(calls[1][2],58);assert.equal(calls[1][3],78);
+assert.throws(()=>drawAlbumQuestion(ctx,10,10,0),RangeError);
+assert.throws(()=>drawAlbumQuestion(ctx,NaN,10,50),RangeError);
+assert.throws(()=>drawAlbumQuestion(null,10,10,50),TypeError);
+console.log('PASS 7 Canvas draw and validation checks');

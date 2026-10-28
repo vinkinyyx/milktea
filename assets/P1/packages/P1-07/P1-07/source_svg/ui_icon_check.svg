@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+ <title>确认勾 | ui_icon_check</title>
+ <desc>奶茶项目P1-07. Original editable SVG. Transparent 192x192 canvas, 96 and 48 PNG exports, sRGB browns, no dynamic text or UI button baked in.</desc>
+ <defs>
+  <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+  </linearGradient>
+  <linearGradient id="milk" x1="0" x2=".8" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFF5E7"/>
+    <stop offset="70%" stop-color="#E9D1B0"/>
+    <stop offset="100%" stop-color="#D6AE86"/>
+  </linearGradient>
+  <linearGradient id="warning" x1="0" x2=".4" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFDD9D"/>
+    <stop offset="70%" stop-color="#F4BD6C"/>
+    <stop offset="100%" stop-color="#ECA257"/>
+  </linearGradient>
+ </defs>
+ <g id="ui_icon_check_paint" stroke-linejoin="round">
+ <path d="M42 98 L78 131 L151 58" fill="none" stroke="#3F281E" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" /><path d="M42 98 L78 131 L151 58" fill="none" stroke="url(#brown)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/><path d="M45 90 L78 120 L143 54" fill="none" stroke="#F0C99C" stroke-width="3.2" stroke-linecap="round" opacity=".66"/>
+ </g>
+ </svg>

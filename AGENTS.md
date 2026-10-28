@@ -10,4 +10,5 @@
 - 真实关卡/广告/平台/持久化结果要实际验证；静态检查、模拟器、真机和玩家试玩分别记录，不互相替代。
 - 未实现功能继续保留其需求编号、依赖和验收条件。新增功能先更新相关分册和延期表，避免遗漏或重复实现。
 - 详细阶段以docs/12-delivery-phases.md为准，开工入口为docs/13-developer-handoff.md；逐项图像以assets/image-elements.json为准，其生成源是tools/build_image_catalog.py。
+- 美术取用先读assets/README.md和assets/library/catalog.json；原包有效源稿、运行导出和验收资料保留，清理冗余/过期内容时按evidence中的清理清单可恢复归档。截图模板、Canvas参考和平台合同不能冒充已验收运行贴图；实际入库状态与基线制作计划分开记录。
 - 本轮只交付设计资料。以后用户要求实施时持续推进适用版本，不再重问已经确认的方向。

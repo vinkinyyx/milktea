@@ -1,0 +1,15 @@
+﻿case_id,steps,expected,status,actual,evidence
+GRAVITY,已有creator-preview-smoke真实输入与采样,按P1-A用例与脚本断言,PASS,真实Creator预览观察，详见原始JSON,runtime-smoke.json
+FIXED_30_1,已有creator-preview-smoke真实输入与采样,按P1-A用例与脚本断言,PASS,真实Creator预览观察，详见原始JSON,runtime-smoke.json
+FIXED_60_2,已有creator-preview-smoke真实输入与采样,按P1-A用例与脚本断言,PASS,真实Creator预览观察，详见原始JSON,runtime-smoke.json
+FIXED_60_3,已有creator-preview-smoke真实输入与采样,按P1-A用例与脚本断言,PASS,真实Creator预览观察，详见原始JSON,runtime-smoke.json
+FIXED_REPRODUCIBILITY,已有creator-preview-smoke真实输入与采样,按P1-A用例与脚本断言,PASS,真实Creator预览观察，详见原始JSON,runtime-smoke.json
+PAUSE,已有creator-preview-smoke真实输入与采样,按P1-A用例与脚本断言,PASS,真实Creator预览观察，详见原始JSON,runtime-smoke.json
+BACKGROUND,已有creator-preview-smoke真实输入与采样,按P1-A用例与脚本断言,FAIL,自动化超时，未观察到真实hidden；应用后台正确性尚未判定,runtime-smoke.json
+REBUILD_20,已有creator-preview-smoke真实输入与采样,按P1-A用例与脚本断言,FAIL,失败采样使用旧编译代码；新闭包修复已导入，最终回归未执行,runtime-smoke.json
+THREE_CIRCLES_60S,按docs/22-current-progress-and-resume.md继续,适用阶段验收要求,NOT_EXECUTED,暂停前没有完整验收记录,../../../docs/20-pause-handoff-2026-10-28.md
+NINE_SIZES_FINAL,按docs/22-current-progress-and-resume.md继续,适用阶段验收要求,NOT_EXECUTED,暂停前没有完整验收记录,../../../docs/20-pause-handoff-2026-10-28.md
+NARROWEST_CUP,按docs/22-current-progress-and-resume.md继续,适用阶段验收要求,NOT_EXECUTED,暂停前没有完整验收记录,../../../docs/20-pause-handoff-2026-10-28.md
+PRESSURE,按docs/22-current-progress-and-resume.md继续,适用阶段验收要求,NOT_EXECUTED,暂停前没有完整验收记录,../../../docs/20-pause-handoff-2026-10-28.md
+ART_81,按docs/22-current-progress-and-resume.md继续,适用阶段验收要求,NOT_EXECUTED,暂停前没有完整验收记录,../../../docs/20-pause-handoff-2026-10-28.md
+WEB_BUILD,按docs/22-current-progress-and-resume.md继续,适用阶段验收要求,NOT_EXECUTED,暂停前没有完整验收记录,../../../docs/20-pause-handoff-2026-10-28.md

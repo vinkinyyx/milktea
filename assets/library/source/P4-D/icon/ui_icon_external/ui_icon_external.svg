@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+<title>外链提示 | ui_icon_external</title>
+<desc>Original external-link icon for NaiCha game. Transparent background. No platform logo. P1 dark brown outline, caramel fill, cream highlight. Center pivot.</desc>
+<defs><linearGradient id="brown" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stop-color="#A6704A"/><stop offset="100%" stop-color="#75472F"/></linearGradient></defs>
+<g id="external_frame" stroke-linejoin="round" stroke-linecap="round">
+ <path d="M108 45 H49 Q37 45 37 57 V143 Q37 155 49 155 H134 Q146 155 146 143 V110" fill="none" stroke="#3E281E" stroke-width="24"/>
+ <path d="M108 45 H49 Q37 45 37 57 V143 Q37 155 49 155 H134 Q146 155 146 143 V110" fill="none" stroke="url(#brown)" stroke-width="15"/>
+ <path d="M43 126 V60 Q43 52 51 52 H89" fill="none" stroke="#E5B888" stroke-opacity=".55" stroke-width="3"/>
+</g>
+<g id="external_arrow" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M84 111 L146 48 M104 48 H146 V90" fill="none" stroke="#3E281E" stroke-width="27"/>
+ <path d="M84 111 L146 48 M104 48 H146 V90" fill="none" stroke="url(#brown)" stroke-width="18"/>
+ <path d="M87 104 L141 51 M110 53 H140 V85" fill="none" stroke="#E6B77A" stroke-opacity=".62" stroke-width="3.5"/>
+</g></svg>

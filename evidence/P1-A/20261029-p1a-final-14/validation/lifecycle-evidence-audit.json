@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "buildId": "20261029-p1a-final-14",
+  "evidencePath": "D:\\Workspace\\TapTap\\�̲輷��\\evidence\\P1-A\\20261029-p1a-final-14",
+  "verdict": "EVIDENCE_CONSISTENT_EXIT_NOT_MET",
+  "caseRows": 52,
+  "requiredCaseRows": 52,
+  "missing": [],
+  "failedCaseIds": [
+    "LIFE-08"
+  ],
+  "unexecutedCaseIds": [],
+  "notApplicableCaseIds": [],
+  "errors": [],
+  "note": "This audit checks consistency only and never creates or upgrades a PASS."
+}

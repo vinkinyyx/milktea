@@ -1,0 +1,1 @@
+async page=>{let req=[];page.on('response',r=>req.push({url:r.url(),status:r.status()}));await page.reload();await page.waitForFunction(()=>window.cc?.director.getScene()?.name==='PhysicsLab',null,{timeout:30000});return req.filter(x=>/config|json|import/.test(x.url));}

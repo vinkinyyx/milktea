@@ -1,0 +1,3 @@
+﻿test,tick,seconds,initialYDu,actualYDu,actualDisplacementDu,actualVelocityDuPerSecond,theoreticalDisplacementDu,enginePtmRatio
+gravity-free-fall,30,0.5,1130,1003.4166736602783,126.58332633972168,-490.0001049041748,122.50000000000001,32
+gravity-free-fall,60,1,1130,631.833265542984,498.166734457016,-979.999828338623,490.00000000000006,32

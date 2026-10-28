@@ -1,7 +1,7 @@
 {
   "version": "handoff-v0.2",
   "date": "2026-10-27",
-  "scope": "Image inventory; no final artwork supplied",
+  "scope": "Production requirements plus intake overlay; game-engine acceptance is separate",
   "method_definitions": {
     "new_draw": "需要设计母版",
     "derived": "复用母版导出/合成，仍需检查",
@@ -29,7 +29,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_sago_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_sago_base"
     },
     {
       "asset_id": "ui_ing_sago_thumb",
@@ -51,7 +54,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_sago_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_sago_thumb"
     },
     {
       "asset_id": "ui_ing_sago_locked",
@@ -73,7 +79,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_sago_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_sago_locked"
     },
     {
       "asset_id": "ui_ing_sago_detail",
@@ -95,7 +104,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_sago_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_sago_detail"
     },
     {
       "asset_id": "spr_ing_red_bean_base",
@@ -117,7 +129,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_red_bean_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_red_bean_base"
     },
     {
       "asset_id": "ui_ing_red_bean_thumb",
@@ -139,7 +154,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_red_bean_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_red_bean_thumb"
     },
     {
       "asset_id": "ui_ing_red_bean_locked",
@@ -161,7 +179,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_red_bean_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_red_bean_locked"
     },
     {
       "asset_id": "ui_ing_red_bean_detail",
@@ -183,7 +204,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_red_bean_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_red_bean_detail"
     },
     {
       "asset_id": "spr_ing_small_pearl_base",
@@ -205,7 +229,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_small_pearl_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_small_pearl_base"
     },
     {
       "asset_id": "ui_ing_small_pearl_thumb",
@@ -227,7 +254,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_small_pearl_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_small_pearl_thumb"
     },
     {
       "asset_id": "ui_ing_small_pearl_locked",
@@ -249,7 +279,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_small_pearl_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_small_pearl_locked"
     },
     {
       "asset_id": "ui_ing_small_pearl_detail",
@@ -271,7 +304,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_small_pearl_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_small_pearl_detail"
     },
     {
       "asset_id": "spr_ing_coconut_base",
@@ -293,7 +329,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_coconut_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_coconut_base"
     },
     {
       "asset_id": "ui_ing_coconut_thumb",
@@ -315,7 +354,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_coconut_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_coconut_thumb"
     },
     {
       "asset_id": "ui_ing_coconut_locked",
@@ -337,7 +379,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_coconut_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_coconut_locked"
     },
     {
       "asset_id": "ui_ing_coconut_detail",
@@ -359,7 +404,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_coconut_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_coconut_detail"
     },
     {
       "asset_id": "spr_ing_large_pearl_base",
@@ -381,7 +429,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_large_pearl_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_large_pearl_base"
     },
     {
       "asset_id": "ui_ing_large_pearl_thumb",
@@ -403,7 +454,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_large_pearl_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_large_pearl_thumb"
     },
     {
       "asset_id": "ui_ing_large_pearl_locked",
@@ -425,7 +479,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_large_pearl_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_large_pearl_locked"
     },
     {
       "asset_id": "ui_ing_large_pearl_detail",
@@ -447,7 +504,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_large_pearl_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_large_pearl_detail"
     },
     {
       "asset_id": "spr_ing_grass_jelly_base",
@@ -469,7 +529,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_grass_jelly_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_grass_jelly_base"
     },
     {
       "asset_id": "ui_ing_grass_jelly_thumb",
@@ -491,7 +554,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_grass_jelly_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_grass_jelly_thumb"
     },
     {
       "asset_id": "ui_ing_grass_jelly_locked",
@@ -513,7 +579,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_grass_jelly_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_grass_jelly_locked"
     },
     {
       "asset_id": "ui_ing_grass_jelly_detail",
@@ -535,7 +604,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_grass_jelly_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_grass_jelly_detail"
     },
     {
       "asset_id": "spr_ing_pudding_base",
@@ -557,7 +629,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_pudding_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_pudding_base"
     },
     {
       "asset_id": "ui_ing_pudding_thumb",
@@ -579,7 +654,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_pudding_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_pudding_thumb"
     },
     {
       "asset_id": "ui_ing_pudding_locked",
@@ -601,7 +679,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_pudding_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_pudding_locked"
     },
     {
       "asset_id": "ui_ing_pudding_detail",
@@ -623,7 +704,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_pudding_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_pudding_detail"
     },
     {
       "asset_id": "spr_ing_taro_base",
@@ -645,7 +729,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_taro_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_taro_base"
     },
     {
       "asset_id": "ui_ing_taro_thumb",
@@ -667,7 +754,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_taro_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_taro_thumb"
     },
     {
       "asset_id": "ui_ing_taro_locked",
@@ -689,7 +779,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_taro_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_taro_locked"
     },
     {
       "asset_id": "ui_ing_taro_detail",
@@ -711,7 +804,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_taro_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_taro_detail"
     },
     {
       "asset_id": "spr_ing_mochi_base",
@@ -733,7 +829,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_ing_mochi_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "3",
+      "library_index": "assets/library/index.html#spr_ing_mochi_base"
     },
     {
       "asset_id": "ui_ing_mochi_thumb",
@@ -755,7 +854,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_mochi_thumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_mochi_thumb"
     },
     {
       "asset_id": "ui_ing_mochi_locked",
@@ -777,7 +879,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_mochi_locked.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_mochi_locked"
     },
     {
       "asset_id": "ui_ing_mochi_detail",
@@ -799,7 +904,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_ing_mochi_detail.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_ing_mochi_detail"
     },
     {
       "asset_id": "spr_face_neutral",
@@ -821,7 +929,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_face_neutral.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_face_neutral"
     },
     {
       "asset_id": "spr_face_happy",
@@ -843,7 +954,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_face_happy.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_face_happy"
     },
     {
       "asset_id": "spr_face_surprised",
@@ -865,7 +979,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_face_surprised.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_face_surprised"
     },
     {
       "asset_id": "spr_cup_classic_back",
@@ -887,7 +1004,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_cup_classic_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_classic_back"
     },
     {
       "asset_id": "spr_cup_classic_tea",
@@ -909,7 +1029,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_cup_classic_tea.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_classic_tea"
     },
     {
       "asset_id": "spr_cup_classic_front",
@@ -931,7 +1054,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_cup_classic_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_classic_front"
     },
     {
       "asset_id": "spr_cup_classic_rim_back",
@@ -953,7 +1079,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_cup_classic_rim_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_classic_rim_back"
     },
     {
       "asset_id": "spr_cup_classic_rim_front",
@@ -975,7 +1104,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_cup_classic_rim_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_classic_rim_front"
     },
     {
       "asset_id": "spr_cup_classic_base",
@@ -997,7 +1129,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_cup_classic_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_classic_base"
     },
     {
       "asset_id": "spr_cup_classic_label",
@@ -1019,7 +1154,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_cup_classic_label.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_classic_label"
     },
     {
       "asset_id": "ui_stage_classic_card",
@@ -1041,7 +1179,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_stage_classic_card.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_stage_classic_card"
     },
     {
       "asset_id": "spr_cup_coconut_green_back",
@@ -1063,7 +1204,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_coconut_green_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_coconut_green_back"
     },
     {
       "asset_id": "spr_cup_coconut_green_tea",
@@ -1085,7 +1229,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_coconut_green_tea.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_coconut_green_tea"
     },
     {
       "asset_id": "spr_cup_coconut_green_front",
@@ -1107,7 +1254,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_coconut_green_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_coconut_green_front"
     },
     {
       "asset_id": "spr_cup_coconut_green_rim_back",
@@ -1129,7 +1279,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_coconut_green_rim_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_coconut_green_rim_back"
     },
     {
       "asset_id": "spr_cup_coconut_green_rim_front",
@@ -1151,7 +1304,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_coconut_green_rim_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_coconut_green_rim_front"
     },
     {
       "asset_id": "spr_cup_coconut_green_base",
@@ -1173,7 +1329,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_coconut_green_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_coconut_green_base"
     },
     {
       "asset_id": "spr_cup_coconut_green_label",
@@ -1195,7 +1354,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_coconut_green_label.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_coconut_green_label"
     },
     {
       "asset_id": "ui_stage_coconut_green_card",
@@ -1217,7 +1379,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_stage_coconut_green_card.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_stage_coconut_green_card"
     },
     {
       "asset_id": "spr_cup_taro_boba_back",
@@ -1239,7 +1404,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_taro_boba_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_taro_boba_back"
     },
     {
       "asset_id": "spr_cup_taro_boba_tea",
@@ -1261,7 +1429,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_taro_boba_tea.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_taro_boba_tea"
     },
     {
       "asset_id": "spr_cup_taro_boba_front",
@@ -1283,7 +1454,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_taro_boba_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_taro_boba_front"
     },
     {
       "asset_id": "spr_cup_taro_boba_rim_back",
@@ -1305,7 +1479,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_taro_boba_rim_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_taro_boba_rim_back"
     },
     {
       "asset_id": "spr_cup_taro_boba_rim_front",
@@ -1327,7 +1504,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_taro_boba_rim_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_taro_boba_rim_front"
     },
     {
       "asset_id": "spr_cup_taro_boba_base",
@@ -1349,7 +1529,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_taro_boba_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_taro_boba_base"
     },
     {
       "asset_id": "spr_cup_taro_boba_label",
@@ -1371,7 +1554,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_taro_boba_label.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_taro_boba_label"
     },
     {
       "asset_id": "ui_stage_taro_boba_card",
@@ -1393,7 +1579,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_stage_taro_boba_card.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_stage_taro_boba_card"
     },
     {
       "asset_id": "spr_cup_brown_sugar_back",
@@ -1415,7 +1604,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_brown_sugar_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_brown_sugar_back"
     },
     {
       "asset_id": "spr_cup_brown_sugar_tea",
@@ -1437,7 +1629,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_brown_sugar_tea.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_brown_sugar_tea"
     },
     {
       "asset_id": "spr_cup_brown_sugar_front",
@@ -1459,7 +1654,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_brown_sugar_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_brown_sugar_front"
     },
     {
       "asset_id": "spr_cup_brown_sugar_rim_back",
@@ -1481,7 +1679,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_brown_sugar_rim_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_brown_sugar_rim_back"
     },
     {
       "asset_id": "spr_cup_brown_sugar_rim_front",
@@ -1503,7 +1704,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_brown_sugar_rim_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_brown_sugar_rim_front"
     },
     {
       "asset_id": "spr_cup_brown_sugar_base",
@@ -1525,7 +1729,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_brown_sugar_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_brown_sugar_base"
     },
     {
       "asset_id": "spr_cup_brown_sugar_label",
@@ -1547,7 +1754,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_brown_sugar_label.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_brown_sugar_label"
     },
     {
       "asset_id": "ui_stage_brown_sugar_card",
@@ -1569,7 +1779,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_stage_brown_sugar_card.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_stage_brown_sugar_card"
     },
     {
       "asset_id": "spr_cup_mochi_special_back",
@@ -1591,7 +1804,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_mochi_special_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_mochi_special_back"
     },
     {
       "asset_id": "spr_cup_mochi_special_tea",
@@ -1613,7 +1829,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_mochi_special_tea.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_mochi_special_tea"
     },
     {
       "asset_id": "spr_cup_mochi_special_front",
@@ -1635,7 +1854,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_mochi_special_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_mochi_special_front"
     },
     {
       "asset_id": "spr_cup_mochi_special_rim_back",
@@ -1657,7 +1879,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_mochi_special_rim_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_mochi_special_rim_back"
     },
     {
       "asset_id": "spr_cup_mochi_special_rim_front",
@@ -1679,7 +1904,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_mochi_special_rim_front.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_mochi_special_rim_front"
     },
     {
       "asset_id": "spr_cup_mochi_special_base",
@@ -1701,7 +1929,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_mochi_special_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_mochi_special_base"
     },
     {
       "asset_id": "spr_cup_mochi_special_label",
@@ -1723,7 +1954,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "spr_cup_mochi_special_label.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_mochi_special_label"
     },
     {
       "asset_id": "ui_stage_mochi_special_card",
@@ -1745,7 +1979,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_stage_mochi_special_card.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_stage_mochi_special_card"
     },
     {
       "asset_id": "bg_shop_base",
@@ -1767,7 +2004,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "bg_shop_base.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#bg_shop_base"
     },
     {
       "asset_id": "bg_shop_extend_top",
@@ -1789,7 +2029,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "bg_shop_extend_top.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#bg_shop_extend_top"
     },
     {
       "asset_id": "bg_shop_extend_bottom",
@@ -1811,7 +2054,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "bg_shop_extend_bottom.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#bg_shop_extend_bottom"
     },
     {
       "asset_id": "ui_title_logo",
@@ -1833,7 +2079,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_title_logo.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_title_logo"
     },
     {
       "asset_id": "spr_cup_shadow",
@@ -1855,7 +2104,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "spr_cup_shadow.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#spr_cup_shadow"
     },
     {
       "asset_id": "ui_btn_primary_normal",
@@ -1877,7 +2129,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_btn_primary_normal.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_primary_normal"
     },
     {
       "asset_id": "ui_btn_primary_pressed",
@@ -1899,7 +2154,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_primary_pressed.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_primary_pressed"
     },
     {
       "asset_id": "ui_btn_primary_disabled",
@@ -1921,7 +2179,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_primary_disabled.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_primary_disabled"
     },
     {
       "asset_id": "ui_btn_primary_selected",
@@ -1943,7 +2204,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_primary_selected.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_primary_selected"
     },
     {
       "asset_id": "ui_btn_secondary_normal",
@@ -1965,7 +2229,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_btn_secondary_normal.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_secondary_normal"
     },
     {
       "asset_id": "ui_btn_secondary_pressed",
@@ -1987,7 +2254,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_secondary_pressed.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_secondary_pressed"
     },
     {
       "asset_id": "ui_btn_secondary_disabled",
@@ -2009,7 +2279,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_secondary_disabled.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_secondary_disabled"
     },
     {
       "asset_id": "ui_btn_secondary_selected",
@@ -2031,7 +2304,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_secondary_selected.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_secondary_selected"
     },
     {
       "asset_id": "ui_btn_icon_normal",
@@ -2053,7 +2329,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_btn_icon_normal.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_icon_normal"
     },
     {
       "asset_id": "ui_btn_icon_pressed",
@@ -2075,7 +2354,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_icon_pressed.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_icon_pressed"
     },
     {
       "asset_id": "ui_btn_icon_disabled",
@@ -2097,7 +2379,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_icon_disabled.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_icon_disabled"
     },
     {
       "asset_id": "ui_btn_icon_selected",
@@ -2119,7 +2404,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_icon_selected.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_icon_selected"
     },
     {
       "asset_id": "ui_btn_tab_normal",
@@ -2141,7 +2429,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_btn_tab_normal.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_tab_normal"
     },
     {
       "asset_id": "ui_btn_tab_pressed",
@@ -2163,7 +2454,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_tab_pressed.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_tab_pressed"
     },
     {
       "asset_id": "ui_btn_tab_disabled",
@@ -2185,7 +2479,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_tab_disabled.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_tab_disabled"
     },
     {
       "asset_id": "ui_btn_tab_selected",
@@ -2207,7 +2504,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "ui_btn_tab_selected.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_btn_tab_selected"
     },
     {
       "asset_id": "ui_icon_play",
@@ -2229,7 +2529,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_play.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_play"
     },
     {
       "asset_id": "ui_icon_continue",
@@ -2251,7 +2554,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_continue.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_continue"
     },
     {
       "asset_id": "ui_icon_pause",
@@ -2273,7 +2579,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_pause.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_pause"
     },
     {
       "asset_id": "ui_icon_settings",
@@ -2295,7 +2604,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_settings.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_settings"
     },
     {
       "asset_id": "ui_icon_close",
@@ -2317,7 +2629,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_close.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_close"
     },
     {
       "asset_id": "ui_icon_back",
@@ -2339,7 +2654,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_back.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_back"
     },
     {
       "asset_id": "ui_icon_restart",
@@ -2361,7 +2679,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_restart.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_restart"
     },
     {
       "asset_id": "ui_icon_home",
@@ -2383,7 +2704,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_home.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_home"
     },
     {
       "asset_id": "ui_icon_music_on",
@@ -2405,7 +2729,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_music_on.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_music_on"
     },
     {
       "asset_id": "ui_icon_music_off",
@@ -2427,7 +2754,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_music_off.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_music_off"
     },
     {
       "asset_id": "ui_icon_sfx_on",
@@ -2449,7 +2779,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_sfx_on.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_sfx_on"
     },
     {
       "asset_id": "ui_icon_sfx_off",
@@ -2471,7 +2804,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_sfx_off.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_sfx_off"
     },
     {
       "asset_id": "ui_icon_reduced_motion",
@@ -2493,7 +2829,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_reduced_motion.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_reduced_motion"
     },
     {
       "asset_id": "ui_icon_shake",
@@ -2515,7 +2854,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_shake.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_shake"
     },
     {
       "asset_id": "ui_icon_info",
@@ -2537,7 +2879,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_info.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_info"
     },
     {
       "asset_id": "ui_icon_warning",
@@ -2559,7 +2904,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_warning.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_warning"
     },
     {
       "asset_id": "ui_icon_check",
@@ -2581,7 +2929,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_check.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_check"
     },
     {
       "asset_id": "ui_icon_next",
@@ -2603,7 +2954,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_next.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_next"
     },
     {
       "asset_id": "ui_icon_record",
@@ -2625,7 +2979,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_record.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_record"
     },
     {
       "asset_id": "ui_icon_publish",
@@ -2647,7 +3004,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_publish.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_publish"
     },
     {
       "asset_id": "ui_icon_sidebar",
@@ -2669,7 +3029,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_icon_sidebar.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_sidebar"
     },
     {
       "asset_id": "ui_icon_lock",
@@ -2691,7 +3054,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_lock.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_lock"
     },
     {
       "asset_id": "ui_icon_unlock",
@@ -2713,7 +3079,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_unlock.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_unlock"
     },
     {
       "asset_id": "ui_icon_cloud",
@@ -2735,7 +3104,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_cloud.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_cloud"
     },
     {
       "asset_id": "ui_icon_sync",
@@ -2757,7 +3129,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_sync.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_sync"
     },
     {
       "asset_id": "ui_icon_offline",
@@ -2779,7 +3154,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_offline.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_offline"
     },
     {
       "asset_id": "ui_icon_account",
@@ -2801,7 +3179,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_account.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_account"
     },
     {
       "asset_id": "ui_icon_coupon",
@@ -2823,7 +3204,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_coupon.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_coupon"
     },
     {
       "asset_id": "ui_icon_rank",
@@ -2845,7 +3229,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_rank.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_rank"
     },
     {
       "asset_id": "ui_icon_share",
@@ -2867,7 +3254,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_share.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_share"
     },
     {
       "asset_id": "ui_icon_standard",
@@ -2889,7 +3279,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_standard.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_standard"
     },
     {
       "asset_id": "ui_icon_assisted",
@@ -2911,7 +3304,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_assisted.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_assisted"
     },
     {
       "asset_id": "ui_icon_verified",
@@ -2933,7 +3329,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_verified.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_verified"
     },
     {
       "asset_id": "ui_icon_pending",
@@ -2955,7 +3354,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_pending.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_pending"
     },
     {
       "asset_id": "ui_icon_calendar",
@@ -2977,7 +3379,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_calendar.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_calendar"
     },
     {
       "asset_id": "ui_icon_friend",
@@ -2999,7 +3404,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_friend.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_friend"
     },
     {
       "asset_id": "ui_icon_win",
@@ -3021,7 +3429,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_win.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_win"
     },
     {
       "asset_id": "ui_icon_tie",
@@ -3043,7 +3454,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_tie.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_tie"
     },
     {
       "asset_id": "ui_icon_loss",
@@ -3065,7 +3479,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_loss.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_loss"
     },
     {
       "asset_id": "ui_icon_album",
@@ -3087,7 +3504,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_album.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_album"
     },
     {
       "asset_id": "ui_icon_achievement",
@@ -3109,7 +3529,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_achievement.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_achievement"
     },
     {
       "asset_id": "ui_icon_skin",
@@ -3131,7 +3554,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_skin.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_skin"
     },
     {
       "asset_id": "ui_icon_ad_play",
@@ -3153,7 +3579,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_ad_play.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_ad_play"
     },
     {
       "asset_id": "ui_icon_external",
@@ -3175,7 +3604,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_icon_external.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "2",
+      "library_index": "assets/library/index.html#ui_icon_external"
     },
     {
       "asset_id": "ui_panel_modal",
@@ -3197,7 +3629,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_panel_modal.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_modal"
     },
     {
       "asset_id": "ui_panel_hud",
@@ -3219,7 +3654,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_panel_hud.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_hud"
     },
     {
       "asset_id": "ui_panel_next",
@@ -3241,7 +3679,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_panel_next.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_next"
     },
     {
       "asset_id": "ui_panel_toast",
@@ -3263,7 +3704,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_panel_toast.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_toast"
     },
     {
       "asset_id": "ui_panel_results",
@@ -3285,7 +3729,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_panel_results.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_results"
     },
     {
       "asset_id": "ui_panel_stage",
@@ -3307,7 +3754,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_panel_stage.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_stage"
     },
     {
       "asset_id": "ui_panel_rank_row",
@@ -3329,7 +3779,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_panel_rank_row.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_rank_row"
     },
     {
       "asset_id": "ui_panel_rank_self",
@@ -3351,7 +3804,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_panel_rank_self.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_rank_self"
     },
     {
       "asset_id": "ui_panel_challenge",
@@ -3373,7 +3829,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_panel_challenge.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_challenge"
     },
     {
       "asset_id": "ui_panel_collection",
@@ -3395,7 +3854,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_panel_collection.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_panel_collection"
     },
     {
       "asset_id": "ui_toggle_track",
@@ -3417,7 +3879,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_toggle_track.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_toggle_track"
     },
     {
       "asset_id": "ui_toggle_knob",
@@ -3439,7 +3904,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_toggle_knob.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_toggle_knob"
     },
     {
       "asset_id": "ui_slider_track",
@@ -3461,7 +3929,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_slider_track.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_slider_track"
     },
     {
       "asset_id": "ui_slider_knob",
@@ -3483,7 +3954,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_slider_knob.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_slider_knob"
     },
     {
       "asset_id": "ui_badge_record",
@@ -3505,7 +3979,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_badge_record.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_badge_record"
     },
     {
       "asset_id": "ui_badge_mochi",
@@ -3527,7 +4004,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_badge_mochi.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_badge_mochi"
     },
     {
       "asset_id": "ui_avatar_default",
@@ -3549,7 +4029,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_avatar_default.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_avatar_default"
     },
     {
       "asset_id": "ui_medal_gold",
@@ -3571,7 +4054,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_medal_gold.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_medal_gold"
     },
     {
       "asset_id": "ui_medal_silver",
@@ -3593,7 +4079,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_medal_silver.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_medal_silver"
     },
     {
       "asset_id": "ui_medal_bronze",
@@ -3615,7 +4104,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_medal_bronze.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_medal_bronze"
     },
     {
       "asset_id": "ui_coupon_ticket",
@@ -3637,7 +4129,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_coupon_ticket.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_coupon_ticket"
     },
     {
       "asset_id": "ui_badge_discovered",
@@ -3659,7 +4154,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_badge_discovered.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_badge_discovered"
     },
     {
       "asset_id": "ui_badge_achievement",
@@ -3681,7 +4179,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "ui_badge_achievement.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_badge_achievement"
     },
     {
       "asset_id": "fx_merge_ring",
@@ -3703,7 +4204,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "fx_merge_ring.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#fx_merge_ring"
     },
     {
       "asset_id": "fx_sparkle",
@@ -3725,7 +4229,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "fx_sparkle.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#fx_sparkle"
     },
     {
       "asset_id": "fx_crumb",
@@ -3747,7 +4254,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "fx_crumb.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#fx_crumb"
     },
     {
       "asset_id": "fx_drop_ping",
@@ -3769,7 +4279,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "fx_drop_ping.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#fx_drop_ping"
     },
     {
       "asset_id": "fx_mochi_star",
@@ -3791,7 +4304,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "fx_mochi_star.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#fx_mochi_star"
     },
     {
       "asset_id": "fx_unlock_glow",
@@ -3813,7 +4329,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "fx_unlock_glow.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#fx_unlock_glow"
     },
     {
       "asset_id": "ui_tutorial_hand_move",
@@ -3835,7 +4354,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_tutorial_hand_move.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_tutorial_hand_move"
     },
     {
       "asset_id": "ui_tutorial_hand_release",
@@ -3857,7 +4379,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "ui_tutorial_hand_release.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#ui_tutorial_hand_release"
     },
     {
       "asset_id": "ui_tutorial_merge_example",
@@ -3879,7 +4404,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#ui_tutorial_merge_example"
     },
     {
       "asset_id": "gen_danger_line",
@@ -3901,7 +4429,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_danger_line"
     },
     {
       "asset_id": "gen_drop_guide",
@@ -3923,7 +4454,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_drop_guide"
     },
     {
       "asset_id": "gen_score_text",
@@ -3945,7 +4479,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_score_text"
     },
     {
       "asset_id": "gen_danger_countdown",
@@ -3967,7 +4504,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_danger_countdown"
     },
     {
       "asset_id": "gen_shake_count",
@@ -3989,7 +4529,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_shake_count"
     },
     {
       "asset_id": "gen_modal_dim",
@@ -4011,7 +4554,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_modal_dim"
     },
     {
       "asset_id": "gen_loading_spinner",
@@ -4033,7 +4579,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_loading_spinner"
     },
     {
       "asset_id": "gen_skeleton",
@@ -4055,7 +4604,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_skeleton"
     },
     {
       "asset_id": "gen_locked_overlay",
@@ -4077,7 +4629,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_locked_overlay"
     },
     {
       "asset_id": "gen_leaderboard_rank",
@@ -4099,7 +4654,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_leaderboard_rank"
     },
     {
       "asset_id": "gen_coupon_expiry",
@@ -4121,7 +4679,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_coupon_expiry"
     },
     {
       "asset_id": "gen_daily_budget",
@@ -4143,7 +4704,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_daily_budget"
     },
     {
       "asset_id": "gen_challenge_status",
@@ -4165,7 +4729,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_challenge_status"
     },
     {
       "asset_id": "gen_album_question",
@@ -4187,7 +4754,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_album_question"
     },
     {
       "asset_id": "gen_error_empty",
@@ -4209,7 +4779,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "engine_source_only",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#gen_error_empty"
     },
     {
       "asset_id": "platform_user_avatar",
@@ -4231,7 +4804,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "platform_dependency",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#platform_user_avatar"
     },
     {
       "asset_id": "platform_share_entry_code",
@@ -4253,7 +4829,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "platform_dependency",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#platform_share_entry_code"
     },
     {
       "asset_id": "platform_challenge_entry_code",
@@ -4275,7 +4854,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "platform_dependency",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#platform_challenge_entry_code"
     },
     {
       "asset_id": "platform_ad_badge",
@@ -4297,7 +4879,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "platform_dependency",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#platform_ad_badge"
     },
     {
       "asset_id": "platform_platform_review_logo",
@@ -4319,7 +4904,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "(runtime)",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "platform_dependency",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#platform_platform_review_logo"
     },
     {
       "asset_id": "share_result_background",
@@ -4341,7 +4929,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "share_result_background.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#share_result_background"
     },
     {
       "asset_id": "share_record_background",
@@ -4363,7 +4954,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "share_record_background.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#share_record_background"
     },
     {
       "asset_id": "share_daily_background",
@@ -4385,7 +4979,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "share_daily_background.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#share_daily_background"
     },
     {
       "asset_id": "share_friend_background",
@@ -4407,7 +5004,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "share_friend_background.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#share_friend_background"
     },
     {
       "asset_id": "share_achievement_background",
@@ -4429,7 +5029,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "share_achievement_background.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#share_achievement_background"
     },
     {
       "asset_id": "marketing_app_icon",
@@ -4451,7 +5054,10 @@
       "status": "planned",
       "license_status": "not_acquired",
       "filename": "marketing_app_icon.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_app_icon"
     },
     {
       "asset_id": "marketing_launch",
@@ -4473,7 +5079,10 @@
       "status": "planned",
       "license_status": "inherits_source_or_code",
       "filename": "marketing_launch.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_launch"
     },
     {
       "asset_id": "marketing_cover_square",
@@ -4495,7 +5104,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "marketing_cover_square.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_cover_square"
     },
     {
       "asset_id": "marketing_cover_landscape",
@@ -4517,7 +5129,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "marketing_cover_landscape.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "static_pass",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_cover_landscape"
     },
     {
       "asset_id": "marketing_screenshot_play",
@@ -4539,7 +5154,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "marketing_screenshot_play.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_screenshot_play"
     },
     {
       "asset_id": "marketing_screenshot_merge",
@@ -4561,7 +5179,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "marketing_screenshot_merge.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_screenshot_merge"
     },
     {
       "asset_id": "marketing_screenshot_stages",
@@ -4583,7 +5204,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "marketing_screenshot_stages.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_screenshot_stages"
     },
     {
       "asset_id": "marketing_screenshot_rank",
@@ -4605,7 +5229,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "marketing_screenshot_rank.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_screenshot_rank"
     },
     {
       "asset_id": "marketing_tap_cover",
@@ -4627,7 +5254,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "marketing_tap_cover.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_tap_cover"
     },
     {
       "asset_id": "marketing_wechat_icon",
@@ -4649,7 +5279,10 @@
       "status": "deferred",
       "license_status": "inherits_source_or_code",
       "filename": "marketing_wechat_icon.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "conditional_static",
+      "available_exports": "1",
+      "library_index": "assets/library/index.html#marketing_wechat_icon"
     },
     {
       "asset_id": "candidate_cup_pattern",
@@ -4671,7 +5304,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "candidate_cup_pattern.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "candidate_not_required",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#candidate_cup_pattern"
     },
     {
       "asset_id": "candidate_table_theme",
@@ -4693,7 +5329,10 @@
       "status": "deferred",
       "license_status": "not_acquired",
       "filename": "candidate_table_theme.png",
-      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志"
+      "acceptance": "检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志",
+      "intake_status": "candidate_not_required",
+      "available_exports": "0",
+      "library_index": "assets/library/index.html#candidate_table_theme"
     }
   ]
 }

@@ -1,0 +1,448 @@
+{
+  "batch": "P1-06",
+  "source_inventory": "/奶茶/image-elements.json",
+  "asset_count": 9,
+  "source_count": 9,
+  "png_96_count": 9,
+  "png_48_count": 9,
+  "reference_alignment": "asset IDs, Chinese names, 192 SVG + 96/48 PNG, transparency and pivot match catalog",
+  "qa_scope": "static dimensions+RGBA+transparent corners+nonempty alpha+unique assets+file names+contact sheet+48px/button preview",
+  "limitations": [
+    "Touch hitbox, engine-supplied selected/disabled transformations, UI layer order and contrast cannot be proved by static files.",
+    "SVG is genuinely editable vector art. Icon variants for dark button background must be tinted in engine."
+  ],
+  "assets": [
+    {
+      "asset_id": "ui_icon_play",
+      "name_zh": "开始三角",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_play.svg",
+      "png96": "export_png/96/ui_icon_play.png",
+      "png48": "export_png/48/ui_icon_play.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            32,
+            17,
+            79,
+            77
+          ],
+          "sha256": "c9aa8291716a78ab75ebb1ccd9d901478f2a126d84bc6a912589ea1d392d6324",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 7487
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            16,
+            8,
+            40,
+            39
+          ],
+          "sha256": "a6ddcc5d9a8816211e16cb5322e84e5b17386adf5835477f00a3c4ad3c29e8a4",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1853
+        }
+      }
+    },
+    {
+      "asset_id": "ui_icon_continue",
+      "name_zh": "继续箭头",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_continue.svg",
+      "png96": "export_png/96/ui_icon_continue.png",
+      "png48": "export_png/48/ui_icon_continue.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            15,
+            24,
+            80,
+            72
+          ],
+          "sha256": "06550496e5235521dfe2c434fdf833b15ff79f953a53a092f26f21e4c133aa88",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 7746
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            7,
+            12,
+            40,
+            36
+          ],
+          "sha256": "b5ee4c12a1621298b7a3192719157443ed5527cd7787777d0111b259b4e5cbbc",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1892
+        }
+      }
+    },
+    {
+      "asset_id": "ui_icon_pause",
+      "name_zh": "暂停双条",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_pause.svg",
+      "png96": "export_png/96/ui_icon_pause.png",
+      "png48": "export_png/48/ui_icon_pause.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            23,
+            19,
+            73,
+            77
+          ],
+          "sha256": "f52ba9c2effe0032cb80632cce37c86f1310fd3ee60ba07018a95242a21b6a4a",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 6984
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            11,
+            9,
+            37,
+            39
+          ],
+          "sha256": "59c995858b2fa3766b1fc0e823dab984841a1d780f98e3ebdc45a5f8400125ca",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1676
+        }
+      }
+    },
+    {
+      "asset_id": "ui_icon_settings",
+      "name_zh": "设置齿轮",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_settings.svg",
+      "png96": "export_png/96/ui_icon_settings.png",
+      "png48": "export_png/48/ui_icon_settings.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            12,
+            12,
+            84,
+            84
+          ],
+          "sha256": "2f1c636a2f09a25ee2f655b438741c589e08b0931643f0d1264be2afe563b26d",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 5764
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            6,
+            6,
+            42,
+            42
+          ],
+          "sha256": "60e98600f3fcb71f9a549aeeb9172362e333ce5889a648516436a33b989b1217",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1392
+        }
+      }
+    },
+    {
+      "asset_id": "ui_icon_close",
+      "name_zh": "关闭叉",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_close.svg",
+      "png96": "export_png/96/ui_icon_close.png",
+      "png48": "export_png/48/ui_icon_close.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            21,
+            21,
+            75,
+            75
+          ],
+          "sha256": "8c78a12da8af19209841187e99f3ae345c04630ba767f11b3b7920719e813493",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 7284
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            10,
+            10,
+            38,
+            38
+          ],
+          "sha256": "9388484565cd2b0f97af3c7fd69fb12b9023eee6d61542d0579aee2ad1c027b7",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1756
+        }
+      }
+    },
+    {
+      "asset_id": "ui_icon_back",
+      "name_zh": "返回箭头",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_back.svg",
+      "png96": "export_png/96/ui_icon_back.png",
+      "png48": "export_png/48/ui_icon_back.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            16,
+            24,
+            81,
+            72
+          ],
+          "sha256": "39a4a36b8ca33498ac8c7b163b51b42e58a4dcf01f1802fa0be9147a9a5ca44a",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 7746
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            8,
+            12,
+            41,
+            36
+          ],
+          "sha256": "474b11683af6f6c345e23989fec92db068088438936e98403ebbaf7a8ba38c63",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1892
+        }
+      }
+    },
+    {
+      "asset_id": "ui_icon_restart",
+      "name_zh": "重开回转箭头",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_restart.svg",
+      "png96": "export_png/96/ui_icon_restart.png",
+      "png48": "export_png/48/ui_icon_restart.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            15,
+            17,
+            81,
+            81
+          ],
+          "sha256": "14901a199b47c42bc02b81186605712f88b99608d04731683d0d182e594a1259",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 7089
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            7,
+            8,
+            41,
+            41
+          ],
+          "sha256": "9bc71a12b3ac6ae22d73a01b1ea6c213241cc415b23c8da9a6b82c4b2a77676d",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1718
+        }
+      }
+    },
+    {
+      "asset_id": "ui_icon_home",
+      "name_zh": "主页小屋",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_home.svg",
+      "png96": "export_png/96/ui_icon_home.png",
+      "png48": "export_png/48/ui_icon_home.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            11,
+            13,
+            85,
+            77
+          ],
+          "sha256": "f559c00c4c71d3d17f99a929dfa413204d7c600b98d222725cc74b77b929c375",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 6154
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            5,
+            6,
+            43,
+            39
+          ],
+          "sha256": "060f54534d1deb26d16ec3e08d41bae999ac31e190e495b8dcbe9771f6842f39",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1505
+        }
+      }
+    },
+    {
+      "asset_id": "ui_icon_music_on",
+      "name_zh": "音乐开",
+      "category": "icon",
+      "first_phase": "P1",
+      "batch_id": "P1-06",
+      "required": "required",
+      "production_method": "new_draw",
+      "source_spec": "192x192 SVG",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "runtime_du": "48x48",
+      "alpha": "yes",
+      "pivot": "0.5,0.5",
+      "status": "static_qa_passed",
+      "source": "source_svg/ui_icon_music_on.svg",
+      "png96": "export_png/96/ui_icon_music_on.png",
+      "png48": "export_png/48/ui_icon_music_on.png",
+      "qa": {
+        "96": {
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "bbox": [
+            19,
+            18,
+            76,
+            73
+          ],
+          "sha256": "00d4d55b9c1246a290b518c3b34307aac9f409bc7277c5674b8b31a039680733",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 7378
+        },
+        "48": {
+          "width": 48,
+          "height": 48,
+          "mode": "RGBA",
+          "bbox": [
+            9,
+            9,
+            38,
+            37
+          ],
+          "sha256": "d3af424ba28d31093b4455d54642a98d8d3daa3c10b3038cc1199eac8f005088",
+          "transparent_corners": true,
+          "fully_transparent_pixels": 1798
+        }
+      }
+    }
+  ]
+}

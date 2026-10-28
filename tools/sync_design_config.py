@@ -128,6 +128,12 @@ def main() -> int:
     if args.sync:
         DESTINATION.parent.mkdir(parents=True, exist_ok=True)
         DESTINATION.write_bytes(raw)
+        project_settings = ROOT / "client" / "settings" / "v2" / "packages" / "project.json"
+        if project_settings.exists():
+            settings = json.loads(project_settings.read_text(encoding="utf-8"))
+            resolution = settings.setdefault("general", {}).setdefault("designResolution", {})
+            resolution.update(width=config["viewport"]["width_du"], height=config["viewport"]["height_du"])
+            project_settings.write_text(json.dumps(settings, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if not DESTINATION.exists() or SOURCE.read_bytes() != DESTINATION.read_bytes():
         raise SystemExit("配置副本不存在或与根配置不同步；请运行 python tools/sync_design_config.py --sync")
     digest = hashlib.sha256(raw).hexdigest()

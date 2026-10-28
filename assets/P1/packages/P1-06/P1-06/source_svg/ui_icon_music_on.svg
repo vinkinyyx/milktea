@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+  <title>音乐开 | ui_icon_music_on</title>
+  <desc>奶茶游戏 UI icon. Original editable vector. Transparent 192x192 canvas. 96px/48px exports. sRGB deep-brown. No dynamic text.</desc>
+
+  <defs>
+   <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+   </linearGradient>
+  </defs>
+
+  <g id="ui_icon_music_on_paint" stroke-linejoin="round">
+
+      <path d="M78 117 V63 L130 49 V110" fill="none" stroke="#3F281E" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M78 117 V63 L130 49 V110" fill="none" stroke="url(#brown)" stroke-width="15" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M78 68 L130 54" fill="none" stroke="#EAC197" stroke-width="3" stroke-opacity=".67" stroke-linecap="round"/>
+      <ellipse cx="64" cy="125" rx="23" ry="16" transform="rotate(-24 64 125)" fill="url(#brown)" stroke="#3F281E" stroke-width="6"/>
+      <ellipse cx="116" cy="117" rx="23" ry="16" transform="rotate(-24 116 117)" fill="url(#brown)" stroke="#3F281E" stroke-width="6"/>
+      <path d="M59 119 Q64 114 72 117 M112 111 Q116 108 123 111" stroke="#EAC197" stroke-width="3.4" fill="none" stroke-linecap="round" opacity=".75"/>
+      <path d="M141 64 Q153 80 142 97" fill="none" stroke="#70432E" stroke-width="7" stroke-linecap="round"/>
+    
+  </g>
+</svg>

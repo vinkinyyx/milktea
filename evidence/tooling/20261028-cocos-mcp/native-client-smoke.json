@@ -1,0 +1,28 @@
+{
+  "observedDate": "2026-10-28",
+  "hotLoaded": true,
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"creator\": {\n    \"path\": \"C:/ProgramData/cocos/editors/Creator/3.8.8/CocosCreator.exe\",\n    \"found\": true,\n    \"checked\": [\n      \"C:/ProgramData/cocos/editors/Creator/3.8.8/CocosCreator.exe\",\n      \"/Applications/Cocos/Creator/3.8.8/CocosCreator.app/Contents/MacOS/CocosCreator\"\n    ]\n  },\n  \"wechatDevToolsCli\": {\n    \"path\": null,\n    \"found\": false,\n    \"checked\": [\n      \"/Applications/wechatwebdevtools.app/Contents/MacOS/cli\"\n    ]\n  },\n  \"notes\": [\n    \"Cocos Creator command-line builds use --project <projectRoot> --build \\\"platform=...\\\" or --build \\\"configPath=...\\\".\",\n    \"WeChat DevTools is only needed for local simulator opening/preview after build; upload/release is intentionally out of scope.\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"defaultOutputDir\": \"D:/Workspace/TapTap/奶茶挤挤/output/asset-forge-staging\",\n  \"imageProvider\": {\n    \"kind\": \"mock\",\n    \"name\": \"offline-smoke-only\",\n    \"headers\": {},\n    \"timeoutMs\": 120000\n  },\n  \"audioProvider\": {\n    \"kind\": \"mock\",\n    \"name\": \"offline-smoke-only\",\n    \"headers\": {},\n    \"timeoutMs\": 120000\n  },\n  \"cutout\": {\n    \"backend\": \"auto\",\n    \"args\": [\n      \"i\",\n      \"{input}\",\n      \"{output}\"\n    ],\n    \"timeoutMs\": 180000,\n    \"triggerMinRemovedRatio\": 0.25\n  },\n  \"cocos\": {\n    \"creatorVersion\": \"3.8.8\",\n    \"assetRoot\": \"assets\",\n    \"projectRoot\": \"D:/Workspace/TapTap/奶茶挤挤/client\"\n  },\n  \"safety\": {\n    \"overwrite\": false,\n    \"allowNetworkProviders\": false\n  }\n}"
+          }
+        ]
+      }
+    }
+  ]
+}

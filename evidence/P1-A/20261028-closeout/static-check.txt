@@ -1,0 +1,240 @@
+{
+  "config": "PASS",
+  "validationErrors": "PASS",
+  "cadence30": {
+    "y": 8023.666666666667,
+    "velocity": -1959.9999999999966,
+    "steps": 120,
+    "tick": 120
+  },
+  "cadence60": {
+    "y": 8023.666666666667,
+    "velocity": -1959.9999999999966,
+    "steps": 120,
+    "tick": 120
+  },
+  "repeatability30": "PASS",
+  "exactTickPauseAt17_30_60": "PASS",
+  "pauseResumeAndOverload": "PASS",
+  "coordinateMapping": "PASS",
+  "cupGeometry": "PASS",
+  "narrowestCupFit": "PASS"
+}
+{
+  "status": "PASS",
+  "scope": "delivered_file_integrity_catalog_selection_and_visual_geometry",
+  "libraryAssetIds": 213,
+  "libraryStaticIds": 190,
+  "verifiedLibraryPngs": 252,
+  "p1AssetIds": 81,
+  "verifiedPngs": 117,
+  "activeSceneAssetIds": 18,
+  "galleryAssetIds": 81,
+  "bindings": [
+    {
+      "assetId": "spr_ing_sago_base",
+      "level": 1,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_sago_base@128x128.png",
+      "imagePixels": [
+        128,
+        128
+      ],
+      "colliderRadiusDu": 18,
+      "spriteEdgeDu": 40
+    },
+    {
+      "assetId": "spr_ing_red_bean_base",
+      "level": 2,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_red_bean_base@128x128.png",
+      "imagePixels": [
+        128,
+        128
+      ],
+      "colliderRadiusDu": 24,
+      "spriteEdgeDu": 53.33333333333333
+    },
+    {
+      "assetId": "spr_ing_small_pearl_base",
+      "level": 3,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@256x256.png",
+      "imagePixels": [
+        256,
+        256
+      ],
+      "colliderRadiusDu": 32,
+      "spriteEdgeDu": 71.11111111111111
+    },
+    {
+      "assetId": "spr_ing_coconut_base",
+      "level": 4,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_coconut_base@256x256.png",
+      "imagePixels": [
+        256,
+        256
+      ],
+      "colliderRadiusDu": 42,
+      "spriteEdgeDu": 93.33333333333333
+    },
+    {
+      "assetId": "spr_ing_large_pearl_base",
+      "level": 5,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@256x256.png",
+      "imagePixels": [
+        256,
+        256
+      ],
+      "colliderRadiusDu": 55,
+      "spriteEdgeDu": 122.22222222222221
+    },
+    {
+      "assetId": "spr_ing_grass_jelly_base",
+      "level": 6,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@512x512.png",
+      "imagePixels": [
+        512,
+        512
+      ],
+      "colliderRadiusDu": 70,
+      "spriteEdgeDu": 155.55555555555554
+    },
+    {
+      "assetId": "spr_ing_pudding_base",
+      "level": 7,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_pudding_base@512x512.png",
+      "imagePixels": [
+        512,
+        512
+      ],
+      "colliderRadiusDu": 89,
+      "spriteEdgeDu": 197.77777777777777
+    },
+    {
+      "assetId": "spr_ing_taro_base",
+      "level": 8,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_taro_base@512x512.png",
+      "imagePixels": [
+        512,
+        512
+      ],
+      "colliderRadiusDu": 112,
+      "spriteEdgeDu": 248.88888888888889
+    },
+    {
+      "assetId": "spr_ing_mochi_base",
+      "level": 9,
+      "image": "client/assets/resources/art/p1/ingredient/spr_ing_mochi_base@512x512.png",
+      "imagePixels": [
+        512,
+        512
+      ],
+      "colliderRadiusDu": 140,
+      "spriteEdgeDu": 311.1111111111111
+    },
+    {
+      "assetId": "spr_cup_classic_back",
+      "image": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_back@750x1000.png",
+      "canvas": [
+        750,
+        1000
+      ],
+      "worldOriginDu": [
+        0,
+        200
+      ],
+      "trim": false
+    },
+    {
+      "assetId": "spr_cup_classic_tea",
+      "image": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_tea@750x1000.png",
+      "canvas": [
+        750,
+        1000
+      ],
+      "worldOriginDu": [
+        0,
+        200
+      ],
+      "trim": false
+    },
+    {
+      "assetId": "spr_cup_classic_rim_back",
+      "image": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_rim_back@750x1000.png",
+      "canvas": [
+        750,
+        1000
+      ],
+      "worldOriginDu": [
+        0,
+        200
+      ],
+      "trim": false
+    },
+    {
+      "assetId": "spr_cup_classic_front",
+      "image": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_front@750x1000.png",
+      "canvas": [
+        750,
+        1000
+      ],
+      "worldOriginDu": [
+        0,
+        200
+      ],
+      "trim": false
+    },
+    {
+      "assetId": "spr_cup_classic_rim_front",
+      "image": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_rim_front@750x1000.png",
+      "canvas": [
+        750,
+        1000
+      ],
+      "worldOriginDu": [
+        0,
+        200
+      ],
+      "trim": false
+    },
+    {
+      "assetId": "spr_cup_classic_base",
+      "image": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_base@750x1000.png",
+      "canvas": [
+        750,
+        1000
+      ],
+      "worldOriginDu": [
+        0,
+        200
+      ],
+      "trim": false
+    },
+    {
+      "assetId": "spr_cup_classic_label",
+      "image": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_label@750x1000.png",
+      "canvas": [
+        750,
+        1000
+      ],
+      "worldOriginDu": [
+        0,
+        200
+      ],
+      "trim": false
+    },
+    {
+      "assetId": "bg_shop_base",
+      "image": "client/assets/resources/art/p1/environment/bg_shop_base@750x1334.png"
+    },
+    {
+      "assetId": "spr_cup_shadow",
+      "image": "client/assets/resources/art/p1/environment/spr_cup_shadow@512x128.png"
+    }
+  ],
+  "notRun": [
+    "Creator_import",
+    "Cocos_render",
+    "physics_alignment_in_runtime",
+    "GPU_texture_compression",
+    "device_UI"
+  ]
+}

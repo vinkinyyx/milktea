@@ -1,5 +1,7 @@
 # P1-A 验收记录
 
+本文件保留首次实施时的历史结果。后续全量类型检查、原代码问题修正与真实图片绑定见 [最新记录](../../progress-2026-10-27-art-binding/acceptance.md)；Creator运行验收仍未完成。
+
 - Build ID：`20261027-p1a-foundation`
 - 该 ID 仅标识验收记录目录；未生成 Cocos 构建产物。
 - 配置：`design-v0.1`，SHA-256 `973eae177ac05c4a7076543323f7af479d4aaf065c3a2e380a6655df3ce6747f`

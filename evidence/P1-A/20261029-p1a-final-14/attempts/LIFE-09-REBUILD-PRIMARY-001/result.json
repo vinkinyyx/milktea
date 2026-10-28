@@ -1,0 +1,3434 @@
+{
+  "schemaVersion": 1,
+  "caseId": "LIFE-09-REBUILD",
+  "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+  "buildId": "20261029-p1a-final-14",
+  "expectedBuildId": "20261029-p1a-final-14",
+  "startedAt": "2026-10-28T23:02:59.693Z",
+  "syntheticEventsUsed": false,
+  "focusOverrideRoute": "Playwright original session; version-checked local inprocess client",
+  "checks": {
+    "identity": true,
+    "trustedHidden": true,
+    "engineHide": true,
+    "continuousHidden": true,
+    "frozenWhileHidden": true,
+    "trustedShown": true,
+    "engineShow": true,
+    "showStillPaused": true,
+    "rebuildOwnerStable": true,
+    "explicitResumeAdvances": true,
+    "rebuildCompletes": true
+  },
+  "beforeHide": {
+    "atMs": 2566,
+    "visibility": "visible",
+    "hasFocus": true,
+    "scene": "PhysicsLab",
+    "status": {
+      "buildId": "20261029-p1a-final-14",
+      "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+      "ready": true,
+      "loading": false,
+      "tick": 0,
+      "stepCount": 0,
+      "paused": false,
+      "pauseReasons": [],
+      "interruptionSerial": 2,
+      "entityCount": 2,
+      "contactCount": 0,
+      "contactBeginEvents": 0,
+      "contactEndEvents": 0,
+      "listenerCount": 5,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": {
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+        "round": 1,
+        "phase": "WAIT_CONTACT",
+        "status": "RUNNING",
+        "failure": null,
+        "failureDiagnostics": null,
+        "records": []
+      },
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 2,
+        "eventCount": 6,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          }
+        ]
+      },
+      "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+    },
+    "bodies": [
+      [
+        9001,
+        18,
+        357.5,
+        620,
+        0,
+        0,
+        1
+      ],
+      [
+        9002,
+        18,
+        392.5,
+        620,
+        0,
+        0,
+        1
+      ]
+    ],
+    "worldId": 4,
+    "readError": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 2,
+      "eventCount": 6,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2368.6999999955297,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2368.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2410.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 2410.89999999851,
+          "revision": 2
+        }
+      ]
+    }
+  },
+  "hiddenStart": {
+    "atMs": 2582.5999999940395,
+    "visibility": "hidden",
+    "hasFocus": false,
+    "scene": "PhysicsLab",
+    "status": {
+      "buildId": "20261029-p1a-final-14",
+      "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+      "ready": true,
+      "loading": false,
+      "tick": 0,
+      "stepCount": 0,
+      "paused": true,
+      "pauseReasons": [
+        "BACKGROUND",
+        "RESUME_REQUIRED"
+      ],
+      "interruptionSerial": 4,
+      "entityCount": 2,
+      "contactCount": 0,
+      "contactBeginEvents": 0,
+      "contactEndEvents": 0,
+      "listenerCount": 5,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": {
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+        "round": 1,
+        "phase": "WAIT_CONTACT",
+        "status": "RUNNING",
+        "failure": null,
+        "failureDiagnostics": null,
+        "records": []
+      },
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": true,
+        "engineHidden": true,
+        "backgrounded": true,
+        "revision": 3,
+        "eventCount": 8,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          }
+        ]
+      },
+      "message": "已暂停：宿主隐藏；返回后按 R 显式恢复"
+    },
+    "bodies": [
+      [
+        9001,
+        18,
+        357.5,
+        620,
+        0,
+        0,
+        1
+      ],
+      [
+        9002,
+        18,
+        392.5,
+        620,
+        0,
+        0,
+        1
+      ]
+    ],
+    "worldId": 4,
+    "readError": null,
+    "lifecycle": {
+      "domHidden": true,
+      "engineHidden": true,
+      "backgrounded": true,
+      "revision": 3,
+      "eventCount": 8,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2368.6999999955297,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2368.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2410.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 2410.89999999851,
+          "revision": 2
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        }
+      ]
+    }
+  },
+  "hideEvent": {
+    "trusted": true,
+    "atMs": 2579.5,
+    "visibility": "hidden",
+    "hasFocus": false,
+    "scene": "PhysicsLab",
+    "status": {
+      "buildId": "20261029-p1a-final-14",
+      "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+      "ready": true,
+      "loading": false,
+      "tick": 0,
+      "stepCount": 0,
+      "paused": true,
+      "pauseReasons": [
+        "BACKGROUND",
+        "RESUME_REQUIRED"
+      ],
+      "interruptionSerial": 4,
+      "entityCount": 2,
+      "contactCount": 0,
+      "contactBeginEvents": 0,
+      "contactEndEvents": 0,
+      "listenerCount": 5,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": {
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+        "round": 1,
+        "phase": "WAIT_CONTACT",
+        "status": "RUNNING",
+        "failure": null,
+        "failureDiagnostics": null,
+        "records": []
+      },
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": true,
+        "engineHidden": true,
+        "backgrounded": true,
+        "revision": 3,
+        "eventCount": 8,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          }
+        ]
+      },
+      "message": "已暂停：宿主隐藏；返回后按 R 显式恢复"
+    },
+    "bodies": [
+      [
+        9001,
+        18,
+        357.5,
+        620,
+        0,
+        0,
+        1
+      ],
+      [
+        9002,
+        18,
+        392.5,
+        620,
+        0,
+        0,
+        1
+      ]
+    ],
+    "worldId": 4,
+    "readError": null,
+    "lifecycle": {
+      "domHidden": true,
+      "engineHidden": true,
+      "backgrounded": true,
+      "revision": 3,
+      "eventCount": 8,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2368.6999999955297,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2368.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2410.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 2410.89999999851,
+          "revision": 2
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        }
+      ]
+    }
+  },
+  "requestedHiddenMs": 5000,
+  "hiddenSamples": [
+    {
+      "atMs": 7591.39999999851,
+      "visibility": "hidden",
+      "hasFocus": false,
+      "scene": "PhysicsLab",
+      "status": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+        "ready": true,
+        "loading": false,
+        "tick": 0,
+        "stepCount": 0,
+        "paused": true,
+        "pauseReasons": [
+          "BACKGROUND",
+          "RESUME_REQUIRED"
+        ],
+        "interruptionSerial": 4,
+        "entityCount": 2,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 5,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": {
+          "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+          "round": 1,
+          "phase": "WAIT_CONTACT",
+          "status": "RUNNING",
+          "failure": null,
+          "failureDiagnostics": null,
+          "records": []
+        },
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": true,
+          "engineHidden": true,
+          "backgrounded": true,
+          "revision": 3,
+          "eventCount": 8,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2053.6999999955297,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2053.6999999955297,
+              "revision": 0
+            },
+            {
+              "source": "engine",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2368.6999999955297,
+              "revision": 1
+            },
+            {
+              "source": "dom",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": true,
+              "atMs": 2368.7999999970198,
+              "revision": 1
+            },
+            {
+              "source": "engine",
+              "hidden": false,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2410.7999999970198,
+              "revision": 1
+            },
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": true,
+              "atMs": 2410.89999999851,
+              "revision": 2
+            },
+            {
+              "source": "engine",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2579.2999999970198,
+              "revision": 3
+            },
+            {
+              "source": "dom",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": true,
+              "atMs": 2579.2999999970198,
+              "revision": 3
+            }
+          ]
+        },
+        "message": "已暂停：宿主隐藏；返回后按 R 显式恢复"
+      },
+      "bodies": [
+        [
+          9001,
+          18,
+          357.5,
+          620,
+          0,
+          0,
+          1
+        ],
+        [
+          9002,
+          18,
+          392.5,
+          620,
+          0,
+          0,
+          1
+        ]
+      ],
+      "worldId": 4,
+      "readError": null,
+      "lifecycle": {
+        "domHidden": true,
+        "engineHidden": true,
+        "backgrounded": true,
+        "revision": 3,
+        "eventCount": 8,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          }
+        ]
+      }
+    }
+  ],
+  "hiddenEnd": {
+    "atMs": 7592.89999999851,
+    "visibility": "hidden",
+    "hasFocus": false,
+    "scene": "PhysicsLab",
+    "status": {
+      "buildId": "20261029-p1a-final-14",
+      "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+      "ready": true,
+      "loading": false,
+      "tick": 0,
+      "stepCount": 0,
+      "paused": true,
+      "pauseReasons": [
+        "BACKGROUND",
+        "RESUME_REQUIRED"
+      ],
+      "interruptionSerial": 4,
+      "entityCount": 2,
+      "contactCount": 0,
+      "contactBeginEvents": 0,
+      "contactEndEvents": 0,
+      "listenerCount": 5,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": {
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+        "round": 1,
+        "phase": "WAIT_CONTACT",
+        "status": "RUNNING",
+        "failure": null,
+        "failureDiagnostics": null,
+        "records": []
+      },
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": true,
+        "engineHidden": true,
+        "backgrounded": true,
+        "revision": 3,
+        "eventCount": 8,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          }
+        ]
+      },
+      "message": "已暂停：宿主隐藏；返回后按 R 显式恢复"
+    },
+    "bodies": [
+      [
+        9001,
+        18,
+        357.5,
+        620,
+        0,
+        0,
+        1
+      ],
+      [
+        9002,
+        18,
+        392.5,
+        620,
+        0,
+        0,
+        1
+      ]
+    ],
+    "worldId": 4,
+    "readError": null,
+    "lifecycle": {
+      "domHidden": true,
+      "engineHidden": true,
+      "backgrounded": true,
+      "revision": 3,
+      "eventCount": 8,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2368.6999999955297,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2368.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2410.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 2410.89999999851,
+          "revision": 2
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        }
+      ]
+    }
+  },
+  "actualHiddenMs": 5010.30000000447,
+  "shown": {
+    "atMs": 8109,
+    "visibility": "visible",
+    "hasFocus": true,
+    "scene": "PhysicsLab",
+    "status": {
+      "buildId": "20261029-p1a-final-14",
+      "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+      "ready": true,
+      "loading": false,
+      "tick": 0,
+      "stepCount": 0,
+      "paused": true,
+      "pauseReasons": [
+        "RESUME_REQUIRED"
+      ],
+      "interruptionSerial": 4,
+      "entityCount": 2,
+      "contactCount": 0,
+      "contactBeginEvents": 0,
+      "contactEndEvents": 0,
+      "listenerCount": 5,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": {
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+        "round": 1,
+        "phase": "WAIT_CONTACT",
+        "status": "RUNNING",
+        "failure": null,
+        "failureDiagnostics": null,
+        "records": []
+      },
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 4,
+        "eventCount": 10,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 7605,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 7605,
+            "revision": 4
+          }
+        ]
+      },
+      "message": "宿主已显示；物理保持暂停，请按 R 恢复"
+    },
+    "bodies": [
+      [
+        9001,
+        18,
+        357.5,
+        620,
+        0,
+        0,
+        1
+      ],
+      [
+        9002,
+        18,
+        392.5,
+        620,
+        0,
+        0,
+        1
+      ]
+    ],
+    "worldId": 4,
+    "readError": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 4,
+      "eventCount": 10,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2368.6999999955297,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2368.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2410.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 2410.89999999851,
+          "revision": 2
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 7605,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 7605,
+          "revision": 4
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "trusted": true,
+      "atMs": 2579.5,
+      "visibility": "hidden",
+      "hasFocus": false,
+      "scene": "PhysicsLab",
+      "status": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+        "ready": true,
+        "loading": false,
+        "tick": 0,
+        "stepCount": 0,
+        "paused": true,
+        "pauseReasons": [
+          "BACKGROUND",
+          "RESUME_REQUIRED"
+        ],
+        "interruptionSerial": 4,
+        "entityCount": 2,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 5,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": {
+          "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+          "round": 1,
+          "phase": "WAIT_CONTACT",
+          "status": "RUNNING",
+          "failure": null,
+          "failureDiagnostics": null,
+          "records": []
+        },
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": true,
+          "engineHidden": true,
+          "backgrounded": true,
+          "revision": 3,
+          "eventCount": 8,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2053.6999999955297,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2053.6999999955297,
+              "revision": 0
+            },
+            {
+              "source": "engine",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2368.6999999955297,
+              "revision": 1
+            },
+            {
+              "source": "dom",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": true,
+              "atMs": 2368.7999999970198,
+              "revision": 1
+            },
+            {
+              "source": "engine",
+              "hidden": false,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2410.7999999970198,
+              "revision": 1
+            },
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": true,
+              "atMs": 2410.89999999851,
+              "revision": 2
+            },
+            {
+              "source": "engine",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2579.2999999970198,
+              "revision": 3
+            },
+            {
+              "source": "dom",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": true,
+              "atMs": 2579.2999999970198,
+              "revision": 3
+            }
+          ]
+        },
+        "message": "已暂停：宿主隐藏；返回后按 R 显式恢复"
+      },
+      "bodies": [
+        [
+          9001,
+          18,
+          357.5,
+          620,
+          0,
+          0,
+          1
+        ],
+        [
+          9002,
+          18,
+          392.5,
+          620,
+          0,
+          0,
+          1
+        ]
+      ],
+      "worldId": 4,
+      "readError": null,
+      "lifecycle": {
+        "domHidden": true,
+        "engineHidden": true,
+        "backgrounded": true,
+        "revision": 3,
+        "eventCount": 8,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          }
+        ]
+      }
+    },
+    {
+      "trusted": true,
+      "atMs": 7605.0999999940395,
+      "visibility": "visible",
+      "hasFocus": false,
+      "scene": "PhysicsLab",
+      "status": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+        "ready": true,
+        "loading": false,
+        "tick": 0,
+        "stepCount": 0,
+        "paused": true,
+        "pauseReasons": [
+          "RESUME_REQUIRED"
+        ],
+        "interruptionSerial": 4,
+        "entityCount": 2,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 5,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": {
+          "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+          "round": 1,
+          "phase": "WAIT_CONTACT",
+          "status": "RUNNING",
+          "failure": null,
+          "failureDiagnostics": null,
+          "records": []
+        },
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 4,
+          "eventCount": 10,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2053.6999999955297,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2053.6999999955297,
+              "revision": 0
+            },
+            {
+              "source": "engine",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2368.6999999955297,
+              "revision": 1
+            },
+            {
+              "source": "dom",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": true,
+              "atMs": 2368.7999999970198,
+              "revision": 1
+            },
+            {
+              "source": "engine",
+              "hidden": false,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2410.7999999970198,
+              "revision": 1
+            },
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": true,
+              "atMs": 2410.89999999851,
+              "revision": 2
+            },
+            {
+              "source": "engine",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 2579.2999999970198,
+              "revision": 3
+            },
+            {
+              "source": "dom",
+              "hidden": true,
+              "backgrounded": true,
+              "trusted": true,
+              "atMs": 2579.2999999970198,
+              "revision": 3
+            },
+            {
+              "source": "engine",
+              "hidden": false,
+              "backgrounded": true,
+              "trusted": null,
+              "atMs": 7605,
+              "revision": 3
+            },
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": true,
+              "atMs": 7605,
+              "revision": 4
+            }
+          ]
+        },
+        "message": "宿主已显示；物理保持暂停，请按 R 恢复"
+      },
+      "bodies": [
+        [
+          9001,
+          18,
+          357.5,
+          620,
+          0,
+          0,
+          1
+        ],
+        [
+          9002,
+          18,
+          392.5,
+          620,
+          0,
+          0,
+          1
+        ]
+      ],
+      "worldId": 4,
+      "readError": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 4,
+        "eventCount": 10,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 7605,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 7605,
+            "revision": 4
+          }
+        ]
+      }
+    }
+  ],
+  "beforeResume": {
+    "atMs": 8111.79999999702,
+    "visibility": "visible",
+    "hasFocus": true,
+    "scene": "PhysicsLab",
+    "status": {
+      "buildId": "20261029-p1a-final-14",
+      "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+      "ready": true,
+      "loading": false,
+      "tick": 0,
+      "stepCount": 0,
+      "paused": true,
+      "pauseReasons": [
+        "RESUME_REQUIRED"
+      ],
+      "interruptionSerial": 4,
+      "entityCount": 2,
+      "contactCount": 0,
+      "contactBeginEvents": 0,
+      "contactEndEvents": 0,
+      "listenerCount": 5,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": {
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+        "round": 1,
+        "phase": "WAIT_CONTACT",
+        "status": "RUNNING",
+        "failure": null,
+        "failureDiagnostics": null,
+        "records": []
+      },
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 4,
+        "eventCount": 10,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 7605,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 7605,
+            "revision": 4
+          }
+        ]
+      },
+      "message": "宿主已显示；物理保持暂停，请按 R 恢复"
+    },
+    "bodies": [
+      [
+        9001,
+        18,
+        357.5,
+        620,
+        0,
+        0,
+        1
+      ],
+      [
+        9002,
+        18,
+        392.5,
+        620,
+        0,
+        0,
+        1
+      ]
+    ],
+    "worldId": 4,
+    "readError": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 4,
+      "eventCount": 10,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2368.6999999955297,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2368.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2410.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 2410.89999999851,
+          "revision": 2
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 7605,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 7605,
+          "revision": 4
+        }
+      ]
+    }
+  },
+  "resumed": {
+    "atMs": 8328,
+    "visibility": "visible",
+    "hasFocus": true,
+    "scene": "PhysicsLab",
+    "status": {
+      "buildId": "20261029-p1a-final-14",
+      "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+      "ready": true,
+      "loading": false,
+      "tick": 1,
+      "stepCount": 1,
+      "paused": true,
+      "pauseReasons": [
+        "REBUILD"
+      ],
+      "interruptionSerial": 4,
+      "entityCount": 2,
+      "contactCount": 1,
+      "contactBeginEvents": 1,
+      "contactEndEvents": 0,
+      "listenerCount": 5,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": {
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+        "round": 2,
+        "phase": "WAIT_CLEAR",
+        "status": "RUNNING",
+        "failure": null,
+        "failureDiagnostics": null,
+        "records": [
+          {
+            "round": 1,
+            "entityIds": [
+              9001,
+              9002
+            ],
+            "worldId": 4,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9001|9002"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 5,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 2,
+            "entityIds": [
+              9003,
+              9004
+            ],
+            "worldId": 5,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9003|9004"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": false,
+            "emptyBaseline": false,
+            "stableFrames": 0,
+            "nextWorldId": 0,
+            "bodiesAfter": -1,
+            "contactsAfter": -1,
+            "listenersAfter": -1
+          }
+        ]
+      },
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 4,
+        "eventCount": 10,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 7605,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 7605,
+            "revision": 4
+          }
+        ]
+      },
+      "message": "已恢复（后台时间未补算）"
+    },
+    "bodies": [
+      [
+        9003,
+        18,
+        357.47999995946884,
+        619.7280032634735,
+        0,
+        -16.31973385810852,
+        1
+      ],
+      [
+        9004,
+        18,
+        392.52000004053116,
+        619.7280032634735,
+        0,
+        -16.31973385810852,
+        1
+      ]
+    ],
+    "worldId": 5,
+    "readError": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 4,
+      "eventCount": 10,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2368.6999999955297,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2368.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2410.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 2410.89999999851,
+          "revision": 2
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 7605,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 7605,
+          "revision": 4
+        }
+      ]
+    }
+  },
+  "completedRebuild": {
+    "atMs": 10254.79999999702,
+    "visibility": "visible",
+    "hasFocus": true,
+    "scene": "PhysicsLab",
+    "status": {
+      "buildId": "20261029-p1a-final-14",
+      "attemptId": "LIFE-09-REBUILD-PRIMARY-001",
+      "ready": true,
+      "loading": false,
+      "tick": 0,
+      "stepCount": 0,
+      "paused": true,
+      "pauseReasons": [
+        "SAMPLE_COMPLETE"
+      ],
+      "interruptionSerial": 4,
+      "entityCount": 0,
+      "contactCount": 0,
+      "contactBeginEvents": 0,
+      "contactEndEvents": 0,
+      "listenerCount": 3,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": {
+        "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+        "round": 20,
+        "phase": "WAIT_CLEAR",
+        "status": "PASS",
+        "failure": null,
+        "failureDiagnostics": null,
+        "records": [
+          {
+            "round": 1,
+            "entityIds": [
+              9001,
+              9002
+            ],
+            "worldId": 4,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9001|9002"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 5,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 2,
+            "entityIds": [
+              9003,
+              9004
+            ],
+            "worldId": 5,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9003|9004"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 6,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 3,
+            "entityIds": [
+              9005,
+              9006
+            ],
+            "worldId": 6,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9005|9006"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 7,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 4,
+            "entityIds": [
+              9007,
+              9008
+            ],
+            "worldId": 7,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9007|9008"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 8,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 5,
+            "entityIds": [
+              9009,
+              9010
+            ],
+            "worldId": 8,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9009|9010"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 9,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 6,
+            "entityIds": [
+              9011,
+              9012
+            ],
+            "worldId": 9,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9011|9012"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 10,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 7,
+            "entityIds": [
+              9013,
+              9014
+            ],
+            "worldId": 10,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9013|9014"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 11,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 8,
+            "entityIds": [
+              9015,
+              9016
+            ],
+            "worldId": 11,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9015|9016"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 12,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 9,
+            "entityIds": [
+              9017,
+              9018
+            ],
+            "worldId": 12,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9017|9018"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 13,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 10,
+            "entityIds": [
+              9019,
+              9020
+            ],
+            "worldId": 13,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9019|9020"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 14,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 11,
+            "entityIds": [
+              9021,
+              9022
+            ],
+            "worldId": 14,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9021|9022"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 15,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 12,
+            "entityIds": [
+              9023,
+              9024
+            ],
+            "worldId": 15,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9023|9024"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 16,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 13,
+            "entityIds": [
+              9025,
+              9026
+            ],
+            "worldId": 16,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9025|9026"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 17,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 14,
+            "entityIds": [
+              9027,
+              9028
+            ],
+            "worldId": 17,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9027|9028"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 18,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 15,
+            "entityIds": [
+              9029,
+              9030
+            ],
+            "worldId": 18,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9029|9030"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 19,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 16,
+            "entityIds": [
+              9031,
+              9032
+            ],
+            "worldId": 19,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9031|9032"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 20,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 17,
+            "entityIds": [
+              9033,
+              9034
+            ],
+            "worldId": 20,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9033|9034"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 21,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 18,
+            "entityIds": [
+              9035,
+              9036
+            ],
+            "worldId": 21,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9035|9036"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 22,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 19,
+            "entityIds": [
+              9037,
+              9038
+            ],
+            "worldId": 22,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9037|9038"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 23,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          },
+          {
+            "round": 20,
+            "entityIds": [
+              9039,
+              9040
+            ],
+            "worldId": 23,
+            "contactBeginTick": 1,
+            "canonicalContacts": [
+              "9039|9040"
+            ],
+            "beginCount": 1,
+            "contactsAfterBegin": 1,
+            "bodiesBefore": 2,
+            "listenersBefore": 5,
+            "oldDestroyed": true,
+            "emptyBaseline": true,
+            "stableFrames": 2,
+            "nextWorldId": 24,
+            "bodiesAfter": 0,
+            "contactsAfter": 0,
+            "listenersAfter": 3
+          }
+        ]
+      },
+      "contactRebuildHistory": [
+        {
+          "attemptId": "LIFE-09-REBUILD-PRIMARY-001-REB20-1793228580314",
+          "status": "PASS",
+          "failure": null,
+          "recordCount": 20
+        }
+      ],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 4,
+        "eventCount": 10,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2053.6999999955297,
+            "revision": 0
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2368.6999999955297,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2368.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2410.7999999970198,
+            "revision": 1
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 2410.89999999851,
+            "revision": 2
+          },
+          {
+            "source": "engine",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": true,
+            "backgrounded": true,
+            "trusted": true,
+            "atMs": 2579.2999999970198,
+            "revision": 3
+          },
+          {
+            "source": "engine",
+            "hidden": false,
+            "backgrounded": true,
+            "trusted": null,
+            "atMs": 7605,
+            "revision": 3
+          },
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": true,
+            "atMs": 7605,
+            "revision": 4
+          }
+        ]
+      },
+      "message": "接触重建PASS: 20/20轮"
+    },
+    "bodies": [],
+    "worldId": 24,
+    "readError": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 4,
+      "eventCount": 10,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2053.6999999955297,
+          "revision": 0
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2368.6999999955297,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2368.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2410.7999999970198,
+          "revision": 1
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 2410.89999999851,
+          "revision": 2
+        },
+        {
+          "source": "engine",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": true,
+          "backgrounded": true,
+          "trusted": true,
+          "atMs": 2579.2999999970198,
+          "revision": 3
+        },
+        {
+          "source": "engine",
+          "hidden": false,
+          "backgrounded": true,
+          "trusted": null,
+          "atMs": 7605,
+          "revision": 3
+        },
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": true,
+          "atMs": 7605,
+          "revision": 4
+        }
+      ]
+    }
+  },
+  "pass": true,
+  "acceptance": "PASS",
+  "finishedAt": "2026-10-28T23:03:08.017Z"
+}

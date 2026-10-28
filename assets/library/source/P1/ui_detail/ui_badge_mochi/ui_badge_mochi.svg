@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="384" height="384" viewBox="0 0 192 192" role="img">
+<title>首次麻薯徽章 / ui_badge_mochi</title>
+<desc>原创可编辑SVG母版，设计源2x: 384x384；运行透明PNG: 192x192；分组图层可修改。图像不含可变状态文本。sRGB。</desc>
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFBF4"/><stop offset=".51" stop-color="#F5E5D0"/><stop offset="1" stop-color="#E4C5A5"/></linearGradient>
+<linearGradient id="walnut" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B07852"/><stop offset=".36" stop-color="#835235"/><stop offset="1" stop-color="#5A3826"/></linearGradient>
+<linearGradient id="caramel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2C183"/><stop offset=".4" stop-color="#C98950"/><stop offset="1" stop-color="#935633"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6C3"/><stop offset=".27" stop-color="#F6D873"/><stop offset=".68" stop-color="#E8A941"/><stop offset="1" stop-color="#B46C32"/></linearGradient>
+<linearGradient id="creampearl" x1="0" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".4" stop-color="#FFF7E8"/><stop offset=".76" stop-color="#EED5B6"/><stop offset="1" stop-color="#CFA681"/></linearGradient>
+<linearGradient id="taro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF6FF"/><stop offset=".6" stop-color="#DBC2E1"/><stop offset="1" stop-color="#A77EAD"/></linearGradient>
+<linearGradient id="mochi" x1=".12" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".43" stop-color="#F8F1E5"/><stop offset=".79" stop-color="#EADCCB"/><stop offset="1" stop-color="#D0B7AA"/></linearGradient>
+<radialGradient id="coin"><stop offset="0" stop-color="#FFF8D7"/><stop offset=".78" stop-color="#F0C96C"/><stop offset="1" stop-color="#AB653A"/></radialGradient>
+</defs>
+
+<g id="layer_01_shadow"><circle cx="96" cy="99" r="81" fill="#543727" opacity=".16"/></g>
+<g id="layer_02_walnut_edge"><circle cx="96" cy="94" r="80" fill="url(#walnut)" stroke="#4F2C21" stroke-width="2.6"/></g>
+<g id="layer_03_gold_trim"><circle cx="96" cy="92" r="72" fill="url(#gold)" stroke="#FFF3BF" stroke-width="2.5"/><circle cx="96" cy="92" r="63" fill="#F7E7D2" stroke="#B47753" stroke-width="1.7"/></g>
+<g id="layer_04_taro_halo"><circle cx="96" cy="92" r="57" fill="url(#taro)" opacity=".58"/></g>
+<g id="layer_05_mochi_soft_shadow"><ellipse cx="98" cy="123" rx="43" ry="13" fill="#674835" opacity=".16"/></g>
+<g id="layer_06_original_mochi"><path d="M53 105 C46 92 51 78 65 68 Q82 48 108 59 Q142 62 146 89 Q153 114 134 129 Q106 147 77 134 Q61 132 53 105Z" fill="url(#mochi)" stroke="#AC8C81" stroke-width="2.6"/><path d="M65 95 Q72 67 95 70 Q117 65 133 92" fill="none" stroke="#FFFFFF" stroke-width="6" opacity=".65" stroke-linecap="round"/><path d="M73 110 Q93 122 113 113 Q125 107 125 97" fill="none" stroke="#B6A19B" stroke-opacity=".36" stroke-width="3.5" stroke-linecap="round"/><path d="M88 92 Q99 85 109 93 Q105 102 96 100 Q90 99 88 92" fill="#E7D5C9" stroke="#BBA399" stroke-opacity=".6" stroke-width="1.6"/></g>
+<g id="layer_07_pearlescent_motes" fill="#FFFFFF" opacity=".81"><circle cx="61" cy="83" r="3"/><circle cx="122" cy="73" r="2.4"/><circle cx="121" cy="118" r="2.3"/><circle cx="79" cy="124" r="1.8"/></g>
+<g id="layer_08_milestone_flourish" stroke="#FAE7B6" stroke-width="2.3" stroke-linecap="round" opacity=".9"><path d="M96 25 v8 M92 29 h8 M48 55 l5 5 M143 56 l-5 5"/></g>
+
+</svg>

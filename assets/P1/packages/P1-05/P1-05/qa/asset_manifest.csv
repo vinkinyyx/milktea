@@ -1,0 +1,13 @@
+﻿asset_id,name_zh,production_method,source_spec,export_spec,runtime_du,nine_slice,status
+ui_btn_primary_normal,主按钮 normal,new_draw,512x192 vector/layered,256x96 PNG,360x104,"32,32,32,32",static_QA_pass_engine_pending
+ui_btn_primary_pressed,主按钮 pressed,derived,512x192 vector/layered,256x96 PNG,360x104,"32,32,32,32",static_QA_pass_engine_pending
+ui_btn_primary_disabled,主按钮 disabled,derived,512x192 vector/layered,256x96 PNG,360x104,"32,32,32,32",static_QA_pass_engine_pending
+ui_btn_primary_selected,主按钮 selected,derived,512x192 vector/layered,256x96 PNG,360x104,"32,32,32,32",static_QA_pass_engine_pending
+ui_btn_secondary_normal,次按钮 normal,new_draw,512x192 vector/layered,256x96 PNG,300x96,"28,28,28,28",static_QA_pass_engine_pending
+ui_btn_secondary_pressed,次按钮 pressed,derived,512x192 vector/layered,256x96 PNG,300x96,"28,28,28,28",static_QA_pass_engine_pending
+ui_btn_secondary_disabled,次按钮 disabled,derived,512x192 vector/layered,256x96 PNG,300x96,"28,28,28,28",static_QA_pass_engine_pending
+ui_btn_secondary_selected,次按钮 selected,derived,512x192 vector/layered,256x96 PNG,300x96,"28,28,28,28",static_QA_pass_engine_pending
+ui_btn_icon_normal,圆图标按钮 normal,new_draw,192x192 vector,96x96 PNG,96x96,"24,24,24,24",static_QA_pass_engine_pending
+ui_btn_icon_pressed,圆图标按钮 pressed,derived,192x192 vector,96x96 PNG,96x96,"24,24,24,24",static_QA_pass_engine_pending
+ui_btn_icon_disabled,圆图标按钮 disabled,derived,192x192 vector,96x96 PNG,96x96,"24,24,24,24",static_QA_pass_engine_pending
+ui_btn_icon_selected,圆图标按钮 selected,derived,192x192 vector,96x96 PNG,96x96,"24,24,24,24",static_QA_pass_engine_pending

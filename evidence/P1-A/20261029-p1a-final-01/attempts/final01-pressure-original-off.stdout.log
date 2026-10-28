@@ -1,0 +1,8 @@
+### Error
+Error: page.evaluate: Error: Pressure test requires a visible lab without another pause owner
+    at PhysicsLab.startPressureTest (http://127.0.0.1:8774/assets/main/index.js:3979:149)
+    at Object.startPressure (http://127.0.0.1:8774/assets/main/index.js:2800:29)
+    at eval (eval at evaluate (:368:30), <anonymous>:1:26)
+    at UtilityScript.evaluate (<anonymous>:370:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+

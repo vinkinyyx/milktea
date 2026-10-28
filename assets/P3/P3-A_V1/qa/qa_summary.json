@@ -1,0 +1,27 @@
+{
+  "total_assets": 48,
+  "status": "static_qa_pass_engine_integration_pending",
+  "counts": {
+    "new_draw": 37,
+    "derived": 8,
+    "engine": 3
+  },
+  "source": "image-elements.json and 14-image-production.md",
+  "image_count": 45,
+  "source_refs": [
+    "coconut_green",
+    "taro_boba",
+    "brown_sugar",
+    "mochi_special"
+  ],
+  "cup_registration": "reconstructed from document ratios; pending authoritative CupGeometry engine overlay",
+  "all_ids_present": true,
+  "transparent_rgba": true,
+  "risk_items": [
+    "Four cup geometry outlines inferred from documented ratios; actual CupGeometry guides not supplied",
+    "No real runtime cup collision/interaction testing",
+    "Stage cards derived artworks no actual stage text/lock overlay baked in",
+    "Engine modules illustrative integration skeletons; requires game integration",
+    "UI appearance subject to narrow-device test"
+  ]
+}

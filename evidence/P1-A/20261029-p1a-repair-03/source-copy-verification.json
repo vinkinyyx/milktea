@@ -1,0 +1,10 @@
+{
+  "path": "D:/cocos-p1a-build-source/20261029-p1a-repair-03",
+  "filesCompared": 1341,
+  "mismatches": 0,
+  "excluded": [
+    "temp/library",
+    "build",
+    "local"
+  ]
+}

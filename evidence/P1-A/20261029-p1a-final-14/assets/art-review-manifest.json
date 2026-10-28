@@ -1,0 +1,19 @@
+{
+  "buildId": "20261029-p1a-final-14",
+  "loadedVariantCount": 81,
+  "compiledHashesMatchSource": true,
+  "cupLayerCount": 7,
+  "cupOrder": [
+    "spr_cup_classic_back",
+    "spr_cup_classic_tea",
+    "spr_cup_classic_rim_back",
+    "spr_cup_classic_front",
+    "spr_cup_classic_rim_front",
+    "spr_cup_classic_base",
+    "spr_cup_classic_label"
+  ],
+  "dataSha256": "f7ea07a9528bb7f4c950b62373d2209acbf1aca4fcee9b5b7940be7bbadd79f5",
+  "htmlSha256": "b06ad0cba0b5fd7c9a59be733c18492d298869208ff9b850899acc2f1a1c635e",
+  "dataFile": "assets/art-review-data.json",
+  "htmlFile": "assets/art-review.html"
+}

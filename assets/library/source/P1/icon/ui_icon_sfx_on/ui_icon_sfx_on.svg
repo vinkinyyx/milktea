@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+ <title>音效开 | ui_icon_sfx_on</title>
+ <desc>奶茶项目P1-07. Original editable SVG. Transparent 192x192 canvas, 96 and 48 PNG exports, sRGB browns, no dynamic text or UI button baked in.</desc>
+ <defs>
+  <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+  </linearGradient>
+  <linearGradient id="milk" x1="0" x2=".8" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFF5E7"/>
+    <stop offset="70%" stop-color="#E9D1B0"/>
+    <stop offset="100%" stop-color="#D6AE86"/>
+  </linearGradient>
+  <linearGradient id="warning" x1="0" x2=".4" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFDD9D"/>
+    <stop offset="70%" stop-color="#F4BD6C"/>
+    <stop offset="100%" stop-color="#ECA257"/>
+  </linearGradient>
+ </defs>
+ <g id="ui_icon_sfx_on_paint" stroke-linejoin="round">
+ <g id="speaker_body">
+  <path d="M40 79 Q40 72 48 72 H66 L101 48 Q108 44 110 54 L110 138 Q107 150 98 142 L66 120 H48 Q40 120 40 111Z" fill="url(#brown)" stroke="#3F281E" stroke-width="8.7" stroke-linejoin="round"/>
+  <path d="M48 80 H69 L100 58" stroke="#F0C99C" stroke-width="4.5" fill="none" stroke-linecap="round" opacity=".72"/>
+  <path d="M64 79 V113" stroke="#D29E6E" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+  </g><g id="speaker_waves" fill="none" stroke-linecap="round">
+ <path d="M118 78 Q135 96 118 114" stroke="#3F281E" stroke-width="13"/>
+ <path d="M118 78 Q135 96 118 114" stroke="#956744" stroke-width="7.5"/>
+ <path d="M132 59 Q164 96 132 133" stroke="#3F281E" stroke-width="13"/>
+ <path d="M132 59 Q164 96 132 133" stroke="#956744" stroke-width="7.5"/>
+ <path d="M136 68 Q151 91 145 106" stroke="#E9BD8F" stroke-width="2.5" opacity=".66"/>
+ </g>
+ </g>
+ </svg>

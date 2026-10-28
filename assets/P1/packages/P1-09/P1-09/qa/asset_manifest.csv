@@ -1,0 +1,7 @@
+﻿asset_id,name_zh,runtime_png,source_2x,SVG,RGBA,sRGB,transparent_edge,nine_slice,status
+ui_toggle_track,开关轨道,128x64,256x128,pass,pass,pass,pass,none,static_pass_runtime_pending
+ui_toggle_knob,开关圆钮,64x64,128x128,pass,pass,pass,pass,none,static_pass_runtime_pending
+ui_slider_track,音量滑杆轨道,256x24,512x48,pass,pass,pass,pass,none,static_pass_runtime_pending
+ui_slider_knob,音量滑杆圆钮,64x64,128x128,pass,pass,pass,pass,none,static_pass_runtime_pending
+ui_badge_record,新纪录徽章,256x128,512x256,pass,pass,pass,pass,none,static_pass_runtime_pending
+ui_badge_mochi,首次麻薯徽章,192x192,384x384,pass,pass,pass,pass,none,static_pass_runtime_pending

@@ -1,0 +1,13 @@
+{
+  "status": "symbolic-validation-only",
+  "bpm": 84,
+  "bars": 24,
+  "tracks": 4,
+  "totalNotes": 136,
+  "midiBytes": 1535,
+  "sha256": "16a20f98b3a68c30bba402162f26af0c701accbf60045b0b909823f6a6a3ff52",
+  "loopSeconds": 68.57142857142857,
+  "heard": false,
+  "finalAudioProduced": false,
+  "runtimeIntegrated": false
+}

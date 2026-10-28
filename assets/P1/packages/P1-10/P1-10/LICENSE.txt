@@ -1,0 +1,1 @@
+Generated original vector assets for the NAICHA game project. No external clipart, fonts or borrowed third-party images embedded in the runtime art. Font used for QA preview only: locally available Noto Sans CJK. Validate actual distribution terms for tools/fonts if source files are modified.

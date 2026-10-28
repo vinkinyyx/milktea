@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "caseId": "LIFE-07",
+  "attemptId": "LIFE-07-PRIMARY-001",
+  "buildId": "20261029-p1a-final-14",
+  "url": "http://127.0.0.1:8784/?p1aCase=LIFE-07&attemptId=LIFE-07-PRIMARY-001&expectedBuildId=20261029-p1a-final-14&probeVersion=p1a-probe-v2&p1aProbe=off",
+  "startedAt": "2026-10-29T07:02:17.5104048+08:00",
+  "finishedAt": "2026-10-29T07:02:31.3013516+08:00",
+  "cliExitCode": 0,
+  "parseError": null,
+  "toolSha256": "8bf39575ec8e0f9108291a738e8a9775759e3b791f41bec38259bb3d4ed86bd0",
+  "pass": true,
+  "originalFocusSessionDisabled": true,
+  "syntheticEventsUsed": false
+}

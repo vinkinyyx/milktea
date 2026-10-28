@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="自愿观看视频图标">
+<title>ui_icon_ad_play</title>
+<defs>
+ <linearGradient id="cupCream" x1="0.13" y1="0" x2="0.88" y2="1"><stop offset="0" stop-color="#FFF8E8"/><stop offset=".56" stop-color="#EFCEAA"/><stop offset="1" stop-color="#C88D60"/></linearGradient>
+ <linearGradient id="caramel" x1=".1" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#FFF1A5"/><stop offset=".52" stop-color="#EFB85F"/><stop offset="1" stop-color="#B8743B"/></linearGradient>
+</defs>
+<g stroke-linecap="round" stroke-linejoin="round">
+ <!-- Video player is deliberately not an official advertiser mark. -->
+ <rect x="24" y="42" width="144" height="108" rx="27" fill="#8A5A40" stroke="#3F281E" stroke-width="11"/>
+ <rect x="30" y="46" width="132" height="95" rx="23" fill="url(#cupCream)" stroke="#A36D4A" stroke-width="4"/>
+ <path d="M48 62 Q54 57 67 57 H104" fill="none" stroke="#FFF9EB" stroke-width="8"/>
+ <path d="M49 130 H143" fill="none" stroke="#B8855F" stroke-width="4" opacity=".65"/>
+ <!-- Distinct and scalable play triangle; 96px raster has >4px outlines. -->
+ <path d="M79 72 Q79 65 86 68 L122 91 Q130 96 122 101 L86 124 Q79 129 79 121Z" fill="url(#caramel)" stroke="#3F281E" stroke-width="11"/>
+ <path d="M90 82 L109 95" stroke="#FFF9E7" stroke-width="5" opacity=".9"/>
+</g>
+</svg>

@@ -1,0 +1,34 @@
+﻿caseId,status,actual,blockedReason
+version,PASS,"3.8.8 engine, Box2D 1.0.2 package, runtime box2d true PTM32 autoSimulation false",
+geometry_static,PASS,"normal perpendicular, unit, symmetric, configured face via core-logic-results.json",
+wall_contact_preview,PASS,"two mirrored 1200 DU/s runs, both walls and bottom contacts; walls.json and collision.webm",
+wall_contact_build,PASS,final-walls.json: 240 steps per direction and both wall and bottom contacts,
+nine_independent_preview,PASS,nine-independent.json: nine isolated levels settled with bottom contacts,
+nine_original_queue,FAIL,"final-queue.json reaches 8, ninth waits; nine-after.txt shows eighth blocks all legal interval at snapshot",30-second retry termination not fully observed
+nine_attempt_trace,未执行,partial five candidates at tick 498 in nine-attempts.json; backlog paused after first group,all attempts and continuous interval diagnostic not captured
+rebuild_20_counts,PASS,"rebuild.csv: 20 rounds, after delayed destruction body count 4, listeners 3",
+rebuild_old_callback,未执行,per-round contact creation and stale contact callback isolation not tested,
+background_visibility,未执行,final-smoke background timed out without observing true hidden; Opera connector requires reauthentication,genuine hidden/show unavailable through attempted paths
+background_loading,未执行,initializeLab guard implemented; actual hide during loading not observed,requires genuine host lifecycle
+three_continuous_preview,PASS,"4201 steps, final settled 60 seconds; min bottom after 600 tick 0.4856 DU, initial -0.7993 DU",side probe sign correction documented in issues
+pressure_220_preview,PASS,"4200 steps, 220 bodies; after 600 ticks boundary minima positive; early negative margins retained",
+pressure_mixed_preview,PASS,"24 circles levels 1-4, 4202 steps; after 600 ticks boundary minima positive",not all nine sizes
+pressure_final_initial,FAIL,"final-pressure.json: 220 bodies, backlog pause at tick 35",
+same_different_contact,PASS,same-level three and mixed-contact.json dynamic pair 1|2 observed,separation/end lifecycle not verified
+contact_end_destroy,未执行,"multiple contacts, end and stale callbacks not exercised",
+narrow_cup,PASS,prior preview narrow-cancel-result.txt radius 140 y 400.7996,final build narrow and corner paths not tested
+images_load,PASS,prior 7 gallery pages loaded 81 IDs; static check 117 PNG,
+images_visual_nineslice,未执行,"individual alpha, anchor, 9-slice and layer audit incomplete",
+viewport_mobile,PASS,"prior mobile build viewport matrix no page overflow, epoch/radii unchanged; screenshots",not device or final build visual review
+viewport_desktop,FAIL,fixed 1280x960 canvas overflows representative narrow viewports,web-mobile alternative tested
+config_404_retry_final,PASS,config-cache.json: 404 error shown; click restores PhysicsLab,
+image_404_retry_final,PASS,image-cache.json: 404 error shown; click restores 18 images and 3 bodies,T retry tested in prior build; repeat/destroy still untested
+invalid_config_retry,PASS,config-invalid-cache.json: invalid density followed by three clicks restored PhysicsLab,malformed JSON and destroy during load remain untested
+build_final,PASS,Creator Web Mobile exit 36; independent HTTP runtime starts and reports box2d,build does not prove full P1-A
+final_build_regression,FAIL,cache-smoke.json allPassed false due background timeout; other results in case rows,
+device,未执行,desktop browser only; no platform or device test,P2 device coverage
+pressure_final_retry,PASS,"final-pressure-retry.json: 4200 steps, 220 bodies, after 600 ticks all minimum margins positive",initial negative margins and earlier failure retained
+malformed_json,未执行,malformed JSON error and recovery not verified,
+pressure_cache_continuous,FAIL,cache-pressure-continuous.json paused for backlog at tick 102; 60 seconds not achieved,probe overhead versus application cost unresolved
+destroy_during_image_load,PASS,"destroy-load2.json: held image request, scene replaced, then 3 entities 6 listeners 18 loaded without pageerror","first harness attempt failed, retained in destroy-load.json"
+rebuild_interrupt_round5,PASS,"rebuild-interrupt.json: fifth round interrupted, new epoch and no further old rebuilds over 3 seconds",round 10 and stale contact callbacks untested

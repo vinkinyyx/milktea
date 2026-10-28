@@ -1,0 +1,18 @@
+{
+  "environmentId": "desktop-local-02",
+  "buildId": "20261029-p1a-final-14",
+  "os": "Microsoft Windows 11 家庭版 中文版 10.0.26200 build 26200, 64 位",
+  "timezone": "Asia/Shanghai",
+  "creator": "3.8.8",
+  "box2dPackage": "1.0.2",
+  "bundledBox2d": "2.3.2 fb f51801d80fc389d43dc46524520e89043b6faf",
+  "ptm": 32,
+  "runtime": "Web Mobile candidate served by independent localhost HTTP",
+  "httpRoot": "D:/cocos-p1a-build/20261029-p1a-final-14",
+  "httpUrl": "http://127.0.0.1:8784/",
+  "browser": "Playwright CLI headed Chrome 156.0.8078.48",
+  "probeVersion": "p1a-probe-v2",
+  "sourceProject": "D:/cocos-p1a-build-source/20261029-p1a-final-14",
+  "outputPath": "D:/cocos-p1a-build/20261029-p1a-final-14",
+  "hostLimitation": "Opera Browser Connector requires reauthentication; no trusted hidden/show evidence collected"
+}

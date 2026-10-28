@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="192" viewBox="0 0 512 192">
+<title>奶茶挤挤 primary pressed button skin</title>
+<desc>Button skin only. No text or icon. Straight alpha PNG export. sRGB intended.</desc>
+<defs>
+ <linearGradient id="primary_pressed_body" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#8A4C35" />
+   <stop offset="53%" stop-color="#72402C" />
+   <stop offset="100%" stop-color="#5B3427" />
+ </linearGradient>
+ <linearGradient id="primary_pressed_sheen" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#DCA378" stop-opacity=".38" />
+  <stop offset="48%" stop-color="#DCA378" stop-opacity=".08" />
+  <stop offset="100%" stop-color="#DCA378" stop-opacity="0" />
+ </linearGradient>
+ </defs>
+<g id="base_shape"><rect x="8" y="10" width="496" height="172" rx="55" ry="55" fill="url(#primary_pressed_body)" stroke="#492D24" stroke-width="7" /></g>
+<g id="surface_sheen" opacity=".23">
+      <rect x="8" y="10" width="496" height="172" rx="55" ry="55" fill="url(#primary_pressed_sheen)" stroke="none" />
+    </g>
+<g id="pressed_inset">
+           <rect x="14" y="16" width="484" height="160" rx="50" fill="none" stroke="#492D24" stroke-opacity=".8" stroke-width="8" />
+           <path d="M 65 35 H 447" fill="none" stroke="#B87854" stroke-opacity=".27" stroke-width="5" stroke-linecap="round" />
+           <path d="M 65 161 H 447" fill="none" stroke="#B87854" stroke-opacity=".27" stroke-width="3" stroke-linecap="round" />
+        </g>
+
+</svg>

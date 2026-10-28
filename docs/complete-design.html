@@ -14,7 +14,7 @@
     @media(max-width:980px){nav{position:static;width:auto;max-height:260px}main{margin:0;padding:26px 20px}h1{font-size:30px}}
     @media print{nav{display:none}main{margin:0;padding:0}section{break-before:page}body{font-size:11px}.table-wrap{overflow:visible}table{min-width:0;font-size:10px}a{color:inherit;text-decoration:none}}
     </style></head><body>
-    <nav aria-label="分册目录"><strong>奶茶挤挤</strong><a href="#d00">00 · 项目说明与设计基线</a><a href="#d01">01 · 需求规格与范围追踪</a><a href="#d02">02 · 完整玩法设计 GDD</a><a href="#d03">03 · 物理世界与合成规则规格</a><a href="#d04">04 · 画面、UI 与动画制作规格</a><a href="#d05">05 · 音乐、音效与混音规格</a><a href="#d06">06 · 技术选型与架构</a><a href="#d07">07 · 关卡、分享、榜单与运营设计</a><a href="#d08">08 · 延期功能清单与开发路线图</a><a href="#d09">09 · 测试、试玩与验收计划</a><a href="#d10">10 · GitHub 技能、框架与官方资料调研</a><a href="#d11">11 · 决策、风险和变更记录</a><a href="#d12">12 · 分阶段任务、交付与验收总表</a><a href="#d13">13 · 初级开发者交接入口</a><a href="#d14">14 · 图像制作总规范与完整交付清单</a><a href="#d15">15 · 仓库交付、维护与验证边界</a><a href="#d16">16 · 阶段验收操作手册</a></nav><main><header><span class="status">设计基线 v0.1 · 游戏尚未实现</span><h1>奶茶挤挤 · 项目策划总案</h1><p>完整需求、物理、美术动画、音频、技术、延期功能与验证计划。数字为待测初值。</p><p><a href="../README.md">项目入口</a> · <a href="complete-design.md">Markdown总案</a></p></header>
+    <nav aria-label="分册目录"><strong>奶茶挤挤</strong><a href="#d00">00 · 项目说明与设计基线</a><a href="#d01">01 · 需求规格与范围追踪</a><a href="#d02">02 · 完整玩法设计 GDD</a><a href="#d03">03 · 物理世界与合成规则规格</a><a href="#d04">04 · 画面、UI 与动画制作规格</a><a href="#d05">05 · 音乐、音效与混音规格</a><a href="#d06">06 · 技术选型与架构</a><a href="#d07">07 · 关卡、分享、榜单与运营设计</a><a href="#d08">08 · 延期功能清单与开发路线图</a><a href="#d09">09 · 测试、试玩与验收计划</a><a href="#d10">10 · GitHub 技能、框架与官方资料调研</a><a href="#d11">11 · 决策、风险和变更记录</a><a href="#d12">12 · 分阶段任务、交付与验收总表</a><a href="#d13">13 · 初级开发者交接入口</a><a href="#d14">14 · 图像制作总规范与完整交付清单</a><a href="#d15">15 · 仓库交付、维护与验证边界</a><a href="#d16">16 · 阶段验收操作手册</a><a href="#d17">17 · 素材独立复核与入库报告</a><a href="#d18">18 · 补交素材复查与项目清理</a></nav><main><header><span class="status">设计基线 v0.1 · 游戏尚未实现</span><h1>奶茶挤挤 · 项目策划总案</h1><p>完整需求、物理、美术动画、音频、技术、延期功能与验证计划。数字为待测初值。</p><p><a href="../README.md">项目入口</a> · <a href="complete-design.md">Markdown总案</a></p></header>
     <img class="wireframe" src="visuals/layout-wireframe.svg" alt="主界面区域规格线框，不是最终美术"><section id="d00"><h2 id="d00-h0">项目说明与设计基线</h2>
 <h3 id="d00-h2">1. 一句话说明</h3>
 <p>《奶茶挤挤》（开发名称）是一款在透明奶茶杯中投放、碰撞并合成小料的竖屏小游戏。玩家通过选择落点、观察滚动和有限晃杯，合出更大的小料并争取更高单局分数。</p>
@@ -341,7 +341,7 @@
 <p class="bullet">• 运行时图集优先 1024/2048，透明边缘保留 2～4 像素 padding；具体平台压缩格式实测。</p>
 <p class="bullet">• 纹理不包含文字版号、计分、动态次数。压缩后的边缘不出现黑边、白边和预乘错误。</p>
 <p class="bullet">• 命名：<code>spr_ing_&lt;id&gt;_base.png</code>、<code>ui_&lt;name&gt;_&lt;state&gt;.png</code>、<code>fx_&lt;event&gt;_&lt;variant&gt;.png</code>。</p>
-<p class="bullet">• 资产清单见 <a href="../assets/asset-manifest.csv">asset-manifest.csv</a>，当前均待制作，不是已完成资源。</p>
+<p class="bullet">• 资产规格见 <a href="../assets/asset-manifest.csv">asset-manifest.csv</a>，实际交付状态看intake_status；已收到资源的检查与缺件见 <a href="17-asset-intake-report.md">素材复核报告</a>，可从 <a href="../assets/library/index.html">素材库</a> 取用。入库不等于引擎验收或最终锁版。</p>
 <h3 id="d04-h101">8. 美术验收</h3>
 <p>九级灰度剪影与彩色并排辨识、360/375/430 逻辑屏宽下的实际尺寸、完整杯满截图、压缩后透明边缘、静音录像、弱动态模式、录屏压缩后的接触点和警戒线可读性。不得仅凭单张精美大图判定完成。</p></section><section id="d05"><h2 id="d05-h0">音乐、音效与混音规格</h2>
 <h3 id="d05-h2">1. 听觉方向</h3>
@@ -792,7 +792,7 @@
 <p>版本数字与发布状态以真实工具/审核结果为准。没有完成包体测试时，不把“设计已完成”写成“游戏已完成”。</p></section><section id="d12"><h2 id="d12-h0">分阶段任务、交付与验收总表</h2>
 <p>交接文档 v0.2｜2026-10-27｜玩法参数仍为 design-v0.1。本文将原 P0～P4 细化为13个可独立验收的阶段，没有宣称游戏已实现。</p>
 <h3 id="d12-h4">1. 怎么使用阶段文档</h3>
-<p>每阶段遵循：输入齐备 → 按任务顺序实现 → 自测 → 形成证据 → 处理失败 → 标记验收结果。可以并行制作美术与核心，但不能绕过它们集成前的依赖。所有功能当前未开始，P0 文档在本次交付。</p>
+<p>每阶段遵循：输入齐备 → 按任务顺序实现 → 自测 → 形成证据 → 处理失败 → 标记验收结果。可以并行制作美术与核心，但不能绕过它们集成前的依赖。阶段实施状态以本文末尾的当前状态记录为准。</p>
 <p>“完成”必须同时满足：代码/资源存在、能从干净工程复现、正常和指定异常路径通过、提交版本与证据一致、无本阶段阻断缺陷。浏览器能打开、编译通过或toast出现只能算部分证据。</p>
 <h3 id="d12-h10">2. 阶段明细</h3>
 <div class="table-wrap"><table>
@@ -833,8 +833,10 @@ metrics.json        需要时的性能/计数/观测结果及采样条件</code>
 <p>4. P4-C 的广告具体奖励是尚未确定的业务项。开发基础设施可以进行，启用配置必须先定规则；不能为了文档完整擅自给广告无限晃杯。</p>
 <h3 id="d12-h59">6. 排期与交接</h3>
 <p>依赖顺序为 P0→P1-A→P1-B→P1-C→P1-D→P2→P3-A→P3-B→P3-C。P4各阶段在首发稳定后按收益排序，P4-A依赖验分/榜单，P4-B依赖可靠事件，P4-C依赖奖励事务。</p>
-<p>初级开发者从 <a href="13-developer-handoff.md">开发交接入口</a> 进入，只实现分配的阶段。先读对应规格和契约，再写代码。若设计数值需要变更，记录规则版本与测试证据，不自行修改玩法常量以掩盖失败。</p></section><section id="d13"><h2 id="d13-h0">初级开发者交接入口</h2>
-<p>交接版本 v0.2；当前只有规格、契约与文档工具，没有 Cocos 游戏工程。下面的工程路径是要创建的目标路径，不能当作已存在的可运行程序。</p>
+<p>初级开发者从 <a href="13-developer-handoff.md">开发交接入口</a> 进入，只实现分配的阶段。先读对应规格和契约，再写代码。若设计数值需要变更，记录规则版本与测试证据，不自行修改玩法常量以掩盖失败。</p>
+<h3 id="d12-h65">7. 当前阶段状态（2026-10-27）</h3>
+<p>P1-A 工程代码与纯逻辑检查已建立；Cocos Creator 未安装，故编辑器打开、Box2D运行验收、截图/录屏和构建均未执行。完整状态与证据索引见 <a href="../evidence/P1-A/20261027-p1a-foundation/acceptance.md">P1-A 验收记录</a>。P1-A 尚未通过，不满足进入 P1-B 的门槛。</p></section><section id="d13"><h2 id="d13-h0">初级开发者交接入口</h2>
+<p>交接版本 v0.2；P1-A 已建立 <code>client/</code> 下的 Cocos Creator 工程骨架、PhysicsLab 场景源、配置/坐标/时钟核心模块和 Box2D 适配器。当前环境没有安装 Creator，场景导入、运行与引擎物理验收仍未完成；不能把纯逻辑检查视作运行通过。打开步骤见 <a href="../client/README.md">client/README</a>，逐项结果见 <a href="../evidence/P1-A/20261027-p1a-foundation/acceptance.md">P1-A 证据</a>。</p>
 <h3 id="d13-h4">1. 开工顺序</h3>
 <p>1. 读 <a href="00-project-brief.md">项目说明</a>、<a href="12-delivery-phases.md">阶段验收</a> 和被分配的阶段文档。</p>
 <p>2. 读 <a href="development/common-contracts.md">公共模块合同</a> 与 <a href="../contracts/types.ts">TypeScript类型合同</a>。</p>
@@ -899,7 +901,7 @@ evidence/                         各阶段的实际证据</code></pre>
 <p>不能猜测 <code>npm run dev</code> 或Cocos自动节点绑定。工程创建后，先在自己的package.json定义并验证实际测试脚本，再在交付说明中引用它。</p>
 <h3 id="d13-h83">6. 给设计师的边界</h3>
 <p>请单独交付素材，不在图片内烘焙动态分数、昵称、次数或倒计时；不生成假的二维码、平台授权标志和广告标识。清单区分“需要新画”“从母版导出”“引擎绘制”“平台提供”。对应制作说明见 <a href="14-image-production.md">图像总规范</a>。</p></section><section id="d14"><h2 id="d14-h0">图像制作总规范与完整交付清单</h2>
-<p>版本handoff-v0.2；所有游戏图像尚待制作。这里只提供规格、清单和导线，不把线框称为最终美术。</p>
+<p>版本handoff-v0.2；本分册保留制作规格。2026-10-27已收到P1～P4交付与补件，最新检查见 <a href="18-supplement-cleanup-report.md">补交复查</a>，首次检查保留在 <a href="17-asset-intake-report.md">素材复核报告</a>；可浏览 <a href="../assets/library/index.html">已入库素材</a>。入库不代表最终美术锁版；导线仍不是最终美术。</p>
 <h3 id="d14-h4">1. 领取与交付入口</h3>
 <p class="bullet">• <a href="../assets/image-elements.html">可搜索的逐项清单</a>：按阶段、名称和制作方式筛选。</p>
 <p class="bullet">• <a href="../assets/image-elements.csv">CSV完整清单</a>：213项，一行一个资产ID，不是只有“UI一套”的模糊报价。</p>
@@ -1014,4 +1016,100 @@ SELECT player_id,score,RANK() OVER (ORDER BY score DESC) AS rank
 FROM best_scores WHERE stage_id=$1 AND rules_version=$2 AND board_type=$3;</code></pre>
 <p>分页排名应先对全榜计算再分页，不能先LIMIT后RANK导致翻页都从1开始；固定排序额外用achieved_at/player_id，不能放进RANK窗口破坏同分并列。券余额查询应按未过期批次剩余量，不把历史GRANT总和当余额。</p>
 <h3 id="d16-h64">阶段签收字段</h3>
-<p>版本/提交、任务ID、FR/AC编号、执行环境、操作与真实状态、证据链接、未解决缺陷、验收结论。可通过/失败/未执行/不适用四种状态，不将后三种自动计为通过。</p></section></main></body></html>
+<p>版本/提交、任务ID、FR/AC编号、执行环境、操作与真实状态、证据链接、未解决缺陷、验收结论。可通过/失败/未执行/不适用四种状态，不将后三种自动计为通过。</p></section><section id="d17"><h2 id="d17-h0">素材独立复核与入库报告</h2>
+<p>日期2026-10-27。结论：现有静态素材可分批用于开发，但整套交付尚不满足最终锁版条件。原包自检报告只作参考，本报告依据实际文件重新检查。</p>
+<p>本文件保留首次检查事实。其后已补交P4-A和9份ORA恢复稿；当前结果与清理记录以 <a href="18-supplement-cleanup-report.md">补交复查</a> 为准，不再将下文历史缺件表作为当前待办。</p>
+<h3 id="d17-h6">1. 数量与去向</h3>
+<div class="table-wrap"><table>
+<tr><th>项目</th><th>独立检查结果</th></tr>
+<tr><td>原交付文件</td><td>702个，全部保留，整理后逐个校验SHA256未改变</td></tr>
+<tr><td>需求资产ID</td><td>213项；数量包含运行图片、程序绘制、平台依赖和候选槽，不能全部按PNG计</td></tr>
+<tr><td>有规范运行导出的静态资产</td><td>182项，其中178项进入运行/宣传资源库，4项上架截图只放模板区</td></tr>
+<tr><td>文件级无记录警告</td><td>103项；另79项静态文件附条件使用，不能等同最终验收通过</td></tr>
+<tr><td>程序绘制</td><td>14项有Canvas参考源码，2项缺失；有源码不代表已移植到Cocos</td></tr>
+<tr><td>平台依赖</td><td>4项有接入合同，1项缺合同；真实头像/入口码/平台标志仍需实际平台提供</td></tr>
+<tr><td>未立项候选</td><td>2项，不要求本轮绘制</td></tr>
+<tr><td>P1客户端待导入</td><td>81项静态资产、117张PNG；含3项可选表情，未升级为必做玩法</td></tr>
+<tr><td>入库复制</td><td>540个文件，含源文件/许可证/代码依赖/客户端副本；逐个与原文件哈希一致</td></tr>
+</table></div>
+<p><a href="../assets/library/catalog.json">规范库索引</a>、<a href="../assets/README.md">素材使用说明</a>、<a href="../client/assets/resources/art/p1/catalog.json">客户端P1索引</a>。</p>
+<h3 id="d17-h21">2. 已完成的实际检查</h3>
+<p class="bullet">• 文件可解码、PNG格式、清单所需尺寸、透明/不透明规则、透明边界和文件散列。</p>
+<p class="bullet">• 可编辑SVG解析与主动脚本/事件处理检查，ORA压缩包完整性/图层结构检查；未执行交付脚本。</p>
+<p class="bullet">• 唯一asset_id映射、尺寸变体选择、源文件追溯、九切边距合法性。</p>
+<p class="bullet">• 6张总览逐项人工目视；九级小料独立大图；五杯七层合成与几何叠加。检查整体风格、材质、图标语义、四态按钮和明显文字/背景问题。</p>
+<p class="bullet">• 九种小料每张按360个方向取alpha≥32轮廓采样，最大径向偏差约1.78%，在规范8%内。此为静态外廓检查，不代替真实接触。</p>
+<p class="bullet">• 五款杯内缘四个锚点与配置一致，静态源坐标差0DU；前高光按alpha加权面积约2.06%～2.58%，仅为遮盖量参考，不宣称肉眼遮挡与其完全等价。</p>
+<p class="bullet">• 九张图鉴详情与当前P1母版LANCZOS缩小结果像素一致。</p>
+<p>量化记录：<a href="../evidence/asset-intake-2026-10-27/geometry-and-derivatives.json">几何与派生检查</a>。</p>
+<p>入库记录：<a href="../evidence/asset-intake-2026-10-27/installation-manifest.json">复制清单</a>、<a href="../evidence/asset-intake-2026-10-27/installation-verification.json">完整性复查</a>。</p>
+<p>最终复查：<a href="../evidence/asset-intake-2026-10-27/final-verification.json">文件与链接校验</a>确认239张导出为8bit PNG、595个素材库链接存在、540个副本与702个原交付文件的校验符合预期；<a href="../evidence/asset-intake-2026-10-27/browser-review.json">浏览器检查</a>确认182张预览均可解码，缺件/P1筛选分别11/81项，桌面与375px宽显示无横向溢出。</p>
+<h3 id="d17-h35">3. 必须补交：P4-A的11项</h3>
+<p>当前assets/P4/P4-A_V1实际只有README和两张总览预览，README描述的source_svg/export_png/runtime/platform/qa等未在目录中出现。以下不能以“说明声称存在”验收：</p>
+<div class="table-wrap"><table>
+<tr><th>类型</th><th>缺失asset_id</th></tr>
+<tr><td>5个功能图标</td><td>ui_icon_calendar、ui_icon_friend、ui_icon_win、ui_icon_tie、ui_icon_loss</td></tr>
+<tr><td>挑战卡底</td><td>ui_panel_challenge</td></tr>
+<tr><td>2张分享卡底</td><td>share_daily_background、share_friend_background</td></tr>
+<tr><td>2个程序元素</td><td>gen_daily_budget、gen_challenge_status</td></tr>
+<tr><td>平台接入合同</td><td>platform_challenge_entry_code</td></tr>
+</table></div>
+<p>请补交独立源文件和尺寸导出，而非把总览裁切成图标；平台项需接入合同，真实入口码在上线后合法生成。其余P4交付可独立使用，不因P4-A缺件一并退回。</p>
+<h3 id="d17-h48">4. 附条件与待确认项</h3>
+<h4 id="d17-h49">小料分层源稿</h4>
+<p>9张1024PNG母版、27张128/256/512导出均有，但没有规范中的base/texture/highlight/optional_face可编辑独立层。已按暂行栅格母版入source，运行PNG可试用，不标完整源稿交付。不要为凑层数简单把整张图重复放四层。</p>
+<h4 id="d17-h52">色彩元数据</h4>
+<p>239张规范运行导出中有63张没有显式ICC或sRGB块，不能仅据截图看起来正常就认证sRGB。缺少标记的具体文件在audit.json的warnings/variants中列明。常见引擎可按默认sRGB解释，但仍需由设计导出时确认实际源色彩、由引擎核对导入设置。本轮未重存图片、未改变原色。</p>
+<h4 id="d17-h55">四张上架截图</h4>
+<p>marketing_screenshot_play/merge/stages/rank含模板说明和待填实机区，不是真实运行截图。已放library/templates，未混入运行目录，不得直接当商店实机截图发布。</p>
+<h4 id="d17-h58">外观与可读性</h4>
+<p>暖奶茶色、软高光配料与圆润UI总体一致，未发现明显需要整套返工的问题。西米/椰果均为浅色聚合团，小尺寸易相近；大小珍珠均为棕珠，需保留不同亮面与等级提示，P1-C再用实际显示尺寸复查。图鉴锁态均近圆剪影是当前设计的派生结果，不表示已完成未发现内容的游戏逻辑。</p>
+<p>按钮图片不能单独证明文字对比和48CSSpx触摸范围；真实文案、主题、控件位置尚需UI集成后验收。</p>
+<h4 id="d17-h62">程序与平台</h4>
+<p>已有14项程序参考主要使用CanvasRenderingContext2D，尚非Cocos组件；保留依赖归档，未自动执行或接入游戏。平台入口码、授权头像和广告标志仍是真实接入依赖，不属于应由美术画出的静态图片。未来平台尺寸候选尚未经过真实后台确认。</p>
+<h3 id="d17-h65">5. 尚未执行</h3>
+<p>Cocos编辑器实际导入及SpriteFrame/九切/图集配置、动态碰撞与杯内缘叠加、真机/DPR/压缩格式、录屏压缩、弱动态与UI触摸联调、平台上架审核均未执行。它们不能由本次文件入库替代。</p>
+<p>版权记录仅保留用户交付来源与随包声明；本次没有额外认证所有第三方字体、笔刷或平台标志的商用权。</p>
+<h3 id="d17-h69">6. 下一步</h3>
+<p>先使用P1已入库PNG推进视听试集成；补交P4-A与九级分层稿可并行。P1-C中执行编辑器导入、显示比例、杯七层前后关系、九切和真机可读性检查，再决定正式锁版。</p></section><section id="d18"><h2 id="d18-h0">补交素材复查与项目清理</h2>
+<p>2026-10-27，supplement-v2。当前结论：上次P4-A缺少的11项已全部到位，九份ORA重建分层稿也已收到。可以继续开发试集成，仍不等同Cocos/真机/平台验收完成。</p>
+<h3 id="d18-h4">1. 补交归位与检查</h3>
+<p class="bullet">• 原补交目录共51个文件。P4-A_V2移入assets/P4/P4-A_V2，9份ORA移入assets/P1/packages/P1-01_layered_recovery，补交QA保留在本轮evidence/delivery-QA。</p>
+<p class="bullet">• <a href="../evidence/asset-supplement-2026-10-27/normalization-plan.json">归位清单</a>记录移动前后路径、字节和SHA256。</p>
+<p class="bullet">• P4-A随包37条文件哈希全部一致；没有缺失或错配。8项图片的13份规范导出、8份SVG、2个Canvas参考模块、1份平台合同独立存在，未从总览裁图补交。</p>
+<p class="bullet">• 经阅读两个模块和断言文件后，实际执行Node测试，15项通过。它只验证120投边界与核验前不得领先等参考函数，不证明游戏或服务端业务完成。</p>
+<p class="bullet">• P4-A独立图片已目视核对，圆角、暖棕轮廓和奶油色系与原库一致；分享卡留空动态数据区，不画假玩家/二维码。</p>
+<p>证据：<a href="../evidence/asset-supplement-2026-10-27/provided-hash-verification.json">随包哈希复核</a>、<a href="../evidence/asset-supplement-2026-10-27/runtime-reference-tests.json">参考源码测试</a>、<a href="../evidence/asset-supplement-2026-10-27/P4A-independent-contact.png">P4-A独立图总览</a>。</p>
+<h3 id="d18-h13">2. 九份ORA的准确结论</h3>
+<p>9份文件均为1024×1024，压缩包及stack.xml可读取，有base、texture、highlight、optional_face图层。前三层有不同的非空像素，optional_face是隐藏空层，符合可选表情留槽用途；不是把同一整图复制成四层。</p>
+<p>它们由原栅格恢复分层，不是原始创作过程的独立绘制工程。可用于编辑和返修参考，材质/高光能否满足将来的具体修改仍需设计师确认，不把这一点扩大成必须重画所有配料。</p>
+<p>合成图与当前PNG的alpha完全一致，RGB平均每通道绝对误差最高约0.0181/255，属于很小的像素量化差异。为保持已定视觉与派生图一致，本轮没有用ORA重新导出覆盖现有PNG。</p>
+<p>证据：<a href="../evidence/asset-supplement-2026-10-27/ora-layer-review.json">图层结构与非空检查</a>、<a href="../evidence/asset-supplement-2026-10-27/ora-current-master-comparison.json">与当前母版对照</a>。其中补交时路径由归位清单映射到现目录。</p>
+<h3 id="d18-h20">3. 当前库状态</h3>
+<div class="table-wrap"><table>
+<tr><th>项目</th><th>当前结果</th></tr>
+<tr><td>总资产ID</td><td>213</td></tr>
+<tr><td>静态素材</td><td>190项，含4张待实机替换的上架截图模板</td></tr>
+<tr><td>程序参考</td><td>16项，待逐项Cocos适配</td></tr>
+<tr><td>平台接入合同</td><td>5项，真实能力与原件仍需实际平台</td></tr>
+<tr><td>未立项候选</td><td>2项，不要求本轮制作</td></tr>
+<tr><td>静态/程序/平台合同文件缺件</td><td>0</td></tr>
+<tr><td>P1客户端资源</td><td>81项、117张PNG，运行版本未改变</td></tr>
+<tr><td>入库复制</td><td>576个文件，逐个校验与来源一致</td></tr>
+</table></div>
+<p><a href="../assets/library/index.html">浏览素材库</a>、<a href="../assets/library/catalog.json">开发索引</a>、<a href="../evidence/asset-supplement-2026-10-27/audit.json">本轮审计</a>、<a href="../evidence/asset-supplement-2026-10-27/installation-manifest.json">入库记录</a>。</p>
+<h3 id="d18-h34">4. 清理范围与恢复</h3>
+<p>清理采用项目外可恢复移动，不永久删除原稿。处理对象：</p>
+<p class="bullet">• 旧浏览器自动化会话、控制台日志与Python字节码缓存。</p>
+<p class="bullet">• temp中的重复Git检出与可再生P1-A编译结果。</p>
+<p class="bullet">• 过期v0.1/v0.2设计ZIP；保留当前分册、阅读版、代码和工具。</p>
+<p class="bullet">• 已由完整V2取代、只有说明与预览的P4-A_V1。</p>
+<p class="bullet">• 与同目录保留预览SHA256完全相同的URL编码重复副本。</p>
+<p class="bullet">• 补交内容归位后留下的空包装目录。</p>
+<p>不清理：当前工程、有效源文件、运行导出、.meta、配置/契约、授权声明、技能快照、独立验收证据，以及有用途的不同尺寸/格式导出。原包与规范库的双份文件承担追溯与取用两种用途，不能仅因字节相同就删掉。</p>
+<p><a href="../evidence/asset-supplement-2026-10-27/cleanup-plan.json">清理计划</a>含各路径、原因和备份位置；<a href="../evidence/asset-supplement-2026-10-27/cleanup-execution.json">执行记录</a>确认已从项目移出301个文件、10,710,405字节（约10.7MB），12个清理目标均完成，301个归档文件哈希全部一致，没有永久删除文件。</p>
+<p>项目外备份根目录是D:/Workspace/TapTap/_cleanup-backups/milktea-20261027-supplement-v2。历史原包哈希中的已归档预览可通过清理清单找到，不能误报素材丢失。恢复时仅按清单将所需项目移回原路径；若目标已有新版本，应先比对，不能覆盖。</p>
+<p><a href="../evidence/asset-supplement-2026-10-27/final-verification.json">最终完整性检查</a>核对当前运行库、源文件、归位与归档引用；<a href="../evidence/asset-supplement-2026-10-27/browser-review.json">浏览器记录</a>确认190张预览均解码、P4-A筛选11项/8张图、缺件筛选0项，桌面与375px显示无横向溢出。可运行python -B tools/verify_asset_library.py重新检查；Cocos与真机验证另行执行。</p>
+<h3 id="d18-h51">5. 仍保留的限制</h3>
+<p>63张原运行PNG未显式标记ICC/sRGB，本次补件没有重新定义其源色彩，因此没有盲目加标或改色。四张上架图仍是模板。Cocos实际导入、物理接触、DPR/纹理压缩、真机触摸和平台审核尚未执行；这些不应再混为“素材文件缺失”。</p>
+<p>首次检查保留在 <a href="17-asset-intake-report.md">17号报告</a>，其中P4-A缺件属于当时事实，以本报告和最新素材库为当前状态。</p></section></main></body></html>

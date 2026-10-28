@@ -1,0 +1,83 @@
+{
+  "browser": "chromium",
+  "rendered_assets": {
+    "gen_danger_line": {
+      "size": [
+        750,
+        1334
+      ],
+      "bytes": 70578,
+      "source": "src/gen_danger_line.mjs",
+      "preview_only": true
+    },
+    "gen_drop_guide": {
+      "size": [
+        750,
+        1334
+      ],
+      "bytes": 74910,
+      "source": "src/gen_drop_guide.mjs",
+      "preview_only": true
+    },
+    "gen_score_text": {
+      "size": [
+        750,
+        1334
+      ],
+      "bytes": 85582,
+      "source": "src/gen_score_text.mjs",
+      "preview_only": true
+    },
+    "gen_danger_countdown": {
+      "size": [
+        750,
+        1334
+      ],
+      "bytes": 77996,
+      "source": "src/gen_danger_countdown.mjs",
+      "preview_only": true
+    },
+    "gen_shake_count": {
+      "size": [
+        750,
+        1334
+      ],
+      "bytes": 77733,
+      "source": "src/gen_shake_count.mjs",
+      "preview_only": true
+    },
+    "gen_modal_dim": {
+      "size": [
+        750,
+        1334
+      ],
+      "bytes": 87181,
+      "source": "src/gen_modal_dim.mjs",
+      "preview_only": true
+    },
+    "gen_loading_spinner": {
+      "size": [
+        750,
+        1334
+      ],
+      "bytes": 80568,
+      "source": "src/gen_loading_spinner.mjs",
+      "preview_only": true
+    }
+  },
+  "reduced_motion_spinner": {
+    "visible": true,
+    "animated": false
+  },
+  "shake_zero_disabled": {
+    "base": 0,
+    "tickets": 0,
+    "cooldown": 88,
+    "progress": 0.5111111111111111,
+    "canShake": false
+  },
+  "danger_world_1000_screen_y": 334,
+  "physics_unchanged_by_guide": true,
+  "browser_errors": [],
+  "real_game_engine_integration": "not_tested"
+}

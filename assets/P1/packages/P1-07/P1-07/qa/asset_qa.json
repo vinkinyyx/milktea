@@ -1,0 +1,360 @@
+{
+  "batch_id": "P1-07",
+  "asset_count": 9,
+  "png_count": 18,
+  "svg_count": 9,
+  "asset_qa": [
+    {
+      "asset_id": "ui_icon_music_off",
+      "chinese_name": "音乐关",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            16,
+            18,
+            79,
+            78
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            -0.5,
+            0.0
+          ],
+          "sha256": "d07d2e74e8a70323abb1538fd8211d73866c9d60f139f64d81ca262500a0733b"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            8,
+            9,
+            40,
+            39
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            0.0
+          ],
+          "sha256": "4483e896e5ed4070966de78b17457cc6eb2330f70371ee76185115779622d8dd"
+        }
+      ],
+      "status": "file_qa_pass"
+    },
+    {
+      "asset_id": "ui_icon_sfx_on",
+      "chinese_name": "音效开",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            17,
+            21,
+            78,
+            75
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            -0.5,
+            0.0
+          ],
+          "sha256": "bcd8a86d44b6f8b08f08b3817c75a89df3afefd49680a6e5eeac549eaa29d0c2"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            8,
+            10,
+            39,
+            38
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            -0.5,
+            0.0
+          ],
+          "sha256": "34ec6db7f0545e8cb8efcdd317da8048a729e9d3a9f2765f2a26fc6b5b244996"
+        }
+      ],
+      "status": "file_qa_pass"
+    },
+    {
+      "asset_id": "ui_icon_sfx_off",
+      "chinese_name": "音效关",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            17,
+            21,
+            74,
+            75
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            -2.5,
+            0.0
+          ],
+          "sha256": "ba3725e948b125f02dd9fec30b8db012e41a64bf96e31ee7e040ba52decb5e91"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            8,
+            10,
+            37,
+            38
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            -1.5,
+            0.0
+          ],
+          "sha256": "3d45e77925821f03d381c5010267cad9860e58b832202c4910ba2a60917e3f41"
+        }
+      ],
+      "status": "file_qa_pass"
+    },
+    {
+      "asset_id": "ui_icon_reduced_motion",
+      "chinese_name": "弱动态",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            15,
+            15,
+            81,
+            81
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            0.0
+          ],
+          "sha256": "76c3d506d759e351ec60e609672a0b98f20e87acf22a02184285ae4e4a86a691"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            7,
+            7,
+            41,
+            41
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            0.0
+          ],
+          "sha256": "b359417b4fbea38d9f0b3b41a48a21b73705294fee0f31804edd313cbaf5c52d"
+        }
+      ],
+      "status": "file_qa_pass"
+    },
+    {
+      "asset_id": "ui_icon_shake",
+      "chinese_name": "晃杯动作",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            14,
+            25,
+            84,
+            74
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            1.0,
+            1.5
+          ],
+          "sha256": "c90654b7da3cab618f038d143580afdbf86e6b703376a2f147837bb5d38d2985"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            7,
+            12,
+            42,
+            37
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.5,
+            0.5
+          ],
+          "sha256": "cfd366bda37bf8e22d4eb6a766699c5c73bf114e8f67b5ef47d210dd60a8345d"
+        }
+      ],
+      "status": "file_qa_pass"
+    },
+    {
+      "asset_id": "ui_icon_info",
+      "chinese_name": "说明",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            14,
+            14,
+            82,
+            82
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            0.0
+          ],
+          "sha256": "73807f640d16eaa926db8b0dd6373c92c6be8d21cff6310edb54ebd8f9a002df"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            7,
+            7,
+            41,
+            41
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            0.0
+          ],
+          "sha256": "01b2e194dd1653bfe314b21ba74dc39b7f6d50ad7e86f8a9840878443820165c"
+        }
+      ],
+      "status": "file_qa_pass"
+    },
+    {
+      "asset_id": "ui_icon_warning",
+      "chinese_name": "危险提示",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            9,
+            11,
+            87,
+            82
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            -1.5
+          ],
+          "sha256": "3599bc47ca74e942c6113d7a6bfbdb68da9961d05c597a6f9662e03401298844"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            4,
+            5,
+            44,
+            41
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            -1.0
+          ],
+          "sha256": "ed0dd997bb6496dee369418c697d1d9b4bf58b508e59179fe44b7883770dee63"
+        }
+      ],
+      "status": "file_qa_pass"
+    },
+    {
+      "asset_id": "ui_icon_check",
+      "chinese_name": "确认勾",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            13,
+            21,
+            83,
+            73
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            -1.0
+          ],
+          "sha256": "a5a50f38c295827e55460dce74fc9358226d583682cf2a1ca4b36f1e095ba8b5"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            6,
+            10,
+            42,
+            37
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            0.0,
+            -0.5
+          ],
+          "sha256": "189627a86ab7b098e02465a0fd0bb8ddbc56c6b08db6479d2ebcf3f0d3eeb8a0"
+        }
+      ],
+      "status": "file_qa_pass"
+    },
+    {
+      "asset_id": "ui_icon_next",
+      "chinese_name": "下一个箭头",
+      "source_svg_192": true,
+      "editable_vector_paths": true,
+      "export_png": [
+        {
+          "size": 96,
+          "bbox": [
+            13,
+            21,
+            78,
+            75
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            -2.5,
+            0.0
+          ],
+          "sha256": "6e1a3acd9c80b6a7e5d8ba3a0782e03d71305a378f5224f836c448b7531321a6"
+        },
+        {
+          "size": 48,
+          "bbox": [
+            6,
+            10,
+            39,
+            38
+          ],
+          "alpha_corner_ok": true,
+          "centered_offset": [
+            -1.5,
+            0.0
+          ],
+          "sha256": "f57137e18eaa1a2bb3b250d0ff04fa8f9a2e245d23786dcc51dd7b175960069e"
+        }
+      ],
+      "status": "file_qa_pass"
+    }
+  ],
+  "production_notes": "Static file checks passed. Button hit area, functional toggles, actual game engine compositing and accessibility remain integration tests."
+}

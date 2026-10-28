@@ -97,7 +97,7 @@
 - 运行时图集优先 1024/2048，透明边缘保留 2～4 像素 padding；具体平台压缩格式实测。
 - 纹理不包含文字版号、计分、动态次数。压缩后的边缘不出现黑边、白边和预乘错误。
 - 命名：`spr_ing_<id>_base.png`、`ui_<name>_<state>.png`、`fx_<event>_<variant>.png`。
-- 资产清单见 [asset-manifest.csv](../assets/asset-manifest.csv)，当前均待制作，不是已完成资源。
+- 资产规格见 [asset-manifest.csv](../assets/asset-manifest.csv)，实际交付状态看intake_status；已收到资源的检查与缺件见 [素材复核报告](17-asset-intake-report.md)，可从 [素材库](../assets/library/index.html) 取用。入库不等于引擎验收或最终锁版。
 
 ## 8. 美术验收
 

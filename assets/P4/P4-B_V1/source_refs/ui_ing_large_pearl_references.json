@@ -1,0 +1,11 @@
+{
+  "source_asset_id": "spr_ing_large_pearl_base",
+  "canonical_archive": "奶茶_P1_89项全量复审修订_V3.zip",
+  "source_member": "Assets/P1-01/spr_ing_large_pearl_base/source/spr_ing_large_pearl_base.png",
+  "source_sha256": "c0dea773b1bbf68949c4e05e15c7027c68e44a3b107ec5bd8aa19f22386e220b",
+  "derived_outputs": [
+    "ui_ing_large_pearl_detail.png",
+    "ui_ing_large_pearl_locked.png"
+  ],
+  "method": "P1 V3 source resample; silhouette alpha mask; no invented level"
+}

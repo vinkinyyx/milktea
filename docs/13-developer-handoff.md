@@ -4,6 +4,8 @@
 
 ## 1. 开工顺序
 
+最新实施状态、图片绑定与下一步操作见 [进展清单](19-progress-and-next-actions.md)。客户端现已通过官方3.8.8声明的全部脚本类型检查，PhysicsLab代码已使用真实图片；编辑器导入与运行仍待完成。
+
 1. 读 [项目说明](00-project-brief.md)、[阶段验收](12-delivery-phases.md) 和被分配的阶段文档。
 2. 读 [公共模块合同](development/common-contracts.md) 与 [TypeScript类型合同](../contracts/types.ts)。
 3. 查 [参数配置](../config/design-baseline.json)，不得将半径、分数等再手抄一份硬编码。

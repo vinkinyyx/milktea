@@ -1,0 +1,182 @@
+{
+  "ui_panel_modal": {
+    "tests": {
+      "native_dimensions": true,
+      "source_2x_dimensions": true,
+      "RGBA_png": true,
+      "transparent_border": true,
+      "center_opaque": true,
+      "nine_slice_bounds_valid": true,
+      "nine_slice_corners_pixel_identical": true,
+      "six_svg_editable_groups": true,
+      "no_svg_dynamic_text_or_embedded_image": true,
+      "sRGB_embedded_profile": true,
+      "file_nonempty": true
+    },
+    "nine_slice": 32,
+    "runtime_png_size": [
+      320,
+      360
+    ],
+    "nontransparent_bbox": [
+      1,
+      1,
+      319,
+      359
+    ],
+    "center_alpha": 255,
+    "max_edge_alpha": 0,
+    "corners_absolute_max_difference": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_intermediate_pixel_count": 1335,
+    "source_layers": 6
+  },
+  "ui_panel_hud": {
+    "tests": {
+      "native_dimensions": true,
+      "source_2x_dimensions": true,
+      "RGBA_png": true,
+      "transparent_border": true,
+      "center_opaque": true,
+      "nine_slice_bounds_valid": true,
+      "nine_slice_corners_pixel_identical": true,
+      "six_svg_editable_groups": true,
+      "no_svg_dynamic_text_or_embedded_image": true,
+      "sRGB_embedded_profile": true,
+      "file_nonempty": true
+    },
+    "nine_slice": 20,
+    "runtime_png_size": [
+      340,
+      60
+    ],
+    "nontransparent_bbox": [
+      1,
+      1,
+      339,
+      59
+    ],
+    "center_alpha": 255,
+    "max_edge_alpha": 0,
+    "corners_absolute_max_difference": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_intermediate_pixel_count": 775,
+    "source_layers": 6
+  },
+  "ui_panel_next": {
+    "tests": {
+      "native_dimensions": true,
+      "source_2x_dimensions": true,
+      "RGBA_png": true,
+      "transparent_border": true,
+      "center_opaque": true,
+      "nine_slice_bounds_valid": true,
+      "nine_slice_corners_pixel_identical": true,
+      "six_svg_editable_groups": true,
+      "no_svg_dynamic_text_or_embedded_image": true,
+      "sRGB_embedded_profile": true,
+      "file_nonempty": true
+    },
+    "nine_slice": 24,
+    "runtime_png_size": [
+      140,
+      140
+    ],
+    "nontransparent_bbox": [
+      1,
+      1,
+      139,
+      139
+    ],
+    "center_alpha": 255,
+    "max_edge_alpha": 0,
+    "corners_absolute_max_difference": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_intermediate_pixel_count": 538,
+    "source_layers": 6
+  },
+  "ui_panel_toast": {
+    "tests": {
+      "native_dimensions": true,
+      "source_2x_dimensions": true,
+      "RGBA_png": true,
+      "transparent_border": true,
+      "center_opaque": true,
+      "nine_slice_bounds_valid": true,
+      "nine_slice_corners_pixel_identical": true,
+      "six_svg_editable_groups": true,
+      "no_svg_dynamic_text_or_embedded_image": true,
+      "sRGB_embedded_profile": true,
+      "file_nonempty": true
+    },
+    "nine_slice": 16,
+    "runtime_png_size": [
+      250,
+      40
+    ],
+    "nontransparent_bbox": [
+      1,
+      1,
+      249,
+      39
+    ],
+    "center_alpha": 255,
+    "max_edge_alpha": 0,
+    "corners_absolute_max_difference": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_intermediate_pixel_count": 560,
+    "source_layers": 6
+  },
+  "ui_panel_results": {
+    "tests": {
+      "native_dimensions": true,
+      "source_2x_dimensions": true,
+      "RGBA_png": true,
+      "transparent_border": true,
+      "center_opaque": true,
+      "nine_slice_bounds_valid": true,
+      "nine_slice_corners_pixel_identical": true,
+      "six_svg_editable_groups": true,
+      "no_svg_dynamic_text_or_embedded_image": true,
+      "sRGB_embedded_profile": true,
+      "file_nonempty": true
+    },
+    "nine_slice": 36,
+    "runtime_png_size": [
+      330,
+      410
+    ],
+    "nontransparent_bbox": [
+      1,
+      1,
+      329,
+      409
+    ],
+    "center_alpha": 255,
+    "max_edge_alpha": 0,
+    "corners_absolute_max_difference": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_intermediate_pixel_count": 1458,
+    "source_layers": 6
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "command": "client/node_modules/.bin/tsc.cmd --project client/tsconfig.json --types ./temp/declarations/cc,./temp/declarations/cc.env,./temp/declarations/cc.custom-macro,./temp/declarations/jsb"
+}

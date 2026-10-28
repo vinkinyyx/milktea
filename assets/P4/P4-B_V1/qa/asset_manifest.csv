@@ -1,0 +1,29 @@
+﻿asset_id,name_zh,required,method,status,source_asset_id,export_spec,filename
+ui_ing_sago_locked,西米团图鉴未发现剪影,required,derived,pass,spr_ing_sago_base,192x192 PNG,ui_ing_sago_locked.png
+ui_ing_sago_detail,西米团图鉴详情图,required,derived,pass,spr_ing_sago_base,512x512 PNG,ui_ing_sago_detail.png
+ui_ing_red_bean_locked,红豆团图鉴未发现剪影,required,derived,pass,spr_ing_red_bean_base,192x192 PNG,ui_ing_red_bean_locked.png
+ui_ing_red_bean_detail,红豆团图鉴详情图,required,derived,pass,spr_ing_red_bean_base,512x512 PNG,ui_ing_red_bean_detail.png
+ui_ing_small_pearl_locked,小珍珠图鉴未发现剪影,required,derived,pass,spr_ing_small_pearl_base,192x192 PNG,ui_ing_small_pearl_locked.png
+ui_ing_small_pearl_detail,小珍珠图鉴详情图,required,derived,pass,spr_ing_small_pearl_base,512x512 PNG,ui_ing_small_pearl_detail.png
+ui_ing_coconut_locked,椰果图鉴未发现剪影,required,derived,pass,spr_ing_coconut_base,192x192 PNG,ui_ing_coconut_locked.png
+ui_ing_coconut_detail,椰果图鉴详情图,required,derived,pass,spr_ing_coconut_base,512x512 PNG,ui_ing_coconut_detail.png
+ui_ing_large_pearl_locked,大珍珠图鉴未发现剪影,required,derived,pass,spr_ing_large_pearl_base,192x192 PNG,ui_ing_large_pearl_locked.png
+ui_ing_large_pearl_detail,大珍珠图鉴详情图,required,derived,pass,spr_ing_large_pearl_base,512x512 PNG,ui_ing_large_pearl_detail.png
+ui_ing_grass_jelly_locked,仙草冻图鉴未发现剪影,required,derived,pass,spr_ing_grass_jelly_base,192x192 PNG,ui_ing_grass_jelly_locked.png
+ui_ing_grass_jelly_detail,仙草冻图鉴详情图,required,derived,pass,spr_ing_grass_jelly_base,512x512 PNG,ui_ing_grass_jelly_detail.png
+ui_ing_pudding_locked,布丁图鉴未发现剪影,required,derived,pass,spr_ing_pudding_base,192x192 PNG,ui_ing_pudding_locked.png
+ui_ing_pudding_detail,布丁图鉴详情图,required,derived,pass,spr_ing_pudding_base,512x512 PNG,ui_ing_pudding_detail.png
+ui_ing_taro_locked,芋泥球图鉴未发现剪影,required,derived,pass,spr_ing_taro_base,192x192 PNG,ui_ing_taro_locked.png
+ui_ing_taro_detail,芋泥球图鉴详情图,required,derived,pass,spr_ing_taro_base,512x512 PNG,ui_ing_taro_detail.png
+ui_ing_mochi_locked,麻薯团图鉴未发现剪影,required,derived,pass,spr_ing_mochi_base,192x192 PNG,ui_ing_mochi_locked.png
+ui_ing_mochi_detail,麻薯团图鉴详情图,required,derived,pass,spr_ing_mochi_base,512x512 PNG,ui_ing_mochi_detail.png
+ui_icon_album,图鉴,required,new_draw,pass,,96x96 PNG;48x48 PNG,ui_icon_album.png
+ui_icon_achievement,成就,required,new_draw,pass,,96x96 PNG;48x48 PNG,ui_icon_achievement.png
+ui_icon_skin,外观,required,new_draw,pass,,96x96 PNG;48x48 PNG,ui_icon_skin.png
+ui_panel_collection,图鉴格底,required,new_draw,pass,,180x210 PNG,ui_panel_collection.png
+ui_badge_discovered,图鉴已发现角标,required,new_draw,pass,,96x96 PNG,ui_badge_discovered.png
+ui_badge_achievement,通用成就章,required,new_draw,pass,,192x192 PNG,ui_badge_achievement.png
+gen_album_question,未发现问号,required,engine,pass,,none,(runtime)
+share_achievement_background,图鉴成就分享卡,required,derived,pass,share_result_background,750x1000 PNG,share_achievement_background.png
+candidate_cup_pattern,未来杯身纹样槽,candidate,new_draw,excluded_by_spec,,TBD,candidate_cup_pattern.png
+candidate_table_theme,未来桌面主题槽,candidate,new_draw,excluded_by_spec,,TBD,candidate_table_theme.png

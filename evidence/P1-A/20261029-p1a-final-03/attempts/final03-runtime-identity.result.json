@@ -1,0 +1,222 @@
+{
+  "caseId": "runtime-identity",
+  "attemptId": "final03-runtime-identity",
+  "buildId": "20261029-p1a-final-03",
+  "expectedBuildId": "20261029-p1a-final-03",
+  "pageUrl": "http://127.0.0.1:8776/?p1aCase=runtime-identity&attemptId=final03-runtime-identity&expectedBuildId=20261029-p1a-final-03&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-03%2Fraw%2Ffinal03-runtime-identity",
+  "startedAt": "2026-10-28T18:17:20.434Z",
+  "runtime": {
+    "lab": {
+      "buildId": "20261029-p1a-final-03",
+      "attemptId": "final03-runtime-identity",
+      "ready": true,
+      "loading": false,
+      "tick": 0,
+      "stepCount": 0,
+      "paused": true,
+      "pauseReasons": [
+        "REBUILD"
+      ],
+      "interruptionSerial": 0,
+      "entityCount": 3,
+      "contactCount": 0,
+      "contactBeginEvents": 0,
+      "contactEndEvents": 0,
+      "listenerCount": 6,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": null,
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 0,
+        "eventCount": 2,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2041.9000000022352,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2041.9000000022352,
+            "revision": 0
+          }
+        ]
+      },
+      "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+    },
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2041.9000000022352,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2041.9000000022352,
+          "revision": 0
+        }
+      ]
+    },
+    "probe": {
+      "metadata": {
+        "buildId": "20261029-p1a-final-03",
+        "attemptId": "final03-runtime-identity",
+        "probeVersion": "p1a-probe-v2",
+        "worldId": 2,
+        "cupScale": 1,
+        "mode": "OFF",
+        "phase": "SETUP"
+      },
+      "coverage": {
+        "frameCount": 0,
+        "frameOverflow": false,
+        "totalSteps": 0,
+        "warmupSteps": 0,
+        "observeSteps": 0,
+        "stepGaps": 0,
+        "observeDurationMs": 0,
+        "activeObserveMs": 0,
+        "expectedBodyCount": 0,
+        "lastBodyCount": 0
+      },
+      "summary": {
+        "escapingSteps": 0,
+        "nonFiniteBodies": 0,
+        "minMargins": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "negativeMarginTicks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "anomaly": null,
+      "recentSteps": [],
+      "frames": [],
+      "measurementScopes": {
+        "probeStepMs": "adapter body visitor + finite-wall/endpoint/swept geometry + aggregate/ring write",
+        "probeFrameMs": "fixed-size render-frame ring write only",
+        "labUpdateMs": "whole PhysicsLab.update including HUD refresh and view sync",
+        "adapterMs": "whole adapter.stepFixed",
+        "adapterSubtimings": [
+          "syncToPhysics",
+          "physicsStep",
+          "syncFromPhysics",
+          "velocityClamp"
+        ],
+        "adapterSubtimingsAreNested": true,
+        "probeExportMs": 0.09999999776482582
+      }
+    },
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "canvas": {
+      "x": 0.20000000298023224,
+      "y": 0,
+      "width": 1038,
+      "height": 801.9000244140625,
+      "top": 0,
+      "right": 1038.2000000029802,
+      "bottom": 801.9000244140625,
+      "left": 0.20000000298023224
+    }
+  },
+  "identityMatchesRequestedBuild": true,
+  "screenshot": "D:/Workspace/TapTap/奶茶挤挤/evidence/P1-A/20261029-p1a-final-03/raw/final03-runtime-identity/runtime-identity.png",
+  "pass": true,
+  "acceptance": "PASS",
+  "endedAt": "2026-10-28T18:17:20.96Z",
+  "consoleEvents": [
+    "{\"test\":\"p1a-runtime-identity\",\"buildId\":\"20261029-p1a-final-03\",\"creator\":\"3.8.8\",\"box2d\":\"1.0.2\",\"ptm\":32,\"autoSimulation\":false,\"probeMode\":\"OFF\",\"probeVersion\":\"p1a-probe-v2\",\"attemptId\":\"final03-runtime-identity\"}"
+  ],
+  "pageErrors": []
+}

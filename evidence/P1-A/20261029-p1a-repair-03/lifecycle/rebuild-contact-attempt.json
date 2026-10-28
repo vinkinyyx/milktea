@@ -1,0 +1,7 @@
+{
+  "caseId": "REBUILD-20",
+  "attemptId": "REB-20-001",
+  "buildId": "20261029-p1a-repair-03",
+  "result": "未执行",
+  "reason": "Existing 20-cycle command rebuilds empty worlds. No contact-driven cycle harness or interruption evidence was run."
+}

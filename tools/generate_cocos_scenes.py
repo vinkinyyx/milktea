@@ -26,14 +26,25 @@ def node(name, parent, children, components, position=(0, 0, 0)):
             "_lscale": vec3(1, 1, 1), "_layer": 1073741824, "_euler": vec3(), "_id": guid(f"node:{name}")}
 
 
+def component_class_id(script_uuid: str) -> str:
+    # Creator 3.8.8 _RF.push uses a compressed UUID for the serialized component class.
+    digits = script_uuid.replace("-", "")
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    result = digits[:5]
+    for index in range(5, 32, 3):
+        number = int(digits[index:index + 3], 16)
+        result += alphabet[number >> 6] + alphabet[number & 63]
+    return result
+
+
 def custom_component(node_id: int, script_uuid: str):
-    return {"__type__": script_uuid, "_name": "", "_objFlags": 0, "node": {"__id__": node_id},
+    return {"__type__": component_class_id(script_uuid), "_name": "", "_objFlags": 0, "node": {"__id__": node_id},
             "_enabled": True, "__prefab": None}
 
 
 def camera_component(node_id: int):
     return {"__type__": "cc.Camera", "_name": "", "_objFlags": 0, "node": {"__id__": node_id},
-            "_enabled": True, "__prefab": None, "_projection": 1, "_priority": 0, "_fov": 45,
+            "_enabled": True, "__prefab": None, "_projection": 0, "_priority": 0, "_fov": 45,
             "_fovAxis": 0, "_orthoHeight": 667, "_near": 1, "_far": 2000,
             "_color": {"__type__": "cc.Color", "r": 25, "g": 23, "b": 20, "a": 255},
             "_depth": 1, "_stencil": 0, "_clearFlags": 7,

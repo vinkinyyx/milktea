@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="2000" viewBox="0 0 1500 2000">
+  <title>share_achievement_background</title>
+  <defs>
+    <linearGradient id="brown" x1=".1" y1="0" x2=".85" y2="1">
+      <stop stop-color="#B4825A"/>
+      <stop offset=".54" stop-color="#8D5D3F"/>
+      <stop offset="1" stop-color="#62422F"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" y1="0" x2=".85" y2="1">
+      <stop stop-color="#FFF5DF"/>
+      <stop offset=".6" stop-color="#EBC79C"/>
+      <stop offset="1" stop-color="#C9905F"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2=".82" y2="1">
+      <stop stop-color="#FFF4A8"/>
+      <stop offset=".45" stop-color="#FFC956"/>
+      <stop offset="1" stop-color="#DB8A39"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2=".85" y2="1">
+      <stop stop-color="#C7F1B7"/>
+      <stop offset=".6" stop-color="#83C598"/>
+      <stop offset="1" stop-color="#459071"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".5" stop-color="#D4DEE6"/>
+      <stop offset="1" stop-color="#A6B6C5"/>
+    </linearGradient>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F8D0A2"/>
+      <stop offset=".54" stop-color="#D98C59"/>
+      <stop offset="1" stop-color="#A65C3F"/>
+    </linearGradient>
+  </defs>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".83" y2="1">
+      <stop stop-color="#FFF9ED"/>
+      <stop offset=".45" stop-color="#F7E6CF"/>
+      <stop offset="1" stop-color="#DAB28B"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2=".8" y2="1">
+      <stop stop-color="#FFFDF6"/>
+      <stop offset=".6" stop-color="#F7ECD9"/>
+      <stop offset="1" stop-color="#EAD1B5"/>
+    </linearGradient>
+    <linearGradient id="score" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFF1CE"/>
+      <stop offset="1" stop-color="#F4D49F"/>
+    </linearGradient>
+  </defs>
+  <g id="background_and_frame">
+    <rect width="1500" height="2000" fill="url(#bg)"/>
+    <path d="M0 290 Q250 184 520 326 T1030 290 T1500 292 V0 H0Z" fill="#FFF5DF" opacity=".78"/>
+    <path d="M0 1650 Q260 1510 550 1640 T1500 1590 V2000 H0Z" fill="#D6A981" opacity=".24"/>
+    <rect x="55" y="55" width="1390" height="1890" rx="74" fill="url(#frame)" stroke="#754C34" stroke-width="16"/>
+    <rect x="87" y="87" width="1326" height="1826" rx="54" fill="none" stroke="#FDF8EA" stroke-width="9"/>
+    <path d="M214 256 Q750 115 1288 256" fill="none" stroke="#E9C7A2" stroke-width="12" opacity=".52"/>
+  </g>
+  <g id="title_region">
+    <rect x="176" y="128" width="1148" height="208" rx="76" fill="#F1D2A7" stroke="#956747" stroke-width="11"/>
+    <path d="M250 165 H1250" stroke="#FFF6DF" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="205" cy="228" r="20" fill="#D2A376"/>
+    <circle cx="1295" cy="228" r="20" fill="#D2A376"/>
+  </g>
+  <g id="score_region">
+    <rect x="154" y="370" width="1192" height="246" rx="45" fill="url(#score)" stroke="#BE9465" stroke-width="8"/>
+    <rect x="185" y="393" width="1130" height="200" rx="36" fill="none" stroke="#FFF8E4" stroke-width="7"/>
+    <path d="M230 450 H405 M1095 450 H1270" stroke="#CB995B" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g id="game_screenshot_region">
+    <rect x="152" y="649" width="1196" height="792" rx="56" fill="#D8B18C" stroke="#8C6045" stroke-width="12"/>
+    <rect x="180" y="681" width="1140" height="735" rx="38" fill="#FAEBD3" stroke="#E8C9A3" stroke-width="8"/>
+    <path d="M247 1337 Q747 1395 1253 1337" fill="none" stroke="#CFAD81" stroke-width="10" opacity=".58"/>
+  </g>
+  <g id="metadata_region">
+    <rect x="152" y="1473" width="576" height="153" rx="34" fill="#F4DFBB" stroke="#AE815D" stroke-width="7"/>
+    <rect x="772" y="1473" width="576" height="153" rx="34" fill="#F4DFBB" stroke="#AE815D" stroke-width="7"/>
+  </g>
+  <g id="real_entry_code_region">
+    <rect x="152" y="1657" width="1196" height="220" rx="38" fill="#FFF8E9" stroke="#AE8360" stroke-width="8"/>
+    <rect x="1010" y="1687" width="160" height="160" rx="16" fill="none" stroke="#C6A482" stroke-width="6" stroke-dasharray="10 10"/>
+    <path d="M1164 1688 H1223 V1845 H1164" fill="none" stroke="#CCAE8B" stroke-width="7" opacity=".45"/>
+  </g>
+  <g id="decoration">
+    <circle cx="119" cy="334" r="22" fill="#CB9872" opacity=".35"/>
+    <circle cx="1364" cy="337" r="17" fill="#CB9872" opacity=".35"/>
+    <circle cx="133" cy="1442" r="22" fill="#CB9872" opacity=".35"/>
+    <circle cx="1370" cy="1453" r="14" fill="#CB9872" opacity=".35"/>
+    <circle cx="116" cy="121" r="10" fill="#CB9872" opacity=".35"/>
+    <circle cx="1358" cy="122" r="9" fill="#CB9872" opacity=".35"/>
+    <path d="M165 76 L171 90 L184 95 L171 101 L165 114 L158 101 L146 95 L158 89Z" fill="#D8A465" opacity=".70"/>
+    <path d="M1310 126 L1316 140 L1329 145 L1316 151 L1310 164 L1303 151 L1291 145 L1303 139Z" fill="#D8A465" opacity=".70"/>
+    <path d="M100 771 L106 785 L119 790 L106 796 L100 809 L93 796 L81 790 L93 784Z" fill="#D8A465" opacity=".70"/>
+    <path d="M1378 956 L1384 970 L1397 975 L1384 981 L1378 994 L1371 981 L1359 975 L1371 969Z" fill="#D8A465" opacity=".70"/>
+    <path d="M114 1832 L120 1846 L133 1851 L120 1857 L114 1870 L107 1857 L95 1851 L107 1845Z" fill="#D8A465" opacity=".70"/>
+  </g>
+<g id="achievement_theme_margin_only" opacity=".68" fill="none" stroke="#C48D48" stroke-width="13" stroke-linecap="round"><path d="M136 511 Q86 566 106 655 M1364 511 Q1414 566 1394 655"/><path d="M129 543 Q78 529 73 511 M117 592 Q66 590 56 571 M108 627 Q84 647 69 671 M1371 543 Q1422 529 1427 511 M1383 592 Q1434 590 1444 571 M1392 627 Q1416 647 1431 671"/></g></svg>

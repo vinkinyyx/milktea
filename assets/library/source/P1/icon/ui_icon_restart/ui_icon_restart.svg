@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+  <title>重开回转箭头 | ui_icon_restart</title>
+  <desc>奶茶游戏 UI icon. Original editable vector. Transparent 192x192 canvas. 96px/48px exports. sRGB deep-brown. No dynamic text.</desc>
+
+  <defs>
+   <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+   </linearGradient>
+  </defs>
+
+  <g id="ui_icon_restart_paint" stroke-linejoin="round">
+<path d="M138 65 A53 53 0 1 1 79 47" fill="none" stroke="#3E281E" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/><path d="M138 65 A53 53 0 1 1 79 47" fill="none" stroke="url(#brown)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M78 42 L111 43 Q115 43 112 49 L91 79 Q87 84 82 79 L70 52 Q67 45 78 42 Z" fill="url(#brown)" stroke="#3F281E" stroke-width="6" stroke-linejoin="round" />
+      <path d="M82 48 L102 49" stroke="#F1C89C" opacity=".5" stroke-width="3" stroke-linecap="round"/>
+    
+  </g>
+</svg>

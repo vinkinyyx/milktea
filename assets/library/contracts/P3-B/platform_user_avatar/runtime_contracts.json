@@ -1,0 +1,14 @@
+{
+  "platform_user_avatar": {
+    "runtime_only": true,
+    "source": "authorized avatar URL from platform; user permission required",
+    "fallback": "ui_avatar_default",
+    "prohibited": "fake avatar/person or scraped profile image"
+  },
+  "platform_share_entry_code": {
+    "runtime_only": true,
+    "source": "provider issued game-entry code or QR after live deployment",
+    "status": "waiting_platform",
+    "prohibited": "fake/unscannable QR or unofficial provider branding"
+  }
+}

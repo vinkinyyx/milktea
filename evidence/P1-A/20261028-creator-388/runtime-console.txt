@@ -1,0 +1,183 @@
+[    3507ms] [TIMEEND] Init Base: 0.376953125 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[    3534ms] [TIMEEND] Init Infrastructure: 26.804931640625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[    3574ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[    3681ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[    3681ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[    3681ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[    3706ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[    3909ms] [TIMEEND] Init SubSystem: 217.02197265625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[    3909ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[    3972ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[    3973ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[    3981ms] [TIMEEND] Init Project: 69.255859375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[    4084ms] [ERROR] Can not find class '23a904e4-929c-5048-a38d-b305481dc351' @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168817
+[    4094ms] [ERROR] Sorry, the component of 'BootRoot' which with an index of 0 is corrupted! It has been removed. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168817
+[    4094ms] [LOG] Corrupted component value: null @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[   48767ms] [TIMEEND] Init Base: 0.408935546875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[   48796ms] [TIMEEND] Init Infrastructure: 28.402099609375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[   48813ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[   48829ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[   48829ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[   48829ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[   48860ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[   52842ms] [TIMEEND] Init SubSystem: 3992.29296875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[   52842ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[   53897ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[   53898ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[   53906ms] [TIMEEND] Init Project: 1061.76806640625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[   58934ms] [ERROR] Can not find class '23a904e4-929c-5048-a38d-b305481dc351' @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168817
+[   59942ms] [ERROR] Sorry, the component of 'BootRoot' which with an index of 0 is corrupted! It has been removed. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168817
+[   59942ms] [LOG] Corrupted component value: null @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  115525ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7A3O:0
+[  118075ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7AhE:0
+[  121093ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7BQO:0
+[  126107ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7Cel:0
+[  131123ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7Dt7:0
+[  136141ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7F5W:0
+[  141158ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7GJw:0
+[  146173ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7HYG:0
+[  151191ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7Img:0
+[  156206ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7J_1:0
+[  161225ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7LDT:0
+[  166239ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7MRp:0
+[  171259ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7NgD:0
+[  176268ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-7OuT:0
+[  208449ms] [TIMEEND] Init Base: 0.656005859375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[  208487ms] [TIMEEND] Init Infrastructure: 38.069091796875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[  208510ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  208538ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  208539ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  208539ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  208585ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  212523ms] [TIMEEND] Init SubSystem: 3956.69482421875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[  212523ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  213583ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[  213585ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  213597ms] [TIMEEND] Init Project: 1069.241943359375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[  221642ms] [TIMEEND] LoadScene PhysicsLab: 994.150146484375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:15724
+[  361117ms] [TIMEEND] Init Base: 0.2490234375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[  361148ms] [TIMEEND] Init Infrastructure: 30.421875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[  361218ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  361233ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  361233ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  361233ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  361281ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  365187ms] [TIMEEND] Init SubSystem: 3917.565185546875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[  365187ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  366239ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[  366240ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  366246ms] [TIMEEND] Init Project: 1057.44482421875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[  373305ms] [TIMEEND] LoadScene PhysicsLab: 1006.385986328125 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:15724
+[  404314ms] [TIMEEND] Init Base: 0.260009765625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[  404346ms] [TIMEEND] Init Infrastructure: 30.907958984375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[  404361ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  404369ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  404376ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  404376ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  404404ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  408386ms] [TIMEEND] Init SubSystem: 3993.22998046875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[  408386ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  409445ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[  409446ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  409452ms] [TIMEEND] Init Project: 1064.30810546875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[  417471ms] [TIMEEND] LoadScene PhysicsLab: 990.343994140625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:15724
+[  429144ms] [TIMEEND] Init Base: 0.239013671875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[  429177ms] [TIMEEND] Init Infrastructure: 33.054931640625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[  429193ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  429203ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  429219ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  429219ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  429255ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  433219ms] [TIMEEND] Init SubSystem: 3973.9970703125 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[  433219ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  434272ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[  434274ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  434283ms] [TIMEEND] Init Project: 1062.06494140625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[  441322ms] [TIMEEND] LoadScene PhysicsLab: 1006.45703125 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:15724
+[  633922ms] [TIMEEND] Init Base: 0.588134765625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[  633964ms] [TIMEEND] Init Infrastructure: 41.512939453125 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[  633989ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  634005ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  634005ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  634005ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  634064ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  634357ms] [TIMEEND] Init SubSystem: 307.578857421875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[  634357ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  634428ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[  634430ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  634442ms] [TIMEEND] Init Project: 81.671875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[  634634ms] [TIMEEND] LoadScene PhysicsLab: 33.25390625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:15724
+[  647317ms] [TIMEEND] Init Base: 0.291015625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[  647352ms] [TIMEEND] Init Infrastructure: 35.276123046875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[  647379ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  647393ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  647393ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  647393ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  647463ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  647822ms] [TIMEEND] Init SubSystem: 371.92919921875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[  647822ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  647899ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[  647901ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[  647909ms] [TIMEEND] Init Project: 85.22509765625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[  648101ms] [TIMEEND] LoadScene PhysicsLab: 51.7099609375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:15724
+[  728431ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  728931ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  813280ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  813796ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  814346ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  814846ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  815846ms] [LOG] {"test":"fixed-step-120","requestedRenderHz":30,"measuredRenderHz":29.999999999999993,"renderFrames":60,"renderSeconds":2.0000000000000004,"tick":120,"physicsStepCalls":120,"state":{"entityId":1,"positionDu":{"x":375,"y":279.2025966644287},"velocityDuPerSecond":{"x":0,"y":-1.1178965475572395e-16},"angleRadians":0,"angularVelocity":0,"sleeping":false},"configVersion":"design-v0.1","ptmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:544
+[  816379ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  816880ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  817880ms] [LOG] {"test":"fixed-step-120","requestedRenderHz":60,"measuredRenderHz":59.99999999999996,"renderFrames":120,"renderSeconds":2.0000000000000013,"tick":120,"physicsStepCalls":120,"state":{"entityId":1,"positionDu":{"x":375,"y":279.2025966644287},"velocityDuPerSecond":{"x":0,"y":-1.1178965475572395e-16},"angleRadians":0,"angularVelocity":0,"sleeping":false},"configVersion":"design-v0.1","ptmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:544
+[  818429ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  818929ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[  819929ms] [LOG] {"test":"fixed-step-120","requestedRenderHz":60,"measuredRenderHz":60.007934933533804,"renderFrames":121,"renderSeconds":2.016400000000374,"tick":120,"physicsStepCalls":120,"state":{"entityId":1,"positionDu":{"x":375,"y":279.2025966644287},"velocityDuPerSecond":{"x":0,"y":-1.1178965475572395e-16},"angleRadians":0,"angularVelocity":0,"sleeping":false},"configVersion":"design-v0.1","ptmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:544
+[  854031ms] [LOG] scheduler#scheduleSelector. Selector already scheduled. Updating interval from: %.4f to %.4f 0 0 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1007545ms] [TIMEEND] Init Base: 0.22802734375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[ 1007575ms] [TIMEEND] Init Infrastructure: 30.275146484375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[ 1007596ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1007607ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1007607ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1007608ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1007662ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1007936ms] [TIMEEND] Init SubSystem: 286.120849609375 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[ 1007936ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1007990ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[ 1007991ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1007998ms] [TIMEEND] Init Project: 60.68798828125 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[ 1008144ms] [TIMEEND] LoadScene PhysicsLab: 23.30810546875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:15724
+[ 1009893ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[ 1010393ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[ 1010943ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[ 1011444ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[ 1012477ms] [LOG] {"test":"fixed-step-120","requestedRenderHz":30,"measuredRenderHz":30.001967342104297,"renderFrames":61,"renderSeconds":2.033200000001118,"tick":120,"physicsStepCalls":120,"state":{"entityId":1,"positionDu":{"x":375,"y":279.2025966644287},"velocityDuPerSecond":{"x":0,"y":-1.1178965475572395e-16},"angleRadians":0,"angularVelocity":0,"sleeping":false},"configVersion":"design-v0.1","ptmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:544
+[ 1013026ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[ 1013510ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[ 1014526ms] [LOG] {"test":"fixed-step-120","requestedRenderHz":60,"measuredRenderHz":60.00198353660147,"renderFrames":121,"renderSeconds":2.016600000001491,"tick":120,"physicsStepCalls":120,"state":{"entityId":1,"positionDu":{"x":375,"y":279.2025966644287},"velocityDuPerSecond":{"x":0,"y":-1.1178965475572395e-16},"angleRadians":0,"angularVelocity":0,"sleeping":false},"configVersion":"design-v0.1","ptmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:544
+[ 1015076ms] [LOG] {"test":"gravity-free-fall","tick":30,"seconds":0.5,"initialYDu":1130,"actualYDu":1003.4166736602783,"actualDisplacementDu":126.58332633972168,"actualVelocityDuPerSecond":-490.0001049041748,"theoreticalDisplacementDu":122.50000000000001,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[ 1015593ms] [LOG] {"test":"gravity-free-fall","tick":60,"seconds":1,"initialYDu":1130,"actualYDu":631.833265542984,"actualDisplacementDu":498.166734457016,"actualVelocityDuPerSecond":-979.999828338623,"theoreticalDisplacementDu":490.00000000000006,"enginePtmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:610
+[ 1016576ms] [LOG] {"test":"fixed-step-120","requestedRenderHz":60,"measuredRenderHz":59.99999999999996,"renderFrames":120,"renderSeconds":2.0000000000000013,"tick":120,"physicsStepCalls":120,"state":{"entityId":1,"positionDu":{"x":375,"y":279.2025966644287},"velocityDuPerSecond":{"x":0,"y":-1.1178965475572395e-16},"angleRadians":0,"angularVelocity":0,"sleeping":false},"configVersion":"design-v0.1","ptmRatio":32} @ http://127.0.0.1:7456/scripting/x/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js:544
+[ 1027577ms] [LOG] scheduler#scheduleSelector. Selector already scheduled. Updating interval from: %.4f to %.4f 0 0 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1121080ms] [TIMEEND] Init Base: 0.35107421875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16680
+[ 1121117ms] [TIMEEND] Init Infrastructure: 36.217041015625 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16729
+[ 1121145ms] [LOG] meshopt wasm decoder initialized @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1121156ms] [LOG] [bullet]:bullet wasm lib loaded. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1121156ms] [LOG] [PHYSICS2D]: register box2d. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1121156ms] [LOG] [PHYSICS]: register bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1121219ms] [LOG] [PHYSICS]: using bullet. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1121558ms] [TIMEEND] Init SubSystem: 351.639892578125 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16776
+[ 1121558ms] [LOG] Cocos Creator v3.8.8 @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1121622ms] [WARNING] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead. @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168804
+[ 1121624ms] [LOG] Using custom pipeline: Builtin @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:168791
+[ 1121633ms] [TIMEEND] Init Project: 72.283935546875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:16822
+[ 1121776ms] [TIMEEND] LoadScene PhysicsLab: 19.572998046875 ms @ http://127.0.0.1:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:15724
+[ 1585428ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-Cmwe:0
+[ 1588431ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-CnfZ:0
+[ 1592419ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-Cods:0
+[ 1597435ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-CpsF:0
+[ 1602451ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-Cr4c:0
+[ 1607467ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-CsI_:0
+[ 1612485ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-CtXP:0
+[ 1617501ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-Culn:0
+[ 1622504ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:7456/socket.io/?EIO=3&transport=polling&t=Q5-Cvzy:0

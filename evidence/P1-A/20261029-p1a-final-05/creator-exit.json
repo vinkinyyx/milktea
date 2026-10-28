@@ -1,0 +1,18 @@
+{
+  "buildId": "20261029-p1a-final-05",
+  "command": "\"C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\CocosCreator.exe\" --project \"D:\\cocos-p1a-build-source\\20261029-p1a-final-05\" --build \"platform=web-mobile;debug=true;buildPath=D:/cocos-p1a-build;outputName=20261029-p1a-final-05;startScene=44e30fdb-084f-5609-8283-4fdd8d2fab81\"",
+  "creatorPid": 26296,
+  "startedAt": "2026-10-29T02:21:31.0825727+08:00",
+  "finishedAt": "2026-10-29T02:22:21.4363294+08:00",
+  "exitCode": 36,
+  "bridgeDisabled": "1",
+  "processTracePath": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\P1-A\\20261029-p1a-final-05\\creator-process-trace.jsonl",
+  "nodeOptionsInjection": "child-process-only preload",
+  "parentNodeOptionsPresentBefore": false,
+  "parentNodeOptionsPresentAfter": false,
+  "creatorAsarPath": "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar",
+  "creatorAsarSha256": "a04a80b69b329fccfe775a87b839c2d197b0629ccc8c6aa798e9911cff95b8ea",
+  "outputPath": "D:\\cocos-p1a-build\\20261029-p1a-final-05",
+  "projectPath": "D:\\cocos-p1a-build-source\\20261029-p1a-final-05",
+  "processCapture": "System.Diagnostics.Process.WaitForExit/ExitCode"
+}

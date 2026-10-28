@@ -1,0 +1,93 @@
+[
+  {
+    "asset_id": "spr_cup_classic_back",
+    "dimensions": [
+      750,
+      1000
+    ],
+    "color_mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 238,
+    "transparent_pixels_fraction": 0.516,
+    "source_svg_exists": true,
+    "source_spec": "1500x2000 svg, full registered canvas"
+  },
+  {
+    "asset_id": "spr_cup_classic_rim_back",
+    "dimensions": [
+      750,
+      1000
+    ],
+    "color_mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 242,
+    "transparent_pixels_fraction": 0.9908,
+    "source_svg_exists": true,
+    "source_spec": "1500x2000 svg, full registered canvas"
+  },
+  {
+    "asset_id": "spr_cup_classic_tea",
+    "dimensions": [
+      750,
+      1000
+    ],
+    "color_mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 116,
+    "transparent_pixels_fraction": 0.5264,
+    "source_svg_exists": true,
+    "source_spec": "1500x2000 svg, full registered canvas"
+  },
+  {
+    "asset_id": "spr_cup_classic_front",
+    "dimensions": [
+      750,
+      1000
+    ],
+    "color_mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 174,
+    "transparent_pixels_fraction": 0.9621,
+    "source_svg_exists": true,
+    "source_spec": "1500x2000 svg, full registered canvas"
+  },
+  {
+    "asset_id": "spr_cup_classic_base",
+    "dimensions": [
+      750,
+      1000
+    ],
+    "color_mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 250,
+    "transparent_pixels_fraction": 0.9958,
+    "source_svg_exists": true,
+    "source_spec": "1500x2000 svg, full registered canvas"
+  },
+  {
+    "asset_id": "spr_cup_classic_label",
+    "dimensions": [
+      750,
+      1000
+    ],
+    "color_mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 159,
+    "transparent_pixels_fraction": 0.9861,
+    "source_svg_exists": true,
+    "source_spec": "1500x2000 svg, full registered canvas"
+  },
+  {
+    "asset_id": "spr_cup_classic_rim_front",
+    "dimensions": [
+      750,
+      1000
+    ],
+    "color_mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 250,
+    "transparent_pixels_fraction": 0.9922,
+    "source_svg_exists": true,
+    "source_spec": "1500x2000 svg, full registered canvas"
+  }
+]

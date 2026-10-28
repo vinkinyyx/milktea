@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="512" viewBox="0 0 512 512" role="img">
+<title>合成柔光环 / fx_merge_ring</title>
+<desc>NAICHA 原创可编辑SVG源图。512×512母版, 256×256独立透明PNG导出, 以中心256,256为锚点。特效由程序控制alpha/scale/rotation，不烘焙文字、帧序列。</desc>
+<defs>
+<radialGradient id="glow"><stop offset="0" stop-color="#FFF9DF" stop-opacity=".98"/><stop offset=".55" stop-color="#FFF0C9" stop-opacity=".65"/><stop offset="1" stop-color="#EBC294" stop-opacity=".12"/></radialGradient>
+<radialGradient id="milkstar"><stop offset="0" stop-color="#FFFFF6"/><stop offset=".58" stop-color="#FFF7D5"/><stop offset="1" stop-color="#F0C786"/></radialGradient>
+<linearGradient id="gold" x1=".12" y1="0" x2=".83" y2="1"><stop offset="0" stop-color="#FFF9DF"/><stop offset=".34" stop-color="#FBE2A1"/><stop offset=".7" stop-color="#F2BB62"/><stop offset="1" stop-color="#C58A4B"/></linearGradient>
+<linearGradient id="cream" x1=".1" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".35" stop-color="#FFF6E5"/><stop offset="1" stop-color="#E2BE99"/></linearGradient>
+<linearGradient id="crumb" x1=".14" y1=".03" x2=".82" y2=".95"><stop offset="0" stop-color="#FFF5E3"/><stop offset=".58" stop-color="#E8C99E"/><stop offset="1" stop-color="#BE936E"/></linearGradient>
+<linearGradient id="skin" x1=".13" y1="0" x2=".93" y2="1"><stop offset="0" stop-color="#FFF4DF"/><stop offset=".45" stop-color="#F4CDA7"/><stop offset="1" stop-color="#D69B71"/></linearGradient>
+<linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ECDDBB"/><stop offset="1" stop-color="#B48059"/></linearGradient>
+</defs>
+
+<g id="base_soft_halo" fill="none" stroke-linecap="round">
+<circle cx="256" cy="256" r="123" stroke="#FFF5D8" stroke-width="20" opacity=".055"/>
+<circle cx="256" cy="256" r="119" stroke="#FFE5B8" stroke-width="13" opacity=".105"/>
+<circle cx="256" cy="256" r="112" stroke="#FFF3DA" stroke-width="14" opacity=".33"/>
+<circle cx="256" cy="256" r="110" stroke="#FFF9EA" stroke-width="7" opacity=".86"/>
+<circle cx="256" cy="256" r="110" stroke="#D8AD83" stroke-width="1.8" opacity=".35"/>
+</g>
+<g id="texture_warm_milk_lights" fill="none" stroke-linecap="round">
+<path d="M154 207 A110 110 0 0 1 221 150" stroke="#FFF9E8" stroke-width="11" opacity=".64"/>
+<path d="M284 363 A110 110 0 0 1 341 326" stroke="#EDC99C" stroke-width="9" opacity=".32"/>
+</g>
+<g id="highlight_reflection" fill="none" stroke="#FFFFFF" stroke-linecap="round" opacity=".55">
+<path d="M166 182 Q177 166 196 158" stroke-width="4"/>
+</g>
+
+</svg>

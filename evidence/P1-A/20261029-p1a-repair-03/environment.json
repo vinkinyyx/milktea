@@ -1,0 +1,15 @@
+{
+  "environmentId": "playwright-host-01",
+  "os": "Windows desktop host (version not recorded)",
+  "timezone": "Asia/Shanghai",
+  "creator": "3.8.8",
+  "box2d": "1.0.2",
+  "ptm": 32,
+  "buildId": "20261029-p1a-repair-03",
+  "probeVersion": "lab-probe-v1",
+  "runtime": "Web Mobile over independent HTTP 127.0.0.1:8772",
+  "httpRoot": "D:/cocos-p1a-build/20261029-p1a-repair-03",
+  "browser": "Playwright CLI headed Chrome",
+  "hostLimitation": "tab switch left document.visibilityState=visible; runtime frame gaps were about 1 second",
+  "sourceProject": "D:/cocos-p1a-build-source/20261029-p1a-repair-03"
+}

@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-27",
+  "scope": "asset_library_local_browser_only",
+  "browser": "Microsoft Edge / Playwright CLI",
+  "status": "pass",
+  "cards": 213,
+  "previewImages": 182,
+  "decodedImages": 182,
+  "failedImages": 0,
+  "checks": [
+    {
+      "name": "missing_filter",
+      "expected": 11,
+      "actual": 11,
+      "allPhase": "P4-A"
+    },
+    {
+      "name": "P1_image_filter",
+      "expected": 81,
+      "actual": 81
+    },
+    {
+      "name": "desktop_width",
+      "viewport": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "mobile_width",
+      "viewport": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "console_errors",
+      "actual": 0
+    }
+  ],
+  "screenshots": [
+    "library-desktop.png",
+    "library-missing-mobile.png",
+    "library-p1-mobile.png"
+  ],
+  "not_run": [
+    "Cocos_import",
+    "actual_game_UI",
+    "device_performance",
+    "platform_release"
+  ]
+}

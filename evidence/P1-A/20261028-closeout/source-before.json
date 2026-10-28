@@ -1,0 +1,20 @@
+{
+  "files": {
+    "client/assets/scripts/bootstrap/AppRoot.ts": "8f4d75088eb56e215644d2c0c5b825d05d7ceb2a18ca94ae4e1c63d1036cd921",
+    "client/assets/scripts/bootstrap/Viewport.ts": "9546caa8988fed017f01411ac7cd2e3f47a1d0bafa285ab3ec27d80f4c60b01c",
+    "client/assets/scripts/contracts/types.ts": "da462b5e3b438d70b667925aef1aac17a0cc240c9121dda31b4ce1404ad4e23f",
+    "client/assets/scripts/core/Clock.ts": "fd90ef1662f341f498b0ab17efa378a2b39d27bcef8924e3fb2c7e2f476e3ddc",
+    "client/assets/scripts/core/ConfigLoader.ts": "75b910a98e345d1f803ed636e2798b9bdf2171b5c44308c1badf7d51e980209c",
+    "client/assets/scripts/debug/ArtGallery.ts": "7203479c75d072f002fd07dafb3e24a4fd838586b8d0f2fa2319ede9e702b540",
+    "client/assets/scripts/debug/PhysicsLab.ts": "5a3647fec63e8febf3c836d56eacfbc95e651da31d86584a4ea70274bda32f8c",
+    "client/assets/scripts/physics/CocosPhysicsAdapter.ts": "e89a93ddf3b0db27812f0763a57749e2e997ce47c3597c4297bebf1efdbe2b71",
+    "client/assets/scripts/physics/CoordinateMapper.ts": "afad13f70e0c52bb49795364fed7b06fe72cf81bfe06cd3521520cd7f8cbe0bf",
+    "client/assets/scripts/physics/CupGeometry.ts": "16fc44db686269bbbcaa282693c16d3dc44ef09d4d9ab819601fb0a1d0562197",
+    "client/assets/scripts/presentation/ArtAssets.ts": "4250c11e049622e83ec3979612c7d886a3cb37e76823a6e754ea654fa3f7c3ec",
+    "client/assets/scripts/presentation/ArtCatalog.ts": "a189013c12fc60c2056334607564485f91b7616fd36f3b3570fbb699269204c9",
+    "client/assets/scenes/Boot.scene": "e877bb59791a5420f7834f20b7b21aaee25bd38350e7d95e0a2ebe5f5cac158e",
+    "client/assets/scenes/PhysicsLab.scene": "5437dfcee7d5fd213738463c47ae55ce1a86981947846f3db99e631506d27e2f",
+    "config/design-baseline.json": "973eae177ac05c4a7076543323f7af479d4aaf065c3a2e380a6655df3ce6747f",
+    "client/package.json": "52bc749f8c014442c40a65ffb5107dcba26351517db87b44a8789851c452c929"
+  }
+}

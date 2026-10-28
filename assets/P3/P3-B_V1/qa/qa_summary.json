@@ -1,0 +1,23 @@
+{
+  "scope": "P3-B (20 IDs)",
+  "asset_ids_expected": 20,
+  "asset_ids_actual": 20,
+  "new_draw": 15,
+  "derived": 1,
+  "engine": 2,
+  "platform": 2,
+  "editable_svg": 16,
+  "png_files": 32,
+  "file_qa_errors": 0,
+  "errors": [],
+  "nine_slice": "two ranking rows 12px four-corner retention checked",
+  "share_safe_area": "48px safe; bottom real entry reserved; no dynamic scores or fake codes baked",
+  "unverified": [
+    "platform avatar real authorization",
+    "platform issued game-entry code and device scan",
+    "backend leaderboard scores and surpassed %",
+    "engine/phone screen 375x667 and 750x1334",
+    "font rendering & contrast",
+    "runtime screenshot capture"
+  ]
+}

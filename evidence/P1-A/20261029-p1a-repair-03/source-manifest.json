@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "buildId": "20261029-p1a-repair-03",
+  "projectRoot": "D:\\Workspace\\TapTap\\奶茶挤挤",
+  "files": [
+    {
+      "path": "client/assets/scripts/debug/PhysicsLab.ts",
+      "sha256": "137a6c32e0a24231977a799cc21041b6eaa92d0a5034fc5b93e59c12cd4942c8"
+    },
+    {
+      "path": "client/assets/scripts/debug/LabPauseGate.ts",
+      "sha256": "f5e779a272c8d17eeddc862425bb4f3ff8a2c3afeccc50631984d06d950956ed"
+    },
+    {
+      "path": "client/assets/scripts/debug/LabProbe.ts",
+      "sha256": "c3d3931c9f4d1c09640c94198335ab0822a341ae5c1f51b94a972a24188ba3c9"
+    },
+    {
+      "path": "client/assets/scripts/physics/CocosPhysicsAdapter.ts",
+      "sha256": "1ee7f02cfc633c46a623c2980ceaf70b4366f8c242ea4fb62b49daa6d5ce4d27"
+    },
+    {
+      "path": "client/assets/scripts/presentation/ArtAssets.ts",
+      "sha256": "2750484717aded0e7fb9c92e1e5a8022db0786011e5e33aaea9b0ecc4b2552d1"
+    },
+    {
+      "path": "client/assets/scripts/debug/ArtGallery.ts",
+      "sha256": "fd93fe18979aef21f64ff2be8ad767f5307b55e593dd0c70f7483487ec6d597e"
+    },
+    {
+      "path": "client/extensions/codex-editor-bridge/browser.js",
+      "sha256": "6a9a797f5aa768157ddfcd69753bb15d8899ff8bec5713cd4fe6e9e586071d9b"
+    },
+    {
+      "path": "client/validation/p1a-core-check.cjs",
+      "sha256": "84a16b895c3c9270802e85d58b3ad1a3c41845ec4a4a123d9433c6f5406ef202"
+    },
+    {
+      "path": "client/validation/run-core-check.ps1",
+      "sha256": "5a9043c36a39a7a657c55f828850dc2344f8862e0bf3f40c57fc135538620454"
+    },
+    {
+      "path": "tools/build_p1a_web.ps1",
+      "sha256": "808262dca4e06394ba8322ddab4fddaa8bca2b7b8b604453498bedd7ce260029"
+    },
+    {
+      "path": "tools/prepare_p1a_build_source.ps1",
+      "sha256": "8518f9b266eb70302cda1505d9e091a65c40052618896f066292bf590144f820"
+    },
+    {
+      "path": "tools/derive_p1a_legacy_geometry.py",
+      "sha256": "d70b43d88ad8cfa7a713d1a22e3b409938e6b7c5ab9cf325596a60d23558ac96"
+    }
+  ]
+}

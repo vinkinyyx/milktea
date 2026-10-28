@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-28",
+  "node": "24.13.0",
+  "npm": "11.6.2",
+  "sources": [
+    {
+      "repo": "https://github.com/lightblink/cocos-creator-local-mcp",
+      "commit": "5a326291fbbbed2c1354ccfbd55e988e2b447162",
+      "path": "C:\\Users\\vinki\\.codex\\tools\\cocos-creator-local-mcp",
+      "license": "MIT",
+      "installedSkill": null
+    },
+    {
+      "repo": "https://github.com/lightblink/cocos-asset-forge-mcp",
+      "commit": "5882f6e8d8046e30c95e40d891e922fef2572423",
+      "path": "C:\\Users\\vinki\\.codex\\tools\\cocos-asset-forge-mcp",
+      "license": "MIT",
+      "installedSkill": null
+    },
+    {
+      "repo": "https://github.com/sora16bit/codex-game-music-skill",
+      "commit": "13e5236615871573f50effd75a24a7c5b5d19271",
+      "path": "C:\\Users\\vinki\\.codex\\tools\\codex-game-music-skill",
+      "license": "MIT",
+      "installedSkill": "compose-game-music"
+    }
+  ],
+  "commands": [
+    {
+      "repository": "cocos-creator-local-mcp",
+      "commands": [
+        "git clone",
+        "npm ci",
+        "npm run build"
+      ],
+      "buildExitCode": 0
+    },
+    {
+      "repository": "cocos-asset-forge-mcp",
+      "commands": [
+        "git clone",
+        "npm ci",
+        "npm run build"
+      ],
+      "buildExitCode": 0
+    }
+  ],
+  "upstreamTests": {
+    "creatorLocal": {
+      "passed": 4,
+      "failed": 3,
+      "reason": "Windows path assumptions; source/tests preserved"
+    },
+    "assetForgeInitial": {
+      "passed": 15,
+      "failed": 1,
+      "reason": "ffmpeg ENOENT"
+    },
+    "assetForgeWithFfmpeg": {
+      "passed": 16,
+      "failed": 0
+    }
+  },
+  "ffmpeg": {
+    "wrapper": "imageio-ffmpeg 0.7.0",
+    "binaryVersion": "7.1 essentials Windows",
+    "localOnly": true
+  },
+  "codexConfig": {
+    "path": "C:\\Users\\vinki\\.codex\\config.toml",
+    "existingEntriesPreserved": true,
+    "servers": [
+      "cocos_creator_local",
+      "cocos_asset_forge"
+    ],
+    "nativeHotloadVerified": true
+  },
+  "bridge": {
+    "port": 17388,
+    "host": "127.0.0.1",
+    "health": true,
+    "sceneRead": "Boot",
+    "sceneMutationTested": false
+  },
+  "forge": {
+    "provider": "mock",
+    "networkGeneration": false,
+    "overwrite": false,
+    "realGenerationVerified": false
+  },
+  "music": {
+    "symbolicDraftOnly": true,
+    "rendered": false,
+    "listeningVerified": false,
+    "runtimeIntegrated": false
+  }
+}

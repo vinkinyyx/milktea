@@ -185,8 +185,18 @@ def build():
             "仅预留资产类型，不代表已确认数量/奖励/付费方式；立项后按具体ID扩充清单。",required="candidate")
 
 def write():
+    ROWS.clear()
     build()
-    payload={"version":"handoff-v0.2","date":"2026-10-27","scope":"Image inventory; no final artwork supplied",
+    intake_path=ROOT/'assets/library/catalog.json'
+    if intake_path.exists():
+        delivered={r['asset_id']:r for r in json.loads(intake_path.read_text(encoding='utf-8'))['assets']}
+        LABELS.update(intake_status='实际交付状态',available_exports='已入库运行导出数',library_index='实际文件入口')
+        for row in ROWS:
+            current=delivered.get(row['asset_id'],{})
+            row['intake_status']=current.get('status','not_received')
+            row['available_exports']=str(len(current.get('library_variants',[])))
+            row['library_index']='assets/library/index.html#'+row['asset_id']
+    payload={"version":"handoff-v0.2","date":"2026-10-27","scope":"Production requirements plus intake overlay; game-engine acceptance is separate",
         "method_definitions":{"new_draw":"需要设计母版","derived":"复用母版导出/合成，仍需检查","engine":"程序生成，不需独立手绘文件","platform":"合法平台/授权数据提供"},
         "assets":ROWS}
     assets=ROOT/"assets"
@@ -196,19 +206,19 @@ def write():
             writer=csv.DictWriter(f,fieldnames=list(ROWS[0])); writer.writeheader();writer.writerows(ROWS)
     counts={}
     for row in ROWS: counts[row["production_method"]]=counts.get(row["production_method"],0)+1
-    intro="# 图像逐项制作清单\n\n本清单由 tools/build_image_catalog.py 生成，修改生成源后重建；所有图片待制作。共"+str(len(ROWS))+"项，制作方式计数："+json.dumps(counts,ensure_ascii=False)+"。\n\n"+        "一项可能有多档尺寸，不能把导出档数当作新画数量。optional/candidate不属于必交；平台官方尺寸需实施时复核。\n\n"
+    intro="# 图像逐项制作清单\n\n本清单由 tools/build_image_catalog.py 生成；规格status是原计划，intake_status是实际交付检查，入库不等于引擎验收。共"+str(len(ROWS))+"项，制作方式计数："+json.dumps(counts,ensure_ascii=False)+"。\n\n一项可能有多档尺寸，不能把导出档数当作新画数量。optional/candidate不属于必交；平台官方尺寸需实施时复核。\n\n"
     md=[intro]; cards=[]
     for row in ROWS:
         md.append("## "+row["asset_id"]+" · "+row["name_zh"]+"\n\n")
         md.append("\n".join("- "+k+": "+str(v) for k,v in row.items() if k not in ["asset_id","name_zh"])+"\n\n")
-        values={'new_draw':'需要设计母版','derived':'从母版派生','engine':'程序绘制','platform':'平台提供','required':'本阶段必需','optional':'可选','candidate':'未来候选','planned':'待制作','deferred':'后续阶段待制作','not_acquired':'尚未取得授权','inherits_source_or_code':'沿用原资产或程序的授权','yes':'需要','no':'不需要','none':'不使用'}
+        values={'new_draw':'需要设计母版','derived':'从母版派生','engine':'程序绘制','platform':'平台提供','required':'本阶段必需','optional':'可选','candidate':'未来候选','planned':'原P1/P2计划，实交看下方','deferred':'原后续阶段计划，实交看下方','not_acquired':'基线未附授权，实交声明见库','inherits_source_or_code':'沿用原资产或程序的授权','yes':'需要','no':'不需要','none':'不使用','static_pass':'静态文件检查通过，待引擎验证','conditional_static':'已交静态文件，附条件使用','blocked_static':'缺少运行导出','engine_source_only':'已有程序参考，待Cocos移植','missing_engine_source':'程序源码缺失','platform_dependency':'已有平台接入合同，待真实接入','platform_contract_missing':'平台接入合同缺失','candidate_not_required':'未立项候选，不要求本轮制作'}
         body="".join("<dt>"+html.escape(LABELS.get(k,k))+"</dt><dd>"+html.escape(values.get(str(v),str(v)))+"</dd>" for k,v in row.items() if k not in ["asset_id","name_zh"])
         cards.append('<article data-phase="'+row["first_phase"]+'" data-method="'+row["production_method"]+'"><h2>'+html.escape(row["name_zh"])+'</h2><code>'+row["asset_id"]+'</code><dl>'+body+'</dl></article>')
     (ROOT/"docs/art").mkdir(exist_ok=True)
     (ROOT/"docs/art/image-catalog.md").write_text("".join(md),encoding="utf-8")
     page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>奶茶挤挤 · 图像制作清单</title><style>
     *{box-sizing:border-box}body{margin:0;background:#fff7ec;color:#3d2a23;font:15px/1.7 "Microsoft YaHei",sans-serif}header{padding:32px max(20px,5vw);background:#eedfc9}h1{margin:0}label{display:inline-block;margin:12px 16px 0 0}input,select{padding:10px;border:1px solid #a8886c;border-radius:6px;max-width:100%}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px;padding:24px max(20px,5vw)}article{background:#fffdf8;border:1px solid #decab1;border-radius:12px;padding:20px;min-width:0}h2{font-size:19px;margin:0 0 4px}code{font:12px Consolas,monospace;overflow-wrap:anywhere}dl{margin:12px 0 0}dt{font-weight:bold;font-size:12px;color:#805130;margin-top:8px}dd{margin:0;overflow-wrap:anywhere}[hidden]{display:none!important}a{color:#784027}
-    </style><header><h1>奶茶挤挤 · 图像制作清单</h1><p>COUNT项 · 所有最终图片待制作 · “派生”可复用，不需每项重画</p><p><a href="../docs/14-image-production.md">制作总规范</a> · <a href="image-elements.csv">CSV清单</a> · <a href="../docs/development/development-handbook.html">开发手册</a></p>
+    </style><header><h1>奶茶挤挤 · 图像制作清单</h1><p>COUNT项 · 制作规格与实际交付状态分开记录 · 入库后仍需引擎验证</p><p><a href="library/index.html">查看已入库图片与缺件</a> · <a href="../docs/18-supplement-cleanup-report.md">本次复核报告</a> · <a href="../docs/14-image-production.md">制作总规范</a> · <a href="image-elements.csv">CSV清单</a> · <a href="../docs/development/development-handbook.html">开发手册</a></p>
     <label>查找 <input id="search" placeholder="名称、ID、用途、要求"></label><label>阶段 <select id="phase"><option value="">全部</option>PHASES</select></label><label>方式 <select id="method"><option value="">全部</option><option>new_draw</option><option>derived</option><option>engine</option><option>platform</option></select></label><p id="count" aria-live="polite"></p></header><main>CARDS</main><script>
     const cards=[...document.querySelectorAll("article")], search=document.querySelector("#search"), phase=document.querySelector("#phase"), method=document.querySelector("#method");
     function filter(){let n=0;cards.forEach(c=>{const ok=(!phase.value||c.dataset.phase===phase.value)&&(!method.value||c.dataset.method===method.value)&&c.textContent.toLowerCase().includes(search.value.trim().toLowerCase());c.hidden=!ok;if(ok)n++;});document.querySelector("#count").textContent="显示 "+n+" / "+cards.length+" 项";}

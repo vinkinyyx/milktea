@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>奶茶 P1-11 七项运行图元演示</title>
+<style>
+:root{font-family:system-ui,'Noto Sans CJK SC',sans-serif;background:#efeadf;color:#503726}*{box-sizing:border-box}
+body{margin:0;padding:20px}header{max-width:1150px;margin:0 auto 18px}h1{margin:0;font-size:28px}p{color:#806a5a}
+main{max-width:1150px;margin:auto;display:grid;grid-template-columns:minmax(250px,1fr) minmax(320px,750px);gap:20px}
+.controls{padding:18px;background:#fff9ed;border:2px solid #e8c5a3;border-radius:18px;align-self:start}
+label{display:block;margin:12px 0 5px}select,button,input{font:inherit}select,button{width:100%;padding:12px;border:1px solid #cfab8b;border-radius:10px;background:#fff9ed;color:#59392d}
+button{cursor:pointer;background:#dca377;font-weight:700;margin-top:12px}
+canvas{width:100%;height:auto;box-shadow:0 8px 28px #5c3f3028;border-radius:16px;touch-action:none}
+.controls small{display:block;color:#6e5d54;margin-top:18px;line-height:1.6}
+@media(max-width:720px){main{grid-template-columns:1fr}canvas{max-width:550px}}
+</style></head><body><header><h1>P1-11｜7个运行时绘制元素</h1><p>所有文字和状态均由程序控制；预览不是正式贴图。</p></header>
+<main><section class="controls"><label for="mode">选择资产</label><select id="mode"></select>
+<label><input id="reduce" type="checkbox"> 减少动态效果</label><label><input id="paused" type="checkbox"> 暂停计时</label>
+<label>游戏帧数 / 180 tick</label><input id="tick" type="range" min="0" max="180" value="135" style="width:100%"><div id="ticksLabel">135</div>
+<button id="toggle">切换危险 / 遮罩 / 次数演示</button><small>可点击/移动预览中的落点；遮罩会阻止底层点击。演示环境使用750×1334设计分辨率，实际平台缩放由引擎负责。</small></section>
+<canvas id="stage" width="750" height="1334" aria-label="P1-11画面预览"></canvas></main><script type="module" src="./demo.mjs"></script></body></html>

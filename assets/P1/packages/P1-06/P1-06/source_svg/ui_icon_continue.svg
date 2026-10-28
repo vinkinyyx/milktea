@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+  <title>继续箭头 | ui_icon_continue</title>
+  <desc>奶茶游戏 UI icon. Original editable vector. Transparent 192x192 canvas. 96px/48px exports. sRGB deep-brown. No dynamic text.</desc>
+
+  <defs>
+   <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+   </linearGradient>
+  </defs>
+
+  <g id="ui_icon_continue_paint" stroke-linejoin="round">
+<path d="M44 96 H146 M111 61 L146 96 L111 131" fill="none" stroke="#3E281E" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 96 H146 M111 61 L146 96 L111 131" fill="none" stroke="url(#brown)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M47 90 H113" fill="none" stroke="#D5A374" stroke-opacity=".5" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>

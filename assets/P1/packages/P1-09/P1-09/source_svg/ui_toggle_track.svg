@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="256" height="128" viewBox="0 0 128 64" role="img">
+<title>开关轨道 / ui_toggle_track</title>
+<desc>原创可编辑SVG母版，设计源2x: 256x128；运行透明PNG: 128x64；分组图层可修改。图像不含可变状态文本。sRGB。</desc>
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFBF4"/><stop offset=".51" stop-color="#F5E5D0"/><stop offset="1" stop-color="#E4C5A5"/></linearGradient>
+<linearGradient id="walnut" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B07852"/><stop offset=".36" stop-color="#835235"/><stop offset="1" stop-color="#5A3826"/></linearGradient>
+<linearGradient id="caramel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2C183"/><stop offset=".4" stop-color="#C98950"/><stop offset="1" stop-color="#935633"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6C3"/><stop offset=".27" stop-color="#F6D873"/><stop offset=".68" stop-color="#E8A941"/><stop offset="1" stop-color="#B46C32"/></linearGradient>
+<linearGradient id="creampearl" x1="0" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".4" stop-color="#FFF7E8"/><stop offset=".76" stop-color="#EED5B6"/><stop offset="1" stop-color="#CFA681"/></linearGradient>
+<linearGradient id="taro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF6FF"/><stop offset=".6" stop-color="#DBC2E1"/><stop offset="1" stop-color="#A77EAD"/></linearGradient>
+<linearGradient id="mochi" x1=".12" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".43" stop-color="#F8F1E5"/><stop offset=".79" stop-color="#EADCCB"/><stop offset="1" stop-color="#D0B7AA"/></linearGradient>
+<radialGradient id="coin"><stop offset="0" stop-color="#FFF8D7"/><stop offset=".78" stop-color="#F0C96C"/><stop offset="1" stop-color="#AB653A"/></radialGradient>
+</defs>
+
+<g id="layer_01_soft_shadow"><rect x="7" y="13.5" width="114" height="40" rx="20" fill="#5A3826" opacity=".14"/></g>
+<g id="layer_02_outer_rim"><rect x="7" y="10" width="114" height="42" rx="21" fill="url(#walnut)" stroke="#4D3022" stroke-width="1.6"/></g>
+<g id="layer_03_recess"><rect x="10.5" y="13.5" width="107" height="35" rx="17.5" fill="#F8E9D5" stroke="#A67B5C" stroke-width="1.7"/><rect x="13" y="16" width="102" height="30" rx="15" fill="#ECD5BA" opacity=".43"/></g>
+<g id="layer_04_inner_glow"><path d="M28 17 H99" fill="none" stroke="#FFFFFF" stroke-opacity=".7" stroke-width="2.5" stroke-linecap="round"/><path d="M28 44 H99" fill="none" stroke="#AC866B" stroke-opacity=".32" stroke-width="1.6" stroke-linecap="round"/></g>
+
+</svg>

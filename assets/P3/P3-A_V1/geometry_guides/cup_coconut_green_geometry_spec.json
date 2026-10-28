@@ -1,0 +1,30 @@
+{
+  "cup": "coconut_green",
+  "scale": 0.95,
+  "world_origin": [
+    0,
+    200
+  ],
+  "top_inside_world": [
+    [
+      128.0,
+      1060
+    ],
+    [
+      622.0,
+      1060
+    ]
+  ],
+  "bottom_inside_world": [
+    [
+      204.0,
+      260
+    ],
+    [
+      546.0,
+      260
+    ]
+  ],
+  "safe_line_y_world": 1000,
+  "source": "14-image-production.md reconstruction; NOT authoritative engine export"
+}

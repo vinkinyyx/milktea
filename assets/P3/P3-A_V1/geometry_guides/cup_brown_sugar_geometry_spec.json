@@ -1,0 +1,30 @@
+{
+  "cup": "brown_sugar",
+  "scale": 0.85,
+  "world_origin": [
+    0,
+    200
+  ],
+  "top_inside_world": [
+    [
+      154.0,
+      1060
+    ],
+    [
+      596.0,
+      1060
+    ]
+  ],
+  "bottom_inside_world": [
+    [
+      222.0,
+      260
+    ],
+    [
+      528.0,
+      260
+    ]
+  ],
+  "safe_line_y_world": 1000,
+  "source": "14-image-production.md reconstruction; NOT authoritative engine export"
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="256" viewBox="0 0 256 128" role="img">
+<title>新纪录徽章 / ui_badge_record</title>
+<desc>原创可编辑SVG母版，设计源2x: 512x256；运行透明PNG: 256x128；分组图层可修改。图像不含可变状态文本。sRGB。</desc>
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFBF4"/><stop offset=".51" stop-color="#F5E5D0"/><stop offset="1" stop-color="#E4C5A5"/></linearGradient>
+<linearGradient id="walnut" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B07852"/><stop offset=".36" stop-color="#835235"/><stop offset="1" stop-color="#5A3826"/></linearGradient>
+<linearGradient id="caramel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2C183"/><stop offset=".4" stop-color="#C98950"/><stop offset="1" stop-color="#935633"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6C3"/><stop offset=".27" stop-color="#F6D873"/><stop offset=".68" stop-color="#E8A941"/><stop offset="1" stop-color="#B46C32"/></linearGradient>
+<linearGradient id="creampearl" x1="0" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".4" stop-color="#FFF7E8"/><stop offset=".76" stop-color="#EED5B6"/><stop offset="1" stop-color="#CFA681"/></linearGradient>
+<linearGradient id="taro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF6FF"/><stop offset=".6" stop-color="#DBC2E1"/><stop offset="1" stop-color="#A77EAD"/></linearGradient>
+<linearGradient id="mochi" x1=".12" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".43" stop-color="#F8F1E5"/><stop offset=".79" stop-color="#EADCCB"/><stop offset="1" stop-color="#D0B7AA"/></linearGradient>
+<radialGradient id="coin"><stop offset="0" stop-color="#FFF8D7"/><stop offset=".78" stop-color="#F0C96C"/><stop offset="1" stop-color="#AB653A"/></radialGradient>
+</defs>
+
+<g id="layer_01_shadow" opacity=".19"><path d="M27 46 Q70 34 91 45 H165 Q190 36 229 46 L214 106 H43 Z" fill="#4C3022"/></g>
+<g id="layer_02_ribbon"><path d="M36 42 Q62 34 83 46 L96 86 Q73 82 42 102 L31 84 L17 80 L37 66 L25 55Z" fill="url(#caramel)" stroke="#6C4029" stroke-width="3" stroke-linejoin="round"/><path d="M220 42 Q194 34 173 46 L160 86 Q183 82 214 102 L225 84 L239 80 L219 66 L231 55Z" fill="url(#caramel)" stroke="#6C4029" stroke-width="3" stroke-linejoin="round"/>
+<path d="M42 50 Q63 47 80 57" stroke="#FFE6AD" stroke-width="4" fill="none" opacity=".7"/><path d="M214 50 Q193 47 176 57" stroke="#FFE6AD" stroke-width="4" fill="none" opacity=".7"/></g>
+<g id="layer_03_medallion"><circle cx="128" cy="65" r="55" fill="url(#walnut)" stroke="#503024" stroke-width="2.5"/><circle cx="128" cy="63" r="48.5" fill="url(#gold)" stroke="#FFF4CC" stroke-width="3"/><circle cx="128" cy="64" r="39" fill="url(#coin)" stroke="#B87735" stroke-width="2.2"/></g>
+<g id="layer_04_sunburst" stroke="#FFF1BB" stroke-width="2.5" stroke-linecap="round" opacity=".8">
+<path d="M128 25 v7 M128 97 v7 M88 65 h8 M160 65 h8 M102 36 l5 5 M149 86 l5 5 M154 39 l-5 5 M102 88 l5 -5"/></g>
+<g id="layer_05_original_star"><path d="M128 31 L137.6 52.6 L161.4 54.7 L143.2 70.7 L148.5 93.1 L128 81 L107.5 93.1 L112.8 70.7 L94.6 54.7 L118.4 52.6 Z" fill="url(#gold)" stroke="#845025" stroke-width="3" stroke-linejoin="round"/><path d="M128 38 L134.8 55.8 L153 57.8 L139 70.2 L143 84 L128 75 L113 84 L117 70.2 L103 57.8 L121.2 55.8 Z" fill="#FFF5BD" opacity=".55"/></g>
+<g id="layer_06_tiny_sparkles" stroke="#F7D780" stroke-width="2" stroke-linecap="round"><path d="M54 20 v13 M47 26.5 h14 M205 21 v12 M199 27 h12"/><path d="M46 113 v7 M42.5 116.5 h7 M211 108 v7 M207.5 111.5 h7"/></g>
+
+</svg>

@@ -1,0 +1,1 @@
+Original vector geometry and P3-B internal-source derivative. No third-party icon/font artwork embedded. Typeface used for PREVIEWS only; font binary not included. Verify third-party platform assets at integration.

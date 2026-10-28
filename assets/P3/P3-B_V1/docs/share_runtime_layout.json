@@ -1,0 +1,57 @@
+{
+  "size": [
+    750,
+    1000
+  ],
+  "safe_margin": 48,
+  "bottom_entry_height": 180,
+  "regions": {
+    "title": [
+      88,
+      64,
+      574,
+      104
+    ],
+    "score": [
+      94,
+      195,
+      560,
+      100
+    ],
+    "game_screenshot": [
+      90,
+      340,
+      570,
+      360
+    ],
+    "meta_left": [
+      90,
+      737,
+      275,
+      76
+    ],
+    "meta_right": [
+      385,
+      737,
+      275,
+      76
+    ],
+    "real_platform_code_or_link": [
+      504,
+      844,
+      80,
+      80
+    ]
+  },
+  "exclude_from_png": [
+    "score",
+    "rank",
+    "cup_name",
+    "avatar",
+    "nickname",
+    "real_game_screenshot",
+    "true_provider_code",
+    "expiry"
+  ],
+  "version": "P3B-2026-10-27"
+}

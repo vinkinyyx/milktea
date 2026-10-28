@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="512" viewBox="0 0 512 512" role="img">
+<title>投放确认光点 / fx_drop_ping</title>
+<desc>NAICHA 原创可编辑SVG源图。512×512母版, 256×256独立透明PNG导出, 以中心256,256为锚点。特效由程序控制alpha/scale/rotation，不烘焙文字、帧序列。</desc>
+<defs>
+<radialGradient id="glow"><stop offset="0" stop-color="#FFF9DF" stop-opacity=".98"/><stop offset=".55" stop-color="#FFF0C9" stop-opacity=".65"/><stop offset="1" stop-color="#EBC294" stop-opacity=".12"/></radialGradient>
+<radialGradient id="milkstar"><stop offset="0" stop-color="#FFFFF6"/><stop offset=".58" stop-color="#FFF7D5"/><stop offset="1" stop-color="#F0C786"/></radialGradient>
+<linearGradient id="gold" x1=".12" y1="0" x2=".83" y2="1"><stop offset="0" stop-color="#FFF9DF"/><stop offset=".34" stop-color="#FBE2A1"/><stop offset=".7" stop-color="#F2BB62"/><stop offset="1" stop-color="#C58A4B"/></linearGradient>
+<linearGradient id="cream" x1=".1" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".35" stop-color="#FFF6E5"/><stop offset="1" stop-color="#E2BE99"/></linearGradient>
+<linearGradient id="crumb" x1=".14" y1=".03" x2=".82" y2=".95"><stop offset="0" stop-color="#FFF5E3"/><stop offset=".58" stop-color="#E8C99E"/><stop offset="1" stop-color="#BE936E"/></linearGradient>
+<linearGradient id="skin" x1=".13" y1="0" x2=".93" y2="1"><stop offset="0" stop-color="#FFF4DF"/><stop offset=".45" stop-color="#F4CDA7"/><stop offset="1" stop-color="#D69B71"/></linearGradient>
+<linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ECDDBB"/><stop offset="1" stop-color="#B48059"/></linearGradient>
+</defs>
+
+<g id="base_short_arc" fill="none" stroke-linecap="round">
+<path d="M178 268 Q209 206 260 211" stroke="#F3C785" stroke-width="23" opacity=".15"/>
+<path d="M181 265 Q218 207 266 215" stroke="#F0C181" stroke-width="13" opacity=".62"/>
+<path d="M186 258 Q220 218 258 219" stroke="#FFF8EA" stroke-width="6" opacity=".95"/>
+</g>
+<g id="texture_soft_echo" fill="none" stroke-linecap="round">
+<path d="M299 247 Q321 264 325 288" stroke="#F4D29C" stroke-width="10" opacity=".39"/>
+</g>
+<g id="highlight_ping_points" fill="#FFF6D8"><circle cx="304" cy="242" r="8" opacity=".88"/><circle cx="322" cy="288" r="5.5" opacity=".58"/></g>
+
+</svg>

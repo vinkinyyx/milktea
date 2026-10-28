@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "sourcePath": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\P1-A\\20261028-closeout\\continuous-three.json",
+  "sourceSha256": "4eca388156bb1e13e0b450fa8af03967f0fd2d8cccc29c75236ece3cd4fc6bf4",
+  "sourceBuildId": "historical-20261028-closeout",
+  "sourceFile": "continuous-three.json",
+  "outputFile": "continuous-three-corrected.csv",
+  "outputSha256": "72763be2768ffee6c02559bfb08e97c2d29f65162e94c0bec77801eab5d97de0",
+  "scriptPath": "D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\derive_p1a_legacy_geometry.py",
+  "scriptSha256": "d70b43d88ad8cfa7a713d1a22e3b409938e6b7c5ab9cf325596a60d23558ac96",
+  "formulaVersion": "legacy-side-sign-correction-v1",
+  "formula": "corrected = -raw - 2*radius_du; applied only to finite legacy side margins whose stored normal sign was reversed",
+  "rows": 12603,
+  "correctedRows": {
+    "left": 12537,
+    "right": 12537
+  },
+  "sideSummary": {
+    "left": {
+      "minOverall": 150.21128483906938,
+      "minAfterTick600": 150.33913334317782,
+      "negativeAfterTick600": 0
+    },
+    "right": {
+      "minOverall": 150.21128483906938,
+      "minAfterTick600": 150.33913334317782,
+      "negativeAfterTick600": 0
+    }
+  },
+  "sourceModified": false
+}

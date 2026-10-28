@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+ <title>晃杯动作 | ui_icon_shake</title>
+ <desc>奶茶项目P1-07. Original editable SVG. Transparent 192x192 canvas, 96 and 48 PNG exports, sRGB browns, no dynamic text or UI button baked in.</desc>
+ <defs>
+  <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+  </linearGradient>
+  <linearGradient id="milk" x1="0" x2=".8" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFF5E7"/>
+    <stop offset="70%" stop-color="#E9D1B0"/>
+    <stop offset="100%" stop-color="#D6AE86"/>
+  </linearGradient>
+  <linearGradient id="warning" x1="0" x2=".4" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFDD9D"/>
+    <stop offset="70%" stop-color="#F4BD6C"/>
+    <stop offset="100%" stop-color="#ECA257"/>
+  </linearGradient>
+ </defs>
+ <g id="ui_icon_shake_paint" stroke-linejoin="round">
+ <g id="shake_left_arrows" fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M47 55 Q20 82 45 119" stroke="#3F281E" stroke-width="10"/>
+ <path d="M47 55 Q20 82 45 119" stroke="#A56F47" stroke-width="5.4"/>
+ <path d="M35 105 L45 119 L54 104" stroke="#3F281E" stroke-width="9"/>
+ </g>
+ <g id="milk_tea_cup" transform="rotate(-12 96 99)">
+  <path d="M65 64 L126 64 L117 141 Q96 146 74 140Z" fill="#E8C5A1" stroke="#3F281E" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M74 92 Q95 84 118 93 L114 130 Q95 139 78 130Z" fill="#B77B52" opacity=".9"/>
+  <ellipse cx="96" cy="65" rx="35" ry="9" fill="#F5DFBE" stroke="#3F281E" stroke-width="7.2"/>
+  <path d="M72 67 L80 127" stroke="#FFF1D9" opacity=".75" stroke-width="5" stroke-linecap="round"/>
+  <path d="M82 99 Q96 94 112 100" stroke="#F8D5A7" stroke-opacity=".64" stroke-width="3.2" fill="none"/>
+ </g>
+ <g id="shake_right_arrows" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M145 138 Q175 109 151 72" stroke="#3F281E" stroke-width="10"/>
+  <path d="M145 138 Q175 109 151 72" stroke="#A56F47" stroke-width="5.4"/>
+  <path d="M141 87 L151 72 L163 86" stroke="#3F281E" stroke-width="9"/>
+ </g>
+ </g>
+ </svg>

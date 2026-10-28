@@ -1,0 +1,15 @@
+### Result
+- 0: [Cocos Creator | milktea-p1a](http://127.0.0.1:8773/?p1aCase=lifecycle-smoke&attemptId=repair04-life-tab-001&expectedBuildId=20261029-p1a-repair-04&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off)
+- 1: (current) [](about:blank)
+### Ran Playwright code
+```js
+await page.goto('about:blank');
+```
+### Open tabs
+- 0: [Cocos Creator | milktea-p1a](http://127.0.0.1:8773/?p1aCase=lifecycle-smoke&attemptId=repair04-life-tab-001&expectedBuildId=20261029-p1a-repair-04&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off)
+- 1: (current) [](about:blank)
+### Page
+- Page URL: about:blank
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-10-28T18-04-41-859Z.yml)
+

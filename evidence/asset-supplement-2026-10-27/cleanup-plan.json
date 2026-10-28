@@ -1,0 +1,1901 @@
+{
+  "project_root": "D:\\Workspace\\TapTap\\奶茶挤挤",
+  "backup_root": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2",
+  "action": "reversible_move_not_permanent_delete",
+  "entries": [
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\.playwright-cli",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli",
+      "reason": "临时浏览器会话与控制台日志",
+      "files": 24,
+      "bytes": 2574239
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\temp",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp",
+      "reason": "重复Git检出与可再生的P1-A编译结果",
+      "files": 265,
+      "bytes": 5145614
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\补",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\补",
+      "reason": "已归位后留下的空补交包装目录",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\P4\\P4-A_V1",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P4\\P4-A_V1",
+      "reason": "已由完整V2替代的旧说明和预览包",
+      "files": 3,
+      "bytes": 480971
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\output\\milktea-design-v0.1.zip",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\output\\milktea-design-v0.1.zip",
+      "reason": "已过期的设计压缩快照，当前源文件与阅读版另行保留",
+      "files": 1,
+      "bytes": 316678
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\output\\milktea-design-v0.2.zip",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\output\\milktea-design-v0.2.zip",
+      "reason": "已过期的设计压缩快照，当前源文件与阅读版另行保留",
+      "files": 1,
+      "bytes": 830505
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\__pycache__",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\tools\\__pycache__",
+      "reason": "Python可再生字节码缓存",
+      "files": 2,
+      "bytes": 41695
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\P3\\P3-C_V1\\previews\\P3-C_%E5%85%AD%E9%A1%B9%E6%80%BB%E8%A7%88.png",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P3\\P3-C_V1\\previews\\P3-C_%E5%85%AD%E9%A1%B9%E6%80%BB%E8%A7%88.png",
+      "reason": "与同目录保留预览字节完全相同的重复副本；保留 P3-C_六项总览.png",
+      "files": 1,
+      "bytes": 487487
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\P3\\P3-B_V1\\previews\\P3-B_%E5%88%86%E4%BA%AB%E8%83%8C%E6%99%AF%E5%AF%B9%E7%85%A7.jpg",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P3\\P3-B_V1\\previews\\P3-B_%E5%88%86%E4%BA%AB%E8%83%8C%E6%99%AF%E5%AF%B9%E7%85%A7.jpg",
+      "reason": "与同目录保留预览字节完全相同的重复副本；保留 P3-B_分享背景对照.jpg",
+      "files": 1,
+      "bytes": 209892
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\P3\\P3-B_V1\\previews\\P3-B_%E7%B4%A0%E6%9D%90%E6%80%BB%E8%A7%88.png",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P3\\P3-B_V1\\previews\\P3-B_%E7%B4%A0%E6%9D%90%E6%80%BB%E8%A7%88.png",
+      "reason": "与同目录保留预览字节完全相同的重复副本；保留 P3-B_素材总览.png",
+      "files": 1,
+      "bytes": 270335
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\P4\\P4-C_V1\\previews\\P4-C_%E4%B8%A4%E9%A1%B9%E9%AA%8C%E6%94%B6%E6%80%BB%E8%A7%88.png",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P4\\P4-C_V1\\previews\\P4-C_%E4%B8%A4%E9%A1%B9%E9%AA%8C%E6%94%B6%E6%80%BB%E8%A7%88.png",
+      "reason": "与同目录保留预览字节完全相同的重复副本；保留 P4-C_涓ら」楠屾敹鎬昏.png",
+      "files": 1,
+      "bytes": 117535
+    },
+    {
+      "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\P4\\P4-B_V1\\previews\\P4-B_%E5%85%AD%E9%A1%B9%E6%96%B0%E7%BB%98%E7%BB%84%E4%BB%B6.png",
+      "destination": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P4\\P4-B_V1\\previews\\P4-B_%E5%85%AD%E9%A1%B9%E6%96%B0%E7%BB%98%E7%BB%84%E4%BB%B6.png",
+      "reason": "与同目录保留预览字节完全相同的重复副本；保留 P4-B_鍏」鏂扮粯缁勪欢.png",
+      "files": 1,
+      "bytes": 235454
+    }
+  ],
+  "files": [
+    {
+      "original": ".playwright-cli/console-2026-10-26T16-16-42-472Z.log",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\console-2026-10-26T16-16-42-472Z.log",
+      "sha256": "ede20674ddf81deac59dec6ad2cdf9661cee68c47dc7d51a24b6498cd4d047e8",
+      "bytes": 143
+    },
+    {
+      "original": ".playwright-cli/console-2026-10-27T14-21-58-517Z.log",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\console-2026-10-27T14-21-58-517Z.log",
+      "sha256": "b04dae72f37a2c83736ab40df15f1251743635edd930ab200a3b161341963175",
+      "bytes": 203
+    },
+    {
+      "original": ".playwright-cli/console-2026-10-27T15-12-34-041Z.log",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\console-2026-10-27T15-12-34-041Z.log",
+      "sha256": "a1a7879add55ec8e4b444802a461a73f89dbbbbb661f28318ee4df62a4c56cfa",
+      "bytes": 203
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T16-16-44-117Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T16-16-44-117Z.yml",
+      "sha256": "ae97035e14f1658b7c31d0dc734669cf39ed4751eee4aefe6bc69e782a7a22f0",
+      "bytes": 142601
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T16-17-41-738Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T16-17-41-738Z.yml",
+      "sha256": "ae97035e14f1658b7c31d0dc734669cf39ed4751eee4aefe6bc69e782a7a22f0",
+      "bytes": 142601
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T16-18-10-039Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T16-18-10-039Z.yml",
+      "sha256": "ae97035e14f1658b7c31d0dc734669cf39ed4751eee4aefe6bc69e782a7a22f0",
+      "bytes": 142601
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T16-18-26-384Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T16-18-26-384Z.yml",
+      "sha256": "ae97035e14f1658b7c31d0dc734669cf39ed4751eee4aefe6bc69e782a7a22f0",
+      "bytes": 142601
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T17-53-30-342Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T17-53-30-342Z.yml",
+      "sha256": "7883ccb87720ec35ba467bf903ea220470ba34080f9a1ef8f62717ceceed49aa",
+      "bytes": 75870
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T17-53-46-167Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T17-53-46-167Z.yml",
+      "sha256": "7883ccb87720ec35ba467bf903ea220470ba34080f9a1ef8f62717ceceed49aa",
+      "bytes": 75870
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T17-53-57-026Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T17-53-57-026Z.yml",
+      "sha256": "63dde52f8c26cae8df16c7b395c7715125fbfd7e6ef7649c1c3229b94231a060",
+      "bytes": 413746
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T17-54-13-151Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T17-54-13-151Z.yml",
+      "sha256": "90ff6c998091a3ced3180522fdccac19bc7404576fab2dcb3de2d05399076a5a",
+      "bytes": 36730
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T17-54-13-542Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T17-54-13-542Z.yml",
+      "sha256": "5e1bab3a7dd2f34ed45062ba35ae01f05d3d71d7bde4b3b722b7d94debeeecc9",
+      "bytes": 19562
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T17-54-39-838Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T17-54-39-838Z.yml",
+      "sha256": "d0a9bcd8f527f805fdf0983bb04287e80ed282a18825182788304c9700a5fa30",
+      "bytes": 77072
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T17-55-48-941Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T17-55-48-941Z.yml",
+      "sha256": "e4e0f4ce3a5817d91c08f6039f9657e2a1d3a21e86708699a3e8130b0021a36f",
+      "bytes": 432465
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-26T17-55-51-269Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-26T17-55-51-269Z.yml",
+      "sha256": "c62c29edb5f08ef3446089a565464b2eaf84e93e805610a8f961544b44e465a7",
+      "bytes": 195105
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T14-21-58-957Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T14-21-58-957Z.yml",
+      "sha256": "cea8b96f73304c36c0b8aa87c8487888ab90a873ec1c73aec71937e288b3341d",
+      "bytes": 150425
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T14-22-21-217Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T14-22-21-217Z.yml",
+      "sha256": "25f1d39cabef814127adbd8873fdd4ee4d8558f036b0c1d94e956b2224763998",
+      "bytes": 5972
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T14-22-51-476Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T14-22-51-476Z.yml",
+      "sha256": "bc8161f895c4b244c84484c8bc85b25503307cb9b4b5f69668ddb5110f22684f",
+      "bytes": 131900
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T14-22-51-874Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T14-22-51-874Z.yml",
+      "sha256": "142dcbc869fb1ad73097672aad34bd756284990549b014cd2c11273863369256",
+      "bytes": 62125
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T14-25-16-361Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T14-25-16-361Z.yml",
+      "sha256": "2405288b9a7ac57726a0d7a4c9ceeb7e2ca63bec0fb7b474734040f69c499b6a",
+      "bytes": 151201
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T15-12-34-448Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T15-12-34-448Z.yml",
+      "sha256": "36a8fe47ab2eb695fc71e7e06590dc40e1059b06571edf498ecaefa7c099850b",
+      "bytes": 155956
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T15-13-06-302Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T15-13-06-302Z.yml",
+      "sha256": "d36e4c03f1bdcee02915038685de218d6d059c22fa83e46af8cf0c1bb162479c",
+      "bytes": 9622
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T15-13-07-566Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T15-13-07-566Z.yml",
+      "sha256": "987001eee5fd925854e48120c609f67ac598096dff412e3890f963fb4cb6c5f2",
+      "bytes": 1723
+    },
+    {
+      "original": ".playwright-cli/page-2026-10-27T15-13-08-818Z.yml",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\.playwright-cli\\page-2026-10-27T15-13-08-818Z.yml",
+      "sha256": "1bb461505541192d8931b2b86dc3efa438e76c787f63584fd6522d5112e1ef8b",
+      "bytes": 7942
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.gitattributes",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.gitattributes",
+      "sha256": "c63e54dbc10308c8cc5bb27fe724577de7266437707d8ae7151675ac8293a15d",
+      "bytes": 98
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.gitignore",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.gitignore",
+      "sha256": "883e546cf2c2ca06d06e6fa841eea65bb5371e6bec3178cfdf9824fbea7595ad",
+      "bytes": 255
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/AGENTS.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\AGENTS.md",
+      "sha256": "1a7bb13f6895460a7549cb57b703c98624a07fc65694ce0de84be6070dcfbed4",
+      "bytes": 1773
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/README.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\README.md",
+      "sha256": "ed37f5afb65800c777ed0da898ec1a313321914f1f6d94c5c69f2c7f4e23313b",
+      "bytes": 5672
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/THIRD_PARTY_NOTICES.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\THIRD_PARTY_NOTICES.md",
+      "sha256": "99c23fcf23883168380f59819c80cb0bb72cd166fa393582ab1f0a5e69493929",
+      "bytes": 960
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/COMMIT_EDITMSG",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\COMMIT_EDITMSG",
+      "sha256": "e16537942eddc3c96a707221bd771721ac203088b825b692d12dbd19a461ddf1",
+      "bytes": 46
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/config",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\config",
+      "sha256": "3d05b5d6912ef6bed4d033c88c057951c5834636603b49dc1e928caf7c2a1155",
+      "bytes": 301
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/description",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\description",
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+      "bytes": 73
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/HEAD",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\HEAD",
+      "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+      "bytes": 21
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/index",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\index",
+      "sha256": "7fc4709fc7938dd6bb4252aa24e8d50d4318b06afebcc3de56665b920eebf641",
+      "bytes": 17447
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/packed-refs",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\packed-refs",
+      "sha256": "6f71b9778cbd34d5bff12d8e89d247caa754829ed97927dec199d7025579b91d",
+      "bytes": 112
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/shallow",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\shallow",
+      "sha256": "671359c4d534bb70c2b3e8d3ae697a8892439b45ce61f17fc92f5d15e6a3b34b",
+      "bytes": 41
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/applypatch-msg.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\applypatch-msg.sample",
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+      "bytes": 478
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/commit-msg.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\commit-msg.sample",
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+      "bytes": 896
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/fsmonitor-watchman.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\fsmonitor-watchman.sample",
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+      "bytes": 4726
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/post-update.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\post-update.sample",
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+      "bytes": 189
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/pre-applypatch.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\pre-applypatch.sample",
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+      "bytes": 424
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/pre-commit.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\pre-commit.sample",
+      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+      "bytes": 1649
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/pre-merge-commit.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\pre-merge-commit.sample",
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+      "bytes": 416
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/pre-push.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\pre-push.sample",
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+      "bytes": 1374
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/pre-rebase.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\pre-rebase.sample",
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+      "bytes": 4898
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/pre-receive.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\pre-receive.sample",
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+      "bytes": 544
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/prepare-commit-msg.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\prepare-commit-msg.sample",
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+      "bytes": 1492
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/push-to-checkout.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\push-to-checkout.sample",
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+      "bytes": 2783
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/sendemail-validate.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\sendemail-validate.sample",
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+      "bytes": 2308
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/hooks/update.sample",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\hooks\\update.sample",
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+      "bytes": 3650
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/info/exclude",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\info\\exclude",
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+      "bytes": 240
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/logs/HEAD",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\logs\\HEAD",
+      "sha256": "65e98759082780ed97136cbc0c567e3123203b41f6cd531e34cf20a08dbc1100",
+      "bytes": 363
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/logs/refs/heads/main",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\logs\\refs\\heads\\main",
+      "sha256": "65e98759082780ed97136cbc0c567e3123203b41f6cd531e34cf20a08dbc1100",
+      "bytes": 363
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/logs/refs/remotes/origin/main",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\logs\\refs\\remotes\\origin\\main",
+      "sha256": "6019b117f20384889915596b4022618e6e929176ff7ba691f08fe2079ecea450",
+      "bytes": 145
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/00/ad8b4e1ac7a691bef509043e44c8e144f90617",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\00\\ad8b4e1ac7a691bef509043e44c8e144f90617",
+      "sha256": "1602b99f62c9aa61312b75c0b7a00409f31f4ab0e99af33da0a37d0168e5deb2",
+      "bytes": 297
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/0a/a8cfdec3951c2c144d8fde87b601473d9bddb0",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\0a\\a8cfdec3951c2c144d8fde87b601473d9bddb0",
+      "sha256": "ff2bb3c8d4f39cff42ba16499b17306713ec176a458c78eb6ae0787a5b5d5047",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/13/21fc8b7f26f514fd981413a05a731f4c5987ca",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\13\\21fc8b7f26f514fd981413a05a731f4c5987ca",
+      "sha256": "2269da09bbd876dc4a59adbd1b2b26fb78623bbc1df0876e0cace90a082281e2",
+      "bytes": 401
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/19/f978ccda1a51212857d8877aba4e8fee9b734f",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\19\\f978ccda1a51212857d8877aba4e8fee9b734f",
+      "sha256": "f5189ed7ab8a837163e801ce5a1cdb5e1575793b9ef4e1274171911fe2efd426",
+      "bytes": 1068
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/21/1c59821913548feb0a02bddd41eaaca3c13350",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\21\\1c59821913548feb0a02bddd41eaaca3c13350",
+      "sha256": "1f100c1c93a2af07a372e914cb7941eda0b06dd5181cdf2f6c9df6f7459e2e1f",
+      "bytes": 1554
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/23/3091e26b48df7630072abc2d379c39d428ea70",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\23\\3091e26b48df7630072abc2d379c39d428ea70",
+      "sha256": "b306a1b3595692ffe747f3b3f04af572ce52f42a19967812030a1370f40fb162",
+      "bytes": 889
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/26/11eaf9c6f7e1f5d4d02350887115d97fc0db1c",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\26\\11eaf9c6f7e1f5d4d02350887115d97fc0db1c",
+      "sha256": "4990ec543d1fa3d3d355732ca36fc05ea3179b7b037aed3e09a437388cae1c61",
+      "bytes": 198
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/26/fe42a84db63b59d6121a0e57757da25d585218",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\26\\fe42a84db63b59d6121a0e57757da25d585218",
+      "sha256": "3fc3fb87f8b802e1e5c5aadf693e77f5b42c74078e2c62049efdbe99b67049ba",
+      "bytes": 147
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/29/85155d65488f0ed99364d00b854e96b4e774de",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\29\\85155d65488f0ed99364d00b854e96b4e774de",
+      "sha256": "ade7fa93e1d64cb6aede472f5fff20d86f0b0a9805856471b87f50fe2fbd0ff4",
+      "bytes": 675
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/2e/e45e510ba6346b60c0219cd56fba73bb0c7ff3",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\2e\\e45e510ba6346b60c0219cd56fba73bb0c7ff3",
+      "sha256": "c8aae7e7b8829c1ee765ba9fd0993bf5779498fcb6229a97f4a2404b253aaf49",
+      "bytes": 141
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/30/5c916a3a95730c81a74386ba48c9bfb452ecea",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\30\\5c916a3a95730c81a74386ba48c9bfb452ecea",
+      "sha256": "86ee03c61974b6ece715dedce4804560f587c2ea346c75a28765e46a97346251",
+      "bytes": 220
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/32/9ab0311c097c5d1475eb69f17f4ecb412bb258",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\32\\9ab0311c097c5d1475eb69f17f4ecb412bb258",
+      "sha256": "a6cf763760b745d931a65f77ae5ecfcfb655a92b421a7412e893455f1be48b8b",
+      "bytes": 1158
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/33/bf85e3c8b976e876e5a03c0c54109e263dc90a",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\33\\bf85e3c8b976e876e5a03c0c54109e263dc90a",
+      "sha256": "47255dc058815711f192193c362b57dfc8d4467fe17a8f45e058e7c2f91bee78",
+      "bytes": 469
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/34/a56cf7801946d8f41799cc05d0605a3ac2e5bd",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\34\\a56cf7801946d8f41799cc05d0605a3ac2e5bd",
+      "sha256": "b41b5dbeeec148d2d15d053e3ec123f180e97bac0a9437b0515b1f0172c0f125",
+      "bytes": 3276
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/35/cb9ce5c53ca97280cdad6c076a3931a557f393",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\35\\cb9ce5c53ca97280cdad6c076a3931a557f393",
+      "sha256": "7b7930425da226a9e9a53e0ca30da5fbccc09b0e62e1a0b33c6c5a54ae7a1c5b",
+      "bytes": 199
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/38/1e947429fcd00307e080ad1b1fbb9fe48e9f63",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\38\\1e947429fcd00307e080ad1b1fbb9fe48e9f63",
+      "sha256": "a55efec86a888e9dd05f4853075a8cd39eb7ce3957d2eb61bd120a08d16e9226",
+      "bytes": 95
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/3a/0eeea1c02547bd3b8f3fc7c68d5e11f470e7a4",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\3a\\0eeea1c02547bd3b8f3fc7c68d5e11f470e7a4",
+      "sha256": "0e96f0f1fc6ab81b1f49f7eb07c2638fcf133bb63c568163aedc27bfe2936b34",
+      "bytes": 54
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/3c/00f512c0e2ea73f2d51566866dc14b2852c59b",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\3c\\00f512c0e2ea73f2d51566866dc14b2852c59b",
+      "sha256": "9da6bb222949453c1c62ce53f0a80a92f4599a87a28cd28c7bf840b44e7e2861",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/40/63cf4bfee4c4a69c4d80a8a7a72d4e4828967f",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\40\\63cf4bfee4c4a69c4d80a8a7a72d4e4828967f",
+      "sha256": "6c63484282344c90763f7ba375fd3af372134f4cd322435aca109c7bdbb356d3",
+      "bytes": 219
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/4b/121c62a51936bc62a3c54b8965f3efb9597a95",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\4b\\121c62a51936bc62a3c54b8965f3efb9597a95",
+      "sha256": "3b64737e48bbf269408d67f8901dd961c4a3eb86ae9dd68918e565515d766965",
+      "bytes": 465
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/4e/1b7c00eeb35455c1f6a2bc53dfb89b2a3ecdf9",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\4e\\1b7c00eeb35455c1f6a2bc53dfb89b2a3ecdf9",
+      "sha256": "90d94419d06a0966b0c18f1a7e158fc501def9239f1dac696724ed27aeb10f8c",
+      "bytes": 1238
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/4f/c2a92a14225bf9dce1bc7d48457be776623d4d",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\4f\\c2a92a14225bf9dce1bc7d48457be776623d4d",
+      "sha256": "c0bf684748f17a9fe529637e721ed8082c0209ada5b3573f3edc5cc0f78b5a4a",
+      "bytes": 84
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/50/40b91b4ec2494251c306e27418d8c2e2bb1dea",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\50\\40b91b4ec2494251c306e27418d8c2e2bb1dea",
+      "sha256": "3965e232c7ec8b6657b4985873583e3d70c05e827a5d8ec48b3d8e1223bb03b8",
+      "bytes": 87
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/51/f18f7355fc6e7884c012275f1ebd21747f493f",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\51\\f18f7355fc6e7884c012275f1ebd21747f493f",
+      "sha256": "e18d63860d190a2a8a2a33deb7b796f11394dd511932b9188d3ce47cfeba9f0c",
+      "bytes": 647
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/52/a0ff68759186be80ffbb09757effb161c8b1e1",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\52\\a0ff68759186be80ffbb09757effb161c8b1e1",
+      "sha256": "d60e295a8704c048c5b98895944efcf63ca587c7a6b36b4d97ba0c77e8c554da",
+      "bytes": 1905
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/5c/2c84887ed0a1edf87de58ef5365885bd872d93",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\5c\\2c84887ed0a1edf87de58ef5365885bd872d93",
+      "sha256": "13d5678e0da63739195b816ccbae3b3bb8bd6bff05346fa04526c02e55d552d5",
+      "bytes": 5096
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/5e/68154d9b6b7acdbb199bf2f655aa365612ae04",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\5e\\68154d9b6b7acdbb199bf2f655aa365612ae04",
+      "sha256": "78aa4f9b0aa5136654a1a2b3e6829f0347f53b29b57589f4b247ba99076ba16a",
+      "bytes": 65
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/5e/afa31f1db05a3f5efc7f26f02b3e56335114f9",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\5e\\afa31f1db05a3f5efc7f26f02b3e56335114f9",
+      "sha256": "81a21ac89bac25312be8deb0c542e3e3d9d189f36a4bbf648f8a77219913e8a5",
+      "bytes": 137
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/60/3dc5489abeebcfcf8c3254e1e0e807b2afe478",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\60\\3dc5489abeebcfcf8c3254e1e0e807b2afe478",
+      "sha256": "207f147db38aec81b953367860db632ec2e111045c1a93c7e866a984ba196e83",
+      "bytes": 694
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/62/f25f22a379485ad2174910dced94a038c26638",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\62\\f25f22a379485ad2174910dced94a038c26638",
+      "sha256": "b33e9585a5929387c61c8cd7cf752c2ac6da947dd148f1e3b97d06a45aa66e0c",
+      "bytes": 1981
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/65/f4526ba9e92363684b2f2efe7a8f51f8ef25b2",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\65\\f4526ba9e92363684b2f2efe7a8f51f8ef25b2",
+      "sha256": "32c6abe8e957481c1c1d5d347b986abfd089090f43ff008706621e3fb4f3dbfb",
+      "bytes": 144
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/6b/9b6a664a8fc12133078505765dba500442ef41",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\6b\\9b6a664a8fc12133078505765dba500442ef41",
+      "sha256": "5f4f0809358b9df61fdc18b0dee689e64e24874badc9dc1eb249ead134a13bad",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/6f/23695c063fc59c3bfc4d13e8d5d122516d2940",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\6f\\23695c063fc59c3bfc4d13e8d5d122516d2940",
+      "sha256": "08a149b556ce1338d31013fd877429e0107cedccc735a12ba291d18a075958fb",
+      "bytes": 2615
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/6f/c426fbef1f3c6b2ab24b42f9aa6c4c12b4dff7",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\6f\\c426fbef1f3c6b2ab24b42f9aa6c4c12b4dff7",
+      "sha256": "0e31d4ef66e212895ad3a95294eaeabb73cfd382dcb2bc5cc5e59a6b004860a9",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/70/27f664820738d02d7c62f4c2185565cb32c5af",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\70\\27f664820738d02d7c62f4c2185565cb32c5af",
+      "sha256": "dccd39839dc27a1598f995ebc9d429b66d53533974ebbbe04dc39a5feadc38e9",
+      "bytes": 297
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/71/1f2e8ac23345e919283aa467aee95288048bf3",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\71\\1f2e8ac23345e919283aa467aee95288048bf3",
+      "sha256": "0eff409538cf9b1229da6cf2985be28873414b244b403e5f77c2358de4875f36",
+      "bytes": 934
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/73/81324104309b17a044f11da10adacc8238bcd7",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\73\\81324104309b17a044f11da10adacc8238bcd7",
+      "sha256": "e5b32b4a6d4d3d5e6c92a18cb822a685bd15605814922a67f4b902c529dc22ba",
+      "bytes": 141
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/7b/1ab1051bd7f8c2bf4130047164d664d81f3fec",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\7b\\1ab1051bd7f8c2bf4130047164d664d81f3fec",
+      "sha256": "e134b20d8891fb265f88caf2892286badf6a9a487d1a048a53d5908f7fddbe09",
+      "bytes": 136
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/7e/30bfdf60cdb5ad9787648828f045296e1f298c",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\7e\\30bfdf60cdb5ad9787648828f045296e1f298c",
+      "sha256": "3927ee4d748ae698999ebef0da89f9aea060fc4264ba9b94d50e6c593e173472",
+      "bytes": 46
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/83/54fa78875cdd4c4ae704e7076ed30e9ed53987",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\83\\54fa78875cdd4c4ae704e7076ed30e9ed53987",
+      "sha256": "84bed91fe48b0be086b01b371139e0bf517338c1b72d1a23f6fa943b02ac1811",
+      "bytes": 83
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/85/fe0d265f13b7e4b850016c9c5553f0af7cc90c",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\85\\fe0d265f13b7e4b850016c9c5553f0af7cc90c",
+      "sha256": "579e21483af358a96ee7f5a67dfe0a2ce464a58fe8099d67e046d6fe640814b7",
+      "bytes": 315
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/8a/57d339749123114fe4875d3c04f12c7e8cde3c",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\8a\\57d339749123114fe4875d3c04f12c7e8cde3c",
+      "sha256": "27b00aa5a094d8708d755c4d053a74fa16129acb1be08d501f90ac4a06144126",
+      "bytes": 3031
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/95/7734dcf7b1f9ecf1830478c6607022fdd87473",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\95\\7734dcf7b1f9ecf1830478c6607022fdd87473",
+      "sha256": "5fa9944fe09746335c2c81c3d797248586df7dcc37c2d7aeed1621e909d07821",
+      "bytes": 306
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/99/115ee09d70867445f1033cb636948883f7628f",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\99\\115ee09d70867445f1033cb636948883f7628f",
+      "sha256": "6cdaeca56b19e02599593c5e6630dc914f9d7250c6849d952d9540a550550697",
+      "bytes": 196
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/9d/e1b9d43d738ee19d9a1800a0064017727e4da1",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\9d\\e1b9d43d738ee19d9a1800a0064017727e4da1",
+      "sha256": "18d6687127f7a1ee6b8d6cedfb75ee494881582bf1e8c522f95ebc0f225d7235",
+      "bytes": 82
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/9e/fe91aeee677192878f5a65228d8c24de5798a7",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\9e\\fe91aeee677192878f5a65228d8c24de5798a7",
+      "sha256": "8c7b0701e1958891d359820e4abb828521287b9456df4e11c0b3245017375430",
+      "bytes": 251
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/a2/5fc04430022721bc16f4166d38c16506668b8e",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\a2\\5fc04430022721bc16f4166d38c16506668b8e",
+      "sha256": "09d1d24f1005882955f798e6cf786ad03385d885ff1534c299d9a2b37653a8e1",
+      "bytes": 121
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/a8/3ab5c13e8e3ddf5028715f46830d39d39ec43b",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\a8\\3ab5c13e8e3ddf5028715f46830d39d39ec43b",
+      "sha256": "201655c27945397b393a785b2f12eda59e558cab1ea62f29297f0fa60f4856ee",
+      "bytes": 2735
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/aa/009ed80fae497a2f25a7c1c3fe552ac8bfe27a",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\aa\\009ed80fae497a2f25a7c1c3fe552ac8bfe27a",
+      "sha256": "06f7b7ad1fde79e88d2cf78b48a9eea41834efcbc987da3386b35f5da3a296b7",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/ab/3f49e7e8ff7964d6a4e7d23a92f6413a0ce0ac",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\ab\\3f49e7e8ff7964d6a4e7d23a92f6413a0ce0ac",
+      "sha256": "f9b96aa4af31875291b6e1e64cf2ff434b54b55b2e7f9fa0e6607d5032ec1e19",
+      "bytes": 150
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/bc/c3f162eb8b4ec4da6c83824e8c69ab1a7d736a",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\bc\\c3f162eb8b4ec4da6c83824e8c69ab1a7d736a",
+      "sha256": "62a8f66282d5439f46d3052370a56c5fdc0ce0e3a455780c77259b12120b5402",
+      "bytes": 199
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/c0/3f20cbaccb48a1c99809a5c03d320ab606a0cf",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\c0\\3f20cbaccb48a1c99809a5c03d320ab606a0cf",
+      "sha256": "b2f45b8549d2b3318a60733553faf9fef615b80cca7aa0a1d0e64ed004b19c9c",
+      "bytes": 2576
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/c2/28937dee9ab9ff5bcc2c4835f3260efde6065d",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\c2\\28937dee9ab9ff5bcc2c4835f3260efde6065d",
+      "sha256": "23002cefb09a31274f9a531a17cee18695a8471af491efd112169668be93995f",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/c3/190596c0b0263ed7d1711f441ea279668e6011",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\c3\\190596c0b0263ed7d1711f441ea279668e6011",
+      "sha256": "57837d43494015017cd21203f30d3dcc6d41600fa6370192113013193000a9d1",
+      "bytes": 1509
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/c5/c9d7cfea7c6c04417012462568a305907080b5",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\c5\\c9d7cfea7c6c04417012462568a305907080b5",
+      "sha256": "77e0b6bff161039247cbf87a93244046b9d724750affbe0b973a38dd32c518c7",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/c7/252910afa58d920f2b7f39652bdf24c1c1a0a2",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\c7\\252910afa58d920f2b7f39652bdf24c1c1a0a2",
+      "sha256": "b39c1dc957d6f88d3d27f5a9fd5d451ccced1231699726f39ca5da659cc3d6c8",
+      "bytes": 2324
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/ca/59789cdf7a2ec4e49fbc6c1a2f17d1ec92e3ef",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\ca\\59789cdf7a2ec4e49fbc6c1a2f17d1ec92e3ef",
+      "sha256": "e44f47743711b9ce6e9e16a2ae3659fa51025b7fe2a90b69f5b2c40cd2d87b3e",
+      "bytes": 4030
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/cc/f8fc8398b677de06284f05596f5352f85fb0b8",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\cc\\f8fc8398b677de06284f05596f5352f85fb0b8",
+      "sha256": "4729978306f40f976b1550550bc5572562a0e25e82e19ab37b765d7650c0f285",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/cf/454d278249e3f71e0110179c8990f32ba86bf2",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\cf\\454d278249e3f71e0110179c8990f32ba86bf2",
+      "sha256": "f241e4c99fc8fbf8dc7dac121822a73da1bfad46ec23b0a53d161978f39ee97e",
+      "bytes": 141
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/d7/4f2fa83d4587d711d9a43db7e6c6e92c40470f",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\d7\\4f2fa83d4587d711d9a43db7e6c6e92c40470f",
+      "sha256": "7034c79645b15c279bc7d9cc086c709fe4adf06577793f8672b465fa422e8502",
+      "bytes": 96
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/d7/59f6746c798454b0225f25332c81b7a36bf820",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\d7\\59f6746c798454b0225f25332c81b7a36bf820",
+      "sha256": "e2a48554ee5ac4cb5b947d8a59b300c42caecb56acaf05380d827832eabbe355",
+      "bytes": 3351
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/d8/f76215423ec0e540b7c06942659475bc755698",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\d8\\f76215423ec0e540b7c06942659475bc755698",
+      "sha256": "5eede5d3e7536cd192a41a635838944614f372e56c6a144b38c48a0df55c89d6",
+      "bytes": 141
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/d9/cd719aa3179f81f48c655b4a83062ad6e77c91",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\d9\\cd719aa3179f81f48c655b4a83062ad6e77c91",
+      "sha256": "ec1c97ac4ca5e75a83c7c0aa975dea17631c5fc0145133f20f523841b1c6ae4d",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/db/d1b27febd6b3628e8910691b91816f2a94d144",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\db\\d1b27febd6b3628e8910691b91816f2a94d144",
+      "sha256": "3703845d677e32af3e192568ab10709fb73b61610d685a9f0ceea41864ca658b",
+      "bytes": 4303
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/dd/b642aedfcfec69bfdbff5659c90650582e7e50",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\dd\\b642aedfcfec69bfdbff5659c90650582e7e50",
+      "sha256": "6c152eee5aabea6e37f2b3ee0f3ae407a414c8fa8ce1dbe337fbe26597109b01",
+      "bytes": 138
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/e2/687b249594928177262d72541bb140e1385fc4",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\e2\\687b249594928177262d72541bb140e1385fc4",
+      "sha256": "3a9d4f429744f5b45c22adae2f533c826c2a78ddefdfb2e73f48021e5341e8d6",
+      "bytes": 142
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/e4/1ede3d76beb0c706b48ffca1e9ed378ad67f61",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\e4\\1ede3d76beb0c706b48ffca1e9ed378ad67f61",
+      "sha256": "ec4b33b23658570b23e676fac1d048888b6337bcbf52cd5efe5a788063fd0604",
+      "bytes": 1251
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/e4/c616767c02208770c2563301aaa4482014111b",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\e4\\c616767c02208770c2563301aaa4482014111b",
+      "sha256": "bdccc2118944bf8a78373eb50ba9371c8e1c2f86fd002b139e89890d53093bab",
+      "bytes": 251
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/e5/90cff60597556102d77f8a3918b66b435b5959",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\e5\\90cff60597556102d77f8a3918b66b435b5959",
+      "sha256": "e33cbd731ab43f6016d291b10ba41b9eacfcd9af214b30d03b602b0bb4a5771f",
+      "bytes": 300
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/e9/bcf849eb35984f38473d7733eaddce8e33a653",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\e9\\bcf849eb35984f38473d7733eaddce8e33a653",
+      "sha256": "50ab9c13647ae9e60ef8f85e999d45645db1256cbeb078fee8396592d3dca72b",
+      "bytes": 867
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/ee/2babbe5209b4f77a34222ca955d9c2f1cd9087",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\ee\\2babbe5209b4f77a34222ca955d9c2f1cd9087",
+      "sha256": "48a350e226de2b0d3194bc7d5d468bee9b72b0ddbd6a63b45c3cda51efbaaee3",
+      "bytes": 139
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/f1/0b0dcc36b5f6776f5bc44ec93618f779d9bf2d",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\f1\\0b0dcc36b5f6776f5bc44ec93618f779d9bf2d",
+      "sha256": "0719652c02e597bc9b0613739da49e40e07e84447bddaa54f519f31ae18dccf8",
+      "bytes": 186
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/fa/e075054241e614290a0b9fc002ddd1bd8c13d3",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\fa\\e075054241e614290a0b9fc002ddd1bd8c13d3",
+      "sha256": "b3b8a3f2e2d9378e41fc4f8b2c11ae897d52f0eed074b6208b6761a8f3c31053",
+      "bytes": 141
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/fb/46275bd2fa975c39441d484c785323f0a2ab63",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\fb\\46275bd2fa975c39441d484c785323f0a2ab63",
+      "sha256": "581d85fe5bae0c13d69308808011d1662882583539d1e03a8cef311316571ee4",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/ff/f723f6bb7cbe86af345504abe2ba616aa39a57",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\ff\\f723f6bb7cbe86af345504abe2ba616aa39a57",
+      "sha256": "698c01864d2b0f287520b7d054797f8f0293d9dcb0b21c1ada6204f94e3fd471",
+      "bytes": 140
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/pack/pack-56bcc94dd33bd362d4516211c690fd530ac2f410.idx",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\pack\\pack-56bcc94dd33bd362d4516211c690fd530ac2f410.idx",
+      "sha256": "469a56c0fd68c5562aa5124afc3536b52fcfff596073e60bd148d48770e1c49f",
+      "bytes": 4852
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/pack/pack-56bcc94dd33bd362d4516211c690fd530ac2f410.pack",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\pack\\pack-56bcc94dd33bd362d4516211c690fd530ac2f410.pack",
+      "sha256": "c5ac0e40346155e2b92a34107512331a972105f1eed0f7075dd4d6f37f39059e",
+      "bytes": 1676187
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/objects/pack/pack-56bcc94dd33bd362d4516211c690fd530ac2f410.rev",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\objects\\pack\\pack-56bcc94dd33bd362d4516211c690fd530ac2f410.rev",
+      "sha256": "0223e197d46987b49ef1d4877afab8465eac3c24a9fdc4960fab986f6563abf3",
+      "bytes": 592
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/refs/heads/main",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\refs\\heads\\main",
+      "sha256": "49ccf298784a71f059c47bbfd74e8c246eb39755cb2ce2af2421fe6a8aae1231",
+      "bytes": 41
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/.git/refs/remotes/origin/main",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\.git\\refs\\remotes\\origin\\main",
+      "sha256": "49ccf298784a71f059c47bbfd74e8c246eb39755cb2ce2af2421fe6a8aae1231",
+      "bytes": 41
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/assets/asset-manifest.csv",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\assets\\asset-manifest.csv",
+      "sha256": "3ef178d33c338be069cf0d40616aa275768ddc78ab0ca13448f70a4a7c9962d2",
+      "bytes": 92577
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/assets/audio-manifest.csv",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\assets\\audio-manifest.csv",
+      "sha256": "067bfcdf333360077a1093d47a9320f3356687128898ba18de750ce91351632e",
+      "bytes": 1557
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/assets/image-elements.csv",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\assets\\image-elements.csv",
+      "sha256": "3ef178d33c338be069cf0d40616aa275768ddc78ab0ca13448f70a4a7c9962d2",
+      "bytes": 92577
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/assets/image-elements.html",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\assets\\image-elements.html",
+      "sha256": "e98684a7cfe3821da33b63eab20dc24e79db593ee01906467b0149c46824eb6c",
+      "bytes": 236598
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/assets/image-elements.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\assets\\image-elements.json",
+      "sha256": "fbd5fc7bacbcbff7e005648e5bd0f1c8449387c881e90df0221494891bf03ba6",
+      "bytes": 197222
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets.meta",
+      "sha256": "4bc2a5d300e4211c998762c2f44d8ea49c05f3bb669aba21ba3074766509c919",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/package-lock.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\package-lock.json",
+      "sha256": "689fffc36053245ccc1b2d1d10c980d13115f709311ba15924ffd252e69a6cc7",
+      "bytes": 185
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/package.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\package.json",
+      "sha256": "256cbb743d4bed35a3ae5a5e98e2dc74de7e4c15bd29457e2ef9bd370e88ebe1",
+      "bytes": 157
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/README.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\README.md",
+      "sha256": "559c324fbff427ce1f9b9d66d9514236455e0699e682f124c0f5554d477822ec",
+      "bytes": 2353
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/tsconfig.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\tsconfig.json",
+      "sha256": "64fa6ce88c70d38102056b29199fe6eeb9cec4c32cf6c9599ab1b61bfc0f1187",
+      "bytes": 288
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/resources.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\resources.meta",
+      "sha256": "53863e1461598fd62f2ec6d76a42412e673f6e04000c751a070eace0ec6bf1d2",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scenes.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scenes.meta",
+      "sha256": "45f125f469db6b1d82b5d971dd50c9e12d54f7310c72b862a0e8e934ab4c4057",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts.meta",
+      "sha256": "1cc1b74bb2a481fc42532afbf6206f499dce7500bb1e611117307ed76e227c76",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/resources/config.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\resources\\config.meta",
+      "sha256": "a1c7164b9f41109725f9d733ec573ef5af1e684e5f9816d9013d4be14a30ffe6",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/resources/config/design-baseline.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\resources\\config\\design-baseline.json",
+      "sha256": "973eae177ac05c4a7076543323f7af479d4aaf065c3a2e380a6655df3ce6747f",
+      "bytes": 5643
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/resources/config/design-baseline.json.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\resources\\config\\design-baseline.json.meta",
+      "sha256": "1a46827406b7083f00b26ea336e5e16e0c2955dd3b88946497a1ecbda79ed051",
+      "bytes": 173
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scenes/Boot.scene",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scenes\\Boot.scene",
+      "sha256": "9e5be88281191b773357946820c1948a282a26ca63dc784d13a7de025e20d5a9",
+      "bytes": 4714
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scenes/Boot.scene.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scenes\\Boot.scene.meta",
+      "sha256": "601c0791659b6e25eeeb85df56ccdd75506b783fe5445ba2dd2cd18307e36248",
+      "bytes": 174
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scenes/PhysicsLab.scene",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scenes\\PhysicsLab.scene",
+      "sha256": "6f4377628b0c6bda464cbb5ecfab78a79a1026ffa278f6a98352212e5b094be5",
+      "bytes": 4732
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scenes/PhysicsLab.scene.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scenes\\PhysicsLab.scene.meta",
+      "sha256": "3d0d1c0e07e89a19c561e633bdc36cad44fb623635067080a994bba17ebb7dcb",
+      "bytes": 174
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/bootstrap.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\bootstrap.meta",
+      "sha256": "c3d7cc89615e3701c81e1e5bd7f2b466e04fd0de5972c2e3a5023ece1e4ddc89",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/contracts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\contracts.meta",
+      "sha256": "db758f8ded4b4dafc65497ecfd426a62b0c61c4cde05938aabdaa0c5c1931a94",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/core.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\core.meta",
+      "sha256": "ede94f0fc21f79166de528552dfc2911eacaf656a16877bd05158b084d1aa90e",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/debug.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\debug.meta",
+      "sha256": "a814beec7db051c8c855e6fd88199e277d0869c11458880f1f65042183a82e8f",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/physics.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\physics.meta",
+      "sha256": "b07cbf45a06da787a0102fb88f66a6ccecde42bd78690ebbd90f2b0b2577b0a4",
+      "bytes": 178
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/bootstrap/AppRoot.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\bootstrap\\AppRoot.ts",
+      "sha256": "3b350b402494551fbc6809867cc34f717fc6bc66370f3c2f718f37a282588801",
+      "bytes": 3628
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/bootstrap/AppRoot.ts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\bootstrap\\AppRoot.ts.meta",
+      "sha256": "7cf69be27275f926af21f6b176a0ab7965f845e9fb5e092b9436f3f86e5c7456",
+      "bytes": 179
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/contracts/types.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\contracts\\types.ts",
+      "sha256": "da462b5e3b438d70b667925aef1aac17a0cc240c9121dda31b4ce1404ad4e23f",
+      "bytes": 9222
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/contracts/types.ts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\contracts\\types.ts.meta",
+      "sha256": "7cf14e1a167d26a9b8ffac69d8b5ff95c30fa1f6e7dc688a6170eeac457df3ac",
+      "bytes": 179
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/core/Clock.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\core\\Clock.ts",
+      "sha256": "3c446717c8a12f9219a352da110ba2f2c7ad36e69220a6bd2441eebe8b16112c",
+      "bytes": 1576
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/core/Clock.ts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\core\\Clock.ts.meta",
+      "sha256": "3e00c44e80b8fbbebe064911cb0ca8a6a8d49037cad98a4677ae6c5824a93166",
+      "bytes": 179
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/core/ConfigLoader.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\core\\ConfigLoader.ts",
+      "sha256": "75b910a98e345d1f803ed636e2798b9bdf2171b5c44308c1badf7d51e980209c",
+      "bytes": 7251
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/core/ConfigLoader.ts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\core\\ConfigLoader.ts.meta",
+      "sha256": "c424442e2f4462eac5a04105f369167b9a0c94a3c327cef32d0338a6cb7bb236",
+      "bytes": 179
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/debug/PhysicsLab.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\debug\\PhysicsLab.ts",
+      "sha256": "44dc4faf9a2ab17ced028972fd8e3b66a79902e7e52a6bfc2a0e62122b0d5dca",
+      "bytes": 14394
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/debug/PhysicsLab.ts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\debug\\PhysicsLab.ts.meta",
+      "sha256": "77e99f5326d105764ff4820afbd688c4bef4552215a5d62a5dff135fd85961d7",
+      "bytes": 179
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/physics/CocosPhysicsAdapter.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\physics\\CocosPhysicsAdapter.ts",
+      "sha256": "00195a8e477ab857c7952639718090f2a1673322863418414958ff0b9e6b4a67",
+      "bytes": 12255
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/physics/CocosPhysicsAdapter.ts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\physics\\CocosPhysicsAdapter.ts.meta",
+      "sha256": "421a40d79f3236e06a784412e9d1584579cc9cc5b59b96890236d922046fb0f0",
+      "bytes": 179
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/physics/CoordinateMapper.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\physics\\CoordinateMapper.ts",
+      "sha256": "afad13f70e0c52bb49795364fed7b06fe72cf81bfe06cd3521520cd7f8cbe0bf",
+      "bytes": 2907
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/physics/CoordinateMapper.ts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\physics\\CoordinateMapper.ts.meta",
+      "sha256": "4b63d8dad8e0d76917699f93c46a97957ae93927f6c8e2408883c2e9ca8a2cb1",
+      "bytes": 179
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/physics/CupGeometry.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\physics\\CupGeometry.ts",
+      "sha256": "16fc44db686269bbbcaa282693c16d3dc44ef09d4d9ab819601fb0a1d0562197",
+      "bytes": 2235
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/assets/scripts/physics/CupGeometry.ts.meta",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\assets\\scripts\\physics\\CupGeometry.ts.meta",
+      "sha256": "772f8d9ced1f779906c1a34402a07fb4fc0a28b3b4cefe8b57aba00241348c51",
+      "bytes": 179
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/validation/p1a-core-check.cjs",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\validation\\p1a-core-check.cjs",
+      "sha256": "7c7cbd76999d9cedefd2072fa78272edc59df6a369c67dc1be5332424dfd1453",
+      "bytes": 5138
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/client/validation/run-core-check.ps1",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\client\\validation\\run-core-check.ps1",
+      "sha256": "15f61eae5d7c72496cdd37dbfcf2fa83130ba6f53538f636ecf7db472c628af2",
+      "bytes": 1316
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/config/design-baseline.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\config\\design-baseline.json",
+      "sha256": "973eae177ac05c4a7076543323f7af479d4aaf065c3a2e380a6655df3ce6747f",
+      "bytes": 5643
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/config/rewarded-ad-policy.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\config\\rewarded-ad-policy.json",
+      "sha256": "251bc51e14ab92a69f06ce50e341a88325f2db708da180aca073cc224a30c643",
+      "bytes": 156
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/contracts/api.openapi.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\contracts\\api.openapi.json",
+      "sha256": "d2171f5f15dab444b2ae227d1a071473f4edf29e504619d8f0608f192297cd76",
+      "bytes": 136775
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/contracts/examples.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\contracts\\examples.json",
+      "sha256": "20381325cf32ae121b38e40fd399d8c8a82f789b6966f70528f4bdfd3cc0ea26",
+      "bytes": 2172
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/contracts/schema.sql",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\contracts\\schema.sql",
+      "sha256": "b77faf036b98b55748d299fc240c3c976d90f7aa959893be8f21923a5ea0d973",
+      "bytes": 9128
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/contracts/types.ts",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\contracts\\types.ts",
+      "sha256": "da462b5e3b438d70b667925aef1aac17a0cc240c9121dda31b4ce1404ad4e23f",
+      "bytes": 9222
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/00-project-brief.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\00-project-brief.md",
+      "sha256": "3e7c1c1583b3b0cc879e60e2d3b990e4b4b87cd2d1b4f5ac0cc4e2efff7afcdc",
+      "bytes": 3448
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/01-requirements.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\01-requirements.md",
+      "sha256": "821f6fc763b9eaee9a5f4685d7bf8826fb2ab33e8f2f013aec929157b9fbe369",
+      "bytes": 5356
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/02-game-design.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\02-game-design.md",
+      "sha256": "23d8a0286f7b1aa90e51f68a76ba82315b0d0a7b195d1c27db49b7774d102ce6",
+      "bytes": 7041
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/03-physics-spec.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\03-physics-spec.md",
+      "sha256": "6fe70f6241a331490c5abaf1ecaf0d26eba646869611100cc8ccd5895f1b387a",
+      "bytes": 7801
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/04-art-ui-motion.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\04-art-ui-motion.md",
+      "sha256": "72913a2c9263080a09773889100585c7f8b2757cac723204fb3c869c89f83cdf",
+      "bytes": 7626
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/05-audio-spec.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\05-audio-spec.md",
+      "sha256": "6e08015d138373bfd7ac6f5cf30237255cbc913ce87accbb6e3b523f5d699caa",
+      "bytes": 5866
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/06-technical-architecture.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\06-technical-architecture.md",
+      "sha256": "92962d223a807471b4303f3589cfa852b959bcd121d3815dc880f2bbb94ea60b",
+      "bytes": 8630
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/07-progression-social-operations.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\07-progression-social-operations.md",
+      "sha256": "78783fbb90aeb7ebe3d0fc68c523b5ebed3fbc8b4859ea6c1912c7a775c9cb1d",
+      "bytes": 8498
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/08-backlog-roadmap.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\08-backlog-roadmap.md",
+      "sha256": "0ea86d6d65a00ba0e71598ea6331cd8c531368cff777e4e0988cd0f7a5e383b0",
+      "bytes": 5967
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/09-qa-acceptance.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\09-qa-acceptance.md",
+      "sha256": "f434cafb74248ee4a8decb7439fb15ec6f3b54600229ceaefc69dc00282bb70b",
+      "bytes": 7441
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/10-research-skills-frameworks.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\10-research-skills-frameworks.md",
+      "sha256": "dd1a17e2675e8103f872ad400aa721be355cdd43909c49d40c47c7cc9430b3fc",
+      "bytes": 9949
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/11-decisions-risks.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\11-decisions-risks.md",
+      "sha256": "a368184f21e994a61b0ac16bc29d45a081795fe29c86fe0b3cac00f2412230a2",
+      "bytes": 3930
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/12-delivery-phases.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\12-delivery-phases.md",
+      "sha256": "b8612944cb26f1829e6c896b1e7cb5b8daa534b03cc6cb4bd1a345b1010bc290",
+      "bytes": 7458
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/13-developer-handoff.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\13-developer-handoff.md",
+      "sha256": "dc4f6a192d8f3181f58d47fb2c29324c2b777357ce27e006ea06e27fbc814289",
+      "bytes": 5361
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/14-image-production.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\14-image-production.md",
+      "sha256": "47bd9f7870979da7f925b71758a25a98a30771f6d643adfebe99b4138f0c9999",
+      "bytes": 7464
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/15-repository-delivery.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\15-repository-delivery.md",
+      "sha256": "7a82f2ccb4c62dce3e4315178ea61607bdf0c6b74a2c8a6f8d7df4aeef41c218",
+      "bytes": 2078
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/16-phase-verification.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\16-phase-verification.md",
+      "sha256": "6976b8693a98d9cee22e5747a5109d7101ee40db468b55f1c8726f595b5a3910",
+      "bytes": 6674
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/complete-design.html",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\complete-design.html",
+      "sha256": "0480abc32ade2b2c48949288f44874de433ca9f864b2778c2dc35b2cd781362f",
+      "bytes": 135192
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/complete-design.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\complete-design.md",
+      "sha256": "89991b7499bfa708ceeccf5b9a6460699b0ff4703297687a8864ad4907c7ede6",
+      "bytes": 110239
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/art/image-catalog.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\art\\image-catalog.md",
+      "sha256": "424adb1d10fd052a6777e46bab05a0a9766609d3e0cf564e30b008ca036356f0",
+      "bytes": 152923
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/common-contracts.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\common-contracts.md",
+      "sha256": "ba663021b1f7c0d76f1295b154f61a6ef89bf4a74226c6b7ac896dd20de90bf9",
+      "bytes": 6037
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/development-handbook.html",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\development-handbook.html",
+      "sha256": "7668b76fa34385599787bda60409e10cda2f964b3a6dccd93ec611d9f0fafeec",
+      "bytes": 64825
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/development-handbook.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\development-handbook.md",
+      "sha256": "e8f991e50586bdccde64eb4d8e75fbd631f999b430a4f494c051ebf8ce3e8e59",
+      "bytes": 56460
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p0-planning.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p0-planning.md",
+      "sha256": "86f42b91c44e11a23eba8d7e3d98dac6880bc2455e7bf33945a7acfdec08219e",
+      "bytes": 2992
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p1a-foundation.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p1a-foundation.md",
+      "sha256": "7667e7720074959bcfe93771855ed3f5fb9b617139f81a096580d99e598caa77",
+      "bytes": 4119
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p1b-gameplay.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p1b-gameplay.md",
+      "sha256": "88444da19ce34d7122b427ff54a10e16fb15d2ef20094051f0cb63049594fa83",
+      "bytes": 8447
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p1c-presentation.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p1c-presentation.md",
+      "sha256": "c0df6ac9daccdfafa90a3fed5edb352f379e1d58be368cd2f95860cf14935c34",
+      "bytes": 4208
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p1d-validation.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p1d-validation.md",
+      "sha256": "e8d1a82520255f47d688c31755690e524bb3570db2c293ee092727ce1a5b7d0e",
+      "bytes": 2821
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p2-douyin.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p2-douyin.md",
+      "sha256": "6b4a9470fca35fe31ea4089e85e7843ce632120bc57696cb68bb6885019b473e",
+      "bytes": 3457
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p3a-progression-cloud.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p3a-progression-cloud.md",
+      "sha256": "95e3bb58463116e7406132b9b9257568e02fc24c88c2425adfc7ca4c8a7f5f27",
+      "bytes": 4373
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p3b-reward-ranking.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p3b-reward-ranking.md",
+      "sha256": "a82a393698efdb1c6de172346132dcef3662024897a565bf3c7e5c5a090b94a3",
+      "bytes": 7356
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p3c-release.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p3c-release.md",
+      "sha256": "a18c1a46cff0c55f7ca0d78ec03e6987e66fca45c58cb9e4c6516a4eb0fd5a16",
+      "bytes": 2365
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p4a-challenges.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p4a-challenges.md",
+      "sha256": "c8e9bda3695e3a4898fa4f2c378a02d9beeac8db02225b3d7ea40cd27b0daf69",
+      "bytes": 3031
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p4b-collection.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p4b-collection.md",
+      "sha256": "f7b08eb3e35174b7146756426301fc61676e4d8553e309ec7e057a1b7288fd1e",
+      "bytes": 2075
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p4c-rewarded-ads.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p4c-rewarded-ads.md",
+      "sha256": "96658bceeccf9d936bf13a952fa6d6e3d89db88c6d7b7ab7511f20c9a12d91f2",
+      "bytes": 2465
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/development/p4d-multiplatform.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\development\\p4d-multiplatform.md",
+      "sha256": "09f97a0cde61bf308269b2d6203f5df324108a95cd2dc22ac5a15ba4bcf7524c",
+      "bytes": 2107
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/visuals/layout-wireframe.svg",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\visuals\\layout-wireframe.svg",
+      "sha256": "f96d7dab37e68673aad54c5f357617c9be18ea86fd63d8db246dac0bf913d1cd",
+      "bytes": 2633
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/visuals/cup-guides/brown_sugar.svg",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\visuals\\cup-guides\\brown_sugar.svg",
+      "sha256": "a5c5e6573528af48df91e9ede84561cc3290c6d9c97f6af64e962bd66fbf840a",
+      "bytes": 849
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/visuals/cup-guides/classic.svg",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\visuals\\cup-guides\\classic.svg",
+      "sha256": "84b04b7ec325405961b98d03a86db33c0e463effcbba7d77fb25bfa66ccae72c",
+      "bytes": 834
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/visuals/cup-guides/coconut_green.svg",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\visuals\\cup-guides\\coconut_green.svg",
+      "sha256": "11eb4749d1d12ce4457305e7228e52dde7e33a7091465771c600e0794a11b907",
+      "bytes": 851
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/visuals/cup-guides/mochi_special.svg",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\visuals\\cup-guides\\mochi_special.svg",
+      "sha256": "689bca6ffd45791a8c6fea0468b4029a2be8e66f5487da99fb660dd5ee24aa9f",
+      "bytes": 850
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/docs/visuals/cup-guides/taro_boba.svg",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\docs\\visuals\\cup-guides\\taro_boba.svg",
+      "sha256": "7e8cd7354b2fe917c078ec7761eb00ef53852d442379820096cd8e0b14e07d29",
+      "bytes": 846
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/acceptance.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\acceptance.md",
+      "sha256": "12d1e20153efdc9cbf44b07f70d8c14c9449896f91edd8d51d8c3937445b28ec",
+      "bytes": 4346
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/cases.csv",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\cases.csv",
+      "sha256": "ea41ff28460568ab482bf8826b8cbbc41ec5717143416f76830f7b9dd9136ebe",
+      "bytes": 4291
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/config-sync-results.txt",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\config-sync-results.txt",
+      "sha256": "feccba876bd7e835dd20c3ec5578709df24d77272e3427bd7098e2c1204da294",
+      "bytes": 264
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/contract-sync-results.txt",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\contract-sync-results.txt",
+      "sha256": "22489567d09965822dc38d2256972ed018baa4b833144f8133a489091dbbea7e",
+      "bytes": 245
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/core-logic-results.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\core-logic-results.json",
+      "sha256": "885cd2fdb037895384c813eafedbee7f69e8ebd34944a3b4e5e9f6e3539cadb9",
+      "bytes": 466
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/environment.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\environment.json",
+      "sha256": "b2baf0533b0a7de38cff0b9a398aca7c0b55dfeaa1793e2f8c6c175f5ad34601",
+      "bytes": 2067
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/fixed-step-comparison.csv",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\fixed-step-comparison.csv",
+      "sha256": "b43bf1452c8921a0c56055be6b0862cf15ee67ebd221c2a9f2f608eec180397b",
+      "bytes": 501
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/gravity-test.csv",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\gravity-test.csv",
+      "sha256": "aab9c3e82857360be13bc81c958c70926825c818b35c816e588e44950c525895",
+      "bytes": 600
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/issues.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\issues.md",
+      "sha256": "210c06bfd73ede7032d02724dbfe539f42dc310ab088e870ffdaf87c18903f88",
+      "bytes": 1564
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/runtime-check.txt",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\runtime-check.txt",
+      "sha256": "18223f1483892b430fce6867a0ec395ebe97b5c9c9c13c15bd39d25b2d73783a",
+      "bytes": 645
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/structure-check.txt",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\structure-check.txt",
+      "sha256": "5089be8738486158aaf871cfef2e548660707dd0de35bed768d4ea243aa33b8f",
+      "bytes": 463
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/evidence/P1-A/20261027-p1a-foundation/screenshots/README.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\evidence\\P1-A\\20261027-p1a-foundation\\screenshots\\README.md",
+      "sha256": "0dbc3d64219ec59244d1641d0d688d3c95e514af37804f33826484468e82cd6b",
+      "bytes": 351
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/milktea-design-v0.1.zip",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\milktea-design-v0.1.zip",
+      "sha256": "e6dd6074acd7074f4e906fe853c7e24c52c695fbb727df384b2c1315c4196900",
+      "bytes": 316678
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/milktea-design-v0.2.zip",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\milktea-design-v0.2.zip",
+      "sha256": "84f29d014fd2ba3e6c435fc30c670c019a2abccfd6c0a49d31c45e4ff2aa52b3",
+      "bytes": 830505
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/playwright/handoff-desktop.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\playwright\\handoff-desktop.png",
+      "sha256": "97df6527f63e14347bff0a80d849e3652eb04ee00051ce2224ef869629166ecc",
+      "bytes": 132642
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/playwright/handoff-mobile.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\playwright\\handoff-mobile.png",
+      "sha256": "b4463931214430bf1fed2f30affee11ffbe84e968285591571a8d86153551bdc",
+      "bytes": 46137
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/playwright/handoff-review.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\playwright\\handoff-review.json",
+      "sha256": "cdd36123b89158d112e88a8c6cf753c45c3887efdbc14ce8524e386e0ef37b9b",
+      "bytes": 1906
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/playwright/image-catalog-desktop.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\playwright\\image-catalog-desktop.png",
+      "sha256": "8b75ed3f547f7a23769fc7f3c8000cf4da17b1e5d0e7adf45ebc5a4f07b7c407",
+      "bytes": 87856
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/playwright/image-catalog-mobile.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\playwright\\image-catalog-mobile.png",
+      "sha256": "d789e347f98fd1312da9f46c23e4b05884cf3049ec1f10b4f8cc846f04eed9f4",
+      "bytes": 33801
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/playwright/reading-desktop.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\playwright\\reading-desktop.png",
+      "sha256": "4eb299bc0e0d5a3d4f2322a36ba219f6011a6268b0f14827c1a21150bc985778",
+      "bytes": 89058
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/playwright/reading-mobile.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\playwright\\reading-mobile.png",
+      "sha256": "4bcb7db728e736ac898145b50e03c1acd323d95bf08a9cb9b2dd46536079ebec",
+      "bytes": 56402
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/output/playwright/reading-review.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\output\\playwright\\reading-review.json",
+      "sha256": "a43dd0dc49f0d2f451fe14ec7b33ffdf89dff2a8015c5dd47ee485d253a390fd",
+      "bytes": 1017
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/document-validation.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\document-validation.json",
+      "sha256": "d0802d4ffb836440529df548d2af963306494ab8f73d9161445e6fb9f24ebd15",
+      "bytes": 936
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/README.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\README.md",
+      "sha256": "4abf2660c3f6128b5020064ef3251b08fea234c0d1fd6ce82c9f739b88f988d2",
+      "bytes": 889
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/skills-manifest.json",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\skills-manifest.json",
+      "sha256": "2066c402afb59fa6edab68e5ebbfdc6d55aad9d4ea847cd141b10e4f28828849",
+      "bytes": 10102
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/edhahn/agent-skills/LICENSE",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\edhahn\\agent-skills\\LICENSE",
+      "sha256": "467db7ed5dd56f2ca25ec66384aa481089d3308df78361c66071f5376674158c",
+      "bytes": 1068
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/edhahn/agent-skills/eval-driven-game-development/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\edhahn\\agent-skills\\eval-driven-game-development\\SKILL.md",
+      "sha256": "d6d0b96ce12e28e05c96cd0b5c31e1edba6df481004c35fc9b7efdb0bf83a3b5",
+      "bytes": 12819
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/edhahn/agent-skills/game-designer/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\edhahn\\agent-skills\\game-designer\\SKILL.md",
+      "sha256": "0d3ec7a894991056dd4d4352565c835114052ff9d52effdc29c2aa4bf3eee370",
+      "bytes": 7816
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/Fable-Forge/cocos-creator-mobile-game/LICENSE",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\Fable-Forge\\cocos-creator-mobile-game\\LICENSE",
+      "sha256": "1ed681b3c74712d510ab404df3f2f807668b5d33174aed2ac0d0284115e91c78",
+      "bytes": 1067
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/Fable-Forge/cocos-creator-mobile-game/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\Fable-Forge\\cocos-creator-mobile-game\\SKILL.md",
+      "sha256": "a768e3b0a76d0dadf3df8942877236c910aa10497f424e092f448339a6a6fe1f",
+      "bytes": 3854
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/Fable-Forge/cocos-creator-mobile-game/references/cocos-workflow.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\Fable-Forge\\cocos-creator-mobile-game\\references\\cocos-workflow.md",
+      "sha256": "d5979a54bfa0a947c21dcc5671fc9bd5415541a57f76cdfd02db624e8266ac1f",
+      "bytes": 1435
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/jammyfu/open-game-skills/LICENSE",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\jammyfu\\open-game-skills\\LICENSE",
+      "sha256": "92d740b066b19628f9c5e48e32d52bb7d7dae0cc7e32a98b71bf02b6df1b5fd8",
+      "bytes": 1080
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/jammyfu/open-game-skills/skills/assets/art-bible/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\jammyfu\\open-game-skills\\skills\\assets\\art-bible\\SKILL.md",
+      "sha256": "1f1a80f7168cf4d5b5c63db148c382e54551d59b6292c83798f1df9d6dfae0e8",
+      "bytes": 1027
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/jammyfu/open-game-skills/skills/disciplines/audio-feel/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\jammyfu\\open-game-skills\\skills\\disciplines\\audio-feel\\SKILL.md",
+      "sha256": "7cf030f99b34fd79613f99f7a6a0bf77976e4877a0ac8d420cfe961c0b072ff7",
+      "bytes": 4835
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/jammyfu/open-game-skills/skills/disciplines/game-state-flow/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\jammyfu\\open-game-skills\\skills\\disciplines\\game-state-flow\\SKILL.md",
+      "sha256": "09ffe76fe7698c2ece50b72440111a1f8b2e569378d1e4358d2adfca2d9b6554",
+      "bytes": 3260
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/jammyfu/open-game-skills/skills/disciplines/performance-budget/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\jammyfu\\open-game-skills\\skills\\disciplines\\performance-budget\\SKILL.md",
+      "sha256": "012642d9f28aa53c5b2637a85a6e1e7b8f5b66371c90daa5a70257fd829d849c",
+      "bytes": 2830
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/jammyfu/open-game-skills/skills/disciplines/physics-interaction/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\jammyfu\\open-game-skills\\skills\\disciplines\\physics-interaction\\SKILL.md",
+      "sha256": "f58cd479707e48499c45833f00ed27c699702bf09dfcbdc40aaf1c4b1a0740d5",
+      "bytes": 3562
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/jammyfu/open-game-skills/skills/engines/cocos/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\jammyfu\\open-game-skills\\skills\\engines\\cocos\\SKILL.md",
+      "sha256": "6b25ae00adfc5c632d6a39f3660f45b07a1909e2fd7b8524c98a83fefebb67f6",
+      "bytes": 2639
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/vudovn/ag-kit/LICENSE",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\vudovn\\ag-kit\\LICENSE",
+      "sha256": "fc18dc816be16d21676a4d8a6f6ea5625c0fcf6a2c32e52d06b62145544eeaf7",
+      "bytes": 1063
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/vudovn/ag-kit/.agents/skills/game-development/2d-games/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\vudovn\\ag-kit\\.agents\\skills\\game-development\\2d-games\\SKILL.md",
+      "sha256": "f31d95e041d06f018620fc697f25a32ea115b4ec577d9f448f714eeeb606363d",
+      "bytes": 2190
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/vudovn/ag-kit/.agents/skills/game-development/game-art/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\vudovn\\ag-kit\\.agents\\skills\\game-development\\game-art\\SKILL.md",
+      "sha256": "ab7029cb91c498c6469137f7b8b1575fdc7a97db3cc338c5cd2f0edc2ac2888a",
+      "bytes": 5049
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/vudovn/ag-kit/.agents/skills/game-development/game-audio/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\vudovn\\ag-kit\\.agents\\skills\\game-development\\game-audio\\SKILL.md",
+      "sha256": "5cfa7e0a750c202ce81dde7aef8ebbd6e9954ece42ce47ed1619163d217a48c3",
+      "bytes": 5361
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/research/upstream/vudovn/ag-kit/.agents/skills/game-development/mobile-games/SKILL.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\research\\upstream\\vudovn\\ag-kit\\.agents\\skills\\game-development\\mobile-games\\SKILL.md",
+      "sha256": "43db8fb50830a99fb14ace08cb29cc60cd7f51a240c5ae73dbe5b31da704f24f",
+      "bytes": 2282
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/temp/p1a-core/contracts/types.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\temp\\p1a-core\\contracts\\types.js",
+      "sha256": "d43aa81f5bc89faa359e0f97c814ba25155591ff078fbb9bfd40f8c7c9683230",
+      "bytes": 77
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/temp/p1a-core/core/Clock.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\temp\\p1a-core\\core\\Clock.js",
+      "sha256": "159a9f8f72a268398eca4d68abab8d016925021f47c9ff0da17ffc3da3af2fe7",
+      "bytes": 1721
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/temp/p1a-core/core/ConfigLoader.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\temp\\p1a-core\\core\\ConfigLoader.js",
+      "sha256": "db7ccfc55cec5dbc359b85b12c85b42cb031f917251b6978d3aee25b0f4abc05",
+      "bytes": 7238
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/temp/p1a-core/physics/CoordinateMapper.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\temp\\p1a-core\\physics\\CoordinateMapper.js",
+      "sha256": "e288a28bdfe349d38b859ee8d0e8c6701abf3934cd2898fc5bfa7ae3d2b6b3e9",
+      "bytes": 2965
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/temp/p1a-core/physics/CupGeometry.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\temp\\p1a-core\\physics\\CupGeometry.js",
+      "sha256": "dd87b458fea802dd8251605de9e77daa7d5778a42f616545638f8735ff8a3593",
+      "bytes": 1839
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/tools/build_image_catalog.py",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\tools\\build_image_catalog.py",
+      "sha256": "0f9dec851473d1045ceaa5343add03a884d4c9740a3ddc571783521b675e2bb5",
+      "bytes": 26945
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/tools/generate_cocos_scenes.py",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\tools\\generate_cocos_scenes.py",
+      "sha256": "a7734ef965fb3c8e06ed958203f053ba14d8c5ee3bc8af80f1ec0532bb7eb335",
+      "bytes": 6025
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/tools/prepare_publish.py",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\tools\\prepare_publish.py",
+      "sha256": "df85f93aa4e30d7803ad7cd8f0d0ae4f145ee3f559d9240b2f8041869c28bff0",
+      "bytes": 2449
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/tools/sync_client_contracts.py",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\tools\\sync_client_contracts.py",
+      "sha256": "0aa1bbf200f2adbf3992954605a2cc524cd783104fac602357757568026a6b00",
+      "bytes": 1186
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/tools/sync_design_config.py",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\tools\\sync_design_config.py",
+      "sha256": "32e33f0d7b3e2f6736c805e4e7f470d567a27ab91fd77c397abdae98893d70df",
+      "bytes": 7484
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/tools/validate_design.py",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\tools\\validate_design.py",
+      "sha256": "dbc68ca77efec746ac8e4ba294a5fc7e4c9928e69b44f5eb083e3db262f7509c",
+      "bytes": 12357
+    },
+    {
+      "original": "temp/github-milktea-push-checkout/tools/validate_handoff.py",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\github-milktea-push-checkout\\tools\\validate_handoff.py",
+      "sha256": "a8b5fe2abcb72ee31e9e3f20dcaa1ae3e9f3664fdf44782482f2c2445e72a53a",
+      "bytes": 9396
+    },
+    {
+      "original": "temp/p1a-core/client/assets/scripts/core/Clock.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\client\\assets\\scripts\\core\\Clock.js",
+      "sha256": "159a9f8f72a268398eca4d68abab8d016925021f47c9ff0da17ffc3da3af2fe7",
+      "bytes": 1721
+    },
+    {
+      "original": "temp/p1a-core/client/assets/scripts/core/ConfigLoader.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\client\\assets\\scripts\\core\\ConfigLoader.js",
+      "sha256": "81405781deffd3652799fdd550977a8a5d3554bc06b0eb6e9092c53248cac2aa",
+      "bytes": 6766
+    },
+    {
+      "original": "temp/p1a-core/client/assets/scripts/physics/CoordinateMapper.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\client\\assets\\scripts\\physics\\CoordinateMapper.js",
+      "sha256": "16e876793412fbd106fc3d70a9fd97190f95c3be864ba9f0d4e3b34369a0303e",
+      "bytes": 2383
+    },
+    {
+      "original": "temp/p1a-core/client/assets/scripts/physics/CupGeometry.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\client\\assets\\scripts\\physics\\CupGeometry.js",
+      "sha256": "dd87b458fea802dd8251605de9e77daa7d5778a42f616545638f8735ff8a3593",
+      "bytes": 1839
+    },
+    {
+      "original": "temp/p1a-core/contracts/types.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\contracts\\types.js",
+      "sha256": "d43aa81f5bc89faa359e0f97c814ba25155591ff078fbb9bfd40f8c7c9683230",
+      "bytes": 77
+    },
+    {
+      "original": "temp/p1a-core/core/Clock.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\core\\Clock.js",
+      "sha256": "159a9f8f72a268398eca4d68abab8d016925021f47c9ff0da17ffc3da3af2fe7",
+      "bytes": 1721
+    },
+    {
+      "original": "temp/p1a-core/core/ConfigLoader.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\core\\ConfigLoader.js",
+      "sha256": "db7ccfc55cec5dbc359b85b12c85b42cb031f917251b6978d3aee25b0f4abc05",
+      "bytes": 7238
+    },
+    {
+      "original": "temp/p1a-core/physics/CoordinateMapper.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\physics\\CoordinateMapper.js",
+      "sha256": "e288a28bdfe349d38b859ee8d0e8c6701abf3934cd2898fc5bfa7ae3d2b6b3e9",
+      "bytes": 2965
+    },
+    {
+      "original": "temp/p1a-core/physics/CupGeometry.js",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\temp\\p1a-core\\physics\\CupGeometry.js",
+      "sha256": "dd87b458fea802dd8251605de9e77daa7d5778a42f616545638f8735ff8a3593",
+      "bytes": 1839
+    },
+    {
+      "original": "assets/P4/P4-A_V1/README_QA.md",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P4\\P4-A_V1\\README_QA.md",
+      "sha256": "017254073e8bfd707de625aebbcfb07a4c28f7d407e2037f483048a6c2830ee8",
+      "bytes": 2089
+    },
+    {
+      "original": "assets/P4/P4-A_V1/previews/P4-A_11%E9%A1%B9%E6%80%BB%E8%A7%88.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P4\\P4-A_V1\\previews\\P4-A_11%E9%A1%B9%E6%80%BB%E8%A7%88.png",
+      "sha256": "5942111648381791bcec82b3f4b4f591d9a6c7e788b1729bf1acf58fb6f250a6",
+      "bytes": 239441
+    },
+    {
+      "original": "assets/P4/P4-A_V1/previews/P4-A_11椤规€昏.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P4\\P4-A_V1\\previews\\P4-A_11椤规€昏.png",
+      "sha256": "5942111648381791bcec82b3f4b4f591d9a6c7e788b1729bf1acf58fb6f250a6",
+      "bytes": 239441
+    },
+    {
+      "original": "output/milktea-design-v0.1.zip",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\output\\milktea-design-v0.1.zip",
+      "sha256": "e6dd6074acd7074f4e906fe853c7e24c52c695fbb727df384b2c1315c4196900",
+      "bytes": 316678
+    },
+    {
+      "original": "output/milktea-design-v0.2.zip",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\output\\milktea-design-v0.2.zip",
+      "sha256": "84f29d014fd2ba3e6c435fc30c670c019a2abccfd6c0a49d31c45e4ff2aa52b3",
+      "bytes": 830505
+    },
+    {
+      "original": "tools/__pycache__/validate_design.cpython-314.pyc",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\tools\\__pycache__\\validate_design.cpython-314.pyc",
+      "sha256": "06e6e32d67b63731fc559bd091f71a4d948da24c076fc837f369c19afcdaacc0",
+      "bytes": 22299
+    },
+    {
+      "original": "tools/__pycache__/validate_handoff.cpython-314.pyc",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\tools\\__pycache__\\validate_handoff.cpython-314.pyc",
+      "sha256": "58fb155006044fc602e7ad8c1336874e165c39cb89f9f11a3d6414c49171bcda",
+      "bytes": 19396
+    },
+    {
+      "original": "assets/P3/P3-C_V1/previews/P3-C_%E5%85%AD%E9%A1%B9%E6%80%BB%E8%A7%88.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P3\\P3-C_V1\\previews\\P3-C_%E5%85%AD%E9%A1%B9%E6%80%BB%E8%A7%88.png",
+      "sha256": "ce5b23833d4b888a4dd3f39885af7fe55faa846491d8e102d177df850ec252f0",
+      "bytes": 487487
+    },
+    {
+      "original": "assets/P3/P3-B_V1/previews/P3-B_%E5%88%86%E4%BA%AB%E8%83%8C%E6%99%AF%E5%AF%B9%E7%85%A7.jpg",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P3\\P3-B_V1\\previews\\P3-B_%E5%88%86%E4%BA%AB%E8%83%8C%E6%99%AF%E5%AF%B9%E7%85%A7.jpg",
+      "sha256": "0f7e5d2e05d109083df1f8635503f20456fbe8fb9c8ffb6d4c5ec933822289a0",
+      "bytes": 209892
+    },
+    {
+      "original": "assets/P3/P3-B_V1/previews/P3-B_%E7%B4%A0%E6%9D%90%E6%80%BB%E8%A7%88.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P3\\P3-B_V1\\previews\\P3-B_%E7%B4%A0%E6%9D%90%E6%80%BB%E8%A7%88.png",
+      "sha256": "1f13e215f0591f564e680bdc0df69c3f07c20b120f14bd4219a1242e9558c004",
+      "bytes": 270335
+    },
+    {
+      "original": "assets/P4/P4-C_V1/previews/P4-C_%E4%B8%A4%E9%A1%B9%E9%AA%8C%E6%94%B6%E6%80%BB%E8%A7%88.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P4\\P4-C_V1\\previews\\P4-C_%E4%B8%A4%E9%A1%B9%E9%AA%8C%E6%94%B6%E6%80%BB%E8%A7%88.png",
+      "sha256": "f2f1c5f09ba972387cdf5a4a498db0c2dff5bfd2620d66c9c4a9bc640c0b9d12",
+      "bytes": 117535
+    },
+    {
+      "original": "assets/P4/P4-B_V1/previews/P4-B_%E5%85%AD%E9%A1%B9%E6%96%B0%E7%BB%98%E7%BB%84%E4%BB%B6.png",
+      "archived": "D:\\Workspace\\TapTap\\_cleanup-backups\\milktea-20261027-supplement-v2\\assets\\P4\\P4-B_V1\\previews\\P4-B_%E5%85%AD%E9%A1%B9%E6%96%B0%E7%BB%98%E7%BB%84%E4%BB%B6.png",
+      "sha256": "8175983af7a0ced3b69bb4e1aceeafeeb8eb715c6b7c9745fcc9ca935a6e7d9e",
+      "bytes": 235454
+    }
+  ],
+  "total_files": 301,
+  "total_bytes": 10710405.0
+}

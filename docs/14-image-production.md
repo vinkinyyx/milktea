@@ -1,6 +1,6 @@
 # 图像制作总规范与完整交付清单
 
-版本handoff-v0.2；所有游戏图像尚待制作。这里只提供规格、清单和导线，不把线框称为最终美术。
+版本handoff-v0.2；本分册保留制作规格。2026-10-27已收到P1～P4交付与补件，最新检查见 [补交复查](18-supplement-cleanup-report.md)，首次检查保留在 [素材复核报告](17-asset-intake-report.md)；可浏览 [已入库素材](../assets/library/index.html)。入库不代表最终美术锁版；导线仍不是最终美术。
 
 ## 1. 领取与交付入口
 - [可搜索的逐项清单](../assets/image-elements.html)：按阶段、名称和制作方式筛选。

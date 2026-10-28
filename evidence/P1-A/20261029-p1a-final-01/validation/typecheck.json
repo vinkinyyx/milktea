@@ -1,0 +1,9 @@
+{
+  "attemptId": "typecheck-final-001",
+  "buildId": "20261029-p1a-final-01",
+  "startedAt": "2026-10-29T02:05:57.1353803+08:00",
+  "finishedAt": "2026-10-29T02:05:58.0996220+08:00",
+  "exitCode": 0,
+  "command": "./client/node_modules/.bin/tsc.cmd --project client/tsconfig.json",
+  "output": ""
+}

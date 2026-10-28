@@ -115,7 +115,7 @@ def build_copies() -> list[str]:
 
 def validate() -> dict:
     errors: list[str] = []
-    authored = [ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "research/README.md", ROOT / "THIRD_PARTY_NOTICES.md"] + list(DOCS.rglob("*.md"))
+    authored = [ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "research/README.md", ROOT / "THIRD_PARTY_NOTICES.md", ROOT / "assets/README.md", ROOT / "client/README.md"] + list(DOCS.rglob("*.md"))
     links = 0
     for file in authored:
         text = file.read_text(encoding="utf-8")

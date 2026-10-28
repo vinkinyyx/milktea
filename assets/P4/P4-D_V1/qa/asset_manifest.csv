@@ -1,0 +1,5 @@
+﻿asset_id,name,method,status,file,source
+ui_icon_external,外链提示,new_draw,STATIC_PASS,export_png/96/ui_icon_external.png,source_svg/ui_icon_external.svg
+marketing_tap_cover,Tap平台封面适配,derived,STATIC_PASS_PLATFORM_VERIFY,export_png/platform/marketing_tap_cover_1920x1080.png,source_ora/marketing_tap_cover.ora
+marketing_wechat_icon,微信平台图标适配,derived,STATIC_PASS_PLATFORM_VERIFY,export_png/platform/marketing_wechat_icon_512.png,source_ora/marketing_wechat_icon_reused_P2.ora
+platform_platform_review_logo,发行平台规定标志,platform,WAITING_FOR_PROVIDER,platform/platform_platform_review_logo.CONTRACT.json,

@@ -1,0 +1,39 @@
+[17004:1029/024719.143:ERROR:cache_util_win.cc(20)] Unable to move the cache: 拒绝访问。 (0x5)
+[17004:1029/024719.143:ERROR:cache_util_win.cc(20)] Unable to move the cache: 拒绝访问。 (0x5)
+[17004:1029/024719.144:ERROR:cache_util_win.cc(20)] Unable to move the cache: 拒绝访问。 (0x5)
+[17004:1029/024719.145:ERROR:disk_cache.cc(208)] Unable to create cache
+[17004:1029/024719.145:ERROR:gpu_disk_cache.cc(711)] Gpu Cache Creation failed: -2
+[17004:1029/024719.145:ERROR:disk_cache.cc(208)] Unable to create cache
+[17004:1029/024719.145:ERROR:gpu_disk_cache.cc(711)] Gpu Cache Creation failed: -2
+[17004:1029/024719.145:ERROR:disk_cache.cc(208)] Unable to create cache
+[17004:1029/024719.145:ERROR:gpu_disk_cache.cc(711)] Gpu Cache Creation failed: -2
+构建参数 mainBundleCompressionType (merge_dep) 校验失败,  compression type(undefined) is invalid for this platform!, 将会使用默认值 "merge_dep"
+构建参数 debug ("true") 校验失败, typeof debug should be boolean but get true, 将会使用默认值 true
+Warn: [Assets] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at NewConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1637)
+    at warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:162864:12)
+    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:163052:5)
+    at _checkObsoleteByName (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:168465:7)
+    at __checkObsolete__ (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:168484:7)
+    at Object.execute (file:///D:/cocos-p1a-build-source/20261029-p1a-final-07/temp/programming/packer-driver/targets/editor/chunks/bf/bfa22166297b8e0957ac93c51f009d51b095b132.js:66:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/cocos-p1a-build-source/20261029-p1a-final-07/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/cocos-p1a-build-source/20261029-p1a-final-07/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:2605
+    at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:1309
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:1706)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:1477)
+    at loadScript (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:1858)
+    at BundleManager.loadScript (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\bundle\index.ccc:1:3083)
+    at BundleManager.initAsset (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\bundle\index.ccc:1:4524)
+    at BuildTask.handle (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\tasks\data-task\asset.ccc:1:43)
+    at BuildTask.runBuildTask (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:13628)
+    at BuildTask.run (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:4127)
+    at build (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\index.ccc:1:4763)
+    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\msg-util.ccc:1:210)
+

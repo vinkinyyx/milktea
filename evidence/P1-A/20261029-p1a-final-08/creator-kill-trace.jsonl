@@ -1,0 +1,4 @@
+{"at":"2026-10-28T18:50:42.062Z","event":"cdp-targets","port":21426,"targets":[{"id":"0C55F30D40E27C914AD64288A599E5B0","title":"","url":"file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/app.asar/node_modules/@base/electron-worker/static/worker.html"}]}
+{"at":"2026-10-28T18:50:42.568Z","event":"hook-error","targetId":"0C55F30D40E27C914AD64288A599E5B0","value":{"installed":false,"error":"process.getBuiltinModule unavailable","pid":17936},"exception":null}
+{"at":"2026-10-28T18:52:12.603Z","event":"kill-request-not-observed","installed":0,"targetCount":1}
+{"at":"2026-10-28T18:52:12.604Z","event":"cdp-tracer-finished","installed":0,"captured":false,"closed":true}

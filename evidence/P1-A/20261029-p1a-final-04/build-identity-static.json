@@ -1,0 +1,11 @@
+{
+  "requestedBuildId": "20261029-p1a-final-04",
+  "embeddedBuildIdPresent": true,
+  "cocosBox2dPackageVersion": "1.0.2",
+  "bundledBox2dCoreVersion": "2.3.2",
+  "bundledBox2dCommit": "fbf51801d80fc389d43dc46524520e89043b6faf",
+  "embeddedCandidates": "20261029-p1a-final-04",
+  "indexHtmlSha256": "a1435e10f2b79f98896679f8ce29ecd70aff725a12b3cf5ff07651306450aeb8",
+  "applicationSha256": "3876486e03ffd49f5cb8bce6d5a23b7ec392a533487229483a3b2429530093f2",
+  "scriptSettingsSha256": "c03731cc39bea6aa4a3e2a62ce318f3286e8a0871688466a96d81725edfc7759"
+}

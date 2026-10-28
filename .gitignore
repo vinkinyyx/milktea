@@ -19,3 +19,8 @@ coverage/
 *.pem
 *.key
 
+# Source material and raw acceptance logs are intentional project deliverables.
+!assets/library/
+!assets/library/**
+!evidence/**/*.log
+

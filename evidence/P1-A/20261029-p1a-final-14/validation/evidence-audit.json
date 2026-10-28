@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "buildId": "20261029-p1a-final-14",
+  "evidencePath": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\P1-A\\20261029-p1a-final-14",
+  "verdict": "EVIDENCE_CONSISTENT_EXIT_NOT_MET",
+  "caseRows": 52,
+  "requiredCaseRows": 52,
+  "missing": [],
+  "failedCaseIds": [],
+  "unexecutedCaseIds": [
+    "LIFE-01",
+    "LIFE-02",
+    "LIFE-03",
+    "LIFE-04",
+    "LIFE-06",
+    "LIFE-07",
+    "LIFE-08",
+    "LIFE-09",
+    "LIFE-10"
+  ],
+  "notApplicableCaseIds": [],
+  "errors": [],
+  "note": "This audit checks consistency only and never creates or upgrades a PASS."
+}

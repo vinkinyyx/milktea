@@ -1,0 +1,107 @@
+{
+  "phase": "P1-04",
+  "date": "2026-10-27",
+  "assets": [
+    {
+      "asset_id": "bg_shop_base",
+      "runtime_size": [
+        750,
+        1334
+      ],
+      "actual_size": [
+        750,
+        1334
+      ],
+      "actual_mode": "RGB",
+      "source_svg": true,
+      "pixel_count": 1000500,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "df76454523b7a02dc021a06446e27de83cb4ab304ca3c609e56a5c4f830bd70b"
+    },
+    {
+      "asset_id": "bg_shop_extend_top",
+      "runtime_size": [
+        750,
+        400
+      ],
+      "actual_size": [
+        750,
+        400
+      ],
+      "actual_mode": "RGB",
+      "source_svg": true,
+      "pixel_count": 300000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "874ccd87c666ebc711aca7cec4b258c5d2762fb38e60d7d5dca9f8ccb7331581"
+    },
+    {
+      "asset_id": "bg_shop_extend_bottom",
+      "runtime_size": [
+        750,
+        400
+      ],
+      "actual_size": [
+        750,
+        400
+      ],
+      "actual_mode": "RGB",
+      "source_svg": true,
+      "pixel_count": 300000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "8316a9c4727ebfacf2b7e8f4bba6ea12564c881e2d19bce0ca9b2d8a5f05eadc"
+    },
+    {
+      "asset_id": "ui_title_logo",
+      "runtime_size": [
+        800,
+        300
+      ],
+      "actual_size": [
+        800,
+        300
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 240000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "0d924b634d4e811864a797bc2610f5e7ce6cecf08e6c52a1acb3fdc95de6816c",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "alpha_zero_fraction": 0.7744
+    },
+    {
+      "asset_id": "spr_cup_shadow",
+      "runtime_size": [
+        512,
+        128
+      ],
+      "actual_size": [
+        512,
+        128
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 65536,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "d2ee699404126cb97663d20c32751fc750babd4ef68ed6ba819fc57fdabcc557",
+      "alpha_min": 0,
+      "alpha_max": 66,
+      "alpha_zero_fraction": 0.5212
+    }
+  ],
+  "pass_structural_checks": true,
+  "notes": [
+    "5 separate image assets",
+    "base+top+bottom generated from one continuous source; seam checked with adjacent rows",
+    "logo glyphs are editable vector paths, contains only fixed original title",
+    "no live data, QR code or brand image baked into background"
+  ],
+  "limits": [
+    "Real engine import and collision overlay tests remain the development team integration acceptance, not claimed executed."
+  ]
+}

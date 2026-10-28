@@ -1,0 +1,19 @@
+{
+  "tick": 566,
+  "entityId": 8,
+  "radius": 112,
+  "position": {
+    "x": 375,
+    "y": 1024.3963642120361
+  },
+  "spawnRadius": 140,
+  "legalInterval": [
+    255,
+    495
+  ],
+  "blockedOpenInterval": [
+    146.19468513960808,
+    603.805314860392
+  ],
+  "coversLegalInterval": true
+}

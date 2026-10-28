@@ -1,0 +1,49 @@
+﻿asset_id,phase,method,status,source,runtime,dim,origin_world,notes
+spr_cup_coconut_green_back,P3-A,new_draw,static_qa_pass,cup_layers/coconut_green/spr_cup_coconut_green_back.svg,cup_layers/coconut_green/spr_cup_coconut_green_back.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_coconut_green_tea,P3-A,new_draw,static_qa_pass,cup_layers/coconut_green/spr_cup_coconut_green_tea.svg,cup_layers/coconut_green/spr_cup_coconut_green_tea.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_coconut_green_front,P3-A,new_draw,static_qa_pass,cup_layers/coconut_green/spr_cup_coconut_green_front.svg,cup_layers/coconut_green/spr_cup_coconut_green_front.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_coconut_green_rim_back,P3-A,new_draw,static_qa_pass,cup_layers/coconut_green/spr_cup_coconut_green_rim_back.svg,cup_layers/coconut_green/spr_cup_coconut_green_rim_back.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_coconut_green_rim_front,P3-A,new_draw,static_qa_pass,cup_layers/coconut_green/spr_cup_coconut_green_rim_front.svg,cup_layers/coconut_green/spr_cup_coconut_green_rim_front.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_coconut_green_base,P3-A,new_draw,static_qa_pass,cup_layers/coconut_green/spr_cup_coconut_green_base.svg,cup_layers/coconut_green/spr_cup_coconut_green_base.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_coconut_green_label,P3-A,new_draw,static_qa_pass,cup_layers/coconut_green/spr_cup_coconut_green_label.svg,cup_layers/coconut_green/spr_cup_coconut_green_label.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_taro_boba_back,P3-A,new_draw,static_qa_pass,cup_layers/taro_boba/spr_cup_taro_boba_back.svg,cup_layers/taro_boba/spr_cup_taro_boba_back.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_taro_boba_tea,P3-A,new_draw,static_qa_pass,cup_layers/taro_boba/spr_cup_taro_boba_tea.svg,cup_layers/taro_boba/spr_cup_taro_boba_tea.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_taro_boba_front,P3-A,new_draw,static_qa_pass,cup_layers/taro_boba/spr_cup_taro_boba_front.svg,cup_layers/taro_boba/spr_cup_taro_boba_front.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_taro_boba_rim_back,P3-A,new_draw,static_qa_pass,cup_layers/taro_boba/spr_cup_taro_boba_rim_back.svg,cup_layers/taro_boba/spr_cup_taro_boba_rim_back.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_taro_boba_rim_front,P3-A,new_draw,static_qa_pass,cup_layers/taro_boba/spr_cup_taro_boba_rim_front.svg,cup_layers/taro_boba/spr_cup_taro_boba_rim_front.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_taro_boba_base,P3-A,new_draw,static_qa_pass,cup_layers/taro_boba/spr_cup_taro_boba_base.svg,cup_layers/taro_boba/spr_cup_taro_boba_base.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_taro_boba_label,P3-A,new_draw,static_qa_pass,cup_layers/taro_boba/spr_cup_taro_boba_label.svg,cup_layers/taro_boba/spr_cup_taro_boba_label.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_brown_sugar_back,P3-A,new_draw,static_qa_pass,cup_layers/brown_sugar/spr_cup_brown_sugar_back.svg,cup_layers/brown_sugar/spr_cup_brown_sugar_back.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_brown_sugar_tea,P3-A,new_draw,static_qa_pass,cup_layers/brown_sugar/spr_cup_brown_sugar_tea.svg,cup_layers/brown_sugar/spr_cup_brown_sugar_tea.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_brown_sugar_front,P3-A,new_draw,static_qa_pass,cup_layers/brown_sugar/spr_cup_brown_sugar_front.svg,cup_layers/brown_sugar/spr_cup_brown_sugar_front.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_brown_sugar_rim_back,P3-A,new_draw,static_qa_pass,cup_layers/brown_sugar/spr_cup_brown_sugar_rim_back.svg,cup_layers/brown_sugar/spr_cup_brown_sugar_rim_back.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_brown_sugar_rim_front,P3-A,new_draw,static_qa_pass,cup_layers/brown_sugar/spr_cup_brown_sugar_rim_front.svg,cup_layers/brown_sugar/spr_cup_brown_sugar_rim_front.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_brown_sugar_base,P3-A,new_draw,static_qa_pass,cup_layers/brown_sugar/spr_cup_brown_sugar_base.svg,cup_layers/brown_sugar/spr_cup_brown_sugar_base.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_brown_sugar_label,P3-A,new_draw,static_qa_pass,cup_layers/brown_sugar/spr_cup_brown_sugar_label.svg,cup_layers/brown_sugar/spr_cup_brown_sugar_label.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_mochi_special_back,P3-A,new_draw,static_qa_pass,cup_layers/mochi_special/spr_cup_mochi_special_back.svg,cup_layers/mochi_special/spr_cup_mochi_special_back.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_mochi_special_tea,P3-A,new_draw,static_qa_pass,cup_layers/mochi_special/spr_cup_mochi_special_tea.svg,cup_layers/mochi_special/spr_cup_mochi_special_tea.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_mochi_special_front,P3-A,new_draw,static_qa_pass,cup_layers/mochi_special/spr_cup_mochi_special_front.svg,cup_layers/mochi_special/spr_cup_mochi_special_front.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_mochi_special_rim_back,P3-A,new_draw,static_qa_pass,cup_layers/mochi_special/spr_cup_mochi_special_rim_back.svg,cup_layers/mochi_special/spr_cup_mochi_special_rim_back.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_mochi_special_rim_front,P3-A,new_draw,static_qa_pass,cup_layers/mochi_special/spr_cup_mochi_special_rim_front.svg,cup_layers/mochi_special/spr_cup_mochi_special_rim_front.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_mochi_special_base,P3-A,new_draw,static_qa_pass,cup_layers/mochi_special/spr_cup_mochi_special_base.svg,cup_layers/mochi_special/spr_cup_mochi_special_base.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+spr_cup_mochi_special_label,P3-A,new_draw,static_qa_pass,cup_layers/mochi_special/spr_cup_mochi_special_label.svg,cup_layers/mochi_special/spr_cup_mochi_special_label.png,750x1000,"(0,200)",必须等待引擎CupGeometry权威导线复核
+ui_stage_classic_card,P3-A,derived,static_qa_pass,cup_*_all_layers.svg,stage_cards/ui_stage_classic_card.png,480x600,,顶部30%保留动态标题与锁图层区域，不包含排名解锁文本
+ui_stage_coconut_green_card,P3-A,derived,static_qa_pass,cup_*_all_layers.svg,stage_cards/ui_stage_coconut_green_card.png,480x600,,顶部30%保留动态标题与锁图层区域，不包含排名解锁文本
+ui_stage_taro_boba_card,P3-A,derived,static_qa_pass,cup_*_all_layers.svg,stage_cards/ui_stage_taro_boba_card.png,480x600,,顶部30%保留动态标题与锁图层区域，不包含排名解锁文本
+ui_stage_brown_sugar_card,P3-A,derived,static_qa_pass,cup_*_all_layers.svg,stage_cards/ui_stage_brown_sugar_card.png,480x600,,顶部30%保留动态标题与锁图层区域，不包含排名解锁文本
+ui_stage_mochi_special_card,P3-A,derived,static_qa_pass,cup_*_all_layers.svg,stage_cards/ui_stage_mochi_special_card.png,480x600,,顶部30%保留动态标题与锁图层区域，不包含排名解锁文本
+ui_btn_tab_normal,P3-A,new_draw,static_qa_pass,ui/ui_btn_tab_normal.svg,ui/ui_btn_tab_normal.png,256x96,,"nine-slice=20,20,20,20; disabled still requires click blocking"
+ui_btn_tab_pressed,P3-A,derived,static_qa_pass,ui/ui_btn_tab_pressed.svg,ui/ui_btn_tab_pressed.png,256x96,,"nine-slice=20,20,20,20; disabled still requires click blocking"
+ui_btn_tab_disabled,P3-A,derived,static_qa_pass,ui/ui_btn_tab_disabled.svg,ui/ui_btn_tab_disabled.png,256x96,,"nine-slice=20,20,20,20; disabled still requires click blocking"
+ui_btn_tab_selected,P3-A,derived,static_qa_pass,ui/ui_btn_tab_selected.svg,ui/ui_btn_tab_selected.png,256x96,,"nine-slice=20,20,20,20; disabled still requires click blocking"
+ui_icon_lock,P3-A,new_draw,static_qa_pass,ui/ui_icon_lock.svg,ui/ui_icon_lock@96.png,96x96;48x48,,192x192母版；96档线宽≥4px，动态禁用变色由程序控制
+ui_icon_unlock,P3-A,new_draw,static_qa_pass,ui/ui_icon_unlock.svg,ui/ui_icon_unlock@96.png,96x96;48x48,,192x192母版；96档线宽≥4px，动态禁用变色由程序控制
+ui_icon_cloud,P3-A,new_draw,static_qa_pass,ui/ui_icon_cloud.svg,ui/ui_icon_cloud@96.png,96x96;48x48,,192x192母版；96档线宽≥4px，动态禁用变色由程序控制
+ui_icon_sync,P3-A,new_draw,static_qa_pass,ui/ui_icon_sync.svg,ui/ui_icon_sync@96.png,96x96;48x48,,192x192母版；96档线宽≥4px，动态禁用变色由程序控制
+ui_icon_offline,P3-A,new_draw,static_qa_pass,ui/ui_icon_offline.svg,ui/ui_icon_offline@96.png,96x96;48x48,,192x192母版；96档线宽≥4px，动态禁用变色由程序控制
+ui_icon_account,P3-A,new_draw,static_qa_pass,ui/ui_icon_account.svg,ui/ui_icon_account@96.png,96x96;48x48,,192x192母版；96档线宽≥4px，动态禁用变色由程序控制
+ui_panel_stage,P3-A,new_draw,static_qa_pass,ui/ui_panel_stage.svg,ui/ui_panel_stage.png,280x400,,"nine-slice=24,24,24,24"
+fx_unlock_glow,P3-A,new_draw,static_qa_pass,ui/fx_unlock_glow.svg,ui/fx_unlock_glow.png,256x256,,纯单帧粒子，程序调透明度/缩放
+gen_skeleton,P3-A,engine,code_delivered_integration_pending,engine/gen_skeleton.mjs,programmatic Canvas drawing,n/a,,不新增静态贴图；待游戏引擎验证
+gen_locked_overlay,P3-A,engine,code_delivered_integration_pending,engine/gen_locked_overlay.mjs,programmatic Canvas drawing,n/a,,不新增静态贴图；待游戏引擎验证
+gen_error_empty,P3-A,engine,code_delivered_integration_pending,engine/gen_error_empty.mjs,programmatic Canvas drawing,n/a,,不新增静态贴图；待游戏引擎验证

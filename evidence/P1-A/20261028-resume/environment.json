@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-28",
+  "creator": "3.8.8",
+  "backend": "Box2D @cocos/box2d 1.0.2, PTM 32 (prior installed-engine verification)",
+  "config": "design-v0.1",
+  "preview": "http://127.0.0.1:7456/",
+  "build": "D:/cocos-p1a-build/resume-20261028",
+  "build_exit": 36,
+  "hashes_sha256": {
+    "client/assets/scripts/debug/PhysicsLab.ts": "5a3647fec63e8febf3c836d56eacfbc95e651da31d86584a4ea70274bda32f8c",
+    "client/temp/programming/packer-driver/targets/preview/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js": "30cc269986cf20a181b72bff439aabac4e08b687aac5033f94b33854fb7e0fc6",
+    "config/design-baseline.json": "973eae177ac05c4a7076543323f7af479d4aaf065c3a2e380a6655df3ce6747f"
+  },
+  "typecheck": "PASS; installed Creator declarations",
+  "limitations": "Preview build checked for scheduler closures; exact source-to-output identity not independently proven by hash. No git metadata."
+}

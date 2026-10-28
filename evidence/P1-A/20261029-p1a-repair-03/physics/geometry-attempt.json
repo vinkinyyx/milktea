@@ -1,0 +1,7 @@
+{
+  "caseId": "GEO-220",
+  "attemptId": "GEO-220-001",
+  "buildId": "20261029-p1a-repair-03",
+  "result": "未执行",
+  "reason": "The frame probe records timing and tick only; no per-frame finite cup-wall/endpoint/sweep geometry sampler was present in the tested package, and pressure aborted before continuous geometry observation."
+}

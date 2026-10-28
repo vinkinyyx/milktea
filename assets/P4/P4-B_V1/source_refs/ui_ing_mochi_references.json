@@ -1,0 +1,11 @@
+{
+  "source_asset_id": "spr_ing_mochi_base",
+  "canonical_archive": "奶茶_P1_89项全量复审修订_V3.zip",
+  "source_member": "Assets/P1-01/spr_ing_mochi_base/source/spr_ing_mochi_base.png",
+  "source_sha256": "619e2bf24c9e4380c0f93604f48b45171f5c0e84036cdc6ef1fc06d27c98ec78",
+  "derived_outputs": [
+    "ui_ing_mochi_detail.png",
+    "ui_ing_mochi_locked.png"
+  ],
+  "method": "P1 V3 source resample; silhouette alpha mask; no invented level"
+}

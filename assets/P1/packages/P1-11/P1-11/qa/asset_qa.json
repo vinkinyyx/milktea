@@ -1,0 +1,20 @@
+{
+  "batch": "P1-11",
+  "ids": [
+    "gen_danger_line",
+    "gen_drop_guide",
+    "gen_score_text",
+    "gen_danger_countdown",
+    "gen_shake_count",
+    "gen_modal_dim",
+    "gen_loading_spinner"
+  ],
+  "expected_export_png": 0,
+  "preview_only_png_count": 7,
+  "independent_program_modules": 7,
+  "node_tests_passed": 12,
+  "chromium_rendered_count": 7,
+  "source_color_space": "sRGB UI color hex on Canvas2D",
+  "no_real_game_engine_test": true,
+  "status": "source_code_and_preview_accepted_engine_integration_pending"
+}

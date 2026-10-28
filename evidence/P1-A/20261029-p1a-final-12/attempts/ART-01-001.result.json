@@ -1,0 +1,1378 @@
+{
+  "caseId": "gallery",
+  "attemptId": "ART-01-001",
+  "buildId": null,
+  "expectedBuildId": "20261029-p1a-final-12",
+  "pageUrl": "http://127.0.0.1:8782/?p1aCase=gallery&attemptId=ART-01-001&expectedBuildId=20261029-p1a-final-12&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-12%2Fraw%2FART-01-001",
+  "startedAt": "2026-10-28T19:22:00.379Z",
+  "startupStatus": {
+    "buildId": "20261029-p1a-final-12",
+    "attemptId": "ART-01-001",
+    "ready": true,
+    "loading": false,
+    "tick": 0,
+    "stepCount": 0,
+    "paused": true,
+    "pauseReasons": [
+      "REBUILD"
+    ],
+    "interruptionSerial": 0,
+    "entityCount": 3,
+    "contactCount": 0,
+    "contactBeginEvents": 0,
+    "contactEndEvents": 0,
+    "listenerCount": 6,
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "levelRadii": [
+      {
+        "level": 1,
+        "radiusDu": 18
+      },
+      {
+        "level": 2,
+        "radiusDu": 24
+      },
+      {
+        "level": 3,
+        "radiusDu": 32
+      },
+      {
+        "level": 4,
+        "radiusDu": 42
+      },
+      {
+        "level": 5,
+        "radiusDu": 55
+      },
+      {
+        "level": 6,
+        "radiusDu": 70
+      },
+      {
+        "level": 7,
+        "radiusDu": 89
+      },
+      {
+        "level": 8,
+        "radiusDu": 112
+      },
+      {
+        "level": 9,
+        "radiusDu": 140
+      }
+    ],
+    "cupWidthScale": 1,
+    "queue": null,
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2048.60000000149,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2048.60000000149,
+          "revision": 0
+        }
+      ]
+    },
+    "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+  },
+  "galleryOpenPoint": {
+    "x": 482.0629685157421,
+    "y": 764.8598200899551,
+    "world": {
+      "x": -60,
+      "y": -610
+    },
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1036,
+      "height": 799
+    },
+    "scale": 0.5989505247376312
+  },
+  "loadedArtVariants": [
+    {
+      "assetId": "spr_ing_sago_base",
+      "variantId": "art/p1/ingredient/spr_ing_sago_base@128x128/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_sago_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_ing_small_pearl_base",
+      "variantId": "art/p1/ingredient/spr_ing_small_pearl_base@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_ing_coconut_base",
+      "variantId": "art/p1/ingredient/spr_ing_coconut_base@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_coconut_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_ing_large_pearl_base",
+      "variantId": "art/p1/ingredient/spr_ing_large_pearl_base@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_ing_red_bean_base",
+      "variantId": "art/p1/ingredient/spr_ing_red_bean_base@128x128/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_red_bean_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_ing_grass_jelly_base",
+      "variantId": "art/p1/ingredient/spr_ing_grass_jelly_base@512x512/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_ing_pudding_base",
+      "variantId": "art/p1/ingredient/spr_ing_pudding_base@512x512/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_pudding_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_ing_mochi_base",
+      "variantId": "art/p1/ingredient/spr_ing_mochi_base@512x512/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_mochi_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_ing_taro_base",
+      "variantId": "art/p1/ingredient/spr_ing_taro_base@512x512/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient/spr_ing_taro_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "bg_shop_base",
+      "variantId": "art/p1/environment/bg_shop_base@750x1334/spriteFrame",
+      "path": "client/assets/resources/art/p1/environment/bg_shop_base@750x1334.png",
+      "size": [
+        750,
+        1334
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_cup_shadow",
+      "variantId": "art/p1/environment/spr_cup_shadow@512x128/spriteFrame",
+      "path": "client/assets/resources/art/p1/environment/spr_cup_shadow@512x128.png",
+      "size": [
+        512,
+        128
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_cup_classic_back",
+      "variantId": "art/p1/cup_layer/spr_cup_classic_back@750x1000/spriteFrame",
+      "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_back@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0,
+        0
+      ]
+    },
+    {
+      "assetId": "spr_cup_classic_tea",
+      "variantId": "art/p1/cup_layer/spr_cup_classic_tea@750x1000/spriteFrame",
+      "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_tea@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0,
+        0
+      ]
+    },
+    {
+      "assetId": "spr_cup_classic_rim_back",
+      "variantId": "art/p1/cup_layer/spr_cup_classic_rim_back@750x1000/spriteFrame",
+      "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_rim_back@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0,
+        0
+      ]
+    },
+    {
+      "assetId": "spr_cup_classic_front",
+      "variantId": "art/p1/cup_layer/spr_cup_classic_front@750x1000/spriteFrame",
+      "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_front@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0,
+        0
+      ]
+    },
+    {
+      "assetId": "spr_cup_classic_label",
+      "variantId": "art/p1/cup_layer/spr_cup_classic_label@750x1000/spriteFrame",
+      "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_label@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0,
+        0
+      ]
+    },
+    {
+      "assetId": "spr_cup_classic_base",
+      "variantId": "art/p1/cup_layer/spr_cup_classic_base@750x1000/spriteFrame",
+      "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_base@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0,
+        0
+      ]
+    },
+    {
+      "assetId": "spr_cup_classic_rim_front",
+      "variantId": "art/p1/cup_layer/spr_cup_classic_rim_front@750x1000/spriteFrame",
+      "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_rim_front@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0,
+        0
+      ]
+    },
+    {
+      "assetId": "ui_panel_modal",
+      "variantId": "art/p1/panel/ui_panel_modal@320x360/spriteFrame",
+      "path": "client/assets/resources/art/p1/panel/ui_panel_modal@320x360.png",
+      "size": [
+        320,
+        360
+      ],
+      "alphaInsets": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_sago_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_sago_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_sago_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_red_bean_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_red_bean_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_red_bean_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_small_pearl_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_small_pearl_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_small_pearl_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_coconut_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_coconut_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_coconut_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_large_pearl_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_large_pearl_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_large_pearl_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_grass_jelly_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_grass_jelly_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_grass_jelly_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_pudding_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_pudding_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_pudding_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_mochi_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_mochi_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_mochi_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_ing_taro_thumb",
+      "variantId": "art/p1/ingredient_thumbnail/ui_ing_taro_thumb@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_taro_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_face_happy",
+      "variantId": "art/p1/optional_face/spr_face_happy@256x128/spriteFrame",
+      "path": "client/assets/resources/art/p1/optional_face/spr_face_happy@256x128.png",
+      "size": [
+        256,
+        128
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_face_neutral",
+      "variantId": "art/p1/optional_face/spr_face_neutral@256x128/spriteFrame",
+      "path": "client/assets/resources/art/p1/optional_face/spr_face_neutral@256x128.png",
+      "size": [
+        256,
+        128
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "spr_face_surprised",
+      "variantId": "art/p1/optional_face/spr_face_surprised@256x128/spriteFrame",
+      "path": "client/assets/resources/art/p1/optional_face/spr_face_surprised@256x128.png",
+      "size": [
+        256,
+        128
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "bg_shop_extend_top",
+      "variantId": "art/p1/environment/bg_shop_extend_top@750x400/spriteFrame",
+      "path": "client/assets/resources/art/p1/environment/bg_shop_extend_top@750x400.png",
+      "size": [
+        750,
+        400
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_title_logo",
+      "variantId": "art/p1/environment/ui_title_logo@800x300/spriteFrame",
+      "path": "client/assets/resources/art/p1/environment/ui_title_logo@800x300.png",
+      "size": [
+        800,
+        300
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "bg_shop_extend_bottom",
+      "variantId": "art/p1/environment/bg_shop_extend_bottom@750x400/spriteFrame",
+      "path": "client/assets/resources/art/p1/environment/bg_shop_extend_bottom@750x400.png",
+      "size": [
+        750,
+        400
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_primary_normal",
+      "variantId": "art/p1/button_skin/ui_btn_primary_normal@256x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_primary_normal@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "alphaInsets": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_primary_disabled",
+      "variantId": "art/p1/button_skin/ui_btn_primary_disabled@256x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_primary_disabled@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "alphaInsets": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_primary_pressed",
+      "variantId": "art/p1/button_skin/ui_btn_primary_pressed@256x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_primary_pressed@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "alphaInsets": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_primary_selected",
+      "variantId": "art/p1/button_skin/ui_btn_primary_selected@256x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_primary_selected@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "alphaInsets": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_secondary_normal",
+      "variantId": "art/p1/button_skin/ui_btn_secondary_normal@256x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_secondary_normal@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "alphaInsets": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_secondary_pressed",
+      "variantId": "art/p1/button_skin/ui_btn_secondary_pressed@256x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_secondary_pressed@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "alphaInsets": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_pause",
+      "variantId": "art/p1/icon/ui_icon_pause@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_pause@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_play",
+      "variantId": "art/p1/icon/ui_icon_play@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_play@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_continue",
+      "variantId": "art/p1/icon/ui_icon_continue@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_continue@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_icon_selected",
+      "variantId": "art/p1/button_skin/ui_btn_icon_selected@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_icon_selected@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_icon_disabled",
+      "variantId": "art/p1/button_skin/ui_btn_icon_disabled@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_icon_disabled@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_icon_pressed",
+      "variantId": "art/p1/button_skin/ui_btn_icon_pressed@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_icon_pressed@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_icon_normal",
+      "variantId": "art/p1/button_skin/ui_btn_icon_normal@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_icon_normal@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_secondary_selected",
+      "variantId": "art/p1/button_skin/ui_btn_secondary_selected@256x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_secondary_selected@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "alphaInsets": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_btn_secondary_disabled",
+      "variantId": "art/p1/button_skin/ui_btn_secondary_disabled@256x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/button_skin/ui_btn_secondary_disabled@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "alphaInsets": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_settings",
+      "variantId": "art/p1/icon/ui_icon_settings@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_settings@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_close",
+      "variantId": "art/p1/icon/ui_icon_close@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_close@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_back",
+      "variantId": "art/p1/icon/ui_icon_back@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_back@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_restart",
+      "variantId": "art/p1/icon/ui_icon_restart@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_restart@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_home",
+      "variantId": "art/p1/icon/ui_icon_home@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_home@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_music_on",
+      "variantId": "art/p1/icon/ui_icon_music_on@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_music_on@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_music_off",
+      "variantId": "art/p1/icon/ui_icon_music_off@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_music_off@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_sfx_on",
+      "variantId": "art/p1/icon/ui_icon_sfx_on@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_sfx_on@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_sfx_off",
+      "variantId": "art/p1/icon/ui_icon_sfx_off@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_sfx_off@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_reduced_motion",
+      "variantId": "art/p1/icon/ui_icon_reduced_motion@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_reduced_motion@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_shake",
+      "variantId": "art/p1/icon/ui_icon_shake@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_shake@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_info",
+      "variantId": "art/p1/icon/ui_icon_info@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_info@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_warning",
+      "variantId": "art/p1/icon/ui_icon_warning@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_warning@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_check",
+      "variantId": "art/p1/icon/ui_icon_check@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_check@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_icon_next",
+      "variantId": "art/p1/icon/ui_icon_next@96x96/spriteFrame",
+      "path": "client/assets/resources/art/p1/icon/ui_icon_next@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_panel_hud",
+      "variantId": "art/p1/panel/ui_panel_hud@340x60/spriteFrame",
+      "path": "client/assets/resources/art/p1/panel/ui_panel_hud@340x60.png",
+      "size": [
+        340,
+        60
+      ],
+      "alphaInsets": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_slider_knob",
+      "variantId": "art/p1/ui_detail/ui_slider_knob@64x64/spriteFrame",
+      "path": "client/assets/resources/art/p1/ui_detail/ui_slider_knob@64x64.png",
+      "size": [
+        64,
+        64
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_toggle_knob",
+      "variantId": "art/p1/ui_detail/ui_toggle_knob@64x64/spriteFrame",
+      "path": "client/assets/resources/art/p1/ui_detail/ui_toggle_knob@64x64.png",
+      "size": [
+        64,
+        64
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_slider_track",
+      "variantId": "art/p1/ui_detail/ui_slider_track@256x24/spriteFrame",
+      "path": "client/assets/resources/art/p1/ui_detail/ui_slider_track@256x24.png",
+      "size": [
+        256,
+        24
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_toggle_track",
+      "variantId": "art/p1/ui_detail/ui_toggle_track@128x64/spriteFrame",
+      "path": "client/assets/resources/art/p1/ui_detail/ui_toggle_track@128x64.png",
+      "size": [
+        128,
+        64
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_panel_results",
+      "variantId": "art/p1/panel/ui_panel_results@330x410/spriteFrame",
+      "path": "client/assets/resources/art/p1/panel/ui_panel_results@330x410.png",
+      "size": [
+        330,
+        410
+      ],
+      "alphaInsets": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_panel_toast",
+      "variantId": "art/p1/panel/ui_panel_toast@250x40/spriteFrame",
+      "path": "client/assets/resources/art/p1/panel/ui_panel_toast@250x40.png",
+      "size": [
+        250,
+        40
+      ],
+      "alphaInsets": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_panel_next",
+      "variantId": "art/p1/panel/ui_panel_next@140x140/spriteFrame",
+      "path": "client/assets/resources/art/p1/panel/ui_panel_next@140x140.png",
+      "size": [
+        140,
+        140
+      ],
+      "alphaInsets": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_badge_record",
+      "variantId": "art/p1/ui_detail/ui_badge_record@256x128/spriteFrame",
+      "path": "client/assets/resources/art/p1/ui_detail/ui_badge_record@256x128.png",
+      "size": [
+        256,
+        128
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_badge_mochi",
+      "variantId": "art/p1/ui_detail/ui_badge_mochi@192x192/spriteFrame",
+      "path": "client/assets/resources/art/p1/ui_detail/ui_badge_mochi@192x192.png",
+      "size": [
+        192,
+        192
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "fx_merge_ring",
+      "variantId": "art/p1/effect/fx_merge_ring@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/effect/fx_merge_ring@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "fx_sparkle",
+      "variantId": "art/p1/effect/fx_sparkle@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/effect/fx_sparkle@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "fx_crumb",
+      "variantId": "art/p1/effect/fx_crumb@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/effect/fx_crumb@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "fx_drop_ping",
+      "variantId": "art/p1/effect/fx_drop_ping@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/effect/fx_drop_ping@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_tutorial_hand_release",
+      "variantId": "art/p1/tutorial/ui_tutorial_hand_release@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/tutorial/ui_tutorial_hand_release@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "ui_tutorial_hand_move",
+      "variantId": "art/p1/tutorial/ui_tutorial_hand_move@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/tutorial/ui_tutorial_hand_move@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "fx_mochi_star",
+      "variantId": "art/p1/effect/fx_mochi_star@256x256/spriteFrame",
+      "path": "client/assets/resources/art/p1/effect/fx_mochi_star@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "alphaInsets": null,
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "title": "P1素材 1/7 · 共81项",
+      "loaded": 25
+    },
+    {
+      "title": "P1素材 2/7 · 共81项",
+      "loaded": 31
+    },
+    {
+      "title": "P1素材 3/7 · 共81项",
+      "loaded": 37
+    },
+    {
+      "title": "P1素材 4/7 · 共81项",
+      "loaded": 49
+    },
+    {
+      "title": "P1素材 5/7 · 共81项",
+      "loaded": 61
+    },
+    {
+      "title": "P1素材 6/7 · 共81项",
+      "loaded": 72
+    },
+    {
+      "title": "P1素材 7/7 · 共81项",
+      "loaded": 81
+    }
+  ],
+  "allCatalogItemsLoaded": true,
+  "screenshot": "D:/Workspace/TapTap/奶茶挤挤/evidence/P1-A/20261029-p1a-final-12/raw/ART-01-001/gallery.png",
+  "pass": true,
+  "acceptance": "PASS",
+  "endedAt": "2026-10-28T19:22:02.557Z",
+  "consoleEvents": [
+    "{\"test\":\"p1a-runtime-identity\",\"buildId\":\"20261029-p1a-final-12\",\"creator\":\"3.8.8\",\"box2d\":\"1.0.2\",\"ptm\":32,\"autoSimulation\":false,\"probeMode\":\"OFF\",\"probeVersion\":\"p1a-probe-v2\",\"attemptId\":\"ART-01-001\"}"
+  ],
+  "pageErrors": []
+}

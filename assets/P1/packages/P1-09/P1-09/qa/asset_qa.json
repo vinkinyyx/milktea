@@ -1,0 +1,87 @@
+{
+  "batch": "P1-09",
+  "status": "static_pass_runtime_integration_pending",
+  "source_file": "/奶茶/image-elements.json",
+  "assets": [
+    {
+      "asset_id": "ui_toggle_track",
+      "name_zh": "开关轨道",
+      "runtime_png": "128x64",
+      "source_2x": "256x128",
+      "SVG": "pass",
+      "RGBA": "pass",
+      "sRGB": "pass",
+      "transparent_edge": "pass",
+      "nine_slice": "none",
+      "status": "static_pass_runtime_pending"
+    },
+    {
+      "asset_id": "ui_toggle_knob",
+      "name_zh": "开关圆钮",
+      "runtime_png": "64x64",
+      "source_2x": "128x128",
+      "SVG": "pass",
+      "RGBA": "pass",
+      "sRGB": "pass",
+      "transparent_edge": "pass",
+      "nine_slice": "none",
+      "status": "static_pass_runtime_pending"
+    },
+    {
+      "asset_id": "ui_slider_track",
+      "name_zh": "音量滑杆轨道",
+      "runtime_png": "256x24",
+      "source_2x": "512x48",
+      "SVG": "pass",
+      "RGBA": "pass",
+      "sRGB": "pass",
+      "transparent_edge": "pass",
+      "nine_slice": "none",
+      "status": "static_pass_runtime_pending"
+    },
+    {
+      "asset_id": "ui_slider_knob",
+      "name_zh": "音量滑杆圆钮",
+      "runtime_png": "64x64",
+      "source_2x": "128x128",
+      "SVG": "pass",
+      "RGBA": "pass",
+      "sRGB": "pass",
+      "transparent_edge": "pass",
+      "nine_slice": "none",
+      "status": "static_pass_runtime_pending"
+    },
+    {
+      "asset_id": "ui_badge_record",
+      "name_zh": "新纪录徽章",
+      "runtime_png": "256x128",
+      "source_2x": "512x256",
+      "SVG": "pass",
+      "RGBA": "pass",
+      "sRGB": "pass",
+      "transparent_edge": "pass",
+      "nine_slice": "none",
+      "status": "static_pass_runtime_pending"
+    },
+    {
+      "asset_id": "ui_badge_mochi",
+      "name_zh": "首次麻薯徽章",
+      "runtime_png": "192x192",
+      "source_2x": "384x384",
+      "SVG": "pass",
+      "RGBA": "pass",
+      "sRGB": "pass",
+      "transparent_edge": "pass",
+      "nine_slice": "none",
+      "status": "static_pass_runtime_pending"
+    }
+  ],
+  "runtime_integration_tested": false,
+  "notes": [
+    "所有六项均为独立 PNG 和可编辑 SVG。",
+    "开关的ON/OFF由程序移动旋钮、切换轨道颜色；资源保持中性，无烘焙状态。",
+    "滑杆的进度填充由程序实现；源图可横向九切测试16px端帽，原资产清单nine_slice:none，故16px仅是实现建议而非原始合同值。",
+    "首次麻薯徽章是里程碑装饰，不指示胜利终局。",
+    "程序需实现不少于48CSS等效像素的交互点击区域，圆钮自身不承担点击逻辑。"
+  ]
+}

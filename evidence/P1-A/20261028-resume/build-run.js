@@ -1,0 +1,1 @@
+async (page) => {await page.waitForTimeout(10000); return await page.evaluate(()=>({title:document.title,canvas:!!document.querySelector('#GameCanvas'),cc:!!window.cc,scene:window.cc?.director?.getScene()?.name,body:document.body.innerText.slice(0,500)}));}

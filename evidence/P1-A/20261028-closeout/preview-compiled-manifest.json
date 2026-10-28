@@ -1,0 +1,14 @@
+{
+  "rightDx": [
+    {
+      "path": "client/temp/programming/packer-driver/targets/preview/chunks/7c/7c22ec7aed24399a8d99146f72a1c754b649ccc9.js",
+      "sha256": "36228cb1b7983368623979c79a434e72098be271ae53f70ae292b55f7abae7dc"
+    }
+  ],
+  "resumeAfterGallery = false": [
+    {
+      "path": "client/temp/programming/packer-driver/targets/preview/chunks/4d/4d69d7e5a2dd5b6238a23c78c3316ae9eb5da9cb.js",
+      "sha256": "6af30ba68651dd8ec14c1fa86ab8da83afe2f1837885b9e5e1dcbf4682488436"
+    }
+  ]
+}

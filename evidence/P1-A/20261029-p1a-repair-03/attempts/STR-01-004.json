@@ -1,0 +1,8 @@
+{
+  "caseId": "STR-P2",
+  "attemptId": "STR-01-004",
+  "buildId": "20261029-p1a-repair-03",
+  "probeVersion": "legacy-continuous-three-adapted-220-v1",
+  "result": "未执行",
+  "reason": "run-code timed out waiting for tick>=30 within 5 seconds; host had ~1s frame intervals. No valid P2 comparison collected."
+}

@@ -1,0 +1,27 @@
+{
+  "buildId": "20261029-p1a-final-10",
+  "creatorPid": 26248,
+  "workerOwnerPid": 7808,
+  "workerPid": 7304,
+  "workerCommand": "CocosCreator.exe .../builtin/builder/static/sub-process-index",
+  "requestedSignal": "SIGTERM default via ChildProcess.kill(undefined)",
+  "killCallStack": "ProcessPool.kill -> WorkerTask.close -> WorkerManager.kill -> ScriptBuilder.buildBundleScript",
+  "evidenceFiles": [
+    "creator-kill-trace.jsonl",
+    "creator-process-tree.jsonl",
+    "build-stdout.log",
+    "creator-exit.json",
+    "build-manifest.json"
+  ],
+  "sequence": [
+    "02:57:37 execute-script-end with buildScriptCommand (2796 ms)",
+    "02:57:37 Copy externalScripts success",
+    "02:57:37 buildScriptCommand status success",
+    "02:57:37 ScriptBuilder.buildBundleScript requests WorkerManager.kill; child exits SIGTERM",
+    "02:57:37 build proceeds with build-engine script",
+    "02:57:38 Creator build task finished",
+    "02:57:43 Creator process exit code 36; manifest confirms output files"
+  ],
+  "conclusion": "The builder completed buildScriptCommand and Copy externalScripts before ScriptBuilder.buildBundleScript closed its worker. The exact kill call came from Creator 3.8.8 ProcessPool/WorkerTask cleanup; the sub-process-index worker then exited with SIGTERM. Engine build continued, Creator returned success code 36, and the complete output manifest was generated. Classified as completed-task worker cleanup.",
+  "limitations": "The installed .ccc payload is compiled and not readable as source; process polling has no OS exit status. Call-site stack, completion logs, worker disappearance, subsequent engine build and Creator exit/manifest provide aligned evidence."
+}

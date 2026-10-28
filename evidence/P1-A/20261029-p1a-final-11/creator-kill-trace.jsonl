@@ -1,0 +1,2 @@
+{"at":"2026-10-28T19:13:16.517Z","event":"tracer-started","port":47154}
+{"at":"2026-10-28T19:13:25.028Z","event":"tracer-error","error":"Error: browser ws timeout","stack":"Error: browser ws timeout\n    at Timeout._onTimeout (D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\creator-renderer-kill-trace.cjs:40:127)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}

@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "ES2017",
     "module": "ES2015",
+    "moduleResolution": "node",
+    "types": ["@cocos/creator-types/engine"],
     "strict": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": false,

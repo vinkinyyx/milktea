@@ -1,0 +1,30 @@
+{
+  "cup": "taro_boba",
+  "scale": 0.9,
+  "world_origin": [
+    0,
+    200
+  ],
+  "top_inside_world": [
+    [
+      141.0,
+      1060
+    ],
+    [
+      609.0,
+      1060
+    ]
+  ],
+  "bottom_inside_world": [
+    [
+      213.0,
+      260
+    ],
+    [
+      537.0,
+      260
+    ]
+  ],
+  "safe_line_y_world": 1000,
+  "source": "14-image-production.md reconstruction; NOT authoritative engine export"
+}

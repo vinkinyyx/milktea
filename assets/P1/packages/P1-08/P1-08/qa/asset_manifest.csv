@@ -1,0 +1,6 @@
+﻿asset_id,name_zh,source_spec,source_svg,source_png_2x,export_png,runtime_size_px,nine_slice,alpha,pivot,color_space,status
+ui_panel_modal,通用弹窗底,2x export layered/vector,source_svg/ui_panel_modal.svg,source_2x_png/ui_panel_modal@2x.png,export_png/ui_panel_modal.png,320x360,"32,32,32,32",yes,"0.5,0.5",sRGB,static_qa_pass_engine_pending
+ui_panel_hud,HUD底,2x export layered/vector,source_svg/ui_panel_hud.svg,source_2x_png/ui_panel_hud@2x.png,export_png/ui_panel_hud.png,340x60,"20,20,20,20",yes,"0.5,0.5",sRGB,static_qa_pass_engine_pending
+ui_panel_next,下一份预告框,2x export layered/vector,source_svg/ui_panel_next.svg,source_2x_png/ui_panel_next@2x.png,export_png/ui_panel_next.png,140x140,"24,24,24,24",yes,"0.5,0.5",sRGB,static_qa_pass_engine_pending
+ui_panel_toast,短提示底,2x export layered/vector,source_svg/ui_panel_toast.svg,source_2x_png/ui_panel_toast@2x.png,export_png/ui_panel_toast.png,250x40,"16,16,16,16",yes,"0.5,0.5",sRGB,static_qa_pass_engine_pending
+ui_panel_results,结算面板,2x export layered/vector,source_svg/ui_panel_results.svg,source_2x_png/ui_panel_results@2x.png,export_png/ui_panel_results.png,330x410,"36,36,36,36",yes,"0.5,0.5",sRGB,static_qa_pass_engine_pending

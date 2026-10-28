@@ -1,0 +1,351 @@
+{
+  "project": "奶茶",
+  "batch": "P1-05",
+  "target_asset_count": 12,
+  "static_qa_pass_count": 12,
+  "assets": [
+    {
+      "asset_id": "ui_btn_primary_normal",
+      "state": "normal",
+      "method": "new_draw",
+      "source_px": "512x192 vector/layered",
+      "png_px": [
+        256,
+        96
+      ],
+      "runtime_du": "360x104",
+      "nine_slice_ltrb": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        2,
+        3,
+        254,
+        93
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3288,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "d3a25c686941d4ec5d3874c27f31858929d396884205b3608b163621b79a9c6d"
+    },
+    {
+      "asset_id": "ui_btn_primary_pressed",
+      "state": "pressed",
+      "method": "derived",
+      "source_px": "512x192 vector/layered",
+      "png_px": [
+        256,
+        96
+      ],
+      "runtime_du": "360x104",
+      "nine_slice_ltrb": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        2,
+        3,
+        254,
+        93
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3288,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "2a5b1fc28fa082c1c4911c3b272badce5fe60e4f8839d9a2df0b0b45bb568079"
+    },
+    {
+      "asset_id": "ui_btn_primary_disabled",
+      "state": "disabled",
+      "method": "derived",
+      "source_px": "512x192 vector/layered",
+      "png_px": [
+        256,
+        96
+      ],
+      "runtime_du": "360x104",
+      "nine_slice_ltrb": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        2,
+        3,
+        254,
+        93
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3288,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "a385bd626099bfccee94ff165eeb416a0c4a7c075e95abf50543180d25a7c723"
+    },
+    {
+      "asset_id": "ui_btn_primary_selected",
+      "state": "selected",
+      "method": "derived",
+      "source_px": "512x192 vector/layered",
+      "png_px": [
+        256,
+        96
+      ],
+      "runtime_du": "360x104",
+      "nine_slice_ltrb": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        2,
+        3,
+        254,
+        93
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3288,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "673df1b2292f85a60f00424a4871fbc837193dbba6745e9d4abb6f5a935d2b5b"
+    },
+    {
+      "asset_id": "ui_btn_secondary_normal",
+      "state": "normal",
+      "method": "new_draw",
+      "source_px": "512x192 vector/layered",
+      "png_px": [
+        256,
+        96
+      ],
+      "runtime_du": "300x96",
+      "nine_slice_ltrb": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "alpha_bbox": [
+        2,
+        3,
+        254,
+        93
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3288,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "63bc6dcf01ba09f1dc95f644b81d04043b6af279e2cef6e11eaa519f7512e913"
+    },
+    {
+      "asset_id": "ui_btn_secondary_pressed",
+      "state": "pressed",
+      "method": "derived",
+      "source_px": "512x192 vector/layered",
+      "png_px": [
+        256,
+        96
+      ],
+      "runtime_du": "300x96",
+      "nine_slice_ltrb": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "alpha_bbox": [
+        2,
+        3,
+        254,
+        93
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3288,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "0effcf459fcb47a44f6072e6f21f1384f8bc51298771585a85331ac182b65dbe"
+    },
+    {
+      "asset_id": "ui_btn_secondary_disabled",
+      "state": "disabled",
+      "method": "derived",
+      "source_px": "512x192 vector/layered",
+      "png_px": [
+        256,
+        96
+      ],
+      "runtime_du": "300x96",
+      "nine_slice_ltrb": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "alpha_bbox": [
+        2,
+        3,
+        254,
+        93
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3288,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "b0e03ec7f16083c91016522210b976f20423aee5154c051829708e83e65fd6fb"
+    },
+    {
+      "asset_id": "ui_btn_secondary_selected",
+      "state": "selected",
+      "method": "derived",
+      "source_px": "512x192 vector/layered",
+      "png_px": [
+        256,
+        96
+      ],
+      "runtime_du": "300x96",
+      "nine_slice_ltrb": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "alpha_bbox": [
+        2,
+        3,
+        254,
+        93
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3288,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "dea12cd0a5f4b23063a45e290ad29cfaf59ff7a13b6e5e98829c0289dfd776be"
+    },
+    {
+      "asset_id": "ui_btn_icon_normal",
+      "state": "normal",
+      "method": "new_draw",
+      "source_px": "192x192 vector",
+      "png_px": [
+        96,
+        96
+      ],
+      "runtime_du": "96x96",
+      "nine_slice_ltrb": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        92,
+        92
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3384,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "9e9e3fdda9b383805cf57857b5c6f9cec84ff28e45841942027828226fc4f38a"
+    },
+    {
+      "asset_id": "ui_btn_icon_pressed",
+      "state": "pressed",
+      "method": "derived",
+      "source_px": "192x192 vector",
+      "png_px": [
+        96,
+        96
+      ],
+      "runtime_du": "96x96",
+      "nine_slice_ltrb": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        92,
+        92
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3384,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "00d2374ffd4ff1847324d9f2e8e2826bd7557e17026e5e6d583559ba8c155c5e"
+    },
+    {
+      "asset_id": "ui_btn_icon_disabled",
+      "state": "disabled",
+      "method": "derived",
+      "source_px": "192x192 vector",
+      "png_px": [
+        96,
+        96
+      ],
+      "runtime_du": "96x96",
+      "nine_slice_ltrb": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        92,
+        92
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3384,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "9c8c20e9f9b2899c03ae11786e1bb3e67074acf72364a88e4c5f787a0306ac11"
+    },
+    {
+      "asset_id": "ui_btn_icon_selected",
+      "state": "selected",
+      "method": "derived",
+      "source_px": "192x192 vector",
+      "png_px": [
+        96,
+        96
+      ],
+      "runtime_du": "96x96",
+      "nine_slice_ltrb": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        92,
+        92
+      ],
+      "transparent_corner": true,
+      "pixel_alpha_nonopaque_count": 3384,
+      "corner_preserved_on_runtime_nineslice": true,
+      "pass_static": true,
+      "sha256_png": "72e1bbd867b392dcafcad2efa198a9dd00289e917ec66147c6e6d95ca360a7f2"
+    }
+  ],
+  "limits": [
+    "Actual engine UI/UX tests and touch interaction cannot be verified from PNG alone",
+    "Disabled visual state requires programmatic click disabling",
+    "For the round icon button runtime stays 96x96; avoid stretching into a pill",
+    "Every state output includes no text or icon; add dynamic localized text/icon in runtime",
+    "Nine-slice margins are in exported PNG pixels, not 512x192 design SVG units"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "packageVersion": "1.64.0-alpha-1790635538000",
+  "sourcePath": "C:\\Users\\vinki\\AppData\\Local\\npm-cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright-core\\lib\\coreBundle.js",
+  "sourceSha256": "cd6730be1bbcff00771a0fc1390f200306d28428ce68e305420ca623cb39cdeb",
+  "line": 38895,
+  "chromiumSource": "https://chromium.googlesource.com/chromium/src/+/main/content/browser/devtools/protocol/emulation_handler.cc",
+  "originalSessionRoute": "Page.delegate._mainFrameSession._client",
+  "syntheticVisibilityEvents": false
+}

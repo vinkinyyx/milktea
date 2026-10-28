@@ -1,0 +1,21 @@
+﻿batch_id,asset_id,name_zh,method,source,outputs,expected_export,status,note
+P3B-01,ui_icon_coupon,晃杯券,new_draw,source_svg/icons/ui_icon_coupon.svg,export_png/96/ui_icon_coupon.png;export_png/48/ui_icon_coupon.png,96x96 PNG;48x48 PNG,created,"stroke >=4px @96, no platform branding"
+P3B-01,ui_icon_rank,排行榜,new_draw,source_svg/icons/ui_icon_rank.svg,export_png/96/ui_icon_rank.png;export_png/48/ui_icon_rank.png,96x96 PNG;48x48 PNG,created,"stroke >=4px @96, no platform branding"
+P3B-01,ui_icon_share,分享,new_draw,source_svg/icons/ui_icon_share.svg,export_png/96/ui_icon_share.png;export_png/48/ui_icon_share.png,96x96 PNG;48x48 PNG,created,"stroke >=4px @96, no platform branding"
+P3B-01,ui_icon_standard,标准局标识,new_draw,source_svg/icons/ui_icon_standard.svg,export_png/96/ui_icon_standard.png;export_png/48/ui_icon_standard.png,96x96 PNG;48x48 PNG,created,"stroke >=4px @96, no platform branding"
+P3B-01,ui_icon_assisted,助力局标识,new_draw,source_svg/icons/ui_icon_assisted.svg,export_png/96/ui_icon_assisted.png;export_png/48/ui_icon_assisted.png,96x96 PNG;48x48 PNG,created,"stroke >=4px @96, no platform branding"
+P3B-01,ui_icon_verified,核验通过,new_draw,source_svg/icons/ui_icon_verified.svg,export_png/96/ui_icon_verified.png;export_png/48/ui_icon_verified.png,96x96 PNG;48x48 PNG,created,"stroke >=4px @96, no platform branding"
+P3B-01,ui_icon_pending,核验中,new_draw,source_svg/icons/ui_icon_pending.svg,export_png/96/ui_icon_pending.png;export_png/48/ui_icon_pending.png,96x96 PNG;48x48 PNG,created,"stroke >=4px @96, no platform branding"
+P3B-02,ui_panel_rank_row,排行行底,new_draw,source_svg/panels/ui_panel_rank_row.svg,export_png/runtime/ui_panel_rank_row.png;export_png/master_2x/ui_panel_rank_row.png,330x48 PNG,created,nine-slice left/top/right/bottom 12 pixels on 330x48
+P3B-02,ui_panel_rank_self,本人排行行高亮,new_draw,source_svg/panels/ui_panel_rank_self.svg,export_png/runtime/ui_panel_rank_self.png;export_png/master_2x/ui_panel_rank_self.png,330x48 PNG,created,nine-slice left/top/right/bottom 12 pixels on 330x48
+P3B-02,ui_avatar_default,默认玩家头像,new_draw,source_svg/details/ui_avatar_default.svg,export_png/runtime/ui_avatar_default.png;export_png/master_2x/ui_avatar_default.png,256x256 PNG,created,clean vector source
+P3B-02,ui_medal_gold,排行第一奖牌,new_draw,source_svg/details/ui_medal_gold.svg,export_png/runtime/ui_medal_gold.png;export_png/master_2x/ui_medal_gold.png,128x128 PNG,created,clean vector source
+P3B-02,ui_medal_silver,排行第二奖牌,new_draw,source_svg/details/ui_medal_silver.svg,export_png/runtime/ui_medal_silver.png;export_png/master_2x/ui_medal_silver.png,128x128 PNG,created,clean vector source
+P3B-02,ui_medal_bronze,排行第三奖牌,new_draw,source_svg/details/ui_medal_bronze.svg,export_png/runtime/ui_medal_bronze.png;export_png/master_2x/ui_medal_bronze.png,128x128 PNG,created,clean vector source
+P3B-03,ui_coupon_ticket,晃杯券票面,new_draw,source_svg/details/ui_coupon_ticket.svg,export_png/runtime/ui_coupon_ticket.png;export_png/master_2x/ui_coupon_ticket.png,480x240 PNG,created,clean vector source
+P3B-03,gen_leaderboard_rank,榜单名次/超过比例,engine,,,none,runtime_contract,runtime/gen_leaderboard_rank.mjs; rank ties use competition ranking
+P3B-03,gen_coupon_expiry,券余额/到期文本,engine,,,none,runtime_contract,runtime/gen_coupon_expiry.mjs; requires trusted serverEpochMs
+P3B-04,platform_user_avatar,授权玩家头像,platform,,,provider-specified,runtime_contract,platform/runtime_contracts.json; pending real platform authorization
+P3B-04,platform_share_entry_code,真实游戏入口码,platform,,,provider-specified,runtime_contract,platform/runtime_contracts.json; pending real platform authorization
+P3B-05,share_result_background,普通成绩分享卡,new_draw,source_svg/share/share_result_background.svg,export_png/runtime/share_result_background.png;export_png/master_2x/share_result_background.png,750x1000 PNG,created,share: runtime dynamic value regions remain blank
+P3B-05,share_record_background,新纪录分享卡,derived,source_svg/share/share_record_background.svg,export_png/runtime/share_record_background.png;export_png/master_2x/share_record_background.png,750x1000 PNG,created,share: runtime dynamic value regions remain blank

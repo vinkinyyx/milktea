@@ -1,0 +1,5084 @@
+{
+  "caseId": "queue-terminal",
+  "attemptId": "final05-r2-queue-terminal",
+  "buildId": null,
+  "expectedBuildId": "20261029-p1a-final-05",
+  "pageUrl": "http://127.0.0.1:8778/?p1aCase=queue-terminal&attemptId=final05-r2-queue-terminal&expectedBuildId=20261029-p1a-final-05&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-05%2Fraw%2Ffinal05-r2-queue-terminal",
+  "startedAt": "2026-10-28T18:26:28.674Z",
+  "startupStatus": {
+    "buildId": "20261029-p1a-final-05",
+    "attemptId": "final05-r2-queue-terminal",
+    "ready": true,
+    "loading": false,
+    "tick": 0,
+    "stepCount": 0,
+    "paused": true,
+    "pauseReasons": [
+      "REBUILD"
+    ],
+    "interruptionSerial": 0,
+    "entityCount": 3,
+    "contactCount": 0,
+    "contactBeginEvents": 0,
+    "contactEndEvents": 0,
+    "listenerCount": 6,
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "levelRadii": [
+      {
+        "level": 1,
+        "radiusDu": 18
+      },
+      {
+        "level": 2,
+        "radiusDu": 24
+      },
+      {
+        "level": 3,
+        "radiusDu": 32
+      },
+      {
+        "level": 4,
+        "radiusDu": 42
+      },
+      {
+        "level": 5,
+        "radiusDu": 55
+      },
+      {
+        "level": 6,
+        "radiusDu": 70
+      },
+      {
+        "level": 7,
+        "radiusDu": 89
+      },
+      {
+        "level": 8,
+        "radiusDu": 112
+      },
+      {
+        "level": 9,
+        "radiusDu": 140
+      }
+    ],
+    "cupWidthScale": 1,
+    "queue": null,
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2048.39999999851,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2048.39999999851,
+          "revision": 0
+        }
+      ]
+    },
+    "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+  },
+  "terminal": {
+    "taskId": "nine-1793211988989-1",
+    "state": "BLOCKED_FINAL",
+    "level": 9,
+    "batchAttempt": 128,
+    "records": [
+      {
+        "batchAttempt": 1,
+        "candidateIndex": 0,
+        "level": 1,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 2,
+        "candidateIndex": 0,
+        "level": 2,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 3,
+        "candidateIndex": 0,
+        "level": 3,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 4,
+        "candidateIndex": 0,
+        "level": 4,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 5,
+        "candidateIndex": 0,
+        "level": 5,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 6,
+        "candidateIndex": 0,
+        "level": 6,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 7,
+        "candidateIndex": 0,
+        "level": 7,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 8,
+        "candidateIndex": 0,
+        "level": 8,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 9,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 9,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 9,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 9,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 9,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 10,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 10,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 10,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 10,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 10,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 11,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 11,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 11,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 11,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 11,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 12,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 12,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 12,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 12,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 12,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 13,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 13,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 13,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 13,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 13,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 14,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 14,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 14,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 14,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 14,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 15,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 15,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 15,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 15,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 15,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 16,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 16,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 16,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 16,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 16,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 17,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 17,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 17,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 17,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 17,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 18,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 18,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 18,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 18,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 18,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 19,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 19,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 19,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 19,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 19,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 20,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 20,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 20,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 20,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 20,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 21,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 21,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 21,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 21,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 21,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 22,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 22,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 22,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 22,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 22,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 23,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 23,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 23,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 23,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 23,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 24,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 24,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 24,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 24,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 24,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 25,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 25,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 25,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 25,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 25,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 26,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 26,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 26,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 26,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 26,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 27,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 27,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 27,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 27,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 27,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 28,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 28,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 28,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 28,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 28,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 29,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 29,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 29,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 29,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 29,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 30,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 30,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 30,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 30,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 30,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 31,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 31,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 31,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 31,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 31,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 32,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 32,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 32,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 32,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 32,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 33,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 33,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 33,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 33,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 33,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 34,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 34,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 34,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 34,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 34,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 35,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 35,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 35,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 35,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 35,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 36,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 36,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 36,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 36,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 36,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 37,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 37,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 37,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 37,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 37,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 38,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 38,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 38,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 38,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 38,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 39,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 39,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 39,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 39,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 39,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 40,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 40,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 40,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 40,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 40,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 41,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 41,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 41,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 41,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 41,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 42,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 42,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 42,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 42,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 42,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 43,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 43,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 43,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 43,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 43,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 44,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 44,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 44,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 44,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 44,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 45,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 45,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 45,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 45,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 45,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 46,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 46,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 46,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 46,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 46,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 47,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 47,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 47,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 47,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 47,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 48,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 48,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 48,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 48,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 48,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 49,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 49,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 49,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 49,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 49,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 50,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 50,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 50,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 50,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 50,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 51,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 51,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 51,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 51,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 51,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 52,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 52,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 52,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 52,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 52,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 53,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 53,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 53,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 53,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 53,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 54,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 54,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 54,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 54,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 54,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 55,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 55,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 55,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 55,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 55,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 56,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 56,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 56,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 56,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 56,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 57,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 57,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 57,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 57,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 57,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 58,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 58,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 58,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 58,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 58,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 59,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 59,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 59,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 59,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 59,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 60,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 60,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 60,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 60,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 60,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 61,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 61,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 61,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 61,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 61,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 62,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 62,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 62,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 62,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 62,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 63,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 63,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 63,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 63,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 63,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 64,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 64,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 64,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 64,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 64,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 65,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 65,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 65,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 65,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 65,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 66,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 66,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 66,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 66,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 66,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 67,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 67,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 67,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 67,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 67,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 68,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 68,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 68,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 68,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 68,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 69,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 69,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 69,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 69,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 69,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 70,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 70,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 70,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 70,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 70,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 71,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 71,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 71,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 71,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 71,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 72,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 72,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 72,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 72,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 72,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 73,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 73,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 73,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 73,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 73,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 74,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 74,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 74,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 74,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 74,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 75,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 75,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 75,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 75,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 75,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 76,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 76,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 76,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 76,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 76,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 77,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 77,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 77,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 77,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 77,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 78,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 78,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 78,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 78,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 78,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 79,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 79,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 79,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 79,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 79,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 80,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 80,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 80,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 80,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 80,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 81,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 81,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 81,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 81,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 81,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 82,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 82,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 82,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 82,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 82,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 83,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 83,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 83,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 83,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 83,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 84,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 84,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 84,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 84,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 84,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 85,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 85,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 85,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 85,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 85,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 86,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 86,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 86,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 86,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 86,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 87,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 87,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 87,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 87,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 87,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 88,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 88,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 88,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 88,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 88,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 89,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 89,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 89,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 89,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 89,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 90,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 90,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 90,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 90,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 90,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 91,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 91,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 91,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 91,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 91,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 92,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 92,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 92,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 92,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 92,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 93,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 93,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 93,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 93,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 93,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 94,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 94,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 94,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 94,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 94,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 95,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 95,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 95,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 95,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 95,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 96,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 96,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 96,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 96,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 96,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 97,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 97,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 97,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 97,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 97,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 98,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 98,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 98,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 98,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 98,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 99,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 99,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 99,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 99,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 99,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 100,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 100,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 100,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 100,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 100,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 101,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 101,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 101,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 101,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 101,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 102,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 102,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 102,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 102,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 102,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 103,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 103,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 103,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 103,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 103,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 104,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 104,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 104,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 104,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 104,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 105,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 105,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 105,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 105,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 105,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 106,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 106,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 106,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 106,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 106,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 107,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 107,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 107,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 107,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 107,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 108,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 108,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 108,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 108,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 108,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 109,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 109,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 109,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 109,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 109,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 110,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 110,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 110,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 110,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 110,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 111,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 111,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 111,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 111,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 111,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 112,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 112,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 112,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 112,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 112,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 113,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 113,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 113,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 113,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 113,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 114,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 114,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 114,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 114,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 114,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 115,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 115,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 115,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 115,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 115,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 116,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 116,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 116,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 116,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 116,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 117,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 117,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 117,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 117,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 117,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 118,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 118,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 118,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 118,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 118,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 119,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 119,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 119,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 119,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 119,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 120,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 120,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 120,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 120,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 120,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 121,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 121,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 121,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 121,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 121,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 122,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 122,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 122,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 122,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 122,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 123,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 123,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 123,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 123,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 123,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 124,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 124,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 124,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 124,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 124,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 125,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 125,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 125,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 125,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 125,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 126,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 126,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 126,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 126,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 126,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 127,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 127,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 127,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 127,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 127,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 128,
+        "candidateIndex": 0,
+        "level": 9,
+        "xDu": 375,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 128,
+        "candidateIndex": 1,
+        "level": 9,
+        "xDu": 259,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 128,
+        "candidateIndex": 2,
+        "level": 9,
+        "xDu": 491,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 128,
+        "candidateIndex": 3,
+        "level": 9,
+        "xDu": 305,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      },
+      {
+        "batchAttempt": 128,
+        "candidateIndex": 4,
+        "level": 9,
+        "xDu": 445,
+        "accepted": false,
+        "reason": "blocked_by_entity:8"
+      }
+    ]
+  },
+  "afterWait": {
+    "buildId": "20261029-p1a-final-05",
+    "attemptId": "final05-r2-queue-terminal",
+    "ready": true,
+    "loading": false,
+    "tick": 2471,
+    "stepCount": 2471,
+    "paused": false,
+    "pauseReasons": [],
+    "interruptionSerial": 0,
+    "entityCount": 8,
+    "contactCount": 8,
+    "contactBeginEvents": 38,
+    "contactEndEvents": 30,
+    "listenerCount": 11,
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "levelRadii": [
+      {
+        "level": 1,
+        "radiusDu": 18
+      },
+      {
+        "level": 2,
+        "radiusDu": 24
+      },
+      {
+        "level": 3,
+        "radiusDu": 32
+      },
+      {
+        "level": 4,
+        "radiusDu": 42
+      },
+      {
+        "level": 5,
+        "radiusDu": 55
+      },
+      {
+        "level": 6,
+        "radiusDu": 70
+      },
+      {
+        "level": 7,
+        "radiusDu": 89
+      },
+      {
+        "level": 8,
+        "radiusDu": 112
+      },
+      {
+        "level": 9,
+        "radiusDu": 140
+      }
+    ],
+    "cupWidthScale": 1,
+    "queue": {
+      "taskId": "nine-1793211988989-1",
+      "state": "BLOCKED_FINAL",
+      "level": 9,
+      "batchAttempt": 128,
+      "recordCount": 608
+    },
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2048.39999999851,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2048.39999999851,
+          "revision": 0
+        }
+      ]
+    },
+    "message": "九种尺寸任务终止：第9级120轮候选均拒绝"
+  },
+  "expectedTerminal": true,
+  "terminalStable": true,
+  "pass": true,
+  "acceptance": "PASS",
+  "endedAt": "2026-10-28T18:27:10.213Z",
+  "consoleEvents": [
+    "{\"test\":\"p1a-runtime-identity\",\"buildId\":\"20261029-p1a-final-05\",\"creator\":\"3.8.8\",\"box2d\":\"1.0.2\",\"ptm\":32,\"autoSimulation\":false,\"probeMode\":\"OFF\",\"probeVersion\":\"p1a-probe-v2\",\"attemptId\":\"final05-r2-queue-terminal\"}",
+    "{\"test\":\"nine-size-queue\",\"taskId\":\"nine-1793211988989-1\",\"state\":\"BLOCKED_FINAL\",\"level\":9,\"levelFailureRounds\":120,\"totalBatches\":128,\"candidatesPerRound\":5,\"records\":[{\"batchAttempt\":1,\"candidateIndex\":0,\"level\":1,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":2,\"candidateIndex\":0,\"level\":2,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":3,\"candidateIndex\":0,\"level\":3,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":4,\"candidateIndex\":0,\"level\":4,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":5,\"candidateIndex\":0,\"level\":5,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":6,\"candidateIndex\":0,\"level\":6,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":7,\"candidateIndex\":0,\"level\":7,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":8,\"candidateIndex\":0,\"level\":8,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":9,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":9,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":9,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":9,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":9,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":10,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":10,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":10,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":10,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":10,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":11,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":11,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":11,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":11,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":11,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":12,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":12,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":12,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":12,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":12,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":13,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":13,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":13,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":13,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":13,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":14,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":14,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":14,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":14,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":14,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":15,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":15,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":15,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":15,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":15,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":16,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":16,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":16,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":16,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":16,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":17,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":17,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":17,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":17,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":17,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":18,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":18,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":18,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":18,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":18,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":19,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":19,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":19,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":19,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":19,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":20,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":20,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":20,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":20,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":20,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":21,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":21,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":21,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":21,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":21,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":22,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":22,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":22,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":22,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":22,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":23,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":23,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":23,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":23,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":23,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":24,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":24,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":24,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":24,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":24,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":25,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":25,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":25,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":25,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":25,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":26,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":26,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":26,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":26,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":26,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":27,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":27,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":27,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":27,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":27,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":28,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":28,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":28,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":28,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":28,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":29,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":29,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":29,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":29,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":29,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":30,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":30,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":30,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":30,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":30,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":31,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":31,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":31,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":31,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":31,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":32,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":32,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":32,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":32,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":32,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":33,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":33,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":33,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":33,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":33,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":34,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":34,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":34,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":34,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":34,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":35,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":35,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":35,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":35,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":35,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":36,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":36,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":36,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":36,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":36,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":37,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":37,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":37,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":37,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":37,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":38,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":38,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":38,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":38,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":38,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":39,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":39,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":39,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":39,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":39,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":40,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":40,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":40,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":40,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":40,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":41,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":41,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":41,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":41,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":41,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":42,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":42,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":42,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":42,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":42,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":43,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":43,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":43,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":43,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":43,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":44,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":44,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":44,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":44,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":44,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":45,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":45,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":45,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":45,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":45,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":46,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":46,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":46,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":46,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":46,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":47,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":47,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":47,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":47,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":47,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":48,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":48,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":48,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":48,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":48,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":49,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":49,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":49,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":49,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":49,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":50,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":50,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":50,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":50,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":50,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":51,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":51,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":51,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":51,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":51,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":52,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":52,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":52,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":52,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":52,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":53,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":53,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":53,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":53,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":53,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":54,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":54,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":54,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":54,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":54,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":55,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":55,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":55,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":55,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":55,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":56,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":56,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":56,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":56,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":56,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":57,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":57,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":57,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":57,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":57,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":58,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":58,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":58,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":58,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":58,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":59,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":59,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":59,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":59,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":59,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":60,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":60,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":60,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":60,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":60,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":61,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":61,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":61,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":61,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":61,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":62,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":62,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":62,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":62,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":62,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":63,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":63,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":63,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":63,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":63,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":64,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":64,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":64,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":64,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":64,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":65,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":65,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":65,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":65,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":65,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":66,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":66,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":66,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":66,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":66,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":67,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":67,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":67,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":67,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":67,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":68,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":68,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":68,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":68,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":68,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":69,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":69,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":69,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":69,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":69,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":70,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":70,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":70,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":70,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":70,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":71,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":71,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":71,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":71,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":71,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":72,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":72,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":72,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":72,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":72,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":73,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":73,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":73,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":73,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":73,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":74,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":74,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":74,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":74,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":74,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":75,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":75,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":75,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":75,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":75,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":76,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":76,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":76,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":76,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":76,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":77,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":77,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":77,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":77,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":77,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":78,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":78,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":78,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":78,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":78,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":79,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":79,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":79,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":79,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":79,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":80,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":80,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":80,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":80,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":80,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":81,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":81,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":81,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":81,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":81,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":82,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":82,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":82,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":82,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":82,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":83,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":83,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":83,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":83,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":83,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":84,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":84,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":84,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":84,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":84,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":85,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":85,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":85,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":85,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":85,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":86,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":86,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":86,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":86,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":86,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":87,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":87,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":87,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":87,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":87,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":88,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":88,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":88,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":88,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":88,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":89,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":89,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":89,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":89,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":89,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":90,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":90,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":90,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":90,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":90,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":91,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":91,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":91,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":91,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":91,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":92,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":92,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":92,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":92,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":92,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":93,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":93,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":93,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":93,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":93,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":94,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":94,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":94,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":94,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":94,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":95,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":95,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":95,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":95,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":95,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":96,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":96,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":96,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":96,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":96,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":97,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":97,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":97,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":97,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":97,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":98,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":98,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":98,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":98,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":98,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":99,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":99,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":99,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":99,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":99,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":100,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":100,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":100,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":100,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":100,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":101,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":101,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":101,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":101,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":101,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":102,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":102,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":102,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":102,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":102,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":103,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":103,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":103,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":103,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":103,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":104,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":104,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":104,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":104,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":104,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":105,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":105,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":105,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":105,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":105,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":106,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":106,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":106,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":106,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":106,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":107,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":107,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":107,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":107,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":107,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":108,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":108,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":108,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":108,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":108,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":109,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":109,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":109,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":109,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":109,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":110,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":110,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":110,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":110,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":110,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":111,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":111,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":111,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":111,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":111,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":112,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":112,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":112,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":112,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":112,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":113,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":113,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":113,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":113,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":113,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":114,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":114,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":114,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":114,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":114,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":115,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":115,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":115,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":115,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":115,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":116,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":116,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":116,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":116,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":116,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":117,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":117,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":117,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":117,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":117,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":118,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":118,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":118,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":118,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":118,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":119,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":119,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":119,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":119,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":119,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":120,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":120,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":120,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":120,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":120,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":121,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":121,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":121,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":121,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":121,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":122,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":122,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":122,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":122,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":122,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":123,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":123,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":123,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":123,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":123,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":124,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":124,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":124,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":124,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":124,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":125,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":125,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":125,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":125,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":125,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":126,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":126,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":126,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":126,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":126,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":127,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":127,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":127,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":127,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":127,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":128,\"candidateIndex\":0,\"level\":9,\"xDu\":375,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":128,\"candidateIndex\":1,\"level\":9,\"xDu\":259,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":128,\"candidateIndex\":2,\"level\":9,\"xDu\":491,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":128,\"candidateIndex\":3,\"level\":9,\"xDu\":305,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"},{\"batchAttempt\":128,\"candidateIndex\":4,\"level\":9,\"xDu\":445,\"accepted\":false,\"reason\":\"blocked_by_entity:8\"}]}"
+  ],
+  "pageErrors": []
+}

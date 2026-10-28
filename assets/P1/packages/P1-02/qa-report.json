@@ -1,0 +1,339 @@
+{
+  "phase": "P1-02",
+  "date": "2026-10-27",
+  "batch_assets": 12,
+  "required_thumbnails": 9,
+  "optional_faces": 3,
+  "corrected_first_batch_masters": 9,
+  "checks": [
+    {
+      "asset_id": "spr_face_happy",
+      "pixels": [
+        256,
+        128
+      ],
+      "has_alpha": true,
+      "alpha_0": 31354,
+      "alpha_255": 994
+    },
+    {
+      "asset_id": "spr_face_neutral",
+      "pixels": [
+        256,
+        128
+      ],
+      "has_alpha": true,
+      "alpha_0": 31972,
+      "alpha_255": 600
+    },
+    {
+      "asset_id": "spr_face_surprised",
+      "pixels": [
+        256,
+        128
+      ],
+      "has_alpha": true,
+      "alpha_0": 31280,
+      "alpha_255": 1144
+    },
+    {
+      "asset_id": "ui_ing_coconut_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2899,
+      "alpha_255": 5455
+    },
+    {
+      "asset_id": "ui_ing_grass_jelly_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2902,
+      "alpha_255": 5449
+    },
+    {
+      "asset_id": "ui_ing_large_pearl_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2889,
+      "alpha_255": 5460
+    },
+    {
+      "asset_id": "ui_ing_mochi_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2918,
+      "alpha_255": 5441
+    },
+    {
+      "asset_id": "ui_ing_pudding_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2902,
+      "alpha_255": 5450
+    },
+    {
+      "asset_id": "ui_ing_red_bean_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2896,
+      "alpha_255": 5440
+    },
+    {
+      "asset_id": "ui_ing_sago_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2897,
+      "alpha_255": 5451
+    },
+    {
+      "asset_id": "ui_ing_small_pearl_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2880,
+      "alpha_255": 5458
+    },
+    {
+      "asset_id": "ui_ing_taro_thumb",
+      "pixels": [
+        96,
+        96
+      ],
+      "has_alpha": true,
+      "alpha_0": 2886,
+      "alpha_255": 5449
+    }
+  ],
+  "master_qa": [
+    {
+      "master": "spr_ing_sago_base",
+      "thumb": "ui_ing_sago_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 0.71,
+      "bbox": [
+        48,
+        51,
+        974,
+        971
+      ],
+      "radius_rms_error": 0.0039,
+      "radius_max_error": 0.0128,
+      "thumb_alpha": true
+    },
+    {
+      "master": "spr_ing_red_bean_base",
+      "thumb": "ui_ing_red_bean_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 0.5,
+      "bbox": [
+        49,
+        50,
+        974,
+        972
+      ],
+      "radius_rms_error": 0.0028,
+      "radius_max_error": 0.0094,
+      "thumb_alpha": true
+    },
+    {
+      "master": "spr_ing_small_pearl_base",
+      "thumb": "ui_ing_small_pearl_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 0.0,
+      "bbox": [
+        50,
+        51,
+        973,
+        972
+      ],
+      "radius_rms_error": 0.0012,
+      "radius_max_error": 0.0034,
+      "thumb_alpha": true
+    },
+    {
+      "master": "spr_ing_coconut_base",
+      "thumb": "ui_ing_coconut_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 0.5,
+      "bbox": [
+        48,
+        50,
+        975,
+        974
+      ],
+      "radius_rms_error": 0.0033,
+      "radius_max_error": 0.0123,
+      "thumb_alpha": true
+    },
+    {
+      "master": "spr_ing_large_pearl_base",
+      "thumb": "ui_ing_large_pearl_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 0.0,
+      "bbox": [
+        50,
+        51,
+        973,
+        972
+      ],
+      "radius_rms_error": 0.0011,
+      "radius_max_error": 0.003,
+      "thumb_alpha": true
+    },
+    {
+      "master": "spr_ing_grass_jelly_base",
+      "thumb": "ui_ing_grass_jelly_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 1.12,
+      "bbox": [
+        47,
+        53,
+        977,
+        968
+      ],
+      "radius_rms_error": 0.0073,
+      "radius_max_error": 0.017,
+      "thumb_alpha": true
+    },
+    {
+      "master": "spr_ing_pudding_base",
+      "thumb": "ui_ing_pudding_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 0.71,
+      "bbox": [
+        49,
+        53,
+        973,
+        969
+      ],
+      "radius_rms_error": 0.006,
+      "radius_max_error": 0.0126,
+      "thumb_alpha": true
+    },
+    {
+      "master": "spr_ing_taro_base",
+      "thumb": "ui_ing_taro_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 0.5,
+      "bbox": [
+        49,
+        51,
+        973,
+        972
+      ],
+      "radius_rms_error": 0.0027,
+      "radius_max_error": 0.0115,
+      "thumb_alpha": true
+    },
+    {
+      "master": "spr_ing_mochi_base",
+      "thumb": "ui_ing_mochi_thumb",
+      "master_size": [
+        1024,
+        1024
+      ],
+      "thumb_size": [
+        96,
+        96
+      ],
+      "alpha_transparency": true,
+      "center_error_px": 0.71,
+      "bbox": [
+        45,
+        54,
+        977,
+        968
+      ],
+      "radius_rms_error": 0.0072,
+      "radius_max_error": 0.0134,
+      "thumb_alpha": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "ui_icon_calendar",
+    "ui_icon_friend",
+    "ui_icon_win",
+    "ui_icon_tie",
+    "ui_icon_loss",
+    "ui_panel_challenge",
+    "share_daily_background",
+    "share_friend_background",
+    "gen_daily_budget",
+    "gen_challenge_status",
+    "platform_challenge_entry_code"
+  ],
+  "count": 11,
+  "inspection": "8 independent SVG assets (16 icon PNGs and 6 panel/share PNGs with master+runtime); 2 JS modules; 1 platform contract; source package restored from original P4-A ZIP; game integration not tested"
+}

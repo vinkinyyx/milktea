@@ -1,6 +1,6 @@
 # 图像逐项制作清单
 
-本清单由 tools/build_image_catalog.py 生成，修改生成源后重建；所有图片待制作。共213项，制作方式计数：{"new_draw": 137, "derived": 55, "engine": 16, "platform": 5}。
+本清单由 tools/build_image_catalog.py 生成；规格status是原计划，intake_status是实际交付检查，入库不等于引擎验收。共213项，制作方式计数：{"new_draw": 137, "derived": 55, "engine": 16, "platform": 5}。
 
 一项可能有多档尺寸，不能把导出档数当作新画数量。optional/candidate不属于必交；平台官方尺寸需实施时复核。
 
@@ -24,6 +24,9 @@
 - license_status: not_acquired
 - filename: spr_ing_sago_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_sago_base
 
 ## ui_ing_sago_thumb · 西米团缩略图
 
@@ -45,6 +48,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_sago_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_sago_thumb
 
 ## ui_ing_sago_locked · 西米团图鉴未发现剪影
 
@@ -66,6 +72,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_sago_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_sago_locked
 
 ## ui_ing_sago_detail · 西米团图鉴详情图
 
@@ -87,6 +96,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_sago_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_sago_detail
 
 ## spr_ing_red_bean_base · 红豆团
 
@@ -108,6 +120,9 @@
 - license_status: not_acquired
 - filename: spr_ing_red_bean_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_red_bean_base
 
 ## ui_ing_red_bean_thumb · 红豆团缩略图
 
@@ -129,6 +144,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_red_bean_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_red_bean_thumb
 
 ## ui_ing_red_bean_locked · 红豆团图鉴未发现剪影
 
@@ -150,6 +168,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_red_bean_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_red_bean_locked
 
 ## ui_ing_red_bean_detail · 红豆团图鉴详情图
 
@@ -171,6 +192,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_red_bean_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_red_bean_detail
 
 ## spr_ing_small_pearl_base · 小珍珠
 
@@ -192,6 +216,9 @@
 - license_status: not_acquired
 - filename: spr_ing_small_pearl_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_small_pearl_base
 
 ## ui_ing_small_pearl_thumb · 小珍珠缩略图
 
@@ -213,6 +240,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_small_pearl_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_small_pearl_thumb
 
 ## ui_ing_small_pearl_locked · 小珍珠图鉴未发现剪影
 
@@ -234,6 +264,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_small_pearl_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_small_pearl_locked
 
 ## ui_ing_small_pearl_detail · 小珍珠图鉴详情图
 
@@ -255,6 +288,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_small_pearl_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_small_pearl_detail
 
 ## spr_ing_coconut_base · 椰果
 
@@ -276,6 +312,9 @@
 - license_status: not_acquired
 - filename: spr_ing_coconut_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_coconut_base
 
 ## ui_ing_coconut_thumb · 椰果缩略图
 
@@ -297,6 +336,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_coconut_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_coconut_thumb
 
 ## ui_ing_coconut_locked · 椰果图鉴未发现剪影
 
@@ -318,6 +360,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_coconut_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_coconut_locked
 
 ## ui_ing_coconut_detail · 椰果图鉴详情图
 
@@ -339,6 +384,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_coconut_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_coconut_detail
 
 ## spr_ing_large_pearl_base · 大珍珠
 
@@ -360,6 +408,9 @@
 - license_status: not_acquired
 - filename: spr_ing_large_pearl_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_large_pearl_base
 
 ## ui_ing_large_pearl_thumb · 大珍珠缩略图
 
@@ -381,6 +432,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_large_pearl_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_large_pearl_thumb
 
 ## ui_ing_large_pearl_locked · 大珍珠图鉴未发现剪影
 
@@ -402,6 +456,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_large_pearl_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_large_pearl_locked
 
 ## ui_ing_large_pearl_detail · 大珍珠图鉴详情图
 
@@ -423,6 +480,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_large_pearl_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_large_pearl_detail
 
 ## spr_ing_grass_jelly_base · 仙草冻
 
@@ -444,6 +504,9 @@
 - license_status: not_acquired
 - filename: spr_ing_grass_jelly_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_grass_jelly_base
 
 ## ui_ing_grass_jelly_thumb · 仙草冻缩略图
 
@@ -465,6 +528,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_grass_jelly_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_grass_jelly_thumb
 
 ## ui_ing_grass_jelly_locked · 仙草冻图鉴未发现剪影
 
@@ -486,6 +552,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_grass_jelly_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_grass_jelly_locked
 
 ## ui_ing_grass_jelly_detail · 仙草冻图鉴详情图
 
@@ -507,6 +576,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_grass_jelly_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_grass_jelly_detail
 
 ## spr_ing_pudding_base · 布丁
 
@@ -528,6 +600,9 @@
 - license_status: not_acquired
 - filename: spr_ing_pudding_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_pudding_base
 
 ## ui_ing_pudding_thumb · 布丁缩略图
 
@@ -549,6 +624,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_pudding_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_pudding_thumb
 
 ## ui_ing_pudding_locked · 布丁图鉴未发现剪影
 
@@ -570,6 +648,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_pudding_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_pudding_locked
 
 ## ui_ing_pudding_detail · 布丁图鉴详情图
 
@@ -591,6 +672,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_pudding_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_pudding_detail
 
 ## spr_ing_taro_base · 芋泥球
 
@@ -612,6 +696,9 @@
 - license_status: not_acquired
 - filename: spr_ing_taro_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_taro_base
 
 ## ui_ing_taro_thumb · 芋泥球缩略图
 
@@ -633,6 +720,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_taro_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_taro_thumb
 
 ## ui_ing_taro_locked · 芋泥球图鉴未发现剪影
 
@@ -654,6 +744,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_taro_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_taro_locked
 
 ## ui_ing_taro_detail · 芋泥球图鉴详情图
 
@@ -675,6 +768,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_taro_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_taro_detail
 
 ## spr_ing_mochi_base · 麻薯团
 
@@ -696,6 +792,9 @@
 - license_status: not_acquired
 - filename: spr_ing_mochi_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 3
+- library_index: assets/library/index.html#spr_ing_mochi_base
 
 ## ui_ing_mochi_thumb · 麻薯团缩略图
 
@@ -717,6 +816,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_mochi_thumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_mochi_thumb
 
 ## ui_ing_mochi_locked · 麻薯团图鉴未发现剪影
 
@@ -738,6 +840,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_mochi_locked.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_mochi_locked
 
 ## ui_ing_mochi_detail · 麻薯团图鉴详情图
 
@@ -759,6 +864,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_ing_mochi_detail.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_ing_mochi_detail
 
 ## spr_face_neutral · 通用中性眼嘴
 
@@ -780,6 +888,9 @@
 - license_status: not_acquired
 - filename: spr_face_neutral.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_face_neutral
 
 ## spr_face_happy · 通用短时微笑
 
@@ -801,6 +912,9 @@
 - license_status: not_acquired
 - filename: spr_face_happy.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_face_happy
 
 ## spr_face_surprised · 通用危险时惊讶
 
@@ -822,6 +936,9 @@
 - license_status: not_acquired
 - filename: spr_face_surprised.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_face_surprised
 
 ## spr_cup_classic_back · 经典奶茶杯后壁
 
@@ -843,6 +960,9 @@
 - license_status: not_acquired
 - filename: spr_cup_classic_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_classic_back
 
 ## spr_cup_classic_tea · 经典奶茶杯内奶茶底色
 
@@ -864,6 +984,9 @@
 - license_status: not_acquired
 - filename: spr_cup_classic_tea.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_classic_tea
 
 ## spr_cup_classic_front · 经典奶茶杯前壁高光
 
@@ -885,6 +1008,9 @@
 - license_status: not_acquired
 - filename: spr_cup_classic_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_classic_front
 
 ## spr_cup_classic_rim_back · 经典奶茶杯口后缘
 
@@ -906,6 +1032,9 @@
 - license_status: not_acquired
 - filename: spr_cup_classic_rim_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_classic_rim_back
 
 ## spr_cup_classic_rim_front · 经典奶茶杯口前缘
 
@@ -927,6 +1056,9 @@
 - license_status: not_acquired
 - filename: spr_cup_classic_rim_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_classic_rim_front
 
 ## spr_cup_classic_base · 经典奶茶杯底装饰
 
@@ -948,6 +1080,9 @@
 - license_status: not_acquired
 - filename: spr_cup_classic_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_classic_base
 
 ## spr_cup_classic_label · 经典奶茶杯身无文字印花
 
@@ -969,6 +1104,9 @@
 - license_status: not_acquired
 - filename: spr_cup_classic_label.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_classic_label
 
 ## ui_stage_classic_card · 经典奶茶菜单封面
 
@@ -990,6 +1128,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_stage_classic_card.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_stage_classic_card
 
 ## spr_cup_coconut_green_back · 椰香绿茶杯后壁
 
@@ -1011,6 +1152,9 @@
 - license_status: not_acquired
 - filename: spr_cup_coconut_green_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_coconut_green_back
 
 ## spr_cup_coconut_green_tea · 椰香绿茶杯内奶茶底色
 
@@ -1032,6 +1176,9 @@
 - license_status: not_acquired
 - filename: spr_cup_coconut_green_tea.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_coconut_green_tea
 
 ## spr_cup_coconut_green_front · 椰香绿茶杯前壁高光
 
@@ -1053,6 +1200,9 @@
 - license_status: not_acquired
 - filename: spr_cup_coconut_green_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_coconut_green_front
 
 ## spr_cup_coconut_green_rim_back · 椰香绿茶杯口后缘
 
@@ -1074,6 +1224,9 @@
 - license_status: not_acquired
 - filename: spr_cup_coconut_green_rim_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_coconut_green_rim_back
 
 ## spr_cup_coconut_green_rim_front · 椰香绿茶杯口前缘
 
@@ -1095,6 +1248,9 @@
 - license_status: not_acquired
 - filename: spr_cup_coconut_green_rim_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_coconut_green_rim_front
 
 ## spr_cup_coconut_green_base · 椰香绿茶杯底装饰
 
@@ -1116,6 +1272,9 @@
 - license_status: not_acquired
 - filename: spr_cup_coconut_green_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_coconut_green_base
 
 ## spr_cup_coconut_green_label · 椰香绿茶杯身无文字印花
 
@@ -1137,6 +1296,9 @@
 - license_status: not_acquired
 - filename: spr_cup_coconut_green_label.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_coconut_green_label
 
 ## ui_stage_coconut_green_card · 椰香绿茶菜单封面
 
@@ -1158,6 +1320,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_stage_coconut_green_card.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_stage_coconut_green_card
 
 ## spr_cup_taro_boba_back · 芋泥波波杯后壁
 
@@ -1179,6 +1344,9 @@
 - license_status: not_acquired
 - filename: spr_cup_taro_boba_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_taro_boba_back
 
 ## spr_cup_taro_boba_tea · 芋泥波波杯内奶茶底色
 
@@ -1200,6 +1368,9 @@
 - license_status: not_acquired
 - filename: spr_cup_taro_boba_tea.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_taro_boba_tea
 
 ## spr_cup_taro_boba_front · 芋泥波波杯前壁高光
 
@@ -1221,6 +1392,9 @@
 - license_status: not_acquired
 - filename: spr_cup_taro_boba_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_taro_boba_front
 
 ## spr_cup_taro_boba_rim_back · 芋泥波波杯口后缘
 
@@ -1242,6 +1416,9 @@
 - license_status: not_acquired
 - filename: spr_cup_taro_boba_rim_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_taro_boba_rim_back
 
 ## spr_cup_taro_boba_rim_front · 芋泥波波杯口前缘
 
@@ -1263,6 +1440,9 @@
 - license_status: not_acquired
 - filename: spr_cup_taro_boba_rim_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_taro_boba_rim_front
 
 ## spr_cup_taro_boba_base · 芋泥波波杯底装饰
 
@@ -1284,6 +1464,9 @@
 - license_status: not_acquired
 - filename: spr_cup_taro_boba_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_taro_boba_base
 
 ## spr_cup_taro_boba_label · 芋泥波波杯身无文字印花
 
@@ -1305,6 +1488,9 @@
 - license_status: not_acquired
 - filename: spr_cup_taro_boba_label.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_taro_boba_label
 
 ## ui_stage_taro_boba_card · 芋泥波波菜单封面
 
@@ -1326,6 +1512,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_stage_taro_boba_card.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_stage_taro_boba_card
 
 ## spr_cup_brown_sugar_back · 黑糖厚乳杯后壁
 
@@ -1347,6 +1536,9 @@
 - license_status: not_acquired
 - filename: spr_cup_brown_sugar_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_brown_sugar_back
 
 ## spr_cup_brown_sugar_tea · 黑糖厚乳杯内奶茶底色
 
@@ -1368,6 +1560,9 @@
 - license_status: not_acquired
 - filename: spr_cup_brown_sugar_tea.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_brown_sugar_tea
 
 ## spr_cup_brown_sugar_front · 黑糖厚乳杯前壁高光
 
@@ -1389,6 +1584,9 @@
 - license_status: not_acquired
 - filename: spr_cup_brown_sugar_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_brown_sugar_front
 
 ## spr_cup_brown_sugar_rim_back · 黑糖厚乳杯口后缘
 
@@ -1410,6 +1608,9 @@
 - license_status: not_acquired
 - filename: spr_cup_brown_sugar_rim_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_brown_sugar_rim_back
 
 ## spr_cup_brown_sugar_rim_front · 黑糖厚乳杯口前缘
 
@@ -1431,6 +1632,9 @@
 - license_status: not_acquired
 - filename: spr_cup_brown_sugar_rim_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_brown_sugar_rim_front
 
 ## spr_cup_brown_sugar_base · 黑糖厚乳杯底装饰
 
@@ -1452,6 +1656,9 @@
 - license_status: not_acquired
 - filename: spr_cup_brown_sugar_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_brown_sugar_base
 
 ## spr_cup_brown_sugar_label · 黑糖厚乳杯身无文字印花
 
@@ -1473,6 +1680,9 @@
 - license_status: not_acquired
 - filename: spr_cup_brown_sugar_label.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_brown_sugar_label
 
 ## ui_stage_brown_sugar_card · 黑糖厚乳菜单封面
 
@@ -1494,6 +1704,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_stage_brown_sugar_card.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_stage_brown_sugar_card
 
 ## spr_cup_mochi_special_back · 麻薯特调杯后壁
 
@@ -1515,6 +1728,9 @@
 - license_status: not_acquired
 - filename: spr_cup_mochi_special_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_mochi_special_back
 
 ## spr_cup_mochi_special_tea · 麻薯特调杯内奶茶底色
 
@@ -1536,6 +1752,9 @@
 - license_status: not_acquired
 - filename: spr_cup_mochi_special_tea.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_mochi_special_tea
 
 ## spr_cup_mochi_special_front · 麻薯特调杯前壁高光
 
@@ -1557,6 +1776,9 @@
 - license_status: not_acquired
 - filename: spr_cup_mochi_special_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_mochi_special_front
 
 ## spr_cup_mochi_special_rim_back · 麻薯特调杯口后缘
 
@@ -1578,6 +1800,9 @@
 - license_status: not_acquired
 - filename: spr_cup_mochi_special_rim_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_mochi_special_rim_back
 
 ## spr_cup_mochi_special_rim_front · 麻薯特调杯口前缘
 
@@ -1599,6 +1824,9 @@
 - license_status: not_acquired
 - filename: spr_cup_mochi_special_rim_front.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_mochi_special_rim_front
 
 ## spr_cup_mochi_special_base · 麻薯特调杯底装饰
 
@@ -1620,6 +1848,9 @@
 - license_status: not_acquired
 - filename: spr_cup_mochi_special_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_mochi_special_base
 
 ## spr_cup_mochi_special_label · 麻薯特调杯身无文字印花
 
@@ -1641,6 +1872,9 @@
 - license_status: not_acquired
 - filename: spr_cup_mochi_special_label.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_mochi_special_label
 
 ## ui_stage_mochi_special_card · 麻薯特调菜单封面
 
@@ -1662,6 +1896,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_stage_mochi_special_card.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_stage_mochi_special_card
 
 ## bg_shop_base · 奶茶店低对比背景
 
@@ -1683,6 +1920,9 @@
 - license_status: not_acquired
 - filename: bg_shop_base.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#bg_shop_base
 
 ## bg_shop_extend_top · 长屏顶部延展
 
@@ -1704,6 +1944,9 @@
 - license_status: not_acquired
 - filename: bg_shop_extend_top.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#bg_shop_extend_top
 
 ## bg_shop_extend_bottom · 长屏底部延展
 
@@ -1725,6 +1968,9 @@
 - license_status: not_acquired
 - filename: bg_shop_extend_bottom.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#bg_shop_extend_bottom
 
 ## ui_title_logo · 奶茶挤挤原创标题字标
 
@@ -1746,6 +1992,9 @@
 - license_status: not_acquired
 - filename: ui_title_logo.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_title_logo
 
 ## spr_cup_shadow · 杯底接触阴影
 
@@ -1767,6 +2016,9 @@
 - license_status: not_acquired
 - filename: spr_cup_shadow.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#spr_cup_shadow
 
 ## ui_btn_primary_normal · 主按钮 normal
 
@@ -1788,6 +2040,9 @@
 - license_status: not_acquired
 - filename: ui_btn_primary_normal.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_primary_normal
 
 ## ui_btn_primary_pressed · 主按钮 pressed
 
@@ -1809,6 +2064,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_primary_pressed.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_primary_pressed
 
 ## ui_btn_primary_disabled · 主按钮 disabled
 
@@ -1830,6 +2088,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_primary_disabled.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_primary_disabled
 
 ## ui_btn_primary_selected · 主按钮 selected
 
@@ -1851,6 +2112,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_primary_selected.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_primary_selected
 
 ## ui_btn_secondary_normal · 次按钮 normal
 
@@ -1872,6 +2136,9 @@
 - license_status: not_acquired
 - filename: ui_btn_secondary_normal.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_secondary_normal
 
 ## ui_btn_secondary_pressed · 次按钮 pressed
 
@@ -1893,6 +2160,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_secondary_pressed.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_secondary_pressed
 
 ## ui_btn_secondary_disabled · 次按钮 disabled
 
@@ -1914,6 +2184,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_secondary_disabled.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_secondary_disabled
 
 ## ui_btn_secondary_selected · 次按钮 selected
 
@@ -1935,6 +2208,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_secondary_selected.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_secondary_selected
 
 ## ui_btn_icon_normal · 圆图标按钮 normal
 
@@ -1956,6 +2232,9 @@
 - license_status: not_acquired
 - filename: ui_btn_icon_normal.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_icon_normal
 
 ## ui_btn_icon_pressed · 圆图标按钮 pressed
 
@@ -1977,6 +2256,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_icon_pressed.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_icon_pressed
 
 ## ui_btn_icon_disabled · 圆图标按钮 disabled
 
@@ -1998,6 +2280,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_icon_disabled.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_icon_disabled
 
 ## ui_btn_icon_selected · 圆图标按钮 selected
 
@@ -2019,6 +2304,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_icon_selected.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_icon_selected
 
 ## ui_btn_tab_normal · 选项页签 normal
 
@@ -2040,6 +2328,9 @@
 - license_status: not_acquired
 - filename: ui_btn_tab_normal.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_tab_normal
 
 ## ui_btn_tab_pressed · 选项页签 pressed
 
@@ -2061,6 +2352,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_tab_pressed.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_tab_pressed
 
 ## ui_btn_tab_disabled · 选项页签 disabled
 
@@ -2082,6 +2376,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_tab_disabled.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_tab_disabled
 
 ## ui_btn_tab_selected · 选项页签 selected
 
@@ -2103,6 +2400,9 @@
 - license_status: inherits_source_or_code
 - filename: ui_btn_tab_selected.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_btn_tab_selected
 
 ## ui_icon_play · 开始三角
 
@@ -2124,6 +2424,9 @@
 - license_status: not_acquired
 - filename: ui_icon_play.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_play
 
 ## ui_icon_continue · 继续箭头
 
@@ -2145,6 +2448,9 @@
 - license_status: not_acquired
 - filename: ui_icon_continue.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_continue
 
 ## ui_icon_pause · 暂停双条
 
@@ -2166,6 +2472,9 @@
 - license_status: not_acquired
 - filename: ui_icon_pause.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_pause
 
 ## ui_icon_settings · 设置齿轮
 
@@ -2187,6 +2496,9 @@
 - license_status: not_acquired
 - filename: ui_icon_settings.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_settings
 
 ## ui_icon_close · 关闭叉
 
@@ -2208,6 +2520,9 @@
 - license_status: not_acquired
 - filename: ui_icon_close.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_close
 
 ## ui_icon_back · 返回箭头
 
@@ -2229,6 +2544,9 @@
 - license_status: not_acquired
 - filename: ui_icon_back.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_back
 
 ## ui_icon_restart · 重开回转箭头
 
@@ -2250,6 +2568,9 @@
 - license_status: not_acquired
 - filename: ui_icon_restart.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_restart
 
 ## ui_icon_home · 主页小屋
 
@@ -2271,6 +2592,9 @@
 - license_status: not_acquired
 - filename: ui_icon_home.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_home
 
 ## ui_icon_music_on · 音乐开
 
@@ -2292,6 +2616,9 @@
 - license_status: not_acquired
 - filename: ui_icon_music_on.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_music_on
 
 ## ui_icon_music_off · 音乐关
 
@@ -2313,6 +2640,9 @@
 - license_status: not_acquired
 - filename: ui_icon_music_off.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_music_off
 
 ## ui_icon_sfx_on · 音效开
 
@@ -2334,6 +2664,9 @@
 - license_status: not_acquired
 - filename: ui_icon_sfx_on.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_sfx_on
 
 ## ui_icon_sfx_off · 音效关
 
@@ -2355,6 +2688,9 @@
 - license_status: not_acquired
 - filename: ui_icon_sfx_off.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_sfx_off
 
 ## ui_icon_reduced_motion · 弱动态
 
@@ -2376,6 +2712,9 @@
 - license_status: not_acquired
 - filename: ui_icon_reduced_motion.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_reduced_motion
 
 ## ui_icon_shake · 晃杯动作
 
@@ -2397,6 +2736,9 @@
 - license_status: not_acquired
 - filename: ui_icon_shake.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_shake
 
 ## ui_icon_info · 说明
 
@@ -2418,6 +2760,9 @@
 - license_status: not_acquired
 - filename: ui_icon_info.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_info
 
 ## ui_icon_warning · 危险提示
 
@@ -2439,6 +2784,9 @@
 - license_status: not_acquired
 - filename: ui_icon_warning.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_warning
 
 ## ui_icon_check · 确认勾
 
@@ -2460,6 +2808,9 @@
 - license_status: not_acquired
 - filename: ui_icon_check.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_check
 
 ## ui_icon_next · 下一个箭头
 
@@ -2481,6 +2832,9 @@
 - license_status: not_acquired
 - filename: ui_icon_next.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_next
 
 ## ui_icon_record · 录屏
 
@@ -2502,6 +2856,9 @@
 - license_status: not_acquired
 - filename: ui_icon_record.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_record
 
 ## ui_icon_publish · 发布作品
 
@@ -2523,6 +2880,9 @@
 - license_status: not_acquired
 - filename: ui_icon_publish.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_publish
 
 ## ui_icon_sidebar · 侧边栏复访提示
 
@@ -2544,6 +2904,9 @@
 - license_status: not_acquired
 - filename: ui_icon_sidebar.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_sidebar
 
 ## ui_icon_lock · 未解锁锁
 
@@ -2565,6 +2928,9 @@
 - license_status: not_acquired
 - filename: ui_icon_lock.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_lock
 
 ## ui_icon_unlock · 解锁锁
 
@@ -2586,6 +2952,9 @@
 - license_status: not_acquired
 - filename: ui_icon_unlock.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_unlock
 
 ## ui_icon_cloud · 云存档
 
@@ -2607,6 +2976,9 @@
 - license_status: not_acquired
 - filename: ui_icon_cloud.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_cloud
 
 ## ui_icon_sync · 同步
 
@@ -2628,6 +3000,9 @@
 - license_status: not_acquired
 - filename: ui_icon_sync.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_sync
 
 ## ui_icon_offline · 离线
 
@@ -2649,6 +3024,9 @@
 - license_status: not_acquired
 - filename: ui_icon_offline.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_offline
 
 ## ui_icon_account · 账号默认
 
@@ -2670,6 +3048,9 @@
 - license_status: not_acquired
 - filename: ui_icon_account.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_account
 
 ## ui_icon_coupon · 晃杯券
 
@@ -2691,6 +3072,9 @@
 - license_status: not_acquired
 - filename: ui_icon_coupon.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_coupon
 
 ## ui_icon_rank · 排行榜
 
@@ -2712,6 +3096,9 @@
 - license_status: not_acquired
 - filename: ui_icon_rank.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_rank
 
 ## ui_icon_share · 分享
 
@@ -2733,6 +3120,9 @@
 - license_status: not_acquired
 - filename: ui_icon_share.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_share
 
 ## ui_icon_standard · 标准局标识
 
@@ -2754,6 +3144,9 @@
 - license_status: not_acquired
 - filename: ui_icon_standard.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_standard
 
 ## ui_icon_assisted · 助力局标识
 
@@ -2775,6 +3168,9 @@
 - license_status: not_acquired
 - filename: ui_icon_assisted.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_assisted
 
 ## ui_icon_verified · 核验通过
 
@@ -2796,6 +3192,9 @@
 - license_status: not_acquired
 - filename: ui_icon_verified.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_verified
 
 ## ui_icon_pending · 核验中
 
@@ -2817,6 +3216,9 @@
 - license_status: not_acquired
 - filename: ui_icon_pending.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_pending
 
 ## ui_icon_calendar · 每日挑战
 
@@ -2838,6 +3240,9 @@
 - license_status: not_acquired
 - filename: ui_icon_calendar.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_calendar
 
 ## ui_icon_friend · 好友挑战
 
@@ -2859,6 +3264,9 @@
 - license_status: not_acquired
 - filename: ui_icon_friend.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_friend
 
 ## ui_icon_win · 领先标识
 
@@ -2880,6 +3288,9 @@
 - license_status: not_acquired
 - filename: ui_icon_win.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_win
 
 ## ui_icon_tie · 平局标识
 
@@ -2901,6 +3312,9 @@
 - license_status: not_acquired
 - filename: ui_icon_tie.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_tie
 
 ## ui_icon_loss · 落后标识
 
@@ -2922,6 +3336,9 @@
 - license_status: not_acquired
 - filename: ui_icon_loss.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_loss
 
 ## ui_icon_album · 图鉴
 
@@ -2943,6 +3360,9 @@
 - license_status: not_acquired
 - filename: ui_icon_album.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_album
 
 ## ui_icon_achievement · 成就
 
@@ -2964,6 +3384,9 @@
 - license_status: not_acquired
 - filename: ui_icon_achievement.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_achievement
 
 ## ui_icon_skin · 外观
 
@@ -2985,6 +3408,9 @@
 - license_status: not_acquired
 - filename: ui_icon_skin.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_skin
 
 ## ui_icon_ad_play · 自愿看视频
 
@@ -3006,6 +3432,9 @@
 - license_status: not_acquired
 - filename: ui_icon_ad_play.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_ad_play
 
 ## ui_icon_external · 外链提示
 
@@ -3027,6 +3456,9 @@
 - license_status: not_acquired
 - filename: ui_icon_external.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 2
+- library_index: assets/library/index.html#ui_icon_external
 
 ## ui_panel_modal · 通用弹窗底
 
@@ -3048,6 +3480,9 @@
 - license_status: not_acquired
 - filename: ui_panel_modal.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_modal
 
 ## ui_panel_hud · HUD底
 
@@ -3069,6 +3504,9 @@
 - license_status: not_acquired
 - filename: ui_panel_hud.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_hud
 
 ## ui_panel_next · 下一份预告框
 
@@ -3090,6 +3528,9 @@
 - license_status: not_acquired
 - filename: ui_panel_next.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_next
 
 ## ui_panel_toast · 短提示底
 
@@ -3111,6 +3552,9 @@
 - license_status: not_acquired
 - filename: ui_panel_toast.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_toast
 
 ## ui_panel_results · 结算面板
 
@@ -3132,6 +3576,9 @@
 - license_status: not_acquired
 - filename: ui_panel_results.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_results
 
 ## ui_panel_stage · 关卡卡片底
 
@@ -3153,6 +3600,9 @@
 - license_status: not_acquired
 - filename: ui_panel_stage.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_stage
 
 ## ui_panel_rank_row · 排行行底
 
@@ -3174,6 +3624,9 @@
 - license_status: not_acquired
 - filename: ui_panel_rank_row.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_rank_row
 
 ## ui_panel_rank_self · 本人排行行高亮
 
@@ -3195,6 +3648,9 @@
 - license_status: not_acquired
 - filename: ui_panel_rank_self.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_rank_self
 
 ## ui_panel_challenge · 挑战卡底
 
@@ -3216,6 +3672,9 @@
 - license_status: not_acquired
 - filename: ui_panel_challenge.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_challenge
 
 ## ui_panel_collection · 图鉴格底
 
@@ -3237,6 +3696,9 @@
 - license_status: not_acquired
 - filename: ui_panel_collection.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_panel_collection
 
 ## ui_toggle_track · 开关轨道
 
@@ -3258,6 +3720,9 @@
 - license_status: not_acquired
 - filename: ui_toggle_track.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_toggle_track
 
 ## ui_toggle_knob · 开关圆钮
 
@@ -3279,6 +3744,9 @@
 - license_status: not_acquired
 - filename: ui_toggle_knob.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_toggle_knob
 
 ## ui_slider_track · 音量滑杆轨道
 
@@ -3300,6 +3768,9 @@
 - license_status: not_acquired
 - filename: ui_slider_track.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_slider_track
 
 ## ui_slider_knob · 音量滑杆圆钮
 
@@ -3321,6 +3792,9 @@
 - license_status: not_acquired
 - filename: ui_slider_knob.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_slider_knob
 
 ## ui_badge_record · 新纪录徽章
 
@@ -3342,6 +3816,9 @@
 - license_status: not_acquired
 - filename: ui_badge_record.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_badge_record
 
 ## ui_badge_mochi · 首次麻薯徽章
 
@@ -3363,6 +3840,9 @@
 - license_status: not_acquired
 - filename: ui_badge_mochi.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_badge_mochi
 
 ## ui_avatar_default · 默认玩家头像
 
@@ -3384,6 +3864,9 @@
 - license_status: not_acquired
 - filename: ui_avatar_default.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_avatar_default
 
 ## ui_medal_gold · 排行第一奖牌
 
@@ -3405,6 +3888,9 @@
 - license_status: not_acquired
 - filename: ui_medal_gold.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_medal_gold
 
 ## ui_medal_silver · 排行第二奖牌
 
@@ -3426,6 +3912,9 @@
 - license_status: not_acquired
 - filename: ui_medal_silver.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_medal_silver
 
 ## ui_medal_bronze · 排行第三奖牌
 
@@ -3447,6 +3936,9 @@
 - license_status: not_acquired
 - filename: ui_medal_bronze.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_medal_bronze
 
 ## ui_coupon_ticket · 晃杯券票面
 
@@ -3468,6 +3960,9 @@
 - license_status: not_acquired
 - filename: ui_coupon_ticket.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_coupon_ticket
 
 ## ui_badge_discovered · 图鉴已发现角标
 
@@ -3489,6 +3984,9 @@
 - license_status: not_acquired
 - filename: ui_badge_discovered.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_badge_discovered
 
 ## ui_badge_achievement · 通用成就章
 
@@ -3510,6 +4008,9 @@
 - license_status: not_acquired
 - filename: ui_badge_achievement.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_badge_achievement
 
 ## fx_merge_ring · 合成柔光环
 
@@ -3531,6 +4032,9 @@
 - license_status: not_acquired
 - filename: fx_merge_ring.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#fx_merge_ring
 
 ## fx_sparkle · 短星光
 
@@ -3552,6 +4056,9 @@
 - license_status: not_acquired
 - filename: fx_sparkle.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#fx_sparkle
 
 ## fx_crumb · 食材细屑
 
@@ -3573,6 +4080,9 @@
 - license_status: not_acquired
 - filename: fx_crumb.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#fx_crumb
 
 ## fx_drop_ping · 投放确认光点
 
@@ -3594,6 +4104,9 @@
 - license_status: not_acquired
 - filename: fx_drop_ping.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#fx_drop_ping
 
 ## fx_mochi_star · 麻薯里程碑星
 
@@ -3615,6 +4128,9 @@
 - license_status: not_acquired
 - filename: fx_mochi_star.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#fx_mochi_star
 
 ## fx_unlock_glow · 解锁卡片亮边
 
@@ -3636,6 +4152,9 @@
 - license_status: not_acquired
 - filename: fx_unlock_glow.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#fx_unlock_glow
 
 ## ui_tutorial_hand_move · 引导手指移动
 
@@ -3657,6 +4176,9 @@
 - license_status: not_acquired
 - filename: ui_tutorial_hand_move.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_tutorial_hand_move
 
 ## ui_tutorial_hand_release · 引导松手
 
@@ -3678,6 +4200,9 @@
 - license_status: not_acquired
 - filename: ui_tutorial_hand_release.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#ui_tutorial_hand_release
 
 ## ui_tutorial_merge_example · 两同级合成示例
 
@@ -3699,6 +4224,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#ui_tutorial_merge_example
 
 ## gen_danger_line · 警戒线
 
@@ -3720,6 +4248,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_danger_line
 
 ## gen_drop_guide · 落点虚线
 
@@ -3741,6 +4272,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_drop_guide
 
 ## gen_score_text · 当前分/飘分/纪录
 
@@ -3762,6 +4296,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_score_text
 
 ## gen_danger_countdown · 三秒倒计时
 
@@ -3783,6 +4320,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_danger_countdown
 
 ## gen_shake_count · 晃杯剩余和冷却
 
@@ -3804,6 +4344,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_shake_count
 
 ## gen_modal_dim · 弹窗遮罩
 
@@ -3825,6 +4368,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_modal_dim
 
 ## gen_loading_spinner · 加载转圈
 
@@ -3846,6 +4392,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_loading_spinner
 
 ## gen_skeleton · 异步列表骨架
 
@@ -3867,6 +4416,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_skeleton
 
 ## gen_locked_overlay · 未解锁卡遮罩
 
@@ -3888,6 +4440,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_locked_overlay
 
 ## gen_leaderboard_rank · 榜单名次/超过比例
 
@@ -3909,6 +4464,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_leaderboard_rank
 
 ## gen_coupon_expiry · 券余额/到期文本
 
@@ -3930,6 +4488,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_coupon_expiry
 
 ## gen_daily_budget · 120投进度条
 
@@ -3951,6 +4512,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_daily_budget
 
 ## gen_challenge_status · 挑战待定/领先/平局/落后
 
@@ -3972,6 +4536,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_challenge_status
 
 ## gen_album_question · 未发现问号
 
@@ -3993,6 +4560,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_album_question
 
 ## gen_error_empty · 空/错/无网络状态组合
 
@@ -4014,6 +4584,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: engine_source_only
+- available_exports: 0
+- library_index: assets/library/index.html#gen_error_empty
 
 ## platform_user_avatar · 授权玩家头像
 
@@ -4035,6 +4608,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: platform_dependency
+- available_exports: 0
+- library_index: assets/library/index.html#platform_user_avatar
 
 ## platform_share_entry_code · 真实游戏入口码
 
@@ -4056,6 +4632,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: platform_dependency
+- available_exports: 0
+- library_index: assets/library/index.html#platform_share_entry_code
 
 ## platform_challenge_entry_code · 真实挑战入口码
 
@@ -4077,6 +4656,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: platform_dependency
+- available_exports: 0
+- library_index: assets/library/index.html#platform_challenge_entry_code
 
 ## platform_ad_badge · 平台广告标识
 
@@ -4098,6 +4680,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: platform_dependency
+- available_exports: 0
+- library_index: assets/library/index.html#platform_ad_badge
 
 ## platform_platform_review_logo · 发行平台规定标志
 
@@ -4119,6 +4704,9 @@
 - license_status: inherits_source_or_code
 - filename: (runtime)
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: platform_dependency
+- available_exports: 0
+- library_index: assets/library/index.html#platform_platform_review_logo
 
 ## share_result_background · 普通成绩分享卡
 
@@ -4140,6 +4728,9 @@
 - license_status: not_acquired
 - filename: share_result_background.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#share_result_background
 
 ## share_record_background · 新纪录分享卡
 
@@ -4161,6 +4752,9 @@
 - license_status: inherits_source_or_code
 - filename: share_record_background.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#share_record_background
 
 ## share_daily_background · 每日同题分享卡
 
@@ -4182,6 +4776,9 @@
 - license_status: inherits_source_or_code
 - filename: share_daily_background.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#share_daily_background
 
 ## share_friend_background · 好友挑战邀请卡
 
@@ -4203,6 +4800,9 @@
 - license_status: inherits_source_or_code
 - filename: share_friend_background.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#share_friend_background
 
 ## share_achievement_background · 图鉴成就分享卡
 
@@ -4224,6 +4824,9 @@
 - license_status: inherits_source_or_code
 - filename: share_achievement_background.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#share_achievement_background
 
 ## marketing_app_icon · 游戏图标
 
@@ -4245,6 +4848,9 @@
 - license_status: not_acquired
 - filename: marketing_app_icon.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_app_icon
 
 ## marketing_launch · 启动插画
 
@@ -4266,6 +4872,9 @@
 - license_status: inherits_source_or_code
 - filename: marketing_launch.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_launch
 
 ## marketing_cover_square · 方形宣传封面
 
@@ -4287,6 +4896,9 @@
 - license_status: not_acquired
 - filename: marketing_cover_square.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_cover_square
 
 ## marketing_cover_landscape · 横版宣传封面
 
@@ -4308,6 +4920,9 @@
 - license_status: not_acquired
 - filename: marketing_cover_landscape.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: static_pass
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_cover_landscape
 
 ## marketing_screenshot_play · 上架玩法截图模板
 
@@ -4329,6 +4944,9 @@
 - license_status: inherits_source_or_code
 - filename: marketing_screenshot_play.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_screenshot_play
 
 ## marketing_screenshot_merge · 上架合成截图模板
 
@@ -4350,6 +4968,9 @@
 - license_status: inherits_source_or_code
 - filename: marketing_screenshot_merge.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_screenshot_merge
 
 ## marketing_screenshot_stages · 上架五杯截图模板
 
@@ -4371,6 +4992,9 @@
 - license_status: inherits_source_or_code
 - filename: marketing_screenshot_stages.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_screenshot_stages
 
 ## marketing_screenshot_rank · 上架榜单截图模板
 
@@ -4392,6 +5016,9 @@
 - license_status: inherits_source_or_code
 - filename: marketing_screenshot_rank.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_screenshot_rank
 
 ## marketing_tap_cover · Tap平台封面适配
 
@@ -4413,6 +5040,9 @@
 - license_status: inherits_source_or_code
 - filename: marketing_tap_cover.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_tap_cover
 
 ## marketing_wechat_icon · 微信平台图标适配
 
@@ -4434,6 +5064,9 @@
 - license_status: inherits_source_or_code
 - filename: marketing_wechat_icon.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: conditional_static
+- available_exports: 1
+- library_index: assets/library/index.html#marketing_wechat_icon
 
 ## candidate_cup_pattern · 未来杯身纹样槽
 
@@ -4455,6 +5088,9 @@
 - license_status: not_acquired
 - filename: candidate_cup_pattern.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: candidate_not_required
+- available_exports: 0
+- library_index: assets/library/index.html#candidate_cup_pattern
 
 ## candidate_table_theme · 未来桌面主题槽
 
@@ -4476,4 +5112,7 @@
 - license_status: not_acquired
 - filename: candidate_table_theme.png
 - acceptance: 检查实际显示尺寸、透明边、光向、对比；不得含动态文本/平台伪造标志
+- intake_status: candidate_not_required
+- available_exports: 0
+- library_index: assets/library/index.html#candidate_table_theme
 

@@ -1,0 +1,176 @@
+{
+  "caseId": "queue-cancel",
+  "attemptId": "final05-r2-queue-cancel",
+  "buildId": null,
+  "expectedBuildId": "20261029-p1a-final-05",
+  "pageUrl": "http://127.0.0.1:8778/?p1aCase=queue-cancel&attemptId=final05-r2-queue-cancel&expectedBuildId=20261029-p1a-final-05&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-05%2Fraw%2Ffinal05-r2-queue-cancel",
+  "startedAt": "2026-10-28T18:26:18.991Z",
+  "startupStatus": {
+    "buildId": "20261029-p1a-final-05",
+    "attemptId": "final05-r2-queue-cancel",
+    "ready": true,
+    "loading": false,
+    "tick": 0,
+    "stepCount": 0,
+    "paused": true,
+    "pauseReasons": [
+      "REBUILD"
+    ],
+    "interruptionSerial": 0,
+    "entityCount": 3,
+    "contactCount": 0,
+    "contactBeginEvents": 0,
+    "contactEndEvents": 0,
+    "listenerCount": 6,
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "levelRadii": [
+      {
+        "level": 1,
+        "radiusDu": 18
+      },
+      {
+        "level": 2,
+        "radiusDu": 24
+      },
+      {
+        "level": 3,
+        "radiusDu": 32
+      },
+      {
+        "level": 4,
+        "radiusDu": 42
+      },
+      {
+        "level": 5,
+        "radiusDu": 55
+      },
+      {
+        "level": 6,
+        "radiusDu": 70
+      },
+      {
+        "level": 7,
+        "radiusDu": 89
+      },
+      {
+        "level": 8,
+        "radiusDu": 112
+      },
+      {
+        "level": 9,
+        "radiusDu": 140
+      }
+    ],
+    "cupWidthScale": 1,
+    "queue": null,
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2049.5,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2049.5,
+          "revision": 0
+        }
+      ]
+    },
+    "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+  },
+  "beforeCancel": {
+    "taskId": "nine-1793211979483-1",
+    "state": "RUNNING",
+    "level": 3,
+    "batchAttempt": 3,
+    "records": [
+      {
+        "batchAttempt": 1,
+        "candidateIndex": 0,
+        "level": 1,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 2,
+        "candidateIndex": 0,
+        "level": 2,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 3,
+        "candidateIndex": 0,
+        "level": 3,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      }
+    ]
+  },
+  "afterCancel": {
+    "taskId": "nine-1793211979483-1",
+    "state": "CANCELLED",
+    "level": 3,
+    "batchAttempt": 3,
+    "records": [
+      {
+        "batchAttempt": 1,
+        "candidateIndex": 0,
+        "level": 1,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 2,
+        "candidateIndex": 0,
+        "level": 2,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      },
+      {
+        "batchAttempt": 3,
+        "candidateIndex": 0,
+        "level": 3,
+        "xDu": 375,
+        "accepted": true,
+        "reason": "accepted"
+      }
+    ]
+  },
+  "cancelStable": true,
+  "pass": true,
+  "acceptance": "PASS",
+  "endedAt": "2026-10-28T18:26:23.776Z",
+  "consoleEvents": [
+    "{\"test\":\"p1a-runtime-identity\",\"buildId\":\"20261029-p1a-final-05\",\"creator\":\"3.8.8\",\"box2d\":\"1.0.2\",\"ptm\":32,\"autoSimulation\":false,\"probeMode\":\"OFF\",\"probeVersion\":\"p1a-probe-v2\",\"attemptId\":\"final05-r2-queue-cancel\"}",
+    "{\"test\":\"nine-size-queue\",\"taskId\":\"nine-1793211979483-1\",\"state\":\"CANCELLED\",\"reason\":\"test-cancel\",\"level\":3,\"batchAttempt\":3,\"records\":[{\"batchAttempt\":1,\"candidateIndex\":0,\"level\":1,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":2,\"candidateIndex\":0,\"level\":2,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"},{\"batchAttempt\":3,\"candidateIndex\":0,\"level\":3,\"xDu\":375,\"accepted\":true,\"reason\":\"accepted\"}]}"
+  ],
+  "pageErrors": []
+}

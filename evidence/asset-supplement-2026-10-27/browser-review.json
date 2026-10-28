@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-27",
+  "scope": "supplement_asset_browser_only",
+  "status": "pass",
+  "cards": 213,
+  "previewImages": 190,
+  "decodedImages": 190,
+  "failedImages": 0,
+  "checks": [
+    {
+      "name": "P4A_all",
+      "actual": 11
+    },
+    {
+      "name": "P4A_images",
+      "actual": 8
+    },
+    {
+      "name": "missing_filter",
+      "actual": 0
+    },
+    {
+      "name": "desktop_scroll_width",
+      "actual": 1440,
+      "viewport": 1440
+    },
+    {
+      "name": "mobile_scroll_width",
+      "actual": 375,
+      "viewport": 375
+    },
+    {
+      "name": "console_errors",
+      "actual": 0
+    }
+  ],
+  "screenshots": [
+    "library-P4A-desktop.png",
+    "library-P4A-mobile.png"
+  ],
+  "not_run": [
+    "Cocos",
+    "device_game_UI",
+    "platform"
+  ]
+}

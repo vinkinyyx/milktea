@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "caseId": "LIFE-01-real-tab-switch-smoke",
+  "buildId": "20261029-p1a-repair-04",
+  "attemptId": "repair04-life-tab-001",
+  "targetUrl": "http://127.0.0.1:8773/?p1aCase=lifecycle-smoke&attemptId=repair04-life-tab-001&expectedBuildId=20261029-p1a-repair-04&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off",
+  "durationSeconds": 5,
+  "protocol": "Playwright CLI tab-new/tab-select real tab switch",
+  "focusEmulationDisabledForTargetAndHelper": true,
+  "syntheticEventsUsed": false,
+  "prepare": {
+    "stateBefore": null,
+    "visibleBeforeSwitch": {
+      "visibility": "visible",
+      "hasFocus": true,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 0,
+        "eventCount": 2,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2037.4000000022352,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2037.4000000022352,
+            "revision": 0
+          }
+        ]
+      },
+      "status": {
+        "buildId": "20261029-p1a-repair-03",
+        "attemptId": "repair04-life-tab-001",
+        "ready": true,
+        "loading": false,
+        "tick": 42,
+        "stepCount": 42,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 0,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2037.4000000022352,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2037.4000000022352,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+      }
+    },
+    "focusOverrideDisabled": true,
+    "syntheticEventsUsed": false
+  },
+  "helper": {
+    "focusOverrideDisabled": true,
+    "state": {
+      "url": "about:blank",
+      "visibility": "visible",
+      "hasFocus": true
+    }
+  },
+  "targetAfterReturn": {
+    "visibility": "visible",
+    "hasFocus": true,
+    "capture": [],
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2037.4000000022352,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2037.4000000022352,
+          "revision": 0
+        }
+      ]
+    },
+    "status": {
+      "buildId": "20261029-p1a-repair-03",
+      "attemptId": "repair04-life-tab-001",
+      "ready": true,
+      "loading": false,
+      "tick": 242,
+      "stepCount": 242,
+      "paused": true,
+      "pauseReasons": [
+        "BACKLOG"
+      ],
+      "interruptionSerial": 1,
+      "entityCount": 3,
+      "contactCount": 3,
+      "contactBeginEvents": 6,
+      "contactEndEvents": 3,
+      "listenerCount": 6,
+      "queue": null,
+      "contactRebuild": null,
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 0,
+        "eventCount": 2,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2037.4000000022352,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 2037.4000000022352,
+            "revision": 0
+          }
+        ]
+      },
+      "message": "物理落后超过配置补步上限，已暂停；本attempt已冻结，请另开attempt重测"
+    }
+  },
+  "hiddenCaptureCount": 0,
+  "trustedDomHideCount": 0,
+  "trustedDomShowCount": 0,
+  "tickAndStepFrozenThroughHidden": false,
+  "tabList": "### Result\n- 0: [Cocos Creator | milktea-p1a](http://127.0.0.1:8773/?p1aCase=lifecycle-smoke&attemptId=repair04-life-tab-001&expectedBuildId=20261029-p1a-repair-04&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off)\n- 1: (current) [](about:blank)\n",
+  "status": "FAIL",
+  "blockingReason": "REAL_TAB_SWITCH_DID_NOT_PRODUCE_TRUSTED_HIDDEN",
+  "recordedAt": "2026-10-29T02:04:56.3860910+08:00"
+}

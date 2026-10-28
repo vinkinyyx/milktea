@@ -1,0 +1,13 @@
+{
+  "assets": 5,
+  "ui_svg_count": 3,
+  "runtime_png_count": 8,
+  "app_master_1024": true,
+  "app_ora_layers": 3,
+  "app_ora_max_pixel_diff": 5,
+  "launch_source_is_actual_P1_assets": true,
+  "launch_ora_layers": 4,
+  "static_checks_passed": true,
+  "real_platform_and_device_check": "PENDING",
+  "layered_source_caveat": "App icon ORA is computationally separated from generated raster (not artist-authored vector paths)"
+}

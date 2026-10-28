@@ -1,0 +1,12 @@
+﻿asset_id,name_zh,type,files,file_status,acceptance
+ui_icon_calendar,每日挑战,new_draw,source_svg/ui_icon_calendar.svg | export_png/96/ui_icon_calendar.png | export_png/48/ui_icon_calendar.png,PASS,static_pass_runtime_integration_pending
+ui_icon_friend,好友挑战,new_draw,source_svg/ui_icon_friend.svg | export_png/96/ui_icon_friend.png | export_png/48/ui_icon_friend.png,PASS,static_pass_runtime_integration_pending
+ui_icon_win,领先标识,new_draw,source_svg/ui_icon_win.svg | export_png/96/ui_icon_win.png | export_png/48/ui_icon_win.png,PASS,static_pass_runtime_integration_pending
+ui_icon_tie,平局标识,new_draw,source_svg/ui_icon_tie.svg | export_png/96/ui_icon_tie.png | export_png/48/ui_icon_tie.png,PASS,static_pass_runtime_integration_pending
+ui_icon_loss,落后标识,new_draw,source_svg/ui_icon_loss.svg | export_png/96/ui_icon_loss.png | export_png/48/ui_icon_loss.png,PASS,static_pass_runtime_integration_pending
+ui_panel_challenge,挑战卡底,new_draw,source_svg/ui_panel_challenge.svg | export_png/runtime/ui_panel_challenge.png | export_png/master_2x/ui_panel_challenge.png,PASS,static_pass_runtime_integration_pending
+gen_daily_budget,120投进度条,engine,runtime/gen_daily_budget.mjs,PASS,static_pass_runtime_integration_pending
+gen_challenge_status,挑战待定/领先/平局/落后,engine,runtime/gen_challenge_status.mjs,PASS,static_pass_runtime_integration_pending
+platform_challenge_entry_code,真实挑战入口码,platform,platform/platform_challenge_entry_code.CONTRACT.json,PASS,pending_provider
+share_daily_background,每日同题分享卡,derived,source_svg/share_daily_background.svg | export_png/runtime/share_daily_background.png | export_png/master_2x/share_daily_background.png,PASS,static_pass_runtime_integration_pending
+share_friend_background,好友挑战邀请卡,derived,source_svg/share_friend_background.svg | export_png/runtime/share_friend_background.png | export_png/master_2x/share_friend_background.png,PASS,static_pass_runtime_integration_pending

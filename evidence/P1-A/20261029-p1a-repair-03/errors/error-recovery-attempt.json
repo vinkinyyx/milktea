@@ -1,0 +1,7 @@
+{
+  "caseId": "ERROR-01",
+  "attemptId": "ERR-01-001",
+  "buildId": "20261029-p1a-repair-03",
+  "result": "未执行",
+  "reason": "Malformed JSON and destroy-during-load routes were not injected in this package."
+}

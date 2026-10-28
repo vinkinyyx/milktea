@@ -1,0 +1,11 @@
+﻿{
+    "buildId":  "20261029-p1a-repair-02",
+    "command":  "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\CocosCreator.exe --project \"D:\\cocos-p1a-build-source\\20261029-p1a-repair-02\" --build \"platform=web-mobile;debug=true;buildPath=D:/cocos-p1a-build;outputName=20261029-p1a-repair-02;startScene=44e30fdb-084f-5609-8283-4fdd8d2fab81\"",
+    "creatorPid":  900,
+    "startedAt":  "2026-10-29T00:27:04.6845135+08:00",
+    "finishedAt":  "2026-10-29T00:27:54.5537379+08:00",
+    "exitCode":  null,
+    "bridgeDisabled":  "1",
+    "outputPath":  "D:\\cocos-p1a-build\\20261029-p1a-repair-02",
+    "projectPath":  "D:\\cocos-p1a-build-source\\20261029-p1a-repair-02"
+}

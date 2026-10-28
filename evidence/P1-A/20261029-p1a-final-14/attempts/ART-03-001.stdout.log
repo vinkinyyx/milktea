@@ -1,0 +1,1 @@
+Actual Cocos run-code returned 9 samples: panel 3 sizes, primary button 3 sizes, icon button 3 sizes; every Sprite.Type=SLICED, frame insets and UITransform dimensions match, worldId and body snapshots unchanged.

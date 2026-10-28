@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "originals_unchanged": 702,
+  "copies_matching_sources": 540,
+  "eight_bit_runtime_pngs_checked": 239,
+  "library_links_checked": 595,
+  "library_ids": 213,
+  "modes": {
+    "RGBA": 223,
+    "RGB": 16
+  },
+  "source_color_tag_missing_selected_exports": 63,
+  "Cocos_import": "not_run"
+}

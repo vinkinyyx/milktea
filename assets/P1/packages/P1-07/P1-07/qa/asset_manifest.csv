@@ -1,0 +1,10 @@
+﻿batch,asset_id,name,svg_source,png_96,png_48,expected_svg,expected_png,status
+P1-07,ui_icon_music_off,音乐关,source_svg/ui_icon_music_off.svg,export_png/96/ui_icon_music_off.png,export_png/48/ui_icon_music_off.png,192x192,96x96;48x48,static_qa_pass
+P1-07,ui_icon_sfx_on,音效开,source_svg/ui_icon_sfx_on.svg,export_png/96/ui_icon_sfx_on.png,export_png/48/ui_icon_sfx_on.png,192x192,96x96;48x48,static_qa_pass
+P1-07,ui_icon_sfx_off,音效关,source_svg/ui_icon_sfx_off.svg,export_png/96/ui_icon_sfx_off.png,export_png/48/ui_icon_sfx_off.png,192x192,96x96;48x48,static_qa_pass
+P1-07,ui_icon_reduced_motion,弱动态,source_svg/ui_icon_reduced_motion.svg,export_png/96/ui_icon_reduced_motion.png,export_png/48/ui_icon_reduced_motion.png,192x192,96x96;48x48,static_qa_pass
+P1-07,ui_icon_shake,晃杯动作,source_svg/ui_icon_shake.svg,export_png/96/ui_icon_shake.png,export_png/48/ui_icon_shake.png,192x192,96x96;48x48,static_qa_pass
+P1-07,ui_icon_info,说明,source_svg/ui_icon_info.svg,export_png/96/ui_icon_info.png,export_png/48/ui_icon_info.png,192x192,96x96;48x48,static_qa_pass
+P1-07,ui_icon_warning,危险提示,source_svg/ui_icon_warning.svg,export_png/96/ui_icon_warning.png,export_png/48/ui_icon_warning.png,192x192,96x96;48x48,static_qa_pass
+P1-07,ui_icon_check,确认勾,source_svg/ui_icon_check.svg,export_png/96/ui_icon_check.png,export_png/48/ui_icon_check.png,192x192,96x96;48x48,static_qa_pass
+P1-07,ui_icon_next,下一个箭头,source_svg/ui_icon_next.svg,export_png/96/ui_icon_next.png,export_png/48/ui_icon_next.png,192x192,96x96;48x48,static_qa_pass

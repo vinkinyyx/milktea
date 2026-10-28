@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "scope": "file_integrity_registry_links_and_recoverable_cleanup",
+  "catalog_ids": 213,
+  "static_ids": 190,
+  "runtime_png_variants": 252,
+  "missing_file_ids": 0,
+  "library_copy_hashes_verified": 576,
+  "intake_source_files_verified": 749,
+  "live_intake_sources": 741,
+  "intake_sources_verified_in_cleanup_backup": 8,
+  "normalization_files_verified": 51,
+  "all_cleanup_files_verified": 301,
+  "library_links_checked": 636,
+  "color_profile_unspecified_exports": 63,
+  "not_run": [
+    "Cocos_import",
+    "physics_integration",
+    "device_game_UI",
+    "platform_approval"
+  ]
+}

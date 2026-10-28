@@ -1,0 +1,16 @@
+{
+  "caseId": "LIFE-01",
+  "attemptId": "LIFE-01-001",
+  "buildId": "20261029-p1a-repair-03",
+  "result": "未执行",
+  "focusEmulation": "disabled through CDP for target and auxiliary pages",
+  "tabSwitch": "actual tab selection/new page; no synthetic lifecycle events",
+  "observed": {
+    "documentVisibilityState": "visible",
+    "hasFocus": false,
+    "trustedVisibilityChange": false,
+    "gameHide": false,
+    "gameShow": false
+  },
+  "reason": "Automation Chrome did not enter hidden document state. Requires a real host that can produce document.hidden/Game hide-show."
+}

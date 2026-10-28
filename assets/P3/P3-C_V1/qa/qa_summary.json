@@ -1,0 +1,87 @@
+{
+  "phase": "P3-C",
+  "total_ids": 6,
+  "file_qa_passed": 6,
+  "content_final_usable_covers": 2,
+  "screenshot_templates_pending_real_capture": 4,
+  "screenshots_are_not_real": true,
+  "requirements": [
+    "screenshots actual gameplay required",
+    "anonymous/authorized rank data",
+    "no platform badges until source authorization"
+  ],
+  "assets": [
+    {
+      "asset_id": "marketing_cover_square",
+      "name_zh": "方形宣传封面",
+      "export_file": "export_png/marketing_cover_square.png",
+      "export_size": "800x800",
+      "source_ora": "source_ora/marketing_cover_square.ora",
+      "master_png": "master_png/marketing_cover_square@1600.png",
+      "ora_layers": 4,
+      "file_validation": "pass",
+      "content_status": "static_pass",
+      "note": "由项目既有杯体与游戏字标组合"
+    },
+    {
+      "asset_id": "marketing_cover_landscape",
+      "name_zh": "横版宣传封面",
+      "export_file": "export_png/marketing_cover_landscape.png",
+      "export_size": "1280x720",
+      "source_ora": "source_ora/marketing_cover_landscape.ora",
+      "master_png": "master_png/marketing_cover_landscape@1920x1080.png",
+      "ora_layers": 4,
+      "file_validation": "pass",
+      "content_status": "static_pass",
+      "note": "由项目既有杯体与游戏字标组合"
+    },
+    {
+      "asset_id": "marketing_screenshot_play",
+      "name_zh": "上架玩法截图模板",
+      "export_file": "export_png/marketing_screenshot_play.png",
+      "export_size": "750x1334",
+      "source_ora": "source_ora/marketing_screenshot_play.ora",
+      "master_png": "master_png/marketing_screenshot_play@1500x2668.png",
+      "ora_layers": 6,
+      "file_validation": "pass",
+      "content_status": "blocked_pending_real_game_capture",
+      "note": "只是模板，未取得真实游戏截图，禁止直接上传商店"
+    },
+    {
+      "asset_id": "marketing_screenshot_merge",
+      "name_zh": "上架合成截图模板",
+      "export_file": "export_png/marketing_screenshot_merge.png",
+      "export_size": "750x1334",
+      "source_ora": "source_ora/marketing_screenshot_merge.ora",
+      "master_png": "master_png/marketing_screenshot_merge@1500x2668.png",
+      "ora_layers": 6,
+      "file_validation": "pass",
+      "content_status": "blocked_pending_real_game_capture",
+      "note": "只是模板，未取得真实游戏截图，禁止直接上传商店"
+    },
+    {
+      "asset_id": "marketing_screenshot_stages",
+      "name_zh": "上架五杯截图模板",
+      "export_file": "export_png/marketing_screenshot_stages.png",
+      "export_size": "750x1334",
+      "source_ora": "source_ora/marketing_screenshot_stages.ora",
+      "master_png": "master_png/marketing_screenshot_stages@1500x2668.png",
+      "ora_layers": 6,
+      "file_validation": "pass",
+      "content_status": "blocked_pending_real_game_capture",
+      "note": "只是模板，未取得真实游戏截图，禁止直接上传商店"
+    },
+    {
+      "asset_id": "marketing_screenshot_rank",
+      "name_zh": "上架榜单截图模板",
+      "export_file": "export_png/marketing_screenshot_rank.png",
+      "export_size": "750x1334",
+      "source_ora": "source_ora/marketing_screenshot_rank.ora",
+      "master_png": "master_png/marketing_screenshot_rank@1500x2668.png",
+      "ora_layers": 6,
+      "file_validation": "pass",
+      "content_status": "blocked_pending_real_game_capture",
+      "note": "只是模板，未取得真实游戏截图，禁止直接上传商店"
+    }
+  ]
+}

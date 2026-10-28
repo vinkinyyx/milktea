@@ -1,0 +1,68 @@
+{
+  "scene_size": [
+    750,
+    2134
+  ],
+  "seams": {
+    "top_to_base_mean_rgb_absdiff": 0.09955555555555555,
+    "base_to_bottom_mean_rgb_absdiff": 0.0
+  },
+  "environment_assets": {
+    "bg_shop_extend_top": {
+      "size": [
+        750,
+        400
+      ],
+      "mode": "RGB",
+      "expected": [
+        750,
+        400
+      ]
+    },
+    "bg_shop_base": {
+      "size": [
+        750,
+        1334
+      ],
+      "mode": "RGB",
+      "expected": [
+        750,
+        1334
+      ]
+    },
+    "bg_shop_extend_bottom": {
+      "size": [
+        750,
+        400
+      ],
+      "mode": "RGB",
+      "expected": [
+        750,
+        400
+      ]
+    },
+    "ui_title_logo": {
+      "size": [
+        800,
+        300
+      ],
+      "mode": "RGBA",
+      "expected": [
+        800,
+        300
+      ]
+    },
+    "spr_cup_shadow": {
+      "size": [
+        512,
+        128
+      ],
+      "mode": "RGBA",
+      "expected": [
+        512,
+        128
+      ]
+    }
+  },
+  "logo_glyphs": "奶茶挤挤"
+}

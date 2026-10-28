@@ -15,7 +15,10 @@ export class CupGeometry {
       return { kind, innerStart: a, innerEnd: b, center: { x: (a.x + b.x) / 2 + outward.x * t / 2, y: (a.y + b.y) / 2 + outward.y * t / 2 }, lengthDu: lengthDu + t, angleDeg: Math.atan2(dy, dx) * 180 / Math.PI, thicknessDu: t, outward };
     };
     const dx = leftTop.x - leftBottom.x; const dy = ty - by; const len = Math.hypot(dx, dy);
-    const leftOut = { x: -dy / len, y: dx / len }; const rightOut = { x: -leftOut.x, y: -leftOut.y };
+    const leftOut = { x: -dy / len, y: dx / len };
+    const rightDx = rightTop.x - rightBottom.x; const rightDy = rightTop.y - rightBottom.y;
+    const rightLen = Math.hypot(rightDx, rightDy);
+    const rightOut = { x: rightDy / rightLen, y: -rightDx / rightLen };
     return { leftBottom, rightBottom, leftTop, rightTop, innerWidthAtBottom: bw, innerWidthAtTop: tw,
       segments: [make('bottom', leftBottom, rightBottom, { x: 0, y: -1 }), make('left', leftBottom, leftTop, leftOut), make('right', rightBottom, rightTop, rightOut)],
       spawnRange: { minX: cx - tw / 2, maxX: cx + tw / 2 } };

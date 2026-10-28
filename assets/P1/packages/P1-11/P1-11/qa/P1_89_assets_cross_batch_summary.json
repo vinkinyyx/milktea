@@ -1,0 +1,14 @@
+{
+  "phase": "P1",
+  "expected_ids": 89,
+  "static_available_ids": 89,
+  "missing_ids": [],
+  "provided_first_phase_coverage": "static_code_and_exports",
+  "engine_integration": "not_tested",
+  "open_issues": [
+    "P1-01 nine ingredient masters still lack genuine editable base/texture/highlight layer sources",
+    "Original five cup guide SVG references not among accessible Library docs; exact CupGeometry integration must validate P1-03 cup registration",
+    "P1-11 Canvas demonstration not integrated into target game engine; dynamic input/tick/performance/mobile must be tested",
+    "Optional three face assets are optional; all IDs count according to original catalogue"
+  ]
+}

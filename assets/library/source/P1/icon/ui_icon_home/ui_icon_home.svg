@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+  <title>主页小屋 | ui_icon_home</title>
+  <desc>奶茶游戏 UI icon. Original editable vector. Transparent 192x192 canvas. 96px/48px exports. sRGB deep-brown. No dynamic text.</desc>
+
+  <defs>
+   <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+   </linearGradient>
+  </defs>
+
+  <g id="ui_icon_home_paint" stroke-linejoin="round">
+
+      <path d="M53 89 L96 52 L139 89 V143 Q139 150 132 150 H60 Q53 150 53 143 Z" fill="url(#brown)" stroke="#3F281E" stroke-width="7.5" stroke-linejoin="round"/>
+      <path d="M36 91 L96 40 L156 91" fill="none" stroke="#3F281E" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M36 91 L96 40 L156 91" fill="none" stroke="url(#brown)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M61 81 L96 51 L131 81" fill="none" stroke="#EBC297" stroke-width="3" stroke-opacity=".76" stroke-linecap="round"/>
+      <path d="M82 151 V112 Q82 107 87 107 H105 Q110 107 110 112 V151" fill="#F2D6B3" stroke="#3F281E" stroke-width="6" stroke-linejoin="round"/>
+    
+  </g>
+</svg>

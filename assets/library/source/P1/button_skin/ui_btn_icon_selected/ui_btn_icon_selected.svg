@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+<title>奶茶挤挤 icon selected button skin</title>
+<desc>Button skin only. No text or icon. Straight alpha PNG export. sRGB intended.</desc>
+<defs>
+ <linearGradient id="icon_selected_body" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#FFF8EB" />
+   <stop offset="53%" stop-color="#F5E2C1" />
+   <stop offset="100%" stop-color="#E5CA9E" />
+ </linearGradient>
+ <linearGradient id="icon_selected_sheen" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".38" />
+  <stop offset="48%" stop-color="#FFFFFF" stop-opacity=".08" />
+  <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+ </linearGradient>
+ </defs>
+<g id="base_shape"><circle cx="96" cy="96" r="84" fill="url(#icon_selected_body)" stroke="#7B4A32" stroke-width="7" /></g>
+<g id="surface_sheen" opacity=".75">
+      <circle cx="96" cy="96" r="84" fill="url(#icon_selected_sheen)" stroke="none" />
+    </g>
+<g id="bevel_highlights">
+         <circle cx="96" cy="96" r="77" fill="none" stroke="#C68B48" stroke-width="3.5" stroke-opacity=".75" />
+         <path d="M 39 73 C 43 37, 71 24, 96 24 C 122 24, 148 42, 152 72" fill="none" stroke="#FFF8E8" stroke-width="4" stroke-opacity=".86" stroke-linecap="round" />
+         <path d="M 35 124 Q 96 185 157 124" fill="none" stroke="#7B4A32" stroke-opacity=".37" stroke-width="3.5" stroke-linecap="round" />
+        </g>
+<g id="selection_double_border">
+           <circle cx="96" cy="96" r="73" fill="none" stroke="#8B4E2F" stroke-width="5.5" />
+           <circle cx="96" cy="96" r="69" fill="none" stroke="#C2894A" stroke-width="2.5" />
+        </g>
+</svg>

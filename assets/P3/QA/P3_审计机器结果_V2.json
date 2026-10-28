@@ -1,0 +1,323 @@
+{
+  "audit_stage": "P3 V2 total review",
+  "total_assets": 74,
+  "by_stage": {
+    "P3-A": 48,
+    "P3-B": 20,
+    "P3-C": 6
+  },
+  "by_method": {
+    "derived": 13,
+    "new_draw": 54,
+    "engine": 5,
+    "platform": 2
+  },
+  "raster_assets": 67,
+  "svg_png_fidelity_tested": 56,
+  "svg_png_mean_diff_highest": [
+    [
+      "spr_cup_coconut_green_back",
+      0.0
+    ],
+    [
+      "spr_cup_coconut_green_tea",
+      0.0
+    ],
+    [
+      "spr_cup_coconut_green_front",
+      0.0
+    ],
+    [
+      "spr_cup_coconut_green_rim_back",
+      0.0
+    ],
+    [
+      "spr_cup_coconut_green_rim_front",
+      0.0
+    ],
+    [
+      "spr_cup_coconut_green_base",
+      0.0
+    ],
+    [
+      "spr_cup_coconut_green_label",
+      0.0
+    ],
+    [
+      "spr_cup_taro_boba_back",
+      0.0
+    ]
+  ],
+  "ora_verified": 6,
+  "geometry_checked": [
+    {
+      "cup": "coconut_green",
+      "geometry_document_match": true,
+      "world_top": [
+        [
+          128.0,
+          1060
+        ],
+        [
+          622.0,
+          1060
+        ]
+      ],
+      "world_bottom": [
+        [
+          204.0,
+          260
+        ],
+        [
+          546.0,
+          260
+        ]
+      ],
+      "max_geometry_coordinate_delta": 0.0,
+      "same_registered_canvas": true,
+      "front_center_alpha": 0,
+      "tea_center_alpha": 71,
+      "preview_delta_mean": 0.0
+    },
+    {
+      "cup": "taro_boba",
+      "geometry_document_match": true,
+      "world_top": [
+        [
+          141.0,
+          1060
+        ],
+        [
+          609.0,
+          1060
+        ]
+      ],
+      "world_bottom": [
+        [
+          213.0,
+          260
+        ],
+        [
+          537.0,
+          260
+        ]
+      ],
+      "max_geometry_coordinate_delta": 0.0,
+      "same_registered_canvas": true,
+      "front_center_alpha": 0,
+      "tea_center_alpha": 71,
+      "preview_delta_mean": 0.0
+    },
+    {
+      "cup": "brown_sugar",
+      "geometry_document_match": true,
+      "world_top": [
+        [
+          154.0,
+          1060
+        ],
+        [
+          596.0,
+          1060
+        ]
+      ],
+      "world_bottom": [
+        [
+          222.0,
+          260
+        ],
+        [
+          528.0,
+          260
+        ]
+      ],
+      "max_geometry_coordinate_delta": 0.0,
+      "same_registered_canvas": true,
+      "front_center_alpha": 0,
+      "tea_center_alpha": 71,
+      "preview_delta_mean": 0.0
+    },
+    {
+      "cup": "mochi_special",
+      "geometry_document_match": true,
+      "world_top": [
+        [
+          167.0,
+          1060
+        ],
+        [
+          583.0,
+          1060
+        ]
+      ],
+      "world_bottom": [
+        [
+          231.0,
+          260
+        ],
+        [
+          519.0,
+          260
+        ]
+      ],
+      "max_geometry_coordinate_delta": 0.0,
+      "same_registered_canvas": true,
+      "front_center_alpha": 0,
+      "tea_center_alpha": 71,
+      "preview_delta_mean": 0.0
+    }
+  ],
+  "nine_slice_tests": [
+    {
+      "asset": "ui_btn_tab_normal",
+      "corners_unchanged": true,
+      "source": [
+        256,
+        96
+      ],
+      "target": [
+        408,
+        136
+      ],
+      "slice": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "asset": "ui_btn_tab_pressed",
+      "corners_unchanged": true,
+      "source": [
+        256,
+        96
+      ],
+      "target": [
+        408,
+        136
+      ],
+      "slice": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "asset": "ui_btn_tab_selected",
+      "corners_unchanged": true,
+      "source": [
+        256,
+        96
+      ],
+      "target": [
+        408,
+        136
+      ],
+      "slice": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "asset": "ui_btn_tab_disabled",
+      "corners_unchanged": true,
+      "source": [
+        256,
+        96
+      ],
+      "target": [
+        408,
+        136
+      ],
+      "slice": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "asset": "ui_panel_stage",
+      "corners_unchanged": true,
+      "source": [
+        280,
+        400
+      ],
+      "target": [
+        360,
+        525
+      ],
+      "slice": [
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "asset": "ui_panel_rank_row",
+      "corners_unchanged": true,
+      "source": [
+        330,
+        48
+      ],
+      "target": [
+        495,
+        64
+      ],
+      "slice": [
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "asset": "ui_panel_rank_self",
+      "corners_unchanged": true,
+      "source": [
+        330,
+        48
+      ],
+      "target": [
+        495,
+        64
+      ],
+      "slice": [
+        12,
+        12,
+        12,
+        12
+      ]
+    }
+  ],
+  "node_test_results": {
+    "gen_skeleton.mjs": "PASS",
+    "gen_error_empty.mjs": "PASS",
+    "gen_locked_overlay.mjs": "PASS",
+    "gen_coupon_expiry.mjs": "PASS",
+    "gen_leaderboard_rank.mjs": "PASS",
+    "p3b_logic_7_checks": "PASS 7/7 P3-B dynamic tests",
+    "p3a_3_modules_canvas_smoke": "PASS P3-A 3 modules Canvas smoke: 3 save/restore and 6 fills"
+  },
+  "file_errors": [],
+  "file_issues_count": 0,
+  "integration_pending": {
+    "platform_user_avatar": "requires real authorized platform avatar",
+    "platform_share_entry_code": "requires authentic platform issued scanable code",
+    "marketing_screenshot_play": "needs genuine game capture",
+    "marketing_screenshot_merge": "needs genuine game capture",
+    "marketing_screenshot_stages": "needs genuine game capture",
+    "marketing_screenshot_rank": "needs genuine game capture"
+  },
+  "other_unverified": [
+    "4 cup geometries to compare against actual game-engine CupGeometry",
+    "phone 375-wide layout / dynamic accessibility / full game collision",
+    "real leaderboard backend and time authorization",
+    "app store screenshots and published provider-specific rules"
+  ]
+}

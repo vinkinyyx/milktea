@@ -1,0 +1,26 @@
+{
+  "caseId": "STR-P1",
+  "attemptId": "STR-01-002",
+  "buildId": "20261029-p1a-repair-03",
+  "probeVersion": "lab-probe-v1-SUMMARY",
+  "result": "FAIL",
+  "elapsedMs": 70010,
+  "tickAtPause": 477,
+  "stepCount": 477,
+  "entityCount": 220,
+  "finiteBodies": 220,
+  "paused": true,
+  "frameCount": 670,
+  "wallGapOver250ms": 102,
+  "wallGapOver500ms": 102,
+  "timingMs": {
+    "probeP95": 0.1,
+    "adapterP50": 3.5,
+    "adapterP95": 17.1,
+    "adapterP99": 22,
+    "adapterMax": 60.1,
+    "viewP95": 0.2,
+    "frameWorkP95": 17.2
+  },
+  "notes": "All 670 recorded frames visible/focused. Probe cost alone does not explain backlog."
+}

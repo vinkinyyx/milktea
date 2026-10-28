@@ -1,0 +1,7 @@
+﻿case,scope,boundary,min_margin_du,tick,entity_id
+pressure_220,all,bottom,-0.31221961975097656,33,2
+pressure_220,after_600,bottom,0.4743471145629883,601,2
+pressure_220,all,left,-0.061229858863960374,35,19
+pressure_220,after_600,left,0.6040350075535592,601,19
+pressure_220,all,right,-0.5424447212208428,24,134
+pressure_220,after_600,right,0.6779527988547187,601,68

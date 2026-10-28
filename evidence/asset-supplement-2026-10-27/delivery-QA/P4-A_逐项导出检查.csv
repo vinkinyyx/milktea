@@ -1,0 +1,14 @@
+﻿asset_id,variant,filename,size,status
+ui_icon_calendar,96,assets/P4/P4-A_V2/export_png/96/ui_icon_calendar.png,96x96,PASS
+ui_icon_calendar,48,assets/P4/P4-A_V2/export_png/48/ui_icon_calendar.png,48x48,PASS
+ui_icon_friend,96,assets/P4/P4-A_V2/export_png/96/ui_icon_friend.png,96x96,PASS
+ui_icon_friend,48,assets/P4/P4-A_V2/export_png/48/ui_icon_friend.png,48x48,PASS
+ui_icon_win,96,assets/P4/P4-A_V2/export_png/96/ui_icon_win.png,96x96,PASS
+ui_icon_win,48,assets/P4/P4-A_V2/export_png/48/ui_icon_win.png,48x48,PASS
+ui_icon_tie,96,assets/P4/P4-A_V2/export_png/96/ui_icon_tie.png,96x96,PASS
+ui_icon_tie,48,assets/P4/P4-A_V2/export_png/48/ui_icon_tie.png,48x48,PASS
+ui_icon_loss,96,assets/P4/P4-A_V2/export_png/96/ui_icon_loss.png,96x96,PASS
+ui_icon_loss,48,assets/P4/P4-A_V2/export_png/48/ui_icon_loss.png,48x48,PASS
+ui_panel_challenge,runtime,assets/P4/P4-A_V2/export_png/runtime/ui_panel_challenge.png,330x200,PASS
+share_daily_background,runtime,assets/P4/P4-A_V2/export_png/runtime/share_daily_background.png,750x1000,PASS
+share_friend_background,runtime,assets/P4/P4-A_V2/export_png/runtime/share_friend_background.png,750x1000,PASS

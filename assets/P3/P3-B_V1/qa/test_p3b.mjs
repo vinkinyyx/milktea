@@ -1,0 +1,13 @@
+import {standardCompetitionRanks,leaderboardRankLabel} from '../runtime/gen_leaderboard_rank.mjs';
+import {nextBeijingMidnight,couponTimeRemaining,couponExpiryLabel} from '../runtime/gen_coupon_expiry.mjs';
+import assert from 'node:assert/strict';
+let checks=0;
+const rs=standardCompetitionRanks([{score:88},{score:88},{score:50}]);assert.deepEqual(rs.map(x=>x.rank),[1,1,3]);checks++;
+assert.equal(leaderboardRankLabel({rank:0}),'暂无排名');checks++;
+assert.equal(leaderboardRankLabel({rank:2,surpassedPercent:NaN}),'第 2 名');checks++;
+const now=Date.parse('2026-10-27T15:59:59.000Z'),until=Date.parse('2026-10-27T16:00:00.000Z');
+assert.equal(nextBeijingMidnight(now),until);checks++;
+assert.equal(couponTimeRemaining(now,until).seconds,1);checks++;
+assert.equal(couponTimeRemaining(until+1,until).expired,true);checks++;
+assert.equal(couponExpiryLabel({serverEpochMs:NaN,balance:1}),'正在同步…');checks++;
+console.log(`PASS ${checks}/7 P3-B dynamic tests`);

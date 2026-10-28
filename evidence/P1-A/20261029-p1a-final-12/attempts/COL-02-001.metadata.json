@@ -1,0 +1,17 @@
+{
+  "caseId": "contact-matrix",
+  "attemptId": "COL-02-001",
+  "buildId": "20261029-p1a-final-12",
+  "embeddedBuildId": "20261029-p1a-final-12",
+  "expectedBuildId": "20261029-p1a-final-12",
+  "probe": "off",
+  "url": "http://127.0.0.1:8782/?p1aCase=contact-matrix&attemptId=COL-02-001&expectedBuildId=20261029-p1a-final-12&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-12%2Fraw%2FCOL-02-001",
+  "cliExitCode": 0,
+  "acceptance": "PASS",
+  "pass": true,
+  "resultParseError": null,
+  "stderr": "",
+  "artifacts": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\P1-A\\20261029-p1a-final-12\\raw\\COL-02-001",
+  "recordedAt": "2026-10-29T03:30:44.3672998+08:00",
+  "playwrightCommand": "node C:/Program Files/nodejs/node_modules/npm/bin/npx-cli.js --yes @playwright/cli -s=p1a-final12 --raw run-code --filename D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\p1a-runtime-case.js"
+}

@@ -1,0 +1,17 @@
+{
+  "asset_id": "platform_platform_review_logo",
+  "production_method": "platform",
+  "status": "WAITING_FOR_PROVIDER",
+  "mock_logo_generated": false,
+  "usage_rule": "Only fetch and use a real, currently valid official logo/badge if platform requires and permits. Do not draw an imitation.",
+  "source": "Current game publishing backend or SDK official source",
+  "checklist": [
+    "required badge in current review UI?",
+    "license/rights",
+    "official original file",
+    "aspect ratio and required safe area",
+    "size and alpha per actual provider",
+    "full integration screenshot"
+  ],
+  "note": "A provider platform mark is not the same as game branding; do not add unofficial WeChat or TapTap marks to promotional art."
+}

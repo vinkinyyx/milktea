@@ -1,0 +1,37 @@
+{
+  "buildId": "20261029-p1a-final-14",
+  "cases": {
+    "LIFE-01": [
+      "attempts/LIFE-01-PRIMARY-002/result.json"
+    ],
+    "LIFE-02": [
+      "attempts/LIFE-02-PRIMARY-001/result.json"
+    ],
+    "LIFE-03": [
+      "attempts/LIFE-03-PRIMARY-001/result.json"
+    ],
+    "LIFE-04": [
+      "attempts/LIFE-04-PRIMARY-001/result.json"
+    ],
+    "LIFE-05": [
+      "attempts/LIFE-05-PRIMARY-001/result.json"
+    ],
+    "LIFE-06": [
+      "attempts/LIFE-06-PRIMARY-001/result.json"
+    ],
+    "LIFE-07": [
+      "attempts/LIFE-07-PRIMARY-001/result.json"
+    ],
+    "LIFE-08": [
+      "attempts/LIFE-08-PRIMARY-002/result.json"
+    ],
+    "LIFE-09": [
+      "attempts/LIFE-09-QUEUE-PRIMARY-001/result.json",
+      "attempts/LIFE-09-REBUILD-PRIMARY-001/result.json"
+    ],
+    "LIFE-10": [
+      "attempts/LIFE-10-PRIMARY-001/result.json"
+    ]
+  },
+  "reason": "Actual primary-session real-tab lifecycle runs; historical placeholders and attempts remain preserved."
+}

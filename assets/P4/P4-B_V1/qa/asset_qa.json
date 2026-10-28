@@ -1,0 +1,284 @@
+[
+  {
+    "asset_id": "ui_ing_sago_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_sago_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_red_bean_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_red_bean_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_small_pearl_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_small_pearl_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_coconut_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_coconut_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_large_pearl_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_large_pearl_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_grass_jelly_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_grass_jelly_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_pudding_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_pudding_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_taro_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_taro_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_mochi_locked",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_ing_mochi_detail",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(512, 512): True",
+      "alpha:True",
+      "sRGB_ICC:True"
+    ]
+  },
+  {
+    "asset_id": "ui_icon_album",
+    "method": "new_draw",
+    "passed": true,
+    "checks": [
+      "expected_size:(96, 96): True",
+      "alpha:True",
+      "sRGB_ICC:True",
+      "svg_png_exact:True"
+    ]
+  },
+  {
+    "asset_id": "ui_icon_achievement",
+    "method": "new_draw",
+    "passed": true,
+    "checks": [
+      "expected_size:(96, 96): True",
+      "alpha:True",
+      "sRGB_ICC:True",
+      "svg_png_exact:True"
+    ]
+  },
+  {
+    "asset_id": "ui_icon_skin",
+    "method": "new_draw",
+    "passed": true,
+    "checks": [
+      "expected_size:(96, 96): True",
+      "alpha:True",
+      "sRGB_ICC:True",
+      "svg_png_exact:True"
+    ]
+  },
+  {
+    "asset_id": "ui_panel_collection",
+    "method": "new_draw",
+    "passed": true,
+    "checks": [
+      "expected_size:(180, 210): True",
+      "alpha:True",
+      "sRGB_ICC:True",
+      "svg_png_exact:True"
+    ]
+  },
+  {
+    "asset_id": "ui_badge_discovered",
+    "method": "new_draw",
+    "passed": true,
+    "checks": [
+      "expected_size:(96, 96): True",
+      "alpha:True",
+      "sRGB_ICC:True",
+      "svg_png_exact:True"
+    ]
+  },
+  {
+    "asset_id": "ui_badge_achievement",
+    "method": "new_draw",
+    "passed": true,
+    "checks": [
+      "expected_size:(192, 192): True",
+      "alpha:True",
+      "sRGB_ICC:True",
+      "svg_png_exact:True"
+    ]
+  },
+  {
+    "asset_id": "gen_album_question",
+    "method": "engine",
+    "passed": true,
+    "checks": []
+  },
+  {
+    "asset_id": "share_achievement_background",
+    "method": "derived",
+    "passed": true,
+    "checks": [
+      "expected_size:(750, 1000): True",
+      "alpha:True",
+      "sRGB_ICC:True",
+      "svg_png_exact:True"
+    ]
+  },
+  {
+    "asset_id": "candidate_cup_pattern",
+    "method": "new_draw",
+    "passed": true,
+    "checks": []
+  },
+  {
+    "asset_id": "candidate_table_theme",
+    "method": "new_draw",
+    "passed": true,
+    "checks": []
+  },
+  {
+    "asset_id": "ui_panel_collection_nineslice",
+    "passed": true,
+    "checks": [
+      "16 px per side, 4 corner pixels unchanged"
+    ]
+  }
+]

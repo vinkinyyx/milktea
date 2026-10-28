@@ -1,0 +1,99 @@
+[
+  {
+    "server": "cocos-creator-local-mcp",
+    "connected": true,
+    "tools": [
+      "cocos_local_get_environment",
+      "cocos_local_create_project",
+      "cocos_local_open_project",
+      "cocos_local_create_scene_from_template",
+      "cocos_local_inspect_project",
+      "cocos_local_create_wechat_build_config",
+      "cocos_local_build_wechatgame",
+      "cocos_local_check_wechat_build_output",
+      "cocos_local_open_wechat_devtools",
+      "cocos_local_preview_wechat_devtools",
+      "cocos_local_manage_wechat_devtools",
+      "cocos_local_audit_runtime_package",
+      "cocos_local_collect_runtime_evidence",
+      "cocos_local_create_component_script",
+      "cocos_local_create_minigame_skeleton",
+      "cocos_local_create_architecture_skeleton",
+      "cocos_local_install_editor_bridge",
+      "cocos_local_check_editor_bridge",
+      "cocos_local_call_editor_bridge",
+      "cocos_local_wait_for_editor_bridge",
+      "cocos_local_apply_scene_blueprint",
+      "cocos_local_open_scene",
+      "cocos_local_assign_sprite_frame",
+      "cocos_local_assign_sprite_frame_sequence",
+      "cocos_local_create_sprite_node",
+      "cocos_local_place_sprite_assets"
+    ],
+    "calls": [
+      {
+        "name": "cocos_local_get_environment",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"creator\": {\n    \"path\": \"C:/ProgramData/cocos/editors/Creator/3.8.8/CocosCreator.exe\",\n    \"found\": true,\n    \"checked\": [\n      \"C:/ProgramData/cocos/editors/Creator/3.8.8/CocosCreator.exe\",\n      \"/Applications/Cocos/Creator/3.8.8/CocosCreator.app/Contents/MacOS/CocosCreator\"\n    ]\n  },\n  \"wechatDevToolsCli\": {\n    \"path\": null,\n    \"found\": false,\n    \"checked\": [\n      \"/Applications/wechatwebdevtools.app/Contents/MacOS/cli\"\n    ]\n  },\n  \"notes\": [\n    \"Cocos Creator command-line builds use --project <projectRoot> --build \\\"platform=...\\\" or --build \\\"configPath=...\\\".\",\n    \"WeChat DevTools is only needed for local simulator opening/preview after build; upload/release is intentionally out of scope.\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "name": "cocos_local_install_editor_bridge",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"projectRoot\": \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\",\n  \"extensionDir\": \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\",\n  \"extensionName\": \"codex-editor-bridge\",\n  \"port\": 17388,\n  \"files\": [\n    \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\\\\package.json\",\n    \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\\\\bridge-config.json\",\n    \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\\\\browser.js\",\n    \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\\\\scene.js\"\n  ],\n  \"nextSteps\": [\n    \"Open the project in Cocos Creator 3.8.x.\",\n    \"Open Extension -> Extension Manager -> Project, refresh if needed, and enable Codex Editor Bridge.\",\n    \"After enabling, call cocos_local_check_editor_bridge with port 17388 to confirm the localhost bridge is running.\",\n    \"Use cocos_local_call_editor_bridge route /scene/summary after a scene is open to inspect the current scene tree.\"\n  ],\n  \"references\": [\n    \"Cocos Creator project extensions live under <project>/extensions.\",\n    \"The bridge uses Cocos extension messages and scene scripts so engine APIs run in the scene process.\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "name": "cocos_local_check_editor_bridge",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"projectRoot\": \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\",\n  \"extensionDir\": \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\",\n  \"extensionExists\": true,\n  \"files\": [\n    {\n      \"file\": \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\\\\package.json\",\n      \"exists\": true\n    },\n    {\n      \"file\": \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\\\\browser.js\",\n      \"exists\": true\n    },\n    {\n      \"file\": \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\\\\scene.js\",\n      \"exists\": true\n    },\n    {\n      \"file\": \"D:\\\\Workspace\\\\TapTap\\\\奶茶挤挤\\\\client\\\\extensions\\\\codex-editor-bridge\\\\bridge-config.json\",\n      \"exists\": true\n    }\n  ],\n  \"http\": null,\n  \"warnings\": [\n    \"Bridge HTTP ping failed: fetch failed\"\n  ],\n  \"notes\": [\n    \"The extension must be enabled in Cocos Creator before the HTTP bridge can respond.\",\n    \"If files exist but HTTP ping fails, open Cocos Creator Extension Manager and enable or refresh the project extension.\"\n  ]\n}"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "server": "cocos-asset-forge-mcp",
+    "connected": true,
+    "tools": [
+      "asset_forge_get_config",
+      "asset_forge_plan_pack",
+      "asset_forge_generate_sprite",
+      "asset_forge_generate_sprite_sheet",
+      "asset_forge_generate_sprite_grid_sheet",
+      "asset_forge_generate_tileset",
+      "asset_forge_generate_ui_pack",
+      "asset_forge_generate_sfx",
+      "asset_forge_generate_music_loop",
+      "asset_forge_adapt_image",
+      "asset_forge_adapt_audio"
+    ],
+    "calls": [
+      {
+        "name": "asset_forge_get_config",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"defaultOutputDir\": \"D:/Workspace/TapTap/奶茶挤挤/output/asset-forge-staging\",\n  \"imageProvider\": {\n    \"kind\": \"mock\",\n    \"name\": \"offline-smoke-only\",\n    \"headers\": {},\n    \"timeoutMs\": 120000\n  },\n  \"audioProvider\": {\n    \"kind\": \"mock\",\n    \"name\": \"offline-smoke-only\",\n    \"headers\": {},\n    \"timeoutMs\": 120000\n  },\n  \"cutout\": {\n    \"backend\": \"auto\",\n    \"args\": [\n      \"i\",\n      \"{input}\",\n      \"{output}\"\n    ],\n    \"timeoutMs\": 180000,\n    \"triggerMinRemovedRatio\": 0.25\n  },\n  \"cocos\": {\n    \"creatorVersion\": \"3.8.8\",\n    \"assetRoot\": \"assets\",\n    \"projectRoot\": \"D:/Workspace/TapTap/奶茶挤挤/client\"\n  },\n  \"safety\": {\n    \"overwrite\": false,\n    \"allowNetworkProviders\": false\n  }\n}"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

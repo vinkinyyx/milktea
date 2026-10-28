@@ -1,0 +1,137 @@
+{
+  "buildId": "20261029-p1a-final-14",
+  "counts": {
+    "PASS": 51,
+    "FAIL": 1,
+    "未执行": 0,
+    "不适用": 0
+  },
+  "selected": {
+    "LIFE-01": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-01-PRIMARY-002"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-01-PRIMARY-002/result.json",
+          "sha256": "6445f19947ed5ecd05b06b4948e3bbcfa6db0de92421bd0f6e73b29f8fe03d17"
+        }
+      ]
+    },
+    "LIFE-02": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-02-PRIMARY-001"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-02-PRIMARY-001/result.json",
+          "sha256": "8a4853697132f9e862059d753675196daa0a49d8249a9bbcb4d0286c82d2a0a4"
+        }
+      ]
+    },
+    "LIFE-03": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-03-PRIMARY-001"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-03-PRIMARY-001/result.json",
+          "sha256": "e9833dc2fed0957587911f6776d145422832c042032a1bbd102f6840aef9bca0"
+        }
+      ]
+    },
+    "LIFE-04": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-04-PRIMARY-001"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-04-PRIMARY-001/result.json",
+          "sha256": "b832a76c7f13fa2b7d555e970b515ccec5cde0f94300cc52ea95a3093edfc0f0"
+        }
+      ]
+    },
+    "LIFE-05": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-05-PRIMARY-001"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-05-PRIMARY-001/result.json",
+          "sha256": "854de2914499d6803b73539054667d4f83afd38d4aa3bb9e2f42781b2e45a850"
+        }
+      ]
+    },
+    "LIFE-06": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-06-PRIMARY-001"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-06-PRIMARY-001/result.json",
+          "sha256": "1d5a3807fbf75753e7e03232057787b2990f0f1d407c73fc2e4cca6e4ea961b9"
+        }
+      ]
+    },
+    "LIFE-07": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-07-PRIMARY-001"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-07-PRIMARY-001/result.json",
+          "sha256": "d6edc59b40ce91477e3a5f8eeb01c21bdf991293c5d42351cc6f277718cac071"
+        }
+      ]
+    },
+    "LIFE-08": {
+      "status": "FAIL",
+      "attemptIds": [
+        "LIFE-08-PRIMARY-002"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-08-PRIMARY-002/result.json",
+          "sha256": "81334bc512218671391a1fa049bb5a4564298bf3849bb010a23388cf66dce0f2"
+        }
+      ]
+    },
+    "LIFE-09": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-09-QUEUE-PRIMARY-001",
+        "LIFE-09-REBUILD-PRIMARY-001"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-09-QUEUE-PRIMARY-001/result.json",
+          "sha256": "0346d0871c0c549a9834fbb04c4b3258cbd73e5f957b39ff1422bc207d4676cf"
+        },
+        {
+          "path": "attempts/LIFE-09-REBUILD-PRIMARY-001/result.json",
+          "sha256": "61a307cd503c77b188eebe48ea8e0842efb57bee0d3ffc6c42a18c0bc0f1a3f7"
+        }
+      ]
+    },
+    "LIFE-10": {
+      "status": "PASS",
+      "attemptIds": [
+        "LIFE-10-PRIMARY-001"
+      ],
+      "rawFiles": [
+        {
+          "path": "attempts/LIFE-10-PRIMARY-001/result.json",
+          "sha256": "1afc19adb6d1d7fbe6177e9de3eb019ba3ce633b356079a95c5d2122ef81e85e"
+        }
+      ]
+    }
+  },
+  "note": "Lifecycle row status is derived from preserved raw runs. This tool does not grant phase approval."
+}

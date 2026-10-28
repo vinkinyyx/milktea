@@ -1,0 +1,14 @@
+{
+  "caseId": "QUEUE-01",
+  "attemptId": "QUE-01-001",
+  "buildId": "20261029-p1a-repair-03",
+  "result": "FAIL",
+  "taskId": "nine-1793205947251-1",
+  "state": "RUNNING",
+  "level": 3,
+  "attempts": 0,
+  "entities": 3,
+  "message": "物理落后超过配置补步上限，已暂停；对照采样中止，按 R 检查后恢复",
+  "terminalReached": false,
+  "notes": "real runtime received key actions but scheduler paused before queue progressed; no 120-attempt claim"
+}

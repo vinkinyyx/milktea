@@ -1,0 +1,12 @@
+{
+  "caseId": "lifecycle-smoke",
+  "attemptId": "repair04-life-smoke-001",
+  "buildId": "20261029-p1a-repair-04",
+  "probe": "off",
+  "url": "http://127.0.0.1:8773/?p1aCase=lifecycle-smoke&attemptId=repair04-life-smoke-001&expectedBuildId=20261029-p1a-repair-04&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-repair-04%2Fraw%2Frepair04-life-smoke-001",
+  "cliExitCode": 0,
+  "stderr": "",
+  "artifacts": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\P1-A\\20261029-p1a-repair-04\\raw\\repair04-life-smoke-001",
+  "recordedAt": "2026-10-29T02:03:03.6975761+08:00",
+  "playwrightCommand": "npx --yes @playwright/cli -s=p1a-repair --raw run-code --filename D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\p1a-runtime-case.js"
+}

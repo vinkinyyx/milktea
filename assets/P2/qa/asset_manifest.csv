@@ -1,0 +1,6 @@
+﻿asset_id,final_export,source,size_pass,color_pass,alpha_pass,final_status
+ui_icon_record,export_png/96/ui_icon_record.png; export_png/48/ui_icon_record.png,source_svg/ui_icon_record.svg,True,True,True,STATIC_QA_PASS
+ui_icon_publish,export_png/96/ui_icon_publish.png; export_png/48/ui_icon_publish.png,source_svg/ui_icon_publish.svg,True,True,True,STATIC_QA_PASS
+ui_icon_sidebar,export_png/96/ui_icon_sidebar.png; export_png/48/ui_icon_sidebar.png,source_svg/ui_icon_sidebar.svg,True,True,True,STATIC_QA_PASS
+marketing_app_icon,export_png/512/marketing_app_icon.png,source_layered/marketing_app_icon.ora,True,True,True,STATIC_QA_PASS
+marketing_launch,export_png/750x1334/marketing_launch.png,source_layered/marketing_launch.ora,True,True,True,STATIC_QA_PASS

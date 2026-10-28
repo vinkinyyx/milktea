@@ -1,0 +1,8 @@
+{
+  "started": "2026-10-29T02:21:39.6188710+08:00",
+  "finished": "2026-10-29T02:22:21.5586771+08:00",
+  "rootPid": 26296,
+  "processCount": 23,
+  "capture": "Win32_Process 50ms snapshots",
+  "buildId": "20261029-p1a-final-05"
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+ <title>危险提示 | ui_icon_warning</title>
+ <desc>奶茶项目P1-07. Original editable SVG. Transparent 192x192 canvas, 96 and 48 PNG exports, sRGB browns, no dynamic text or UI button baked in.</desc>
+ <defs>
+  <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+  </linearGradient>
+  <linearGradient id="milk" x1="0" x2=".8" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFF5E7"/>
+    <stop offset="70%" stop-color="#E9D1B0"/>
+    <stop offset="100%" stop-color="#D6AE86"/>
+  </linearGradient>
+  <linearGradient id="warning" x1="0" x2=".4" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFDD9D"/>
+    <stop offset="70%" stop-color="#F4BD6C"/>
+    <stop offset="100%" stop-color="#ECA257"/>
+  </linearGradient>
+ </defs>
+ <g id="ui_icon_warning_paint" stroke-linejoin="round">
+ <g id="warning_triangle">
+ <path d="M83 40 Q96 17 109 40 L164 133 Q177 158 148 158 H44 Q15 158 28 133Z" fill="url(#warning)" stroke="#3F281E" stroke-width="9.5" stroke-linejoin="round"/>
+ <path d="M86 49 Q96 34 105 48 L150 130" fill="none" stroke="#FFF0CD" stroke-width="4" opacity=".75" stroke-linecap="round"/>
+ </g>
+ <g id="warning_bang"><rect x="88" y="67" width="16" height="47" rx="7" fill="#5A3624"/><circle cx="96" cy="131" r="9.2" fill="#5A3624"/></g>
+ </g>
+ </svg>

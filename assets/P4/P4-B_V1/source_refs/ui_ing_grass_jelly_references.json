@@ -1,0 +1,11 @@
+{
+  "source_asset_id": "spr_ing_grass_jelly_base",
+  "canonical_archive": "奶茶_P1_89项全量复审修订_V3.zip",
+  "source_member": "Assets/P1-01/spr_ing_grass_jelly_base/source/spr_ing_grass_jelly_base.png",
+  "source_sha256": "4a325f30a30f2f9de6a4573b503da26670f0c53cb3b3be211817224ce8f896cc",
+  "derived_outputs": [
+    "ui_ing_grass_jelly_detail.png",
+    "ui_ing_grass_jelly_locked.png"
+  ],
+  "method": "P1 V3 source resample; silhouette alpha mask; no invented level"
+}

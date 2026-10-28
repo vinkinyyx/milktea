@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="512" viewBox="0 0 512 512" role="img">
+<title>麻薯里程碑星 / fx_mochi_star</title>
+<desc>NAICHA 原创可编辑SVG源图。512×512母版, 256×256独立透明PNG导出, 以中心256,256为锚点。特效由程序控制alpha/scale/rotation，不烘焙文字、帧序列。</desc>
+<defs>
+<radialGradient id="glow"><stop offset="0" stop-color="#FFF9DF" stop-opacity=".98"/><stop offset=".55" stop-color="#FFF0C9" stop-opacity=".65"/><stop offset="1" stop-color="#EBC294" stop-opacity=".12"/></radialGradient>
+<radialGradient id="milkstar"><stop offset="0" stop-color="#FFFFF6"/><stop offset=".58" stop-color="#FFF7D5"/><stop offset="1" stop-color="#F0C786"/></radialGradient>
+<linearGradient id="gold" x1=".12" y1="0" x2=".83" y2="1"><stop offset="0" stop-color="#FFF9DF"/><stop offset=".34" stop-color="#FBE2A1"/><stop offset=".7" stop-color="#F2BB62"/><stop offset="1" stop-color="#C58A4B"/></linearGradient>
+<linearGradient id="cream" x1=".1" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".35" stop-color="#FFF6E5"/><stop offset="1" stop-color="#E2BE99"/></linearGradient>
+<linearGradient id="crumb" x1=".14" y1=".03" x2=".82" y2=".95"><stop offset="0" stop-color="#FFF5E3"/><stop offset=".58" stop-color="#E8C99E"/><stop offset="1" stop-color="#BE936E"/></linearGradient>
+<linearGradient id="skin" x1=".13" y1="0" x2=".93" y2="1"><stop offset="0" stop-color="#FFF4DF"/><stop offset=".45" stop-color="#F4CDA7"/><stop offset="1" stop-color="#D69B71"/></linearGradient>
+<linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ECDDBB"/><stop offset="1" stop-color="#B48059"/></linearGradient>
+</defs>
+
+<g id="base_soft_glow"><circle cx="256" cy="254" r="108" fill="url(#glow)" opacity=".16"/></g>
+<g id="texture_soft_gold_rim"><path d="M256 157 Q262 156 268 171 L287 214 L336 221 Q352 223 343 238 L308 273 L317 322 Q319 340 300 332 L256 310 L211 332 Q194 340 196 321 L204 273 L170 237 Q158 223 176 220 L225 213 L244 171 Q250 158 256 157 Z" fill="url(#gold)" stroke="#B87849" stroke-width="6" stroke-linejoin="round"/></g>
+<g id="base_milky_inset"><path d="M256 173 L281 226 L338 234 L297 273 L307 320 L256 295 L206 320 L215 273 L174 233 L231 226 Z" fill="url(#milkstar)" opacity=".78"/></g>
+<g id="highlight_upper_left"><path d="M225 224 Q241 186 253 177 M180 234 Q200 227 223 229" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none" opacity=".67"/><circle cx="306" cy="300" r="5" fill="#FFFCE5" opacity=".6"/></g>
+
+</svg>

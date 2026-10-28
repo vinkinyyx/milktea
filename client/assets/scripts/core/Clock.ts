@@ -21,7 +21,9 @@ export class FixedClock {
     this.accumulator += renderDeltaSeconds;
     let steps = 0;
     while (this.accumulator + 1e-12 >= this.stepSeconds && steps < this.maxCatchupSteps) {
-      this.onStep(); this._tick++; this.accumulator -= this.stepSeconds; steps++;
+      this.onStep(); this._tick++; steps++;
+      if (this._paused) break;
+      this.accumulator -= this.stepSeconds;
     }
     const overflowed = this.accumulator + 1e-12 >= this.stepSeconds;
     if (overflowed) this.pause();

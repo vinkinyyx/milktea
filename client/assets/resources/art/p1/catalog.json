@@ -1,0 +1,1980 @@
+{
+  "version": 1,
+  "status": "P1_pngs_staged_import_pending",
+  "variants": [
+    {
+      "asset_id": "spr_ing_sago_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_sago_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "c709bca76314360463ecdd5211e9aa41d576540cfc8d2d2b7ba30e2e60834e10",
+      "resource_key": "art/p1/ingredient/spr_ing_sago_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 36",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_sago_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_sago_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "af9e465cccb6be62521125dbeebab6cc91b9ae65fba68637b141f88cb6881072",
+      "resource_key": "art/p1/ingredient/spr_ing_sago_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 36",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_sago_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_sago_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "c2931333b60d7d988ce7fc1ff2fe08ab5145eb7a1014a64dc76629397151f71d",
+      "resource_key": "art/p1/ingredient/spr_ing_sago_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 36",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_sago_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_sago_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_sago_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "215ea82bbcddb92fb69101811db1943095fd2187e0ff8a3e67edd92c04db71d8",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_sago_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_sago_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_red_bean_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_red_bean_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "2c74c835d594b1a615b602bb76197bdc439db72d734e2cd9bb7e5bc4ce2a8069",
+      "resource_key": "art/p1/ingredient/spr_ing_red_bean_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_red_bean_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_red_bean_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "c50b0216492565053122dcf3d3f8ca036ecb0331cd60819ed7d39738638a5657",
+      "resource_key": "art/p1/ingredient/spr_ing_red_bean_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_red_bean_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_red_bean_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "3c000a30891bf0a205009a4c956728efe5271421798120bd81ec07b7075d94e9",
+      "resource_key": "art/p1/ingredient/spr_ing_red_bean_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_red_bean_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_red_bean_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_red_bean_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "cecb71251e1b2c824f7fd3c5f7b6417a38df51c01268d06fea557cdd242eb4e0",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_red_bean_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_red_bean_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_small_pearl_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "1110f4be6605c76fff636e6c6c594a20a8888f080de34638afbed1ea6895e86c",
+      "resource_key": "art/p1/ingredient/spr_ing_small_pearl_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 64",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_small_pearl_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "e8b67819798bf8fe25ccf32d3388c8dd304773acfc52abede231459029c6b89b",
+      "resource_key": "art/p1/ingredient/spr_ing_small_pearl_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 64",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_small_pearl_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "ed1e2abca2ea73f1975e8ca9fc7fc8c72c953fa7b2659ddda36e5d3df89a2fdf",
+      "resource_key": "art/p1/ingredient/spr_ing_small_pearl_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 64",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_small_pearl_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_small_pearl_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_small_pearl_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "0da719a05a8b7b11499e45935d7255b55944e46802cb34bacb790fd0d28f00dd",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_small_pearl_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_small_pearl_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_coconut_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_coconut_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "a174434a3a88be09e49ec2a65546f93bd3417112b840c05ff0eefd925dca0936",
+      "resource_key": "art/p1/ingredient/spr_ing_coconut_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 84",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_coconut_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_coconut_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "83b6ef071d8f78e86f3b2227bea5c5a4167aa11ef3aca401aa64df0ed6e27d07",
+      "resource_key": "art/p1/ingredient/spr_ing_coconut_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 84",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_coconut_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_coconut_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "bcd6a5c33d37503db2f928171913df3a569bb291c83ea8769f8e57961365a496",
+      "resource_key": "art/p1/ingredient/spr_ing_coconut_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 84",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_coconut_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_coconut_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_coconut_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "3b4f4f04ca81ffa029321a73f8e922fcf0323570863f791130bdf6c2417c3d61",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_coconut_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_coconut_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_large_pearl_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "eaf7f95394b247fff758a6f8c2f8e27dda21687b9b554d6e8296bf36095b1206",
+      "resource_key": "art/p1/ingredient/spr_ing_large_pearl_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 110",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_large_pearl_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "f045e00ff7c6e50c9cd6b4592ce09601197c57c3e10921c63c731786a3ceb385",
+      "resource_key": "art/p1/ingredient/spr_ing_large_pearl_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 110",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_large_pearl_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "36e63fcc0c4468447e40ae6f0c391d3712889fab836f58cbfdb3ec04a3b293ea",
+      "resource_key": "art/p1/ingredient/spr_ing_large_pearl_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 110",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_large_pearl_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_large_pearl_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_large_pearl_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "9924c2d7d780628ed72cb0552793f8cf3de9af9cdc48034d5a79e44a8189602c",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_large_pearl_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_large_pearl_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_grass_jelly_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "057dc8db38671b9eb8432788b90321b808d2ff2d8d058e7d309b80fd0478547a",
+      "resource_key": "art/p1/ingredient/spr_ing_grass_jelly_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 140",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_grass_jelly_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "45a0d7b9da8eaea43fe94de870f19e63cf0179e213e3c42ffb29ced4fa76e00b",
+      "resource_key": "art/p1/ingredient/spr_ing_grass_jelly_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 140",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_grass_jelly_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "fcc45fb442884f2a14b37920ab8a885626456145b251a253730cab0e70822a98",
+      "resource_key": "art/p1/ingredient/spr_ing_grass_jelly_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 140",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_grass_jelly_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_grass_jelly_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_grass_jelly_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "ab10dcb466ea8c456ba2ecc1da9b1974632ac290c818cda070d2398824b60006",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_grass_jelly_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_grass_jelly_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_pudding_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_pudding_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "aab6ab98bb28806461f83e36171673108f93e897a0fd15650d43c05e8676178d",
+      "resource_key": "art/p1/ingredient/spr_ing_pudding_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 178",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_pudding_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_pudding_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "f8231d3b9f3cf502ef00b933212deffca0159e4aa612d739178102c32754e700",
+      "resource_key": "art/p1/ingredient/spr_ing_pudding_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 178",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_pudding_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_pudding_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "220b5812fabfcd7967587f9f33d7ea9797a5ab0f40e2fbab28871ea433b36258",
+      "resource_key": "art/p1/ingredient/spr_ing_pudding_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 178",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_pudding_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_pudding_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_pudding_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "6ac665d17d12512ca8b6176865a5e0a5a02a4109f1e4e5e8008f93cb99b27c36",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_pudding_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_pudding_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_taro_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_taro_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "4c09cccdbe91b28a9db4c4cd76b8a657528964920d88a2330cb1106803b8ee64",
+      "resource_key": "art/p1/ingredient/spr_ing_taro_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 224",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_taro_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_taro_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "3aad9da942e4a5a20263b85948a977e8e8fe45eeca198593aca8631f316940e0",
+      "resource_key": "art/p1/ingredient/spr_ing_taro_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 224",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_taro_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_taro_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "f4678bdabf8f42f7af881acc8eff62258d6acb7603aaf35858fce7c1d6e0b222",
+      "resource_key": "art/p1/ingredient/spr_ing_taro_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 224",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_taro_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_taro_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_taro_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "9ece95928d74c4f4181347817df9a650a87e559054af64e713b1f1a8ddcfdc52",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_taro_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_taro_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_mochi_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_mochi_base@128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "c21891d459952ccf248a635562a5a6c5d12f0e29bffe77f2f01820e590ffb7a4",
+      "resource_key": "art/p1/ingredient/spr_ing_mochi_base@128x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 280",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_mochi_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_mochi_base@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "8e5da44d2b91b8b973602264ee5caf816130bbe4d49710356479e5fb52d4eba9",
+      "resource_key": "art/p1/ingredient/spr_ing_mochi_base@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 280",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_ing_mochi_base",
+      "png": "client/assets/resources/art/p1/ingredient/spr_ing_mochi_base@512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "b237b7b4ffe978f6f1eebd570e800fed685e52bb836bd741dc558afac5ce1d25",
+      "resource_key": "art/p1/ingredient/spr_ing_mochi_base@512x512/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "visible diameter 280",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@128.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@256.png",
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-01_repaired/exports/spr_ing_mochi_base@512.png",
+        "RECONSTRUCTED_INGREDIENT_LAYERS_REVIEW_REQUIRED"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_ing_mochi_thumb",
+      "png": "client/assets/resources/art/p1/ingredient_thumbnail/ui_ing_mochi_thumb@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "02fde9aa77d2e8660cbaf3c0d0e79610fcaf33bc17b430ab5edf3ff9cfcf5924",
+      "resource_key": "art/p1/ingredient_thumbnail/ui_ing_mochi_thumb@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/ui_ing_mochi_thumb.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_face_neutral",
+      "png": "client/assets/resources/art/p1/optional_face/spr_face_neutral@256x128.png",
+      "size": [
+        256,
+        128
+      ],
+      "sha256": "e2a330125121e524ed8e23de756111aa3cbc9caa368fab352911f595e8c697e2",
+      "resource_key": "art/p1/optional_face/spr_face_neutral@256x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "relative to ingredient",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/spr_face_neutral.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_face_happy",
+      "png": "client/assets/resources/art/p1/optional_face/spr_face_happy@256x128.png",
+      "size": [
+        256,
+        128
+      ],
+      "sha256": "001a2181638953b783bffc40f68ad92e142f048bdd8dfcecf81bb6b23504673d",
+      "resource_key": "art/p1/optional_face/spr_face_happy@256x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "relative to ingredient",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/spr_face_happy.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_face_surprised",
+      "png": "client/assets/resources/art/p1/optional_face/spr_face_surprised@256x128.png",
+      "size": [
+        256,
+        128
+      ],
+      "sha256": "74e12f508f335cdef5acf5596601cc52d4449410654deac8127b480c03b8634c",
+      "resource_key": "art/p1/optional_face/spr_face_surprised@256x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "relative to ingredient",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-02/png/spr_face_surprised.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_cup_classic_back",
+      "png": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_back@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "sha256": "2b392ce10396a8a0825af91d50d1df878142ad13311a2a06e73bc49adbcdc0bc",
+      "resource_key": "art/p1/cup_layer/spr_cup_classic_back@750x1000/spriteFrame",
+      "pivot": "0,0",
+      "nine_slice": "none",
+      "runtime_du": "750x1000",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-03/export/spr_cup_classic_back.png",
+        "CUP_GEOMETRY_STATIC_ALIGNMENT_ONLY_ENGINE_CONTACT_PENDING"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_cup_classic_tea",
+      "png": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_tea@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "sha256": "8e9e27c0ed1f402cdcafda70e8100ed6e70dd693f4f53a1ae0856f4051076544",
+      "resource_key": "art/p1/cup_layer/spr_cup_classic_tea@750x1000/spriteFrame",
+      "pivot": "0,0",
+      "nine_slice": "none",
+      "runtime_du": "750x1000",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-03/export/spr_cup_classic_tea.png",
+        "CUP_GEOMETRY_STATIC_ALIGNMENT_ONLY_ENGINE_CONTACT_PENDING"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_cup_classic_front",
+      "png": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_front@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "sha256": "8607414dea6fd68008d6addff32351b8e77b1123d0ace6d60e3a5d5426f0a8ec",
+      "resource_key": "art/p1/cup_layer/spr_cup_classic_front@750x1000/spriteFrame",
+      "pivot": "0,0",
+      "nine_slice": "none",
+      "runtime_du": "750x1000",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-03/export/spr_cup_classic_front.png",
+        "CUP_GEOMETRY_STATIC_ALIGNMENT_ONLY_ENGINE_CONTACT_PENDING"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_cup_classic_rim_back",
+      "png": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_rim_back@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "sha256": "94f11bb2099dab304ece85b2ba433876a3b7c2bcc5e593b0ff122d1aca67f657",
+      "resource_key": "art/p1/cup_layer/spr_cup_classic_rim_back@750x1000/spriteFrame",
+      "pivot": "0,0",
+      "nine_slice": "none",
+      "runtime_du": "750x1000",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-03/export/spr_cup_classic_rim_back.png",
+        "CUP_GEOMETRY_STATIC_ALIGNMENT_ONLY_ENGINE_CONTACT_PENDING"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_cup_classic_rim_front",
+      "png": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_rim_front@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "sha256": "ea6c956139d37cbb621e65d1e9f78c55a8586175575c183afd9a9ba1bba5d90d",
+      "resource_key": "art/p1/cup_layer/spr_cup_classic_rim_front@750x1000/spriteFrame",
+      "pivot": "0,0",
+      "nine_slice": "none",
+      "runtime_du": "750x1000",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-03/export/spr_cup_classic_rim_front.png",
+        "CUP_GEOMETRY_STATIC_ALIGNMENT_ONLY_ENGINE_CONTACT_PENDING"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_cup_classic_base",
+      "png": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_base@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "sha256": "c9392f4b7db2116e75402d4138d203e03af3a61ca49a2dac85117e7be15cc478",
+      "resource_key": "art/p1/cup_layer/spr_cup_classic_base@750x1000/spriteFrame",
+      "pivot": "0,0",
+      "nine_slice": "none",
+      "runtime_du": "750x1000",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-03/export/spr_cup_classic_base.png",
+        "CUP_GEOMETRY_STATIC_ALIGNMENT_ONLY_ENGINE_CONTACT_PENDING"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_cup_classic_label",
+      "png": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_label@750x1000.png",
+      "size": [
+        750,
+        1000
+      ],
+      "sha256": "3dbed7e2802a353ecda3d16d60fbbbe97bb241017dca1a528ea80f3868b9f349",
+      "resource_key": "art/p1/cup_layer/spr_cup_classic_label@750x1000/spriteFrame",
+      "pivot": "0,0",
+      "nine_slice": "none",
+      "runtime_du": "750x1000",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-03/export/spr_cup_classic_label.png",
+        "CUP_GEOMETRY_STATIC_ALIGNMENT_ONLY_ENGINE_CONTACT_PENDING"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "bg_shop_base",
+      "png": "client/assets/resources/art/p1/environment/bg_shop_base@750x1334.png",
+      "size": [
+        750,
+        1334
+      ],
+      "sha256": "df76454523b7a02dc021a06446e27de83cb4ab304ca3c609e56a5c4f830bd70b",
+      "resource_key": "art/p1/environment/bg_shop_base@750x1334/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "750x1334",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-04/export/bg_shop_base.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "bg_shop_extend_top",
+      "png": "client/assets/resources/art/p1/environment/bg_shop_extend_top@750x400.png",
+      "size": [
+        750,
+        400
+      ],
+      "sha256": "874ccd87c666ebc711aca7cec4b258c5d2762fb38e60d7d5dca9f8ccb7331581",
+      "resource_key": "art/p1/environment/bg_shop_extend_top@750x400/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "750x400 tile-y",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-04/export/bg_shop_extend_top.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "bg_shop_extend_bottom",
+      "png": "client/assets/resources/art/p1/environment/bg_shop_extend_bottom@750x400.png",
+      "size": [
+        750,
+        400
+      ],
+      "sha256": "8316a9c4727ebfacf2b7e8f4bba6ea12564c881e2d19bce0ca9b2d8a5f05eadc",
+      "resource_key": "art/p1/environment/bg_shop_extend_bottom@750x400/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "750x400 tile-y",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-04/export/bg_shop_extend_bottom.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_title_logo",
+      "png": "client/assets/resources/art/p1/environment/ui_title_logo@800x300.png",
+      "size": [
+        800,
+        300
+      ],
+      "sha256": "0d924b634d4e811864a797bc2610f5e7ce6cecf08e6c52a1acb3fdc95de6816c",
+      "resource_key": "art/p1/environment/ui_title_logo@800x300/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "400x150",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-04/export/ui_title_logo.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "spr_cup_shadow",
+      "png": "client/assets/resources/art/p1/environment/spr_cup_shadow@512x128.png",
+      "size": [
+        512,
+        128
+      ],
+      "sha256": "d2ee699404126cb97663d20c32751fc750babd4ef68ed6ba819fc57fdabcc557",
+      "resource_key": "art/p1/environment/spr_cup_shadow@512x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "520x100",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-04/export/spr_cup_shadow.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_primary_normal",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_primary_normal@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "sha256": "d3a25c686941d4ec5d3874c27f31858929d396884205b3608b163621b79a9c6d",
+      "resource_key": "art/p1/button_skin/ui_btn_primary_normal@256x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "32,32,32,32",
+      "runtime_du": "360x104",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_primary_normal.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_primary_pressed",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_primary_pressed@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "sha256": "2a5b1fc28fa082c1c4911c3b272badce5fe60e4f8839d9a2df0b0b45bb568079",
+      "resource_key": "art/p1/button_skin/ui_btn_primary_pressed@256x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "32,32,32,32",
+      "runtime_du": "360x104",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_primary_pressed.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_primary_disabled",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_primary_disabled@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "sha256": "a385bd626099bfccee94ff165eeb416a0c4a7c075e95abf50543180d25a7c723",
+      "resource_key": "art/p1/button_skin/ui_btn_primary_disabled@256x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "32,32,32,32",
+      "runtime_du": "360x104",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_primary_disabled.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_primary_selected",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_primary_selected@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "sha256": "673df1b2292f85a60f00424a4871fbc837193dbba6745e9d4abb6f5a935d2b5b",
+      "resource_key": "art/p1/button_skin/ui_btn_primary_selected@256x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "32,32,32,32",
+      "runtime_du": "360x104",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_primary_selected.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_secondary_normal",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_secondary_normal@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "sha256": "63bc6dcf01ba09f1dc95f644b81d04043b6af279e2cef6e11eaa519f7512e913",
+      "resource_key": "art/p1/button_skin/ui_btn_secondary_normal@256x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "28,28,28,28",
+      "runtime_du": "300x96",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_secondary_normal.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_secondary_pressed",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_secondary_pressed@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "sha256": "0effcf459fcb47a44f6072e6f21f1384f8bc51298771585a85331ac182b65dbe",
+      "resource_key": "art/p1/button_skin/ui_btn_secondary_pressed@256x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "28,28,28,28",
+      "runtime_du": "300x96",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_secondary_pressed.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_secondary_disabled",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_secondary_disabled@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "sha256": "b0e03ec7f16083c91016522210b976f20423aee5154c051829708e83e65fd6fb",
+      "resource_key": "art/p1/button_skin/ui_btn_secondary_disabled@256x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "28,28,28,28",
+      "runtime_du": "300x96",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_secondary_disabled.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_secondary_selected",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_secondary_selected@256x96.png",
+      "size": [
+        256,
+        96
+      ],
+      "sha256": "dea12cd0a5f4b23063a45e290ad29cfaf59ff7a13b6e5e98829c0289dfd776be",
+      "resource_key": "art/p1/button_skin/ui_btn_secondary_selected@256x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "28,28,28,28",
+      "runtime_du": "300x96",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_secondary_selected.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_icon_normal",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_icon_normal@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "9e9e3fdda9b383805cf57857b5c6f9cec84ff28e45841942027828226fc4f38a",
+      "resource_key": "art/p1/button_skin/ui_btn_icon_normal@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "24,24,24,24",
+      "runtime_du": "96x96",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_icon_normal.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_icon_pressed",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_icon_pressed@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "00d2374ffd4ff1847324d9f2e8e2826bd7557e17026e5e6d583559ba8c155c5e",
+      "resource_key": "art/p1/button_skin/ui_btn_icon_pressed@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "24,24,24,24",
+      "runtime_du": "96x96",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_icon_pressed.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_icon_disabled",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_icon_disabled@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "9c8c20e9f9b2899c03ae11786e1bb3e67074acf72364a88e4c5f787a0306ac11",
+      "resource_key": "art/p1/button_skin/ui_btn_icon_disabled@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "24,24,24,24",
+      "runtime_du": "96x96",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_icon_disabled.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_btn_icon_selected",
+      "png": "client/assets/resources/art/p1/button_skin/ui_btn_icon_selected@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "72e1bbd867b392dcafcad2efa198a9dd00289e917ec66147c6e6d95ca360a7f2",
+      "resource_key": "art/p1/button_skin/ui_btn_icon_selected@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "24,24,24,24",
+      "runtime_du": "96x96",
+      "warnings": [
+        "COLOR_PROFILE_UNSPECIFIED:assets/P1/packages/P1-05/P1-05/export_png/ui_btn_icon_selected.png"
+      ],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_play",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_play@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "a6ddcc5d9a8816211e16cb5322e84e5b17386adf5835477f00a3c4ad3c29e8a4",
+      "resource_key": "art/p1/icon/ui_icon_play@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_play",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_play@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "c9aa8291716a78ab75ebb1ccd9d901478f2a126d84bc6a912589ea1d392d6324",
+      "resource_key": "art/p1/icon/ui_icon_play@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_continue",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_continue@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "b5ee4c12a1621298b7a3192719157443ed5527cd7787777d0111b259b4e5cbbc",
+      "resource_key": "art/p1/icon/ui_icon_continue@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_continue",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_continue@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "06550496e5235521dfe2c434fdf833b15ff79f953a53a092f26f21e4c133aa88",
+      "resource_key": "art/p1/icon/ui_icon_continue@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_pause",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_pause@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "59c995858b2fa3766b1fc0e823dab984841a1d780f98e3ebdc45a5f8400125ca",
+      "resource_key": "art/p1/icon/ui_icon_pause@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_pause",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_pause@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "f52ba9c2effe0032cb80632cce37c86f1310fd3ee60ba07018a95242a21b6a4a",
+      "resource_key": "art/p1/icon/ui_icon_pause@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_settings",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_settings@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "60e98600f3fcb71f9a549aeeb9172362e333ce5889a648516436a33b989b1217",
+      "resource_key": "art/p1/icon/ui_icon_settings@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_settings",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_settings@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "2f1c636a2f09a25ee2f655b438741c589e08b0931643f0d1264be2afe563b26d",
+      "resource_key": "art/p1/icon/ui_icon_settings@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_close",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_close@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "9388484565cd2b0f97af3c7fd69fb12b9023eee6d61542d0579aee2ad1c027b7",
+      "resource_key": "art/p1/icon/ui_icon_close@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_close",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_close@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "8c78a12da8af19209841187e99f3ae345c04630ba767f11b3b7920719e813493",
+      "resource_key": "art/p1/icon/ui_icon_close@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_back",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_back@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "474b11683af6f6c345e23989fec92db068088438936e98403ebbaf7a8ba38c63",
+      "resource_key": "art/p1/icon/ui_icon_back@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_back",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_back@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "39a4a36b8ca33498ac8c7b163b51b42e58a4dcf01f1802fa0be9147a9a5ca44a",
+      "resource_key": "art/p1/icon/ui_icon_back@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_restart",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_restart@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "9bc71a12b3ac6ae22d73a01b1ea6c213241cc415b23c8da9a6b82c4b2a77676d",
+      "resource_key": "art/p1/icon/ui_icon_restart@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_restart",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_restart@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "14901a199b47c42bc02b81186605712f88b99608d04731683d0d182e594a1259",
+      "resource_key": "art/p1/icon/ui_icon_restart@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_home",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_home@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "060f54534d1deb26d16ec3e08d41bae999ac31e190e495b8dcbe9771f6842f39",
+      "resource_key": "art/p1/icon/ui_icon_home@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_home",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_home@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "f559c00c4c71d3d17f99a929dfa413204d7c600b98d222725cc74b77b929c375",
+      "resource_key": "art/p1/icon/ui_icon_home@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_music_on",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_music_on@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "d3af424ba28d31093b4455d54642a98d8d3daa3c10b3038cc1199eac8f005088",
+      "resource_key": "art/p1/icon/ui_icon_music_on@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_music_on",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_music_on@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "00d4d55b9c1246a290b518c3b34307aac9f409bc7277c5674b8b31a039680733",
+      "resource_key": "art/p1/icon/ui_icon_music_on@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_music_off",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_music_off@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "4483e896e5ed4070966de78b17457cc6eb2330f70371ee76185115779622d8dd",
+      "resource_key": "art/p1/icon/ui_icon_music_off@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_music_off",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_music_off@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "d07d2e74e8a70323abb1538fd8211d73866c9d60f139f64d81ca262500a0733b",
+      "resource_key": "art/p1/icon/ui_icon_music_off@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_sfx_on",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_sfx_on@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "34ec6db7f0545e8cb8efcdd317da8048a729e9d3a9f2765f2a26fc6b5b244996",
+      "resource_key": "art/p1/icon/ui_icon_sfx_on@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_sfx_on",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_sfx_on@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "bcd8a86d44b6f8b08f08b3817c75a89df3afefd49680a6e5eeac549eaa29d0c2",
+      "resource_key": "art/p1/icon/ui_icon_sfx_on@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_sfx_off",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_sfx_off@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "3d45e77925821f03d381c5010267cad9860e58b832202c4910ba2a60917e3f41",
+      "resource_key": "art/p1/icon/ui_icon_sfx_off@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_sfx_off",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_sfx_off@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "ba3725e948b125f02dd9fec30b8db012e41a64bf96e31ee7e040ba52decb5e91",
+      "resource_key": "art/p1/icon/ui_icon_sfx_off@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_reduced_motion",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_reduced_motion@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "b359417b4fbea38d9f0b3b41a48a21b73705294fee0f31804edd313cbaf5c52d",
+      "resource_key": "art/p1/icon/ui_icon_reduced_motion@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_reduced_motion",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_reduced_motion@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "76c3d506d759e351ec60e609672a0b98f20e87acf22a02184285ae4e4a86a691",
+      "resource_key": "art/p1/icon/ui_icon_reduced_motion@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_shake",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_shake@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "cfd366bda37bf8e22d4eb6a766699c5c73bf114e8f67b5ef47d210dd60a8345d",
+      "resource_key": "art/p1/icon/ui_icon_shake@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_shake",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_shake@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "c90654b7da3cab618f038d143580afdbf86e6b703376a2f147837bb5d38d2985",
+      "resource_key": "art/p1/icon/ui_icon_shake@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_info",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_info@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "01b2e194dd1653bfe314b21ba74dc39b7f6d50ad7e86f8a9840878443820165c",
+      "resource_key": "art/p1/icon/ui_icon_info@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_info",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_info@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "73807f640d16eaa926db8b0dd6373c92c6be8d21cff6310edb54ebd8f9a002df",
+      "resource_key": "art/p1/icon/ui_icon_info@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_warning",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_warning@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "ed0dd997bb6496dee369418c697d1d9b4bf58b508e59179fe44b7883770dee63",
+      "resource_key": "art/p1/icon/ui_icon_warning@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_warning",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_warning@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "3599bc47ca74e942c6113d7a6bfbdb68da9961d05c597a6f9662e03401298844",
+      "resource_key": "art/p1/icon/ui_icon_warning@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_check",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_check@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "189627a86ab7b098e02465a0fd0bb8ddbc56c6b08db6479d2ebcf3f0d3eeb8a0",
+      "resource_key": "art/p1/icon/ui_icon_check@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_check",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_check@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "a5a50f38c295827e55460dce74fc9358226d583682cf2a1ca4b36f1e095ba8b5",
+      "resource_key": "art/p1/icon/ui_icon_check@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_next",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_next@48x48.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "f57137e18eaa1a2bb3b250d0ff04fa8f9a2e245d23786dcc51dd7b175960069e",
+      "resource_key": "art/p1/icon/ui_icon_next@48x48/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_icon_next",
+      "png": "client/assets/resources/art/p1/icon/ui_icon_next@96x96.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "6e1a3acd9c80b6a7e5d8ba3a0782e03d71305a378f5224f836c448b7531321a6",
+      "resource_key": "art/p1/icon/ui_icon_next@96x96/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "48x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_panel_modal",
+      "png": "client/assets/resources/art/p1/panel/ui_panel_modal@320x360.png",
+      "size": [
+        320,
+        360
+      ],
+      "sha256": "4a566a6a4bb2c6e68a03fc9d15b51439f4bcf8bc3bc112ae9e9591b1421809da",
+      "resource_key": "art/p1/panel/ui_panel_modal@320x360/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "32,32,32,32",
+      "runtime_du": "640x720",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_panel_hud",
+      "png": "client/assets/resources/art/p1/panel/ui_panel_hud@340x60.png",
+      "size": [
+        340,
+        60
+      ],
+      "sha256": "5935a349fed1e04f70ed03fca8294e589ecf98a74642bfc74a8ec500e85a2f48",
+      "resource_key": "art/p1/panel/ui_panel_hud@340x60/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "20,20,20,20",
+      "runtime_du": "680x120",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_panel_next",
+      "png": "client/assets/resources/art/p1/panel/ui_panel_next@140x140.png",
+      "size": [
+        140,
+        140
+      ],
+      "sha256": "e0857eef13dab05657c541f37fefa74b99873839c043fb512b0cd60ae866a94f",
+      "resource_key": "art/p1/panel/ui_panel_next@140x140/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "24,24,24,24",
+      "runtime_du": "140x140",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_panel_toast",
+      "png": "client/assets/resources/art/p1/panel/ui_panel_toast@250x40.png",
+      "size": [
+        250,
+        40
+      ],
+      "sha256": "b68092b3bdb54f0e6b02f7faf1eae7956505b0c58aee723c7c4d7c5eb4e6bb64",
+      "resource_key": "art/p1/panel/ui_panel_toast@250x40/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "16,16,16,16",
+      "runtime_du": "500x80",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_panel_results",
+      "png": "client/assets/resources/art/p1/panel/ui_panel_results@330x410.png",
+      "size": [
+        330,
+        410
+      ],
+      "sha256": "45d7539f5136953cf2a3a4f1bd130f7861ea97d4458a39af451a158eebcc8766",
+      "resource_key": "art/p1/panel/ui_panel_results@330x410/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "36,36,36,36",
+      "runtime_du": "660x820",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_toggle_track",
+      "png": "client/assets/resources/art/p1/ui_detail/ui_toggle_track@128x64.png",
+      "size": [
+        128,
+        64
+      ],
+      "sha256": "cca4339e37d56c86c29356746b5b9add5c1b16578df94e0b6ea55d269013651c",
+      "resource_key": "art/p1/ui_detail/ui_toggle_track@128x64/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "96x48",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_toggle_knob",
+      "png": "client/assets/resources/art/p1/ui_detail/ui_toggle_knob@64x64.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "ccb6ef16b4d2b9a235c02421839f25daa1f4c0624c7ed1fc016015df51208d92",
+      "resource_key": "art/p1/ui_detail/ui_toggle_knob@64x64/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "40x40",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_slider_track",
+      "png": "client/assets/resources/art/p1/ui_detail/ui_slider_track@256x24.png",
+      "size": [
+        256,
+        24
+      ],
+      "sha256": "3ac373d605050404bb6e5cd44181f918b07b2912e0050075278a4de0e65896f1",
+      "resource_key": "art/p1/ui_detail/ui_slider_track@256x24/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "260x12",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_slider_knob",
+      "png": "client/assets/resources/art/p1/ui_detail/ui_slider_knob@64x64.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "8cfc8ed3b0af07e95c667b8dcae44d68d6dea2f8439419ae3f11d31adb1e201c",
+      "resource_key": "art/p1/ui_detail/ui_slider_knob@64x64/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "44x44",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_badge_record",
+      "png": "client/assets/resources/art/p1/ui_detail/ui_badge_record@256x128.png",
+      "size": [
+        256,
+        128
+      ],
+      "sha256": "f8a7561eabba572dd7d7d614b73fbcdcceb81c3c9a775abbddaf8bfd51fc41c6",
+      "resource_key": "art/p1/ui_detail/ui_badge_record@256x128/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "128x64",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_badge_mochi",
+      "png": "client/assets/resources/art/p1/ui_detail/ui_badge_mochi@192x192.png",
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "33a3373c1a1448e4f58062613c7128c032895c88f189306294d5a682975c2ad7",
+      "resource_key": "art/p1/ui_detail/ui_badge_mochi@192x192/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "96x96",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "fx_merge_ring",
+      "png": "client/assets/resources/art/p1/effect/fx_merge_ring@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "def912e66da63eab43fa966ee97e69a99b061dcf750dc0ecc5f274e6c244f5bd",
+      "resource_key": "art/p1/effect/fx_merge_ring@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "16..320 by effect",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "fx_sparkle",
+      "png": "client/assets/resources/art/p1/effect/fx_sparkle@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "6aecc2578598dd61aec321be1cdfca9ebd454bd7f38ea5d3b43d4e1865de6011",
+      "resource_key": "art/p1/effect/fx_sparkle@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "16..320 by effect",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "fx_crumb",
+      "png": "client/assets/resources/art/p1/effect/fx_crumb@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "905a1beef05d0f32f129165ef1d9513b280db50affe213809ed78c2f598ee6e2",
+      "resource_key": "art/p1/effect/fx_crumb@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "16..320 by effect",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "fx_drop_ping",
+      "png": "client/assets/resources/art/p1/effect/fx_drop_ping@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "faa3496f36cb7520daa231f8c0e6402b7d49f3c256f7cbcf5e5945c9500e764d",
+      "resource_key": "art/p1/effect/fx_drop_ping@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "16..320 by effect",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "fx_mochi_star",
+      "png": "client/assets/resources/art/p1/effect/fx_mochi_star@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "f6ed900a7888098ed7830879ed06b7131c775454da7a79f11cef2d4e91b3d7ca",
+      "resource_key": "art/p1/effect/fx_mochi_star@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "16..320 by effect",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_tutorial_hand_move",
+      "png": "client/assets/resources/art/p1/tutorial/ui_tutorial_hand_move@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "638a1f322fffabea531601b65f77ff2540a8087c10959f2baf4d348fb5e021f7",
+      "resource_key": "art/p1/tutorial/ui_tutorial_hand_move@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "256x256",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    },
+    {
+      "asset_id": "ui_tutorial_hand_release",
+      "png": "client/assets/resources/art/p1/tutorial/ui_tutorial_hand_release@256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "8508c5e3665e19e18cf5131416500b1e688375dc8c5192783a227ad1f200b795",
+      "resource_key": "art/p1/tutorial/ui_tutorial_hand_release@256x256/spriteFrame",
+      "pivot": "0.5,0.5",
+      "nine_slice": "none",
+      "runtime_du": "256x256",
+      "warnings": [],
+      "import_status": "not_yet_verified_in_Cocos"
+    }
+  ],
+  "load_policy": "Choose one appropriate resolution per asset. Do not preload every resolution.",
+  "cup_import": "Cup layers pivot=(0,0), node at world (0,200), keep full 750x1000 canvas, no trim.",
+  "ingredient_import": "center pivot, display full sprite edge=2*radiusDu/0.9.",
+  "nine_slice": "listed in export pixels left,top,right,bottom; configure sliced SpriteFrame after Creator import.",
+  "meta_policy": "Open Creator to generate/confirm .meta; never invent editor UUIDs or claim an unrun import."
+}

@@ -1,0 +1,7 @@
+38891:           const skipDefaultOverrides = browserOptions.noDefaults && this._crPage._browserContext === this._crPage._browserContext._browser._defaultContext;
+38892:           if (this._crPage._browserContext.needsPlaywrightBinding())
+38893:             promises2.push(this.exposePlaywrightBinding());
+38894:           if (this._isMainFrame() && !skipDefaultOverrides)
+38895:             promises2.push(this._client.send("Emulation.setFocusEmulationEnabled", { enabled: true }));
+38896:           const options = this._crPage._browserContext._options;
+38897:           if (options.bypassCSP)

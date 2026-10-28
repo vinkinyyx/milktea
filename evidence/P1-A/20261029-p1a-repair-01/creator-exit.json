@@ -1,0 +1,10 @@
+﻿{
+    "buildId":  "20261029-p1a-repair-01",
+    "command":  "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\CocosCreator.exe --project \"D:\\Workspace\\TapTap\\奶茶挤挤\\client\" --build \"platform=web-mobile;debug=true;buildPath=D:/cocos-p1a-build;outputName=20261029-p1a-repair-01;startScene=44e30fdb-084f-5609-8283-4fdd8d2fab81\"",
+    "creatorPid":  5148,
+    "startedAt":  "2026-10-29T00:24:02.9232603+08:00",
+    "finishedAt":  "2026-10-29T00:24:44.0804612+08:00",
+    "exitCode":  null,
+    "bridgeDisabled":  "1",
+    "outputPath":  "D:\\cocos-p1a-build\\20261029-p1a-repair-01"
+}

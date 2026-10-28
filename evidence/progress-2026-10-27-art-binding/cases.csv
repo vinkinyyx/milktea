@@ -1,0 +1,11 @@
+case_id,steps,expected,actual,status,evidence
+PROG-01,"Inspect phase docs and implementation files","Distinguish design, source, runtime and build completion","P1-A source exists; P1-B core gameplay absent; runtime/build pending",PASS,../../docs/19-progress-and-next-actions.md
+TYPE-01,"npm run typecheck in client","All client scripts pass official Cocos 3.8.8 declarations","TypeScript exits 0",PASS,typecheck.txt
+CORE-01,"npm run verify:art in client","Core configuration/clock/coordinate/geometry assertions pass","Pure logic assertions pass; no Box2D executed",PASS,core-logic-results.json
+ART-01,"Hash and inspect PNG headers for canonical library and all client variants","Files match delivered hashes and sizes","Library and 117 client PNGs verified",PASS,art-binding-results.json
+ART-02,"Check nine ingredient selections and seven cup layers","Subject diameter matches configured collider; cup canvas and anchor retained","18 active scene asset bindings resolved",PASS,art-binding-results.json
+ART-03,"Reject missing asset, invalid target size, invalid nine-slice and duplicate paths","Explicit errors without hidden image defaults","Negative assertions pass",PASS,art-binding-results.json
+IMPORT-01,"Open project in actual Creator and import new scripts/PNG","Editor produces valid meta and scenes open","No usable Creator detected",NOT_RUN,issues.md
+VIEW-01,"Run Boot to PhysicsLab; inspect PNG, layers, B bounds and G gallery","Correct runtime render and all 81 P1 assets browsable","Implemented but Cocos not run",NOT_RUN,issues.md
+PHYS-01,"Run gravity, 5/V vs 6/V, N, three-circle, pressure, pause/background and X cases","Real physics cases pass and original logs archived","Implemented fixtures; engine acceptance not run",NOT_RUN,issues.md
+BUILD-01,"Select an actual build target and build","Target, logs and artifact are independently recorded","No build executed",NOT_RUN,issues.md

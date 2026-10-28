@@ -1,0 +1,19 @@
+{
+  "documents": 7,
+  "localLinksChecked": 97,
+  "documentErrors": [],
+  "syntax": "Python AST and prior JS/PowerShell checks passed",
+  "runtimeInputs": 324,
+  "runtimeInputDrift": [],
+  "matrixCounts": {
+    "PASS": 51,
+    "FAIL": 1,
+    "未执行": 0,
+    "不适用": 0
+  },
+  "longHideMs": 300017.799999997,
+  "life08ReproShownTicks": [
+    13,
+    16
+  ]
+}

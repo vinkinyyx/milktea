@@ -1,0 +1,23 @@
+{
+  "observationDate": "2026-10-28",
+  "archivedFromExistingEvidence": true,
+  "creatorVersion": "3.8.8",
+  "creatorPath": "C:/ProgramData/cocos/editors/Creator/3.8.8/CocosCreator.exe",
+  "dashboardVersion": "2.2.2.1515",
+  "backend": "Box2D JS",
+  "box2dPackageVersion": "1.0.2",
+  "ptmRatio": 32,
+  "designBaselineSha256": "973eae177ac05c4a7076543323f7af479d4aaf065c3a2e380a6655df3ce6747f",
+  "runtime": "Windows Chrome / Creator localhost preview",
+  "buildExecuted": false,
+  "phaseExitPassed": false,
+  "pauseSnapshot": {
+    "historical": true,
+    "paused": true,
+    "tick": 2425,
+    "entities": 3,
+    "contacts": 3,
+    "listeners": 6
+  },
+  "currentNote": "后续工具安装已重新打开编辑器Boot用于桥接读取；没有重跑物理，旧快照不是当前预览状态"
+}

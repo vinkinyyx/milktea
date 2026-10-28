@@ -1,0 +1,10 @@
+﻿asset_id,name_zh,batch_id,source_spec,export_spec,runtime_du,status,source,png96,png48
+ui_icon_play,开始三角,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_play.svg,export_png/96/ui_icon_play.png,export_png/48/ui_icon_play.png
+ui_icon_continue,继续箭头,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_continue.svg,export_png/96/ui_icon_continue.png,export_png/48/ui_icon_continue.png
+ui_icon_pause,暂停双条,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_pause.svg,export_png/96/ui_icon_pause.png,export_png/48/ui_icon_pause.png
+ui_icon_settings,设置齿轮,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_settings.svg,export_png/96/ui_icon_settings.png,export_png/48/ui_icon_settings.png
+ui_icon_close,关闭叉,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_close.svg,export_png/96/ui_icon_close.png,export_png/48/ui_icon_close.png
+ui_icon_back,返回箭头,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_back.svg,export_png/96/ui_icon_back.png,export_png/48/ui_icon_back.png
+ui_icon_restart,重开回转箭头,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_restart.svg,export_png/96/ui_icon_restart.png,export_png/48/ui_icon_restart.png
+ui_icon_home,主页小屋,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_home.svg,export_png/96/ui_icon_home.png,export_png/48/ui_icon_home.png
+ui_icon_music_on,音乐开,P1-06,192x192 SVG,96x96 PNG;48x48 PNG,48x48,static_qa_passed,source_svg/ui_icon_music_on.svg,export_png/96/ui_icon_music_on.png,export_png/48/ui_icon_music_on.png

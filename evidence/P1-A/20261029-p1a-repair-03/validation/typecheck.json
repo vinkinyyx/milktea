@@ -1,0 +1,5 @@
+{
+  "command": "client/node_modules/.bin/tsc.cmd --project tsconfig.json --types './temp/declarations/cc,./temp/declarations/cc.env,./temp/declarations/cc.custom-macro,./temp/declarations/jsb'",
+  "exitCode": 0,
+  "result": "PASS"
+}

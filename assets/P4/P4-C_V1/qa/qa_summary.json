@@ -1,0 +1,58 @@
+{
+  "phase": "P4-C",
+  "manifest_ids": [
+    "ui_icon_ad_play",
+    "platform_ad_badge"
+  ],
+  "source_spec": "/mnt/data/naicha_inputs/image-elements.json",
+  "checks": [
+    {
+      "asset_id": "ui_icon_ad_play",
+      "size": "96x96",
+      "mode": "RGBA",
+      "icc": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        7,
+        16,
+        89,
+        80
+      ],
+      "transparent_corners": true,
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ui_icon_ad_play",
+      "size": "48x48",
+      "mode": "RGBA",
+      "icc": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        2,
+        6,
+        46,
+        42
+      ],
+      "transparent_corners": true,
+      "status": "PASS"
+    }
+  ],
+  "source_svg_parsed": true,
+  "svg_size": "192x192",
+  "minimum_outline_96px": 5.5,
+  "min_required_outline_96px": 4,
+  "pivot": "0.5,0.5",
+  "runtime_touch_target": "must be >=48 CSSpx by app, not baked in sprite",
+  "icon_static": "PASS",
+  "platform_badge": "WAIT_PLATFORM",
+  "full_platform_release": "NOT_APPROVED",
+  "unofficial_platform_logo_generated": false,
+  "style_reference": "P4-B SVG icons / P1 icon strokes",
+  "note": "PNG used straight-alpha RGBA and embedded sRGB profile; 48px legibility checked on beige/dark contexts."
+}

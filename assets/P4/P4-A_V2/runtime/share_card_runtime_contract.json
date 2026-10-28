@@ -1,0 +1,79 @@
+{
+  "asset_ids": [
+    "share_daily_background",
+    "share_friend_background"
+  ],
+  "design_px": [
+    750,
+    1000
+  ],
+  "source_px": [
+    1500,
+    2000
+  ],
+  "safe_margin_px": 48,
+  "bottom_reserved_px": 180,
+  "based_on": "P3-B_V1/source_svg/share/share_result_background.svg",
+  "regions_runtime_px": {
+    "title": [
+      88,
+      64,
+      574,
+      104
+    ],
+    "score_or_challenge_summary": [
+      94,
+      195,
+      560,
+      100
+    ],
+    "real_game_screenshot": [
+      90,
+      340,
+      570,
+      360
+    ],
+    "meta_left": [
+      90,
+      737,
+      275,
+      76
+    ],
+    "meta_right": [
+      385,
+      737,
+      275,
+      76
+    ],
+    "true_platform_code_or_link": [
+      504,
+      844,
+      80,
+      80
+    ]
+  },
+  "dynamic_only": [
+    "date",
+    "daily_challenge_id",
+    "daily_seed",
+    "throw_count",
+    "throw_cap_120",
+    "standard_shakes_2",
+    "score",
+    "expiry",
+    "nickname",
+    "avatar",
+    "screenshot",
+    "verified_status",
+    "inviter",
+    "invitee",
+    "real_challenge_entry_code"
+  ],
+  "disallow": [
+    "invented_qr",
+    "invented_avatar",
+    "invented_score",
+    "fixed_winner_before_verify"
+  ],
+  "notes": "Two derivative share backgrounds are blank; bind runtime content after trusted challenge verification; code comes from actual platform."
+}

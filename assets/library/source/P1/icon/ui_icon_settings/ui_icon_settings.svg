@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+  <title>设置齿轮 | ui_icon_settings</title>
+  <desc>奶茶游戏 UI icon. Original editable vector. Transparent 192x192 canvas. 96px/48px exports. sRGB deep-brown. No dynamic text.</desc>
+
+  <defs>
+   <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+   </linearGradient>
+  </defs>
+
+  <g id="ui_icon_settings_paint" stroke-linejoin="round">
+
+      <path d="M 96.00 41.00 L 101.98 35.29 L 109.27 29.31 L 115.74 30.93 L 122.02 33.18 L 128.05 36.03 L 129.89 45.28 L 130.89 53.48 L 134.89 57.11 L 143.15 57.30 L 152.54 58.22 L 155.97 63.95 L 158.82 69.98 L 161.07 76.26 L 155.83 84.10 L 150.74 90.61 L 151.00 96.00 L 156.71 101.98 L 162.69 109.27 L 161.07 115.74 L 158.82 122.02 L 155.97 128.05 L 146.72 129.89 L 138.52 130.89 L 134.89 134.89 L 134.70 143.15 L 133.78 152.54 L 128.05 155.97 L 122.02 158.82 L 115.74 161.07 L 107.90 155.83 L 101.39 150.74 L 96.00 151.00 L 90.02 156.71 L 82.73 162.69 L 76.26 161.07 L 69.98 158.82 L 63.95 155.97 L 62.11 146.72 L 61.11 138.52 L 57.11 134.89 L 48.85 134.70 L 39.46 133.78 L 36.03 128.05 L 33.18 122.02 L 30.93 115.74 L 36.17 107.90 L 41.26 101.39 L 41.00 96.00 L 35.29 90.02 L 29.31 82.73 L 30.93 76.26 L 33.18 69.98 L 36.03 63.95 L 45.28 62.11 L 53.48 61.11 L 57.11 57.11 L 57.30 48.85 L 58.22 39.46 L 63.95 36.03 L 69.98 33.18 L 76.26 30.93 L 84.10 36.17 L 90.61 41.26 Z M 119 96 A 23 23 0 1 0 73 96 A 23 23 0 1 0 119 96 Z" fill="url(#brown)" fill-rule="evenodd" stroke="#3F281E" stroke-width="7" stroke-linejoin="round"/>
+      <circle cx="96" cy="96" r="25" fill="none" stroke="#F5CB9F" stroke-width="2" stroke-opacity=".65"/>
+      <path d="M59 60 Q96 31 130 62" fill="none" stroke="#F1C89C" stroke-width="4.5" stroke-opacity=".6" stroke-linecap="round"/>
+    
+  </g>
+</svg>

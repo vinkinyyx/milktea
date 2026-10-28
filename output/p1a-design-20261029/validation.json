@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-29",
+  "scope": "design_document_validation_only",
+  "runtime_tests_executed": false,
+  "documents": [
+    {
+      "path": "docs/26-p1a-detailed-repair-design.md",
+      "characters": 5668,
+      "lines": 109,
+      "sha256": "16f7da29008528caf2755b6b0962d21fc8fe7856a38628f8b28c28cdcd366970",
+      "missing_local_links": [],
+      "code_fences_even": true,
+      "replacement_characters": 0
+    },
+    {
+      "path": "docs/development/p1a-closeout/01-observation-pressure-geometry.md",
+      "characters": 8286,
+      "lines": 249,
+      "sha256": "a8229dd2d8034a95075bbb8ce38d54779d4f7f3f147d5236abb2c84b714d5e8c",
+      "missing_local_links": [],
+      "code_fences_even": true,
+      "replacement_characters": 0
+    },
+    {
+      "path": "docs/development/p1a-closeout/02-lifecycle-rebuild-contacts.md",
+      "characters": 10839,
+      "lines": 289,
+      "sha256": "49ba031ba4de8dacba7d21458039ea6db9c7f80cef7c4ed0e4e0b2014ee95c91",
+      "missing_local_links": [],
+      "code_fences_even": true,
+      "replacement_characters": 0
+    },
+    {
+      "path": "docs/development/p1a-closeout/03-queue-assets-errors-display.md",
+      "characters": 9607,
+      "lines": 264,
+      "sha256": "270aba36112c4ba1ddd2dc262c16940e7d863c3ae2bbb9c9da960f8164884fab",
+      "missing_local_links": [],
+      "code_fences_even": true,
+      "replacement_characters": 0
+    },
+    {
+      "path": "docs/development/p1a-closeout/04-build-execution-exit.md",
+      "characters": 11313,
+      "lines": 292,
+      "sha256": "0024ae077f808de6c922d6adf82f7321fff81f9698ecbe77f8f310a0364d7f04",
+      "missing_local_links": [],
+      "code_fences_even": true,
+      "replacement_characters": 0
+    },
+    {
+      "path": "docs/development/p1a-closeout/05-implementation-prompt.md",
+      "characters": 3487,
+      "lines": 59,
+      "sha256": "f731445f30e11062881390847296ca62503b9a06d2ab39838dfb327869acbcc2",
+      "missing_local_links": [],
+      "code_fences_even": true,
+      "replacement_characters": 0
+    }
+  ],
+  "errors": [],
+  "historical_cases": {
+    "count": 33,
+    "unmapped": []
+  },
+  "formula_examples": {
+    "original_slanted_fixture_margin_du": -0.08933057622019547,
+    "integrated_slop_du": 0.8,
+    "integrated_polygon_radius_du": 1.6,
+    "ninth_block_interval": [
+      146.19468513960808,
+      603.805314860392
+    ],
+    "ninth_interval_covers_legal": true,
+    "blocked_attempts_interval_ticks": 1785,
+    "old_sign_transform_algebra": "PASS",
+    "finite_box_sdf_examples": "PASS; outside-side classification remains separate"
+  },
+  "source-manifest.json": {
+    "listed": 17,
+    "different_or_missing": []
+  },
+  "build-manifest.json": {
+    "listed": 269,
+    "different_or_missing": []
+  },
+  "total_characters": 49200,
+  "total_lines": 1262,
+  "passed": true
+}

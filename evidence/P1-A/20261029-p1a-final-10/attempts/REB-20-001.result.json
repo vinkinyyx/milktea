@@ -1,0 +1,582 @@
+{
+  "caseId": "rebuild-20",
+  "attemptId": "REB-20-001",
+  "buildId": "20261029-p1a-final-10",
+  "expectedBuildId": "20261029-p1a-final-10",
+  "pageUrl": "http://127.0.0.1:8780/?p1aCase=rebuild-20&attemptId=REB-20-001&expectedBuildId=20261029-p1a-final-10&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-10%2Fraw%2FREB-20-001",
+  "startedAt": "2026-10-28T18:59:30.966Z",
+  "startupStatus": {
+    "buildId": "20261029-p1a-final-10",
+    "attemptId": "REB-20-001",
+    "ready": true,
+    "loading": false,
+    "tick": 10,
+    "stepCount": 10,
+    "paused": false,
+    "pauseReasons": [],
+    "interruptionSerial": 0,
+    "entityCount": 3,
+    "contactCount": 0,
+    "contactBeginEvents": 0,
+    "contactEndEvents": 0,
+    "listenerCount": 6,
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "levelRadii": [
+      {
+        "level": 1,
+        "radiusDu": 18
+      },
+      {
+        "level": 2,
+        "radiusDu": 24
+      },
+      {
+        "level": 3,
+        "radiusDu": 32
+      },
+      {
+        "level": 4,
+        "radiusDu": 42
+      },
+      {
+        "level": 5,
+        "radiusDu": 55
+      },
+      {
+        "level": 6,
+        "radiusDu": 70
+      },
+      {
+        "level": 7,
+        "radiusDu": 89
+      },
+      {
+        "level": 8,
+        "radiusDu": 112
+      },
+      {
+        "level": 9,
+        "radiusDu": 140
+      }
+    ],
+    "cupWidthScale": 1,
+    "queue": null,
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2045.199999999255,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2045.199999999255,
+          "revision": 0
+        }
+      ]
+    },
+    "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+  },
+  "interruptAt": 0,
+  "firstTask": {
+    "attemptId": "REB-20-001-REB20-1793213970990",
+    "token": 3,
+    "interruptAt": 0,
+    "round": 20,
+    "phase": "WAIT_CLEAR",
+    "status": "PASS",
+    "failure": null,
+    "failureDiagnostics": null,
+    "records": [
+      {
+        "round": 1,
+        "entityIds": [
+          9001,
+          9002
+        ],
+        "worldId": 3,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9001|9002"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 4,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 2,
+        "entityIds": [
+          9003,
+          9004
+        ],
+        "worldId": 4,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9003|9004"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 5,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 3,
+        "entityIds": [
+          9005,
+          9006
+        ],
+        "worldId": 5,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9005|9006"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 6,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 4,
+        "entityIds": [
+          9007,
+          9008
+        ],
+        "worldId": 6,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9007|9008"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 7,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 5,
+        "entityIds": [
+          9009,
+          9010
+        ],
+        "worldId": 7,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9009|9010"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 8,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 6,
+        "entityIds": [
+          9011,
+          9012
+        ],
+        "worldId": 8,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9011|9012"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 9,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 7,
+        "entityIds": [
+          9013,
+          9014
+        ],
+        "worldId": 9,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9013|9014"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 10,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 8,
+        "entityIds": [
+          9015,
+          9016
+        ],
+        "worldId": 10,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9015|9016"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 11,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 9,
+        "entityIds": [
+          9017,
+          9018
+        ],
+        "worldId": 11,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9017|9018"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 12,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 10,
+        "entityIds": [
+          9019,
+          9020
+        ],
+        "worldId": 12,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9019|9020"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 13,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 11,
+        "entityIds": [
+          9021,
+          9022
+        ],
+        "worldId": 13,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9021|9022"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 14,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 12,
+        "entityIds": [
+          9023,
+          9024
+        ],
+        "worldId": 14,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9023|9024"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 15,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 13,
+        "entityIds": [
+          9025,
+          9026
+        ],
+        "worldId": 15,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9025|9026"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 16,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 14,
+        "entityIds": [
+          9027,
+          9028
+        ],
+        "worldId": 16,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9027|9028"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 17,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 15,
+        "entityIds": [
+          9029,
+          9030
+        ],
+        "worldId": 17,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9029|9030"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 18,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 16,
+        "entityIds": [
+          9031,
+          9032
+        ],
+        "worldId": 18,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9031|9032"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 19,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 17,
+        "entityIds": [
+          9033,
+          9034
+        ],
+        "worldId": 19,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9033|9034"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 20,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 18,
+        "entityIds": [
+          9035,
+          9036
+        ],
+        "worldId": 20,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9035|9036"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 21,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 19,
+        "entityIds": [
+          9037,
+          9038
+        ],
+        "worldId": 21,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9037|9038"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 22,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      },
+      {
+        "round": 20,
+        "entityIds": [
+          9039,
+          9040
+        ],
+        "worldId": 22,
+        "contactBeginTick": 1,
+        "canonicalContacts": [
+          "9039|9040"
+        ],
+        "beginCount": 1,
+        "contactsAfterBegin": 1,
+        "bodiesBefore": 2,
+        "listenersBefore": 5,
+        "oldDestroyed": true,
+        "emptyBaseline": true,
+        "stableFrames": 2,
+        "nextWorldId": 23,
+        "bodiesAfter": 0,
+        "contactsAfter": 0,
+        "listenersAfter": 3
+      }
+    ]
+  },
+  "pass": true,
+  "acceptance": "PASS",
+  "endedAt": "2026-10-28T18:59:33.089Z",
+  "consoleEvents": [
+    "{\"test\":\"contact-rebuild-start\",\"attemptId\":\"REB-20-001-REB20-1793213970990\",\"buildId\":\"20261029-p1a-final-10\",\"interruptAt\":0,\"targetRounds\":20,\"contactFixture\":\"two actual overlapping level-1 Cocos CircleCollider2D bodies; FixedClock drives physics\"}",
+    "{\"test\":\"contact-rebuild-result\",\"attemptId\":\"REB-20-001-REB20-1793213970990\",\"buildId\":\"20261029-p1a-final-10\",\"status\":\"PASS\",\"failure\":null,\"rounds\":[{\"round\":1,\"entityIds\":[9001,9002],\"worldId\":3,\"contactBeginTick\":1,\"canonicalContacts\":[\"9001|9002\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":4,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":2,\"entityIds\":[9003,9004],\"worldId\":4,\"contactBeginTick\":1,\"canonicalContacts\":[\"9003|9004\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":5,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":3,\"entityIds\":[9005,9006],\"worldId\":5,\"contactBeginTick\":1,\"canonicalContacts\":[\"9005|9006\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":6,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":4,\"entityIds\":[9007,9008],\"worldId\":6,\"contactBeginTick\":1,\"canonicalContacts\":[\"9007|9008\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":7,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":5,\"entityIds\":[9009,9010],\"worldId\":7,\"contactBeginTick\":1,\"canonicalContacts\":[\"9009|9010\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":8,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":6,\"entityIds\":[9011,9012],\"worldId\":8,\"contactBeginTick\":1,\"canonicalContacts\":[\"9011|9012\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":9,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":7,\"entityIds\":[9013,9014],\"worldId\":9,\"contactBeginTick\":1,\"canonicalContacts\":[\"9013|9014\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":10,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":8,\"entityIds\":[9015,9016],\"worldId\":10,\"contactBeginTick\":1,\"canonicalContacts\":[\"9015|9016\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":11,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":9,\"entityIds\":[9017,9018],\"worldId\":11,\"contactBeginTick\":1,\"canonicalContacts\":[\"9017|9018\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":12,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":10,\"entityIds\":[9019,9020],\"worldId\":12,\"contactBeginTick\":1,\"canonicalContacts\":[\"9019|9020\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":13,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":11,\"entityIds\":[9021,9022],\"worldId\":13,\"contactBeginTick\":1,\"canonicalContacts\":[\"9021|9022\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":14,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":12,\"entityIds\":[9023,9024],\"worldId\":14,\"contactBeginTick\":1,\"canonicalContacts\":[\"9023|9024\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":15,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":13,\"entityIds\":[9025,9026],\"worldId\":15,\"contactBeginTick\":1,\"canonicalContacts\":[\"9025|9026\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":16,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":14,\"entityIds\":[9027,9028],\"worldId\":16,\"contactBeginTick\":1,\"canonicalContacts\":[\"9027|9028\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":17,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":15,\"entityIds\":[9029,9030],\"worldId\":17,\"contactBeginTick\":1,\"canonicalContacts\":[\"9029|9030\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":18,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":16,\"entityIds\":[9031,9032],\"worldId\":18,\"contactBeginTick\":1,\"canonicalContacts\":[\"9031|9032\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":19,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":17,\"entityIds\":[9033,9034],\"worldId\":19,\"contactBeginTick\":1,\"canonicalContacts\":[\"9033|9034\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":20,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":18,\"entityIds\":[9035,9036],\"worldId\":20,\"contactBeginTick\":1,\"canonicalContacts\":[\"9035|9036\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":21,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":19,\"entityIds\":[9037,9038],\"worldId\":21,\"contactBeginTick\":1,\"canonicalContacts\":[\"9037|9038\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":22,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3},{\"round\":20,\"entityIds\":[9039,9040],\"worldId\":22,\"contactBeginTick\":1,\"canonicalContacts\":[\"9039|9040\"],\"beginCount\":1,\"contactsAfterBegin\":1,\"bodiesBefore\":2,\"listenersBefore\":5,\"oldDestroyed\":true,\"emptyBaseline\":true,\"stableFrames\":2,\"nextWorldId\":23,\"bodiesAfter\":0,\"contactsAfter\":0,\"listenersAfter\":3}],\"final\":{\"entityCount\":0,\"contactCount\":0,\"listenerCount\":3}}"
+  ],
+  "pageErrors": []
+}

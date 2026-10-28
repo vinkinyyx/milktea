@@ -1,0 +1,1665 @@
+{
+  "caseId": "viewport",
+  "attemptId": "VIEW-01-001",
+  "buildId": "20261029-p1a-final-14",
+  "expectedBuildId": "20261029-p1a-final-14",
+  "pageUrl": "http://127.0.0.1:8784/?p1aCase=viewport&attemptId=VIEW-01-001&expectedBuildId=20261029-p1a-final-14&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-14%2Fraw%2FVIEW-01-001",
+  "startedAt": "2026-10-28T19:57:19.333Z",
+  "startupStatus": {
+    "buildId": "20261029-p1a-final-14",
+    "attemptId": "VIEW-01-001",
+    "ready": true,
+    "loading": false,
+    "tick": 0,
+    "stepCount": 0,
+    "paused": true,
+    "pauseReasons": [
+      "REBUILD"
+    ],
+    "interruptionSerial": 0,
+    "entityCount": 3,
+    "contactCount": 0,
+    "contactBeginEvents": 0,
+    "contactEndEvents": 0,
+    "listenerCount": 6,
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "levelRadii": [
+      {
+        "level": 1,
+        "radiusDu": 18
+      },
+      {
+        "level": 2,
+        "radiusDu": 24
+      },
+      {
+        "level": 3,
+        "radiusDu": 32
+      },
+      {
+        "level": 4,
+        "radiusDu": 42
+      },
+      {
+        "level": 5,
+        "radiusDu": 55
+      },
+      {
+        "level": 6,
+        "radiusDu": 70
+      },
+      {
+        "level": 7,
+        "radiusDu": 89
+      },
+      {
+        "level": 8,
+        "radiusDu": 112
+      },
+      {
+        "level": 9,
+        "radiusDu": 140
+      }
+    ],
+    "cupWidthScale": 1,
+    "queue": null,
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2049.199999999255,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2049.199999999255,
+          "revision": 0
+        }
+      ]
+    },
+    "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+  },
+  "rows": [
+    {
+      "width": 320,
+      "height": 568,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 568
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 10,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 10,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 83.35832083958022,
+          "y": 496.89355322338827,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 568
+          },
+          "scale": 0.4257871064467766
+        },
+        "nextPoint": {
+          "x": 236.64167916041978,
+          "y": 513.9250374812593,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 568
+          },
+          "scale": 0.4257871064467766
+        },
+        "closePoint": {
+          "x": 160,
+          "y": 513.9250374812593,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 568
+          },
+          "scale": 0.4257871064467766
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 10,
+        "stepCount": 10,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 1,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 800
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 17,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 17,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 93.60000000000001,
+          "y": 640,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800
+          },
+          "scale": 0.48
+        },
+        "nextPoint": {
+          "x": 266.4,
+          "y": 659.2,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800
+          },
+          "scale": 0.48
+        },
+        "closePoint": {
+          "x": 180,
+          "y": 659.2,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800
+          },
+          "scale": 0.48
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 17,
+        "stepCount": 17,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 2,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "canvas": {
+        "x": 0.10000000149011612,
+        "y": 0,
+        "width": 375,
+        "height": 812
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 25,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 25,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 97.60000000149012,
+          "y": 656,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0.10000000149011612,
+            "y": 0,
+            "width": 375,
+            "height": 812
+          },
+          "scale": 0.5
+        },
+        "nextPoint": {
+          "x": 277.6000000014901,
+          "y": 676,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.10000000149011612,
+            "y": 0,
+            "width": 375,
+            "height": 812
+          },
+          "scale": 0.5
+        },
+        "closePoint": {
+          "x": 187.60000000149012,
+          "y": 676,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.10000000149011612,
+            "y": 0,
+            "width": 375,
+            "height": 812
+          },
+          "scale": 0.5
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 25,
+        "stepCount": 25,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 3,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "canvas": {
+        "x": 0.20000000298023224,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 32,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 32,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 101.60000000298022,
+          "y": 682,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          },
+          "scale": 0.52
+        },
+        "nextPoint": {
+          "x": 288.80000000298025,
+          "y": 702.8,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          },
+          "scale": 0.52
+        },
+        "closePoint": {
+          "x": 195.20000000298023,
+          "y": 702.8,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          },
+          "scale": 0.52
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 32,
+        "stepCount": 32,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 4,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    },
+    {
+      "width": 414,
+      "height": 896,
+      "canvas": {
+        "x": 0.20000000298023224,
+        "y": 0,
+        "width": 414,
+        "height": 896
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 39,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 39,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 107.84000000298022,
+          "y": 724,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 414,
+            "height": 896
+          },
+          "scale": 0.552
+        },
+        "nextPoint": {
+          "x": 306.56000000298025,
+          "y": 746.08,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 414,
+            "height": 896
+          },
+          "scale": 0.552
+        },
+        "closePoint": {
+          "x": 207.20000000298023,
+          "y": 746.08,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 414,
+            "height": 896
+          },
+          "scale": 0.552
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 39,
+        "stepCount": 39,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 5,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "canvas": {
+        "x": 0.20000000298023224,
+        "y": 0,
+        "width": 430,
+        "height": 932
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 45,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 45,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 112.00000000298023,
+          "y": 752.6666666666667,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 430,
+            "height": 932
+          },
+          "scale": 0.5733333333333334
+        },
+        "nextPoint": {
+          "x": 318.4000000029802,
+          "y": 775.6,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 430,
+            "height": 932
+          },
+          "scale": 0.5733333333333334
+        },
+        "closePoint": {
+          "x": 215.20000000298023,
+          "y": 775.6,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 430,
+            "height": 932
+          },
+          "scale": 0.5733333333333334
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 45,
+        "stepCount": 45,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 6,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    },
+    {
+      "width": 750,
+      "height": 1334,
+      "canvas": {
+        "x": 0.20000000298023224,
+        "y": 0,
+        "width": 750,
+        "height": 1334
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 51,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 51,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 195.20000000298023,
+          "y": 1167,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 750,
+            "height": 1334
+          },
+          "scale": 1
+        },
+        "nextPoint": {
+          "x": 555.2000000029802,
+          "y": 1207,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 750,
+            "height": 1334
+          },
+          "scale": 1
+        },
+        "closePoint": {
+          "x": 375.20000000298023,
+          "y": 1207,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0.20000000298023224,
+            "y": 0,
+            "width": 750,
+            "height": 1334
+          },
+          "scale": 1
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 52,
+        "stepCount": 52,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 7,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 768
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 59,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 59,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 408.3718140929535,
+          "y": 671.8560719640179,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 768
+          },
+          "scale": 0.5757121439280359
+        },
+        "nextPoint": {
+          "x": 615.6281859070465,
+          "y": 694.8845577211393,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 768
+          },
+          "scale": 0.5757121439280359
+        },
+        "closePoint": {
+          "x": 512,
+          "y": 694.8845577211393,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 768
+          },
+          "scale": 0.5757121439280359
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 59,
+        "stepCount": 59,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 8,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 1024
+      },
+      "inside": true,
+      "paused": true,
+      "pauseReasons": [
+        "MANUAL"
+      ],
+      "tick": 66,
+      "entities": 3,
+      "galleryVisible": true,
+      "beforeEntities": 3,
+      "pauseTick": 66,
+      "positionsPreserved": true,
+      "worldIdPreserved": true,
+      "points": {
+        "pausePoint": {
+          "x": 245.82908545727136,
+          "y": 895.8080959520239,
+          "world": {
+            "x": -180,
+            "y": -500
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 1024
+          },
+          "scale": 0.767616191904048
+        },
+        "nextPoint": {
+          "x": 522.1709145427286,
+          "y": 926.512743628186,
+          "world": {
+            "x": 180,
+            "y": -540
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 1024
+          },
+          "scale": 0.767616191904048
+        },
+        "closePoint": {
+          "x": 384,
+          "y": 926.512743628186,
+          "world": {
+            "x": 0,
+            "y": -540
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 1024
+          },
+          "scale": 0.767616191904048
+        }
+      },
+      "resumed": {
+        "buildId": "20261029-p1a-final-14",
+        "attemptId": "VIEW-01-001",
+        "ready": true,
+        "loading": false,
+        "tick": 66,
+        "stepCount": 66,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 9,
+        "entityCount": 3,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 2049.199999999255,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "已恢复（后台时间未补算）"
+      }
+    }
+  ],
+  "pausePreserved": true,
+  "afterResume": {
+    "buildId": "20261029-p1a-final-14",
+    "attemptId": "VIEW-01-001",
+    "ready": true,
+    "loading": false,
+    "tick": 66,
+    "stepCount": 66,
+    "paused": false,
+    "pauseReasons": [],
+    "interruptionSerial": 9,
+    "entityCount": 3,
+    "contactCount": 0,
+    "contactBeginEvents": 0,
+    "contactEndEvents": 0,
+    "listenerCount": 6,
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "levelRadii": [
+      {
+        "level": 1,
+        "radiusDu": 18
+      },
+      {
+        "level": 2,
+        "radiusDu": 24
+      },
+      {
+        "level": 3,
+        "radiusDu": 32
+      },
+      {
+        "level": 4,
+        "radiusDu": 42
+      },
+      {
+        "level": 5,
+        "radiusDu": 55
+      },
+      {
+        "level": 6,
+        "radiusDu": 70
+      },
+      {
+        "level": 7,
+        "radiusDu": 89
+      },
+      {
+        "level": 8,
+        "radiusDu": 112
+      },
+      {
+        "level": 9,
+        "radiusDu": 140
+      }
+    ],
+    "cupWidthScale": 1,
+    "queue": null,
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2049.199999999255,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2049.199999999255,
+          "revision": 0
+        }
+      ]
+    },
+    "message": "已恢复（后台时间未补算）"
+  },
+  "screenshot": "D:/Workspace/TapTap/奶茶挤挤/evidence/P1-A/20261029-p1a-final-14/raw/VIEW-01-001/viewport.png",
+  "pass": true,
+  "acceptance": "PASS",
+  "endedAt": "2026-10-28T19:57:25.942Z",
+  "consoleEvents": [
+    "{\"test\":\"p1a-runtime-identity\",\"buildId\":\"20261029-p1a-final-14\",\"creator\":\"3.8.8\",\"box2d\":\"1.0.2\",\"ptm\":32,\"autoSimulation\":false,\"probeMode\":\"OFF\",\"probeVersion\":\"p1a-probe-v2\",\"attemptId\":\"VIEW-01-001\"}"
+  ],
+  "pageErrors": []
+}

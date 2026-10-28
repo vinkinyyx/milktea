@@ -1,0 +1,15 @@
+{
+  "asset_id": "platform_challenge_entry_code",
+  "production_method": "platform",
+  "status": "pending_real_provider_issuance",
+  "description": "Use the actual platform or signed backend challenge entry mechanism. No fabricated QR code is included.",
+  "required_runtime_fields": ["challengeId", "serverVerifiedExpiry", "entryPayloadOrUrl", "authOrSignatureIfRequired"],
+  "integrity_rules": [
+    "challengeId must belong to an actual challenge",
+    "expiry must come from authoritative server clock",
+    "code or link must resolve and be scan/launch tested",
+    "never cache a placeholder as a functional code",
+    "respect specific platform signing and size requirements"
+  ],
+  "display_guidance": "Keep share-card bottom entrance reserved 180px. Insert provider-issued real code at runtime. If not available, show appropriate dynamic status text and disable share action."
+}

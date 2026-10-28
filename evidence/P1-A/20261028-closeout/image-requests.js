@@ -1,0 +1,1 @@
+async page=>{let requests=[];page.on('response',r=>{if(/\.(png|jpg|webp)/.test(r.url()))requests.push({url:r.url(),status:r.status()})});await page.reload();await page.waitForFunction(()=>window.cc?.director.getScene()?.getChildByName('PhysicsLabRoot')?.getComponent('PhysicsLab')?.ready,null,{timeout:60000});return requests}

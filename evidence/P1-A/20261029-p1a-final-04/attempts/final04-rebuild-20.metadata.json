@@ -1,0 +1,17 @@
+{
+  "caseId": "rebuild-20",
+  "attemptId": "final04-rebuild-20",
+  "buildId": "20261029-p1a-final-04",
+  "embeddedBuildId": null,
+  "expectedBuildId": "20261029-p1a-final-04",
+  "probe": "off",
+  "url": "http://127.0.0.1:8777/?p1aCase=rebuild-20&attemptId=final04-rebuild-20&expectedBuildId=20261029-p1a-final-04&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-04%2Fraw%2Ffinal04-rebuild-20",
+  "cliExitCode": 0,
+  "acceptance": "FAIL",
+  "pass": false,
+  "resultParseError": null,
+  "stderr": "",
+  "artifacts": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\P1-A\\20261029-p1a-final-04\\raw\\final04-rebuild-20",
+  "recordedAt": "2026-10-29T02:20:59.5217287+08:00",
+  "playwrightCommand": "node C:/Program Files/nodejs/node_modules/npm/bin/npx-cli.js --yes @playwright/cli -s=p1a-repair --raw run-code --filename D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\p1a-runtime-case.js"
+}

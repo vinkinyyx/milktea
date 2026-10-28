@@ -1,0 +1,21 @@
+﻿asset_id,method,file_qa,runtime_qa,required_followup
+ui_icon_coupon,new_draw,passed,not_required,
+ui_icon_rank,new_draw,passed,not_required,
+ui_icon_share,new_draw,passed,not_required,
+ui_icon_standard,new_draw,passed,not_required,
+ui_icon_assisted,new_draw,passed,not_required,
+ui_icon_verified,new_draw,passed,not_required,
+ui_icon_pending,new_draw,passed,not_required,
+ui_panel_rank_row,new_draw,passed,not_required,
+ui_panel_rank_self,new_draw,passed,not_required,
+ui_avatar_default,new_draw,passed,not_required,
+ui_medal_gold,new_draw,passed,not_required,
+ui_medal_silver,new_draw,passed,not_required,
+ui_medal_bronze,new_draw,passed,not_required,
+ui_coupon_ticket,new_draw,passed,not_required,
+gen_leaderboard_rank,engine,contract_verified,pending_integration,logic passed; integrate with actual backend/time and game font
+gen_coupon_expiry,engine,contract_verified,pending_integration,logic passed; integrate with actual backend/time and game font
+platform_user_avatar,platform,contract_verified,pending_integration,must provide genuine provider avatar/code; verify authorization/scannability
+platform_share_entry_code,platform,contract_verified,pending_integration,must provide genuine provider avatar/code; verify authorization/scannability
+share_result_background,new_draw,passed,not_required,render actual scores/players/screenshot/provider entry code at runtime; verify target platform size
+share_record_background,derived,passed,not_required,render actual scores/players/screenshot/provider entry code at runtime; verify target platform size

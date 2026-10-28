@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "caseId": "LIFE-01-real-tab-switch-smoke",
+  "buildId": "20261029-p1a-final-10",
+  "attemptId": "LIFE-01-002",
+  "targetUrl": "http://127.0.0.1:8780/?p1aCase=lifecycle-smoke&attemptId=LIFE-01-002&expectedBuildId=20261029-p1a-final-10&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off",
+  "durationSeconds": 5,
+  "protocol": "Playwright CLI tab-new/tab-select real tab switch",
+  "focusEmulationDisabledForTargetAndHelper": true,
+  "syntheticEventsUsed": false,
+  "prepare": {
+    "stateBefore": {
+      "buildId": "20261029-p1a-final-10",
+      "attemptId": "LIFE-01-002",
+      "ready": true,
+      "loading": false,
+      "tick": 120,
+      "stepCount": 120,
+      "paused": false,
+      "pauseReasons": [],
+      "interruptionSerial": 0,
+      "entityCount": 3,
+      "contactCount": 3,
+      "contactBeginEvents": 6,
+      "contactEndEvents": 3,
+      "listenerCount": 6,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": null,
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 0,
+        "eventCount": 2,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 3631.7000000029802,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 3631.7000000029802,
+            "revision": 0
+          }
+        ]
+      },
+      "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+    },
+    "visibleBeforeSwitch": {
+      "visibility": "visible",
+      "hasFocus": true,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 0,
+        "eventCount": 2,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 3631.7000000029802,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 3631.7000000029802,
+            "revision": 0
+          }
+        ]
+      },
+      "status": {
+        "buildId": "20261029-p1a-final-10",
+        "attemptId": "LIFE-01-002",
+        "ready": true,
+        "loading": false,
+        "tick": 182,
+        "stepCount": 182,
+        "paused": false,
+        "pauseReasons": [],
+        "interruptionSerial": 0,
+        "entityCount": 3,
+        "contactCount": 3,
+        "contactBeginEvents": 6,
+        "contactEndEvents": 3,
+        "listenerCount": 6,
+        "engine": {
+          "cocos": "3.8.8",
+          "physicsBackend": "BOX2D",
+          "autoSimulation": false,
+          "fixedTimeStep": 0.016666666666666666,
+          "ptmRatio": 32
+        },
+        "levelRadii": [
+          {
+            "level": 1,
+            "radiusDu": 18
+          },
+          {
+            "level": 2,
+            "radiusDu": 24
+          },
+          {
+            "level": 3,
+            "radiusDu": 32
+          },
+          {
+            "level": 4,
+            "radiusDu": 42
+          },
+          {
+            "level": 5,
+            "radiusDu": 55
+          },
+          {
+            "level": 6,
+            "radiusDu": 70
+          },
+          {
+            "level": 7,
+            "radiusDu": 89
+          },
+          {
+            "level": 8,
+            "radiusDu": 112
+          },
+          {
+            "level": 9,
+            "radiusDu": 140
+          }
+        ],
+        "cupWidthScale": 1,
+        "queue": null,
+        "contactRebuild": null,
+        "contactRebuildHistory": [],
+        "contactMatrix": null,
+        "wallMatrix": null,
+        "lifecycle": {
+          "domHidden": false,
+          "engineHidden": false,
+          "backgrounded": false,
+          "revision": 0,
+          "eventCount": 2,
+          "events": [
+            {
+              "source": "dom",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 3631.7000000029802,
+              "revision": 0
+            },
+            {
+              "source": "install",
+              "hidden": false,
+              "backgrounded": false,
+              "trusted": null,
+              "atMs": 3631.7000000029802,
+              "revision": 0
+            }
+          ]
+        },
+        "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+      }
+    },
+    "focusOverrideDisabled": true,
+    "syntheticEventsUsed": false
+  },
+  "helper": {
+    "focusOverrideDisabled": true,
+    "state": {
+      "url": "about:blank",
+      "visibility": "visible",
+      "hasFocus": true
+    }
+  },
+  "targetAfterReturn": {
+    "visibility": "visible",
+    "hasFocus": true,
+    "capture": [],
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 3631.7000000029802,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 3631.7000000029802,
+          "revision": 0
+        }
+      ]
+    },
+    "status": {
+      "buildId": "20261029-p1a-final-10",
+      "attemptId": "LIFE-01-002",
+      "ready": true,
+      "loading": false,
+      "tick": 565,
+      "stepCount": 565,
+      "paused": true,
+      "pauseReasons": [
+        "BACKLOG"
+      ],
+      "interruptionSerial": 1,
+      "entityCount": 3,
+      "contactCount": 3,
+      "contactBeginEvents": 6,
+      "contactEndEvents": 3,
+      "listenerCount": 6,
+      "engine": {
+        "cocos": "3.8.8",
+        "physicsBackend": "BOX2D",
+        "autoSimulation": false,
+        "fixedTimeStep": 0.016666666666666666,
+        "ptmRatio": 32
+      },
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScale": 1,
+      "queue": null,
+      "contactRebuild": null,
+      "contactRebuildHistory": [],
+      "contactMatrix": null,
+      "wallMatrix": null,
+      "lifecycle": {
+        "domHidden": false,
+        "engineHidden": false,
+        "backgrounded": false,
+        "revision": 0,
+        "eventCount": 2,
+        "events": [
+          {
+            "source": "dom",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 3631.7000000029802,
+            "revision": 0
+          },
+          {
+            "source": "install",
+            "hidden": false,
+            "backgrounded": false,
+            "trusted": null,
+            "atMs": 3631.7000000029802,
+            "revision": 0
+          }
+        ]
+      },
+      "message": "物理落后超过配置补步上限，已暂停；本attempt已冻结，请另开attempt重测"
+    }
+  },
+  "hiddenCaptureCount": 0,
+  "trustedDomHideCount": 0,
+  "trustedDomShowCount": 0,
+  "tickAndStepFrozenThroughHidden": false,
+  "tabList": "### Result\n- 0: [Cocos Creator | milktea-p1a](http://127.0.0.1:8780/?p1aCase=lifecycle-smoke&attemptId=LIFE-01-002&expectedBuildId=20261029-p1a-final-10&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off)\n- 1: (current) [](about:blank)\n",
+  "status": "FAIL",
+  "blockingReason": "REAL_TAB_SWITCH_DID_NOT_PRODUCE_TRUSTED_HIDDEN",
+  "recordedAt": "2026-10-29T03:07:46.1710965+08:00"
+}

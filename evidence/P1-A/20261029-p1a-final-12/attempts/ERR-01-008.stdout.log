@@ -1,0 +1,8 @@
+### Error
+Error: page.waitForFunction: TypeError: Cannot read properties of null (reading 'identity')
+    at PhysicsLab.runtimeStatus (http://127.0.0.1:8782/assets/main/index.js:4733:33)
+    at Object.status (http://127.0.0.1:8782/assets/main/index.js:2859:29)
+    at eval (eval at predicate (eval at evaluate (:368:30)), <anonymous>:1:32)
+    at predicate (eval at evaluate (:368:30), <anonymous>:7:27)
+    at next (eval at evaluate (:368:30), <anonymous>:29:33)
+

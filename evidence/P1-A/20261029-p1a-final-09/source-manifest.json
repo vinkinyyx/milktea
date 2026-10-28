@@ -1,0 +1,1633 @@
+﻿{
+    "schemaVersion":  2,
+    "buildId":  "20261029-p1a-final-09",
+    "projectPath":  "D:\\cocos-p1a-build-source\\20261029-p1a-final-09",
+    "creatorPath":  "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\CocosCreator.exe",
+    "creatorProductVersion":  "3.8.8",
+    "creatorFileVersion":  "3.8.8",
+    "cocosEngineBox2dPackageVersion":  "1.0.2",
+    "creatorAsarSha256":  "a04a80b69b329fccfe775a87b839c2d197b0629ccc8c6aa798e9911cff95b8ea",
+    "sourceFileCount":  324,
+    "files":  [
+                  {
+                      "path":  "assets/migrate-canvas.ts",
+                      "size":  3801,
+                      "sha256":  "1bb8114e4964bddc147033b19df3694c431661a4ccd7f9704fb0f8c5a5f505e5"
+                  },
+                  {
+                      "path":  "assets/migrate-canvas.ts.meta",
+                      "size":  171,
+                      "sha256":  "31f80a0a50f940207af15f109ddff2f19a844ec03958973f9f01bb974b33fd6e"
+                  },
+                  {
+                      "path":  "assets/resources.meta",
+                      "size":  290,
+                      "sha256":  "a9117c86f0bf20e47d886fa420f651c9f821ec4128be2390967252ad0a73abb1"
+                  },
+                  {
+                      "path":  "assets/resources/art.meta",
+                      "size":  169,
+                      "sha256":  "023137e54bce6a31a9b6614bbed94164d66aff1dd0266e1bf5032dabade2cf48"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1.meta",
+                      "size":  169,
+                      "sha256":  "8469f5a9322a215da70a72d6c0f143f13ba9c854bdb248dc840bf389aaa7c83a"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin.meta",
+                      "size":  169,
+                      "sha256":  "4036cc3a92f3f3c98fef4a2c2b415837ce6d7739b820e16a70c9323d37a78415"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_icon_disabled@96x96.png",
+                      "size":  6069,
+                      "sha256":  "9c8c20e9f9b2899c03ae11786e1bb3e67074acf72364a88e4c5f787a0306ac11"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_icon_disabled@96x96.png.meta",
+                      "size":  996,
+                      "sha256":  "2d79373a03bc5e2ec4b9206574007cc9c21f51002a31f628983965da70ee99fb"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_icon_normal@96x96.png",
+                      "size":  7129,
+                      "sha256":  "9e9e3fdda9b383805cf57857b5c6f9cec84ff28e45841942027828226fc4f38a"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_icon_normal@96x96.png.meta",
+                      "size":  994,
+                      "sha256":  "641f42a0f86afa0cd8cc927207e39027de707882246fc1e555fd0e28a2c43454"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_icon_pressed@96x96.png",
+                      "size":  5972,
+                      "sha256":  "00d2374ffd4ff1847324d9f2e8e2826bd7557e17026e5e6d583559ba8c155c5e"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_icon_pressed@96x96.png.meta",
+                      "size":  995,
+                      "sha256":  "419b4232a6fa41c64bae32826f33921219a126c1542459097d79d3fba980a9f1"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_icon_selected@96x96.png",
+                      "size":  8843,
+                      "sha256":  "72e1bbd867b392dcafcad2efa198a9dd00289e917ec66147c6e6d95ca360a7f2"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_icon_selected@96x96.png.meta",
+                      "size":  996,
+                      "sha256":  "57b929700365c4976740f8bcd463404fa02e13f9d9fb67dacc372480daf7ec8e"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_primary_disabled@256x96.png",
+                      "size":  4455,
+                      "sha256":  "a385bd626099bfccee94ff165eeb416a0c4a7c075e95abf50543180d25a7c723"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_primary_disabled@256x96.png.meta",
+                      "size":  1000,
+                      "sha256":  "59e05d09be3b5c6a3ec6a7b1e9de343c6466dfdd9e057b56e7367d4243c95f54"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_primary_normal@256x96.png",
+                      "size":  4469,
+                      "sha256":  "d3a25c686941d4ec5d3874c27f31858929d396884205b3608b163621b79a9c6d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_primary_normal@256x96.png.meta",
+                      "size":  998,
+                      "sha256":  "9488f41328dcd17e32328eae756e4c89246a23ddeaf9ff52acf8448269aa9174"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_primary_pressed@256x96.png",
+                      "size":  3722,
+                      "sha256":  "2a5b1fc28fa082c1c4911c3b272badce5fe60e4f8839d9a2df0b0b45bb568079"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_primary_pressed@256x96.png.meta",
+                      "size":  999,
+                      "sha256":  "236767eeebe6fc6af8ca649b3288a0c77f009a72ec688fa19f3d8d89d4056743"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_primary_selected@256x96.png",
+                      "size":  6227,
+                      "sha256":  "673df1b2292f85a60f00424a4871fbc837193dbba6745e9d4abb6f5a935d2b5b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_primary_selected@256x96.png.meta",
+                      "size":  1000,
+                      "sha256":  "03410927828bf07d030a2382fef733021d705488c31d1b1de003893b988462a5"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_secondary_disabled@256x96.png",
+                      "size":  4453,
+                      "sha256":  "b0e03ec7f16083c91016522210b976f20423aee5154c051829708e83e65fd6fb"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_secondary_disabled@256x96.png.meta",
+                      "size":  1002,
+                      "sha256":  "b122d311757cf6df8fe3b606eb1079ecbb8a009767873d1ef8768191ead5bfb8"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_secondary_normal@256x96.png",
+                      "size":  4680,
+                      "sha256":  "63bc6dcf01ba09f1dc95f644b81d04043b6af279e2cef6e11eaa519f7512e913"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_secondary_normal@256x96.png.meta",
+                      "size":  1000,
+                      "sha256":  "0050ea36b3c0dafb6d923764dd1dcc8f8d88df348d26d41e424227732e1e2882"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_secondary_pressed@256x96.png",
+                      "size":  4250,
+                      "sha256":  "0effcf459fcb47a44f6072e6f21f1384f8bc51298771585a85331ac182b65dbe"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_secondary_pressed@256x96.png.meta",
+                      "size":  1001,
+                      "sha256":  "335cdb321786bb0238b82e0b94d6b87471dc07cbc4703485db60a11a8cbdd73c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_secondary_selected@256x96.png",
+                      "size":  6293,
+                      "sha256":  "dea12cd0a5f4b23063a45e290ad29cfaf59ff7a13b6e5e98829c0289dfd776be"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/button_skin/ui_btn_secondary_selected@256x96.png.meta",
+                      "size":  1002,
+                      "sha256":  "04e074a364d93a0ba4fe74224176635310e95f0485d2729c1069f21023e9203f"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/catalog.json",
+                      "size":  77295,
+                      "sha256":  "20a9ebb38a75d4c748346f1d323bfa0a48b6fe11c2e17ffc2e5719f3efea35cb"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/catalog.json.meta",
+                      "size":  179,
+                      "sha256":  "9a37278bb2fea4334195f1cd646bdf45833bd98e2e0b2f1bf1e191e5ed95211b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer.meta",
+                      "size":  169,
+                      "sha256":  "f6d97dd0a970fee1ab5693683fbf84e7661f69b1b4158b5abd9a7d5acbb453ba"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_back@750x1000.png",
+                      "size":  53309,
+                      "sha256":  "2b392ce10396a8a0825af91d50d1df878142ad13311a2a06e73bc49adbcdc0bc"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_back@750x1000.png.meta",
+                      "size":  999,
+                      "sha256":  "f045f0d71800c769b04a7dc3c9d10587dfd56ef7fd68521c85a10dc146ff1dd8"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_base@750x1000.png",
+                      "size":  6943,
+                      "sha256":  "c9392f4b7db2116e75402d4138d203e03af3a61ca49a2dac85117e7be15cc478"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_base@750x1000.png.meta",
+                      "size":  999,
+                      "sha256":  "16559c9f42b886e512ecc1d82453c6f3f90e8bea13a764eb558c4f30464100cf"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_front@750x1000.png",
+                      "size":  28901,
+                      "sha256":  "8607414dea6fd68008d6addff32351b8e77b1123d0ace6d60e3a5d5426f0a8ec"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_front@750x1000.png.meta",
+                      "size":  1000,
+                      "sha256":  "b982d33ad46a9c201a5fb1f3411ab29a15750ad2cf334378b05bd538c67832c6"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_label@750x1000.png",
+                      "size":  10473,
+                      "sha256":  "3dbed7e2802a353ecda3d16d60fbbbe97bb241017dca1a528ea80f3868b9f349"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_label@750x1000.png.meta",
+                      "size":  1000,
+                      "sha256":  "8661456b1eec2b3b6ee15fe45a411ee8c4ec1eae1732cf5a2bf4be997b116a75"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_rim_back@750x1000.png",
+                      "size":  13500,
+                      "sha256":  "94f11bb2099dab304ece85b2ba433876a3b7c2bcc5e593b0ff122d1aca67f657"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_rim_back@750x1000.png.meta",
+                      "size":  1003,
+                      "sha256":  "85ff071395ae3ed54e4120d72634eb58c78f928bc98b1aad91b79728ea8de55b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_rim_front@750x1000.png",
+                      "size":  12291,
+                      "sha256":  "ea6c956139d37cbb621e65d1e9f78c55a8586175575c183afd9a9ba1bba5d90d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_rim_front@750x1000.png.meta",
+                      "size":  1004,
+                      "sha256":  "ed6ef2eb6a9a0d4215a58d7ac3cf4b9dd399567e92101c6290d56e7c1c05fe32"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_tea@750x1000.png",
+                      "size":  36175,
+                      "sha256":  "8e9e27c0ed1f402cdcafda70e8100ed6e70dd693f4f53a1ae0856f4051076544"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/cup_layer/spr_cup_classic_tea@750x1000.png.meta",
+                      "size":  998,
+                      "sha256":  "635a8b6f5b91f77e0f93e39227354628f95799f83f03d9c96ad733cb33775033"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect.meta",
+                      "size":  169,
+                      "sha256":  "3c357d3c40404173458320f8a46c5f94237a0484e9b93b9edc37517a89314f34"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_crumb@256x256.png",
+                      "size":  3668,
+                      "sha256":  "905a1beef05d0f32f129165ef1d9513b280db50affe213809ed78c2f598ee6e2"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_crumb@256x256.png.meta",
+                      "size":  986,
+                      "sha256":  "e737eeb0f486df0975fe797735482a8c2d38d589b85731ceec08588b7f3218ef"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_drop_ping@256x256.png",
+                      "size":  3581,
+                      "sha256":  "faa3496f36cb7520daa231f8c0e6402b7d49f3c256f7cbcf5e5945c9500e764d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_drop_ping@256x256.png.meta",
+                      "size":  990,
+                      "sha256":  "010dca6f4f4560ef4004dbb0be87127e0522391f7c8a9ccb4a873a99a635a8e7"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_merge_ring@256x256.png",
+                      "size":  12677,
+                      "sha256":  "def912e66da63eab43fa966ee97e69a99b061dcf750dc0ecc5f274e6c244f5bd"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_merge_ring@256x256.png.meta",
+                      "size":  991,
+                      "sha256":  "d670546654859db988e0d74f81338d1396f57bc3d1c8d52e36966ec1bcb995f7"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_mochi_star@256x256.png",
+                      "size":  15726,
+                      "sha256":  "f6ed900a7888098ed7830879ed06b7131c775454da7a79f11cef2d4e91b3d7ca"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_mochi_star@256x256.png.meta",
+                      "size":  991,
+                      "sha256":  "b963d172f08917c217d0e5730665a06350e894bc43e179ea8988a02d4d5197f8"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_sparkle@256x256.png",
+                      "size":  7267,
+                      "sha256":  "6aecc2578598dd61aec321be1cdfca9ebd454bd7f38ea5d3b43d4e1865de6011"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/effect/fx_sparkle@256x256.png.meta",
+                      "size":  988,
+                      "sha256":  "20118509bc6a0860c1ea8dbfa46160b338871931e0080b1cccfb5c882adfec99"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment.meta",
+                      "size":  169,
+                      "sha256":  "23e21994e1140a7887b0201ed9159d16f8aabdc6acb21ca69714c7ec6d161fe4"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/bg_shop_base@750x1334.png",
+                      "size":  164213,
+                      "sha256":  "df76454523b7a02dc021a06446e27de83cb4ab304ca3c609e56a5c4f830bd70b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/bg_shop_base@750x1334.png.meta",
+                      "size":  992,
+                      "sha256":  "b80e9be9c14ea922b9c728f16b9b5b4b9479d9cd06242cb48ef29e2d9533438c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/bg_shop_extend_bottom@750x400.png",
+                      "size":  4511,
+                      "sha256":  "8316a9c4727ebfacf2b7e8f4bba6ea12564c881e2d19bce0ca9b2d8a5f05eadc"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/bg_shop_extend_bottom@750x400.png.meta",
+                      "size":  1000,
+                      "sha256":  "b2d0af1aca2fac7dfb406c71157e0512c19af373411947f636714aad66b4b211"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/bg_shop_extend_top@750x400.png",
+                      "size":  27121,
+                      "sha256":  "874ccd87c666ebc711aca7cec4b258c5d2762fb38e60d7d5dca9f8ccb7331581"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/bg_shop_extend_top@750x400.png.meta",
+                      "size":  997,
+                      "sha256":  "4cd1e36d9b9a1a2a594264d8d421e3d0ee140ebee108195dc7dcffcdcc85547c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/spr_cup_shadow@512x128.png",
+                      "size":  9327,
+                      "sha256":  "d2ee699404126cb97663d20c32751fc750babd4ef68ed6ba819fc57fdabcc557"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/spr_cup_shadow@512x128.png.meta",
+                      "size":  992,
+                      "sha256":  "ab80e250d4db5b806c04d11d01b2b54e30708072b7ff0f4c61d5d672de5675ee"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/ui_title_logo@800x300.png",
+                      "size":  47299,
+                      "sha256":  "0d924b634d4e811864a797bc2610f5e7ce6cecf08e6c52a1acb3fdc95de6816c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/environment/ui_title_logo@800x300.png.meta",
+                      "size":  991,
+                      "sha256":  "fcc1bc41626b067f65acdd4791c690686dbdb86d959f4515b319b14bc02e9cab"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon.meta",
+                      "size":  169,
+                      "sha256":  "6c803a3702133d4d6f0b6cda4cd6a678007031bedba7313c0f0622940e418e1b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_back@48x48.png",
+                      "size":  1361,
+                      "sha256":  "474b11683af6f6c345e23989fec92db068088438936e98403ebbaf7a8ba38c63"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_back@48x48.png.meta",
+                      "size":  988,
+                      "sha256":  "405f9e99f7024c65915960f91f33cb9f87c8f7b548494ae9a438c9d3a336feea"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_back@96x96.png",
+                      "size":  2376,
+                      "sha256":  "39a4a36b8ca33498ac8c7b163b51b42e58a4dcf01f1802fa0be9147a9a5ca44a"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_back@96x96.png.meta",
+                      "size":  988,
+                      "sha256":  "22aca3d5399e2d777479ab0dc8154393482465eaf4fb64a82903502b11560ffc"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_check@48x48.png",
+                      "size":  1731,
+                      "sha256":  "189627a86ab7b098e02465a0fd0bb8ddbc56c6b08db6479d2ebcf3f0d3eeb8a0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_check@48x48.png.meta",
+                      "size":  989,
+                      "sha256":  "7e2a800ab841af799a21bd599547c0b44af7911630449c9347a3bcd8ffe5fba2"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_check@96x96.png",
+                      "size":  3391,
+                      "sha256":  "a5a50f38c295827e55460dce74fc9358226d583682cf2a1ca4b36f1e095ba8b5"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_check@96x96.png.meta",
+                      "size":  989,
+                      "sha256":  "f9fee77adc913c4a4d5d5003751741f7e8066ea455b64efb43daf91a674beac9"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_close@48x48.png",
+                      "size":  1929,
+                      "sha256":  "9388484565cd2b0f97af3c7fd69fb12b9023eee6d61542d0579aee2ad1c027b7"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_close@48x48.png.meta",
+                      "size":  989,
+                      "sha256":  "d65ea5a11241e01dc83e1c99a88acb5afbf6f71f1b1b597a517a2b29ef9efec4"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_close@96x96.png",
+                      "size":  3156,
+                      "sha256":  "8c78a12da8af19209841187e99f3ae345c04630ba767f11b3b7920719e813493"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_close@96x96.png.meta",
+                      "size":  989,
+                      "sha256":  "de40f638acf9b790a6641cd55b7b086134881ba21f0af401388bba37d2151344"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_continue@48x48.png",
+                      "size":  1313,
+                      "sha256":  "b5ee4c12a1621298b7a3192719157443ed5527cd7787777d0111b259b4e5cbbc"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_continue@48x48.png.meta",
+                      "size":  992,
+                      "sha256":  "43110ee56a68cddfef82249debec0fb4da34c5fef80fd656150dfe90880f0318"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_continue@96x96.png",
+                      "size":  2238,
+                      "sha256":  "06550496e5235521dfe2c434fdf833b15ff79f953a53a092f26f21e4c133aa88"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_continue@96x96.png.meta",
+                      "size":  992,
+                      "sha256":  "5bea8156783955a4952b27b8ef4306757657ed6b09003654bb6d19395e34d7ca"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_home@48x48.png",
+                      "size":  2149,
+                      "sha256":  "060f54534d1deb26d16ec3e08d41bae999ac31e190e495b8dcbe9771f6842f39"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_home@48x48.png.meta",
+                      "size":  988,
+                      "sha256":  "b7d8a7864dcbbf35afcbf4ca93457d06905484993fad3ef7f416decce3faf219"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_home@96x96.png",
+                      "size":  4362,
+                      "sha256":  "f559c00c4c71d3d17f99a929dfa413204d7c600b98d222725cc74b77b929c375"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_home@96x96.png.meta",
+                      "size":  988,
+                      "sha256":  "aa85cc0720c6559e65cbfe0c9dc7c60d4b499b6495392908f49e9a8aa339fdf1"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_info@48x48.png",
+                      "size":  2628,
+                      "sha256":  "01b2e194dd1653bfe314b21ba74dc39b7f6d50ad7e86f8a9840878443820165c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_info@48x48.png.meta",
+                      "size":  988,
+                      "sha256":  "220f1705f3733f3a118587c6a1a5edefc9e5f884fb8da8ba631b514647a00954"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_info@96x96.png",
+                      "size":  6100,
+                      "sha256":  "73807f640d16eaa926db8b0dd6373c92c6be8d21cff6310edb54ebd8f9a002df"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_info@96x96.png.meta",
+                      "size":  988,
+                      "sha256":  "daaecea46cd3317e8d48c812e0333ca13031bbc1b7418604e857ccbcee47b090"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_music_off@48x48.png",
+                      "size":  2691,
+                      "sha256":  "4483e896e5ed4070966de78b17457cc6eb2330f70371ee76185115779622d8dd"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_music_off@48x48.png.meta",
+                      "size":  993,
+                      "sha256":  "fc5382e749d7e7cbd6eb7c7865e7a599de3d3c0bd15348204fac788f286a1b90"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_music_off@96x96.png",
+                      "size":  6265,
+                      "sha256":  "d07d2e74e8a70323abb1538fd8211d73866c9d60f139f64d81ca262500a0733b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_music_off@96x96.png.meta",
+                      "size":  993,
+                      "sha256":  "6b69a668d7db42afb29109dd8ec21cc9c2c9ce6cc6fdd8c58bccca5d37bfcfcf"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_music_on@48x48.png",
+                      "size":  1839,
+                      "sha256":  "d3af424ba28d31093b4455d54642a98d8d3daa3c10b3038cc1199eac8f005088"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_music_on@48x48.png.meta",
+                      "size":  992,
+                      "sha256":  "0f669c487f4a3942d4ab4544d2c9e4fbce5449c7129736611bc2768378757b85"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_music_on@96x96.png",
+                      "size":  3559,
+                      "sha256":  "00d4d55b9c1246a290b518c3b34307aac9f409bc7277c5674b8b31a039680733"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_music_on@96x96.png.meta",
+                      "size":  992,
+                      "sha256":  "daf1018fde8917e0dc1500b2f91fcbc9e359b555e19ffa3429b4bb1006f77c45"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_next@48x48.png",
+                      "size":  2472,
+                      "sha256":  "f57137e18eaa1a2bb3b250d0ff04fa8f9a2e245d23786dcc51dd7b175960069e"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_next@48x48.png.meta",
+                      "size":  988,
+                      "sha256":  "c85fd8d6f203259dc4074d715e77290ea44aed1cf4b3d47bc61871eb0c0d1a20"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_next@96x96.png",
+                      "size":  5075,
+                      "sha256":  "6e1a3acd9c80b6a7e5d8ba3a0782e03d71305a378f5224f836c448b7531321a6"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_next@96x96.png.meta",
+                      "size":  988,
+                      "sha256":  "be6b4ccfa572eaf5a20fe280f5f145e2ba0531c8add866bf3411b50b7edb3ff1"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_pause@48x48.png",
+                      "size":  1086,
+                      "sha256":  "59c995858b2fa3766b1fc0e823dab984841a1d780f98e3ebdc45a5f8400125ca"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_pause@48x48.png.meta",
+                      "size":  989,
+                      "sha256":  "05f32760e4c8cf427d33582d3771eb0d63a22893d849df42a4c0e9527a461741"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_pause@96x96.png",
+                      "size":  1723,
+                      "sha256":  "f52ba9c2effe0032cb80632cce37c86f1310fd3ee60ba07018a95242a21b6a4a"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_pause@96x96.png.meta",
+                      "size":  989,
+                      "sha256":  "79d444887205f0415480784d0a55d57b98ad053c951762a4b7a5da276155f75f"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_play@48x48.png",
+                      "size":  1653,
+                      "sha256":  "a6ddcc5d9a8816211e16cb5322e84e5b17386adf5835477f00a3c4ad3c29e8a4"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_play@48x48.png.meta",
+                      "size":  988,
+                      "sha256":  "96da7ebce87324fc73a4055f2b12d8c7bbb1e6be8baf63e44170b193c89c45b4"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_play@96x96.png",
+                      "size":  3121,
+                      "sha256":  "c9aa8291716a78ab75ebb1ccd9d901478f2a126d84bc6a912589ea1d392d6324"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_play@96x96.png.meta",
+                      "size":  988,
+                      "sha256":  "5d16489ae45fe70caf54267e5966bf6673095002cbaadefc20d8439af66e27be"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_reduced_motion@48x48.png",
+                      "size":  2612,
+                      "sha256":  "b359417b4fbea38d9f0b3b41a48a21b73705294fee0f31804edd313cbaf5c52d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_reduced_motion@48x48.png.meta",
+                      "size":  998,
+                      "sha256":  "46cd0cb92692ebc8251cff103ae84d84ddb9f4666eea204ce09afad62fb6e647"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_reduced_motion@96x96.png",
+                      "size":  5773,
+                      "sha256":  "76c3d506d759e351ec60e609672a0b98f20e87acf22a02184285ae4e4a86a691"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_reduced_motion@96x96.png.meta",
+                      "size":  998,
+                      "sha256":  "9773c748636bb0327df04814c17f8631f2cbf916eef8c9640610ce132ad8540e"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_restart@48x48.png",
+                      "size":  2353,
+                      "sha256":  "9bc71a12b3ac6ae22d73a01b1ea6c213241cc415b23c8da9a6b82c4b2a77676d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_restart@48x48.png.meta",
+                      "size":  991,
+                      "sha256":  "3b77801a6da7ff065a10420273405da7dbbc8011453b64c36aed6a6609a7b3c0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_restart@96x96.png",
+                      "size":  4831,
+                      "sha256":  "14901a199b47c42bc02b81186605712f88b99608d04731683d0d182e594a1259"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_restart@96x96.png.meta",
+                      "size":  991,
+                      "sha256":  "683e987f89eef9bb00065fbe3972e5af3cf655b8b0a0372b85b878beb735d2a7"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_settings@48x48.png",
+                      "size":  2632,
+                      "sha256":  "60e98600f3fcb71f9a549aeeb9172362e333ce5889a648516436a33b989b1217"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_settings@48x48.png.meta",
+                      "size":  992,
+                      "sha256":  "692f9cbfd91a39dc1bace8be89624912abe8180b96214a2b39f0a05788131cfd"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_settings@96x96.png",
+                      "size":  5569,
+                      "sha256":  "2f1c636a2f09a25ee2f655b438741c589e08b0931643f0d1264be2afe563b26d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_settings@96x96.png.meta",
+                      "size":  992,
+                      "sha256":  "0c8ac032edc2e880dd80c744ed0c7ac5d9841967dbc24f35b7a48b75d4f6dd0d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_sfx_off@48x48.png",
+                      "size":  1730,
+                      "sha256":  "3d45e77925821f03d381c5010267cad9860e58b832202c4910ba2a60917e3f41"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_sfx_off@48x48.png.meta",
+                      "size":  991,
+                      "sha256":  "5eb7242b2f79a2a0a35dd0d0aad84f27110b99747ec09347b6d73fa22a687865"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_sfx_off@96x96.png",
+                      "size":  2971,
+                      "sha256":  "ba3725e948b125f02dd9fec30b8db012e41a64bf96e31ee7e040ba52decb5e91"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_sfx_off@96x96.png.meta",
+                      "size":  991,
+                      "sha256":  "aafc5949e8583f05f7a9a21f2846f7e7300cdf91b19e89e5ba11a7e447fee0d0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_sfx_on@48x48.png",
+                      "size":  2085,
+                      "sha256":  "34ec6db7f0545e8cb8efcdd317da8048a729e9d3a9f2765f2a26fc6b5b244996"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_sfx_on@48x48.png.meta",
+                      "size":  990,
+                      "sha256":  "82035426bdcde5d8773a490de437d524b4f49a9535bd3cc7897d53c451624d5b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_sfx_on@96x96.png",
+                      "size":  4237,
+                      "sha256":  "bcd8a86d44b6f8b08f08b3817c75a89df3afefd49680a6e5eeac549eaa29d0c2"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_sfx_on@96x96.png.meta",
+                      "size":  990,
+                      "sha256":  "d969240bc30a38bf71e36d3b80931ed846e823dcd903c2f158169f36c2cacee8"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_shake@48x48.png",
+                      "size":  2377,
+                      "sha256":  "cfd366bda37bf8e22d4eb6a766699c5c73bf114e8f67b5ef47d210dd60a8345d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_shake@48x48.png.meta",
+                      "size":  989,
+                      "sha256":  "395c669c87466b318b7296a42c462190122ee72efa927aa1511d54555f0f5db8"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_shake@96x96.png",
+                      "size":  4791,
+                      "sha256":  "c90654b7da3cab618f038d143580afdbf86e6b703376a2f147837bb5d38d2985"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_shake@96x96.png.meta",
+                      "size":  989,
+                      "sha256":  "be3523f4d1c91b87c0d675b6b1be87186fe79fe6a2d9112fcf376a6b080a14b4"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_warning@48x48.png",
+                      "size":  2326,
+                      "sha256":  "ed0dd997bb6496dee369418c697d1d9b4bf58b508e59179fe44b7883770dee63"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_warning@48x48.png.meta",
+                      "size":  991,
+                      "sha256":  "e0a184356d2c031ad41058bfb54a3e7fba283fbe52ccec16f33e36360856879a"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_warning@96x96.png",
+                      "size":  4684,
+                      "sha256":  "3599bc47ca74e942c6113d7a6bfbdb68da9961d05c597a6f9662e03401298844"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/icon/ui_icon_warning@96x96.png.meta",
+                      "size":  991,
+                      "sha256":  "ea9111da4693b99b6b7bbdb47d694a6bd948e19cac24ed8b96471374ab6d3bea"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient.meta",
+                      "size":  169,
+                      "sha256":  "efac78eff33560484236ef30f4fb06bad1c7c93f0f5cc9e8d7e9637d80848913"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_coconut_base@128x128.png",
+                      "size":  22040,
+                      "sha256":  "a174434a3a88be09e49ec2a65546f93bd3417112b840c05ff0eefd925dca0936"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_coconut_base@128x128.png.meta",
+                      "size":  998,
+                      "sha256":  "343702746f99aa93579c149638f64f111b2426688a082c9c64782478edbe4cc8"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_coconut_base@256x256.png",
+                      "size":  68479,
+                      "sha256":  "83b6ef071d8f78e86f3b2227bea5c5a4167aa11ef3aca401aa64df0ed6e27d07"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_coconut_base@256x256.png.meta",
+                      "size":  998,
+                      "sha256":  "c99e834256829188ea41d440d2113c048466f6685b08593682b4e45e64e81ce0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_coconut_base@512x512.png",
+                      "size":  230688,
+                      "sha256":  "bcd6a5c33d37503db2f928171913df3a569bb291c83ea8769f8e57961365a496"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_coconut_base@512x512.png.meta",
+                      "size":  998,
+                      "sha256":  "ad636a5e4fbb3b548f6f1db194a7e2f6b32f7924196a1dd8ca2e7bffee4f41e1"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@128x128.png",
+                      "size":  24903,
+                      "sha256":  "057dc8db38671b9eb8432788b90321b808d2ff2d8d058e7d309b80fd0478547a"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@128x128.png.meta",
+                      "size":  1002,
+                      "sha256":  "1f6e64e99b58385c86cb745075688ac8008937905bcc1a1ba74a3d53ea243981"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@256x256.png",
+                      "size":  78634,
+                      "sha256":  "45a0d7b9da8eaea43fe94de870f19e63cf0179e213e3c42ffb29ced4fa76e00b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@256x256.png.meta",
+                      "size":  1002,
+                      "sha256":  "95ed3e21bf969fb26e83bdfe7114b9602b651d6aeaac7396474a6dd9a457742f"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@512x512.png",
+                      "size":  267089,
+                      "sha256":  "fcc45fb442884f2a14b37920ab8a885626456145b251a253730cab0e70822a98"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@512x512.png.meta",
+                      "size":  1002,
+                      "sha256":  "32d3b6ef4386d661814fcf1bcabdbba4cbcbba3e96fe7f02f1eca2189af26156"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@128x128.png",
+                      "size":  21592,
+                      "sha256":  "eaf7f95394b247fff758a6f8c2f8e27dda21687b9b554d6e8296bf36095b1206"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@128x128.png.meta",
+                      "size":  1002,
+                      "sha256":  "d5e3350e18d3b7d750c64b209302f4848082cf34fb5b776467443715d5eb7365"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@256x256.png",
+                      "size":  67505,
+                      "sha256":  "f045e00ff7c6e50c9cd6b4592ce09601197c57c3e10921c63c731786a3ceb385"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@256x256.png.meta",
+                      "size":  1002,
+                      "sha256":  "0a4e4de0d761eb0d9d8abea0dff59d93907d5d6d6262f161ab1de8195cd5c538"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@512x512.png",
+                      "size":  229104,
+                      "sha256":  "36e63fcc0c4468447e40ae6f0c391d3712889fab836f58cbfdb3ec04a3b293ea"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@512x512.png.meta",
+                      "size":  1002,
+                      "sha256":  "ee5a03964c1f3eb4488578f7f0d1604f22b7cdf2664b0f6e44982d59f5343ff1"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_mochi_base@128x128.png",
+                      "size":  20403,
+                      "sha256":  "c21891d459952ccf248a635562a5a6c5d12f0e29bffe77f2f01820e590ffb7a4"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_mochi_base@128x128.png.meta",
+                      "size":  996,
+                      "sha256":  "9deb25bb56cad8c1e5dc367487a6c3cb8ab4cd5cee02dd6f13f747240358734f"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_mochi_base@256x256.png",
+                      "size":  68932,
+                      "sha256":  "8e5da44d2b91b8b973602264ee5caf816130bbe4d49710356479e5fb52d4eba9"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_mochi_base@256x256.png.meta",
+                      "size":  996,
+                      "sha256":  "784a130243c4194236bc06c3f61be4cedc0f8bfc92b6b278ee41db486074d2c3"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_mochi_base@512x512.png",
+                      "size":  265476,
+                      "sha256":  "b237b7b4ffe978f6f1eebd570e800fed685e52bb836bd741dc558afac5ce1d25"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_mochi_base@512x512.png.meta",
+                      "size":  996,
+                      "sha256":  "d1b5384697b56bd2cb3d82e0ce142f5c30ecb72f79b31c16f691a83c5d04c7c5"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_pudding_base@128x128.png",
+                      "size":  20606,
+                      "sha256":  "aab6ab98bb28806461f83e36171673108f93e897a0fd15650d43c05e8676178d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_pudding_base@128x128.png.meta",
+                      "size":  998,
+                      "sha256":  "cf15e2cd7dff1a89b04ea1c9b4dfe28d308cd5886ee28fa732b1b4662805bc06"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_pudding_base@256x256.png",
+                      "size":  62689,
+                      "sha256":  "f8231d3b9f3cf502ef00b933212deffca0159e4aa612d739178102c32754e700"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_pudding_base@256x256.png.meta",
+                      "size":  998,
+                      "sha256":  "8dfd48ae301c9c013f7822272ce63bc444ac521876ef05af58dfe70fd555e07e"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_pudding_base@512x512.png",
+                      "size":  214278,
+                      "sha256":  "220b5812fabfcd7967587f9f33d7ea9797a5ab0f40e2fbab28871ea433b36258"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_pudding_base@512x512.png.meta",
+                      "size":  998,
+                      "sha256":  "9dac8288f0a313496cb645f21a5aff5c6c1cd742f53bc3bd30ccee2874f50c0e"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_red_bean_base@128x128.png",
+                      "size":  30247,
+                      "sha256":  "2c74c835d594b1a615b602bb76197bdc439db72d734e2cd9bb7e5bc4ce2a8069"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_red_bean_base@128x128.png.meta",
+                      "size":  999,
+                      "sha256":  "4ff281acde923b1bb86ec38d2cbad1226d48271ac312e117634149815fa8eca6"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_red_bean_base@256x256.png",
+                      "size":  98641,
+                      "sha256":  "c50b0216492565053122dcf3d3f8ca036ecb0331cd60819ed7d39738638a5657"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_red_bean_base@256x256.png.meta",
+                      "size":  999,
+                      "sha256":  "7e5a813de47cebc89d158e99466229464e40ece24a0bf4e7a8904168b26a09e0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_red_bean_base@512x512.png",
+                      "size":  333594,
+                      "sha256":  "3c000a30891bf0a205009a4c956728efe5271421798120bd81ec07b7075d94e9"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_red_bean_base@512x512.png.meta",
+                      "size":  999,
+                      "sha256":  "5891587f01848d8e3eb9601b847c31642cb9760bfe57ad094576002808e3f05a"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_sago_base@128x128.png",
+                      "size":  22474,
+                      "sha256":  "c709bca76314360463ecdd5211e9aa41d576540cfc8d2d2b7ba30e2e60834e10"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_sago_base@128x128.png.meta",
+                      "size":  995,
+                      "sha256":  "3ba508d462ae8493a94edf9b20e5717aa2ea282fa4568efb6265e97f48ddbfb4"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_sago_base@256x256.png",
+                      "size":  70144,
+                      "sha256":  "af9e465cccb6be62521125dbeebab6cc91b9ae65fba68637b141f88cb6881072"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_sago_base@256x256.png.meta",
+                      "size":  995,
+                      "sha256":  "f2bee23fa335740f15ba55d7dd9784cd9bd29e5908545a7bc3f50c918b846f04"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_sago_base@512x512.png",
+                      "size":  233671,
+                      "sha256":  "c2931333b60d7d988ce7fc1ff2fe08ab5145eb7a1014a64dc76629397151f71d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_sago_base@512x512.png.meta",
+                      "size":  995,
+                      "sha256":  "8d98684ee15c547b43e65727d704bddbb35577d9271c0df764d1f647e6d90d01"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@128x128.png",
+                      "size":  21451,
+                      "sha256":  "1110f4be6605c76fff636e6c6c594a20a8888f080de34638afbed1ea6895e86c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@128x128.png.meta",
+                      "size":  1002,
+                      "sha256":  "988386a28aa922c0acdb7fed469ae71a3274c70eaec7d4516183b619b29e0621"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@256x256.png",
+                      "size":  66717,
+                      "sha256":  "e8b67819798bf8fe25ccf32d3388c8dd304773acfc52abede231459029c6b89b"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@256x256.png.meta",
+                      "size":  1002,
+                      "sha256":  "bb96c87453c598ab420c1655b7eedeb69728cfa753716fafdcf0dc78c62d55cd"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@512x512.png",
+                      "size":  228332,
+                      "sha256":  "ed1e2abca2ea73f1975e8ca9fc7fc8c72c953fa7b2659ddda36e5d3df89a2fdf"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@512x512.png.meta",
+                      "size":  1002,
+                      "sha256":  "7ed6727266f97661fe2f32d66757861405c6310f0e48e9c352d83939f77944e9"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_taro_base@128x128.png",
+                      "size":  23583,
+                      "sha256":  "4c09cccdbe91b28a9db4c4cd76b8a657528964920d88a2330cb1106803b8ee64"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_taro_base@128x128.png.meta",
+                      "size":  995,
+                      "sha256":  "8885b05cb9a37ee48380c21bdf879eb1b040489012f60df9018fcb6fc75315fc"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_taro_base@256x256.png",
+                      "size":  73895,
+                      "sha256":  "3aad9da942e4a5a20263b85948a977e8e8fe45eeca198593aca8631f316940e0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_taro_base@256x256.png.meta",
+                      "size":  995,
+                      "sha256":  "b68a6f76f3c8ef06101593728b37e215496f8e077701128bb9c1d41da7c4874e"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_taro_base@512x512.png",
+                      "size":  262957,
+                      "sha256":  "f4678bdabf8f42f7af881acc8eff62258d6acb7603aaf35858fce7c1d6e0b222"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient/spr_ing_taro_base@512x512.png.meta",
+                      "size":  995,
+                      "sha256":  "8c4ed885522f2898abeef1bb74f4a472efec4ef25e8f32b32f2159dd3c5daf09"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail.meta",
+                      "size":  169,
+                      "sha256":  "e6dc8089cf2d8ab772a8264cb340655e288254a878ad7f0640003480b2718731"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_coconut_thumb@96x96.png",
+                      "size":  14149,
+                      "sha256":  "3b4f4f04ca81ffa029321a73f8e922fcf0323570863f791130bdf6c2417c3d61"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_coconut_thumb@96x96.png.meta",
+                      "size":  996,
+                      "sha256":  "d72d9a156c4c50a4c78bfd4daa330727ba5e5ebb8b5e221991aff33b0fe2fbfa"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_grass_jelly_thumb@96x96.png",
+                      "size":  15674,
+                      "sha256":  "ab10dcb466ea8c456ba2ecc1da9b1974632ac290c818cda070d2398824b60006"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_grass_jelly_thumb@96x96.png.meta",
+                      "size":  1000,
+                      "sha256":  "558a4f8777568b20d7643463a85542b155c374d1e85101b86479c7335cd777bc"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_large_pearl_thumb@96x96.png",
+                      "size":  13818,
+                      "sha256":  "9924c2d7d780628ed72cb0552793f8cf3de9af9cdc48034d5a79e44a8189602c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_large_pearl_thumb@96x96.png.meta",
+                      "size":  1000,
+                      "sha256":  "65c186593b379c988927f0e8fa708b39a6be92ee1355a586721c20d69ddf44a9"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_mochi_thumb@96x96.png",
+                      "size":  12643,
+                      "sha256":  "02fde9aa77d2e8660cbaf3c0d0e79610fcaf33bc17b430ab5edf3ff9cfcf5924"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_mochi_thumb@96x96.png.meta",
+                      "size":  994,
+                      "sha256":  "8fe91c50de4012787bfb7aa34916d3a863e213aad07ee773b6005745bcc3f861"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_pudding_thumb@96x96.png",
+                      "size":  13116,
+                      "sha256":  "6ac665d17d12512ca8b6176865a5e0a5a02a4109f1e4e5e8008f93cb99b27c36"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_pudding_thumb@96x96.png.meta",
+                      "size":  996,
+                      "sha256":  "27043087baeaecb96c492508d38fbdcbd2978e2df01c3663dfb7c1577dca2423"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_red_bean_thumb@96x96.png",
+                      "size":  18522,
+                      "sha256":  "cecb71251e1b2c824f7fd3c5f7b6417a38df51c01268d06fea557cdd242eb4e0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_red_bean_thumb@96x96.png.meta",
+                      "size":  997,
+                      "sha256":  "67ddbb8a7d340d24fa6b5577526b18c215a6b3a0d239cbd09fa86098f995bd92"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_sago_thumb@96x96.png",
+                      "size":  14246,
+                      "sha256":  "215ea82bbcddb92fb69101811db1943095fd2187e0ff8a3e67edd92c04db71d8"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_sago_thumb@96x96.png.meta",
+                      "size":  993,
+                      "sha256":  "51559921616a8250e7b1a282096063fb5aa1c02360cd452a40503302ae7cbe61"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_small_pearl_thumb@96x96.png",
+                      "size":  13816,
+                      "sha256":  "0da719a05a8b7b11499e45935d7255b55944e46802cb34bacb790fd0d28f00dd"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_small_pearl_thumb@96x96.png.meta",
+                      "size":  1000,
+                      "sha256":  "f97530ef566c5aa2ec6aec2b6ef30bcd15ab212c3e1d87e690f19d855131b668"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_taro_thumb@96x96.png",
+                      "size":  14992,
+                      "sha256":  "9ece95928d74c4f4181347817df9a650a87e559054af64e713b1f1a8ddcfdc52"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ingredient_thumbnail/ui_ing_taro_thumb@96x96.png.meta",
+                      "size":  993,
+                      "sha256":  "824eb3a6a83389e428031003901b35f28eb4e83cd4a495766c2984d373e0eb28"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/optional_face.meta",
+                      "size":  169,
+                      "sha256":  "78f62cc91a2aac2be9a7c4e822afbe614cc9989d38b780b2e9d83d9bfbd62a79"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/optional_face/spr_face_happy@256x128.png",
+                      "size":  2051,
+                      "sha256":  "001a2181638953b783bffc40f68ad92e142f048bdd8dfcecf81bb6b23504673d"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/optional_face/spr_face_happy@256x128.png.meta",
+                      "size":  992,
+                      "sha256":  "79b4a9f084fc214dc17d6c637ac8bfc2e97922f8940e7f59bf102911e465bb06"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/optional_face/spr_face_neutral@256x128.png",
+                      "size":  1048,
+                      "sha256":  "e2a330125121e524ed8e23de756111aa3cbc9caa368fab352911f595e8c697e2"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/optional_face/spr_face_neutral@256x128.png.meta",
+                      "size":  994,
+                      "sha256":  "e4204382413e40d018fef759c720d56724ad760d3651d416acbe6f288482cab0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/optional_face/spr_face_surprised@256x128.png",
+                      "size":  2088,
+                      "sha256":  "74e12f508f335cdef5acf5596601cc52d4449410654deac8127b480c03b8634c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/optional_face/spr_face_surprised@256x128.png.meta",
+                      "size":  996,
+                      "sha256":  "f26d4949adea8e99e7012191ffea23e4e2db082575997be62206decfa1276242"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel.meta",
+                      "size":  169,
+                      "sha256":  "0b8776f760997b9deaafa16253a93a659dcc868a0031efe68c9d160d24417976"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_hud@340x60.png",
+                      "size":  3184,
+                      "sha256":  "5935a349fed1e04f70ed03fca8294e589ecf98a74642bfc74a8ec500e85a2f48"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_hud@340x60.png.meta",
+                      "size":  989,
+                      "sha256":  "c946bb97b4a79f96e4b1e25e68395997ace6f2c6fe1c71a01da6993dfd2b79bb"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_modal@320x360.png",
+                      "size":  7712,
+                      "sha256":  "4a566a6a4bb2c6e68a03fc9d15b51439f4bcf8bc3bc112ae9e9591b1421809da"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_modal@320x360.png.meta",
+                      "size":  992,
+                      "sha256":  "cc4ea4379729ce263b5cbd246e12a84d67c8a21cf67e8299a90177eda304d4f7"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_next@140x140.png",
+                      "size":  4812,
+                      "sha256":  "e0857eef13dab05657c541f37fefa74b99873839c043fb512b0cd60ae866a94f"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_next@140x140.png.meta",
+                      "size":  991,
+                      "sha256":  "eb6a98d7c6a028076f2b884717593bfea828866bbac7c99218e25a6cd768c4af"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_results@330x410.png",
+                      "size":  9418,
+                      "sha256":  "45d7539f5136953cf2a3a4f1bd130f7861ea97d4458a39af451a158eebcc8766"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_results@330x410.png.meta",
+                      "size":  994,
+                      "sha256":  "8f1ef06f1344f08ce80fd62c2dfd2c032fa0d8eb0426d616300f2aa9daae52ff"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_toast@250x40.png",
+                      "size":  2423,
+                      "sha256":  "b68092b3bdb54f0e6b02f7faf1eae7956505b0c58aee723c7c4d7c5eb4e6bb64"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/panel/ui_panel_toast@250x40.png.meta",
+                      "size":  991,
+                      "sha256":  "687fc51fb3faf2f7a59f755e2d878ee55ede84aa43a2866f362af9045910d007"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/tutorial.meta",
+                      "size":  169,
+                      "sha256":  "c272aeb0f9673e94848e3b2bfda7232911516e544564d5547b8237572a504cb7"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/tutorial/ui_tutorial_hand_move@256x256.png",
+                      "size":  11559,
+                      "sha256":  "638a1f322fffabea531601b65f77ff2540a8087c10959f2baf4d348fb5e021f7"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/tutorial/ui_tutorial_hand_move@256x256.png.meta",
+                      "size":  999,
+                      "sha256":  "2ee917e5aaff61d5cce7477124687edcf2471bebcac3fc64bebadf317da4adfe"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/tutorial/ui_tutorial_hand_release@256x256.png",
+                      "size":  12294,
+                      "sha256":  "8508c5e3665e19e18cf5131416500b1e688375dc8c5192783a227ad1f200b795"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/tutorial/ui_tutorial_hand_release@256x256.png.meta",
+                      "size":  1002,
+                      "sha256":  "7332f0287cb7b5dffef07f088c2aaa75d68e2820c8ec8531a9356573c859dc37"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail.meta",
+                      "size":  169,
+                      "sha256":  "b4d0444e2f8d32ad79b3be4ffec1f892d53699f5d5f573fda2808fcbca8eadbb"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_badge_mochi@192x192.png",
+                      "size":  26770,
+                      "sha256":  "33a3373c1a1448e4f58062613c7128c032895c88f189306294d5a682975c2ad7"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_badge_mochi@192x192.png.meta",
+                      "size":  992,
+                      "sha256":  "f780139ed78aa82b3789499a6d4a03e9dbb89af46ff637c2f364e85982ccd7ee"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_badge_record@256x128.png",
+                      "size":  23017,
+                      "sha256":  "f8a7561eabba572dd7d7d614b73fbcdcceb81c3c9a775abbddaf8bfd51fc41c6"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_badge_record@256x128.png.meta",
+                      "size":  993,
+                      "sha256":  "f2a8f60194a4ad2e1121e329f16c712949289dba226a1b650a248fdee44787f0"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_slider_knob@64x64.png",
+                      "size":  5335,
+                      "sha256":  "8cfc8ed3b0af07e95c667b8dcae44d68d6dea2f8439419ae3f11d31adb1e201c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_slider_knob@64x64.png.meta",
+                      "size":  990,
+                      "sha256":  "a63d69633afe91d1bdd9cad3d7f1a9abd27a7a72520ba54a09eec2a2669e906c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_slider_track@256x24.png",
+                      "size":  1913,
+                      "sha256":  "3ac373d605050404bb6e5cd44181f918b07b2912e0050075278a4de0e65896f1"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_slider_track@256x24.png.meta",
+                      "size":  992,
+                      "sha256":  "ee9711f270b7a24b3daa50d5a15cb094daaff10ebdb905b9af805ed0b855a585"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_toggle_knob@64x64.png",
+                      "size":  4622,
+                      "sha256":  "ccb6ef16b4d2b9a235c02421839f25daa1f4c0624c7ed1fc016015df51208d92"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_toggle_knob@64x64.png.meta",
+                      "size":  990,
+                      "sha256":  "43574b3df73da683179df4b0e9a6d95591f2e5d41fe856a0bcf0fb9412609c03"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_toggle_track@128x64.png",
+                      "size":  3588,
+                      "sha256":  "cca4339e37d56c86c29356746b5b9add5c1b16578df94e0b6ea55d269013651c"
+                  },
+                  {
+                      "path":  "assets/resources/art/p1/ui_detail/ui_toggle_track@128x64.png.meta",
+                      "size":  992,
+                      "sha256":  "c934f3ea3000ce43b87aeba502af4eebd5518cb380f02abef3525669ea57f4f3"
+                  },
+                  {
+                      "path":  "assets/resources/config.meta",
+                      "size":  178,
+                      "sha256":  "aaa25f46a5c6c8997218c735d34f0355b7e6751491ee75130949a8d683e211e2"
+                  },
+                  {
+                      "path":  "assets/resources/config/design-baseline.json",
+                      "size":  5643,
+                      "sha256":  "973eae177ac05c4a7076543323f7af479d4aaf065c3a2e380a6655df3ce6747f"
+                  },
+                  {
+                      "path":  "assets/resources/config/design-baseline.json.meta",
+                      "size":  190,
+                      "sha256":  "4b6741c5a854de8fdbf597224f422985ced7d9ec54ebe2903a710b46b3dc0691"
+                  },
+                  {
+                      "path":  "assets/scenes.meta",
+                      "size":  178,
+                      "sha256":  "bf6c47d77f2cca718bfdddccf67ed6067a40414c39f9b3514957061dc205ab73"
+                  },
+                  {
+                      "path":  "assets/scenes/Boot.scene",
+                      "size":  5174,
+                      "sha256":  "e877bb59791a5420f7834f20b7b21aaee25bd38350e7d95e0a2ebe5f5cac158e"
+                  },
+                  {
+                      "path":  "assets/scenes/Boot.scene.meta",
+                      "size":  192,
+                      "sha256":  "7a73dd7eb74d36745b6cf8de10656f364ecc69e58451c6b1e834de1dab274dc9"
+                  },
+                  {
+                      "path":  "assets/scenes/PhysicsLab.scene",
+                      "size":  5192,
+                      "sha256":  "5437dfcee7d5fd213738463c47ae55ce1a86981947846f3db99e631506d27e2f"
+                  },
+                  {
+                      "path":  "assets/scenes/PhysicsLab.scene.meta",
+                      "size":  192,
+                      "sha256":  "59c60acb1eb19edd951dbe246bd1ac433c7cc7be209fa7ed92bacfdfb2277e57"
+                  },
+                  {
+                      "path":  "assets/scripts.meta",
+                      "size":  178,
+                      "sha256":  "38f2b3db9284f25060a64de41198f567bc5d653e23a609352fa05382c00a8a12"
+                  },
+                  {
+                      "path":  "assets/scripts/bootstrap.meta",
+                      "size":  178,
+                      "sha256":  "e508904222d81a098079f09f7af727951618da1fd927b93058c3242814ba2bd8"
+                  },
+                  {
+                      "path":  "assets/scripts/bootstrap/AppRoot.ts",
+                      "size":  6230,
+                      "sha256":  "f5e48ba71c7e6f7206c806755425af75f220d62ca02a344e32803f315e19d31a"
+                  },
+                  {
+                      "path":  "assets/scripts/bootstrap/AppRoot.ts.meta",
+                      "size":  211,
+                      "sha256":  "47aeea788945d2a796d895913cef97777fd87383fa2c23dc3aa20d8ef3a92812"
+                  },
+                  {
+                      "path":  "assets/scripts/bootstrap/Viewport.ts",
+                      "size":  886,
+                      "sha256":  "9546caa8988fed017f01411ac7cd2e3f47a1d0bafa285ab3ec27d80f4c60b01c"
+                  },
+                  {
+                      "path":  "assets/scripts/bootstrap/Viewport.ts.meta",
+                      "size":  171,
+                      "sha256":  "7823d89c925d5cd387920cf437697b3bd91401c236a102819013f51e6828f4ef"
+                  },
+                  {
+                      "path":  "assets/scripts/contracts.meta",
+                      "size":  178,
+                      "sha256":  "c63ed64e7b7e6136ff550878f8bddfe4993c2f647e9567c1e7f6bbfc0631615e"
+                  },
+                  {
+                      "path":  "assets/scripts/contracts/types.ts",
+                      "size":  9222,
+                      "sha256":  "da462b5e3b438d70b667925aef1aac17a0cc240c9121dda31b4ce1404ad4e23f"
+                  },
+                  {
+                      "path":  "assets/scripts/contracts/types.ts.meta",
+                      "size":  211,
+                      "sha256":  "e8a12d91d67bce3a9918e6c44de60bbfe329c0b23c531c91cb77ab90106337c3"
+                  },
+                  {
+                      "path":  "assets/scripts/core.meta",
+                      "size":  178,
+                      "sha256":  "437fd61b69844cf26cdc16b93a298327fd3d29dc2328640415288b6f99787467"
+                  },
+                  {
+                      "path":  "assets/scripts/core/Clock.ts",
+                      "size":  1613,
+                      "sha256":  "fd90ef1662f341f498b0ab17efa378a2b39d27bcef8924e3fb2c7e2f476e3ddc"
+                  },
+                  {
+                      "path":  "assets/scripts/core/Clock.ts.meta",
+                      "size":  211,
+                      "sha256":  "e0c214a26ba793866a8cea4112139910b64d74b092608cdec9568d6b24498a04"
+                  },
+                  {
+                      "path":  "assets/scripts/core/ConfigLoader.ts",
+                      "size":  7251,
+                      "sha256":  "75b910a98e345d1f803ed636e2798b9bdf2171b5c44308c1badf7d51e980209c"
+                  },
+                  {
+                      "path":  "assets/scripts/core/ConfigLoader.ts.meta",
+                      "size":  211,
+                      "sha256":  "321dbd37eb21e00fb1a27220b40f32e6dc762e43b274481ea61a01850fe9cfb5"
+                  },
+                  {
+                      "path":  "assets/scripts/core/HostLifecycleCoordinator.ts",
+                      "size":  3946,
+                      "sha256":  "aeee314dfb5047bc47e77142f498f1e7baf74cb777d3e51c82a7e90ce75c9d10"
+                  },
+                  {
+                      "path":  "assets/scripts/core/HostLifecycleCoordinator.ts.meta",
+                      "size":  211,
+                      "sha256":  "6a66925fc7cdf2797fb6d2a463a2cfe1f7b1ed8ed282a05d34c84ade037b303d"
+                  },
+                  {
+                      "path":  "assets/scripts/debug.meta",
+                      "size":  178,
+                      "sha256":  "2e0fc5d690762a7259c6526b19b7d8cbd8f37f7b502d5e481922a8fe42bb913a"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/ArtGallery.ts",
+                      "size":  4996,
+                      "sha256":  "5a6439b1315d2113b08d97553b5722d8055cbf07396cf80ea5192d3d62d28fbd"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/ArtGallery.ts.meta",
+                      "size":  171,
+                      "sha256":  "0c5cf23ee0908a747e938fe41f2e501b3aab233e550cfb02540cede54841e478"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/LabPauseGate.ts",
+                      "size":  2104,
+                      "sha256":  "bd72081fc537458fe6a38d1b4230df06af4028b4f8a4c60220f9b140a6e626ec"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/LabPauseGate.ts.meta",
+                      "size":  211,
+                      "sha256":  "ab1be38d51638bc558a152e9b98025fd5a4e47edb0ad4a9a2af37b50f5f6ca87"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/LabProbe.ts",
+                      "size":  22216,
+                      "sha256":  "eeb2de1c4efe9cb3aac3742806cbcea0e97374876b395970409bb82a37ad869a"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/LabProbe.ts.meta",
+                      "size":  211,
+                      "sha256":  "0c23bfc7dc815cadceb1586e6ff4391bd1ac790eb040c52a0d278bf5353f86ec"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/NineSizeQueueLedger.ts",
+                      "size":  2539,
+                      "sha256":  "443c142206bca7ca87a2812db6959ab93a9ce7255b11c2017fdf116b3746263e"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/NineSizeQueueLedger.ts.meta",
+                      "size":  211,
+                      "sha256":  "c288c46fc2fcd76b7e876471e7a1c0f4c52062f54cf6f16612dff08465e55398"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/PhysicsLab.ts",
+                      "size":  71610,
+                      "sha256":  "beaa6b78918c51261736c0ddcd5d1642d4ece59d7a5df56d83f4ce294f980be4"
+                  },
+                  {
+                      "path":  "assets/scripts/debug/PhysicsLab.ts.meta",
+                      "size":  211,
+                      "sha256":  "3791bc3f766950b72e30ee51761f30b2e4d55454a383c735ed845e959ccabf42"
+                  },
+                  {
+                      "path":  "assets/scripts/physics.meta",
+                      "size":  178,
+                      "sha256":  "8ed53e59a3a309d75ec161617a41492e819bc2ee15a7a50e812176ba6b3c18cc"
+                  },
+                  {
+                      "path":  "assets/scripts/physics/CocosPhysicsAdapter.ts",
+                      "size":  17393,
+                      "sha256":  "d3bf9af0b3a2cc6ec6aa3515546da8a09e074e40b91c0eed422a2a768f922cd0"
+                  },
+                  {
+                      "path":  "assets/scripts/physics/CocosPhysicsAdapter.ts.meta",
+                      "size":  211,
+                      "sha256":  "2215ce604de57fbc657780fc6b9209c60b85c1143ce173dff345ae766b5003f8"
+                  },
+                  {
+                      "path":  "assets/scripts/physics/CoordinateMapper.ts",
+                      "size":  2907,
+                      "sha256":  "afad13f70e0c52bb49795364fed7b06fe72cf81bfe06cd3521520cd7f8cbe0bf"
+                  },
+                  {
+                      "path":  "assets/scripts/physics/CoordinateMapper.ts.meta",
+                      "size":  211,
+                      "sha256":  "fbae431f59cd1b5c7512d48ebdd2fa6bbe334159d2c235bd44028f788b4f8c6e"
+                  },
+                  {
+                      "path":  "assets/scripts/physics/CupGeometry.ts",
+                      "size":  2399,
+                      "sha256":  "fef085864e02772f6fe56d134f4c600c90a5eb4f368458df2abaa00f65077d84"
+                  },
+                  {
+                      "path":  "assets/scripts/physics/CupGeometry.ts.meta",
+                      "size":  211,
+                      "sha256":  "3925f0274281e841a75ff15a79930cd1f92f0d308621e9c1a21c199f65f713c8"
+                  },
+                  {
+                      "path":  "assets/scripts/physics/CupSweepProbe.ts",
+                      "size":  5553,
+                      "sha256":  "48d14fa122f706d379e19e1b1e8c3364c4ae2f3b59a0602ff8c9cbfed694c5f7"
+                  },
+                  {
+                      "path":  "assets/scripts/physics/CupSweepProbe.ts.meta",
+                      "size":  211,
+                      "sha256":  "a593d6f329b2123e0e05e5593a7187acdaeea05d46e1b6878b22f787c5af14b6"
+                  },
+                  {
+                      "path":  "assets/scripts/presentation.meta",
+                      "size":  169,
+                      "sha256":  "cc812fb1646e8a10d9c0d55f8178b11c734fb5615e4af3a4fcf56f55cde09263"
+                  },
+                  {
+                      "path":  "assets/scripts/presentation/ArtAssets.ts",
+                      "size":  4757,
+                      "sha256":  "70cd6e0d7a1b6e0ca35b32a607a5476fd82a59325c3c99e01fea81b2917530d9"
+                  },
+                  {
+                      "path":  "assets/scripts/presentation/ArtAssets.ts.meta",
+                      "size":  171,
+                      "sha256":  "417f42e5ff1317e498dae7d4629cb4e23a90f20a53b861251e1821709e912dd9"
+                  },
+                  {
+                      "path":  "assets/scripts/presentation/ArtCatalog.ts",
+                      "size":  2977,
+                      "sha256":  "a189013c12fc60c2056334607564485f91b7616fd36f3b3570fbb699269204c9"
+                  },
+                  {
+                      "path":  "assets/scripts/presentation/ArtCatalog.ts.meta",
+                      "size":  171,
+                      "sha256":  "27ac70f1628ec0909f0dc88b6a969b4046e0f54e4c8dfaa3fbf33788368f33b6"
+                  },
+                  {
+                      "path":  "extensions/codex-editor-bridge/bridge-config.json",
+                      "size":  20,
+                      "sha256":  "db5f42992a00c93d0134f13d2abb77b62bd35b426b9d6e85cfc28c84093b74e9"
+                  },
+                  {
+                      "path":  "extensions/codex-editor-bridge/browser.js",
+                      "size":  8405,
+                      "sha256":  "6a9a797f5aa768157ddfcd69753bb15d8899ff8bec5713cd4fe6e9e586071d9b"
+                  },
+                  {
+                      "path":  "extensions/codex-editor-bridge/package.json",
+                      "size":  1252,
+                      "sha256":  "80e085556b5a01e4412bf6612b2001c0abf1b74e8b209fb28641446b95a9e896"
+                  },
+                  {
+                      "path":  "extensions/codex-editor-bridge/scene.js",
+                      "size":  16740,
+                      "sha256":  "7aa2a120ae713a19249cb7f4fe4260c1be4f5fe6678c796b764e0133cb3745c4"
+                  },
+                  {
+                      "path":  "package.json",
+                      "size":  460,
+                      "sha256":  "52bc749f8c014442c40a65ffb5107dcba26351517db87b44a8789851c452c929"
+                  },
+                  {
+                      "path":  "package-lock.json",
+                      "size":  1085,
+                      "sha256":  "9843a9af4eafdd5af95e5de46355124681b426f1d8b4caebc5e1ef672422c565"
+                  },
+                  {
+                      "path":  "profiles/v2/editor/packages.json",
+                      "size":  3,
+                      "sha256":  "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+                  },
+                  {
+                      "path":  "profiles/v2/packages/builder.json",
+                      "size":  60,
+                      "sha256":  "ba4c4cda04dba2bca4b668fbc9e44c5955fe74fee6eb0f9d061e31b23d765be5"
+                  },
+                  {
+                      "path":  "profiles/v2/packages/device.json",
+                      "size":  29,
+                      "sha256":  "93af91e0b90038cedc84d08651f845e1c2e2ae460321c19f083c27a178e451f8"
+                  },
+                  {
+                      "path":  "profiles/v2/packages/engine.json",
+                      "size":  30,
+                      "sha256":  "e3755683f34745346f06b4dd665d172252183004e1aa50f90ca579837c2f244f"
+                  },
+                  {
+                      "path":  "profiles/v2/packages/program.json",
+                      "size":  29,
+                      "sha256":  "d914f9f19ffe02724337936d8c7907798c8666566902b78243eb1aa8da0baedd"
+                  },
+                  {
+                      "path":  "profiles/v2/packages/project.json",
+                      "size":  29,
+                      "sha256":  "86e60258fc615fe023aef88ff8d66f6e8cf0c784fcef5c02d75b08a42b204241"
+                  },
+                  {
+                      "path":  "profiles/v2/packages/reference-image.json",
+                      "size":  139,
+                      "sha256":  "00b862e51e7b18c8dabbec60b8a34425a1aed80c69baf624385165deac172f31"
+                  },
+                  {
+                      "path":  "profiles/v2/packages/scene.json",
+                      "size":  3031,
+                      "sha256":  "e37358f9d49f30823575e795700cde51c7c6597a7840fdeb68b3cc536f7e88c8"
+                  },
+                  {
+                      "path":  "profiles/v2/packages/server.json",
+                      "size":  52,
+                      "sha256":  "e02c85356446e696f75d83e70db83d2629eb6dd8e76d0e69ce1b457f5c3df3b9"
+                  },
+                  {
+                      "path":  "settings/v2/packages/builder.json",
+                      "size":  87,
+                      "sha256":  "1c3dbe11aac9bffc23ae57a56bafcbb934d9308c72fc31115fd3c97245266502"
+                  },
+                  {
+                      "path":  "settings/v2/packages/cocos-service.json",
+                      "size":  374,
+                      "sha256":  "e873b21fe8dca21e6bcdc1eaf563d8a01c118c60183e962d404cee0170453ae5"
+                  },
+                  {
+                      "path":  "settings/v2/packages/device.json",
+                      "size":  29,
+                      "sha256":  "93af91e0b90038cedc84d08651f845e1c2e2ae460321c19f083c27a178e451f8"
+                  },
+                  {
+                      "path":  "settings/v2/packages/engine.json",
+                      "size":  30,
+                      "sha256":  "e3755683f34745346f06b4dd665d172252183004e1aa50f90ca579837c2f244f"
+                  },
+                  {
+                      "path":  "settings/v2/packages/information.json",
+                      "size":  588,
+                      "sha256":  "a212279f8d984bbe0e714add1c7657f43cda235eb80492282246d19bb75d7b61"
+                  },
+                  {
+                      "path":  "settings/v2/packages/program.json",
+                      "size":  29,
+                      "sha256":  "d914f9f19ffe02724337936d8c7907798c8666566902b78243eb1aa8da0baedd"
+                  },
+                  {
+                      "path":  "settings/v2/packages/project.json",
+                      "size":  182,
+                      "sha256":  "b58a1877071d7be90f590ed62384998c7006784163bca8a8f534494375265289"
+                  },
+                  {
+                      "path":  "tsconfig.json",
+                      "size":  366,
+                      "sha256":  "0dd7033e00096a85c3f4eea6ac83c169bfdf63c6b6a7918048c1d7b65e44b568"
+                  }
+              ]
+}

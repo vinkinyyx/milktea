@@ -1,0 +1,7 @@
+{
+  "caseId": "ASSET-VIS-01",
+  "attemptId": "ART-VIS-01-001",
+  "buildId": "20261029-p1a-repair-03",
+  "result": "未执行",
+  "actual": "Static integrity inventory only; visual pivot/nine-slice/cup layer and nine viewport UI matrix not inspected."
+}

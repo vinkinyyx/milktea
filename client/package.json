@@ -2,5 +2,16 @@
   "name": "milktea-p1a",
   "uuid": "2e9bf027-0d71-4f40-a232-49c36cba4380",
   "version": "0.1.0",
-  "description": "奶茶挤挤 P1-A physics foundation"
+  "description": "奶茶挤挤 P1-A physics foundation",
+  "scripts": {
+    "typecheck": "tsc --project tsconfig.json",
+    "verify:art": "powershell -NoProfile -ExecutionPolicy Bypass -File validation/run-art-check.ps1"
+  },
+  "devDependencies": {
+    "@cocos/creator-types": "3.8.8",
+    "typescript": "5.4.5"
+  },
+  "creator": {
+    "version": "3.8.8"
+  }
 }

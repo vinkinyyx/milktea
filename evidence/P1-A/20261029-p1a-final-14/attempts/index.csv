@@ -1,0 +1,55 @@
+﻿attemptId,caseId,buildId,attemptState,resultFile,detail
+ART-01-001,gallery,20261029-p1a-final-14,PASS,attempts/ART-01-001.result.json,PASS
+ART-02-001,,P1-A素材检查 · 20261029-p1a-final-14,UNCLASSIFIED,attempts/ART-02-001.result.json,no pass field; see raw result
+ART-02-002,,P1-A素材检查 · 20261029-p1a-final-14,UNCLASSIFIED,attempts/ART-02-002.result.json,no pass field; see raw result
+ART-03-001,ART-03,20261029-p1a-final-14,PASS,attempts/ART-03-001.result.json,PASS
+COL-01-001,COL-01,20261029-p1a-final-14,PASS,attempts/COL-01-001.result.json,no pass field; see raw result
+COL-02-001,contact-matrix,20261029-p1a-final-14,PASS,attempts/COL-02-001.result.json,PASS
+COL-06-001,wall-matrix,20261029-p1a-final-14,PASS,attempts/COL-06-001.result.json,PASS
+COL-08-001,narrowest-cup,20261029-p1a-final-14,PASS,attempts/COL-08-001.result.json,PASS
+ERR-01-001,config-404-retry,,PASS,attempts/ERR-01-001.result.json,PASS
+ERR-01-002,config-malformed-retry,,PASS,attempts/ERR-01-002.result.json,PASS
+ERR-01-003,config-invalid-retry,,PASS,attempts/ERR-01-003.result.json,PASS
+ERR-01-004,config-destroy-during-load,,PASS,attempts/ERR-01-004.result.json,PASS
+ERR-02-002,image-404-key,,PASS,attempts/ERR-02-002.result.json,PASS
+ERR-02-003,image-404-click,,PASS,attempts/ERR-02-003.result.json,PASS
+ERR-02-004,image-retry-burst,,PASS,attempts/ERR-02-004.result.json,PASS
+ERR-02-006,destroy-during-image-load,,FAIL,attempts/ERR-02-006.result.json,FAIL
+ERR-02-007,destroy-during-image-load,,FAIL,attempts/ERR-02-007.result.json,FAIL
+ERR-02-008,destroy-during-image-load,,PASS,attempts/ERR-02-008.result.json,PASS
+LIFE-05-001,manual-pause,20261029-p1a-final-14,PASS,attempts/LIFE-05-001.result.json,PASS
+NINE-02-001,queue-terminal,20261029-p1a-final-14,PASS,attempts/NINE-02-001.result.json,PASS
+NINE-04-001,queue-cancel,20261029-p1a-final-14,PASS,attempts/NINE-04-001.result.json,PASS
+NINE-L1-001,level-drop-1,20261029-p1a-final-14,PASS,attempts/NINE-L1-001.result.json,PASS
+NINE-L2-001,level-drop-2,20261029-p1a-final-14,PASS,attempts/NINE-L2-001.result.json,PASS
+NINE-L3-001,level-drop-3,20261029-p1a-final-14,PASS,attempts/NINE-L3-001.result.json,PASS
+NINE-L4-001,level-drop-4,20261029-p1a-final-14,PASS,attempts/NINE-L4-001.result.json,PASS
+NINE-L5-001,level-drop-5,20261029-p1a-final-14,PASS,attempts/NINE-L5-001.result.json,PASS
+NINE-L6-001,level-drop-6,20261029-p1a-final-14,PASS,attempts/NINE-L6-001.result.json,PASS
+NINE-L7-001,level-drop-7,20261029-p1a-final-14,PASS,attempts/NINE-L7-001.result.json,PASS
+NINE-L8-001,level-drop-8,20261029-p1a-final-14,PASS,attempts/NINE-L8-001.result.json,PASS
+NINE-L9-001,level-drop-9,20261029-p1a-final-14,PASS,attempts/NINE-L9-001.result.json,PASS
+REB-01-001,rebuild-20,20261029-p1a-final-14,PASS,attempts/REB-01-001.result.json,PASS
+REB-02-001,rebuild-interrupt-5,20261029-p1a-final-14,PASS,attempts/REB-02-001.result.json,PASS
+REB-03-001,rebuild-interrupt-10,20261029-p1a-final-14,PASS,attempts/REB-03-001.result.json,PASS
+STR-01-P0-001,pressure-original,20261029-p1a-final-14,PASS,attempts/STR-01-P0-001.result.json,PASS
+STR-01-P1-001,pressure-original,20261029-p1a-final-14,PASS,attempts/STR-01-P1-001.result.json,PASS
+STR-01-P2-001,pressure-original,20261029-p1a-final-14,PASS,attempts/STR-01-P2-001.result.json,PASS
+STR-03-001,pressure-mixed,20261029-p1a-final-14,PASS,attempts/STR-03-001.result.json,PASS
+STR-04-001,pressure-strict,20261029-p1a-final-14,PASS,attempts/STR-04-001.result.json,PASS
+VER-01-001,runtime-identity,20261029-p1a-final-14,PASS,attempts/VER-01-001.result.json,PASS
+VIEW-01-001,viewport,20261029-p1a-final-14,PASS,attempts/VIEW-01-001.result.json,PASS
+ERR-02-005,destroy-during-image-load,20261029-p1a-final-14,INCOMPLETE_TOOL_OUTPUT,attempts/ERR-02-005.metadata.json,"Conversion from JSON failed with error: Unexpected character encountered while parsing value: #. Path '', line 0, position 0."
+LIFE-01-PRIMARY-001,LIFE-01,20261029-p1a-final-14,TOOL_SETUP_FAIL,attempts/LIFE-01-PRIMARY-001/result.json,"Error: ACTIVE_TIMEOUT: {""buildId"":""20261029-p1a-final-14"",""attemptId"":""LIFE-01-PRIMARY-001"",""ready"":true,""loading"":false,""tick"":3,""stepCount"":3,""paused"":true,""pauseReasons"":[""RESUME_REQUIRED""],""interruptionSerial"":2,""entityCount"":3,""contactCount"":0,""contactBeginEvents"":0,""contactEndEvents"":0,""listenerCount"":6,""engine"":{""cocos"":""3.8.8"",""physicsBackend"":""BOX2D"",""autoSimulation"":false,""fixedTimeStep"":0.016666666666666666,""ptmRatio"":32},""levelRadii"":[{""level"":1,""radiusDu"":18},{""level"":2,""radiusDu"":24},{""level"":3,""radiusDu"":32},{""level"":4,""radiusDu"":42},{""level"":5,""radiusDu"":55},{""level"":6,""radiusDu"":70},{""level"":7,""radiusDu"":89},{""level"":8,""radiusDu"":112},{""level"":9,""radiusDu"":140}],""cupWidthScale"":1,""queue"":null,""contactRebuild"":null,""contactRebuildHistory"":[],""contactMatrix"":null,""wallMatrix"":null,""lifecycle"":{""domHidden"":false,""engineHidden"":false,""backgrounded"":false,""revision"":2,""eventCount"":6,""events"":[{""source"":""dom"",""hidden"":false,""backgrounded"":false,""trusted"":null,""atMs"":2049,""revision"":0},{""source"":""install"",""hidden"":false,""backgrounded"":false,""trusted"":null,""atMs"":2049,""revision"":0},{""source"":""engine"",""hidden"":true,""backgrounded"":true,""trusted"":null,""atMs"":2377.5,""revision"":1},{""source"":""dom"",""hidden"":true,""backgrounded"":true,""trusted"":true,""atMs"":2377.5,""revision"":1},{""source"":""engine"",""hidden"":false,""backgrounded"":true,""trusted"":null,""atMs"":2418.89999999851,""revision"":1},{""source"":""dom"",""hidden"":false,""backgrounded"":false,""trusted"":true,""atMs"":2419,""revision"":2}]},""message"":""宿主已显示；物理保持暂停，请按 R 恢复""}"
+LIFE-01-PRIMARY-002,LIFE-01,20261029-p1a-final-14,PASS,attempts/LIFE-01-PRIMARY-002/result.json,{}
+LIFE-02-PRIMARY-001,LIFE-02,20261029-p1a-final-14,PASS,attempts/LIFE-02-PRIMARY-001/result.json,{}
+LIFE-03-PRIMARY-001,LIFE-03,20261029-p1a-final-14,PASS,attempts/LIFE-03-PRIMARY-001/result.json,{}
+LIFE-04-PRIMARY-001,LIFE-04,20261029-p1a-final-14,PASS,attempts/LIFE-04-PRIMARY-001/result.json,{}
+LIFE-05-PRIMARY-001,LIFE-05,20261029-p1a-final-14,PASS,attempts/LIFE-05-PRIMARY-001/result.json,{}
+LIFE-06-PRIMARY-001,LIFE-06,20261029-p1a-final-14,PASS,attempts/LIFE-06-PRIMARY-001/result.json,{}
+LIFE-07-PRIMARY-001,LIFE-07,20261029-p1a-final-14,PASS,attempts/LIFE-07-PRIMARY-001/result.json,{}
+LIFE-08-PRIMARY-001,LIFE-08,20261029-p1a-final-14,FAIL,attempts/LIFE-08-PRIMARY-001/result.json,"{'showStillPaused': False, 'initNeverSteppedBeforeResume': False}"
+LIFE-08-PRIMARY-002,LIFE-08,20261029-p1a-final-14,FAIL,attempts/LIFE-08-PRIMARY-002/result.json,"{'showStillPaused': False, 'initNeverSteppedBeforeResume': False}"
+LIFE-09-QUEUE-PRIMARY-001,LIFE-09-QUEUE,20261029-p1a-final-14,PASS,attempts/LIFE-09-QUEUE-PRIMARY-001/result.json,{}
+LIFE-09-REBUILD-PRIMARY-001,LIFE-09-REBUILD,20261029-p1a-final-14,PASS,attempts/LIFE-09-REBUILD-PRIMARY-001/result.json,{}
+LIFE-10-PRIMARY-001,LIFE-10,20261029-p1a-final-14,PASS,attempts/LIFE-10-PRIMARY-001/result.json,{}

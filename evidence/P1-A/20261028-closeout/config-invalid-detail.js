@@ -1,0 +1,1 @@
+async page=>await page.evaluate(()=>{let a=cc.director.getScene().getChildByName('BootRoot').getComponent('AppRoot');return {generation:a.loadGeneration,loading:a.loading,text:a.retryNode?.getComponent('cc.Label')?.string}})

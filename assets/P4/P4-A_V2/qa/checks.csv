@@ -1,0 +1,53 @@
+﻿asset_id,check,status,detail
+ui_icon_calendar,SVG exists and parses,PASS,
+ui_icon_calendar,"96px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/96/ui_icon_calendar.png
+ui_icon_calendar,96px edges clear,PASS,
+ui_icon_calendar,96px source round-trip pixels,PASS,
+ui_icon_calendar,"48px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/48/ui_icon_calendar.png
+ui_icon_calendar,48px edges clear,PASS,
+ui_icon_calendar,48px source round-trip pixels,PASS,
+ui_icon_friend,SVG exists and parses,PASS,
+ui_icon_friend,"96px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/96/ui_icon_friend.png
+ui_icon_friend,96px edges clear,PASS,
+ui_icon_friend,96px source round-trip pixels,PASS,
+ui_icon_friend,"48px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/48/ui_icon_friend.png
+ui_icon_friend,48px edges clear,PASS,
+ui_icon_friend,48px source round-trip pixels,PASS,
+ui_icon_win,SVG exists and parses,PASS,
+ui_icon_win,"96px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/96/ui_icon_win.png
+ui_icon_win,96px edges clear,PASS,
+ui_icon_win,96px source round-trip pixels,PASS,
+ui_icon_win,"48px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/48/ui_icon_win.png
+ui_icon_win,48px edges clear,PASS,
+ui_icon_win,48px source round-trip pixels,PASS,
+ui_icon_tie,SVG exists and parses,PASS,
+ui_icon_tie,"96px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/96/ui_icon_tie.png
+ui_icon_tie,96px edges clear,PASS,
+ui_icon_tie,96px source round-trip pixels,PASS,
+ui_icon_tie,"48px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/48/ui_icon_tie.png
+ui_icon_tie,48px edges clear,PASS,
+ui_icon_tie,48px source round-trip pixels,PASS,
+ui_icon_loss,SVG exists and parses,PASS,
+ui_icon_loss,"96px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/96/ui_icon_loss.png
+ui_icon_loss,96px edges clear,PASS,
+ui_icon_loss,96px source round-trip pixels,PASS,
+ui_icon_loss,"48px PNG RGBA, alpha, sRGB",PASS,/mnt/data/naicha_P4/P4-A_V1/export_png/48/ui_icon_loss.png
+ui_icon_loss,48px edges clear,PASS,
+ui_icon_loss,48px source round-trip pixels,PASS,
+ui_panel_challenge,330x200 RGBA sRGB,PASS,
+ui_panel_challenge,660x400 2x RGBA,PASS,
+ui_panel_challenge,editable master SVG,PASS,
+ui_panel_challenge,nine-slice 24 corners byte-exact,PASS,
+share_daily_background,editable SVG derived from P3-B and group named,PASS,
+share_daily_background,750x1000 opaque PNG+sRGB,PASS,
+share_daily_background,1500x2000 opaque PNG+sRGB,PASS,
+share_daily_background,no dynamic text/QR baked,PASS,
+share_daily_background,P3 source regions preserved,PASS,
+share_friend_background,editable SVG derived from P3-B and group named,PASS,
+share_friend_background,750x1000 opaque PNG+sRGB,PASS,
+share_friend_background,1500x2000 opaque PNG+sRGB,PASS,
+share_friend_background,no dynamic text/QR baked,PASS,
+share_friend_background,P3 source regions preserved,PASS,
+gen_daily_budget,source module exists,PASS,
+gen_challenge_status,source module exists,PASS,
+platform_challenge_entry_code,provider contract exists; no fabricated QR,PASS,

@@ -1,0 +1,1 @@
+Nine original vector UI icons authored for the 奶茶 game project. No third-party fonts, icons, photographs, or trademark logos are embedded. Visual style extends P1-06 game-specific SVG sources. Source artwork is vector-editable.

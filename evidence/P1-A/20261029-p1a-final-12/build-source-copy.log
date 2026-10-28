@@ -1,0 +1,3043 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 2026年10月29日 3:20:00
+   Source : D:\Workspace\TapTap\�̲輷��\client\
+     Dest : D:\cocos-p1a-build-source\20261029-p1a-final-12\
+
+    Files : *.*
+	    
+ Exc Dirs : D:\Workspace\TapTap\�̲輷��\client\temp
+	    D:\Workspace\TapTap\�̲輷��\client\library
+	    D:\Workspace\TapTap\�̲輷��\client\build
+	    D:\Workspace\TapTap\�̲輷��\client\local
+	    
+  Options : *.* /S /E /DCOPY:DAT /COPY:DAT /XJ /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\
+	    New File  		     178	assets.meta
+100%  
+	    New File  		    1085	package-lock.json
+100%  
+	    New File  		     460	package.json
+100%  
+	    New File  		    3867	README.md
+100%  
+	    New File  		     366	tsconfig.json
+100%  
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\assets\
+	    New File  		    3801	migrate-canvas.ts
+100%  
+	    New File  		     171	migrate-canvas.ts.meta
+100%  
+	    New File  		     290	resources.meta
+100%  
+	    New File  		     178	scenes.meta
+100%  
+	    New File  		     178	scripts.meta
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\assets\resources\
+	    New File  		     169	art.meta
+100%  
+	    New File  		     178	config.meta
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\
+	    New File  		     169	p1.meta
+100%  
+	  New Dir         13	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\
+	    New File  		     169	button_skin.meta
+100%  
+	    New File  		   77295	catalog.json
+100%  
+	    New File  		     179	catalog.json.meta
+100%  
+	    New File  		     169	cup_layer.meta
+100%  
+	    New File  		     169	effect.meta
+100%  
+	    New File  		     169	environment.meta
+100%  
+	    New File  		     169	icon.meta
+100%  
+	    New File  		     169	ingredient.meta
+100%  
+	    New File  		     169	ingredient_thumbnail.meta
+100%  
+	    New File  		     169	optional_face.meta
+100%  
+	    New File  		     169	panel.meta
+100%  
+	    New File  		     169	tutorial.meta
+100%  
+	    New File  		     169	ui_detail.meta
+100%  
+	  New Dir         24	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\button_skin\
+	    New File  		    6069	ui_btn_icon_disabled@96x96.png
+100%  
+	    New File  		     996	ui_btn_icon_disabled@96x96.png.meta
+100%  
+	    New File  		    7129	ui_btn_icon_normal@96x96.png
+100%  
+	    New File  		     994	ui_btn_icon_normal@96x96.png.meta
+100%  
+	    New File  		    5972	ui_btn_icon_pressed@96x96.png
+100%  
+	    New File  		     995	ui_btn_icon_pressed@96x96.png.meta
+100%  
+	    New File  		    8843	ui_btn_icon_selected@96x96.png
+100%  
+	    New File  		     996	ui_btn_icon_selected@96x96.png.meta
+100%  
+	    New File  		    4455	ui_btn_primary_disabled@256x96.png
+100%  
+	    New File  		    1000	ui_btn_primary_disabled@256x96.png.meta
+100%  
+	    New File  		    4469	ui_btn_primary_normal@256x96.png
+100%  
+	    New File  		     998	ui_btn_primary_normal@256x96.png.meta
+100%  
+	    New File  		    3722	ui_btn_primary_pressed@256x96.png
+100%  
+	    New File  		     999	ui_btn_primary_pressed@256x96.png.meta
+100%  
+	    New File  		    6227	ui_btn_primary_selected@256x96.png
+100%  
+	    New File  		    1000	ui_btn_primary_selected@256x96.png.meta
+100%  
+	    New File  		    4453	ui_btn_secondary_disabled@256x96.png
+100%  
+	    New File  		    1002	ui_btn_secondary_disabled@256x96.png.meta
+100%  
+	    New File  		    4680	ui_btn_secondary_normal@256x96.png
+100%  
+	    New File  		    1000	ui_btn_secondary_normal@256x96.png.meta
+100%  
+	    New File  		    4250	ui_btn_secondary_pressed@256x96.png
+100%  
+	    New File  		    1001	ui_btn_secondary_pressed@256x96.png.meta
+100%  
+	    New File  		    6293	ui_btn_secondary_selected@256x96.png
+100%  
+	    New File  		    1002	ui_btn_secondary_selected@256x96.png.meta
+100%  
+	  New Dir         14	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\cup_layer\
+	    New File  		   53309	spr_cup_classic_back@750x1000.png
+100%  
+	    New File  		     999	spr_cup_classic_back@750x1000.png.meta
+100%  
+	    New File  		    6943	spr_cup_classic_base@750x1000.png
+100%  
+	    New File  		     999	spr_cup_classic_base@750x1000.png.meta
+100%  
+	    New File  		   28901	spr_cup_classic_front@750x1000.png
+100%  
+	    New File  		    1000	spr_cup_classic_front@750x1000.png.meta
+100%  
+	    New File  		   10473	spr_cup_classic_label@750x1000.png
+100%  
+	    New File  		    1000	spr_cup_classic_label@750x1000.png.meta
+100%  
+	    New File  		   13500	spr_cup_classic_rim_back@750x1000.png
+100%  
+	    New File  		    1003	spr_cup_classic_rim_back@750x1000.png.meta
+100%  
+	    New File  		   12291	spr_cup_classic_rim_front@750x1000.png
+100%  
+	    New File  		    1004	spr_cup_classic_rim_front@750x1000.png.meta
+100%  
+	    New File  		   36175	spr_cup_classic_tea@750x1000.png
+100%  
+	    New File  		     998	spr_cup_classic_tea@750x1000.png.meta
+100%  
+	  New Dir         10	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\effect\
+	    New File  		    3668	fx_crumb@256x256.png
+100%  
+	    New File  		     986	fx_crumb@256x256.png.meta
+100%  
+	    New File  		    3581	fx_drop_ping@256x256.png
+100%  
+	    New File  		     990	fx_drop_ping@256x256.png.meta
+100%  
+	    New File  		   12677	fx_merge_ring@256x256.png
+100%  
+	    New File  		     991	fx_merge_ring@256x256.png.meta
+100%  
+	    New File  		   15726	fx_mochi_star@256x256.png
+100%  
+	    New File  		     991	fx_mochi_star@256x256.png.meta
+100%  
+	    New File  		    7267	fx_sparkle@256x256.png
+100%  
+	    New File  		     988	fx_sparkle@256x256.png.meta
+100%  
+	  New Dir         10	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\environment\
+	    New File  		  164213	bg_shop_base@750x1334.png
+100%  
+	    New File  		     992	bg_shop_base@750x1334.png.meta
+100%  
+	    New File  		    4511	bg_shop_extend_bottom@750x400.png
+100%  
+	    New File  		    1000	bg_shop_extend_bottom@750x400.png.meta
+100%  
+	    New File  		   27121	bg_shop_extend_top@750x400.png
+100%  
+	    New File  		     997	bg_shop_extend_top@750x400.png.meta
+100%  
+	    New File  		    9327	spr_cup_shadow@512x128.png
+100%  
+	    New File  		     992	spr_cup_shadow@512x128.png.meta
+100%  
+	    New File  		   47299	ui_title_logo@800x300.png
+100%  
+	    New File  		     991	ui_title_logo@800x300.png.meta
+100%  
+	  New Dir         72	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\icon\
+	    New File  		    1361	ui_icon_back@48x48.png
+100%  
+	    New File  		     988	ui_icon_back@48x48.png.meta
+100%  
+	    New File  		    2376	ui_icon_back@96x96.png
+100%  
+	    New File  		     988	ui_icon_back@96x96.png.meta
+100%  
+	    New File  		    1731	ui_icon_check@48x48.png
+100%  
+	    New File  		     989	ui_icon_check@48x48.png.meta
+100%  
+	    New File  		    3391	ui_icon_check@96x96.png
+100%  
+	    New File  		     989	ui_icon_check@96x96.png.meta
+100%  
+	    New File  		    1929	ui_icon_close@48x48.png
+100%  
+	    New File  		     989	ui_icon_close@48x48.png.meta
+100%  
+	    New File  		    3156	ui_icon_close@96x96.png
+100%  
+	    New File  		     989	ui_icon_close@96x96.png.meta
+100%  
+	    New File  		    1313	ui_icon_continue@48x48.png
+100%  
+	    New File  		     992	ui_icon_continue@48x48.png.meta
+100%  
+	    New File  		    2238	ui_icon_continue@96x96.png
+100%  
+	    New File  		     992	ui_icon_continue@96x96.png.meta
+100%  
+	    New File  		    2149	ui_icon_home@48x48.png
+100%  
+	    New File  		     988	ui_icon_home@48x48.png.meta
+100%  
+	    New File  		    4362	ui_icon_home@96x96.png
+100%  
+	    New File  		     988	ui_icon_home@96x96.png.meta
+100%  
+	    New File  		    2628	ui_icon_info@48x48.png
+100%  
+	    New File  		     988	ui_icon_info@48x48.png.meta
+100%  
+	    New File  		    6100	ui_icon_info@96x96.png
+100%  
+	    New File  		     988	ui_icon_info@96x96.png.meta
+100%  
+	    New File  		    2691	ui_icon_music_off@48x48.png
+100%  
+	    New File  		     993	ui_icon_music_off@48x48.png.meta
+100%  
+	    New File  		    6265	ui_icon_music_off@96x96.png
+100%  
+	    New File  		     993	ui_icon_music_off@96x96.png.meta
+100%  
+	    New File  		    1839	ui_icon_music_on@48x48.png
+100%  
+	    New File  		     992	ui_icon_music_on@48x48.png.meta
+100%  
+	    New File  		    3559	ui_icon_music_on@96x96.png
+100%  
+	    New File  		     992	ui_icon_music_on@96x96.png.meta
+100%  
+	    New File  		    2472	ui_icon_next@48x48.png
+100%  
+	    New File  		     988	ui_icon_next@48x48.png.meta
+100%  
+	    New File  		    5075	ui_icon_next@96x96.png
+100%  
+	    New File  		     988	ui_icon_next@96x96.png.meta
+100%  
+	    New File  		    1086	ui_icon_pause@48x48.png
+100%  
+	    New File  		     989	ui_icon_pause@48x48.png.meta
+100%  
+	    New File  		    1723	ui_icon_pause@96x96.png
+100%  
+	    New File  		     989	ui_icon_pause@96x96.png.meta
+100%  
+	    New File  		    1653	ui_icon_play@48x48.png
+100%  
+	    New File  		     988	ui_icon_play@48x48.png.meta
+100%  
+	    New File  		    3121	ui_icon_play@96x96.png
+100%  
+	    New File  		     988	ui_icon_play@96x96.png.meta
+100%  
+	    New File  		    2612	ui_icon_reduced_motion@48x48.png
+100%  
+	    New File  		     998	ui_icon_reduced_motion@48x48.png.meta
+100%  
+	    New File  		    5773	ui_icon_reduced_motion@96x96.png
+100%  
+	    New File  		     998	ui_icon_reduced_motion@96x96.png.meta
+100%  
+	    New File  		    2353	ui_icon_restart@48x48.png
+100%  
+	    New File  		     991	ui_icon_restart@48x48.png.meta
+100%  
+	    New File  		    4831	ui_icon_restart@96x96.png
+100%  
+	    New File  		     991	ui_icon_restart@96x96.png.meta
+100%  
+	    New File  		    2632	ui_icon_settings@48x48.png
+100%  
+	    New File  		     992	ui_icon_settings@48x48.png.meta
+100%  
+	    New File  		    5569	ui_icon_settings@96x96.png
+100%  
+	    New File  		     992	ui_icon_settings@96x96.png.meta
+100%  
+	    New File  		    1730	ui_icon_sfx_off@48x48.png
+100%  
+	    New File  		     991	ui_icon_sfx_off@48x48.png.meta
+100%  
+	    New File  		    2971	ui_icon_sfx_off@96x96.png
+100%  
+	    New File  		     991	ui_icon_sfx_off@96x96.png.meta
+100%  
+	    New File  		    2085	ui_icon_sfx_on@48x48.png
+100%  
+	    New File  		     990	ui_icon_sfx_on@48x48.png.meta
+100%  
+	    New File  		    4237	ui_icon_sfx_on@96x96.png
+100%  
+	    New File  		     990	ui_icon_sfx_on@96x96.png.meta
+100%  
+	    New File  		    2377	ui_icon_shake@48x48.png
+100%  
+	    New File  		     989	ui_icon_shake@48x48.png.meta
+100%  
+	    New File  		    4791	ui_icon_shake@96x96.png
+100%  
+	    New File  		     989	ui_icon_shake@96x96.png.meta
+100%  
+	    New File  		    2326	ui_icon_warning@48x48.png
+100%  
+	    New File  		     991	ui_icon_warning@48x48.png.meta
+100%  
+	    New File  		    4684	ui_icon_warning@96x96.png
+100%  
+	    New File  		     991	ui_icon_warning@96x96.png.meta
+100%  
+	  New Dir         54	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\ingredient\
+	    New File  		   22040	spr_ing_coconut_base@128x128.png
+100%  
+	    New File  		     998	spr_ing_coconut_base@128x128.png.meta
+100%  
+	    New File  		   68479	spr_ing_coconut_base@256x256.png
+100%  
+	    New File  		     998	spr_ing_coconut_base@256x256.png.meta
+100%  
+	    New File  		  230688	spr_ing_coconut_base@512x512.png
+100%  
+	    New File  		     998	spr_ing_coconut_base@512x512.png.meta
+100%  
+	    New File  		   24903	spr_ing_grass_jelly_base@128x128.png
+100%  
+	    New File  		    1002	spr_ing_grass_jelly_base@128x128.png.meta
+100%  
+	    New File  		   78634	spr_ing_grass_jelly_base@256x256.png
+100%  
+	    New File  		    1002	spr_ing_grass_jelly_base@256x256.png.meta
+100%  
+	    New File  		  267089	spr_ing_grass_jelly_base@512x512.png
+100%  
+	    New File  		    1002	spr_ing_grass_jelly_base@512x512.png.meta
+100%  
+	    New File  		   21592	spr_ing_large_pearl_base@128x128.png
+100%  
+	    New File  		    1002	spr_ing_large_pearl_base@128x128.png.meta
+100%  
+	    New File  		   67505	spr_ing_large_pearl_base@256x256.png
+100%  
+	    New File  		    1002	spr_ing_large_pearl_base@256x256.png.meta
+100%  
+	    New File  		  229104	spr_ing_large_pearl_base@512x512.png
+100%  
+	    New File  		    1002	spr_ing_large_pearl_base@512x512.png.meta
+100%  
+	    New File  		   20403	spr_ing_mochi_base@128x128.png
+100%  
+	    New File  		     996	spr_ing_mochi_base@128x128.png.meta
+100%  
+	    New File  		   68932	spr_ing_mochi_base@256x256.png
+100%  
+	    New File  		     996	spr_ing_mochi_base@256x256.png.meta
+100%  
+	    New File  		  265476	spr_ing_mochi_base@512x512.png
+100%  
+	    New File  		     996	spr_ing_mochi_base@512x512.png.meta
+100%  
+	    New File  		   20606	spr_ing_pudding_base@128x128.png
+100%  
+	    New File  		     998	spr_ing_pudding_base@128x128.png.meta
+100%  
+	    New File  		   62689	spr_ing_pudding_base@256x256.png
+100%  
+	    New File  		     998	spr_ing_pudding_base@256x256.png.meta
+100%  
+	    New File  		  214278	spr_ing_pudding_base@512x512.png
+100%  
+	    New File  		     998	spr_ing_pudding_base@512x512.png.meta
+100%  
+	    New File  		   30247	spr_ing_red_bean_base@128x128.png
+100%  
+	    New File  		     999	spr_ing_red_bean_base@128x128.png.meta
+100%  
+	    New File  		   98641	spr_ing_red_bean_base@256x256.png
+100%  
+	    New File  		     999	spr_ing_red_bean_base@256x256.png.meta
+100%  
+	    New File  		  333594	spr_ing_red_bean_base@512x512.png
+100%  
+	    New File  		     999	spr_ing_red_bean_base@512x512.png.meta
+100%  
+	    New File  		   22474	spr_ing_sago_base@128x128.png
+100%  
+	    New File  		     995	spr_ing_sago_base@128x128.png.meta
+100%  
+	    New File  		   70144	spr_ing_sago_base@256x256.png
+100%  
+	    New File  		     995	spr_ing_sago_base@256x256.png.meta
+100%  
+	    New File  		  233671	spr_ing_sago_base@512x512.png
+100%  
+	    New File  		     995	spr_ing_sago_base@512x512.png.meta
+100%  
+	    New File  		   21451	spr_ing_small_pearl_base@128x128.png
+100%  
+	    New File  		    1002	spr_ing_small_pearl_base@128x128.png.meta
+100%  
+	    New File  		   66717	spr_ing_small_pearl_base@256x256.png
+100%  
+	    New File  		    1002	spr_ing_small_pearl_base@256x256.png.meta
+100%  
+	    New File  		  228332	spr_ing_small_pearl_base@512x512.png
+100%  
+	    New File  		    1002	spr_ing_small_pearl_base@512x512.png.meta
+100%  
+	    New File  		   23583	spr_ing_taro_base@128x128.png
+100%  
+	    New File  		     995	spr_ing_taro_base@128x128.png.meta
+100%  
+	    New File  		   73895	spr_ing_taro_base@256x256.png
+100%  
+	    New File  		     995	spr_ing_taro_base@256x256.png.meta
+100%  
+	    New File  		  262957	spr_ing_taro_base@512x512.png
+100%  
+	    New File  		     995	spr_ing_taro_base@512x512.png.meta
+100%  
+	  New Dir         18	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\ingredient_thumbnail\
+	    New File  		   14149	ui_ing_coconut_thumb@96x96.png
+100%  
+	    New File  		     996	ui_ing_coconut_thumb@96x96.png.meta
+100%  
+	    New File  		   15674	ui_ing_grass_jelly_thumb@96x96.png
+100%  
+	    New File  		    1000	ui_ing_grass_jelly_thumb@96x96.png.meta
+100%  
+	    New File  		   13818	ui_ing_large_pearl_thumb@96x96.png
+100%  
+	    New File  		    1000	ui_ing_large_pearl_thumb@96x96.png.meta
+100%  
+	    New File  		   12643	ui_ing_mochi_thumb@96x96.png
+100%  
+	    New File  		     994	ui_ing_mochi_thumb@96x96.png.meta
+100%  
+	    New File  		   13116	ui_ing_pudding_thumb@96x96.png
+100%  
+	    New File  		     996	ui_ing_pudding_thumb@96x96.png.meta
+100%  
+	    New File  		   18522	ui_ing_red_bean_thumb@96x96.png
+100%  
+	    New File  		     997	ui_ing_red_bean_thumb@96x96.png.meta
+100%  
+	    New File  		   14246	ui_ing_sago_thumb@96x96.png
+100%  
+	    New File  		     993	ui_ing_sago_thumb@96x96.png.meta
+100%  
+	    New File  		   13816	ui_ing_small_pearl_thumb@96x96.png
+100%  
+	    New File  		    1000	ui_ing_small_pearl_thumb@96x96.png.meta
+100%  
+	    New File  		   14992	ui_ing_taro_thumb@96x96.png
+100%  
+	    New File  		     993	ui_ing_taro_thumb@96x96.png.meta
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\optional_face\
+	    New File  		    2051	spr_face_happy@256x128.png
+100%  
+	    New File  		     992	spr_face_happy@256x128.png.meta
+100%  
+	    New File  		    1048	spr_face_neutral@256x128.png
+100%  
+	    New File  		     994	spr_face_neutral@256x128.png.meta
+100%  
+	    New File  		    2088	spr_face_surprised@256x128.png
+100%  
+	    New File  		     996	spr_face_surprised@256x128.png.meta
+100%  
+	  New Dir         10	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\panel\
+	    New File  		    3184	ui_panel_hud@340x60.png
+100%  
+	    New File  		     989	ui_panel_hud@340x60.png.meta
+100%  
+	    New File  		    7712	ui_panel_modal@320x360.png
+100%  
+	    New File  		     992	ui_panel_modal@320x360.png.meta
+100%  
+	    New File  		    4812	ui_panel_next@140x140.png
+100%  
+	    New File  		     991	ui_panel_next@140x140.png.meta
+100%  
+	    New File  		    9418	ui_panel_results@330x410.png
+100%  
+	    New File  		     994	ui_panel_results@330x410.png.meta
+100%  
+	    New File  		    2423	ui_panel_toast@250x40.png
+100%  
+	    New File  		     991	ui_panel_toast@250x40.png.meta
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\tutorial\
+	    New File  		   11559	ui_tutorial_hand_move@256x256.png
+100%  
+	    New File  		     999	ui_tutorial_hand_move@256x256.png.meta
+100%  
+	    New File  		   12294	ui_tutorial_hand_release@256x256.png
+100%  
+	    New File  		    1002	ui_tutorial_hand_release@256x256.png.meta
+100%  
+	  New Dir         12	D:\Workspace\TapTap\�̲輷��\client\assets\resources\art\p1\ui_detail\
+	    New File  		   26770	ui_badge_mochi@192x192.png
+100%  
+	    New File  		     992	ui_badge_mochi@192x192.png.meta
+100%  
+	    New File  		   23017	ui_badge_record@256x128.png
+100%  
+	    New File  		     993	ui_badge_record@256x128.png.meta
+100%  
+	    New File  		    5335	ui_slider_knob@64x64.png
+100%  
+	    New File  		     990	ui_slider_knob@64x64.png.meta
+100%  
+	    New File  		    1913	ui_slider_track@256x24.png
+100%  
+	    New File  		     992	ui_slider_track@256x24.png.meta
+100%  
+	    New File  		    4622	ui_toggle_knob@64x64.png
+100%  
+	    New File  		     990	ui_toggle_knob@64x64.png.meta
+100%  
+	    New File  		    3588	ui_toggle_track@128x64.png
+100%  
+	    New File  		     992	ui_toggle_track@128x64.png.meta
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\assets\resources\config\
+	    New File  		    5643	design-baseline.json
+100%  
+	    New File  		     190	design-baseline.json.meta
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\assets\scenes\
+	    New File  		    5174	Boot.scene
+100%  
+	    New File  		     192	Boot.scene.meta
+100%  
+	    New File  		    5192	PhysicsLab.scene
+100%  
+	    New File  		     192	PhysicsLab.scene.meta
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\assets\scripts\
+	    New File  		     178	bootstrap.meta
+100%  
+	    New File  		     178	contracts.meta
+100%  
+	    New File  		     178	core.meta
+100%  
+	    New File  		     178	debug.meta
+100%  
+	    New File  		     178	physics.meta
+100%  
+	    New File  		     169	presentation.meta
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\assets\scripts\bootstrap\
+	    New File  		    6230	AppRoot.ts
+100%  
+	    New File  		     211	AppRoot.ts.meta
+100%  
+	    New File  		     886	Viewport.ts
+100%  
+	    New File  		     171	Viewport.ts.meta
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\assets\scripts\contracts\
+	    New File  		    9222	types.ts
+100%  
+	    New File  		     211	types.ts.meta
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\assets\scripts\core\
+	    New File  		    1613	Clock.ts
+100%  
+	    New File  		     211	Clock.ts.meta
+100%  
+	    New File  		    7251	ConfigLoader.ts
+100%  
+	    New File  		     211	ConfigLoader.ts.meta
+100%  
+	    New File  		    3946	HostLifecycleCoordinator.ts
+100%  
+	    New File  		     211	HostLifecycleCoordinator.ts.meta
+100%  
+	  New Dir         10	D:\Workspace\TapTap\�̲輷��\client\assets\scripts\debug\
+	    New File  		    5034	ArtGallery.ts
+100%  
+	    New File  		     171	ArtGallery.ts.meta
+100%  
+	    New File  		    2104	LabPauseGate.ts
+100%  
+	    New File  		     211	LabPauseGate.ts.meta
+100%  
+	    New File  		   22216	LabProbe.ts
+100%  
+	    New File  		     211	LabProbe.ts.meta
+100%  
+	    New File  		    2539	NineSizeQueueLedger.ts
+100%  
+	    New File  		     211	NineSizeQueueLedger.ts.meta
+100%  
+	    New File  		   72048	PhysicsLab.ts
+100%  
+	    New File  		     211	PhysicsLab.ts.meta
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\assets\scripts\physics\
+	    New File  		   17393	CocosPhysicsAdapter.ts
+100%  
+	    New File  		     211	CocosPhysicsAdapter.ts.meta
+100%  
+	    New File  		    2907	CoordinateMapper.ts
+100%  
+	    New File  		     211	CoordinateMapper.ts.meta
+100%  
+	    New File  		    2399	CupGeometry.ts
+100%  
+	    New File  		     211	CupGeometry.ts.meta
+100%  
+	    New File  		    5553	CupSweepProbe.ts
+100%  
+	    New File  		     211	CupSweepProbe.ts.meta
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\assets\scripts\presentation\
+	    New File  		    4757	ArtAssets.ts
+100%  
+	    New File  		     171	ArtAssets.ts.meta
+100%  
+	    New File  		    2977	ArtCatalog.ts
+100%  
+	    New File  		     171	ArtCatalog.ts.meta
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\evidence\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\evidence\P1-A\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\evidence\P1-A\20261029-p1a-repair-01\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\extensions\
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\extensions\codex-editor-bridge\
+	    New File  		      20	bridge-config.json
+100%  
+	    New File  		    8405	browser.js
+100%  
+	    New File  		    1252	package.json
+100%  
+	    New File  		   16740	scene.js
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\
+	    New File  		     907	.package-lock.json
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\.bin\
+	    New File  		     385	tsc
+100%  
+	    New File  		     323	tsc.cmd
+100%  
+	    New File  		     797	tsc.ps1
+100%  
+	    New File  		     395	tsserver
+100%  
+	    New File  		     328	tsserver.cmd
+100%  
+	    New File  		     817	tsserver.ps1
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\
+	    New File  		      43	editor.d.ts
+100%  
+	    New File  		      40	engine.d.ts
+100%  
+	    New File  		     462	package.json
+100%  
+	    New File  		    1503	README.md
+100%  
+	  New Dir          7	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\
+	    New File  		   52925	editor.d.ts
+100%  
+	    New File  		  667384	electron.d.ts
+100%  
+	    New File  		    1887	extension.d.ts
+100%  
+	    New File  		     114	index.d.ts
+100%  
+	    New File  		    1624	message.d.ts
+100%  
+	    New File  		   38142	protected.d.ts
+100%  
+	    New File  		     160	utils.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\adsense-h5g-plugin\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\adsense-h5g-plugin\@types\
+	    New File  		     553	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\alipay-mini-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\alipay-mini-game\@types\
+	    New File  		     613	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\android\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\android\@types\
+	    New File  		    1988	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\animation-graph\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\animation-graph\@types\
+	    New File  		     420	engine-editor-extras.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\animator\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\animator\@types\
+	    New File  		     152	vue.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\asset-db\
+	  New Dir          3	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\asset-db\@types\
+	    New File  		    3686	message.d.ts
+100%  
+	    New File  		     506	protected.d.ts
+100%  
+	    New File  		    4546	public.d.ts
+100%  
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\asset-db\@types\protected\
+	    New File  		   10430	asset-handler.d.ts
+100%  
+	    New File  		     885	asset.d.ts
+100%  
+	    New File  		    2303	global.d.ts
+100%  
+	    New File  		    4135	message.d.ts
+100%  
+	    New File  		    3431	plugin.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\assets\
+	  New Dir          3	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\assets\@types\
+	    New File  		     485	protected.d.ts
+100%  
+	    New File  		     667	public.d.ts
+100%  
+	    New File  		     188	vue.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\builder\
+	  New Dir          3	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\builder\@types\
+	    New File  		      27	index.d.ts
+100%  
+	    New File  		     280	message.d.ts
+100%  
+	    New File  		     317	protected.d.ts
+100%  
+	  New Dir          9	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\builder\@types\protected\
+	    New File  		    2871	asset-manager.d.ts
+100%  
+	    New File  		   13005	build-plugin.d.ts
+100%  
+	    New File  		    9297	build-result.d.ts
+100%  
+	    New File  		    1828	bundle-config.d.ts
+100%  
+	    New File  		     570	global.d.ts
+100%  
+	    New File  		     219	import-map.d.ts
+100%  
+	    New File  		    1902	message.d.ts
+100%  
+	    New File  		   11620	options.d.ts
+100%  
+	    New File  		    3214	texture-packer.d.ts
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\builder\@types\public\
+	    New File  		    4550	build-plugin.d.ts
+100%  
+	    New File  		    8280	build-result.d.ts
+100%  
+	    New File  		     116	global.d.ts
+100%  
+	    New File  		    2779	index.d.ts
+100%  
+	    New File  		   10792	options.d.ts
+100%  
+	    New File  		    3778	texture-compress.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\bytedance-mini-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\bytedance-mini-game\@types\
+	    New File  		     965	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\certificate\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\certificate\@types\
+	    New File  		      46	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\channel-upload-tools\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\channel-upload-tools\@types\
+	    New File  		      46	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\device\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\device\@types\
+	    New File  		     166	message.d.ts
+100%  
+	    New File  		     243	public.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\engine\
+	  New Dir          3	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\engine\@types\
+	    New File  		     836	index.d.ts
+100%  
+	    New File  		     528	message.d.ts
+100%  
+	    New File  		    1917	module.d.ts
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\engine\@types\protected\
+	    New File  		     215	index.d.ts
+100%  
+	    New File  		     953	message.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\engine-extends\
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\engine-extends\@types\
+	    New File  		    2812	gltf-validator.d.ts
+100%  
+	    New File  		   18677	glTF.d.ts
+100%  
+	    New File  		   33239	i18n-well-defined.d.ts
+100%  
+	    New File  		    4682	third-parts.d.ts
+100%  
+	    New File  		    2398	userDatas.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\extension\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\extension\@types\
+	    New File  		     241	message.d.ts
+100%  
+	    New File  		    1446	public.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\fb-instant-games\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\fb-instant-games\@types\
+	    New File  		     529	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\google-play\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\google-play\@types\
+	    New File  		    2101	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\harmonyos-next\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\harmonyos-next\@types\
+	    New File  		    1443	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\honor-mini-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\honor-mini-game\@types\
+	    New File  		     813	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\huawei-agc\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\huawei-agc\@types\
+	    New File  		    1240	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\huawei-quick-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\huawei-quick-game\@types\
+	    New File  		     929	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\information\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\information\@types\
+	    New File  		     707	message.d.ts
+100%  
+	    New File  		     957	public.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\ios\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\ios\@types\
+	    New File  		    1177	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\linux\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\linux\@types\
+	    New File  		     618	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\mac\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\mac\@types\
+	    New File  		     947	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\migu-mini-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\migu-mini-game\@types\
+	    New File  		     791	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\native\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\native\@types\
+	    New File  		    1365	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\ohos\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\ohos\@types\
+	    New File  		     994	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\oppo-mini-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\oppo-mini-game\@types\
+	    New File  		     929	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\package-asset\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\package-asset\@types\
+	    New File  		    1858	public.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\preferences\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\preferences\@types\
+	    New File  		    1516	index.d.ts
+100%  
+	    New File  		     561	message.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\preview\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\preview\@types\
+	    New File  		      29	index.d.ts
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\preview\@types\protected\
+	    New File  		    1400	index.d.ts
+100%  
+	    New File  		     303	message.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\program\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\program\@types\
+	    New File  		     504	message.d.ts
+100%  
+	    New File  		     651	public.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\programming\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\programming\@types\
+	    New File  		     351	message.d.ts
+100%  
+	    New File  		     738	protected.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\project\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\project\@types\
+	    New File  		    1339	index.d.ts
+100%  
+	    New File  		     532	message.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\reference-image\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\reference-image\@types\
+	    New File  		     481	public.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\reflection-probe\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\reflection-probe\@types\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\reflection-probe\@types\protected\
+	    New File  		    3244	callbackInvoker.d.ts
+100%  
+	    New File  		    1464	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\runtime-dev-tools\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\runtime-dev-tools\@types\
+	    New File  		      86	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\
+	    New File  		    1646	engine-view.d.ts
+100%  
+	    New File  		    6354	message.d.ts
+100%  
+	    New File  		    9222	public.d.ts
+100%  
+	    New File  		   23070	scene-facade-interface.d.ts
+100%  
+	    New File  		    4756	scene.d.ts
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\animation\
+	    New File  		    4146	public.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\
+	    New File  		     364	assets.d.ts
+100%  
+	    New File  		     239	assets.d.ts.map
+100%  
+	  New Dir         16	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\facade\
+	    New File  		    3276	animation-scene-facade.d.ts
+100%  
+	    New File  		    2177	animation-scene-facade.d.ts.map
+100%  
+	    New File  		   15189	general-scene-facade.d.ts
+100%  
+	    New File  		    9777	general-scene-facade.d.ts.map
+100%  
+	    New File  		     841	prefab-scene-facade.d.ts
+100%  
+	    New File  		     720	prefab-scene-facade.d.ts.map
+100%  
+	    New File  		    1393	preview-scene-facade.d.ts
+100%  
+	    New File  		    1235	preview-scene-facade.d.ts.map
+100%  
+	    New File  		    1108	scene-facade-fsm.d.ts
+100%  
+	    New File  		     889	scene-facade-fsm.d.ts.map
+100%  
+	    New File  		   14760	scene-facade-manager.d.ts
+100%  
+	    New File  		    9852	scene-facade-manager.d.ts.map
+100%  
+	    New File  		     776	scene-facade-state-interface.d.ts
+100%  
+	    New File  		     837	scene-facade-state-interface.d.ts.map
+100%  
+	    New File  		    1155	scene-facade-state-transition.d.ts
+100%  
+	    New File  		    1074	scene-facade-state-transition.d.ts.map
+100%  
+	  New Dir         20	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\
+	    New File  		     803	effects.d.ts
+100%  
+	    New File  		     421	effects.d.ts.map
+100%  
+	    New File  		      63	gizmos.d.ts
+100%  
+	    New File  		     189	gizmos.d.ts.map
+100%  
+	    New File  		    1956	lod.d.ts
+100%  
+	    New File  		    2019	lod.d.ts.map
+100%  
+	    New File  		     276	message.d.ts
+100%  
+	    New File  		     403	message.d.ts.map
+100%  
+	    New File  		      74	operation.d.ts
+100%  
+	    New File  		     194	operation.d.ts.map
+100%  
+	    New File  		    2958	particle.d.ts
+100%  
+	    New File  		    1926	particle.d.ts.map
+100%  
+	    New File  		    1190	plugin.d.ts
+100%  
+	    New File  		     721	plugin.d.ts.map
+100%  
+	    New File  		    1005	scene-events-interface.d.ts
+100%  
+	    New File  		    1346	scene-events-interface.d.ts.map
+100%  
+	    New File  		    2195	scripts.d.ts
+100%  
+	    New File  		     926	scripts.d.ts.map
+100%  
+	    New File  		     799	selection.d.ts
+100%  
+	    New File  		     724	selection.d.ts.map
+100%  
+	  New Dir         18	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\animation\
+	    New File  		    3279	editor-animation-aux-curve.d.ts
+100%  
+	    New File  		    1582	editor-animation-aux-curve.d.ts.map
+100%  
+	    New File  		   12976	editor-animation-clip.d.ts
+100%  
+	    New File  		    5335	editor-animation-clip.d.ts.map
+100%  
+	    New File  		    2535	editor-animation-combined-curve.d.ts
+100%  
+	    New File  		    1538	editor-animation-combined-curve.d.ts.map
+100%  
+	    New File  		    2318	editor-animation-curve-base.d.ts
+100%  
+	    New File  		    2166	editor-animation-curve-base.d.ts.map
+100%  
+	    New File  		    3383	editor-animation-curve.d.ts
+100%  
+	    New File  		    1567	editor-animation-curve.d.ts.map
+100%  
+	    New File  		    8697	index.d.ts
+100%  
+	    New File  		    3623	index.d.ts.map
+100%  
+	    New File  		    2749	type-defines.d.ts
+100%  
+	    New File  		    2933	type-defines.d.ts.map
+100%  
+	    New File  		    1232	uniform-handler.d.ts
+100%  
+	    New File  		     902	uniform-handler.d.ts.map
+100%  
+	    New File  		    6431	utils.d.ts
+100%  
+	    New File  		    3652	utils.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\animation-graph-preview\
+	    New File  		    1590	base.d.ts
+100%  
+	    New File  		    1362	base.d.ts.map
+100%  
+	    New File  		     767	motion.d.ts
+100%  
+	    New File  		     706	motion.d.ts.map
+100%  
+	    New File  		     886	transition.d.ts
+100%  
+	    New File  		     681	transition.d.ts.map
+100%  
+	  New Dir         16	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\asset\
+	    New File  		     513	animation-graph-variant.d.ts
+100%  
+	    New File  		     469	animation-graph-variant.d.ts.map
+100%  
+	    New File  		     307	animation-mask.d.ts
+100%  
+	    New File  		     296	animation-mask.d.ts.map
+100%  
+	    New File  		     855	asset-watcher.d.ts
+100%  
+	    New File  		     917	asset-watcher.d.ts.map
+100%  
+	    New File  		    1059	edit-component-asset.d.ts
+100%  
+	    New File  		     463	edit-component-asset.d.ts.map
+100%  
+	    New File  		    5557	index.d.ts
+100%  
+	    New File  		    1744	index.d.ts.map
+100%  
+	    New File  		    3273	material.d.ts
+100%  
+	    New File  		     676	material.d.ts.map
+100%  
+	    New File  		     192	physics-material.d.ts
+100%  
+	    New File  		     247	physics-material.d.ts.map
+100%  
+	    New File  		    1080	render-pipeline.d.ts
+100%  
+	    New File  		     473	render-pipeline.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\asset\drag-drop\
+	    New File  		     337	index.d.ts
+100%  
+	    New File  		     427	index.d.ts.map
+100%  
+	  New Dir         10	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\asset\drag-drop\handlers\
+	    New File  		     813	any-hander.d.ts
+100%  
+	    New File  		     746	any-hander.d.ts.map
+100%  
+	    New File  		    2227	base-handler.d.ts
+100%  
+	    New File  		    1261	base-handler.d.ts.map
+100%  
+	    New File  		     258	index.d.ts
+100%  
+	    New File  		     327	index.d.ts.map
+100%  
+	    New File  		     791	material-handler.d.ts
+100%  
+	    New File  		     727	material-handler.d.ts.map
+100%  
+	    New File  		    1195	utils.d.ts
+100%  
+	    New File  		     812	utils.d.ts.map
+100%  
+	  New Dir         16	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\
+	    New File  		     756	animate-value.d.ts
+100%  
+	    New File  		     900	animate-value.d.ts.map
+100%  
+	    New File  		    2181	camera-controller-base.d.ts
+100%  
+	    New File  		    1946	camera-controller-base.d.ts.map
+100%  
+	    New File  		     917	editor-camera-components.d.ts
+100%  
+	    New File  		    1192	editor-camera-components.d.ts.map
+100%  
+	    New File  		    4892	index.d.ts
+100%  
+	    New File  		    2685	index.d.ts.map
+100%  
+	    New File  		     180	listener.d.ts
+100%  
+	    New File  		     270	listener.d.ts.map
+100%  
+	    New File  		     557	operation-mode-interface.d.ts
+100%  
+	    New File  		     668	operation-mode-interface.d.ts.map
+100%  
+	    New File  		    1424	tween.d.ts
+100%  
+	    New File  		    1362	tween.d.ts.map
+100%  
+	    New File  		    1764	utils.d.ts
+100%  
+	    New File  		    1686	utils.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\2d\
+	    New File  		    2682	camera-controller-2d.d.ts
+100%  
+	    New File  		    2217	camera-controller-2d.d.ts.map
+100%  
+	    New File  		     203	ruler-interface.d.ts
+100%  
+	    New File  		     433	ruler-interface.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\2d\mode\
+	    New File  		     160	idle-mode.d.ts
+100%  
+	    New File  		     287	idle-mode.d.ts.map
+100%  
+	    New File  		    1022	mode-base.d.ts
+100%  
+	    New File  		     943	mode-base.d.ts.map
+100%  
+	    New File  		     308	pan-mode.d.ts
+100%  
+	    New File  		     400	pan-mode.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\2d\native\
+	    New File  		     271	ruler.d.ts
+100%  
+	    New File  		     457	ruler.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\2d\web\
+	    New File  		     567	ruler.d.ts
+100%  
+	    New File  		     689	ruler.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\3d\
+	    New File  		    4456	camera-controller-3d.d.ts
+100%  
+	    New File  		    3311	camera-controller-3d.d.ts.map
+100%  
+	  New Dir         10	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\3d\mode\
+	    New File  		     160	idle-mode.d.ts
+100%  
+	    New File  		     287	idle-mode.d.ts.map
+100%  
+	    New File  		    1022	mode-base.d.ts
+100%  
+	    New File  		     943	mode-base.d.ts.map
+100%  
+	    New File  		     411	orbit-mode.d.ts
+100%  
+	    New File  		     482	orbit-mode.d.ts.map
+100%  
+	    New File  		     345	pan-mode.d.ts
+100%  
+	    New File  		     455	pan-mode.d.ts.map
+100%  
+	    New File  		    1358	wander-mode.d.ts
+100%  
+	    New File  		    1065	wander-mode.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\grid\
+	    New File  		    1669	index.d.ts
+100%  
+	    New File  		    1584	index.d.ts.map
+100%  
+	    New File  		    1059	linear-ticks.d.ts
+100%  
+	    New File  		     785	linear-ticks.d.ts.map
+100%  
+	  New Dir          7	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\camera\htmls\
+	    New File  		     365	index.d.ts
+100%  
+	    New File  		      54	snap-shortcut.d.ts
+100%  
+	    New File  		     290	snap-shortcut.d.ts.map
+100%  
+	    New File  		      54	wander-shortcut.d.ts
+100%  
+	    New File  		     296	wander-shortcut.d.ts.map
+100%  
+	    New File  		     141	wander-speed-tips.d.ts
+100%  
+	    New File  		     226	wander-speed-tips.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\component\
+	    New File  		    2570	index.d.ts
+100%  
+	    New File  		    1293	index.d.ts.map
+100%  
+	    New File  		    1076	utils.d.ts
+100%  
+	    New File  		     590	utils.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\engine\
+	    New File  		     785	geometry_renderer.d.ts
+100%  
+	    New File  		     446	geometry_renderer.d.ts.map
+100%  
+	    New File  		    2254	index.d.ts
+100%  
+	    New File  		    1618	index.d.ts.map
+100%  
+	    New File  		    1909	time.d.ts
+100%  
+	    New File  		     476	time.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\ipc\
+	    New File  		      44	index.d.ts
+100%  
+	    New File  		     192	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\ipc\native\
+	    New File  		     262	ipc.d.ts
+100%  
+	    New File  		     383	ipc.d.ts.map
+100%  
+	    New File  		     548	webview.d.ts
+100%  
+	    New File  		     583	webview.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\ipc\web\
+	    New File  		     262	ipc.d.ts
+100%  
+	    New File  		     380	ipc.d.ts.map
+100%  
+	    New File  		     548	webview.d.ts
+100%  
+	    New File  		     580	webview.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\material-preview\
+	    New File  		     865	index.d.ts
+100%  
+	    New File  		     878	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\mesh-preview\
+	    New File  		     966	index.d.ts
+100%  
+	    New File  		     794	index.d.ts.map
+100%  
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\mini-preview\
+	    New File  		     288	apply.d.ts
+100%  
+	    New File  		     391	apply.d.ts.map
+100%  
+	    New File  		     967	index.d.ts
+100%  
+	    New File  		     907	index.d.ts.map
+100%  
+	    New File  		     250	private.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\model-preview\
+	    New File  		    2608	index.d.ts
+100%  
+	    New File  		    1743	index.d.ts.map
+100%  
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\multi-scene\
+	    New File  		    6853	index.d.ts
+100%  
+	    New File  		    3438	interfaces.d.ts
+100%  
+	    New File  		     625	multi-assets.d.ts
+100%  
+	    New File  		     319	multi-selection.d.ts
+100%  
+	    New File  		    1214	multi-undo.d.ts
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\node\
+	    New File  		     604	create.d.ts
+100%  
+	    New File  		     565	create.d.ts.map
+100%  
+	    New File  		   10416	index.d.ts
+100%  
+	    New File  		    4820	index.d.ts.map
+100%  
+	    New File  		    1596	utils.d.ts
+100%  
+	    New File  		     991	utils.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\particle-2d\
+	    New File  		     213	index.d.ts
+100%  
+	    New File  		     296	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\physics-2d\
+	    New File  		     375	index.d.ts
+100%  
+	    New File  		     383	index.d.ts.map
+100%  
+	    New File  		     431	marching-squares.d.ts
+100%  
+	    New File  		     223	marching-squares.d.ts.map
+100%  
+	    New File  		      68	rdp.d.ts
+100%  
+	    New File  		     157	rdp.d.ts.map
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\prefab\
+	    New File  		    2182	component.d.ts
+100%  
+	    New File  		    1419	component.d.ts.map
+100%  
+	    New File  		    4078	index.d.ts
+100%  
+	    New File  		    2341	index.d.ts.map
+100%  
+	    New File  		    7175	node.d.ts
+100%  
+	    New File  		    3822	node.d.ts.map
+100%  
+	    New File  		    8161	utils.d.ts
+100%  
+	    New File  		    4211	utils.d.ts.map
+100%  
+	  New Dir         12	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\preview\
+	    New File  		    1385	buffer.d.ts
+100%  
+	    New File  		    1342	buffer.d.ts.map
+100%  
+	    New File  		     509	grid.d.ts
+100%  
+	    New File  		     615	grid.d.ts.map
+100%  
+	    New File  		    1309	index.d.ts
+100%  
+	    New File  		    1095	index.d.ts.map
+100%  
+	    New File  		    3071	Interactive-preview.d.ts
+100%  
+	    New File  		    2507	Interactive-preview.d.ts.map
+100%  
+	    New File  		     739	preview-axis.d.ts
+100%  
+	    New File  		     783	preview-axis.d.ts.map
+100%  
+	    New File  		     328	preview-base.d.ts
+100%  
+	    New File  		     424	preview-base.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\preview\prefab-preview\
+	    New File  		     378	index.d.ts
+100%  
+	    New File  		     423	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\preview\scene-preview\
+	    New File  		     575	index.d.ts
+100%  
+	    New File  		     558	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\preview\spine-preview\
+	    New File  		    3111	index.d.ts
+100%  
+	    New File  		    2086	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\preview-play\
+	    New File  		    1867	index.d.ts
+100%  
+	    New File  		    1239	index.d.ts.map
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\scene\
+	    New File  		     115	index.d.ts
+100%  
+	    New File  		     227	index.d.ts.map
+100%  
+	    New File  		     708	scene-cache.d.ts
+100%  
+	    New File  		     404	scene-cache.d.ts.map
+100%  
+	    New File  		    3410	scene-manager.d.ts
+100%  
+	    New File  		    1901	scene-manager.d.ts.map
+100%  
+	    New File  		    1358	utils.d.ts
+100%  
+	    New File  		     570	utils.d.ts.map
+100%  
+	  New Dir         11	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\scene\proxy\
+	    New File  		    1492	animation-scene-proxy.d.ts
+100%  
+	    New File  		     779	animation-scene-proxy.d.ts.map
+100%  
+	    New File  		    1029	gameview-scene-proxy.d.ts
+100%  
+	    New File  		     563	gameview-scene-proxy.d.ts.map
+100%  
+	    New File  		    2115	general-scene-proxy.d.ts
+100%  
+	    New File  		     980	general-scene-proxy.d.ts.map
+100%  
+	    New File  		    1945	prefab-scene-proxy.d.ts
+100%  
+	    New File  		     846	prefab-scene-proxy.d.ts.map
+100%  
+	    New File  		     793	proxy-utils.d.ts
+100%  
+	    New File  		    2756	scene-proxy.d.ts
+100%  
+	    New File  		    1632	scene-proxy.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\scene-view\
+	    New File  		     834	index.d.ts
+100%  
+	    New File  		     704	index.d.ts.map
+100%  
+	    New File  		     475	light-manager.d.ts
+100%  
+	    New File  		     510	light-manager.d.ts.map
+100%  
+	    New File  		     722	scene-view-data.d.ts
+100%  
+	    New File  		     691	scene-view-data.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\shortcut\
+	    New File  		    1112	index.d.ts
+100%  
+	    New File  		     755	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\skeleton-preview\
+	    New File  		     478	index.d.ts
+100%  
+	    New File  		     514	index.d.ts.map
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\startup\
+	    New File  		    1677	index.d.ts
+100%  
+	    New File  		    1299	index.d.ts.map
+100%  
+	    New File  		      11	init-manager.d.ts
+100%  
+	    New File  		     159	init-manager.d.ts.map
+100%  
+	    New File  		     172	log.d.ts
+100%  
+	    New File  		     245	log.d.ts.map
+100%  
+	    New File  		     323	overwrite.d.ts
+100%  
+	    New File  		     230	overwrite.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\startup\engine\
+	    New File  		     445	adapter-util.d.ts
+100%  
+	    New File  		     414	adapter-util.d.ts.map
+100%  
+	    New File  		     994	index.d.ts
+100%  
+	    New File  		     520	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\terrain\
+	    New File  		    1487	index.d.ts
+100%  
+	    New File  		     789	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\thumbnail\
+	    New File  		    1267	index.d.ts
+100%  
+	    New File  		     916	index.d.ts.map
+100%  
+	    New File  		     370	mesh-thumbnail-generator.d.ts
+100%  
+	    New File  		     474	mesh-thumbnail-generator.d.ts.map
+100%  
+	    New File  		     510	thumbnail-generator-interface.d.ts
+100%  
+	    New File  		     706	thumbnail-generator-interface.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\ui\
+	    New File  		     180	index.d.ts
+100%  
+	    New File  		     239	index.d.ts.map
+100%  
+	  New Dir         10	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\unit-test\
+	    New File  		     194	common.d.ts
+100%  
+	    New File  		     278	common.d.ts.map
+100%  
+	    New File  		     381	index.d.ts
+100%  
+	    New File  		     404	index.d.ts.map
+100%  
+	    New File  		     358	nested-prefab-test.d.ts
+100%  
+	    New File  		     460	nested-prefab-test.d.ts.map
+100%  
+	    New File  		     366	target-override-test.d.ts
+100%  
+	    New File  		     471	target-override-test.d.ts.map
+100%  
+	    New File  		     387	unit-test-interface.d.ts
+100%  
+	    New File  		     378	unit-test-interface.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\manager\wireframe\
+	    New File  		    1638	index.d.ts
+100%  
+	    New File  		    1397	index.d.ts.map
+100%  
+	    New File  		     175	wireframe.d.ts
+100%  
+	    New File  		     286	wireframe.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\preload\
+	    New File  		     339	editor-preview.d.ts
+100%  
+	    New File  		     305	editor-preview.d.ts.map
+100%  
+	    New File  		      52	main.d.ts
+100%  
+	    New File  		     176	main.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\preload\native\
+	    New File  		    1308	native-scene.d.ts
+100%  
+	    New File  		    1193	native-scene.d.ts.map
+100%  
+	    New File  		      11	preload.d.ts
+100%  
+	    New File  		     148	preload.d.ts.map
+100%  
+	    New File  		      11	preview.d.ts
+100%  
+	    New File  		     148	preview.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\preload\web\
+	    New File  		      11	preload.d.ts
+100%  
+	    New File  		     145	preload.d.ts.map
+100%  
+	    New File  		      11	preview.d.ts
+100%  
+	    New File  		     145	preview.d.ts.map
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\utils\
+	    New File  		      97	get-component-function-of-node.d.ts
+100%  
+	    New File  		     252	get-component-function-of-node.d.ts.map
+100%  
+	    New File  		      95	is-child-class.d.ts
+100%  
+	    New File  		     198	is-child-class.d.ts.map
+100%  
+	    New File  		     700	timer-util.d.ts
+100%  
+	    New File  		     564	timer-util.d.ts.map
+100%  
+	    New File  		     651	types.d.ts
+100%  
+	    New File  		     399	types.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\3d\utils\state-machine\
+	    New File  		     622	finite-state-machine.d.ts
+100%  
+	    New File  		     789	finite-state-machine.d.ts.map
+100%  
+	    New File  		     132	state-interface.d.ts
+100%  
+	    New File  		     341	state-interface.d.ts.map
+100%  
+	    New File  		     554	transition.d.ts
+100%  
+	    New File  		     652	transition.d.ts.map
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\export\
+	  New Dir         12	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\export\dump\
+	    New File  		     202	asset.d.ts
+100%  
+	    New File  		     249	asset.d.ts.map
+100%  
+	    New File  		    1385	decode.d.ts
+100%  
+	    New File  		     846	decode.d.ts.map
+100%  
+	    New File  		     146	dump-defines.d.ts
+100%  
+	    New File  		     298	dump-defines.d.ts.map
+100%  
+	    New File  		    1008	encode.d.ts
+100%  
+	    New File  		     629	encode.d.ts.map
+100%  
+	    New File  		    1873	index.d.ts
+100%  
+	    New File  		    1121	index.d.ts.map
+100%  
+	    New File  		    1254	utils.d.ts
+100%  
+	    New File  		     716	utils.d.ts.map
+100%  
+	  New Dir         22	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\export\dump\types\
+	    New File  		     401	animation-curve-dump.d.ts
+100%  
+	    New File  		     564	animation-curve-dump.d.ts.map
+100%  
+	    New File  		     347	asset-dump.d.ts
+100%  
+	    New File  		     474	asset-dump.d.ts.map
+100%  
+	    New File  		     350	component-dump.d.ts
+100%  
+	    New File  		     501	component-dump.d.ts.map
+100%  
+	    New File  		     739	dump-interface.d.ts
+100%  
+	    New File  		     459	dump-interface.d.ts.map
+100%  
+	    New File  		     347	gradient-dump.d.ts
+100%  
+	    New File  		     501	gradient-dump.d.ts.map
+100%  
+	    New File  		     335	node-dump.d.ts
+100%  
+	    New File  		     491	node-dump.d.ts.map
+100%  
+	    New File  		     341	number-dump.d.ts
+100%  
+	    New File  		     495	number-dump.d.ts.map
+100%  
+	    New File  		     526	real-curve-dump.d.ts
+100%  
+	    New File  		     743	real-curve-dump.d.ts.map
+100%  
+	    New File  		     341	string-dump.d.ts
+100%  
+	    New File  		     495	string-dump.d.ts.map
+100%  
+	    New File  		     353	typed-array-dump.d.ts
+100%  
+	    New File  		     508	typed-array-dump.d.ts.map
+100%  
+	    New File  		     350	value-type-dump.d.ts
+100%  
+	    New File  		     504	value-type-dump.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\export\serialize\
+	    New File  		     192	index.d.ts
+100%  
+	    New File  		     322	index.d.ts.map
+100%  
+	  New Dir         10	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\export\undo\
+	    New File  		    1406	animation.d.ts
+100%  
+	    New File  		    1226	animation.d.ts.map
+100%  
+	    New File  		    1270	base.d.ts
+100%  
+	    New File  		     671	base.d.ts.map
+100%  
+	    New File  		      49	index.d.ts
+100%  
+	    New File  		     175	index.d.ts.map
+100%  
+	    New File  		    4601	scene.d.ts
+100%  
+	    New File  		    2395	scene.d.ts.map
+100%  
+	    New File  		     193	test.d.ts
+100%  
+	    New File  		     307	test.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\
+	    New File  		    1472	event-enum.d.ts
+100%  
+	    New File  		     794	event-enum.d.ts.map
+100%  
+	    New File  		     179	EventEmitter.d.ts
+100%  
+	    New File  		     313	EventEmitter.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\
+	    New File  		     473	gizmo-defines.d.ts
+100%  
+	    New File  		     667	gizmo-defines.d.ts.map
+100%  
+	    New File  		    4352	gizmo-operation.d.ts
+100%  
+	    New File  		    2161	gizmo-operation.d.ts.map
+100%  
+	    New File  		      77	index.d.ts
+100%  
+	    New File  		     199	index.d.ts.map
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\base\
+	    New File  		    1090	gizmo-icon.d.ts
+100%  
+	    New File  		     807	gizmo-icon.d.ts.map
+100%  
+	    New File  		    1782	gizmo-select.d.ts
+100%  
+	    New File  		    1561	gizmo-select.d.ts.map
+100%  
+	    New File  		     215	gizmo-utils.d.ts
+100%  
+	    New File  		     291	gizmo-utils.d.ts.map
+100%  
+	    New File  		     232	index.d.ts
+100%  
+	    New File  		     325	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\box-character-controller\
+	    New File  		     680	gizmo-select.d.ts
+100%  
+	    New File  		     600	gizmo-select.d.ts.map
+100%  
+	    New File  		     241	index.d.ts
+100%  
+	    New File  		     346	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\box-collider\
+	    New File  		     636	gizmo-select.d.ts
+100%  
+	    New File  		     584	gizmo-select.d.ts.map
+100%  
+	    New File  		     240	index.d.ts
+100%  
+	    New File  		     334	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\box-collider-2d\
+	    New File  		    1029	gizmo-select.d.ts
+100%  
+	    New File  		     977	gizmo-select.d.ts.map
+100%  
+	    New File  		     243	index.d.ts
+100%  
+	    New File  		     337	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\camera\
+	    New File  		     188	gizmo-icon.d.ts
+100%  
+	    New File  		     332	gizmo-icon.d.ts.map
+100%  
+	    New File  		     811	gizmo-select.d.ts
+100%  
+	    New File  		     747	gizmo-select.d.ts.map
+100%  
+	    New File  		     274	index.d.ts
+100%  
+	    New File  		     359	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\canvas\
+	    New File  		     622	gizmo-persistent.d.ts
+100%  
+	    New File  		     557	gizmo-persistent.d.ts.map
+100%  
+	    New File  		     246	index.d.ts
+100%  
+	    New File  		     329	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\capsule-character-controller\
+	    New File  		     747	gizmo-select.d.ts
+100%  
+	    New File  		     649	gizmo-select.d.ts.map
+100%  
+	    New File  		     256	index.d.ts
+100%  
+	    New File  		     350	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\capsule-collider\
+	    New File  		     703	gizmo-select.d.ts
+100%  
+	    New File  		     633	gizmo-select.d.ts.map
+100%  
+	    New File  		     244	index.d.ts
+100%  
+	    New File  		     338	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\circle-collider-2d\
+	    New File  		     770	gizmo-select.d.ts
+100%  
+	    New File  		     731	gizmo-select.d.ts.map
+100%  
+	    New File  		     243	index.d.ts
+100%  
+	    New File  		     340	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\cone-collider\
+	    New File  		     691	gizmo-select.d.ts
+100%  
+	    New File  		     630	gizmo-select.d.ts.map
+100%  
+	    New File  		     241	index.d.ts
+100%  
+	    New File  		     335	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\cylinder-collider\
+	    New File  		    1492	controller-cylinder.d.ts
+100%  
+	    New File  		    1502	controller-cylinder.d.ts.map
+100%  
+	    New File  		     707	gizmo-select.d.ts
+100%  
+	    New File  		     638	gizmo-select.d.ts.map
+100%  
+	    New File  		     245	index.d.ts
+100%  
+	    New File  		     339	index.d.ts.map
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\directional-light\
+	    New File  		     325	controller-direction-light.d.ts
+100%  
+	    New File  		     461	controller-direction-light.d.ts.map
+100%  
+	    New File  		     260	gizmo-icon.d.ts
+100%  
+	    New File  		     368	gizmo-icon.d.ts.map
+100%  
+	    New File  		     650	gizmo-select.d.ts
+100%  
+	    New File  		     567	gizmo-select.d.ts.map
+100%  
+	    New File  		     285	index.d.ts
+100%  
+	    New File  		     370	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\distance-joint-2d\
+	    New File  		     313	gizmo-select.d.ts
+100%  
+	    New File  		     402	gizmo-select.d.ts.map
+100%  
+	    New File  		     245	index.d.ts
+100%  
+	    New File  		     339	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\fixed-joint-2d\
+	    New File  		     133	gizmo-select.d.ts
+100%  
+	    New File  		     278	gizmo-select.d.ts.map
+100%  
+	    New File  		     242	index.d.ts
+100%  
+	    New File  		     336	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\hinge-joint-2d\
+	    New File  		     133	gizmo-select.d.ts
+100%  
+	    New File  		     278	gizmo-select.d.ts.map
+100%  
+	    New File  		     242	index.d.ts
+100%  
+	    New File  		     336	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\joint-2d\
+	    New File  		    1435	controller-joint-2d.d.ts
+100%  
+	    New File  		    1413	controller-joint-2d.d.ts.map
+100%  
+	    New File  		     990	gizmo-select.d.ts
+100%  
+	    New File  		     839	gizmo-select.d.ts.map
+100%  
+	    New File  		     201	index.d.ts
+100%  
+	    New File  		     298	index.d.ts.map
+100%  
+	  New Dir         16	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\light-probe-group\
+	    New File  		    1124	controller-light-probe-bounding-box.d.ts
+100%  
+	    New File  		    1108	controller-light-probe-bounding-box.d.ts.map
+100%  
+	    New File  		    1043	controller-light-probe-tetrahedron.d.ts
+100%  
+	    New File  		    1043	controller-light-probe-tetrahedron.d.ts.map
+100%  
+	    New File  		    4461	controller-light-probe.d.ts
+100%  
+	    New File  		    3821	controller-light-probe.d.ts.map
+100%  
+	    New File  		     162	gizmo-icon.d.ts
+100%  
+	    New File  		     301	gizmo-icon.d.ts.map
+100%  
+	    New File  		    2873	gizmo-select.d.ts
+100%  
+	    New File  		    2223	gizmo-select.d.ts.map
+100%  
+	    New File  		     482	index.d.ts
+100%  
+	    New File  		     472	index.d.ts.map
+100%  
+	    New File  		     745	manager.d.ts
+100%  
+	    New File  		     583	manager.d.ts.map
+100%  
+	    New File  		     177	types.d.ts
+100%  
+	    New File  		     281	types.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\lod-group\
+	    New File  		     877	controller-lod.d.ts
+100%  
+	    New File  		     849	controller-lod.d.ts.map
+100%  
+	    New File  		     591	gizmo-select.d.ts
+100%  
+	    New File  		     494	gizmo-select.d.ts.map
+100%  
+	    New File  		     237	index.d.ts
+100%  
+	    New File  		     331	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\mesh-collider\
+	    New File  		     327	controller-mesh.d.ts
+100%  
+	    New File  		     460	controller-mesh.d.ts.map
+100%  
+	    New File  		     456	gizmo-select.d.ts
+100%  
+	    New File  		     470	gizmo-select.d.ts.map
+100%  
+	    New File  		     241	index.d.ts
+100%  
+	    New File  		     335	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\mesh-renderer\
+	    New File  		     586	gizmo-select.d.ts
+100%  
+	    New File  		     516	gizmo-select.d.ts.map
+100%  
+	    New File  		     241	index.d.ts
+100%  
+	    New File  		     335	index.d.ts.map
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\particle-system\
+	    New File  		    1433	controller-cone.d.ts
+100%  
+	    New File  		    1342	controller-cone.d.ts.map
+100%  
+	    New File  		     199	gizmo-icon.d.ts
+100%  
+	    New File  		     306	gizmo-icon.d.ts.map
+100%  
+	    New File  		    2142	gizmo-select.d.ts
+100%  
+	    New File  		    1526	gizmo-select.d.ts.map
+100%  
+	    New File  		     283	index.d.ts
+100%  
+	    New File  		     368	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\plane-collider\
+	    New File  		     328	controller-plane.d.ts
+100%  
+	    New File  		     463	controller-plane.d.ts.map
+100%  
+	    New File  		     303	gizmo-select.d.ts
+100%  
+	    New File  		     370	gizmo-select.d.ts.map
+100%  
+	    New File  		     242	index.d.ts
+100%  
+	    New File  		     336	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\polygon-collider-2d\
+	    New File  		    2074	controller-polygon.d.ts
+100%  
+	    New File  		    1774	controller-polygon.d.ts.map
+100%  
+	    New File  		    1656	gizmo-select.d.ts
+100%  
+	    New File  		    1448	gizmo-select.d.ts.map
+100%  
+	    New File  		     247	index.d.ts
+100%  
+	    New File  		     341	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\reflection-probe\
+	    New File  		     231	gizmo-icon.d.ts
+100%  
+	    New File  		     320	gizmo-icon.d.ts.map
+100%  
+	    New File  		    1179	gizmo-select.d.ts
+100%  
+	    New File  		    1053	gizmo-select.d.ts.map
+100%  
+	    New File  		     284	index.d.ts
+100%  
+	    New File  		     369	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\relative-joint-2d\
+	    New File  		     139	gizmo-select.d.ts
+100%  
+	    New File  		     281	gizmo-select.d.ts.map
+100%  
+	    New File  		     245	index.d.ts
+100%  
+	    New File  		     339	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\simplex-collider\
+	    New File  		     834	gizmo-select.d.ts
+100%  
+	    New File  		     666	gizmo-select.d.ts.map
+100%  
+	    New File  		     244	index.d.ts
+100%  
+	    New File  		     338	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\skinned-mesh-batch-renderer\
+	    New File  		     158	index.d.ts
+100%  
+	    New File  		     286	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\skinned-mesh-renderer\
+	    New File  		     644	gizmo-select.d.ts
+100%  
+	    New File  		     537	gizmo-select.d.ts.map
+100%  
+	    New File  		     249	index.d.ts
+100%  
+	    New File  		     343	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\slider-joint-2d\
+	    New File  		     135	gizmo-select.d.ts
+100%  
+	    New File  		     279	gizmo-select.d.ts.map
+100%  
+	    New File  		     243	index.d.ts
+100%  
+	    New File  		     337	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\sphere-collider\
+	    New File  		     699	gizmo-select.d.ts
+100%  
+	    New File  		     626	gizmo-select.d.ts.map
+100%  
+	    New File  		     243	index.d.ts
+100%  
+	    New File  		     337	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\sphere-light\
+	    New File  		     270	gizmo-icon.d.ts
+100%  
+	    New File  		     373	gizmo-icon.d.ts.map
+100%  
+	    New File  		     763	gizmo-select.d.ts
+100%  
+	    New File  		     681	gizmo-select.d.ts.map
+100%  
+	    New File  		     280	index.d.ts
+100%  
+	    New File  		     365	index.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\spot-light\
+	    New File  		     267	gizmo-icon.d.ts
+100%  
+	    New File  		     376	gizmo-icon.d.ts.map
+100%  
+	    New File  		     938	gizmo-select.d.ts
+100%  
+	    New File  		     875	gizmo-select.d.ts.map
+100%  
+	    New File  		     278	index.d.ts
+100%  
+	    New File  		     363	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\spring-joint-2d\
+	    New File  		     135	gizmo-select.d.ts
+100%  
+	    New File  		     279	gizmo-select.d.ts.map
+100%  
+	    New File  		     243	index.d.ts
+100%  
+	    New File  		     337	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\sprite-renderer\
+	    New File  		     150	index.d.ts
+100%  
+	    New File  		     274	index.d.ts.map
+100%  
+	  New Dir         24	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\terrain\
+	    New File  		     761	gizmo-persistent.d.ts
+100%  
+	    New File  		     665	gizmo-persistent.d.ts.map
+100%  
+	    New File  		    2632	gizmo-select.d.ts
+100%  
+	    New File  		    2001	gizmo-select.d.ts.map
+100%  
+	    New File  		     293	index.d.ts
+100%  
+	    New File  		     363	index.d.ts.map
+100%  
+	    New File  		    2300	terrain-brush.d.ts
+100%  
+	    New File  		    2160	terrain-brush.d.ts.map
+100%  
+	    New File  		     159	terrain-editor-manage.d.ts
+100%  
+	    New File  		     284	terrain-editor-manage.d.ts.map
+100%  
+	    New File  		     407	terrain-editor-mode.d.ts
+100%  
+	    New File  		     522	terrain-editor-mode.d.ts.map
+100%  
+	    New File  		    1038	terrain-editor-paint.d.ts
+100%  
+	    New File  		     956	terrain-editor-paint.d.ts.map
+100%  
+	    New File  		    1530	terrain-editor-sculpt-tools.d.ts
+100%  
+	    New File  		    1496	terrain-editor-sculpt-tools.d.ts.map
+100%  
+	    New File  		    1046	terrain-editor-sculpt.d.ts
+100%  
+	    New File  		     995	terrain-editor-sculpt.d.ts.map
+100%  
+	    New File  		    1051	terrain-editor-select.d.ts
+100%  
+	    New File  		     868	terrain-editor-select.d.ts.map
+100%  
+	    New File  		    1334	terrain-editor.d.ts
+100%  
+	    New File  		    1198	terrain-editor.d.ts.map
+100%  
+	    New File  		    2173	terrain-operation.d.ts
+100%  
+	    New File  		    1885	terrain-operation.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\ui-transform\
+	    New File  		     640	gizmo-select.d.ts
+100%  
+	    New File  		     566	gizmo-select.d.ts.map
+100%  
+	    New File  		     240	index.d.ts
+100%  
+	    New File  		     334	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\video-player\
+	    New File  		     912	gizmo-persistent.d.ts
+100%  
+	    New File  		     801	gizmo-persistent.d.ts.map
+100%  
+	    New File  		     252	index.d.ts
+100%  
+	    New File  		     335	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\webview\
+	    New File  		     785	gizmo-persistent.d.ts
+100%  
+	    New File  		     609	gizmo-persistent.d.ts.map
+100%  
+	    New File  		     247	index.d.ts
+100%  
+	    New File  		     330	index.d.ts.map
+100%  
+	  New Dir          4	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\components\wheel-joint-2d\
+	    New File  		     133	gizmo-select.d.ts
+100%  
+	    New File  		     278	gizmo-select.d.ts.map
+100%  
+	    New File  		     242	index.d.ts
+100%  
+	    New File  		     336	index.d.ts.map
+100%  
+	  New Dir         42	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\controller\
+	    New File  		    4939	base.d.ts
+100%  
+	    New File  		    3642	base.d.ts.map
+100%  
+	    New File  		    1118	box.d.ts
+100%  
+	    New File  		    1066	box.d.ts.map
+100%  
+	    New File  		    1472	capsule.d.ts
+100%  
+	    New File  		    1448	capsule.d.ts.map
+100%  
+	    New File  		    1004	circle.d.ts
+100%  
+	    New File  		    1014	circle.d.ts.map
+100%  
+	    New File  		    1478	cone.d.ts
+100%  
+	    New File  		    1412	cone.d.ts.map
+100%  
+	    New File  		    1719	disc.d.ts
+100%  
+	    New File  		    1550	disc.d.ts.map
+100%  
+	    New File  		    1603	editable.d.ts
+100%  
+	    New File  		    1395	editable.d.ts.map
+100%  
+	    New File  		    1299	frustum.d.ts
+100%  
+	    New File  		    1245	frustum.d.ts.map
+100%  
+	    New File  		    1120	hemisphere.d.ts
+100%  
+	    New File  		    1108	hemisphere.d.ts.map
+100%  
+	    New File  		     562	icon.d.ts
+100%  
+	    New File  		     584	icon.d.ts.map
+100%  
+	    New File  		     732	image.d.ts
+100%  
+	    New File  		     848	image.d.ts.map
+100%  
+	    New File  		     473	line.d.ts
+100%  
+	    New File  		     583	line.d.ts.map
+100%  
+	    New File  		     466	lines.d.ts
+100%  
+	    New File  		     581	lines.d.ts.map
+100%  
+	    New File  		    1031	origin-axis.d.ts
+100%  
+	    New File  		    1043	origin-axis.d.ts.map
+100%  
+	    New File  		     313	point.d.ts
+100%  
+	    New File  		     415	point.d.ts.map
+100%  
+	    New File  		     838	quad.d.ts
+100%  
+	    New File  		     846	quad.d.ts.map
+100%  
+	    New File  		    1266	sphere.d.ts
+100%  
+	    New File  		    1191	sphere.d.ts.map
+100%  
+	    New File  		     780	terrain.d.ts
+100%  
+	    New File  		     816	terrain.d.ts.map
+100%  
+	    New File  		     398	tetrahedron.d.ts
+100%  
+	    New File  		     544	tetrahedron.d.ts.map
+100%  
+	    New File  		     411	triangle.d.ts
+100%  
+	    New File  		     529	triangle.d.ts.map
+100%  
+	    New File  		     997	world-axis.d.ts
+100%  
+	    New File  		    1029	world-axis.d.ts.map
+100%  
+	  New Dir         12	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\manager\
+	    New File  		     688	data.d.ts
+100%  
+	    New File  		     775	data.d.ts.map
+100%  
+	    New File  		   13855	gizmo.d.ts
+100%  
+	    New File  		    5181	gizmo.d.ts.map
+100%  
+	    New File  		     456	hack-component.d.ts
+100%  
+	    New File  		     507	hack-component.d.ts.map
+100%  
+	    New File  		    1030	pool.d.ts
+100%  
+	    New File  		     738	pool.d.ts.map
+100%  
+	    New File  		    3780	transform-tool.d.ts
+100%  
+	    New File  		    3373	transform-tool.d.ts.map
+100%  
+	    New File  		      62	types.d.ts
+100%  
+	    New File  		     202	types.d.ts.map
+100%  
+	  New Dir         24	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\node\
+	    New File  		    2074	position-controller.d.ts
+100%  
+	    New File  		    1877	position-controller.d.ts.map
+100%  
+	    New File  		    4120	position.d.ts
+100%  
+	    New File  		    2554	position.d.ts.map
+100%  
+	    New File  		    2082	rectangle-controller.d.ts
+100%  
+	    New File  		    1884	rectangle-controller.d.ts.map
+100%  
+	    New File  		    2685	rectangle.d.ts
+100%  
+	    New File  		    2084	rectangle.d.ts.map
+100%  
+	    New File  		    2146	rotation-controller.d.ts
+100%  
+	    New File  		    1927	rotation-controller.d.ts.map
+100%  
+	    New File  		    1398	rotation.d.ts
+100%  
+	    New File  		    1207	rotation.d.ts.map
+100%  
+	    New File  		    1458	scale-controller.d.ts
+100%  
+	    New File  		    1343	scale-controller.d.ts.map
+100%  
+	    New File  		     959	scale.d.ts
+100%  
+	    New File  		     837	scale.d.ts.map
+100%  
+	    New File  		     423	scene.d.ts
+100%  
+	    New File  		     402	scene.d.ts.map
+100%  
+	    New File  		    1124	transform-base.d.ts
+100%  
+	    New File  		     859	transform-base.d.ts.map
+100%  
+	    New File  		    1011	transform.d.ts
+100%  
+	    New File  		     955	transform.d.ts.map
+100%  
+	    New File  		     142	view.d.ts
+100%  
+	    New File  		     236	view.d.ts.map
+100%  
+	  New Dir         30	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\utils\
+	    New File  		     603	3d.d.ts
+100%  
+	    New File  		     575	3d.d.ts.map
+100%  
+	    New File  		     406	config.d.ts
+100%  
+	    New File  		     285	config.d.ts.map
+100%  
+	    New File  		     169	controller-shape-collider.d.ts
+100%  
+	    New File  		     303	controller-shape-collider.d.ts.map
+100%  
+	    New File  		    6296	controller-shape.d.ts
+100%  
+	    New File  		    3380	controller-shape.d.ts.map
+100%  
+	    New File  		    3514	controller-utils.d.ts
+100%  
+	    New File  		    3703	controller-utils.d.ts.map
+100%  
+	    New File  		    2469	defines.d.ts
+100%  
+	    New File  		    2417	defines.d.ts.map
+100%  
+	    New File  		     412	external.d.ts
+100%  
+	    New File  		     359	external.d.ts.map
+100%  
+	    New File  		     383	gizmo-event-listener.d.ts
+100%  
+	    New File  		     524	gizmo-event-listener.d.ts.map
+100%  
+	    New File  		     738	gizmo-operation-event-listener.d.ts
+100%  
+	    New File  		     855	gizmo-operation-event-listener.d.ts.map
+100%  
+	    New File  		      48	index.d.ts
+100%  
+	    New File  		     196	index.d.ts.map
+100%  
+	    New File  		     346	misc.d.ts
+100%  
+	    New File  		     486	misc.d.ts.map
+100%  
+	    New File  		    4577	rect-transform-snapping.d.ts
+100%  
+	    New File  		    3561	rect-transform-snapping.d.ts.map
+100%  
+	    New File  		     597	selection-utils.d.ts
+100%  
+	    New File  		     309	selection-utils.d.ts.map
+100%  
+	    New File  		    1190	set-util.d.ts
+100%  
+	    New File  		    1338	set-util.d.ts.map
+100%  
+	    New File  		    1382	utils-interface.d.ts
+100%  
+	    New File  		     810	utils-interface.d.ts.map
+100%  
+	  New Dir          6	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\gizmos\utils\engine\
+	    New File  		    3979	3d.d.ts
+100%  
+	    New File  		    3426	3d.d.ts.map
+100%  
+	    New File  		    1238	engine-interface.d.ts
+100%  
+	    New File  		    1648	engine-interface.d.ts.map
+100%  
+	    New File  		      60	index.d.ts
+100%  
+	    New File  		     206	index.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\ipc\
+	    New File  		     718	utils.d.ts
+100%  
+	    New File  		     703	utils.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\operation\
+	    New File  		    3360	index.d.ts
+100%  
+	    New File  		    2666	index.d.ts.map
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\public\selection\
+	    New File  		     794	gizmo-selection-logic.d.ts
+100%  
+	    New File  		     696	gizmo-selection-logic.d.ts.map
+100%  
+	    New File  		    1194	gizmo-selection.d.ts
+100%  
+	    New File  		     664	gizmo-selection.d.ts.map
+100%  
+	    New File  		    1915	index.d.ts
+100%  
+	    New File  		     771	index.d.ts.map
+100%  
+	    New File  		     289	uuid-array.d.ts
+100%  
+	    New File  		     375	uuid-array.d.ts.map
+100%  
+	  New Dir         34	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\utils\
+	    New File  		    3936	aabb.d.ts
+100%  
+	    New File  		    1514	aabb.d.ts.map
+100%  
+	    New File  		     569	assertion.d.ts
+100%  
+	    New File  		     452	assertion.d.ts.map
+100%  
+	    New File  		     390	asset.d.ts
+100%  
+	    New File  		     287	asset.d.ts.map
+100%  
+	    New File  		    3121	callbacks-invoker.d.ts
+100%  
+	    New File  		    1280	callbacks-invoker.d.ts.map
+100%  
+	    New File  		    1373	device-adapter.d.ts
+100%  
+	    New File  		    1240	device-adapter.d.ts.map
+100%  
+	    New File  		    1746	drag-drop-utils.d.ts
+100%  
+	    New File  		     646	drag-drop-utils.d.ts.map
+100%  
+	    New File  		     209	env.d.ts
+100%  
+	    New File  		     309	env.d.ts.map
+100%  
+	    New File  		     257	event-emitter.d.ts
+100%  
+	    New File  		     384	event-emitter.d.ts.map
+100%  
+	    New File  		     423	graphics.d.ts
+100%  
+	    New File  		     469	graphics.d.ts.map
+100%  
+	    New File  		     199	index.d.ts
+100%  
+	    New File  		     283	index.d.ts.map
+100%  
+	    New File  		     141	lodash.d.ts
+100%  
+	    New File  		     298	lodash.d.ts.map
+100%  
+	    New File  		     653	misc.d.ts
+100%  
+	    New File  		     772	misc.d.ts.map
+100%  
+	    New File  		    5701	node.d.ts
+100%  
+	    New File  		    3902	node.d.ts.map
+100%  
+	    New File  		      54	path.d.ts
+100%  
+	    New File  		     138	path.d.ts.map
+100%  
+	    New File  		     232	pool.d.ts
+100%  
+	    New File  		     420	pool.d.ts.map
+100%  
+	    New File  		    5097	raycast.d.ts
+100%  
+	    New File  		    1457	raycast.d.ts.map
+100%  
+	    New File  		     147	window.d.ts
+100%  
+	    New File  		     220	window.d.ts.map
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\utils\geom-utils\
+	    New File  		     402	enums.d.ts
+100%  
+	    New File  		     185	enums.d.ts.map
+100%  
+	    New File  		     572	intersect.d.ts
+100%  
+	    New File  		     584	intersect.d.ts.map
+100%  
+	    New File  		    2918	ray.d.ts
+100%  
+	    New File  		    1087	ray.d.ts.map
+100%  
+	    New File  		    3500	triangle.d.ts
+100%  
+	    New File  		    1221	triangle.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\utils\ipc\
+	    New File  		     964	utils.d.ts
+100%  
+	    New File  		     832	utils.d.ts.map
+100%  
+	  New Dir         16	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\utils\math\
+	    New File  		    4755	index.d.ts
+100%  
+	    New File  		    2049	index.d.ts.map
+100%  
+	    New File  		    4347	mat3.d.ts
+100%  
+	    New File  		    3139	mat3.d.ts.map
+100%  
+	    New File  		    8278	mat4.d.ts
+100%  
+	    New File  		    5285	mat4.d.ts.map
+100%  
+	    New File  		    7093	quat.d.ts
+100%  
+	    New File  		    4456	quat.d.ts.map
+100%  
+	    New File  		    1136	type-define.d.ts
+100%  
+	    New File  		    1636	type-define.d.ts.map
+100%  
+	    New File  		    4736	utils.d.ts
+100%  
+	    New File  		    1487	utils.d.ts.map
+100%  
+	    New File  		    5095	vec2.d.ts
+100%  
+	    New File  		    3634	vec2.d.ts.map
+100%  
+	    New File  		    7452	vec3.d.ts
+100%  
+	    New File  		    5171	vec3.d.ts.map
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\scene\@types\cce\utils\memop\
+	    New File  		     864	recycle-pool.d.ts
+100%  
+	    New File  		     540	recycle-pool.d.ts.map
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\server\
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\server\@types\
+	    New File  		     202	message.d.ts
+100%  
+	    New File  		     451	package.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\shortcuts\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\shortcuts\@types\
+	    New File  		    1381	protected.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\taobao-mini-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\taobao-mini-game\@types\
+	    New File  		     657	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\tester\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\tester\@types\
+	    New File  		     743	public.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\ui-kit\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\ui-kit\@types\
+	    New File  		     113	vue.shim.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\vivo-mini-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\vivo-mini-game\@types\
+	    New File  		     894	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\web-desktop\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\web-desktop\@types\
+	    New File  		     866	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\web-mobile\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\web-mobile\@types\
+	    New File  		     861	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\wechatgame\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\wechatgame\@types\
+	    New File  		     717	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\wechatprogram\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\wechatprogram\@types\
+	    New File  		     677	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\windows\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\windows\@types\
+	    New File  		     949	index.d.ts
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\xiaomi-quick-game\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\packages\xiaomi-quick-game\@types\
+	    New File  		     895	index.d.ts
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\editor\utils\
+	    New File  		    9524	index.d.ts
+100%  
+	  New Dir          3	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\engine\
+	    New File  		   3.2 m	cc.d.ts
+ 31%  
+ 62%  
+ 93%  
+100%  
+	    New File  		  166594	cc.editor.d.ts
+100%  
+	    New File  		    6032	features.d.ts
+100%  
+	  New Dir          3	D:\Workspace\TapTap\�̲輷��\client\node_modules\@cocos\creator-types\scripts\
+	    New File  		     907	postpublish.js
+100%  
+	    New File  		    2518	prepublish.js
+100%  
+	    New File  		    1077	publish-readme.md
+100%  
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\
+	    New File  		    9197	LICENSE.txt
+100%  
+	    New File  		    3502	package.json
+100%  
+	    New File  		    2849	README.md
+100%  
+	    New File  		    2656	SECURITY.md
+100%  
+	    New File  		   37824	ThirdPartyNoticeText.txt
+100%  
+	  New Dir          2	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\bin\
+	    New File  		      45	tsc
+100%  
+	    New File  		      50	tsserver
+100%  
+	  New Dir         96	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\
+	    New File  		    3714	cancellationToken.js
+100%  
+	    New File  		     992	lib.d.ts
+100%  
+	    New File  		   13194	lib.decorators.d.ts
+100%  
+	    New File  		    1326	lib.decorators.legacy.d.ts
+100%  
+	    New File  		    1230	lib.dom.asynciterable.d.ts
+100%  
+	    New File  		   1.2 m	lib.dom.d.ts
+ 79%  
+100%  
+	    New File  		   25404	lib.dom.iterable.d.ts
+100%  
+	    New File  		    5229	lib.es2015.collection.d.ts
+100%  
+	    New File  		   21206	lib.es2015.core.d.ts
+100%  
+	    New File  		    1241	lib.es2015.d.ts
+100%  
+	    New File  		    2552	lib.es2015.generator.d.ts
+100%  
+	    New File  		   14894	lib.es2015.iterable.d.ts
+100%  
+	    New File  		    3200	lib.es2015.promise.d.ts
+100%  
+	    New File  		    5251	lib.es2015.proxy.d.ts
+100%  
+	    New File  		    6493	lib.es2015.reflect.d.ts
+100%  
+	    New File  		    1649	lib.es2015.symbol.d.ts
+100%  
+	    New File  		   10623	lib.es2015.symbol.wellknown.d.ts
+100%  
+	    New File  		    4862	lib.es2016.array.include.d.ts
+100%  
+	    New File  		     965	lib.es2016.d.ts
+100%  
+	    New File  		    1032	lib.es2016.full.d.ts
+100%  
+	    New File  		    1490	lib.es2016.intl.d.ts
+100%  
+	    New File  		    1119	lib.es2017.d.ts
+100%  
+	    New File  		    1916	lib.es2017.date.d.ts
+100%  
+	    New File  		    1032	lib.es2017.full.d.ts
+100%  
+	    New File  		    1449	lib.es2017.intl.d.ts
+100%  
+	    New File  		    2457	lib.es2017.object.d.ts
+100%  
+	    New File  		    6227	lib.es2017.sharedmemory.d.ts
+100%  
+	    New File  		    2378	lib.es2017.string.d.ts
+100%  
+	    New File  		    1425	lib.es2017.typedarrays.d.ts
+100%  
+	    New File  		    2687	lib.es2018.asyncgenerator.d.ts
+100%  
+	    New File  		    1754	lib.es2018.asynciterable.d.ts
+100%  
+	    New File  		    1088	lib.es2018.d.ts
+100%  
+	    New File  		    1074	lib.es2018.full.d.ts
+100%  
+	    New File  		    3163	lib.es2018.intl.d.ts
+100%  
+	    New File  		    1353	lib.es2018.promise.d.ts
+100%  
+	    New File  		    1232	lib.es2018.regexp.d.ts
+100%  
+	    New File  		    3163	lib.es2019.array.d.ts
+100%  
+	    New File  		    1071	lib.es2019.d.ts
+100%  
+	    New File  		    1074	lib.es2019.full.d.ts
+100%  
+	    New File  		     956	lib.es2019.intl.d.ts
+100%  
+	    New File  		    1473	lib.es2019.object.d.ts
+100%  
+	    New File  		    1528	lib.es2019.string.d.ts
+100%  
+	    New File  		    1006	lib.es2019.symbol.d.ts
+100%  
+	    New File  		   35373	lib.es2020.bigint.d.ts
+100%  
+	    New File  		    1201	lib.es2020.d.ts
+100%  
+	    New File  		    2956	lib.es2020.date.d.ts
+100%  
+	    New File  		    1074	lib.es2020.full.d.ts
+100%  
+	    New File  		   22039	lib.es2020.intl.d.ts
+100%  
+	    New File  		    1587	lib.es2020.number.d.ts
+100%  
+	    New File  		    1803	lib.es2020.promise.d.ts
+100%  
+	    New File  		    4749	lib.es2020.sharedmemory.d.ts
+100%  
+	    New File  		    2468	lib.es2020.string.d.ts
+100%  
+	    New File  		    1455	lib.es2020.symbol.wellknown.d.ts
+100%  
+	    New File  		    1036	lib.es2021.d.ts
+100%  
+	    New File  		    1074	lib.es2021.full.d.ts
+100%  
+	    New File  		    8347	lib.es2021.intl.d.ts
+100%  
+	    New File  		    2262	lib.es2021.promise.d.ts
+100%  
+	    New File  		    1592	lib.es2021.string.d.ts
+100%  
+	    New File  		    3119	lib.es2021.weakref.d.ts
+100%  
+	    New File  		    4258	lib.es2022.array.d.ts
+100%  
+	    New File  		    1152	lib.es2022.d.ts
+100%  
+	    New File  		    2339	lib.es2022.error.d.ts
+100%  
+	    New File  		    1074	lib.es2022.full.d.ts
+100%  
+	    New File  		    6069	lib.es2022.intl.d.ts
+100%  
+	    New File  		    1085	lib.es2022.object.d.ts
+100%  
+	    New File  		    1336	lib.es2022.regexp.d.ts
+100%  
+	    New File  		    2085	lib.es2022.sharedmemory.d.ts
+100%  
+	    New File  		    1155	lib.es2022.string.d.ts
+100%  
+	    New File  		   39647	lib.es2023.array.d.ts
+100%  
+	    New File  		     900	lib.es2023.collection.d.ts
+100%  
+	    New File  		     963	lib.es2023.d.ts
+100%  
+	    New File  		    1074	lib.es2023.full.d.ts
+100%  
+	    New File  		  214001	lib.es5.d.ts
+100%  
+	    New File  		    1032	lib.es6.d.ts
+100%  
+	    New File  		    1224	lib.esnext.collection.d.ts
+100%  
+	    New File  		    1123	lib.esnext.d.ts
+100%  
+	    New File  		    1070	lib.esnext.decorators.d.ts
+100%  
+	    New File  		    6575	lib.esnext.disposable.d.ts
+100%  
+	    New File  		    1074	lib.esnext.full.d.ts
+100%  
+	    New File  		    1213	lib.esnext.intl.d.ts
+100%  
+	    New File  		    1259	lib.esnext.object.d.ts
+100%  
+	    New File  		    1389	lib.esnext.promise.d.ts
+100%  
+	    New File  		    9451	lib.scripthost.d.ts
+100%  
+	    New File  		    1230	lib.webworker.asynciterable.d.ts
+100%  
+	    New File  		  446872	lib.webworker.d.ts
+100%  
+	    New File  		    1041	lib.webworker.importscripts.d.ts
+100%  
+	    New File  		   19812	lib.webworker.iterable.d.ts
+100%  
+	    New File  		   5.6 m	tsc.js
+ 17%  
+ 35%  
+ 53%  
+ 71%  
+ 88%  
+100%  
+	    New File  		   8.2 m	tsserver.js
+ 12.1%
+ 24.2%
+ 36.4%
+ 48.5%
+ 60.6%
+ 72.8%
+ 84.9%
+ 97.1%
+100%  
+	    New File  		     865	tsserverlibrary.d.ts
+100%  
+	    New File  		    1012	tsserverlibrary.js
+100%  
+	    New File  		  598870	typescript.d.ts
+100%  
+	    New File  		   8.7 m	typescript.js
+ 11.4%
+ 22.9%
+ 34.4%
+ 45.8%
+ 57.3%
+ 68.8%
+ 80.2%
+ 91.7%
+100%  
+	    New File  		   17285	typesMap.json
+100%  
+	    New File  		   1.6 m	typingsInstaller.js
+ 59%  
+100%  
+	    New File  		    2313	watchGuard.js
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\cs\
+	    New File  		  278627	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\de\
+	    New File  		  301679	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\es\
+	    New File  		  298127	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\fr\
+	    New File  		  301315	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\it\
+	    New File  		  297888	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\ja\
+	    New File  		  335461	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\ko\
+	    New File  		  303461	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\pl\
+	    New File  		  299660	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\pt-br\
+	    New File  		  289023	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\ru\
+	    New File  		  389945	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\tr\
+	    New File  		  289798	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\zh-cn\
+	    New File  		  259410	diagnosticMessages.generated.json
+100%  
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\node_modules\typescript\lib\zh-tw\
+	    New File  		  256190	diagnosticMessages.generated.json
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\packages\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\profiles\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\profiles\v2\
+	  New Dir          1	D:\Workspace\TapTap\�̲輷��\client\profiles\v2\editor\
+	    New File  		       3	packages.json
+100%  
+	  New Dir          8	D:\Workspace\TapTap\�̲輷��\client\profiles\v2\packages\
+	    New File  		      60	builder.json
+100%  
+	    New File  		      29	device.json
+100%  
+	    New File  		      30	engine.json
+100%  
+	    New File  		      29	program.json
+100%  
+	    New File  		      29	project.json
+100%  
+	    New File  		     139	reference-image.json
+100%  
+	    New File  		    3031	scene.json
+100%  
+	    New File  		      52	server.json
+100%  
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\settings\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\settings\v2\
+	  New Dir          0	D:\Workspace\TapTap\�̲輷��\client\settings\v2\default-profiles\
+	  New Dir          7	D:\Workspace\TapTap\�̲輷��\client\settings\v2\packages\
+	    New File  		      87	builder.json
+100%  
+	    New File  		     374	cocos-service.json
+100%  
+	    New File  		      29	device.json
+100%  
+	    New File  		      30	engine.json
+100%  
+	    New File  		     588	information.json
+100%  
+	    New File  		      29	program.json
+100%  
+	    New File  		     182	project.json
+100%  
+	  New Dir          5	D:\Workspace\TapTap\�̲輷��\client\validation\
+	    New File  		    4114	art-binding-check.cjs
+100%  
+	    New File  		    6532	creator-preview-smoke.js
+100%  
+	    New File  		   13733	p1a-core-check.cjs
+100%  
+	    New File  		     805	run-art-check.ps1
+100%  
+	    New File  		    1942	run-core-check.ps1
+100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :       290       288         2         0         0         0
+   Files :      1347      1347         0         0         0         0
+   Bytes :   40.37 m   40.37 m         0         0         0         0
+   Times :   0:00:01   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :           45,375,699 Bytes/sec.
+   Speed :            2,596.418 MegaBytes/min.
+   Ended : 2026年10月29日 3:20:01
+
+D:\cocos-p1a-build-source\20261029-p1a-final-12

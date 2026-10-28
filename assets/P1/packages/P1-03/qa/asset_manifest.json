@@ -1,0 +1,157 @@
+{
+  "phase": "P1-03",
+  "date": "2026-10-27",
+  "assets": [
+    {
+      "asset_id": "spr_cup_classic_back",
+      "runtime_size": [
+        750,
+        1000
+      ],
+      "actual_size": [
+        750,
+        1000
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 750000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "2b392ce10396a8a0825af91d50d1df878142ad13311a2a06e73bc49adbcdc0bc",
+      "alpha_min": 0,
+      "alpha_max": 238,
+      "alpha_zero_fraction": 0.516
+    },
+    {
+      "asset_id": "spr_cup_classic_tea",
+      "runtime_size": [
+        750,
+        1000
+      ],
+      "actual_size": [
+        750,
+        1000
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 750000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "8e9e27c0ed1f402cdcafda70e8100ed6e70dd693f4f53a1ae0856f4051076544",
+      "alpha_min": 0,
+      "alpha_max": 116,
+      "alpha_zero_fraction": 0.5264
+    },
+    {
+      "asset_id": "spr_cup_classic_front",
+      "runtime_size": [
+        750,
+        1000
+      ],
+      "actual_size": [
+        750,
+        1000
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 750000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "8607414dea6fd68008d6addff32351b8e77b1123d0ace6d60e3a5d5426f0a8ec",
+      "alpha_min": 0,
+      "alpha_max": 174,
+      "alpha_zero_fraction": 0.9621
+    },
+    {
+      "asset_id": "spr_cup_classic_rim_back",
+      "runtime_size": [
+        750,
+        1000
+      ],
+      "actual_size": [
+        750,
+        1000
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 750000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "94f11bb2099dab304ece85b2ba433876a3b7c2bcc5e593b0ff122d1aca67f657",
+      "alpha_min": 0,
+      "alpha_max": 242,
+      "alpha_zero_fraction": 0.9908
+    },
+    {
+      "asset_id": "spr_cup_classic_rim_front",
+      "runtime_size": [
+        750,
+        1000
+      ],
+      "actual_size": [
+        750,
+        1000
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 750000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "ea6c956139d37cbb621e65d1e9f78c55a8586175575c183afd9a9ba1bba5d90d",
+      "alpha_min": 0,
+      "alpha_max": 250,
+      "alpha_zero_fraction": 0.9922
+    },
+    {
+      "asset_id": "spr_cup_classic_base",
+      "runtime_size": [
+        750,
+        1000
+      ],
+      "actual_size": [
+        750,
+        1000
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 750000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "c9392f4b7db2116e75402d4138d203e03af3a61ca49a2dac85117e7be15cc478",
+      "alpha_min": 0,
+      "alpha_max": 250,
+      "alpha_zero_fraction": 0.9958
+    },
+    {
+      "asset_id": "spr_cup_classic_label",
+      "runtime_size": [
+        750,
+        1000
+      ],
+      "actual_size": [
+        750,
+        1000
+      ],
+      "actual_mode": "RGBA",
+      "source_svg": true,
+      "pixel_count": 750000,
+      "check_dimension": true,
+      "check_transparency": true,
+      "sha256": "3dbed7e2802a353ecda3d16d60fbbbe97bb241017dca1a528ea80f3868b9f349",
+      "alpha_min": 0,
+      "alpha_max": 159,
+      "alpha_zero_fraction": 0.9861
+    }
+  ],
+  "pass_structural_checks": true,
+  "notes": [
+    "7 layers share 1500x2000 canvas, viewBox 750x1000",
+    "image Y =1200 - worldY; physical inner top (115,635) y140, bottom (195,555) y940",
+    "transparent center back, tea as light/static decoration behind ingredients",
+    "front layer strong-highlight coverage ~0.6% of canvas; below 10% cup-area target",
+    "independently editable SVG, no separate raster cropping"
+  ],
+  "limits": [
+    "Real engine import and collision overlay tests remain the development team integration acceptance, not claimed executed."
+  ]
+}

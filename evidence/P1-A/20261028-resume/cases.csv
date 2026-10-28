@@ -1,0 +1,17 @@
+﻿case,status,actual
+compile,PASS,preview compiled JS contains fresh rebuild and dropNext closures; TS declaration check exit 0
+rebuild20,PASS,final baseline and result entities 0 contacts 0 listeners 3 world bodies 4; intermediate counts not captured
+nine,FAIL,levels 1-8 produced; level 9 waits for spawn space through 16 seconds
+queue_cancel,PASS,"after C, 3 seconds entities 0 contacts 0 listeners 3"
+gravity_fixed_pause,PASS,see runtime-smoke.txt; same test remains allPassed=false due background
+background,未执行,real hidden not observed; smoke timeout; minimized browser remained visible
+three_60s,PASS,"70 seconds sampled each 10 seconds; three stationary bodies, no observed bottom crossing; not continuous monitoring"
+pressure,未完成,"220 level-1 bodies, 10 one-second samples, no obvious side/bottom crossing; mixed sizes and continuous monitoring not performed"
+narrow,PASS,"largest radius 140 settled y=400.7996, one cup contact"
+art_static,PASS,"81 IDs and 117 PNG static integrity, no runtime gallery proof"
+art_runtime_load,PASS,"7 pages, 81 IDs loaded; gallery-result.txt and gallery screenshots"
+collisions,未完成,same-level three contact observed; different-level collision not tested
+config_retry,未执行,no fault injection or retry test
+web_build,PASS,"Creator build exit 36; Boot transitioned to PhysicsLab from local HTTP, screenshot build.png"
+web_adaptation,未完成,desktop screenshot shows scrolling; viewport matrix unverified
+art_visual_adaptation,未完成,"visual review, nine-slice and viewport matrix not completed"

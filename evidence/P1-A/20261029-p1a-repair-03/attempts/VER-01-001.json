@@ -1,0 +1,13 @@
+{
+  "caseId": "VER-01",
+  "attemptId": "VER-01-001",
+  "buildId": "20261029-p1a-repair-03",
+  "result": "PASS",
+  "actual": {
+    "creator": "3.8.8",
+    "box2d": "1.0.2",
+    "ptm": 32,
+    "autoSimulation": false,
+    "runtimeBuildId": "20261029-p1a-repair-03"
+  }
+}

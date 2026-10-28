@@ -1,0 +1,13 @@
+{
+  "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\client",
+  "target": "D:\\cocos-p1a-build-source\\20261029-p1a-repair-04",
+  "startedAt": "2026-10-29T01:41:57.0399923+08:00",
+  "finishedAt": "2026-10-29T01:41:58.6899689+08:00",
+  "robocopyExitCode": 1,
+  "excluded": [
+    "temp",
+    "library",
+    "build",
+    "local"
+  ]
+}

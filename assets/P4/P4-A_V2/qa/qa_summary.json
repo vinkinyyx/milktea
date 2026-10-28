@@ -1,0 +1,17 @@
+{
+  "phase": "P4-A",
+  "assets": 11,
+  "file_validated_count": 11,
+  "file_qa_checks": 52,
+  "qa_pass": 52,
+  "qa_fail": 0,
+  "original_draw": 6,
+  "derived": 2,
+  "engine": 2,
+  "platform": 1,
+  "provider_pending": [
+    "platform_challenge_entry_code"
+  ],
+  "real_game_integration": "pending",
+  "comparison_baseline": "P1_V3 P2_V2 P3_V2"
+}

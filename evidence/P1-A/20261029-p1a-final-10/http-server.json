@@ -1,0 +1,12 @@
+﻿{
+    "buildId":  "20261029-p1a-final-10",
+    "pid":  8420,
+    "host":  "127.0.0.1",
+    "port":  8780,
+    "root":  "D:\\cocos-p1a-build\\20261029-p1a-final-10",
+    "url":  "http://127.0.0.1:8780/",
+    "status":  200,
+    "startedAt":  "2026-10-29T02:58:04.6773749+08:00",
+    "processCapture":  "Diagnostics.Process",
+    "outputHash":  "a1435e10f2b79f98896679f8ce29ecd70aff725a12b3cf5ff07651306450aeb8"
+}

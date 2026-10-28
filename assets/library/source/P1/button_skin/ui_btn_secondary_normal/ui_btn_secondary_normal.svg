@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="192" viewBox="0 0 512 192">
+<title>奶茶挤挤 secondary normal button skin</title>
+<desc>Button skin only. No text or icon. Straight alpha PNG export. sRGB intended.</desc>
+<defs>
+ <linearGradient id="secondary_normal_body" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#FFF9F0" />
+   <stop offset="53%" stop-color="#F1E2CF" />
+   <stop offset="100%" stop-color="#DFC5AA" />
+ </linearGradient>
+ <linearGradient id="secondary_normal_sheen" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".38" />
+  <stop offset="48%" stop-color="#FFFFFF" stop-opacity=".08" />
+  <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+ </linearGradient>
+ </defs>
+<g id="base_shape"><rect x="8" y="10" width="496" height="172" rx="55" ry="55" fill="url(#secondary_normal_body)" stroke="#8D6851" stroke-width="7" /></g>
+<g id="surface_sheen" opacity=".75">
+      <rect x="8" y="10" width="496" height="172" rx="55" ry="55" fill="url(#secondary_normal_sheen)" stroke="none" />
+    </g>
+<g id="bevel_highlights">
+         <rect x="14" y="16" width="484" height="160" rx="50" fill="none" stroke="#CAB092" stroke-width="3.5" stroke-opacity=".75" />
+         <path d="M 65 35 H 447" fill="none" stroke="#FFFDF4" stroke-width="5" stroke-opacity=".86" stroke-linecap="round" />
+         <path d="M 65 161 H 447" fill="none" stroke="#8D6851" stroke-opacity=".37" stroke-width="3.5" stroke-linecap="round" />
+        </g>
+
+</svg>

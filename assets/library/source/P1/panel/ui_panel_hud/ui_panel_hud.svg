@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="120" viewBox="0 0 340 60" version="1.1" role="img">
+<title>HUD底 / ui_panel_hud</title><desc>独立可编辑矢量母版，2x逻辑源尺寸 680x120; 运行PNG 340x60; 九切 20,20,20,20 像素。所有运行时标题、分数、头像、数字由程序绘制。色彩空间 sRGB。</desc>
+<defs>
+<linearGradient id="hud_paper" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+<stop offset="0%" stop-color="#FFF9F0"/><stop offset="49%" stop-color="#F2E5D2"/><stop offset="100%" stop-color="#DDBD9B"/></linearGradient>
+<linearGradient id="hud_shine" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#FFF" stop-opacity=".54"/><stop offset="18%" stop-color="#FFF" stop-opacity=".13"/><stop offset="65%" stop-color="#FFF" stop-opacity="0"/><stop offset="100%" stop-color="#623B21" stop-opacity=".045"/></linearGradient>
+</defs>
+<g id="layer_01_soft_contact_shadow"><rect x="3" y="5" width="334" height="52" rx="17" fill="#593721" opacity=".11"/></g>
+<g id="layer_02_paper_base"><rect x="3" y="3" width="334" height="54" rx="17" fill="url(#hud_paper)" stroke="#865F46" stroke-width="2.8"/></g>
+<g id="layer_03_soft_surface_highlight"><rect x="5" y="5" width="330" height="50" rx="14" fill="url(#hud_shine)" opacity=".35"/></g>
+<g id="layer_04_inside_bevel"><rect x="7" y="7" width="326" height="46" rx="13" fill="none" stroke="#FFFDF6" stroke-width="2" opacity=".84"/></g>
+<g id="layer_05_fine_trim"></g>
+<g id="layer_06_fixed_corner_accents"></g>
+</svg>

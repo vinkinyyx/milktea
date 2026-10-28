@@ -1,0 +1,622 @@
+{
+  "caseId": "level-drop-2",
+  "attemptId": "NINE-L2-001",
+  "buildId": "20261029-p1a-final-12",
+  "expectedBuildId": "20261029-p1a-final-12",
+  "pageUrl": "http://127.0.0.1:8782/?p1aCase=level-drop-2&attemptId=NINE-L2-001&expectedBuildId=20261029-p1a-final-12&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off&artifactDir=D%3A%2FWorkspace%2FTapTap%2F%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4%2Fevidence%2FP1-A%2F20261029-p1a-final-12%2Fraw%2FNINE-L2-001",
+  "startedAt": "2026-10-28T19:32:14.657Z",
+  "startupStatus": {
+    "buildId": "20261029-p1a-final-12",
+    "attemptId": "NINE-L2-001",
+    "ready": true,
+    "loading": false,
+    "tick": 0,
+    "stepCount": 0,
+    "paused": true,
+    "pauseReasons": [
+      "REBUILD"
+    ],
+    "interruptionSerial": 0,
+    "entityCount": 3,
+    "contactCount": 0,
+    "contactBeginEvents": 0,
+    "contactEndEvents": 0,
+    "listenerCount": 6,
+    "engine": {
+      "cocos": "3.8.8",
+      "physicsBackend": "BOX2D",
+      "autoSimulation": false,
+      "fixedTimeStep": 0.016666666666666666,
+      "ptmRatio": 32
+    },
+    "levelRadii": [
+      {
+        "level": 1,
+        "radiusDu": 18
+      },
+      {
+        "level": 2,
+        "radiusDu": 24
+      },
+      {
+        "level": 3,
+        "radiusDu": 32
+      },
+      {
+        "level": 4,
+        "radiusDu": 42
+      },
+      {
+        "level": 5,
+        "radiusDu": 55
+      },
+      {
+        "level": 6,
+        "radiusDu": 70
+      },
+      {
+        "level": 7,
+        "radiusDu": 89
+      },
+      {
+        "level": 8,
+        "radiusDu": 112
+      },
+      {
+        "level": 9,
+        "radiusDu": 140
+      }
+    ],
+    "cupWidthScale": 1,
+    "queue": null,
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2040,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2040,
+          "revision": 0
+        }
+      ]
+    },
+    "message": "三圆堆积试验：同级圆从杯口上方无重叠释放"
+  },
+  "entityId": 1,
+  "level": 2,
+  "snapshot": {
+    "buildId": "20261029-p1a-final-12",
+    "attemptId": "NINE-L2-001",
+    "ready": true,
+    "tick": 80,
+    "stepCount": 80,
+    "paused": false,
+    "worldId": 3,
+    "pauseReasons": [],
+    "interruptionSerial": 0,
+    "entityCount": 1,
+    "contactCount": 1,
+    "contactBeginEvents": 1,
+    "contactEndEvents": 0,
+    "listenerCount": 4,
+    "bodies": [
+      [
+        1,
+        24,
+        375,
+        286.42687034606934,
+        0,
+        145.838463306427,
+        1
+      ]
+    ],
+    "contacts": [
+      {
+        "contactId": "1|cup:0",
+        "firstId": 1,
+        "secondId": null,
+        "normalSpeed": 1215.3204917907715
+      }
+    ],
+    "config": {
+      "levelRadii": [
+        {
+          "level": 1,
+          "radiusDu": 18
+        },
+        {
+          "level": 2,
+          "radiusDu": 24
+        },
+        {
+          "level": 3,
+          "radiusDu": 32
+        },
+        {
+          "level": 4,
+          "radiusDu": 42
+        },
+        {
+          "level": 5,
+          "radiusDu": 55
+        },
+        {
+          "level": 6,
+          "radiusDu": 70
+        },
+        {
+          "level": 7,
+          "radiusDu": 89
+        },
+        {
+          "level": 8,
+          "radiusDu": 112
+        },
+        {
+          "level": 9,
+          "radiusDu": 140
+        }
+      ],
+      "cupWidthScales": [
+        {
+          "id": "classic",
+          "scale": 1
+        },
+        {
+          "id": "coconut_green",
+          "scale": 0.95
+        },
+        {
+          "id": "taro_boba",
+          "scale": 0.9
+        },
+        {
+          "id": "brown_sugar",
+          "scale": 0.85
+        },
+        {
+          "id": "mochi_special",
+          "scale": 0.8
+        }
+      ],
+      "cupSegments": [
+        {
+          "kind": "bottom",
+          "innerStart": {
+            "x": 195,
+            "y": 260
+          },
+          "innerEnd": {
+            "x": 555,
+            "y": 260
+          },
+          "outward": {
+            "x": 0,
+            "y": -1
+          },
+          "thicknessDu": 16
+        },
+        {
+          "kind": "left",
+          "innerStart": {
+            "x": 195,
+            "y": 260
+          },
+          "innerEnd": {
+            "x": 115,
+            "y": 1060
+          },
+          "outward": {
+            "x": -0.9950371902099892,
+            "y": -0.09950371902099892
+          },
+          "thicknessDu": 16
+        },
+        {
+          "kind": "right",
+          "innerStart": {
+            "x": 555,
+            "y": 260
+          },
+          "innerEnd": {
+            "x": 635,
+            "y": 1060
+          },
+          "outward": {
+            "x": 0.9950371902099892,
+            "y": -0.09950371902099892
+          },
+          "thicknessDu": 16
+        }
+      ]
+    },
+    "queue": null,
+    "contactRebuild": null,
+    "contactRebuildHistory": [],
+    "contactMatrix": null,
+    "wallMatrix": null,
+    "loadedArtVariants": [
+      {
+        "assetId": "spr_ing_sago_base",
+        "variantId": "art/p1/ingredient/spr_ing_sago_base@128x128/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_sago_base@128x128.png",
+        "size": [
+          128,
+          128
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_ing_red_bean_base",
+        "variantId": "art/p1/ingredient/spr_ing_red_bean_base@128x128/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_red_bean_base@128x128.png",
+        "size": [
+          128,
+          128
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_ing_coconut_base",
+        "variantId": "art/p1/ingredient/spr_ing_coconut_base@256x256/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_coconut_base@256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_ing_large_pearl_base",
+        "variantId": "art/p1/ingredient/spr_ing_large_pearl_base@256x256/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_large_pearl_base@256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_ing_small_pearl_base",
+        "variantId": "art/p1/ingredient/spr_ing_small_pearl_base@256x256/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_small_pearl_base@256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_ing_grass_jelly_base",
+        "variantId": "art/p1/ingredient/spr_ing_grass_jelly_base@512x512/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_grass_jelly_base@512x512.png",
+        "size": [
+          512,
+          512
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_ing_pudding_base",
+        "variantId": "art/p1/ingredient/spr_ing_pudding_base@512x512/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_pudding_base@512x512.png",
+        "size": [
+          512,
+          512
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_ing_taro_base",
+        "variantId": "art/p1/ingredient/spr_ing_taro_base@512x512/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_taro_base@512x512.png",
+        "size": [
+          512,
+          512
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_ing_mochi_base",
+        "variantId": "art/p1/ingredient/spr_ing_mochi_base@512x512/spriteFrame",
+        "path": "client/assets/resources/art/p1/ingredient/spr_ing_mochi_base@512x512.png",
+        "size": [
+          512,
+          512
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "bg_shop_base",
+        "variantId": "art/p1/environment/bg_shop_base@750x1334/spriteFrame",
+        "path": "client/assets/resources/art/p1/environment/bg_shop_base@750x1334.png",
+        "size": [
+          750,
+          1334
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_cup_shadow",
+        "variantId": "art/p1/environment/spr_cup_shadow@512x128/spriteFrame",
+        "path": "client/assets/resources/art/p1/environment/spr_cup_shadow@512x128.png",
+        "size": [
+          512,
+          128
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "assetId": "spr_cup_classic_front",
+        "variantId": "art/p1/cup_layer/spr_cup_classic_front@750x1000/spriteFrame",
+        "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_front@750x1000.png",
+        "size": [
+          750,
+          1000
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0,
+          0
+        ]
+      },
+      {
+        "assetId": "spr_cup_classic_rim_back",
+        "variantId": "art/p1/cup_layer/spr_cup_classic_rim_back@750x1000/spriteFrame",
+        "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_rim_back@750x1000.png",
+        "size": [
+          750,
+          1000
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0,
+          0
+        ]
+      },
+      {
+        "assetId": "spr_cup_classic_tea",
+        "variantId": "art/p1/cup_layer/spr_cup_classic_tea@750x1000/spriteFrame",
+        "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_tea@750x1000.png",
+        "size": [
+          750,
+          1000
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0,
+          0
+        ]
+      },
+      {
+        "assetId": "spr_cup_classic_back",
+        "variantId": "art/p1/cup_layer/spr_cup_classic_back@750x1000/spriteFrame",
+        "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_back@750x1000.png",
+        "size": [
+          750,
+          1000
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0,
+          0
+        ]
+      },
+      {
+        "assetId": "spr_cup_classic_label",
+        "variantId": "art/p1/cup_layer/spr_cup_classic_label@750x1000/spriteFrame",
+        "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_label@750x1000.png",
+        "size": [
+          750,
+          1000
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0,
+          0
+        ]
+      },
+      {
+        "assetId": "spr_cup_classic_base",
+        "variantId": "art/p1/cup_layer/spr_cup_classic_base@750x1000/spriteFrame",
+        "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_base@750x1000.png",
+        "size": [
+          750,
+          1000
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0,
+          0
+        ]
+      },
+      {
+        "assetId": "spr_cup_classic_rim_front",
+        "variantId": "art/p1/cup_layer/spr_cup_classic_rim_front@750x1000/spriteFrame",
+        "path": "client/assets/resources/art/p1/cup_layer/spr_cup_classic_rim_front@750x1000.png",
+        "size": [
+          750,
+          1000
+        ],
+        "alphaInsets": null,
+        "pivot": [
+          0,
+          0
+        ]
+      }
+    ],
+    "lifecycle": {
+      "domHidden": false,
+      "engineHidden": false,
+      "backgrounded": false,
+      "revision": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "source": "dom",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2040,
+          "revision": 0
+        },
+        {
+          "source": "install",
+          "hidden": false,
+          "backgrounded": false,
+          "trusted": null,
+          "atMs": 2040,
+          "revision": 0
+        }
+      ]
+    },
+    "probe": {
+      "metadata": {
+        "buildId": "20261029-p1a-final-12",
+        "attemptId": "NINE-L2-001",
+        "probeVersion": "p1a-probe-v2",
+        "worldId": 3,
+        "cupScale": 1,
+        "mode": "OFF",
+        "phase": "SETUP"
+      },
+      "coverage": {
+        "frameCount": 0,
+        "frameOverflow": false,
+        "totalSteps": 0,
+        "warmupSteps": 0,
+        "observeSteps": 0,
+        "stepGaps": 0,
+        "observeDurationMs": 0,
+        "activeObserveMs": 0,
+        "expectedBodyCount": 0,
+        "lastBodyCount": 0
+      },
+      "summary": {
+        "escapingSteps": 0,
+        "nonFiniteBodies": 0,
+        "minMargins": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "negativeMarginTicks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "anomaly": null,
+      "recentSteps": [],
+      "frames": [],
+      "legacySummary": null,
+      "measurementScopes": {
+        "probeStepMs": "adapter body visitor + finite-wall/endpoint/swept geometry + aggregate/ring write",
+        "probeFrameMs": "fixed-size render-frame ring write",
+        "labUpdateMs": "whole PhysicsLab.update including HUD refresh and view sync",
+        "adapterMs": "whole adapter.stepFixed",
+        "adapterSubtimings": [
+          "syncToPhysics",
+          "physicsStep",
+          "syncFromPhysics",
+          "velocityClamp"
+        ],
+        "adapterSubtimingsAreNested": true,
+        "probeExportMs": 0
+      }
+    },
+    "message": "独立尺寸试验：第2级，实际半径24DU"
+  },
+  "actualBody": [
+    1,
+    24,
+    375,
+    286.42687034606934,
+    0,
+    145.838463306427,
+    1
+  ],
+  "landed": true,
+  "radiusMatchesConfig": true,
+  "pass": true,
+  "acceptance": "PASS",
+  "endedAt": "2026-10-28T19:32:16.491Z",
+  "consoleEvents": [
+    "{\"test\":\"p1a-runtime-identity\",\"buildId\":\"20261029-p1a-final-12\",\"creator\":\"3.8.8\",\"box2d\":\"1.0.2\",\"ptm\":32,\"autoSimulation\":false,\"probeMode\":\"OFF\",\"probeVersion\":\"p1a-probe-v2\",\"attemptId\":\"NINE-L2-001\"}"
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,10 @@
+{
+  "rootPid": 4028,
+  "started": "2026-10-29T02:53:24.6583226+08:00",
+  "finished": "2026-10-29T02:54:18.7629348+08:00",
+  "capturedProcessCount": 22,
+  "disappearedProcessCount": 21,
+  "pollingIntervalMs": 50,
+  "exitStatusAvailable": false,
+  "wmiStopSubscription": "access denied in this process token; polling fallback used"
+}

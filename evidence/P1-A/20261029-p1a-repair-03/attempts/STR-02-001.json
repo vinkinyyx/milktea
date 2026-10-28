@@ -1,0 +1,15 @@
+{
+  "caseId": "STR-P0",
+  "attemptId": "STR-02-001",
+  "buildId": "20261029-p1a-repair-03",
+  "probeVersion": "lab-probe-v1-OFF",
+  "result": "PASS",
+  "layout": "pressureTest / 220 entities",
+  "elapsedMs": 70013,
+  "ticks": 4231,
+  "steps": 4231,
+  "entityCount": 220,
+  "finiteBodies": 220,
+  "paused": false,
+  "notes": "One initial R released a pre-existing paused clock before measurement. This is a 70s no-probe comparison only; not the required 600 warmup + 3600 observed-step geometry acceptance."
+}

@@ -1,0 +1,14 @@
+{
+  "caseId": "BLD-01",
+  "attemptId": "BLD-03-001",
+  "buildId": "20261029-p1a-repair-03",
+  "result": "FAIL",
+  "creatorPid": 496,
+  "creatorExitCode": null,
+  "childBuildScript": "SIGTERM",
+  "taskLog": "Finished in 10 sec",
+  "bridgeDisabled": true,
+  "outputExists": true,
+  "runtimeLoads": true,
+  "reason": "Creator wrapper exit code is null and SIGTERM is not attributed from installed builder source; do not infer pass from existing output."
+}

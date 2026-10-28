@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="512" viewBox="0 0 512 512" role="img">
+<title>引导松手 / ui_tutorial_hand_release</title>
+<desc>NAICHA 原创可编辑SVG源图。512×512母版, 256×256独立透明PNG导出, 以中心256,256为锚点。特效由程序控制alpha/scale/rotation，不烘焙文字、帧序列。</desc>
+<defs>
+<radialGradient id="glow"><stop offset="0" stop-color="#FFF9DF" stop-opacity=".98"/><stop offset=".55" stop-color="#FFF0C9" stop-opacity=".65"/><stop offset="1" stop-color="#EBC294" stop-opacity=".12"/></radialGradient>
+<radialGradient id="milkstar"><stop offset="0" stop-color="#FFFFF6"/><stop offset=".58" stop-color="#FFF7D5"/><stop offset="1" stop-color="#F0C786"/></radialGradient>
+<linearGradient id="gold" x1=".12" y1="0" x2=".83" y2="1"><stop offset="0" stop-color="#FFF9DF"/><stop offset=".34" stop-color="#FBE2A1"/><stop offset=".7" stop-color="#F2BB62"/><stop offset="1" stop-color="#C58A4B"/></linearGradient>
+<linearGradient id="cream" x1=".1" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".35" stop-color="#FFF6E5"/><stop offset="1" stop-color="#E2BE99"/></linearGradient>
+<linearGradient id="crumb" x1=".14" y1=".03" x2=".82" y2=".95"><stop offset="0" stop-color="#FFF5E3"/><stop offset=".58" stop-color="#E8C99E"/><stop offset="1" stop-color="#BE936E"/></linearGradient>
+<linearGradient id="skin" x1=".13" y1="0" x2=".93" y2="1"><stop offset="0" stop-color="#FFF4DF"/><stop offset=".45" stop-color="#F4CDA7"/><stop offset="1" stop-color="#D69B71"/></linearGradient>
+<linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ECDDBB"/><stop offset="1" stop-color="#B48059"/></linearGradient>
+</defs>
+
+<g id="ingredient_reference_ball"><circle cx="260" cy="96" r="37" fill="#5A3428" stroke="#3B261C" stroke-width="5"/><ellipse cx="248" cy="81" rx="16" ry="8" transform="rotate(-30 248 81)" fill="#FFF5D7" opacity=".92"/><path d="M275 118 A27 27 0 0 0 290 104" stroke="#BE8961" stroke-width="6" fill="none" opacity=".55" stroke-linecap="round"/></g>
+<g id="release_gap_indicators" fill="#E5B87A" opacity=".9"><circle cx="259" cy="154" r="4"/><circle cx="259" cy="173" r="3"/></g>
+<g id="hand_lowered_for_release" transform="translate(0 40)">
+
+<g id="hand_base_outline">
+<path d="M244 393 C224 381 216 361 200 338 L169 300 Q156 282 171 271 Q184 263 198 277 L214 296 L204 192 Q203 167 221 163 Q243 159 246 188 L256 270 L260 252 Q260 235 278 234 Q299 234 300 253 L306 278 L314 259 Q325 242 343 250 Q360 258 356 279 L349 296 Q363 283 378 293 Q390 307 379 324 L351 374 Q341 393 312 399 L267 411Z" fill="url(#skin)" stroke="#663D2C" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="hand_texture"><path d="M215 302 Q227 314 235 335 M258 284 Q273 277 284 287 M302 293 Q314 286 327 298" stroke="#B87755" stroke-width="5" stroke-opacity=".48" fill="none" stroke-linecap="round"/><path d="M225 169 Q241 170 240 190 L246 270" fill="none" stroke="#FFF9EC" stroke-width="8" stroke-opacity=".7" stroke-linecap="round"/><path d="M249 387 Q274 396 308 391" stroke="#FFF9E6" stroke-width="8" stroke-opacity=".44" fill="none" stroke-linecap="round"/></g>
+<g id="hand_highlight"><ellipse cx="214" cy="182" rx="5" ry="9" fill="#FFFFFF" opacity=".43"/></g>
+</g>
+
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+  <title>关闭叉 | ui_icon_close</title>
+  <desc>奶茶游戏 UI icon. Original editable vector. Transparent 192x192 canvas. 96px/48px exports. sRGB deep-brown. No dynamic text.</desc>
+
+  <defs>
+   <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+   </linearGradient>
+  </defs>
+
+  <g id="ui_icon_close_paint" stroke-linejoin="round">
+<path d="M57 57 L135 135 M135 57 L57 135" fill="none" stroke="#3E281E" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M57 57 L135 135 M135 57 L57 135" fill="none" stroke="url(#brown)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/><path d="M57 51 L102 96" fill="none" stroke="#F0C99C" stroke-opacity=".43" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</svg>

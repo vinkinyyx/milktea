@@ -1,0 +1,19 @@
+{
+  "marketing_cover_square": [
+    "P1-04/ui_title_logo",
+    "P3-A/coconut_green",
+    "P3-A/taro_boba",
+    "P3-A/brown_sugar"
+  ],
+  "marketing_cover_landscape": [
+    "P1-04/ui_title_logo",
+    "P3-A/coconut_green",
+    "P3-A/taro_boba",
+    "P3-A/brown_sugar"
+  ],
+  "screenshots": [
+    "P1-04/bg_shop_base as muted placeholder, not a real game capture",
+    "P3-A/stage_cards decorative placeholder",
+    "P3-B/ui_medal_gold decorative placeholder"
+  ]
+}

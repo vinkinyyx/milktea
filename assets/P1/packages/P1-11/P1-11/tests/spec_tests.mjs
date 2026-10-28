@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {dangerLineOpacity,drawDangerLine} from '../src/gen_danger_line.mjs';
+import {resolveDropX,drawDropGuide} from '../src/gen_drop_guide.mjs';
+import {scoreViewModel} from '../src/gen_score_text.mjs';
+import {advanceDangerTimer,remainingSeconds,FULL_TICKS} from '../src/gen_danger_countdown.mjs';
+import {shakeViewModel} from '../src/gen_shake_count.mjs';
+import {hitTestModalDim,drawModalDim} from '../src/gen_modal_dim.mjs';
+import {spinnerAngle,drawLoadingSpinner} from '../src/gen_loading_spinner.mjs';
+const cases=[];function test(name,fn){fn();cases.push(name);}
+const noop=()=>{};
+const mockContext=new Proxy({save:noop,restore:noop,beginPath:noop,moveTo:noop,lineTo:noop,stroke:noop,fill:noop,setLineDash:noop,ellipse:noop,roundRect:noop,fillRect:noop,strokeText:noop,fillText:noop},{set(t,k,v){t[k]=v;return true}});
+test('danger_line: y1000 -> screen y334',()=>{assert.equal(drawDangerLine(mockContext).screenY,334)});
+test('danger_line: breathing max 1Hz',()=>{assert.equal(drawDangerLine(mockContext,{danger:true}).frequencyHz,1);assert.equal(dangerLineOpacity({danger:true,reducedMotion:true}),.90)});
+test('drop_guide: x clamped to valid inner rim + radius',()=>{assert.equal(resolveDropX(-200,{minX:115,maxX:635,radius:30}),145);assert.equal(resolveDropX(2000,{minX:115,maxX:635,radius:30}),605);assert.equal(resolveDropX(333),333)});
+test('drop_guide: graphics do not modify physics',()=>{assert.equal(drawDropGuide(mockContext,{x:740}).physicsModified,false)});
+test('score_text: integer score, best>=score, weak motion suppress float',()=>{assert.deepEqual(scoreViewModel({score:32.7,best:12.8,reducedMotion:true,floats:[{delta:4,x:10,y:30,ageMs:50}]}),{score:32,best:32,floats:[]})});
+test('danger_countdown: boundaries 180,121,120,61,60,1,0',()=>{assert.deepEqual([180,121,120,61,60,1,0].map(remainingSeconds),[3,3,2,2,1,1,0])});
+test('danger_countdown: pause keeps 180 ticks',()=>{assert.equal(advanceDangerTimer(FULL_TICKS,61,{paused:true}),180);assert.equal(advanceDangerTimer(FULL_TICKS,61,{paused:false}),119)});
+test('shake_count: zero charges not clickable',()=>{assert.equal(shakeViewModel({baseRemaining:0,ticketRemaining:0}).canShake,false)});
+test('shake_count: cooldown disables even with ticket',()=>{assert.equal(shakeViewModel({ticketRemaining:2,cooldownTicks:5}).canShake,false);assert.equal(shakeViewModel({ticketRemaining:1,cooldownTicks:0}).canShake,true)});
+test('modal_dim: hit testing blocks underlay except inside panel',()=>{const rect={x:140,y:480,width:470,height:365};assert.equal(hitTestModalDim({active:true,x:2,y:2,panelRect:rect}),true);assert.equal(hitTestModalDim({active:true,x:175,y:500,panelRect:rect}),false);assert.equal(hitTestModalDim({active:false,x:2,y:2}),false)});
+test('modal_dim: rectangle draw no full-screen texture',()=>{assert.equal(drawModalDim(mockContext,{active:true,alpha:.55}).alpha,.55)});
+test('spinner: reduced motion disables rotation',()=>{assert.equal(spinnerAngle({elapsedMs:510,reducedMotion:true}),0);assert.equal(drawLoadingSpinner(mockContext,{reducedMotion:true}).animated,false)});
+console.log(`PASS ${cases.length} tests`);cases.forEach((c,i)=>console.log(`${i+1}. ${c}`));

@@ -1,0 +1,14 @@
+### Browser `p1a-life-5s-fixed` opened with pid 7356.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:8780/?p1aCase=lifecycle-smoke&attemptId=LIFE-01-002&expectedBuildId=20261029-p1a-final-10&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off');
+```
+### Page
+- Page URL: http://127.0.0.1:8780/?p1aCase=lifecycle-smoke&attemptId=LIFE-01-002&expectedBuildId=20261029-p1a-final-10&durationMs=5000&probeVersion=p1a-probe-v2&p1aProbe=off
+- Page Title: Cocos Creator | milktea-p1a
+- Console: 1 errors, 0 warnings
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-10-28T19-06-34-285Z.yml)
+### Events
+- New console entries: .playwright-cli\console-2026-10-28T19-06-34-053Z.log#L1
+

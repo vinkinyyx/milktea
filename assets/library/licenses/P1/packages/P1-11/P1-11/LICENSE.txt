@@ -1,0 +1,1 @@
+P1-11 original code authored for the milk-tea game asset integration. No external graphics, downloaded fonts, assets or binary texture dependencies are bundled. Use or adapt within the project. System font fallback in demo may vary by platform. External project licensing arrangements must be resolved by project owner.

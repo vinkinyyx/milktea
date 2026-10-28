@@ -1,0 +1,1 @@
+{"attempts":4,"before":{"scene":"Boot","errorNode":true,"text":"配置读取失败：download failed: assets/resources/import/cb/cbe4ae2c-d9d3-5cef-bc22-3f5721e44258.json, status: 404(no response)\n点击画面重试配置加载"},"after":{"scene":"Boot"}}

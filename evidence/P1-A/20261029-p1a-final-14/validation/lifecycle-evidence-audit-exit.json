@@ -1,0 +1,5 @@
+{
+  "expectedExitCode": 2,
+  "reason": "LIFE-08 is a real observed failure",
+  "exitCode": 2
+}

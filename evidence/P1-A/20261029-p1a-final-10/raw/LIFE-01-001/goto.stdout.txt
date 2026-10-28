@@ -1,0 +1,4 @@
+The browser 'p1a-life-5s' is not open, please run open first
+
+  playwright-cli -s=p1a-life-5s open [params]
+

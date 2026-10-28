@@ -1,0 +1,5 @@
+
+> milktea-p1a@0.1.0 typecheck
+> tsc --project tsconfig.json
+
+exitCode=0

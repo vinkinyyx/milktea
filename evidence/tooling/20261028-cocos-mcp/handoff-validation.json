@@ -1,0 +1,21 @@
+{
+  "localLinks": "PASS",
+  "json": "PASS",
+  "codexConfigToml": "PASS",
+  "installedSkillMatchesSourceText": true,
+  "skillByteDifference": "Git checkout CRLF versus downloaded LF; normalized text identical",
+  "midiIndependentParser": {
+    "format": 1,
+    "tracks": 5,
+    "ppq": 480,
+    "endTicks": [
+      46080,
+      46080,
+      46080,
+      46080,
+      46080
+    ],
+    "balancedNotes": true
+  },
+  "gameTestsExecutedThisTurn": false
+}

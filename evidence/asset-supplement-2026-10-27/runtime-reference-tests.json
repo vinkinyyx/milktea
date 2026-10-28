@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "command": "node assets/P4/P4-A_V2/runtime/test_p4a.mjs",
+  "assertions": 15,
+  "scope": "reviewed_Canvas_reference_functions_only",
+  "not_run": [
+    "Cocos",
+    "platform",
+    "game_business_integration"
+  ]
+}

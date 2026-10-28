@@ -1,0 +1,19 @@
+{
+  "phase": "P4-D",
+  "ids_total": 4,
+  "new_draw": 1,
+  "derived": 2,
+  "platform": 1,
+  "source_asset_ids": {
+    "marketing_tap_cover": "marketing_cover_landscape",
+    "marketing_wechat_icon": "marketing_app_icon"
+  },
+  "passed_static_checks": 24,
+  "failed_static_checks": 0,
+  "pending": {
+    "platform_platform_review_logo": "provider official original and authorization",
+    "marketing_tap_cover": "final channel crop/layout in current listing backend",
+    "marketing_wechat_icon": "actual icon dimensions, size and corner treatment per WeChat admin"
+  },
+  "official_taptap_guidance": "https://developer.taptap.cn/docs/store/release/publish/material/"
+}

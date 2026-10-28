@@ -1,0 +1,22 @@
+{
+  "asset_id": "platform_ad_badge",
+  "phase": "P4-C",
+  "required": true,
+  "production_method": "platform",
+  "delivery_status": "AWAITING_SDK_PROVIDER",
+  "official_badge_image_supplied": false,
+  "artwork_generated": false,
+  "filename": "(runtime)",
+  "source_spec": "provider-specified",
+  "export_spec": "provider-specified",
+  "runtime_rule": "Use the official badge or SDK-provided ad disclosure UI only when mandated and licensed; do not draw, imitate, modify, or obscure it.",
+  "acceptance_gates": [
+    "Identify exact publishing platform, ad SDK, SDK and policy version",
+    "Obtain official badge/UI and current licensed presentation rules",
+    "Verify mandatory placement, visible ad disclosures, tap target and contrast on target device",
+    "Verify non-reward or failed-video flow gives no unearned reward",
+    "Record implementation screenshot and provider source before platform completion"
+  ],
+  "ownership": "publishing/SDK integration",
+  "source_spec_reference": "image-elements.json:platform_ad_badge"
+}

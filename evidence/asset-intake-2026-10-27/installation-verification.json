@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "scope": "copy_integrity_and_catalog_references",
+  "originals_unchanged": 702,
+  "copies_verified": 540,
+  "catalog_ids": 213,
+  "client_p1_ids": 81,
+  "client_p1_pngs": 117,
+  "not_run": [
+    "Creator_import",
+    "actual_game_render",
+    "physics_contact_validation",
+    "platform_approval",
+    "vendor_JS_execution"
+  ]
+}

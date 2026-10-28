@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="192" height="192" viewBox="0 0 192 192">
+ <title>音乐关 | ui_icon_music_off</title>
+ <desc>奶茶项目P1-07. Original editable SVG. Transparent 192x192 canvas, 96 and 48 PNG exports, sRGB browns, no dynamic text or UI button baked in.</desc>
+ <defs>
+  <linearGradient id="brown" x1="0" x2=".18" y1="0" y2="1">
+    <stop offset="0%" stop-color="#996744"/>
+    <stop offset="35%" stop-color="#875636"/>
+    <stop offset="100%" stop-color="#653C2B"/>
+  </linearGradient>
+  <linearGradient id="milk" x1="0" x2=".8" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFF5E7"/>
+    <stop offset="70%" stop-color="#E9D1B0"/>
+    <stop offset="100%" stop-color="#D6AE86"/>
+  </linearGradient>
+  <linearGradient id="warning" x1="0" x2=".4" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FFDD9D"/>
+    <stop offset="70%" stop-color="#F4BD6C"/>
+    <stop offset="100%" stop-color="#ECA257"/>
+  </linearGradient>
+ </defs>
+ <g id="ui_icon_music_off_paint" stroke-linejoin="round">
+ <g id="music_note">
+
+      <path d="M78 117 V63 L130 49 V110" fill="none" stroke="#3F281E" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M78 117 V63 L130 49 V110" fill="none" stroke="url(#brown)" stroke-width="15" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M78 68 L130 54" fill="none" stroke="#EAC197" stroke-width="3" stroke-opacity=".67" stroke-linecap="round"/>
+      <ellipse cx="64" cy="125" rx="23" ry="16" transform="rotate(-24 64 125)" fill="url(#brown)" stroke="#3F281E" stroke-width="6"/>
+      <ellipse cx="116" cy="117" rx="23" ry="16" transform="rotate(-24 116 117)" fill="url(#brown)" stroke="#3F281E" stroke-width="6"/>
+      <path d="M59 119 Q64 114 72 117 M112 111 Q116 108 123 111" stroke="#EAC197" stroke-width="3.4" fill="none" stroke-linecap="round" opacity=".75"/>
+      
+    
+  </g><g id="mute_slash">
+  <path d="M45 50 L145 143" fill="none" stroke="#F9E7CB" stroke-width="23" stroke-linecap="round"/>
+  <path d="M45 50 L145 143" fill="none" stroke="#3F281E" stroke-width="16" stroke-linecap="round"/>
+  <path d="M45 50 L145 143" fill="none" stroke="#B6774B" stroke-width="9.2" stroke-linecap="round"/>
+  </g>
+ </g>
+ </svg>
