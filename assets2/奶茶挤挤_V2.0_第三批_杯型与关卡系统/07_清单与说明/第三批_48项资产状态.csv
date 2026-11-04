@@ -1,0 +1,49 @@
+﻿asset_id,name_zh,batch_id,production_method,export_spec,status,qa,notes
+ui_stage_classic_card,经典奶茶菜单封面,P3A-05,derived,480x600 PNG,prototype_exported,static_checked_pending_engine,杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息
+spr_cup_coconut_green_back,椰香绿茶杯后壁,P3A-01,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_coconut_green_tea,椰香绿茶杯内奶茶底色,P3A-01,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_coconut_green_front,椰香绿茶杯前壁高光,P3A-01,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_coconut_green_rim_back,椰香绿茶杯口后缘,P3A-01,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_coconut_green_rim_front,椰香绿茶杯口前缘,P3A-01,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_coconut_green_base,椰香绿茶杯底装饰,P3A-01,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_coconut_green_label,椰香绿茶杯身无文字印花,P3A-01,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+ui_stage_coconut_green_card,椰香绿茶菜单封面,P3A-05,derived,480x600 PNG,prototype_exported,static_checked_pending_engine,杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息
+spr_cup_taro_boba_back,芋泥波波杯后壁,P3A-02,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_taro_boba_tea,芋泥波波杯内奶茶底色,P3A-02,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_taro_boba_front,芋泥波波杯前壁高光,P3A-02,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_taro_boba_rim_back,芋泥波波杯口后缘,P3A-02,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_taro_boba_rim_front,芋泥波波杯口前缘,P3A-02,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_taro_boba_base,芋泥波波杯底装饰,P3A-02,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_taro_boba_label,芋泥波波杯身无文字印花,P3A-02,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+ui_stage_taro_boba_card,芋泥波波菜单封面,P3A-05,derived,480x600 PNG,prototype_exported,static_checked_pending_engine,杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息
+spr_cup_brown_sugar_back,黑糖厚乳杯后壁,P3A-03,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_brown_sugar_tea,黑糖厚乳杯内奶茶底色,P3A-03,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_brown_sugar_front,黑糖厚乳杯前壁高光,P3A-03,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_brown_sugar_rim_back,黑糖厚乳杯口后缘,P3A-03,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_brown_sugar_rim_front,黑糖厚乳杯口前缘,P3A-03,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_brown_sugar_base,黑糖厚乳杯底装饰,P3A-03,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_brown_sugar_label,黑糖厚乳杯身无文字印花,P3A-03,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+ui_stage_brown_sugar_card,黑糖厚乳菜单封面,P3A-05,derived,480x600 PNG,prototype_exported,static_checked_pending_engine,杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息
+spr_cup_mochi_special_back,麻薯特调杯后壁,P3A-04,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_mochi_special_tea,麻薯特调杯内奶茶底色,P3A-04,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_mochi_special_front,麻薯特调杯前壁高光,P3A-04,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_mochi_special_rim_back,麻薯特调杯口后缘,P3A-04,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_mochi_special_rim_front,麻薯特调杯口前缘,P3A-04,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_mochi_special_base,麻薯特调杯底装饰,P3A-04,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+spr_cup_mochi_special_label,麻薯特调杯身无文字印花,P3A-04,new_draw,750x1000 PNG,prototype_exported,static_checked_pending_engine,分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核
+ui_stage_mochi_special_card,麻薯特调菜单封面,P3A-05,derived,480x600 PNG,prototype_exported,static_checked_pending_engine,杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息
+ui_btn_tab_normal,选项页签 normal,P3A-06,new_draw,256x96 PNG,prototype_exported,static_checked_pending_engine,无烘焙文字的九切Tab底板；20/20/20/20需要Cocos拉伸验收
+ui_btn_tab_pressed,选项页签 pressed,P3A-06,derived,256x96 PNG,prototype_exported,static_checked_pending_engine,无烘焙文字的九切Tab底板；20/20/20/20需要Cocos拉伸验收
+ui_btn_tab_disabled,选项页签 disabled,P3A-06,derived,256x96 PNG,prototype_exported,static_checked_pending_engine,无烘焙文字的九切Tab底板；20/20/20/20需要Cocos拉伸验收
+ui_btn_tab_selected,选项页签 selected,P3A-06,derived,256x96 PNG,prototype_exported,static_checked_pending_engine,无烘焙文字的九切Tab底板；20/20/20/20需要Cocos拉伸验收
+ui_icon_lock,未解锁锁,P3A-06,new_draw,96x96 PNG;48x48 PNG,prototype_exported,static_checked_pending_engine,192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx
+ui_icon_unlock,解锁锁,P3A-06,new_draw,96x96 PNG;48x48 PNG,prototype_exported,static_checked_pending_engine,192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx
+ui_icon_cloud,云存档,P3A-06,new_draw,96x96 PNG;48x48 PNG,prototype_exported,static_checked_pending_engine,192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx
+ui_icon_sync,同步,P3A-06,new_draw,96x96 PNG;48x48 PNG,prototype_exported,static_checked_pending_engine,192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx
+ui_icon_offline,离线,P3A-06,new_draw,96x96 PNG;48x48 PNG,prototype_exported,static_checked_pending_engine,192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx
+ui_icon_account,账号默认,P3A-06,new_draw,96x96 PNG;48x48 PNG,prototype_exported,static_checked_pending_engine,192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx
+ui_panel_stage,关卡卡片底,P3A-07,new_draw,280x400 PNG,prototype_exported,static_checked_pending_engine,280×400空卡底；建议九切24/24/24/24，动态文本由程序显示
+fx_unlock_glow,解锁卡片亮边,P3A-07,new_draw,256x256 PNG,prototype_exported,static_checked_pending_engine,透明中心解锁光边；由程序做alpha/scale动画
+gen_skeleton,异步列表骨架,P3A-07,engine,none,program_contract,static_checked_pending_engine,程序生成项，无独立PNG，提供实现说明
+gen_locked_overlay,未解锁卡遮罩,P3A-07,engine,none,program_contract,static_checked_pending_engine,程序生成项，无独立PNG，提供实现说明
+gen_error_empty,空/错/无网络状态组合,P3A-07,engine,none,program_contract,static_checked_pending_engine,程序生成项，无独立PNG，提供实现说明

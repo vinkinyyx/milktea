@@ -1,10 +1,10 @@
 # 测试、试玩与验收计划
 
+本文件保留现有QA/AC编号定义，供合同和P1-B目录引用；不是每次改动必须全量执行的阶段计划。当前后续执行范围采用[风险分层测试](../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/02-testing-and-simplicity.md)与[场景表](../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/acceptance-scenarios.csv)。实际状态见[22](22-current-progress-and-resume.md)。
+
 ## 1. 当前验证状态
 
-游戏规则、引擎集成、真机、游戏美术、音频和玩家试玩全部**未执行**。本轮已检查设计文档、链接、清单、参数及学习快照完整性，并用真实浏览器检查阅读版。下列游戏用例是将来执行的测试，不是通过记录。
-
-阅读版验证：Edge/Playwright，1440×1000 与 375×812 视口，12个分册与12个目录链接存在；实际点击物理分册目录后跳转正确；SVG线框已加载，页面无横向溢出，表格在自身容器滚动，最终页面控制台无错误/警告。人工查看了桌面与小屏截图。证据：[阅读版记录](../output/playwright/reading-review.json)、[桌面截图](../output/playwright/reading-desktop.png)、[小屏截图](../output/playwright/reading-mobile.png)。这不等于游戏画面或手机真机测试通过。
+P1-A与P1-B已验收通过，真实结果见[当前进展](22-current-progress-and-resume.md)及[P1-B基线](../../_cleanup-backups/奶茶挤挤-20261103-review-cleanup/docs/32-p1b-final-delivery-worklist.md)。本文件保留QA编号与风险定义，不能把目录本身当通过记录。当前P1-C按[18组场景](../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/acceptance-scenarios.csv)和[分层验证](../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/02-testing-and-simplicity.md)执行；正式音频、真机和玩家试玩分别按当前实际结果记录。
 
 每条执行记录至少包括：用例ID、构建/提交、配置版本、引擎/物理后端、设备/系统/抖音版本、步骤、预期、实际、结论和证据路径。结论只用通过、失败、未执行、不适用；阻塞说明另外写原因。
 

@@ -1,0 +1,11 @@
+﻿id,name_zh,mp4_sec,mp4_resolution,video_fps,gif_frames,gif,mp4,runtime_implementation,qa
+01_drop,小料掉落,2.0,640x640,18,12,previews_gif/01_drop.gif,clips_mp4/01_drop.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+02_collision,软质碰撞,2.0,640x640,18,12,previews_gif/02_collision.gif,clips_mp4/02_collision.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+03_merge,同级合成,2.0,640x640,18,12,previews_gif/03_merge.gif,clips_mp4/03_merge.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+04_combo,连续连击,2.0,640x640,18,11,previews_gif/04_combo.gif,clips_mp4/04_combo.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+05_shake,晃杯反馈,2.0,640x640,18,12,previews_gif/05_shake.gif,clips_mp4/05_shake.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+06_danger,杯口危险,2.0,640x640,18,12,previews_gif/06_danger.gif,clips_mp4/06_danger.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+07_button,按钮按压,2.0,640x640,18,11,previews_gif/07_button.gif,clips_mp4/07_button.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+08_result,结算反馈,2.0,640x640,18,10,previews_gif/08_result.gif,clips_mp4/08_result.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+09_cat,猫咪店员,2.0,640x640,18,12,previews_gif/09_cat.gif,clips_mp4/09_cat.mp4,Cocos visual-tween + original logical events,visual motion present; playable
+10_transition,页面切换,2.0,640x640,18,12,previews_gif/10_transition.gif,clips_mp4/10_transition.mp4,Cocos visual-tween + original logical events,visual motion present; playable

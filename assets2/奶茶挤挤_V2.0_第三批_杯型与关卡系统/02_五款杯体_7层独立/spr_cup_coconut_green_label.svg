@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="1000" viewBox="0 0 750 1000"><defs>
+ <linearGradient id="plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fffdfa" stop-opacity=".60"/><stop offset=".23" stop-color="#BED2B3" stop-opacity=".17"/><stop offset=".72" stop-color="#ffffff" stop-opacity=".07"/><stop offset="1" stop-color="#fffefa" stop-opacity=".48"/></linearGradient>
+ <linearGradient id="tea" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#96C6A4" stop-opacity=".12"/><stop offset="1" stop-color="#B2CB9A" stop-opacity=".55"/></linearGradient>
+ <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf6" stop-opacity=".95"/><stop offset="1" stop-color="#96C6A4" stop-opacity=".40"/></linearGradient>
+ <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#96C6A4"/><stop offset="1" stop-color="#6A9878"/></linearGradient>
+ </defs><g transform="translate(375 0) scale(0.95000 1) translate(-375 0)"><g opacity=".77"><circle cx="375" cy="548" r="64" fill="#fff7ea" fill-opacity=".62" stroke="#6A9878" stroke-opacity=".42" stroke-width="5"/><path d="M375 514 Q431 549 375 591 Q319 549 375 514Z" fill="url(#mark)"/><path d="M375 579 Q374 549 394 535" fill="none" stroke="#fff8ee" stroke-width="8" stroke-linecap="round"/></g></g></svg>

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "status": "BLOCKED",
+  "scope": "Independent review; no runtime code edits, no new package, no upload",
+  "buildId": "20261104-spill-revive-tap-02",
+  "packageSha256": "f768704568d3c43a7122f2a205a79f253650026c3a6a13d4512a0e7ddcd93a3e",
+  "userUploadedPackageIdentityConfirmed": false,
+  "originalManifestFilesCompared": 311,
+  "sourceManifestMismatches": [],
+  "existingRegression": {"passed": 111, "failed": 0},
+  "typecheck": "PASS",
+  "optimizedAssetVerification": {"status": "PASS", "art": 71, "effects": 7},
+  "browserReleaseActualInput": {"viewport": [390,844], "screen": "PLAYING", "tick": 238, "dropIndex": 3, "loadedArt": 69, "fault": null, "buttons": ["shake","pause"]},
+  "additionalFindings": ["post-commit readback failure leaves revision2 vs durable revision3 and retries conflict", "cancelled ad enters SETTLING rather than retaining spill offer", "unauthorized maxDailyRevives=3", "stale current-candidate pointer corrected"],
+  "tapHostBlankScreen": "USER_REPORTED_FAIL_ROOT_CAUSE_OPEN",
+  "realAds": "NOT_RUN_POLICY_DISABLED",
+  "platformStartupAndMemoryRetest": "NOT_RUN",
+  "skillClientCapture": "BLACK_FRAME_ON_INITIAL_AND_LONGER_RETRY_NOT_COUNTED_AS_PASS",
+  "localDocumentValidation": {"files": 3, "links": 9, "missing": []}
+}

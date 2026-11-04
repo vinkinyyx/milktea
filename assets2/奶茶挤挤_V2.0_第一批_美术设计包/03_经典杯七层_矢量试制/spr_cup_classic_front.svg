@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="1000" viewBox="0 0 750 1000"><defs>
+<radialGradient id="sphere" cx="0.31" cy="0.22" r="0.84"><stop offset="0" stop-color="#fff7e9"/><stop offset=".54" stop-color="#ebc9a9"/><stop offset="1" stop-color="#be8d67"/></radialGradient>
+<linearGradient id="gold" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#fff5b9"/><stop offset=".22" stop-color="#ffd958"/><stop offset=".75" stop-color="#ffb41e"/><stop offset="1" stop-color="#e78012"/></linearGradient>
+<linearGradient id="butter" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffefa"/><stop offset=".66" stop-color="#fff0da"/><stop offset="1" stop-color="#e9c39c"/></linearGradient>
+<linearGradient id="cup" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fff5e8" stop-opacity=".65"/><stop offset=".26" stop-color="#ffd2a0" stop-opacity=".1"/><stop offset=".68" stop-color="#fffef4" stop-opacity=".08"/><stop offset="1" stop-color="#fff9ee" stop-opacity=".75"/></linearGradient>
+<linearGradient id="tea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe7b3" stop-opacity=".62"/><stop offset="1" stop-color="#d59660" stop-opacity=".78"/></linearGradient>
+</defs><path d="M116 190 L192 896" stroke="#ffffff" stroke-opacity=".68" stroke-width="23" stroke-linecap="round"/><path d="M627 205 L560 900" stroke="#fff6ec" stroke-opacity=".45" stroke-width="14" stroke-linecap="round"/><path d="M247 936 Q383 952 513 936" stroke="#fdf8f5" stroke-opacity=".46" stroke-width="12" fill="none"/></svg>

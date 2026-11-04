@@ -1,0 +1,9 @@
+{
+  "command": [
+    "node.exe",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-spill-revive-tap-02\\node_modules\\typescript\\bin\\tsc",
+    "--project",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-spill-revive-tap-02\\tsconfig.json"
+  ],
+  "cwd": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-spill-revive-tap-02"
+}

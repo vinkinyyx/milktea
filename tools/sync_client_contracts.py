@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "contracts" / "types.ts"
-DESTINATION = ROOT / "client" / "assets" / "scripts" / "contracts" / "types.ts"
+DESTINATION = ROOT / ROOT.name / "assets" / "scripts" / "contracts" / "types.ts"
 
 
 def main() -> int:

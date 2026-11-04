@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="1000" viewBox="0 0 750 1000"><defs>
+ <linearGradient id="plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fffdfa" stop-opacity=".60"/><stop offset=".23" stop-color="#B3835D" stop-opacity=".17"/><stop offset=".72" stop-color="#ffffff" stop-opacity=".07"/><stop offset="1" stop-color="#fffefa" stop-opacity=".48"/></linearGradient>
+ <linearGradient id="tea" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#F4C894" stop-opacity=".12"/><stop offset="1" stop-color="#CA9668" stop-opacity=".55"/></linearGradient>
+ <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf6" stop-opacity=".95"/><stop offset="1" stop-color="#F4C894" stop-opacity=".40"/></linearGradient>
+ <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4C894"/><stop offset="1" stop-color="#75472D"/></linearGradient>
+ </defs><g transform="translate(375 0) scale(0.85000 1) translate(-375 0)"><path d="M178 725 Q252 711 332 725 T506 726 L544 908 Q538 925 527 929 L218 929 Q206 927 203 907Z" fill="url(#tea)"/><path d="M180 728 Q263 711 375 727 Q481 742 545 724" fill="none" stroke="#75472D" stroke-opacity=".13" stroke-width="7"/></g></svg>

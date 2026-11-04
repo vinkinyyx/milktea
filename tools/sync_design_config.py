@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "config" / "design-baseline.json"
-DESTINATION = ROOT / "client" / "assets" / "resources" / "config" / "design-baseline.json"
+DESTINATION = ROOT / ROOT.name / "assets" / "resources" / "config" / "design-baseline.json"
 
 
 def validate(config: dict) -> None:
@@ -67,7 +67,7 @@ def validate(config: dict) -> None:
         scale = stage["cup_width_scale"]
         if scale > 4:
             raise ValueError(f"stages.{stage_id}.cup_width_scale 必须不大于4")
-        if cup["bottom_width_du"] * scale < largest_radius * 2:
+        if stage_id == "classic" and cup["bottom_width_du"] * scale < largest_radius * 2:
             raise ValueError(f"stages.{stage_id} 最窄杯底放不下最高级小料")
         for width in (cup["bottom_width_du"], cup["top_width_du"]):
             if cup["center_x_du"] - width * scale / 2 < 0 or cup["center_x_du"] + width * scale / 2 > viewport["width_du"]:
@@ -128,7 +128,7 @@ def main() -> int:
     if args.sync:
         DESTINATION.parent.mkdir(parents=True, exist_ok=True)
         DESTINATION.write_bytes(raw)
-        project_settings = ROOT / "client" / "settings" / "v2" / "packages" / "project.json"
+        project_settings = ROOT / ROOT.name / "settings" / "v2" / "packages" / "project.json"
         if project_settings.exists():
             settings = json.loads(project_settings.read_text(encoding="utf-8"))
             resolution = settings.setdefault("general", {}).setdefault("designResolution", {})

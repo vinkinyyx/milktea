@@ -1,0 +1,61 @@
+{
+  "cleanupStatus": "PASS",
+  "gameDeliveryStatus": "BLOCKED",
+  "beforeBytes": 7402305859,
+  "afterBytes": 445869424,
+  "projectBytesRemoved": 6956436435,
+  "beforeFiles": 253519,
+  "afterFiles": 9927,
+  "actionsCompleted": 230,
+  "archiveActions": 80,
+  "deleteActions": 149,
+  "archivedFileCount": 5305,
+  "archivedBytes": 634875362,
+  "archiveRoot": "D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261105-project-cleanup",
+  "protectedFiles": 2445,
+  "protectedFilesUnchanged": 2444,
+  "intentionalDocumentationChanges": [
+    "assets/README.md"
+  ],
+  "missingProtectedFiles": [],
+  "unexpectedProtectedChanges": [],
+  "archiveHashErrors": [],
+  "remainingPlannedTargets": [],
+  "remainingUnexpectedCaches": [],
+  "activeMarkdownFilesChecked": 30,
+  "localLinksChecked": 146,
+  "brokenActiveLinks": [],
+  "originalProjectSourceChanges": [],
+  "runtimeSourceChanges": [],
+  "gameZipsRemaining": [
+    "build-artifacts/cocos-taptap-minigame-build/20261104-spill-revive-tap-02/TapBuild/game.zip"
+  ],
+  "packageSha256": "f768704568d3c43a7122f2a205a79f253650026c3a6a13d4512a0e7ddcd93a3e",
+  "packageEntries": 398,
+  "zipCRC": "PASS",
+  "checks": {
+    "typecheck": "PASS",
+    "configMirror": "PASS",
+    "runtimeArt71": "PASS",
+    "optimizedAsset71Plus7": "PASS",
+    "existingRegression": "111/111 PASS",
+    "contractsMirror": "FAIL_PREEXISTING_UNCHANGED"
+  },
+  "contractMismatch": {
+    "rootSha256": "8e861682d3f52859a6b8033c3483c64a55b3c50af1291d58483220aa7848767d",
+    "engineSha256": "9348085a5188429952a67aa9d8327b8ff5db582be9937ae205725e8e23257d62",
+    "bothUnchangedFromBeforeCleanup": true
+  },
+  "notPerformed": [
+    "Game defect implementation",
+    "New build",
+    "Tap host/device/platform performance tests",
+    "Real ads",
+    "Upload or publication"
+  ],
+  "notes": [
+    "Project size reduction includes files moved to the external archive; it is not identical to disk space freed.",
+    "The regression-generated cache was moved reversibly to archive/_regenerated-test-cache after tests.",
+    "Validation output/report files add a few KB after the size snapshot."
+  ]
+}

@@ -1,0 +1,834 @@
+{
+  "project": "奶茶挤挤",
+  "version": "V2.0",
+  "deliverable_type": "第一批设计 + 透明矢量运行技术试制",
+  "nine_ingredients": [
+    {
+      "asset_id": "spr_ing_sago_base",
+      "name": "西米团"
+    },
+    {
+      "asset_id": "spr_ing_red_bean_base",
+      "name": "红豆团"
+    },
+    {
+      "asset_id": "spr_ing_small_pearl_base",
+      "name": "小珍珠"
+    },
+    {
+      "asset_id": "spr_ing_coconut_base",
+      "name": "椰果"
+    },
+    {
+      "asset_id": "spr_ing_large_pearl_base",
+      "name": "大珍珠"
+    },
+    {
+      "asset_id": "spr_ing_grass_jelly_base",
+      "name": "仙草冻"
+    },
+    {
+      "asset_id": "spr_ing_pudding_base",
+      "name": "布丁"
+    },
+    {
+      "asset_id": "spr_ing_taro_base",
+      "name": "芋泥球"
+    },
+    {
+      "asset_id": "spr_ing_mochi_base",
+      "name": "麻薯团"
+    }
+  ],
+  "classic_cup_layers": [
+    "spr_cup_classic_back",
+    "spr_cup_classic_tea",
+    "spr_cup_classic_rim_back",
+    "spr_cup_classic_front",
+    "spr_cup_classic_rim_front",
+    "spr_cup_classic_base",
+    "spr_cup_classic_label"
+  ],
+  "files": [
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_coconut_base.svg",
+      "bytes": 2934,
+      "sha256": "2d0756555910cea28d7eef760c93129c4c14b349bb962251b5de81a9c9f4c12f"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_coconut_base@1024.png",
+      "bytes": 162344,
+      "sha256": "40a1bc711a9227fbfaaa7b05c603fcf0f43e445c43d272591055c5fdd3a4b72e",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_coconut_base@128.png",
+      "bytes": 13095,
+      "sha256": "97a4f8bb8cb39502babb71a69bab4c0c56ccfff709fd3f3a3600d3431a08d166",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_coconut_base@256.png",
+      "bytes": 32192,
+      "sha256": "42677f5b4642a938f1f8c5df7e7bc19cd7c47bfc12bd10773b0c45cd0725fb02",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_coconut_base@512.png",
+      "bytes": 71832,
+      "sha256": "04e2681e7cde66490a88e3dfcddad1b376382bb076eab1c312c81d4a5723bfb3",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_grass_jelly_base.svg",
+      "bytes": 1888,
+      "sha256": "f6022afc944ed7e3fa80df7e6754b6ae63f9ad4af060e06da7709afd78e1f599"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_grass_jelly_base@1024.png",
+      "bytes": 190801,
+      "sha256": "35b620a195c5befd1b2c3d815fa34bf72fee1cb3a21828b754f92878288a4515",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_grass_jelly_base@128.png",
+      "bytes": 13216,
+      "sha256": "03c17630275b7cc4d14a1885da08855274a17fe51f8f0781fdeaa1df9ef7e0fb",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_grass_jelly_base@256.png",
+      "bytes": 33982,
+      "sha256": "7666abad0eb207a1a226d2a33b35f7fa77967aaeba7add1bc500e634e89ce5d7",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_grass_jelly_base@512.png",
+      "bytes": 80840,
+      "sha256": "4d46c2a9977ea20e130e69764582f01e7416c4eba0a8ca5a8baeb6026938bf65",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_large_pearl_base.svg",
+      "bytes": 1635,
+      "sha256": "1798e427620598727f15e0e1ccd88581a073e113b5999f4ac31811921ab03855"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_large_pearl_base@1024.png",
+      "bytes": 163929,
+      "sha256": "2b05203e10ff14fbfefc42be91363c03a8cf6009383b68ae18dce8c980d78a86",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_large_pearl_base@128.png",
+      "bytes": 10912,
+      "sha256": "1753eb673d8c7c0cf0e6bdb1926d2afbe96ea4897903cf361984588e6afd35af",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_large_pearl_base@256.png",
+      "bytes": 27876,
+      "sha256": "d76c368537a9e5bd43e4ef4a5f05935df059af0782127ab838eed399d421cf79",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_large_pearl_base@512.png",
+      "bytes": 67429,
+      "sha256": "2040fdb46250371bd1dad6880275b2b848d4214f2db9dc81872eb8631003300f",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_mochi_base.svg",
+      "bytes": 1920,
+      "sha256": "ef18f8bbf72e2f51acd91028c4acd06404214170da6452dc2bcb7760e1e9040e"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_mochi_base@1024.png",
+      "bytes": 117575,
+      "sha256": "a22944a07d1075dd7977aa5c2a8045c5d12ab0675135836cd1c3cfc4e6e3d720",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_mochi_base@128.png",
+      "bytes": 10292,
+      "sha256": "ad9c2b19d86f7cc90795cb53baaefacb3476aba020c5ef74b8e444f78ba05a8e",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_mochi_base@256.png",
+      "bytes": 23355,
+      "sha256": "567a890f1bbc383b24f9a836f28030fee066eedf9541776454095487a126b62f",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_mochi_base@512.png",
+      "bytes": 52140,
+      "sha256": "7c6cc6f33ad6abf9e24830fb5f59490d6cd10ee2cda767bf029f4d55b012a4a3",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_pudding_base.svg",
+      "bytes": 1940,
+      "sha256": "ddbbc814c1c186ddcc80519b2697fd7faf2b79e83a5fcff7ead5591005c5c434"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_pudding_base@1024.png",
+      "bytes": 187778,
+      "sha256": "9ddd850390db16a7aca33f07aa8594045ddd46945dbbd83a6353d455bd42f1ca",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_pudding_base@128.png",
+      "bytes": 13209,
+      "sha256": "44f49931ab9e98eb63d712c3f2797db7affc4ec951e9d1745bdd5795180967c4",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_pudding_base@256.png",
+      "bytes": 32941,
+      "sha256": "bedba77eae44a6db27dacebc24ab3e680a02f26a0f047357b21cb00efe58a9fb",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_pudding_base@512.png",
+      "bytes": 78369,
+      "sha256": "c418f39ad843b65307ab1c5264a36be1d006aad26bc331f48c53ba3642747868",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_red_bean_base.svg",
+      "bytes": 4087,
+      "sha256": "18dfb7508a56f2d3fdcbc774421c48d55428ba73faf4ee3d3a1f3819b0f86a59"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_red_bean_base@1024.png",
+      "bytes": 169453,
+      "sha256": "8dcee074d8c738e1250b73866a7e4f1ff93e617d5533843ad22b8c2dc5365a08",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_red_bean_base@128.png",
+      "bytes": 14151,
+      "sha256": "a01f5d219a45bd3892d4f9cb037cb5b90ff48053d0b084f7e475af63ac8e7d8d",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_red_bean_base@256.png",
+      "bytes": 33598,
+      "sha256": "a0baa56a452c4c27d39d458ad897a1bc606e6bc871140bb6d0d9e892d9bf3f35",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_red_bean_base@512.png",
+      "bytes": 75684,
+      "sha256": "57464e7498686e4b987f9481d91f01cecc0208b9a3bda2394e570fcdc8cd2e6d",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_sago_base.svg",
+      "bytes": 3276,
+      "sha256": "52aac6025ddabad89702df17e2fbad21e2c468443c2ed37166254f6824a2c604"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_sago_base@1024.png",
+      "bytes": 181806,
+      "sha256": "2d53482b287c13a82305275aec61a458a007be02e4592df636d8d8144e4f832d",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_sago_base@128.png",
+      "bytes": 14294,
+      "sha256": "aa558c3782edeeec5aabe2c957f57201e53efcb95cdfd8971b38c4d93353d679",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_sago_base@256.png",
+      "bytes": 35608,
+      "sha256": "c6ae445ba9b5fc46300a3bab165d600f654f67f53315c68d3836dff45621de9c",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_sago_base@512.png",
+      "bytes": 80798,
+      "sha256": "caea875607708c8f8d750cff87c6122c87038cec8cce0a320646635bbf345600",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_small_pearl_base.svg",
+      "bytes": 1512,
+      "sha256": "5c31697f962e46b8d7fa1da1bca5b80d244e22ac72a22072a4bebb26a6ea511e"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_small_pearl_base@1024.png",
+      "bytes": 171468,
+      "sha256": "1ecbfd7c381d3567976e0473d5826fd9eee188add9f23dd03eb749f38e6b02cb",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_small_pearl_base@128.png",
+      "bytes": 10399,
+      "sha256": "e7d00ce4bebd9760fe6dc536fe8a841e52de2defa52832e0957567a5612136ad",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_small_pearl_base@256.png",
+      "bytes": 27472,
+      "sha256": "91d03c08d4ce6d0160c1b1cfbd6cbb513361b23d282498d9321cf223becae17d",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_small_pearl_base@512.png",
+      "bytes": 68354,
+      "sha256": "865e936cad03c5eadd559dcc64d3ce072021efbff6d4542b66d9e291571de261",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_taro_base.svg",
+      "bytes": 1790,
+      "sha256": "584bccb13934aa531dd96760931ccec04a3b687d5825636a9d49d2e928d546f8"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_taro_base@1024.png",
+      "bytes": 194835,
+      "sha256": "47614ebbd5c0948eb1f94e507838c9a9a06dd4e0901e786b5739aaea6490fe92",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_taro_base@128.png",
+      "bytes": 12661,
+      "sha256": "4030f1145bb42c235e7fca96853a986ff51fed91da011da90a18eb23da59487c",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_taro_base@256.png",
+      "bytes": 33079,
+      "sha256": "c51cd3303ba8e040a6630c6be9a51f75d0aeb6b061ab30e7f8cb9e0282df0e77",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/spr_ing_taro_base@512.png",
+      "bytes": 80638,
+      "sha256": "7698a89b3dce3a8414589115468dbbd75ee0f28a76629b664a93bff2848d78e6",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_coconut_thumb@96.png",
+      "bytes": 11367,
+      "sha256": "43ca04d58ecb3c5c3a5f0db8837e11f5657a4836be037ae3ca3dd0b64ff156c2",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_grass_jelly_thumb@96.png",
+      "bytes": 10936,
+      "sha256": "7a55093bbd81b825267bbe06297f1b6a76165e0c101f9414e50c466121e47a20",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_large_pearl_thumb@96.png",
+      "bytes": 9546,
+      "sha256": "d65b8b3647a9a05754a0a64efef1ca94802d31bf3fb0224b1ab9d0d7fcbefad8",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_mochi_thumb@96.png",
+      "bytes": 9347,
+      "sha256": "2a11ecc774a8ad0401d9390fc8a73067e15b17d7c8e03d06adc6c11ec7d17696",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_pudding_thumb@96.png",
+      "bytes": 11515,
+      "sha256": "9309be88fca2ab92cce71ba965ad7ce056c21c7b9c30b9ee5790226ba947fef6",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_red_bean_thumb@96.png",
+      "bytes": 12718,
+      "sha256": "9ff3bd063664a2c4d7729c4d8d4aaecf293c8f31191db50963b5603d1ad08fc8",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_sago_thumb@96.png",
+      "bytes": 12497,
+      "sha256": "9046338ea097f04572f50d7f10f2c36f0eb85fd88f109ac44c04856882813067",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_small_pearl_thumb@96.png",
+      "bytes": 8697,
+      "sha256": "14ae5731e3e67f87dc026cfbfbf6aeb425653313a041a73bad6dae37959c7b4c",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "02_九级小料_矢量试制/ui_ing_taro_thumb@96.png",
+      "bytes": 10625,
+      "sha256": "ec52cbd624a04cc17a210c0ee0e2f5a0b6e7fe73056ed2ee731db026f8ed8669",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_back.png",
+      "bytes": 31915,
+      "sha256": "4ff15cb7c3a0ae40f545c02f94f16c1ed5b14e454e07a30a2552f3e1f94449d8",
+      "size": [
+        750,
+        1000
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_back.svg",
+      "bytes": 1407,
+      "sha256": "dd4632fd58b1c0a02758ae47da37a2a7c33a84fa0843a80f7a8832dbfc139685"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_base.png",
+      "bytes": 10307,
+      "sha256": "65ac7d60b66d4180ced1981f4f06cd46d25099b2bdcdbfc3fe9e1a8ca69e13ea",
+      "size": [
+        750,
+        1000
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_base.svg",
+      "bytes": 1379,
+      "sha256": "7f2a0c8d4d265d2617451e7fdf889a8db7cca8b6a988fcecf96a6e9ab6e93a42"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_front.png",
+      "bytes": 18247,
+      "sha256": "5154a8429103421419edff3ed7c03005c499f140aca87ea87ded1609a68d7ec1",
+      "size": [
+        750,
+        1000
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_front.svg",
+      "bytes": 1520,
+      "sha256": "69571f8ec918638581d2ed19cc6b89b99794721a806c2e6f1ad98ee24c2845c3"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_label.png",
+      "bytes": 7839,
+      "sha256": "46d158cd52235f88b75d080564dc504b2bfebea3ab0f2cab0faadb98f67754d1",
+      "size": [
+        750,
+        1000
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_label.svg",
+      "bytes": 1512,
+      "sha256": "3f5b17438b45d1129bf0fba704478f60e1f41988655b55de7258492a9824ec5a"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_rim_back.png",
+      "bytes": 9688,
+      "sha256": "ac1344de4ca933628bacc5bbf368b0dfe72719ee5ac6ac8f00081932b4ef1d77",
+      "size": [
+        750,
+        1000
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_rim_back.svg",
+      "bytes": 1376,
+      "sha256": "5abe5f1ef16c39c10f07b873448ba6ef886a9fdba9cffda59f2af81bcb4818f3"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_rim_front.png",
+      "bytes": 9827,
+      "sha256": "9022302b4ba72214c666c10a01be88744f32b576b98e390c9bf81943af9bc000",
+      "size": [
+        750,
+        1000
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_rim_front.svg",
+      "bytes": 1376,
+      "sha256": "29608d894ecca39aa9e698b505d1b81ac748eb793d46dc057c271ad5ae0ddbef"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_tea.png",
+      "bytes": 11785,
+      "sha256": "c8c0f92eeb9f8f69fc1e6d63056a7941545a470b22237eb37ca18c028ccb9625",
+      "size": [
+        750,
+        1000
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "03_经典杯七层_矢量试制/spr_cup_classic_tea.svg",
+      "bytes": 1321,
+      "sha256": "3c2a4fdf4f6764a61aa8dcc53ffccc3f9fe2e058e2f220c02ce0fb4c64a7205d"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_icon_disabled.png",
+      "bytes": 3896,
+      "sha256": "42222e5bcda6985e634a15177a93bd3a04350ca0f1c8cc7a6aacf46398f3810f",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_icon_disabled.svg",
+      "bytes": 1525,
+      "sha256": "3bd117762306627db95ff12f418baae4be376f34ec60fdc64625dd7c00ab8e95"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_icon_normal.png",
+      "bytes": 3841,
+      "sha256": "262ba00eb2e6b46392cb5212bdbb5af43ee7f5ffa2b1734948fccbd449599fac",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_icon_normal.svg",
+      "bytes": 1512,
+      "sha256": "01afcb55372361221ede694925d6baedc4ec60fae4ed417bfbbba48353102f13"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_icon_pressed.png",
+      "bytes": 3603,
+      "sha256": "f29c7d2c88a12791fbb0de959201b8ce69d26a698e9c6628bfb5a94464f60875",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_icon_pressed.svg",
+      "bytes": 1513,
+      "sha256": "a50f3ad90a00676c1c6adf6fd1591a5ea5f626e95620a87619a7399e20cba25b"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_icon_selected.png",
+      "bytes": 5014,
+      "sha256": "a47548a92fb8db9ec2adf6f4b7c089f229c445b6d78c639de5cbb4dc6a4b6fb5",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_icon_selected.svg",
+      "bytes": 1609,
+      "sha256": "f7a815e50ade0fd27a6d4010a8e996b553b068a821c37ed9793082339c723012"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_primary_disabled.png",
+      "bytes": 3885,
+      "sha256": "4450f5d1ea9d7cfd2532f10fab4cf3a81048d38c51753d10a82565d6da46d452",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_primary_disabled.svg",
+      "bytes": 1523,
+      "sha256": "5ac85db51ad6eb6b89fe23c063bea5e34c1968f485d3eb54bbd2f0d5f31c03a3"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_primary_normal.png",
+      "bytes": 3809,
+      "sha256": "0602c280c6ac0b95f65d2aea228a7e18e2003279825962be989465c77fac70b8",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_primary_normal.svg",
+      "bytes": 1510,
+      "sha256": "71fddbf5a991b839892e6cf172b0b3ab10ff1d1743f3f590da453b7aa3a30d68"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_primary_pressed.png",
+      "bytes": 3582,
+      "sha256": "51cbcf69a4e13ea979190868acc185c37af070c753082e7c6f3f5dfdb87c8693",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_primary_pressed.svg",
+      "bytes": 1511,
+      "sha256": "751d81ff5c6b485473c0a6a26d504acb9c771493199c725ac086b6862f848d29"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_primary_selected.png",
+      "bytes": 5133,
+      "sha256": "cd5f626217726e994da34f15f1321cf3c35b4af8e4ce22a473770fac7fe55dfe",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_primary_selected.svg",
+      "bytes": 1607,
+      "sha256": "2b5d1b7a1caa6c2d099fb343978363f8a540de12771992d8d35aea6ac6619d79"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_secondary_disabled.png",
+      "bytes": 3896,
+      "sha256": "42222e5bcda6985e634a15177a93bd3a04350ca0f1c8cc7a6aacf46398f3810f",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_secondary_disabled.svg",
+      "bytes": 1525,
+      "sha256": "e52931d92ee54b5ae49024d19b9d9b6e6270fae8fb2b498c57a3abc51c11e247"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_secondary_normal.png",
+      "bytes": 3841,
+      "sha256": "262ba00eb2e6b46392cb5212bdbb5af43ee7f5ffa2b1734948fccbd449599fac",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_secondary_normal.svg",
+      "bytes": 1512,
+      "sha256": "eaa51af7f642fa8ee1f0653b413ec6b66bf22d494a05172452c5bca351db8a14"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_secondary_pressed.png",
+      "bytes": 3603,
+      "sha256": "f29c7d2c88a12791fbb0de959201b8ce69d26a698e9c6628bfb5a94464f60875",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_secondary_pressed.svg",
+      "bytes": 1513,
+      "sha256": "d77529f97a090310b5fce8b8f1c70c2e46ca293105fe014a2de536c6f44b38e3"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_secondary_selected.png",
+      "bytes": 5014,
+      "sha256": "a47548a92fb8db9ec2adf6f4b7c089f229c445b6d78c639de5cbb4dc6a4b6fb5",
+      "size": [
+        256,
+        96
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "04_核心按钮_矢量试制/ui_btn_secondary_selected.svg",
+      "bytes": 1609,
+      "sha256": "2f29ed5f919fe31d3e164d439152783b2c775934b3e0ca79dda11b0887b93e0c"
+    }
+  ]
+}

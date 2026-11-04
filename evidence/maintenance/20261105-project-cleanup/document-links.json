@@ -1,0 +1,78 @@
+{
+  "rewritten": [
+    {
+      "file": "docs/01-requirements.md",
+      "from": "40-unified-acceptance-background-ads.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/40-unified-acceptance-background-ads.md"
+    },
+    {
+      "file": "docs/01-requirements.md",
+      "from": "development/lean-release/task-backlog.csv",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/task-backlog.csv"
+    },
+    {
+      "file": "docs/09-qa-acceptance.md",
+      "from": "development/lean-release/02-testing-and-simplicity.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/02-testing-and-simplicity.md"
+    },
+    {
+      "file": "docs/09-qa-acceptance.md",
+      "from": "development/lean-release/acceptance-scenarios.csv",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/acceptance-scenarios.csv"
+    },
+    {
+      "file": "docs/09-qa-acceptance.md",
+      "from": "development/lean-release/acceptance-scenarios.csv",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/acceptance-scenarios.csv"
+    },
+    {
+      "file": "docs/09-qa-acceptance.md",
+      "from": "development/lean-release/02-testing-and-simplicity.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/02-testing-and-simplicity.md"
+    },
+    {
+      "file": "docs/14-image-production.md",
+      "from": "development/lean-release/03-package-budget.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/03-package-budget.md"
+    },
+    {
+      "file": "docs/21-music-design.md",
+      "from": "development/p1c-implementation/02-audio-settings-tutorial.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/p1c-implementation/02-audio-settings-tutorial.md"
+    },
+    {
+      "file": "docs/21-music-design.md",
+      "from": "development/p1c-implementation/02-audio-settings-tutorial.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/p1c-implementation/02-audio-settings-tutorial.md"
+    },
+    {
+      "file": "docs/21-music-design.md",
+      "from": "development/p1c-implementation/02-audio-settings-tutorial.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/p1c-implementation/02-audio-settings-tutorial.md"
+    },
+    {
+      "file": "docs/42-animation-start-physics-design.md",
+      "from": "../evidence/Acceptance/20261104-animation-start-review/acceptance.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/evidence/Acceptance/20261104-animation-start-review/acceptance.md"
+    },
+    {
+      "file": "docs/development/animation-start-physics/01-review.md",
+      "from": "../../../evidence/Acceptance/20261104-animation-start-review/acceptance.md",
+      "to": "../../../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/evidence/Acceptance/20261104-animation-start-review/acceptance.md"
+    }
+  ],
+  "unresolved": [
+    {
+      "file": "docs/archive-location.md",
+      "target": "../evidence/maintenance/20261105-project-cleanup/validation.json"
+    },
+    {
+      "file": "docs/development/animation-start-physics/08-acceptance-report.md",
+      "target": "game.zip"
+    },
+    {
+      "file": "docs/development/animation-start-physics/08-acceptance-report.md",
+      "target": "game.zip.sha256"
+    }
+  ]
+}

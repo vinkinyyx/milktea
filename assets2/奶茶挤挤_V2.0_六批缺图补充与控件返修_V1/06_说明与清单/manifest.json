@@ -1,0 +1,258 @@
+{
+  "version": "V2.0-patch-01",
+  "source_document": "missing-and-rework.md",
+  "base_background": "/mnt/data/奶茶挤挤_V2.0_第一批_美术设计包/01_已生成原创设计参考/bg_shop_base_750x1334_平面背景候选.png",
+  "background_seams": {
+    "top_last_row_equals_base_first": true,
+    "bottom_first_row_equals_base_last": true
+  },
+  "inventory": [
+    {
+      "asset": "bg_shop_extend_bottom",
+      "relative_path": "01_缺失优先图/bg_shop_extend_bottom.png",
+      "format": "png",
+      "size": [
+        750,
+        400
+      ]
+    },
+    {
+      "asset": "bg_shop_extend_top",
+      "relative_path": "01_缺失优先图/bg_shop_extend_top.png",
+      "format": "png",
+      "size": [
+        750,
+        400
+      ]
+    },
+    {
+      "asset": "spr_cup_shadow",
+      "relative_path": "01_缺失优先图/spr_cup_shadow.png",
+      "format": "png",
+      "size": [
+        512,
+        128
+      ]
+    },
+    {
+      "asset": "spr_cup_shadow",
+      "relative_path": "01_缺失优先图/spr_cup_shadow.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "spr_face_happy",
+      "relative_path": "02_可选表情/spr_face_happy.png",
+      "format": "png",
+      "size": [
+        256,
+        128
+      ]
+    },
+    {
+      "asset": "spr_face_happy",
+      "relative_path": "02_可选表情/spr_face_happy.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "spr_face_neutral",
+      "relative_path": "02_可选表情/spr_face_neutral.png",
+      "format": "png",
+      "size": [
+        256,
+        128
+      ]
+    },
+    {
+      "asset": "spr_face_neutral",
+      "relative_path": "02_可选表情/spr_face_neutral.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "spr_face_surprised",
+      "relative_path": "02_可选表情/spr_face_surprised.png",
+      "format": "png",
+      "size": [
+        256,
+        128
+      ]
+    },
+    {
+      "asset": "spr_face_surprised",
+      "relative_path": "02_可选表情/spr_face_surprised.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_btn_icon_disabled",
+      "relative_path": "03_修正版控件/ui_btn_icon_disabled.png",
+      "format": "png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "asset": "ui_btn_icon_disabled",
+      "relative_path": "03_修正版控件/ui_btn_icon_disabled.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_btn_icon_normal",
+      "relative_path": "03_修正版控件/ui_btn_icon_normal.png",
+      "format": "png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "asset": "ui_btn_icon_normal",
+      "relative_path": "03_修正版控件/ui_btn_icon_normal.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_btn_icon_pressed",
+      "relative_path": "03_修正版控件/ui_btn_icon_pressed.png",
+      "format": "png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "asset": "ui_btn_icon_pressed",
+      "relative_path": "03_修正版控件/ui_btn_icon_pressed.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_btn_icon_selected",
+      "relative_path": "03_修正版控件/ui_btn_icon_selected.png",
+      "format": "png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "asset": "ui_btn_icon_selected",
+      "relative_path": "03_修正版控件/ui_btn_icon_selected.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_slider_fill_full",
+      "relative_path": "03_修正版控件/ui_slider_fill_full.png",
+      "format": "png",
+      "size": [
+        256,
+        24
+      ]
+    },
+    {
+      "asset": "ui_slider_fill_full",
+      "relative_path": "03_修正版控件/ui_slider_fill_full.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_slider_track_empty",
+      "relative_path": "03_修正版控件/ui_slider_track_empty.png",
+      "format": "png",
+      "size": [
+        256,
+        24
+      ]
+    },
+    {
+      "asset": "ui_slider_track_empty",
+      "relative_path": "03_修正版控件/ui_slider_track_empty.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_icon_publish",
+      "relative_path": "04_延后功能图标/ui_icon_publish.png",
+      "format": "png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "asset": "ui_icon_publish",
+      "relative_path": "04_延后功能图标/ui_icon_publish.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_icon_publish@48",
+      "relative_path": "04_延后功能图标/ui_icon_publish@48.png",
+      "format": "png",
+      "size": [
+        48,
+        48
+      ]
+    },
+    {
+      "asset": "ui_icon_record",
+      "relative_path": "04_延后功能图标/ui_icon_record.png",
+      "format": "png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "asset": "ui_icon_record",
+      "relative_path": "04_延后功能图标/ui_icon_record.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_icon_record@48",
+      "relative_path": "04_延后功能图标/ui_icon_record@48.png",
+      "format": "png",
+      "size": [
+        48,
+        48
+      ]
+    },
+    {
+      "asset": "ui_icon_sidebar",
+      "relative_path": "04_延后功能图标/ui_icon_sidebar.png",
+      "format": "png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "asset": "ui_icon_sidebar",
+      "relative_path": "04_延后功能图标/ui_icon_sidebar.svg",
+      "format": "svg",
+      "size": null
+    },
+    {
+      "asset": "ui_icon_sidebar@48",
+      "relative_path": "04_延后功能图标/ui_icon_sidebar@48.png",
+      "format": "png",
+      "size": [
+        48,
+        48
+      ]
+    }
+  ],
+  "checks": {
+    "PNG_load": true,
+    "SVG_sources": true,
+    "alpha_masks": true,
+    "Cocos_integration": "not_tested",
+    "long_screen_real_device": "not_tested"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "platform": "wechatgame",
+  "name": "奶茶挤挤",
+  "buildPath": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-taptap-minigame-build\\20261104-recovery-memory-tap-release-02",
+  "outputName": "wechatgame",
+  "debug": false,
+  "sourceMaps": false,
+  "startScene": "44e30fdb-084f-5609-8283-4fdd8d2fab81",
+  "scenes": [
+    {
+      "uuid": "44e30fdb-084f-5609-8283-4fdd8d2fab81",
+      "url": "db://assets/scenes/Boot.scene"
+    }
+  ],
+  "packages": {
+    "wechatgame": {
+      "orientation": "portrait",
+      "appid": ""
+    },
+    "taptap-minigame-tools": {
+      "enableTapConvert": true,
+      "tapAppid": "tapmccrbqbepy6dfz3",
+      "gameVersion": "0.1.2",
+      "usePythonScript": false,
+      "deleteWechatBuild": false
+    }
+  }
+}

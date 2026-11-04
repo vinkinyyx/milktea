@@ -1,12 +1,12 @@
 # 图像制作总规范与完整交付清单
 
-版本handoff-v0.2；本分册保留制作规格。2026-10-27已收到P1～P4交付与补件，最新检查见 [补交复查](18-supplement-cleanup-report.md)，首次检查保留在 [素材复核报告](17-asset-intake-report.md)；可浏览 [已入库素材](../assets/library/index.html)。入库不代表最终美术锁版；导线仍不是最终美术。
+当前制作与导出规范；素材真值见[素材入口](../assets/README.md)和[catalog](../assets/library/catalog.json)。保留源稿/meta，首发按实际variant导出，不为资源库全部图片强行入包；包体和图集规则见[当前预算](../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/lean-release/03-package-budget.md)。
 
 ## 1. 领取与交付入口
 - [可搜索的逐项清单](../assets/image-elements.html)：按阶段、名称和制作方式筛选。
 - [CSV完整清单](../assets/image-elements.csv)：213项，一行一个资产ID，不是只有“UI一套”的模糊报价。
-- [JSON数据源输出](../assets/image-elements.json) 与 [逐项Markdown](art/image-catalog.md)：同一份生成源。
-- [原画方向/动效](04-art-ui-motion.md)、[音频](05-audio-spec.md)仍适用。冲突时本文件细化制作规格，玩法数值以配置为准。
+- [JSON数据源输出](../assets/image-elements.json) 与 [逐项Markdown](../assets/image-elements.html)：同一份生成源。
+- [原画方向/动效](14-image-production.md)、[音频](21-music-design.md)仍适用。冲突时本文件细化制作规格，玩法数值以配置为准。
 
 137项new_draw是设计母版任务，55项derived是缩略/剪影/分享卡等导出或合成，16项engine由程序画，5项platform由真实平台或授权数据提供。3项表情为可选、2项未来装饰为候选，不是首发强制新增需求。母版可同一个设计源文件分层交付，不能把137误解为137张独立概念稿。一个资产的128/256/512三档导出只算一个ID。
 

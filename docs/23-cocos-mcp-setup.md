@@ -13,7 +13,7 @@
 | Node/npm | v24.13.0 / 11.6.2，满足上游Node≥20 |
 | 依赖与构建 | 两仓库均`npm ci`、`npm run build`退出0，保留原package-lock.json；无npm audit fix或版本漂移 |
 | FFmpeg | imageio-ffmpeg0.7.0包内Windows FFmpeg7.1；本地`tools/audio-runtime/bin/ffmpeg.exe`，只注入Asset Forge进程PATH，未改系统PATH |
-| 工程桥 | [client/extensions/codex-editor-bridge](../client/extensions/codex-editor-bridge/package.json)，4个上游生成文件，未覆盖已有扩展 |
+| 工程桥 | [工程扩展 codex-editor-bridge](../奶茶挤挤/extensions/codex-editor-bridge/package.json)，4个上游生成文件，未覆盖已有扩展 |
 
 上游地址：[Creator MCP](https://github.com/lightblink/cocos-creator-local-mcp)、[Asset Forge](https://github.com/lightblink/cocos-asset-forge-mcp)、[音乐skill](https://github.com/sora16bit/codex-game-music-skill)。均记录MIT许可。FFmpeg仅开发机本地工具，不随游戏分发；若后续分发其二进制需另审其构建许可。
 
@@ -47,10 +47,10 @@ Asset Forge配置文件`C:/Users/vinki/.codex/tools/milktea-asset-forge.json`：
 
 | 检查 | 结果/证据 |
 | --- | --- |
-| 独立MCP SDK握手/listTools | PASS，Creator26工具、Forge11工具；[mcp-smoke.json](../evidence/tooling/20261028-cocos-mcp/mcp-smoke.json) |
-| 当前聊天原生MCP工具加载 | PASS，本轮工具目录已动态出现两个namespace，原生get_environment与get_config调用成功；[native-client-smoke.json](../evidence/tooling/20261028-cocos-mcp/native-client-smoke.json) |
+| 独立MCP SDK握手/listTools | PASS，Creator26工具、Forge11工具；[mcp-smoke.json](../../_cleanup-backups/奶茶挤挤-20261103-review-cleanup/evidence/tooling/20261028-cocos-mcp/mcp-smoke.json) |
+| 当前聊天原生MCP工具加载 | PASS，本轮工具目录已动态出现两个namespace，原生get_environment与get_config调用成功；[native-client-smoke.json](../../_cleanup-backups/奶茶挤挤-20261103-review-cleanup/evidence/tooling/20261028-cocos-mcp/native-client-smoke.json) |
 | 环境识别 | PASS，Creator实际Windows路径found=true；微信CLI未找到，不是本项目当前阻塞 |
-| 工程扩展安装 | PASS，实际4文件存在；首次已运行编辑器未加载时ping失败，保留[mcp-initial-smoke.json](../evidence/tooling/20261028-cocos-mcp/mcp-initial-smoke.json) |
+| 工程扩展安装 | PASS，实际4文件存在；首次已运行编辑器未加载时ping失败，保留[mcp-initial-smoke.json](../../_cleanup-backups/奶茶挤挤-20261103-review-cleanup/evidence/tooling/20261028-cocos-mcp/mcp-initial-smoke.json) |
 | 桥接启动 | PASS，重新打开client后日志extension enable，HTTP /health返回200且包名/版本正确 |
 | 桥接读取真实场景 | PASS，POST /scene/summary返回Boot UUID `44e30fdb-084f-5609-8283-4fdd8d2fab81`及AppRoot，不只是端口可达 |
 | Asset Forge上游测试 | 初次15/16通过、ffmpeg ENOENT；安装本地FFmpeg并注入PATH后16/16通过 |

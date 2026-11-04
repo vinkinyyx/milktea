@@ -1,0 +1,486 @@
+{
+  "phase": "P3-A",
+  "version": "V2.0-2026-11-02-prototype",
+  "records": [
+    {
+      "asset_id": "ui_stage_classic_card",
+      "name_zh": "经典奶茶菜单封面",
+      "batch_id": "P3A-05",
+      "production_method": "derived",
+      "export_spec": "480x600 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息"
+    },
+    {
+      "asset_id": "spr_cup_coconut_green_back",
+      "name_zh": "椰香绿茶杯后壁",
+      "batch_id": "P3A-01",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_coconut_green_tea",
+      "name_zh": "椰香绿茶杯内奶茶底色",
+      "batch_id": "P3A-01",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_coconut_green_front",
+      "name_zh": "椰香绿茶杯前壁高光",
+      "batch_id": "P3A-01",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_coconut_green_rim_back",
+      "name_zh": "椰香绿茶杯口后缘",
+      "batch_id": "P3A-01",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_coconut_green_rim_front",
+      "name_zh": "椰香绿茶杯口前缘",
+      "batch_id": "P3A-01",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_coconut_green_base",
+      "name_zh": "椰香绿茶杯底装饰",
+      "batch_id": "P3A-01",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_coconut_green_label",
+      "name_zh": "椰香绿茶杯身无文字印花",
+      "batch_id": "P3A-01",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "ui_stage_coconut_green_card",
+      "name_zh": "椰香绿茶菜单封面",
+      "batch_id": "P3A-05",
+      "production_method": "derived",
+      "export_spec": "480x600 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息"
+    },
+    {
+      "asset_id": "spr_cup_taro_boba_back",
+      "name_zh": "芋泥波波杯后壁",
+      "batch_id": "P3A-02",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_taro_boba_tea",
+      "name_zh": "芋泥波波杯内奶茶底色",
+      "batch_id": "P3A-02",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_taro_boba_front",
+      "name_zh": "芋泥波波杯前壁高光",
+      "batch_id": "P3A-02",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_taro_boba_rim_back",
+      "name_zh": "芋泥波波杯口后缘",
+      "batch_id": "P3A-02",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_taro_boba_rim_front",
+      "name_zh": "芋泥波波杯口前缘",
+      "batch_id": "P3A-02",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_taro_boba_base",
+      "name_zh": "芋泥波波杯底装饰",
+      "batch_id": "P3A-02",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_taro_boba_label",
+      "name_zh": "芋泥波波杯身无文字印花",
+      "batch_id": "P3A-02",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "ui_stage_taro_boba_card",
+      "name_zh": "芋泥波波菜单封面",
+      "batch_id": "P3A-05",
+      "production_method": "derived",
+      "export_spec": "480x600 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息"
+    },
+    {
+      "asset_id": "spr_cup_brown_sugar_back",
+      "name_zh": "黑糖厚乳杯后壁",
+      "batch_id": "P3A-03",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_brown_sugar_tea",
+      "name_zh": "黑糖厚乳杯内奶茶底色",
+      "batch_id": "P3A-03",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_brown_sugar_front",
+      "name_zh": "黑糖厚乳杯前壁高光",
+      "batch_id": "P3A-03",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_brown_sugar_rim_back",
+      "name_zh": "黑糖厚乳杯口后缘",
+      "batch_id": "P3A-03",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_brown_sugar_rim_front",
+      "name_zh": "黑糖厚乳杯口前缘",
+      "batch_id": "P3A-03",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_brown_sugar_base",
+      "name_zh": "黑糖厚乳杯底装饰",
+      "batch_id": "P3A-03",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_brown_sugar_label",
+      "name_zh": "黑糖厚乳杯身无文字印花",
+      "batch_id": "P3A-03",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "ui_stage_brown_sugar_card",
+      "name_zh": "黑糖厚乳菜单封面",
+      "batch_id": "P3A-05",
+      "production_method": "derived",
+      "export_spec": "480x600 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息"
+    },
+    {
+      "asset_id": "spr_cup_mochi_special_back",
+      "name_zh": "麻薯特调杯后壁",
+      "batch_id": "P3A-04",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_mochi_special_tea",
+      "name_zh": "麻薯特调杯内奶茶底色",
+      "batch_id": "P3A-04",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_mochi_special_front",
+      "name_zh": "麻薯特调杯前壁高光",
+      "batch_id": "P3A-04",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_mochi_special_rim_back",
+      "name_zh": "麻薯特调杯口后缘",
+      "batch_id": "P3A-04",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_mochi_special_rim_front",
+      "name_zh": "麻薯特调杯口前缘",
+      "batch_id": "P3A-04",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_mochi_special_base",
+      "name_zh": "麻薯特调杯底装饰",
+      "batch_id": "P3A-04",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "spr_cup_mochi_special_label",
+      "name_zh": "麻薯特调杯身无文字印花",
+      "batch_id": "P3A-04",
+      "production_method": "new_draw",
+      "export_spec": "750x1000 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "分层 SVG+PNG，七层固定750x1000，同源点；待引擎几何复核"
+    },
+    {
+      "asset_id": "ui_stage_mochi_special_card",
+      "name_zh": "麻薯特调菜单封面",
+      "batch_id": "P3A-05",
+      "production_method": "derived",
+      "export_spec": "480x600 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "杯体与菜单卡合成；下部30%留给动态名称/纪录/解锁信息"
+    },
+    {
+      "asset_id": "ui_btn_tab_normal",
+      "name_zh": "选项页签 normal",
+      "batch_id": "P3A-06",
+      "production_method": "new_draw",
+      "export_spec": "256x96 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "无烘焙文字的九切Tab底板；20/20/20/20需要Cocos拉伸验收"
+    },
+    {
+      "asset_id": "ui_btn_tab_pressed",
+      "name_zh": "选项页签 pressed",
+      "batch_id": "P3A-06",
+      "production_method": "derived",
+      "export_spec": "256x96 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "无烘焙文字的九切Tab底板；20/20/20/20需要Cocos拉伸验收"
+    },
+    {
+      "asset_id": "ui_btn_tab_disabled",
+      "name_zh": "选项页签 disabled",
+      "batch_id": "P3A-06",
+      "production_method": "derived",
+      "export_spec": "256x96 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "无烘焙文字的九切Tab底板；20/20/20/20需要Cocos拉伸验收"
+    },
+    {
+      "asset_id": "ui_btn_tab_selected",
+      "name_zh": "选项页签 selected",
+      "batch_id": "P3A-06",
+      "production_method": "derived",
+      "export_spec": "256x96 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "无烘焙文字的九切Tab底板；20/20/20/20需要Cocos拉伸验收"
+    },
+    {
+      "asset_id": "ui_icon_lock",
+      "name_zh": "未解锁锁",
+      "batch_id": "P3A-06",
+      "production_method": "new_draw",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx"
+    },
+    {
+      "asset_id": "ui_icon_unlock",
+      "name_zh": "解锁锁",
+      "batch_id": "P3A-06",
+      "production_method": "new_draw",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx"
+    },
+    {
+      "asset_id": "ui_icon_cloud",
+      "name_zh": "云存档",
+      "batch_id": "P3A-06",
+      "production_method": "new_draw",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx"
+    },
+    {
+      "asset_id": "ui_icon_sync",
+      "name_zh": "同步",
+      "batch_id": "P3A-06",
+      "production_method": "new_draw",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx"
+    },
+    {
+      "asset_id": "ui_icon_offline",
+      "name_zh": "离线",
+      "batch_id": "P3A-06",
+      "production_method": "new_draw",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx"
+    },
+    {
+      "asset_id": "ui_icon_account",
+      "name_zh": "账号默认",
+      "batch_id": "P3A-06",
+      "production_method": "new_draw",
+      "export_spec": "96x96 PNG;48x48 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "192px SVG母版+96/48独立PNG，触摸区域需由程序≥48CSSpx"
+    },
+    {
+      "asset_id": "ui_panel_stage",
+      "name_zh": "关卡卡片底",
+      "batch_id": "P3A-07",
+      "production_method": "new_draw",
+      "export_spec": "280x400 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "280×400空卡底；建议九切24/24/24/24，动态文本由程序显示"
+    },
+    {
+      "asset_id": "fx_unlock_glow",
+      "name_zh": "解锁卡片亮边",
+      "batch_id": "P3A-07",
+      "production_method": "new_draw",
+      "export_spec": "256x256 PNG",
+      "status": "prototype_exported",
+      "qa": "static_checked_pending_engine",
+      "notes": "透明中心解锁光边；由程序做alpha/scale动画"
+    },
+    {
+      "asset_id": "gen_skeleton",
+      "name_zh": "异步列表骨架",
+      "batch_id": "P3A-07",
+      "production_method": "engine",
+      "export_spec": "none",
+      "status": "program_contract",
+      "qa": "static_checked_pending_engine",
+      "notes": "程序生成项，无独立PNG，提供实现说明"
+    },
+    {
+      "asset_id": "gen_locked_overlay",
+      "name_zh": "未解锁卡遮罩",
+      "batch_id": "P3A-07",
+      "production_method": "engine",
+      "export_spec": "none",
+      "status": "program_contract",
+      "qa": "static_checked_pending_engine",
+      "notes": "程序生成项，无独立PNG，提供实现说明"
+    },
+    {
+      "asset_id": "gen_error_empty",
+      "name_zh": "空/错/无网络状态组合",
+      "batch_id": "P3A-07",
+      "production_method": "engine",
+      "export_spec": "none",
+      "status": "program_contract",
+      "qa": "static_checked_pending_engine",
+      "notes": "程序生成项，无独立PNG，提供实现说明"
+    }
+  ]
+}

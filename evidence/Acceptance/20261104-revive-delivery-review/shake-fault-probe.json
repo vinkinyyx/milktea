@@ -1,0 +1,125 @@
+{
+  "scope": "real Cocos/Box2D first shake after 900 ticks, 12 seeds, not phone host",
+  "records": [
+    {
+      "seed": 1,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 120
+    },
+    {
+      "seed": 2,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 190
+    },
+    {
+      "seed": 3,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 170
+    },
+    {
+      "seed": 4,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 280
+    },
+    {
+      "seed": 5,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 250
+    },
+    {
+      "seed": 6,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 190
+    },
+    {
+      "seed": 7,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 260
+    },
+    {
+      "seed": 8,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 430
+    },
+    {
+      "seed": 9,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 400
+    },
+    {
+      "seed": 10,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 210
+    },
+    {
+      "seed": 11,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 440
+    },
+    {
+      "seed": 12,
+      "beforeTick": 900,
+      "afterTick": 1020,
+      "baseUsed": 1,
+      "fault": null,
+      "phase": "PLAYING",
+      "reason": null,
+      "score": 270
+    }
+  ]
+}

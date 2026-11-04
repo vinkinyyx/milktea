@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\prepare_p1c_release_assets.py",
+    "--project",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-recovery-memory-tap-release-02",
+    "--evidence-dir",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\Acceptance\\20261104-revive-delivery-review\\tap-release-02"
+  ],
+  "cwd": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-recovery-memory-tap-release-02"
+}

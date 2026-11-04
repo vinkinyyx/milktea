@@ -1,0 +1,143 @@
+{
+  "project": "奶茶挤挤",
+  "version": "2026-11-01",
+  "audio_status": "rendered_pending_human_gameplay_device_listening",
+  "runtime_file_count": 9,
+  "runtime_bytes_total": 1004216,
+  "runtime_sfx_bytes": 180732,
+  "budget_bytes": 1200000,
+  "original_midi_sha1_git_blob": "3e7d978ac031760b025b5bb6786a77d4f064ca0d",
+  "sample_frames_bgm_decoded": 3024000,
+  "bgm_decoded_seconds": 68.57142857142857,
+  "bgm_mp3_container_seconds": 68.597551,
+  "bgm_integrated_lufs": -19.4,
+  "bgm_true_peak_dbfs": -6.5,
+  "bgm_seam_sample_jump": 0.004134451970458031,
+  "bgm_seam_early_derivative_p99_9": 0.0385376401245594,
+  "mix_at_100_percent_tested_triples": {
+    "peak": 0.6472259163856506,
+    "cues": [
+      "merge_small",
+      "merge_large",
+      "danger_tick"
+    ]
+  },
+  "mix_at_default_35_70_tested_triples": {
+    "peak": 0.4115251898765564,
+    "cues": [
+      "merge_small",
+      "merge_large",
+      "danger_tick"
+    ]
+  },
+  "files": [
+    {
+      "cue_id": "bgm_classic",
+      "fmt": "mp3",
+      "bytes": 823484,
+      "duration_s": 68.57142857142857,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sample_peak": 0.47503662109375,
+      "sha256": "7f502da15fe5b921421e80f856fae0e06f55d14d2b05346cce49138c5733d423"
+    },
+    {
+      "cue_id": "ui_tap",
+      "fmt": "pcm_s16le",
+      "bytes": 6780,
+      "duration_s": 0.07598639455782313,
+      "sample_rate": 44100,
+      "channels": 1,
+      "sample_peak": 0.18408203125,
+      "sha256": "63afbd7b04f656e86b37c93b7bb0fc02aa15b948d00ef7088b6c85c539b05582"
+    },
+    {
+      "cue_id": "drop",
+      "fmt": "pcm_s16le",
+      "bytes": 10574,
+      "duration_s": 0.11900226757369614,
+      "sample_rate": 44100,
+      "channels": 1,
+      "sample_peak": 0.199493408203125,
+      "sha256": "05855a675079eb137bc56af73c787e7352d3cf881084a50ca7827e0beac5155a"
+    },
+    {
+      "cue_id": "collision_soft",
+      "fmt": "pcm_s16le",
+      "bytes": 12604,
+      "duration_s": 0.14201814058956916,
+      "sample_rate": 44100,
+      "channels": 1,
+      "sample_peak": 0.100006103515625,
+      "sha256": "3eb301c07730454096bbf96c910bc8d6d9555400b171c83544d74b21359c53ac"
+    },
+    {
+      "cue_id": "merge_small",
+      "fmt": "pcm_s16le",
+      "bytes": 16572,
+      "duration_s": 0.18700680272108844,
+      "sample_rate": 44100,
+      "channels": 1,
+      "sample_peak": 0.23443603515625,
+      "sha256": "0949f05e62264184445a9267e9f0fb9c9656c39a36d69a12bd736019723583cc"
+    },
+    {
+      "cue_id": "merge_large",
+      "fmt": "pcm_s16le",
+      "bytes": 25302,
+      "duration_s": 0.28598639455782315,
+      "sample_rate": 44100,
+      "channels": 1,
+      "sample_peak": 0.27239990234375,
+      "sha256": "fb4698ddc1bdc359e560bd19c9278237268dcce8cdbbacfbd791809da27e7e3b"
+    },
+    {
+      "cue_id": "shake_start",
+      "fmt": "pcm_s16le",
+      "bytes": 45414,
+      "duration_s": 0.5140136054421769,
+      "sample_rate": 44100,
+      "channels": 1,
+      "sample_peak": 0.195220947265625,
+      "sha256": "cb360970a333d48d314fbd25032f1688eaae1e6c6459e5e550cedef04178fcfb"
+    },
+    {
+      "cue_id": "danger_tick",
+      "fmt": "pcm_s16le",
+      "bytes": 9252,
+      "duration_s": 0.10401360544217687,
+      "sample_rate": 44100,
+      "channels": 1,
+      "sample_peak": 0.21630859375,
+      "sha256": "ec6dbeb34e62824f97152ea9c92a79b755e2777e6afe06985e7d0d6c51c259a6"
+    },
+    {
+      "cue_id": "result",
+      "fmt": "pcm_s16le",
+      "bytes": 54234,
+      "duration_s": 0.6140136054421769,
+      "sample_rate": 44100,
+      "channels": 1,
+      "sample_peak": 0.285125732421875,
+      "sha256": "8f7e3d7ace8550683af149e0d0cf4150e4fc960dd6085367b3f39e4377ed36a4"
+    }
+  ],
+  "checks": {
+    "runtime_file_names_codecs": "pass",
+    "source_midi_verified": "pass",
+    "decoded_loop_frames": "pass",
+    "loudness_true_peak": "pass",
+    "sfx_durations_and_onsets": "pass",
+    "runtime_size": "pass",
+    "headphone_2_full_loops": "not_performed",
+    "real_phone_speaker": "not_performed",
+    "real_cocos_engine": "not_performed",
+    "human_listening": "not_performed",
+    "commercial_release_rights_final_review": "not_performed"
+  },
+  "caveats": [
+    "MP3 metadata stream duration includes encoder delay/padding; ffmpeg gapless decode is exactly 3024000 samples. Cocos actual decode/loop remains unverified.",
+    "Numerical boundary and peak checks do not prove an audible seamless loop on the target engine.",
+    "No listening via physical headset or phone speaker performed."
+  ]
+}

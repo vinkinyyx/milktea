@@ -1,0 +1,12 @@
+{
+  "audio": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\audio\\runtime\\drop-2026-11-01T02-03-16-457Z\\drop.wav",
+  "cocos": {
+    "importAs": "AudioClip",
+    "notes": [
+      "Drag the audio file into Cocos Creator Assets.",
+      "Use AudioSource.playOneShot for sound effects."
+    ]
+  },
+  "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\audio\\runtime\\drop-2026-11-01T02-03-16-457Z\\drop.source.wav",
+  "type": "audio-clip"
+}

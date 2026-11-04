@@ -1,0 +1,11 @@
+{
+  "effect": "merge_burst",
+  "frame_size": [
+    192,
+    192
+  ],
+  "columns": 4,
+  "frames": 16,
+  "fps": 24,
+  "notes": "All frames are transparent RGBA. Use frame sequence in Cocos Animation or SpriteFrame; do not stretch aspect ratio."
+}

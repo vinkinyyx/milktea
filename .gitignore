@@ -1,4 +1,4 @@
-# Local automation traces and caches; project evidence under output/ is retained.
+# Local automation traces and caches; original acceptance evidence is retained.
 .playwright-cli/
 .playwright/
 __pycache__/
@@ -24,3 +24,7 @@ coverage/
 !assets/library/**
 !evidence/**/*.log
 
+# Local Codex/editor state and Cocos Creator workspace metadata
+/.agents/
+/.codex/
+/奶茶挤挤/.creator/

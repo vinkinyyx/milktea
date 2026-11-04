@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "markdownFiles": 15,
+  "localLinks": 65,
+  "designCases": 48,
+  "allDesignCasesNotRun": true,
+  "sourceChangesAfterFinalBuild": [],
+  "packageSha256": "866003f6f6e667f4514b0fd2a62479534acbe4c8ca4dc2e8f82fe53c3fe956c9",
+  "formalDeliveryStatus": "BLOCKED",
+  "errors": []
+}

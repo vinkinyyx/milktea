@@ -1,0 +1,11 @@
+{
+  "effect": "danger_glow",
+  "frame_size": [
+    192,
+    192
+  ],
+  "columns": 4,
+  "frames": 12,
+  "fps": 24,
+  "notes": "All frames are transparent RGBA. Use frame sequence in Cocos Animation or SpriteFrame; do not stretch aspect ratio."
+}

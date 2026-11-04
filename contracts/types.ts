@@ -16,46 +16,100 @@ export interface IngredientState {
   angleRadians: number; angularVelocity: number; bornTick: number;
   dangerEligible: boolean; hasEnteredCup: boolean; spillTicks: number; sleeping: boolean;
 }
-export interface ShakeState { baseUsed: number; extraUsed: number; activeStartTick: number | null; cooldownUntilTick: number }
+export interface ShakeState { baseUsed: number; extraGranted: number; extraUsed: number; activeStartTick: number | null; cooldownUntilTick: number }
 export interface RngState { algorithm: 'xorshift32_v1_nonzero_seed'; state: number; drawCount: number }
+export interface SpawnRngState { algorithm: 'spawn-xorshift32-v1'; state: number; drawCount: number }
+export interface SpawnDescriptor { level: Level; xDu: number; vxDuPerSecond: number; angularVelocity: number }
 export interface RunSnapshot {
-  saveSchemaVersion: 1; rulesVersion: string; appVersion: string; runId: UUID; epoch: number;
+  saveSchemaVersion: 4; rulesVersion: string; appVersion: string; runId: UUID; epoch: number;
   revision: number; stageId: StageId; mode: GameMode; boardType: BoardType;
   state: PhaseState; tick: number; nextEntityId: number; nextCommandSequence: number;
   score: number; maxLevel: Level; dropIndex: number; currentLevel: Level; nextLevel: Level;
   lastDropTick: number | null; settleStartedTick: number | null;
   challenge: { id: string; deadlineAt: string; dropBudget: 120 } | null;
   rng: RngState; ingredients: IngredientState[]; shake: ShakeState; dangerTicks: number;
+  spawnRng: SpawnRngState;
+  cupMotion: { offsetXDu: number; velocityXDuPerSecond: number; targetOffsetXDu: number; control: 'IDLE'|'DRAGGING'|'SETTLING' };
+  autoDrop: { nextDueTick: number; pendingSpawn: SpawnDescriptor };
   terminalReason: TerminalReason | null; checksum: string;
 }
 interface CommandBase { runId: UUID; commandId: UUID; sequence: number; tick: number }
 export type RunCommand =
   | (CommandBase & { kind: 'DROP'; xDu: number })
-  | (CommandBase & { kind: 'SHAKE'; source: 'base'; consumeEventId?: never })
+  | (CommandBase & { kind: 'SHAKE'; source: 'base' | 'rewarded_ad'; consumeEventId?: never })
   | (CommandBase & { kind: 'SHAKE'; source: 'coupon'; consumeEventId: UUID })
   | (CommandBase & { kind: 'PAUSE' | 'RESUME' | 'ABANDON' });
 interface EventBase { eventId: UUID; runId: UUID; tick: number }
 export type DomainEvent =
   | (EventBase & { kind: 'IngredientDropped'; entityId: number; level: Level; dropIndex: number })
   | (EventBase & { kind: 'MergeCommitted'; parents: [number, number]; childId: number; childLevel: Level; scoreDelta: number; units: number; positionDu: Vec2 })
-  | (EventBase & { kind: 'ShakeConsumed'; source: 'base' | 'coupon'; consumeEventId?: UUID })
+  | (EventBase & { kind: 'ShakeConsumed'; source: 'base' | 'coupon' | 'rewarded_ad'; consumeEventId?: UUID })
   | (EventBase & { kind: 'DangerChanged'; dangerTicks: number })
   | (EventBase & { kind: 'RunEnded'; reason: TerminalReason; score: number });
 export interface ContactPair { contactId: string; firstId: number; secondId: number | null; normalSpeed: number }
 /** secondId=null means a static cup boundary. Logical eligibility stays owned by RunEngine. */
 export type PhysicalBodyState = Pick<IngredientState, 'entityId' | 'positionDu' | 'velocityDuPerSecond' | 'angleRadians' | 'angularVelocity' | 'sleeping'>;
-export interface BodyDefinition { entityId: number; level: Level; radiusDu: number; positionDu: Vec2; velocityDuPerSecond: Vec2 }
+export interface BodyDefinition { entityId: number; level: Level; radiusDu: number; positionDu: Vec2; velocityDuPerSecond: Vec2; angleRadians?: number; angularVelocity?: number; enabledInitially?: boolean }
 export interface IPhysicsAdapter {
-  createCup(stageId: StageId): void;
+  /** Backend polygon radius plus linear slop in design units; used only when projecting newly merged bodies at finite walls. */
+  readonly wallContactProjectionMarginDu?: number;
+  createCup(stageId: StageId, offsetXDu?: number): void;
+  setCupVelocityX(duPerSecond: number): void;
+  getCupOffsetX(): number;
   createBody(definition: BodyDefinition): void;
   destroyBody(entityId: number): void;
+  /** Atomically replace two live colliders at a world-unlocked tick boundary. */
+  replaceParentsWithChild(parents: readonly [number, number], child: BodyDefinition): Result<void>;
   stepFixed(): void;
+    readonly lastStepTimings?: { syncToPhysics: number; physicsStep: number; syncFromPhysics: number; velocityClamp: number };
   applyHorizontalAcceleration(entityId: number, accelerationSpecUnits: number): void;
   getContacts(): readonly ContactPair[];
   getBody(entityId: number): PhysicalBodyState | undefined;
   restoreBodies(states: readonly IngredientState[]): void;
   canSpawn(level: Level, xDu: number): boolean;
   dispose(): void;
+}
+
+/** P1-B local execution acknowledgement; it is not a DomainEvent or network command. */
+export interface CommandOutcome {
+  commandId: UUID;
+  sequence: number;
+  status: 'APPLIED' | 'REJECTED' | 'CANCELLED';
+  appliedTick: number;
+  errorCode?: string;
+  message?: string;
+}
+export interface LocalCommandEnvelope { command: RunCommand; ownerEpoch: number }
+
+/** Legacy schema (v2 runs / v1 profile) kept only for safe migration reads. */
+export type LegacyRunSnapshotV2 = Omit<RunSnapshot, 'saveSchemaVersion' | 'shake'> & {
+  saveSchemaVersion: 2; shake: { baseUsed: number; extraUsed: number; activeStartTick: number | null; cooldownUntilTick: number };
+};
+export type LegacyRunSnapshotV3 = Omit<RunSnapshot, 'saveSchemaVersion' | 'spawnRng' | 'autoDrop'> & { saveSchemaVersion:3; autoDrop:{nextDueTick:number} };
+export interface LegacyLocalLastResult {
+  runId: UUID; reason: TerminalReason; score: number; maxLevel: Level; dropIndex: number; baseUsed: number; extraUsed: 0; rulesVersion?: string;
+}
+export interface LocalSaveBundleV1 { profile: LocalProfileV1; run: LegacyRunSnapshotV2 | null; lastResult: LegacyLocalLastResult | null }
+export interface LocalSaveEnvelopeV1 { schemaVersion: 1; revision: number; payload: LocalSaveBundleV1; checksum: string }
+
+export interface RewardedShakeReceipt {
+  attemptId: UUID; runId: UUID; rewardKind: 'extra_shake'; amount: 1; policyVersion: string; dayKey: string; status: 'COMMITTED'; grantedAt: number;
+}
+export interface RewardedShakePending { attemptId: UUID; runId: UUID; policyVersion: string; amount: 1; dayKey: string; startedAt: number }
+export interface RewardedShakeLedger { dayKey: string | null; dailyGranted: number; pendingAttempt: RewardedShakePending | null; receipts: RewardedShakeReceipt[] }
+export interface LocalLastResult {
+  runId: UUID; reason: TerminalReason; score: number; maxLevel: Level; dropIndex: number; baseUsed: number; extraUsed: number;
+  boardType: BoardType; rulesVersion?: string;
+}
+export interface LocalSaveBundle { profile: LocalProfile; run: RunSnapshot | null; lastResult: LocalLastResult | null }
+export interface LocalSaveEnvelopeV2 { schemaVersion: 2; revision: number; payload: LocalSaveBundle; checksum: string }
+export type LocalSaveEnvelope = LocalSaveEnvelopeV2;
+export interface CommitReceipt { revision: number; committed: boolean; pointerUpdated: boolean; warning?: string }
+export type SaveReadResult = { ok: true; data: { envelope: LocalSaveEnvelope | null; recoveredFromSlot: 'A' | 'B' | null; warning?: string } } | Result<never>;
+export interface IBundleSaveRepository {
+  readBundle(): Promise<SaveReadResult>;
+  commitBundle(expectedRevision: number, expectedRunId: UUID | null, next: LocalSaveBundle): Promise<Result<CommitReceipt>>;
+  acquireWriteLease(): Promise<Result<{ release(): void; mode: 'persistent' | 'memory-only' }>>;
 }
 export interface IRunEngine {
   dispatch(command: RunCommand): Result<void>;
@@ -65,10 +119,17 @@ export interface IRunEngine {
   dispose(): void;
 }
 export interface LocalSettings { musicGain: number; sfxGain: number; reducedMotion: boolean; dropMode: 'drag_release' | 'tap_confirm'; tutorialCompleted: boolean }
-export interface LocalProfile {
+export interface LocalProfileV1 {
   schemaVersion: 1; settings: LocalSettings; discoveredLevels: Level[];
   unlockedStageIds: StageId[]; bestScores: Partial<Record<StageId, Partial<Record<BoardType, number>>>>;
+  bestScoresByRules?: Record<string, Partial<Record<StageId, Partial<Record<BoardType, number>>>>>; tutorialRulesVersion?: string | null;
   activeRunId: UUID | null; revision: number;
+}
+export interface LocalProfile extends Omit<LocalProfileV1, 'schemaVersion'> {
+  schemaVersion: 2;
+  /** Proof that a trusted natural run (CUP_FULL/SPILLED) finished on this device. */
+  firstNaturalRunCompleted: boolean;
+  rewardedShake: RewardedShakeLedger;
 }
 export interface ISaveRepository {
   readProfile(): Result<LocalProfile>;
@@ -110,6 +171,23 @@ export interface DailyChallenge { dailyId: string; stageId: StageId; rulesVersio
 export interface FriendChallenge { challengeId: UUID; stageId: StageId; rulesVersion: string; seed: number; dropBudget: number; baseShakes: 2; extraShakes: 0; expiresAt: string; status: 'open' | 'closed'; result: 'pending' | 'win' | 'tie' | 'loss' }
 export interface CosmeticDefinition { cosmeticId: string; artAssetId: string; unlockKind: 'achievement' | 'default'; unlockKey: string; physicsOverride: never | null }
 export interface RewardedAdPolicy { enabled: boolean; policyVersion: string; rewardKind: 'unconfigured' | 'cosmetic_token'; amount: number; dailyLimit: number; affectsRankedRun: false }
+/** Runtime Tap rewarded-video policy for the extra-shake placement. Closed by default until a real ad unit is configured. */
+export interface RewardedShakePolicy {
+  enabled: boolean; policyVersion: string; adUnitId: string | null; placement: 'extra-shake';
+  maxExtraShakesPerRun: number; maxDailyRewardedShakes: number;
+  minForegroundSecondsFirstSession: number; requireTutorialComplete: boolean; requireFirstNaturalRunCompleted: boolean;
+}
+export type RewardedAdCapability = 'SUPPORTED' | 'UNSUPPORTED' | 'UNCONFIGURED' | 'DISABLED';
+export type RewardedAdOutcome =
+  | { kind: 'COMPLETED'; attemptId: UUID }
+  | { kind: 'CANCELLED' | 'UNAVAILABLE' | 'FAILED'; attemptId: UUID; errorCode: string };
+export interface IRewardedAdProvider {
+  readonly providerName: 'tap' | 'debug-mock';
+  capability(): RewardedAdCapability;
+  prepare(): Promise<Result<void>>;
+  show(attemptId: UUID): Promise<RewardedAdOutcome>;
+  dispose(): void;
+}
 
 export interface LogBatch { firstSequence: number; previousBatchHash: string | null; commands: RunCommand[]; events: DomainEvent[]; batchHash: string }
 export interface LogReceipt { lastSequence: number; batchHash: string; duplicate: boolean }

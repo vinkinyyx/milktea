@@ -1,0 +1,1 @@
+客户端类型合同镜像缺失或与 contracts/types.ts 不同；运行 python tools/sync_client_contracts.py --sync

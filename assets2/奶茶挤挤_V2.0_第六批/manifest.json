@@ -1,0 +1,191 @@
+{
+  "batch": "奶茶挤挤_V2.0_第六批_发行宣传素材",
+  "status": "candidate; not actual gameplay screenshot",
+  "file_count_excluding_manifest": 28,
+  "files": [
+    {
+      "file": "01_应用图标与Logo/app_icon_1024x1024_直角方图.png",
+      "size_bytes": 1274984,
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB"
+    },
+    {
+      "file": "01_应用图标与Logo/app_icon_512x512_直角方图.png",
+      "size_bytes": 381220,
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "file": "01_应用图标与Logo/logo_奶茶挤挤_透明1600x560.png",
+      "size_bytes": 73509,
+      "width": 1600,
+      "height": 560,
+      "mode": "RGBA"
+    },
+    {
+      "file": "01_应用图标与Logo/logo_奶茶挤挤_透明800x280.png",
+      "size_bytes": 64978,
+      "width": 800,
+      "height": 280,
+      "mode": "RGBA"
+    },
+    {
+      "file": "02_宣传主视觉/TapTap小游戏_方形宣传_1440x1440.jpg",
+      "size_bytes": 625610,
+      "width": 1440,
+      "height": 1440,
+      "mode": "RGB"
+    },
+    {
+      "file": "02_宣传主视觉/TapTap小游戏_横版宣传_1920x1080.jpg",
+      "size_bytes": 644638,
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "02_宣传主视觉/宣发主视觉_方形无文字_1440x1440.jpg",
+      "size_bytes": 613726,
+      "width": 1440,
+      "height": 1440,
+      "mode": "RGB"
+    },
+    {
+      "file": "02_宣传主视觉/宣发主视觉_横版无文字_1920x1080.jpg",
+      "size_bytes": 611802,
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "02_宣传主视觉/微信抖音_方形分享封面_1080x1080.jpg",
+      "size_bytes": 423120,
+      "width": 1080,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "02_宣传主视觉/通用横版封面_1280x720.jpg",
+      "size_bytes": 372618,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "file": "02_宣传主视觉/通用横版封面_1920x1080.jpg",
+      "size_bytes": 644638,
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "02_宣传主视觉/通用竖版宣传海报_1080x1920.jpg",
+      "size_bytes": 682154,
+      "width": 1080,
+      "height": 1920,
+      "mode": "RGB"
+    },
+    {
+      "file": "03_启动与分享素材/启动背景_750x1334_无动态UI.png",
+      "size_bytes": 1492063,
+      "width": 750,
+      "height": 1334,
+      "mode": "RGB"
+    },
+    {
+      "file": "03_启动与分享素材/成绩分享卡_750x1000_动态信息留白.png",
+      "size_bytes": 284700,
+      "width": 750,
+      "height": 1000,
+      "mode": "RGBA"
+    },
+    {
+      "file": "03_启动与分享素材/成绩分享卡_数据槽位.json",
+      "size_bytes": 520
+    },
+    {
+      "file": "03_启动与分享素材/竖版无标题主视觉_1080x1920.jpg",
+      "size_bytes": 666455,
+      "width": 1080,
+      "height": 1920,
+      "mode": "RGB"
+    },
+    {
+      "file": "04_实机截图采集模板/01_核心投放_透明边框_750x1334.png",
+      "size_bytes": 13491,
+      "width": 750,
+      "height": 1334,
+      "mode": "RGBA"
+    },
+    {
+      "file": "04_实机截图采集模板/02_碰撞合成_透明边框_750x1334.png",
+      "size_bytes": 13491,
+      "width": 750,
+      "height": 1334,
+      "mode": "RGBA"
+    },
+    {
+      "file": "04_实机截图采集模板/03_五款杯型_透明边框_750x1334.png",
+      "size_bytes": 13491,
+      "width": 750,
+      "height": 1334,
+      "mode": "RGBA"
+    },
+    {
+      "file": "04_实机截图采集模板/04_排行图鉴_透明边框_750x1334.png",
+      "size_bytes": 13491,
+      "width": 750,
+      "height": 1334,
+      "mode": "RGBA"
+    },
+    {
+      "file": "05_宣传片分镜关键帧/01_开场品牌_720x1280.jpg",
+      "size_bytes": 265584,
+      "width": 720,
+      "height": 1280,
+      "mode": "RGB"
+    },
+    {
+      "file": "05_宣传片分镜关键帧/02_奶茶杯与小料_720x1280.jpg",
+      "size_bytes": 356292,
+      "width": 720,
+      "height": 1280,
+      "mode": "RGB"
+    },
+    {
+      "file": "05_宣传片分镜关键帧/03_核心合成示意_非实机_720x1280.jpg",
+      "size_bytes": 254439,
+      "width": 720,
+      "height": 1280,
+      "mode": "RGB"
+    },
+    {
+      "file": "05_宣传片分镜关键帧/04_杯型展示示意_非实机_720x1280.jpg",
+      "size_bytes": 302627,
+      "width": 720,
+      "height": 1280,
+      "mode": "RGB"
+    },
+    {
+      "file": "05_宣传片分镜关键帧/05_收尾品牌_720x1280.jpg",
+      "size_bytes": 364655,
+      "width": 720,
+      "height": 1280,
+      "mode": "RGB"
+    },
+    {
+      "file": "07_交付说明/README_交付与使用.md",
+      "size_bytes": 3058
+    },
+    {
+      "file": "07_交付说明/宣传片15秒分镜_V2.md",
+      "size_bytes": 788
+    },
+    {
+      "file": "07_交付说明/平台规格与提审差异.md",
+      "size_bytes": 1542
+    }
+  ]
+}

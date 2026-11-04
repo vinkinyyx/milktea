@@ -1,0 +1,20 @@
+{
+  "project": "奶茶挤挤",
+  "version": "V2.0",
+  "engine": "Cocos Creator 3.8",
+  "designResolution": "9:20 (assets are independent of screen aspect)",
+  "events": [
+    {"id":"01_drop","trigger":"ingredient_on_contact_ground","duration_ms":215,"runtime":"physics event + art child squash tween","sfx":"drop"},
+    {"id":"02_collision","trigger":"ingredient_contact","duration_ms":160,"runtime":"visual node squash and contact_spark frame effect","sfx":"soft_collision"},
+    {"id":"03_merge","trigger":"valid_same_level_merge","duration_ms":220,"runtime":"two old visuals disappear + result pops + merge_burst","sfx":"merge_small_or_large"},
+    {"id":"04_combo","trigger":"combo_level_change","duration_ms":270,"runtime":"dynamic label scale + combo_star","sfx":"merge_large"},
+    {"id":"05_shake","trigger":"shake_action_accepted","duration_ms":800,"runtime":"cup art sway + actual physics shake impulse","sfx":"shake"},
+    {"id":"06_danger","trigger":"overflow_danger_state","duration_ms":900,"repeat":true,"frequency_hz":1.11,"runtime":"dangerLine pulse; no full-screen strobe","sfx":"danger_on_state_enter_only"},
+    {"id":"07_button","trigger":"button_touch_start_or_end","duration_ms":80,"runtime":"UI child scale tween","sfx":"button_click"},
+    {"id":"08_result","trigger":"score_result_confirmed","duration_ms":1100,"runtime":"real score number tween; earned stars only","sfx":"result"},
+    {"id":"09_cat","trigger":"home_idle_or_merge_celebration","duration_ms":720,"runtime":"cat art bob + optional paw layer pivot","sfx":null},
+    {"id":"10_transition","trigger":"screen_enter","duration_ms":360,"runtime":"UI position/opacity tween","sfx":null}
+  ],
+  "reduced_motion": {"disable_bob_and_rotation":true,"replace_with_static_or_short_fades":true,"danger_indicator_steady":true},
+  "notes": "Rendered MP4/GIF are demonstrations only; runtime uses scripts+transparent overlays+existing game sprites. Never attach tween scaling to Collider2D/Rigidbody2D parent."
+}

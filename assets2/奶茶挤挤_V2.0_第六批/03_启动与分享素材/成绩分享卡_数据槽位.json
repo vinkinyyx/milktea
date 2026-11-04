@@ -1,0 +1,31 @@
+{
+  "canvas": [
+    750,
+    1000
+  ],
+  "design_safe_margin": 48,
+  "dynamic_fields": {
+    "score": {
+      "x": 375,
+      "y": 330,
+      "font_px": 68
+    },
+    "highest_ingredient": {
+      "x": 375,
+      "y": 520
+    },
+    "avatar_nickname": {
+      "x": 90,
+      "y": 690
+    },
+    "entry_from_platform": {
+      "x": 550,
+      "y": 837,
+      "max_size": [
+        120,
+        120
+      ]
+    },
+    "notes": "真实分数、头像、昵称和平台入口码须运行时叠加；勿用假二维码"
+  }
+}

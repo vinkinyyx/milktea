@@ -1,0 +1,9 @@
+{
+  "derived_from": "share_result_background",
+  "additional_decoration": "three achievement stars (decorative)",
+  "dynamic_fields": [
+    "real_achievement_type",
+    "real_player_stats",
+    "real_platform_share_entry"
+  ]
+}

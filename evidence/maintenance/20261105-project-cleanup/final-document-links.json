@@ -1,0 +1,10 @@
+{
+  "rewritten": [
+    {
+      "file": "docs/43-spill-revive-performance-design.md",
+      "from": "development/spill-revive/06-qa-prompt.md",
+      "to": "../../_cleanup-backups/奶茶挤挤-20261105-project-cleanup/docs/development/spill-revive/06-qa-prompt.md"
+    }
+  ],
+  "unresolved": []
+}

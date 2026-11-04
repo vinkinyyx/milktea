@@ -1,0 +1,30 @@
+spr_ing_coconut_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_ing_grass_jelly_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_ing_large_pearl_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_ing_mochi_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_ing_pudding_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_ing_red_bean_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_ing_sago_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_ing_small_pearl_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_ing_taro_base@1024: 1024² RGBA, corner alpha=0 PASS
+spr_cup_classic_back: 750x1000 RGBA PASS
+spr_cup_classic_base: 750x1000 RGBA PASS
+spr_cup_classic_front: 750x1000 RGBA PASS
+spr_cup_classic_label: 750x1000 RGBA PASS
+spr_cup_classic_rim_back: 750x1000 RGBA PASS
+spr_cup_classic_rim_front: 750x1000 RGBA PASS
+spr_cup_classic_tea: 750x1000 RGBA PASS
+ui_btn_icon_disabled: 256x96 RGBA PASS
+ui_btn_icon_normal: 256x96 RGBA PASS
+ui_btn_icon_pressed: 256x96 RGBA PASS
+ui_btn_icon_selected: 256x96 RGBA PASS
+ui_btn_primary_disabled: 256x96 RGBA PASS
+ui_btn_primary_normal: 256x96 RGBA PASS
+ui_btn_primary_pressed: 256x96 RGBA PASS
+ui_btn_primary_selected: 256x96 RGBA PASS
+ui_btn_secondary_disabled: 256x96 RGBA PASS
+ui_btn_secondary_normal: 256x96 RGBA PASS
+ui_btn_secondary_pressed: 256x96 RGBA PASS
+ui_btn_secondary_selected: 256x96 RGBA PASS
+
+引擎内QA：尚未执行；色彩风格最终人工锁版：尚未执行。

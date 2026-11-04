@@ -1,0 +1,313 @@
+{
+  "initialLoaded": 22,
+  "gameLoaded": 69,
+  "before": {
+    "saveSchemaVersion": 4,
+    "rulesVersion": "design-v0.5-natural-spawn-01",
+    "appVersion": "0.1.0",
+    "runId": "4d059ab5-f8b4-4ea3-95dc-377548b39317",
+    "epoch": 3,
+    "revision": 1,
+    "stageId": "classic",
+    "mode": "classic",
+    "boardType": "standard",
+    "state": "PLAYING",
+    "tick": 0,
+    "nextEntityId": 3,
+    "nextCommandSequence": 1,
+    "score": 0,
+    "maxLevel": 1,
+    "dropIndex": 0,
+    "currentLevel": 1,
+    "nextLevel": 1,
+    "lastDropTick": null,
+    "settleStartedTick": null,
+    "challenge": null,
+    "rng": {
+      "algorithm": "xorshift32_v1_nonzero_seed",
+      "state": 67634689,
+      "drawCount": 2
+    },
+    "ingredients": [
+      {
+        "entityId": 1,
+        "level": 1,
+        "positionDu": {
+          "x": 358.08,
+          "y": 450
+        },
+        "velocityDuPerSecond": {
+          "x": 0,
+          "y": 0
+        },
+        "angleRadians": 0,
+        "angularVelocity": 0,
+        "bornTick": 0,
+        "dangerEligible": false,
+        "hasEnteredCup": false,
+        "spillTicks": 0,
+        "sleeping": false
+      },
+      {
+        "entityId": 2,
+        "level": 1,
+        "positionDu": {
+          "x": 391.92,
+          "y": 450
+        },
+        "velocityDuPerSecond": {
+          "x": 0,
+          "y": 0
+        },
+        "angleRadians": 0,
+        "angularVelocity": 0,
+        "bornTick": 0,
+        "dangerEligible": false,
+        "hasEnteredCup": false,
+        "spillTicks": 0,
+        "sleeping": false
+      }
+    ],
+    "shake": {
+      "baseUsed": 0,
+      "extraGranted": 0,
+      "extraUsed": 0,
+      "activeStartTick": null,
+      "cooldownUntilTick": 0
+    },
+    "spawnRng": {
+      "algorithm": "spawn-xorshift32-v1",
+      "state": 3114687316,
+      "drawCount": 2
+    },
+    "dangerTicks": 0,
+    "terminalReason": null,
+    "cupMotion": {
+      "offsetXDu": 0,
+      "velocityXDuPerSecond": 0,
+      "targetOffsetXDu": 0,
+      "control": "IDLE"
+    },
+    "autoDrop": {
+      "nextDueTick": 60,
+      "pendingSpawn": {
+        "level": 1,
+        "xDu": 391,
+        "vxDuPerSecond": 8,
+        "angularVelocity": 0
+      }
+    },
+    "checksum": "f6b66aaf187471236125e9f592b633315b9e61b7eedcdba9725fea867bea915c"
+  },
+  "fault": {
+    "message": "Error:MERGE_REPLACE_FAILED:MERGE_REPLACE_ROLLED_BACK:Error: FIXTURE_CREATE_CHILD_ONCE",
+    "phase": "ERROR",
+    "repositoryAvailable": false,
+    "checkpoint": {
+      "saveSchemaVersion": 4,
+      "rulesVersion": "design-v0.5-natural-spawn-01",
+      "appVersion": "0.1.0",
+      "runId": "4d059ab5-f8b4-4ea3-95dc-377548b39317",
+      "epoch": 3,
+      "revision": 1,
+      "stageId": "classic",
+      "mode": "classic",
+      "boardType": "standard",
+      "state": "PLAYING",
+      "tick": 0,
+      "nextEntityId": 3,
+      "nextCommandSequence": 1,
+      "score": 0,
+      "maxLevel": 1,
+      "dropIndex": 0,
+      "currentLevel": 1,
+      "nextLevel": 1,
+      "lastDropTick": null,
+      "settleStartedTick": null,
+      "challenge": null,
+      "rng": {
+        "algorithm": "xorshift32_v1_nonzero_seed",
+        "state": 67634689,
+        "drawCount": 2
+      },
+      "ingredients": [
+        {
+          "entityId": 1,
+          "level": 1,
+          "positionDu": {
+            "x": 358.08,
+            "y": 450
+          },
+          "velocityDuPerSecond": {
+            "x": 0,
+            "y": 0
+          },
+          "angleRadians": 0,
+          "angularVelocity": 0,
+          "bornTick": 0,
+          "dangerEligible": false,
+          "hasEnteredCup": false,
+          "spillTicks": 0,
+          "sleeping": false
+        },
+        {
+          "entityId": 2,
+          "level": 1,
+          "positionDu": {
+            "x": 391.92,
+            "y": 450
+          },
+          "velocityDuPerSecond": {
+            "x": 0,
+            "y": 0
+          },
+          "angleRadians": 0,
+          "angularVelocity": 0,
+          "bornTick": 0,
+          "dangerEligible": false,
+          "hasEnteredCup": false,
+          "spillTicks": 0,
+          "sleeping": false
+        }
+      ],
+      "shake": {
+        "baseUsed": 0,
+        "extraGranted": 0,
+        "extraUsed": 0,
+        "activeStartTick": null,
+        "cooldownUntilTick": 0
+      },
+      "spawnRng": {
+        "algorithm": "spawn-xorshift32-v1",
+        "state": 3114687316,
+        "drawCount": 2
+      },
+      "dangerTicks": 0,
+      "terminalReason": null,
+      "cupMotion": {
+        "offsetXDu": 0,
+        "velocityXDuPerSecond": 0,
+        "targetOffsetXDu": 0,
+        "control": "IDLE"
+      },
+      "autoDrop": {
+        "nextDueTick": 60,
+        "pendingSpawn": {
+          "level": 1,
+          "xDu": 391,
+          "vxDuPerSecond": 8,
+          "angularVelocity": 0
+        }
+      },
+      "checksum": "f6b66aaf187471236125e9f592b633315b9e61b7eedcdba9725fea867bea915c"
+    }
+  },
+  "restored": {
+    "saveSchemaVersion": 4,
+    "rulesVersion": "design-v0.5-natural-spawn-01",
+    "appVersion": "0.1.0",
+    "runId": "4d059ab5-f8b4-4ea3-95dc-377548b39317",
+    "epoch": 4,
+    "revision": 1,
+    "stageId": "classic",
+    "mode": "classic",
+    "boardType": "standard",
+    "state": "PAUSED",
+    "tick": 0,
+    "nextEntityId": 3,
+    "nextCommandSequence": 1,
+    "score": 0,
+    "maxLevel": 1,
+    "dropIndex": 0,
+    "currentLevel": 1,
+    "nextLevel": 1,
+    "lastDropTick": null,
+    "settleStartedTick": null,
+    "challenge": null,
+    "rng": {
+      "algorithm": "xorshift32_v1_nonzero_seed",
+      "state": 67634689,
+      "drawCount": 2
+    },
+    "ingredients": [
+      {
+        "entityId": 1,
+        "level": 1,
+        "positionDu": {
+          "x": 358.08,
+          "y": 450
+        },
+        "velocityDuPerSecond": {
+          "x": 0,
+          "y": 0
+        },
+        "angleRadians": 0,
+        "angularVelocity": 0,
+        "bornTick": 0,
+        "dangerEligible": false,
+        "hasEnteredCup": false,
+        "spillTicks": 0,
+        "sleeping": false
+      },
+      {
+        "entityId": 2,
+        "level": 1,
+        "positionDu": {
+          "x": 391.92,
+          "y": 450
+        },
+        "velocityDuPerSecond": {
+          "x": 0,
+          "y": 0
+        },
+        "angleRadians": 0,
+        "angularVelocity": 0,
+        "bornTick": 0,
+        "dangerEligible": false,
+        "hasEnteredCup": false,
+        "spillTicks": 0,
+        "sleeping": false
+      }
+    ],
+    "shake": {
+      "baseUsed": 0,
+      "extraGranted": 0,
+      "extraUsed": 0,
+      "activeStartTick": null,
+      "cooldownUntilTick": 0
+    },
+    "spawnRng": {
+      "algorithm": "spawn-xorshift32-v1",
+      "state": 3114687316,
+      "drawCount": 2
+    },
+    "dangerTicks": 0,
+    "terminalReason": null,
+    "cupMotion": {
+      "offsetXDu": 0,
+      "velocityXDuPerSecond": 0,
+      "targetOffsetXDu": 0,
+      "control": "IDLE"
+    },
+    "autoDrop": {
+      "nextDueTick": 60,
+      "pendingSpawn": {
+        "level": 1,
+        "xDu": 391,
+        "vxDuPerSecond": 8,
+        "angularVelocity": 0
+      }
+    },
+    "checksum": "81077e29afa9d38812bf915eb9cd3ee3308cfc2d8796fac6e6cec6e6628574fd"
+  },
+  "status": {
+    "screen": "PAUSED",
+    "paused": true,
+    "notice": "已恢复本页最近完整局面；点击“继续游戏”后再操作。",
+    "recoveryUsed": "4d059ab5-f8b4-4ea3-95dc-377548b39317"
+  },
+  "sameRun": true,
+  "sameScore": true,
+  "sameRng": true,
+  "sameSpawnRng": true
+}

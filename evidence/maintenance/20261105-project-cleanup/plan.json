@@ -1,0 +1,1109 @@
+{
+  "root": "D:\\Workspace\\TapTap\\奶茶挤挤",
+  "archiveRoot": "D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261105-project-cleanup",
+  "createdAt": "2026-11-05T07:33:40.163624+08:00",
+  "beforeBytes": 7402305859,
+  "beforeFiles": 253519,
+  "actions": [
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-tap-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-tap-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-tap-release-03",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-tap-release-04",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-tap-release-05",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-debug-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-debug-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-debug-03",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-debug-04",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-debug-05",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-release-03",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-release-04",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-closeout-web-release-05",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-taptap-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-cup-auto-web-04",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-mobile-background-debug-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-mobile-background-debug-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-mobile-background-debug-03",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-mobile-background-tap-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-mobile-background-web-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-mobile-background-web-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-rewarded-shake-debug-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-rewarded-shake-tap-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-rewarded-shake-web-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261103-rewarded-shake-web-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-animation-start-debug-v2",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-animation-start-release-v2",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-animation-start-release-v3",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-animation-start-release-v4",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-animation-start-tap-release-v2",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-animation-start-tap-release-v3",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-animation-start-tap-release-v4",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-debug-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-debug-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-debug-03",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-tap-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-tap-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-tap-release-03",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-web-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-web-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-web-release-03",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-web-release-04",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-mobile-feel-ads-web-release-05",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-recovery-memory-debug-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-recovery-memory-tap-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-recovery-memory-tap-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-recovery-memory-web-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-recovery-memory-web-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-debug-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-debug-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-debug-03",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-tap-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-tap-02/extensions",
+      "reason": "Latest staged art/source retained; dependency/import/editor caches reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-tap-02/library",
+      "reason": "Latest staged art/source retained; dependency/import/editor caches reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-tap-02/node_modules",
+      "reason": "Latest staged art/source retained; dependency/import/editor caches reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-tap-02/packages",
+      "reason": "Latest staged art/source retained; dependency/import/editor caches reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-tap-02/profiles",
+      "reason": "Latest staged art/source retained; dependency/import/editor caches reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-tap-02/README.md",
+      "reason": "Latest staged art/source retained; dependency/import/editor caches reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-tap-02/temp",
+      "reason": "Latest staged art/source retained; dependency/import/editor caches reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-web-release-01",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-spill-revive-web-release-02",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build-source/20261104-start-physics-v2",
+      "reason": "Reproducible isolated build copy; source and build manifests retained"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-debug-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-debug-02",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-debug-03",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-debug-04",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-debug-05",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-release-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-release-02",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-release-03",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-release-04",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-closeout-web-release-05",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-cup-auto-web-04",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-mobile-background-debug-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-mobile-background-debug-02",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-mobile-background-debug-03",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-mobile-background-web-release-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-mobile-background-web-release-02",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-rewarded-shake-debug-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-rewarded-shake-web-release-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261103-rewarded-shake-web-release-02",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-animation-start-debug-v2",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-animation-start-release-v2",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-animation-start-release-v3",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-animation-start-release-v4",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-mobile-feel-ads-debug-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-mobile-feel-ads-debug-02",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-mobile-feel-ads-debug-03",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-mobile-feel-ads-web-release-03",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-mobile-feel-ads-web-release-04",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-mobile-feel-ads-web-release-05",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-recovery-memory-debug-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-recovery-memory-web-release-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-recovery-memory-web-release-02",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-spill-revive-debug-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-spill-revive-debug-02",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-spill-revive-web-release-01",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-p1b-build/20261104-start-physics-v2",
+      "reason": "Superseded generated Web output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-02/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-02/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-02/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-03/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-03/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-03/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-04/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-04/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-04/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-05/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-05/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-closeout-tap-release-05/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-taptap-01/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-taptap-01/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-cup-auto-taptap-01/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-mobile-background-tap-release-01/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-mobile-background-tap-release-01/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-mobile-background-tap-release-01/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-rewarded-shake-tap-release-01/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-rewarded-shake-tap-release-01/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261103-rewarded-shake-tap-release-01/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v2/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v2/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v2/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v3/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v3/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v3/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v4/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v4/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-animation-start-tap-release-v4/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-01/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-01/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-01/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-02/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-02/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-02/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-03/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-03/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-mobile-feel-ads-tap-release-03/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-recovery-memory-tap-release-01/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-recovery-memory-tap-release-01/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-recovery-memory-tap-release-01/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-recovery-memory-tap-release-02/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-recovery-memory-tap-release-02/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-recovery-memory-tap-release-02/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "archive",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-spill-revive-tap-01/TapBuild/game.zip",
+      "reason": "Previous package retained for fault/build identity investigation"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-spill-revive-tap-01/TapBuild/game",
+      "reason": "Generated unpacked/intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-spill-revive-tap-01/wechatgame",
+      "reason": "Generated intermediate Tap output"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-spill-revive-tap-02/TapBuild/game",
+      "reason": "Current ZIP retained; unpacked duplicate is reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/cocos-taptap-minigame-build/20261104-spill-revive-tap-02/wechatgame",
+      "reason": "Current final ZIP retained; conversion intermediate is reproducible"
+    },
+    {
+      "action": "delete",
+      "path": "build-artifacts/rewarded-tests",
+      "reason": "Recreated by verify_rewarded_shake.cjs"
+    },
+    {
+      "action": "delete",
+      "path": "奶茶挤挤/library",
+      "reason": "Reproducible cache or scratch automation output"
+    },
+    {
+      "action": "delete",
+      "path": "奶茶挤挤/temp",
+      "reason": "Reproducible cache or scratch automation output"
+    },
+    {
+      "action": "delete",
+      "path": "奶茶挤挤/build",
+      "reason": "Reproducible cache or scratch automation output"
+    },
+    {
+      "action": "delete",
+      "path": "tools/__pycache__",
+      "reason": "Reproducible cache or scratch automation output"
+    },
+    {
+      "action": "delete",
+      "path": ".playwright-cli",
+      "reason": "Reproducible cache or scratch automation output"
+    },
+    {
+      "action": "delete",
+      "path": ".screenshots",
+      "reason": "Reproducible cache or scratch automation output"
+    },
+    {
+      "action": "archive",
+      "path": "output/playwright",
+      "reason": "Historical screenshots or artwork conversion workspace, not runtime input"
+    },
+    {
+      "action": "archive",
+      "path": "output/taptap-upload/0.1.0-20261104-mobile-feel-ads-tap-release-01",
+      "reason": "Obsolete delivery package and its evidence; current candidate remains a single ZIP"
+    },
+    {
+      "action": "archive",
+      "path": "output/taptap-upload/20261104-animation-start-tap-release-v3",
+      "reason": "Obsolete delivery package and its evidence; current candidate remains a single ZIP"
+    },
+    {
+      "action": "archive",
+      "path": "output/taptap-upload/20261104-animation-start-tap-release-v4",
+      "reason": "Obsolete delivery package and its evidence; current candidate remains a single ZIP"
+    },
+    {
+      "action": "archive",
+      "path": "output/taptap-upload/20261104-recovery-memory-tap-release-02",
+      "reason": "Obsolete delivery package and its evidence; current candidate remains a single ZIP"
+    },
+    {
+      "action": "archive",
+      "path": "output/taptap-upload/V0.1.0-20261104-mobile-feel-ads-tap-release-02",
+      "reason": "Obsolete delivery package and its evidence; current candidate remains a single ZIP"
+    },
+    {
+      "action": "archive",
+      "path": "output/taptap-upload/V0.1.0-20261104-mobile-feel-ads-tap-release-03",
+      "reason": "Obsolete delivery package and its evidence; current candidate remains a single ZIP"
+    },
+    {
+      "action": "archive",
+      "path": "output/v2-art-runtime",
+      "reason": "Historical screenshots or artwork conversion workspace, not runtime input"
+    },
+    {
+      "action": "archive",
+      "path": "docs/16-phase-verification.md",
+      "reason": "Superseded phase plan; current fixes remain in docs43/44"
+    },
+    {
+      "action": "archive",
+      "path": "docs/34-p1c-implementation-design.md",
+      "reason": "Superseded phase plan; current fixes remain in docs43/44"
+    },
+    {
+      "action": "archive",
+      "path": "docs/36-cup-auto-ranking-revision.md",
+      "reason": "Superseded phase plan; current fixes remain in docs43/44"
+    },
+    {
+      "action": "archive",
+      "path": "docs/39-cup-auto-closeout-design.md",
+      "reason": "Superseded phase plan; current fixes remain in docs43/44"
+    },
+    {
+      "action": "archive",
+      "path": "docs/40-unified-acceptance-background-ads.md",
+      "reason": "Superseded phase plan; current fixes remain in docs43/44"
+    },
+    {
+      "action": "archive",
+      "path": "docs/41-mobile-feel-ads-release-design.md",
+      "reason": "Superseded phase plan; current fixes remain in docs43/44"
+    },
+    {
+      "action": "archive",
+      "path": "docs/taptap-integration-report.md",
+      "reason": "Superseded phase plan; current fixes remain in docs43/44"
+    },
+    {
+      "action": "archive",
+      "path": "docs/development/common-contracts.md",
+      "reason": "Completed/superseded development phase"
+    },
+    {
+      "action": "archive",
+      "path": "docs/development/cup-auto-closeout",
+      "reason": "Completed/superseded development phase"
+    },
+    {
+      "action": "archive",
+      "path": "docs/development/cup-auto-revision",
+      "reason": "Completed/superseded development phase"
+    },
+    {
+      "action": "archive",
+      "path": "docs/development/lean-release",
+      "reason": "Completed/superseded development phase"
+    },
+    {
+      "action": "archive",
+      "path": "docs/development/mobile-background-ads",
+      "reason": "Completed/superseded development phase"
+    },
+    {
+      "action": "archive",
+      "path": "docs/development/mobile-feel-release",
+      "reason": "Completed/superseded development phase"
+    },
+    {
+      "action": "archive",
+      "path": "docs/development/p1b-implementation",
+      "reason": "Completed/superseded development phase"
+    },
+    {
+      "action": "archive",
+      "path": "docs/development/p1c-implementation",
+      "reason": "Completed/superseded development phase"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/Acceptance/20261104-animation-start-review",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/Acceptance/20261104-mobile-feel-ads-review",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261103-cup-auto-web-04",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-animation-start-debug-v2",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-animation-start-release-v2",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-animation-start-release-v3",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-animation-start-release-v4",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-mobile-feel-ads-debug-01",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-mobile-feel-ads-debug-02",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-mobile-feel-ads-debug-03",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-mobile-feel-ads-web-release-01",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-mobile-feel-ads-web-release-02",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-mobile-feel-ads-web-release-03",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-mobile-feel-ads-web-release-04",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-mobile-feel-ads-web-release-05",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-spill-revive-debug-01",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-spill-revive-debug-02",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-spill-revive-web-release-01",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAuto/20261104-start-physics-v2",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/CupAutoCloseout",
+      "reason": "Historical original acceptance evidence, retained outside active workspace"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/Design",
+      "reason": "Historical original acceptance evidence, retained outside active workspace"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/Integration",
+      "reason": "Historical original acceptance evidence, retained outside active workspace"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/maintenance/20261103-review-cleanup",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/maintenance/project-cleanup-20261101-093154",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/RewardedShake",
+      "reason": "Historical original acceptance evidence, retained outside active workspace"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/TapTap/20261104-animation-start-tap-release-v2",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/TapTap/20261104-animation-start-tap-release-v3",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/TapTap/20261104-animation-start-tap-release-v4",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/TapTap/20261104-mobile-feel-ads-tap-release-01",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/TapTap/20261104-mobile-feel-ads-tap-release-02",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/TapTap/20261104-mobile-feel-ads-tap-release-03",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "archive",
+      "path": "evidence/TapTap/20261104-spill-revive-tap-01",
+      "reason": "Historical acceptance/build evidence"
+    },
+    {
+      "action": "delete",
+      "path": "evidence/Acceptance/20261104-revive-delivery-review/tap-release/creator-user-data",
+      "reason": "Editor user-data cache; commands/logs/source manifests preserved"
+    },
+    {
+      "action": "delete",
+      "path": "evidence/Acceptance/20261104-revive-delivery-review/tap-release-02/creator-user-data",
+      "reason": "Editor user-data cache; commands/logs/source manifests preserved"
+    },
+    {
+      "action": "delete",
+      "path": "evidence/Acceptance/20261104-revive-delivery-review/web-debug/creator-user-data",
+      "reason": "Editor user-data cache; commands/logs/source manifests preserved"
+    },
+    {
+      "action": "delete",
+      "path": "evidence/Acceptance/20261104-revive-delivery-review/web-release/creator-user-data",
+      "reason": "Editor user-data cache; commands/logs/source manifests preserved"
+    },
+    {
+      "action": "delete",
+      "path": "evidence/Acceptance/20261104-revive-delivery-review/web-release-02/creator-user-data",
+      "reason": "Editor user-data cache; commands/logs/source manifests preserved"
+    },
+    {
+      "action": "delete",
+      "path": "evidence/CupAuto/20261104-spill-revive-web-release-02/web/creator-user-data",
+      "reason": "Editor user-data cache; commands/logs/source manifests preserved"
+    },
+    {
+      "action": "delete",
+      "path": "evidence/CupAuto/20261104-spill-revive-debug-03/web/creator-user-data",
+      "reason": "Editor user-data cache; commands/logs/source manifests preserved"
+    },
+    {
+      "action": "delete",
+      "path": "evidence/TapTap/20261104-spill-revive-tap-02/creator-user-data",
+      "reason": "Editor user-data cache; commands/logs/source manifests preserved"
+    }
+  ]
+}

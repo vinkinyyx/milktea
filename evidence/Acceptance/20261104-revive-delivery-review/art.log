@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "selectedImages": 71,
+  "packageImagesPresent": 71,
+  "errors": [],
+  "scope": "Static source/package integrity; does not verify Cocos rendering or touch behavior."
+}

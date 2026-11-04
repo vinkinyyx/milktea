@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\CocosCreator.exe",
+    "--user-data-dir=D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\TapTap\\20261104-spill-revive-tap-02\\creator-user-data",
+    "--project",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-spill-revive-tap-02",
+    "--build",
+    "configPath=D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\TapTap\\20261104-spill-revive-tap-02\\creator-build-config.json"
+  ],
+  "cwd": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-spill-revive-tap-02",
+  "childEnvironment": {
+    "MILKTEA_DISABLE_EDITOR_BRIDGE": "1"
+  }
+}

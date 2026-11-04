@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "design_rules_version": "design-v0.1",
-  "status": "unimplemented_tuning_seed",
+  "design_rules_version": "design-v0.5-natural-spawn-01",
+  "status": "implemented_pending_device_acceptance",
   "baseline_date": "2026-10-26",
   "product": {
     "working_title": "奶茶挤挤",
-    "primary_platform": "douyin_minigame",
+    "primary_platform": "taptap_minigame",
     "rendering": "2d_with_volumetric_art",
     "prototype_stage": "classic",
     "prototype_ads": false,
@@ -24,7 +24,7 @@
       "x": 0,
       "y": -9.8
     },
-    "backend": "creator_integrated_box2d_pending_spike",
+    "backend": "creator_integrated_box2d",
     "density_relative": 1,
     "friction": 0.25,
     "restitution": 0.12,
@@ -40,13 +40,28 @@
   },
   "cup": {
     "center_x_du": 375,
-    "inner_bottom_y_du": 260,
-    "inner_top_y_du": 1060,
-    "bottom_width_du": 360,
-    "top_width_du": 520,
-    "spawn_y_du": 1130,
-    "danger_line_y_du": 1000
+    "inner_bottom_y_du": 360,
+    "inner_top_y_du": 1000,
+    "bottom_width_du": 300,
+    "top_width_du": 440,
+    "spawn_y_du": 1070,
+    "danger_line_y_du": 940
   },
+  "cup_motion": {
+    "max_offset_du": 110,
+    "max_speed_du_per_second": 1200,
+    "acceleration_du_per_second2": 24000,
+    "response_seconds": 0.045,
+    "snap_epsilon_du": 0.5,
+    "settle_max_ticks": 9,
+    "input_gain": 1.0
+  },
+  "auto_drop": {
+    "interval_ticks": 60,
+    "blocked_retry_ticks": 6,
+    "resume_delay_ticks": 60
+  },
+  "spawn_jitter": { "x_offsets_du": [-16, -12, -8, -4, 4, 8, 12, 16], "vx_du_per_second": [-12, -8, 0, 8, 12] },
   "drop": {
     "min_interval_seconds": 0.45,
     "generator": "xorshift32_v1_nonzero_seed",
@@ -79,7 +94,7 @@
     "extra_max_per_run": 5,
     "duration_seconds": 0.8,
     "cooldown_seconds": 0.5,
-    "acceleration_amplitude": 3.2,
+    "acceleration_amplitude": 4.8,
     "frequency_hz": 2.5,
     "visual_offset_max_du": 6,
     "guaranteed_merge": false
@@ -247,6 +262,6 @@
     "memory_peak_mib": 256,
     "decoded_textures_mib": 32,
     "stress_dynamic_bodies": 200
-  }
+  },
+  "updated_date": "2026-11-03"
 }
-

@@ -1,0 +1,24 @@
+{
+  "asset_id": "share_result_background",
+  "dimensions": [
+    750,
+    1000
+  ],
+  "mode": "RGBA",
+  "layers": [
+    "coffee_shop_background_raster_blurred",
+    "cream_panel",
+    "brand_ribbon",
+    "cup_illustration",
+    "empty_dynamic_score_area",
+    "empty_platform_entry_area"
+  ],
+  "requires_runtime": [
+    "game_score",
+    "player_name_if_authorized",
+    "rank_or_record",
+    "real_platform_share_code_or_button"
+  ],
+  "source": "V2.0 P1 shop background + V2.0 P3 composite cup; scripted layout in build_batch4.py",
+  "is_real_screenshot": false
+}

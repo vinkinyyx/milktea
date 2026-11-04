@@ -1,0 +1,186 @@
+{
+  "scope": "final Web Release02 real mouse UI and 65 manually sampled frame updates, not phone performance",
+  "menu": {
+    "screen": "MENU",
+    "tutorial": 0,
+    "loaded": 22,
+    "sliderLoaded": false,
+    "buttons": [
+      {
+        "id": "new",
+        "rect": {
+          "x": 135,
+          "y": 354,
+          "w": 480,
+          "h": 100
+        }
+      },
+      {
+        "id": "settings",
+        "rect": {
+          "x": 245,
+          "y": 102,
+          "w": 260,
+          "h": 90
+        }
+      }
+    ],
+    "fixtures": "undefined"
+  },
+  "settings": {
+    "screen": "SETTINGS",
+    "tutorial": 0,
+    "loaded": 46,
+    "sliderLoaded": true,
+    "buttons": [
+      {
+        "id": "music-down",
+        "rect": {
+          "x": 135,
+          "y": 950,
+          "w": 100,
+          "h": 96
+        }
+      },
+      {
+        "id": "music-up",
+        "rect": {
+          "x": 515,
+          "y": 950,
+          "w": 100,
+          "h": 96
+        }
+      },
+      {
+        "id": "sfx-down",
+        "rect": {
+          "x": 135,
+          "y": 730,
+          "w": 100,
+          "h": 96
+        }
+      },
+      {
+        "id": "sfx-up",
+        "rect": {
+          "x": 515,
+          "y": 730,
+          "w": 100,
+          "h": 96
+        }
+      },
+      {
+        "id": "motion",
+        "rect": {
+          "x": 185,
+          "y": 460,
+          "w": 380,
+          "h": 96
+        }
+      },
+      {
+        "id": "tutorial-replay",
+        "rect": {
+          "x": 185,
+          "y": 340,
+          "w": 380,
+          "h": 96
+        }
+      },
+      {
+        "id": "back",
+        "rect": {
+          "x": 185,
+          "y": 220,
+          "w": 380,
+          "h": 96
+        }
+      }
+    ],
+    "fixtures": "undefined"
+  },
+  "tutorial": {
+    "screen": "PLAYING",
+    "tutorial": 1,
+    "loaded": 69,
+    "sliderLoaded": true,
+    "tick": 0,
+    "dropIndex": 0,
+    "fault": null,
+    "buttons": [
+      {
+        "id": "tutorial-next",
+        "rect": {
+          "x": 80,
+          "y": 650,
+          "w": 270,
+          "h": 96
+        }
+      },
+      {
+        "id": "tutorial-skip",
+        "rect": {
+          "x": 400,
+          "y": 650,
+          "w": 270,
+          "h": 96
+        }
+      }
+    ],
+    "fixtures": "undefined"
+  },
+  "gameplay": {
+    "screen": "PLAYING",
+    "tick": 88,
+    "dropIndex": 1,
+    "fault": null
+  },
+  "paused": {
+    "screen": "PAUSED",
+    "tutorial": 0,
+    "loaded": 69,
+    "sliderLoaded": true,
+    "tick": 89,
+    "dropIndex": 1,
+    "fault": null,
+    "buttons": [
+      {
+        "id": "resume",
+        "rect": {
+          "x": 185,
+          "y": 800,
+          "w": 380,
+          "h": 96
+        }
+      },
+      {
+        "id": "settings",
+        "rect": {
+          "x": 185,
+          "y": 670,
+          "w": 380,
+          "h": 96
+        }
+      },
+      {
+        "id": "restart",
+        "rect": {
+          "x": 185,
+          "y": 540,
+          "w": 380,
+          "h": 96
+        }
+      },
+      {
+        "id": "menu",
+        "rect": {
+          "x": 185,
+          "y": 410,
+          "w": 380,
+          "h": 96
+        }
+      }
+    ],
+    "fixtures": "undefined"
+  }
+}

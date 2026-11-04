@@ -1,0 +1,17 @@
+{
+  "effects": 10,
+  "animations_preview_mp4": 10,
+  "animations_preview_gif": 10,
+  "overlay_sprite_sequences": 6,
+  "transparent_overlay_png_frames": 80,
+  "transparent_atlases": 6,
+  "showreel_mp4_length_seconds": 20,
+  "showreel_codec": "H.264",
+  "png_decode_passed": true,
+  "mp4_decode_passed": true,
+  "frames_show_motion": true,
+  "source": "Original chat deliverables, processed locally",
+  "cocos_compiled_in_game": false,
+  "cocos_device_qa": false,
+  "notes": "Run-time physics and real UI data are not baked into demonstration clips. Cocos TS is integration example only."
+}

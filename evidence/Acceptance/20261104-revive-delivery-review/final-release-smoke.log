@@ -1,0 +1,20 @@
+### Result
+{"scope":"final Web Release02 real mouse UI and 65 manually sampled frame updates, not phone performance","menu":{"screen":"MENU","tutorial":0,"loaded":22,"sliderLoaded":false,"buttons":[{"id":"new","rect":{"x":135,"y":354,"w":480,"h":100}},{"id":"settings","rect":{"x":245,"y":102,"w":260,"h":90}}],"fixtures":"undefined"},"settings":{"screen":"SETTINGS","tutorial":0,"loaded":46,"sliderLoaded":true,"buttons":[{"id":"music-down","rect":{"x":135,"y":950,"w":100,"h":96}},{"id":"music-up","rect":{"x":515,"y":950,"w":100,"h":96}},{"id":"sfx-down","rect":{"x":135,"y":730,"w":100,"h":96}},{"id":"sfx-up","rect":{"x":515,"y":730,"w":100,"h":96}},{"id":"motion","rect":{"x":185,"y":460,"w":380,"h":96}},{"id":"tutorial-replay","rect":{"x":185,"y":340,"w":380,"h":96}},{"id":"back","rect":{"x":185,"y":220,"w":380,"h":96}}],"fixtures":"undefined"},"tutorial":{"screen":"PLAYING","tutorial":1,"loaded":69,"sliderLoaded":true,"tick":0,"dropIndex":0,"fault":null,"buttons":[{"id":"tutorial-next","rect":{"x":80,"y":650,"w":270,"h":96}},{"id":"tutorial-skip","rect":{"x":400,"y":650,"w":270,"h":96}}],"fixtures":"undefined"},"gameplay":{"screen":"PLAYING","tick":88,"dropIndex":1,"fault":null},"paused":{"screen":"PAUSED","tutorial":0,"loaded":69,"sliderLoaded":true,"tick":89,"dropIndex":1,"fault":null,"buttons":[{"id":"resume","rect":{"x":185,"y":800,"w":380,"h":96}},{"id":"settings","rect":{"x":185,"y":670,"w":380,"h":96}},{"id":"restart","rect":{"x":185,"y":540,"w":380,"h":96}},{"id":"menu","rect":{"x":185,"y":410,"w":380,"h":96}}],"fixtures":"undefined"}}
+### Ran Playwright code
+```js
+await (async page=>{
+ await page.setViewportSize({width:390,height:844});await page.goto('http://localhost:4225/');await page.bringToFront();await page.waitForTimeout(6000);
+ const read=()=>page.evaluate(async()=>{const cc=await System.import('cc'),r=cc.director.getScene().getChildByName('BootRoot').getComponent('P1BGameRoot');return {screen:r.screen,tutorial:r.tutorialStep,loaded:r.art.loadedCount,sliderLoaded:!!r.art.getLoadedVariant('ui_slider_knob'),tick:r.engine?.tick,dropIndex:r.engine?.snapshot().dropIndex,fault:r.engine?.lastTickFault,buttons:r.buttons.map(b=>({id:b.id,rect:b.rect})),fixtures:typeof window.__P1B_FIXTURES__};});
+ const click=async id=>{const s=await read(),b=s.buttons.find(b=>b.id===id);if(!b)throw Error('missing button '+id);await page.mouse.click(195+(b.rect.x+b.rect.w/2-375)*.52,422+(667-b.rect.y-b.rect.h/2)*.52);await page.waitForTimeout(350);};
+ const menu=await read();await click('settings');await page.waitForTimeout(500);const settings=await read();await click('back');await click('new');await page.waitForTimeout(600);const tutorial=await read();await click('tutorial-skip');
+ const gameplay=await page.evaluate(async()=>{const cc=await System.import('cc'),r=cc.director.getScene().getChildByName('BootRoot').getComponent('P1BGameRoot');for(let i=0;i<65&&r.screen==='PLAYING';i++)r.update(1/60);return {screen:r.screen,tick:r.engine.tick,dropIndex:r.engine.snapshot().dropIndex,fault:r.engine.lastTickFault};});
+ await click('pause');const paused=await read();await page.screenshot({path:'D:/Workspace/TapTap/奶茶挤挤/evidence/Acceptance/20261104-revive-delivery-review/final-release-paused.png'});return {scope:'final Web Release02 real mouse UI and 65 manually sampled frame updates, not phone performance',menu,settings,tutorial,gameplay,paused};
+}
+)(page);
+```
+### Page
+- Page URL: http://localhost:4225/
+- Page Title: 奶茶挤挤
+- Console: 2 errors, 0 warnings
+### Events
+- New console entries: .playwright-cli\console-2026-11-04T14-55-53-727Z.log#L89-L91

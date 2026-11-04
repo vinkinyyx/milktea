@@ -1,0 +1,110 @@
+{
+  "clips": [
+    {
+      "id": "01_drop",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 0.47,
+      "file_bytes": 103013
+    },
+    {
+      "id": "02_collision",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 0.711,
+      "file_bytes": 106353
+    },
+    {
+      "id": "03_merge",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 0.895,
+      "file_bytes": 108738
+    },
+    {
+      "id": "04_combo",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 0.235,
+      "file_bytes": 116147
+    },
+    {
+      "id": "05_shake",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 0.658,
+      "file_bytes": 195152
+    },
+    {
+      "id": "06_danger",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 0.021,
+      "file_bytes": 89674
+    },
+    {
+      "id": "07_button",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 0.477,
+      "file_bytes": 216102
+    },
+    {
+      "id": "08_result",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 0.279,
+      "file_bytes": 127781
+    },
+    {
+      "id": "09_cat",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 2.135,
+      "file_bytes": 342544
+    },
+    {
+      "id": "10_transition",
+      "frames": 36,
+      "fps": 18,
+      "duration_s": 2.0,
+      "motion_mean_abs_diff": 1.608,
+      "file_bytes": 179898
+    }
+  ],
+  "transparent_sequences": [
+    [
+      "contact_spark",
+      12
+    ],
+    [
+      "merge_burst",
+      16
+    ],
+    [
+      "combo_star",
+      12
+    ],
+    [
+      "danger_glow",
+      12
+    ],
+    [
+      "tap_ring",
+      12
+    ],
+    [
+      "settle_stars",
+      16
+    ]
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "asset_id": "share_friend_background",
+  "master_size": [
+    1500,
+    2000
+  ],
+  "export_size": [
+    750,
+    1000
+  ],
+  "layered_source": true,
+  "raster_layer": "V2.0 first-batch café BG",
+  "editable_layers": [
+    "cream_panel",
+    "header_banner",
+    "safe_dynamic_areas",
+    "illustration_frame"
+  ],
+  "dynamic_runtime": [
+    "actual_date",
+    "actual_challenge_id",
+    "actual_120_drop_progress",
+    "actual_score",
+    "actual_friend_names_and_avatars_when_authorized",
+    "real_platform_share_code"
+  ],
+  "platform_entry_safe_area_px": [
+    98,
+    730,
+    652,
+    925
+  ],
+  "branding": "渲染时可将自有原创标题叠加",
+  "concept_only": false,
+  "qr_is_fake": false
+}

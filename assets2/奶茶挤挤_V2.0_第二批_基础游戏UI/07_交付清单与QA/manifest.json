@@ -1,0 +1,856 @@
+{
+  "product": "奶茶挤挤",
+  "version": "V2.0",
+  "batch": "第二批 — 基础游戏UI",
+  "reference_asset_scope": "P1-06 ~ P1-11",
+  "declared_ids": 44,
+  "new_draw_ids": 36,
+  "created_prototype_ids": 36,
+  "engine_generated_ids": 8,
+  "qa_scope": "文件存在、PNG解码、尺寸、Alpha、资源ID/数量、一致命名；不含实机",
+  "notes": [
+    "设计概念图不是实时游戏截图",
+    "视觉方案中的金币和礼包仅是参考、不增加游戏功能",
+    "UI图片不包含动态数值文字，须由游戏程序绘制",
+    "UI图标透明单独PNG，不带白色背景",
+    "第一批的button skin可复用，第二批不重复制作核心按钮"
+  ],
+  "files": [
+    {
+      "path": "01_图标_18项/ui_icon_next@master_192x192.png",
+      "bytes": 4182,
+      "sha256": "08d9a3f2b64374df287e45559a0da521f9235efe604511324a0f18683b8f2abd",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_close.svg",
+      "bytes": 1440,
+      "sha256": "eeebd27c6154100a110d31feb1c369d5ed69781d918509074a50acb673536542"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_music_on@48.png",
+      "bytes": 1123,
+      "sha256": "6c0a2336da31592c3ded156d8646295115f91b316142248cb2d54dba699777cc",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_close@master_192x192.png",
+      "bytes": 2910,
+      "sha256": "2ece0068706c7d9609345399956dcfd84503674a2145aba9dba5b02b094b3289",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_music_on.svg",
+      "bytes": 1553,
+      "sha256": "0a07897e0d2feb9e653f343d287a4e5b19bbf7432fe8d0a91bd8e3fac51df1b5"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_pause@master_192x192.png",
+      "bytes": 3023,
+      "sha256": "eb8a89101ed77b9c93800a9bcc885af64b8538d6c12ab5b5a79fcc2905f22c00",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_shake.svg",
+      "bytes": 1752,
+      "sha256": "fe9b0408a678e1d5d543dadfc4da2552cdd1d20d906e3b96a72d754701bbe4b1"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_check@48.png",
+      "bytes": 2271,
+      "sha256": "ddf0e8634f2999f2372bc1a2e4b935cd218940f4db3c3076f12127de6d50348c",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_warning@48.png",
+      "bytes": 1523,
+      "sha256": "273f2fcd3f8713790648d698247ef95ca924a78f18d5214eae110171619917af",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_shake@48.png",
+      "bytes": 1998,
+      "sha256": "2e4a3a9fb45db255531a9c956a963993d3dbc6b85372d3ff32a7d6adab66e86c",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_check.svg",
+      "bytes": 1644,
+      "sha256": "29b2fddf70678930e01d394a81933f217f5e6758311c72e267d38321c6e3b56b"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_play@96.png",
+      "bytes": 2569,
+      "sha256": "471b92977d28ad521b673eaa778d6230577887a110d7868689f6a6b616727eed",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_info@48.png",
+      "bytes": 1859,
+      "sha256": "2d05e732108998df5d5aad7ab72e299044bc7c6d4599b5c62200c39a5e2d27b2",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_pause@48.png",
+      "bytes": 862,
+      "sha256": "6c8631de084359a89e505bdf0eea8582eb1c54145f00e333d36e87403ceabca6",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_play.svg",
+      "bytes": 1608,
+      "sha256": "e818c572ede81b02955f75d679474fc6b5be3ccb5bc9e463e227bb954fff2522"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_next@48.png",
+      "bytes": 1055,
+      "sha256": "be9fbd51e7a0c3519ea8c9da07641b2a96edb7109a3dd2a330661a9bb7e276ec",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_back@48.png",
+      "bytes": 1061,
+      "sha256": "22896187e5b3a1ed02b19cd7a9583fe66a4c70ec10945632a35bc92e71790702",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_restart@master_192x192.png",
+      "bytes": 5317,
+      "sha256": "20494c8f6a0c4f896bf67a94f32c355427eccf2fb2a9794fe4db30904f96e349",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_sfx_off@96.png",
+      "bytes": 2510,
+      "sha256": "8653dbcffd75079f22618919f0189234e6a1337cff0a1915f93cf4fa83f00883",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_reduced_motion@master_192x192.png",
+      "bytes": 7220,
+      "sha256": "e7cbc5f1f6af4f434abbef7c94b04750a36f0fc438dd07a434397399e8b53af1",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_play@48.png",
+      "bytes": 1314,
+      "sha256": "c99cb207f438249226df2722be9e9a37fc58e68e25a0cdcef472c3f40114e311",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_warning@master_192x192.png",
+      "bytes": 6453,
+      "sha256": "eb45cc348c0271059f28e8bc6780a5265797b3fb092b73d5b6c15ad6ee9bd190",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_pause@96.png",
+      "bytes": 1449,
+      "sha256": "057f5a4470123099a4995094bac5c4570bb8ee2fe6ec53b3f914938b714ed316",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_check@96.png",
+      "bytes": 5231,
+      "sha256": "24c50a49d3e2cf08d95b74c13854b01bab5f51c5e6dda036b5a7bf4b4ddd3fb9",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_music_off@96.png",
+      "bytes": 2611,
+      "sha256": "c7509d4cbadbc6e2cfef1a12dccfe58e981327a60f7ae8d7ec1abbd6a4688f24",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_reduced_motion.svg",
+      "bytes": 1730,
+      "sha256": "807ae65c5f33d12e2f57e121dbdc38c9e8ec3755feba1409f75bb9965c105a5a"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_reduced_motion@48.png",
+      "bytes": 1739,
+      "sha256": "4b9bb5c6ad066d3a14b5ac09980b68bf6773ba67eb812e3d6173670403e3b218",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_reduced_motion@96.png",
+      "bytes": 3495,
+      "sha256": "babd1bd26b33714fe2dabd60bb4180b4809d2e48085f6218b92e76f6f0b382e6",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_close@96.png",
+      "bytes": 1597,
+      "sha256": "e8f9a6da35191fa5236f40dcd49a955870775f112fa3721a14034c0c7022b87e",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_continue@48.png",
+      "bytes": 728,
+      "sha256": "d5e2058b06309ceb63caca3a7c71b71ff6c218461933f3ae8e67a108e0b37e41",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_sfx_on@master_192x192.png",
+      "bytes": 5822,
+      "sha256": "755279202f50b104eb27547c6ace2c00cf88df8e53cb998395e5c11a48f51c16",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_shake@96.png",
+      "bytes": 3989,
+      "sha256": "50f1b2ea7715bab212a33d4179e0e18ea6242f4193520f84cfb3e83ad192769e",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_continue@master_192x192.png",
+      "bytes": 2808,
+      "sha256": "dbd736ea7f20a9547111f62b57a4694ee8fc330d3e3ad269f9fe9027e24f0b40",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_info.svg",
+      "bytes": 1591,
+      "sha256": "194d8aa31179396e8fc6d59eabba9eb60530492633087de6639be2519f61e5b7"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_close@48.png",
+      "bytes": 879,
+      "sha256": "795e85be75cfd5718e94f95cb9d65e4b53179297b1e7bbf2f8839daeaa3f283d",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_continue@96.png",
+      "bytes": 1428,
+      "sha256": "41dd9f96f916ae936d359948b8cd485827c2f9242c2de082fe6bf64a41c5d906",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_info@96.png",
+      "bytes": 3861,
+      "sha256": "2bc3790a191c32927b2fba0def291e39baa92a2acf4ec17eee6748eddefd80fe",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_restart.svg",
+      "bytes": 1491,
+      "sha256": "44fc7be1946456a8d04de83bc25e4c5987c556f805258c4510dd145f7d2fded9"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_next.svg",
+      "bytes": 1445,
+      "sha256": "5d0f2e586b735e8185f12ba36fcf3b4cd109992da0da3c41653cc1a60e3cb433"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_music_off.svg",
+      "bytes": 1797,
+      "sha256": "cce5c9c67c5899beed9c1c41f0dde73ceea0d2a69ba932117c00f534162678cf"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_sfx_off.svg",
+      "bytes": 1590,
+      "sha256": "4c5ee9f160eb485ebe641fc08bb97e5ac9f5ee42702466f6e44856fa6b917030"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_play@master_192x192.png",
+      "bytes": 5187,
+      "sha256": "3427bf0f51548aa28d7d5f42429011a1dc3d988f91e7e15f732089df4db535ff",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_sfx_off@master_192x192.png",
+      "bytes": 4846,
+      "sha256": "7c7525c57f7a0be1bef9a53b8bad09f763392c4f3e8be34c8e401ec3b513146f",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_settings@master_192x192.png",
+      "bytes": 9707,
+      "sha256": "5ecf469cec78fce4b69b8a39fe0b0a97036bc4c79439619c69f1a0ad920b3456",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_home@96.png",
+      "bytes": 3101,
+      "sha256": "0897add573f55a6af13058edf6381d9e15ab8fa33e1c1b76308e57adf39ef57f",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_sfx_on@96.png",
+      "bytes": 2992,
+      "sha256": "2e2441e8e88994f5011f0495602f9c70184aab2f04383043d22eacad4d5b422b",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_restart@48.png",
+      "bytes": 1355,
+      "sha256": "4333e6de50c8b71a9975acf9d23088609aeefccd8265ed7e8b631f482058b359",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_settings@96.png",
+      "bytes": 4825,
+      "sha256": "cb88b87fc2669c589092b55b16f67e073575afdcb56436f857bd8391380567ff",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_sfx_on.svg",
+      "bytes": 1604,
+      "sha256": "a386aa9029ea80d02699a73bb1a8b75b3941a290b0f9160207c2f0dfac8b5012"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_back@96.png",
+      "bytes": 2001,
+      "sha256": "7226b2498be43fd278884cca754277dcbccd47e448ab278efc9800c9e303ce97",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_warning.svg",
+      "bytes": 1681,
+      "sha256": "69563022b969aa76868f5f8bc1a59d7aae881339a821849690824cf23d75e95c"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_next@96.png",
+      "bytes": 2042,
+      "sha256": "990e5f631b4c260e8e4761d8b5052dba3884c774fb27dcd5a003a33ce2190e3c",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_info@master_192x192.png",
+      "bytes": 7832,
+      "sha256": "4a3707b4d97414f7bceed14a3771e4ddf2499f77f2c3a8af0493fa6301a24fb3",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_music_on@96.png",
+      "bytes": 2245,
+      "sha256": "739c0d39a88d800de13fff9b8578a821d7a5128bfea44998f33c05556002b0e6",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_continue.svg",
+      "bytes": 1445,
+      "sha256": "e084c5942ab244a711fe4ae266291028bddcd557f7e49f5482789f125a7b9019"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_home@48.png",
+      "bytes": 1670,
+      "sha256": "1f7de11550517a59fe862ffb165d55b9bdb5b2cd7d17d969fb136fa8f926605e",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_music_off@48.png",
+      "bytes": 1396,
+      "sha256": "dbeb55cdac622ea434867a6876197b1f7abc3bdf5413424b620b04e8f9b8b710",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_back.svg",
+      "bytes": 1442,
+      "sha256": "d86f5b4e46d121abe3d85310dca8af4671763ac8f4ee8b9f7d462dc1ee5fbed7"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_settings@48.png",
+      "bytes": 2323,
+      "sha256": "8543721e0931a7a20905563d477b547bca54a5c6bbd907c1ca0da5263e40e9ae",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_back@master_192x192.png",
+      "bytes": 4196,
+      "sha256": "c8d977f34695d65314cb46c934095ed59d145f70b7b1f297dc13568de2ad7b4b",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_settings.svg",
+      "bytes": 1693,
+      "sha256": "d056d43b356585fee65c154b7ed613097a72ecf80538778bae818a9ce1e72b94"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_sfx_on@48.png",
+      "bytes": 1548,
+      "sha256": "7254875909327fa3aba861b1c4d2d0e29864859fff0e6b90cdf1273c8ba1c746",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_restart@96.png",
+      "bytes": 2630,
+      "sha256": "1b1bc157c00ab64dc71aec74c41f7a6ca774ec6ba7b41c4724985097c0161268",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_check@master_192x192.png",
+      "bytes": 10836,
+      "sha256": "47903311ed990e51a37bf1fbd40634d3a34c8d995ab48fae066283491dfb2292",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_music_off@master_192x192.png",
+      "bytes": 5227,
+      "sha256": "1196a30eba90a35eacea32b94a15513bd70cfde4773231eb288f9ba07680c873",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_music_on@master_192x192.png",
+      "bytes": 4538,
+      "sha256": "d91db2682ee9727edcba729bac0fad2f8b23309d0d619da72295e137847911dc",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_home@master_192x192.png",
+      "bytes": 5750,
+      "sha256": "07c99ee9fe0646fde39629b27ac6e333594cf4dcd6ff7a14eb42c1403c5070b5",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_sfx_off@48.png",
+      "bytes": 1270,
+      "sha256": "63abe17fe944208357c0fe643c93ff98c8f4798b651b98ac9bf463b3253fc36c",
+      "width": 48,
+      "height": 48,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_warning@96.png",
+      "bytes": 3143,
+      "sha256": "55df063bca82ca7f9deb84445e52e3c3fe9ecd3030e3ea1403d4110119ee594c",
+      "width": 96,
+      "height": 96,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_pause.svg",
+      "bytes": 1513,
+      "sha256": "ff798f508206ee1d0dc2d1c7cff4ccb854d39ba38095324a15457ec2eae60eed"
+    },
+    {
+      "path": "01_图标_18项/ui_icon_shake@master_192x192.png",
+      "bytes": 7767,
+      "sha256": "700ae3179a0d491bcdcf2a401989ba53bc3586637e8c2af2c7042eef4e637afd",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "01_图标_18项/ui_icon_home.svg",
+      "bytes": 1599,
+      "sha256": "145da7bfa5dbf87716f3acbe02595caef78db21da0aaff8a0cccde34ff625ef0"
+    },
+    {
+      "path": "02_面板_5项/ui_panel_toast@250x40.png",
+      "bytes": 1753,
+      "sha256": "c2c4822a06da2631bea7de7cc3b4964fa3b977b76d0fe907938b9bcfa2aaac08",
+      "width": 250,
+      "height": 40,
+      "alpha": true
+    },
+    {
+      "path": "02_面板_5项/ui_panel_modal.svg",
+      "bytes": 1677,
+      "sha256": "c8b182c542e9f15f9eda77d548e8aadfc74843a7ee423bebea6d85b7b5687396"
+    },
+    {
+      "path": "02_面板_5项/ui_panel_hud.svg",
+      "bytes": 1557,
+      "sha256": "81554de5aa933f02ad3c292e1431ad1181e0f677565cef7fde0df1afff1fc818"
+    },
+    {
+      "path": "02_面板_5项/ui_panel_results.svg",
+      "bytes": 1964,
+      "sha256": "b7393995b34ceca29a44a597421d9d88c50b64fb399a5c6c08ac2e5688177dc9"
+    },
+    {
+      "path": "02_面板_5项/ui_panel_hud@340x60.png",
+      "bytes": 2901,
+      "sha256": "23d791a851075c64daf3d3bcb6ad44a231ad15ee55f26647db37b340b2939fa6",
+      "width": 340,
+      "height": 60,
+      "alpha": true
+    },
+    {
+      "path": "02_面板_5项/ui_panel_next@140x140.png",
+      "bytes": 5316,
+      "sha256": "2178f0eace5aa7a9ac85f0dfa6137ae59bcdaa340ff1f3b587d9a1efc54c2b45",
+      "width": 140,
+      "height": 140,
+      "alpha": true
+    },
+    {
+      "path": "02_面板_5项/ui_panel_modal@320x360.png",
+      "bytes": 6711,
+      "sha256": "e2791c03423e387ccb0a637ad603be2b5bab22a49af9ef44dc9532e13faf034f",
+      "width": 320,
+      "height": 360,
+      "alpha": true
+    },
+    {
+      "path": "02_面板_5项/ui_panel_results@330x410.png",
+      "bytes": 7814,
+      "sha256": "335db8ec2e5497db038a953398e4af7cf56fe7e78ac3964def962662a63e38c7",
+      "width": 330,
+      "height": 410,
+      "alpha": true
+    },
+    {
+      "path": "02_面板_5项/ui_panel_toast.svg",
+      "bytes": 1556,
+      "sha256": "cb21af1edd8bee166d6c7c04baeb95885624b8397e30dd419d9011d201e31d2a"
+    },
+    {
+      "path": "02_面板_5项/ui_panel_next.svg",
+      "bytes": 1973,
+      "sha256": "2e28900401d1a1ce0aa5920c7649b6fcb24db12ccb67f0e89f630d03cc8981a5"
+    },
+    {
+      "path": "03_控件徽章_6项/ui_toggle_knob.svg",
+      "bytes": 1398,
+      "sha256": "f7d620cf268bcb8eb36287099afbe33b8f1ca2e093a1758869167cc072903297"
+    },
+    {
+      "path": "03_控件徽章_6项/ui_slider_knob.svg",
+      "bytes": 1385,
+      "sha256": "697894609c551ec923b9f7d7e5448d903505a6a17c10296c91d4da13aa36718f"
+    },
+    {
+      "path": "03_控件徽章_6项/ui_toggle_track.svg",
+      "bytes": 1465,
+      "sha256": "db47eac104792c882b45e036578111488e140357d671da1c0594025b7420440b"
+    },
+    {
+      "path": "03_控件徽章_6项/ui_slider_knob@64x64.png",
+      "bytes": 2624,
+      "sha256": "059a6fc861716ee6a6364322e3210eee785df8eaff076fc7422611f96d90408b",
+      "width": 64,
+      "height": 64,
+      "alpha": true
+    },
+    {
+      "path": "03_控件徽章_6项/ui_toggle_knob@64x64.png",
+      "bytes": 2666,
+      "sha256": "d63fe0c77d9ebdeaf4a1ddec366e2e6883a25de1f7e0f42003178b970fa2e324",
+      "width": 64,
+      "height": 64,
+      "alpha": true
+    },
+    {
+      "path": "03_控件徽章_6项/ui_badge_record@256x128.png",
+      "bytes": 9601,
+      "sha256": "c537be3c8892225e02a3f305a32d0cc9fc75c9f74a7e1606de0930bfa7e90d80",
+      "width": 256,
+      "height": 128,
+      "alpha": true
+    },
+    {
+      "path": "03_控件徽章_6项/ui_badge_mochi@192x192.png",
+      "bytes": 9725,
+      "sha256": "4fa334e4b4f0f8e0677d6209eaa33b229c63d45f6a6ef73f693dfca466a9b695",
+      "width": 192,
+      "height": 192,
+      "alpha": true
+    },
+    {
+      "path": "03_控件徽章_6项/ui_slider_knob@master_256x256.png",
+      "bytes": 11203,
+      "sha256": "185f37842373cc7bc2c53870333eb5f3750b27a6133bfd353cc7580bb549513a",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "03_控件徽章_6项/ui_slider_track.svg",
+      "bytes": 1424,
+      "sha256": "da2ad557b5efa8a3f40b018c1e6b61e1b6be3e7c8e6191d0440c03441cedebbe"
+    },
+    {
+      "path": "03_控件徽章_6项/ui_toggle_knob@master_256x256.png",
+      "bytes": 11232,
+      "sha256": "2afc310510f8c0d5f0b1ce32a45dc89edca33eb24da5101f7ae11e5384efbf74",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "03_控件徽章_6项/ui_badge_mochi.svg",
+      "bytes": 1841,
+      "sha256": "a875c388ea3c94dbd17caad95fed0cc26d2cebbb91661b92d79e7d61cba7d08e"
+    },
+    {
+      "path": "03_控件徽章_6项/ui_toggle_track@128x64.png",
+      "bytes": 3059,
+      "sha256": "a2207b0172cf6d14d1d00e7737e5ec8c2e75c3acdc5fb02b14fdef53bd87d082",
+      "width": 128,
+      "height": 64,
+      "alpha": true
+    },
+    {
+      "path": "03_控件徽章_6项/ui_badge_record.svg",
+      "bytes": 1605,
+      "sha256": "0c2e8a69c10d1a861c9de987d88043fd9523dbbd30aa2d163d7449db80038660"
+    },
+    {
+      "path": "03_控件徽章_6项/ui_toggle_track@master_256x256.png",
+      "bytes": 6561,
+      "sha256": "2d819396c67c1fada398ecbb7a277228e346c0af9d1ad3d78c8c8100bf657749",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "03_控件徽章_6项/ui_slider_track@256x24.png",
+      "bytes": 1230,
+      "sha256": "8f4de0ca8ed1785680a875837cac2929a7b0751a7227fcf09f4dbf7fcd75a1d9",
+      "width": 256,
+      "height": 24,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_drop_ping@256.png",
+      "bytes": 41108,
+      "sha256": "8d758a5db118dce25b98f36178df634e0aefe5221a9b727fb07219bdd6fcd4d9",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_drop_ping@128.png",
+      "bytes": 15985,
+      "sha256": "36960ac95e6c3a58d4a1d50cce88c93c26bddf10004258ba9d4de75326325b6b",
+      "width": 128,
+      "height": 128,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_mochi_star@256.png",
+      "bytes": 39919,
+      "sha256": "2f544efda96d899ff6136eba571cb8d581f2317721313e558f364eb912b9fbdf",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_merge_ring@128.png",
+      "bytes": 20550,
+      "sha256": "20a4ab26c1ed1cd80b15cb50a97cd18e4a7b5dbbe7169ea0866f69e368a398e2",
+      "width": 128,
+      "height": 128,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_crumb.svg",
+      "bytes": 2185,
+      "sha256": "3fcd9695aafc1dd5edcde76d51b778c7d6979c62fad1e236d122039a4219787c"
+    },
+    {
+      "path": "04_特效与引导_7项/fx_drop_ping.svg",
+      "bytes": 1591,
+      "sha256": "f5a284661a227f58296b356e2c7c562e59b932c990828d4399ad1a5c65da3939"
+    },
+    {
+      "path": "04_特效与引导_7项/fx_merge_ring@256.png",
+      "bytes": 51956,
+      "sha256": "53838488a926dec0d39f439166a2f2f7b4ccfdf2aa0fb990c2bc3e066d539dbd",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_crumb@256.png",
+      "bytes": 4776,
+      "sha256": "beb5ec4154fab91f33f4b47f708fb88309a7c6184cb53de6954353f9cb887584",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_sparkle.svg",
+      "bytes": 1875,
+      "sha256": "d39bb67e1855f6960d603a618472bdae6f5cf8f80ac5f525f2e357d30f0fcc4e"
+    },
+    {
+      "path": "04_特效与引导_7项/ui_tutorial_hand_move.svg",
+      "bytes": 2077,
+      "sha256": "e4646b28f18575f956642880f34d962f5209de10490ccf5902b579f1104d030b"
+    },
+    {
+      "path": "04_特效与引导_7项/ui_tutorial_hand_release@256.png",
+      "bytes": 9683,
+      "sha256": "5400964f6ec6dfaae18b8ea8d8ee7177b69a7df08b2cdc02d1f19678f9499db4",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_mochi_star.svg",
+      "bytes": 1696,
+      "sha256": "bfb67ece109c58be6fddbeee3122049db6a3d9b80f8069cf003ff75e2b9fc89b"
+    },
+    {
+      "path": "04_特效与引导_7项/fx_crumb@128.png",
+      "bytes": 2140,
+      "sha256": "972ff3620d9792e2fdf3cd7e99db8bb0f6aec6956192eac96eeae05fdb8c05be",
+      "width": 128,
+      "height": 128,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/ui_tutorial_hand_release@128.png",
+      "bytes": 4782,
+      "sha256": "25471b66d66331ab0d25558871f58c85d2b207e394202dcf72ee3a6acb6b9423",
+      "width": 128,
+      "height": 128,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_merge_ring.svg",
+      "bytes": 1765,
+      "sha256": "ddcc2bf80f1355783280c5dcebb6a2453db67225fe20977b3d658cd5dc2ec2ae"
+    },
+    {
+      "path": "04_特效与引导_7项/ui_tutorial_hand_move@256.png",
+      "bytes": 10127,
+      "sha256": "353e19ff5bf9af8b79f58b8b93abd63ada66f3432495d3fc877c0f3813bc8b5d",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/ui_tutorial_hand_move@128.png",
+      "bytes": 5071,
+      "sha256": "1abe3a62a9ebc1e3042c37fc4e15c8e52f677052b22ce7e8d7556ddbbd9f46eb",
+      "width": 128,
+      "height": 128,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_mochi_star@128.png",
+      "bytes": 16488,
+      "sha256": "a6d5b34253940d1fe33c87990bd3101d1d8cb3788f03a3387e0917fb912455ca",
+      "width": 128,
+      "height": 128,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/fx_sparkle@256.png",
+      "bytes": 43257,
+      "sha256": "5d212ff8894e0d10b29af40dda8f4a23e42e05d1c405b74b407ca7b9b347a738",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "path": "04_特效与引导_7项/ui_tutorial_hand_release.svg",
+      "bytes": 2020,
+      "sha256": "7f772d7062e5586cf505a4adbbf4e83a8c0f6cafb8dd76c1def8725a18e720ab"
+    },
+    {
+      "path": "04_特效与引导_7项/fx_sparkle@128.png",
+      "bytes": 16263,
+      "sha256": "e439cf241d6b0def4ac1dd56466aed63b82c4e5eee4811d14dcecfe99238f4e3",
+      "width": 128,
+      "height": 128,
+      "alpha": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "audio": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\audio\\runtime\\bgm-classic-2026-11-01T02-03-16-992Z\\bgm-classic.mp3",
+  "cocos": {
+    "importAs": "AudioClip",
+    "notes": [
+      "Drag the audio file into Cocos Creator Assets.",
+      "Set the AudioSource loop property for background music."
+    ]
+  },
+  "source": "D:\\Workspace\\TapTap\\奶茶挤挤\\assets\\audio\\runtime\\bgm-classic-2026-11-01T02-03-16-992Z\\bgm-classic.source.wav",
+  "type": "music-loop"
+}
