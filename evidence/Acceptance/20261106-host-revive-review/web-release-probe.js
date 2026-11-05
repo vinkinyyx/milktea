@@ -12,8 +12,10 @@ async page=>{
  });
  const click=async id=>{const s=await read(),b=s.buttons.find(b=>b.id===id);if(!b)throw Error('Missing '+id+' in '+s.screen);
    await page.mouse.click(195+(b.rect.x+b.rect.w/2-375)*.52,422+(667-b.rect.y-b.rect.h/2)*.52);await page.waitForTimeout(500);};
- const menu=await read();await click('settings');await page.waitForTimeout(700);const settings=await read();await page.screenshot({path:dir+'settings.png'});
- await click('back');await click('new');await page.waitForTimeout(1600);const tutorial=await read();
+ const ready=async()=>{for(let i=0;i<36;i++){const s=await read();if(!s.loading)return s;await page.waitForTimeout(500);}throw Error('Loading did not settle within polling window');};
+ await page.reload();await page.waitForTimeout(4500);
+ const menu=await ready();await click('settings');await page.waitForTimeout(700);const settings=await read();await page.screenshot({path:dir+'settings.png'});
+ await click('back');await click('new');const tutorial=await ready();
  if(tutorial.buttons.some(b=>b.id==='tutorial-skip'))await click('tutorial-skip');
  await page.waitForTimeout(2200);const playing=await read();await page.screenshot({path:dir+'playing.png'});
  if(playing.screen!=='PLAYING')throw Error('Not playing: '+JSON.stringify(playing));
