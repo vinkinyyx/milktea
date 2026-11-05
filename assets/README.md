@@ -1,6 +1,6 @@
 # 素材入口
 
-运行图片以[工程catalog](../奶茶挤挤/assets/resources/art/p1/catalog.json)为准：V2精选71项，来源为assets2中的六批、补充包和9:20背景；动画资源另有7项映射。实际接入及缺口以[最新验收](../docs/44-tap-host-start-review.md)和[动画设计](../docs/42-animation-start-physics-design.md)为准，不把图集存在当作全部效果完成。
+运行图片以[工程catalog](../奶茶挤挤/assets/resources/art/p1/catalog.json)为准：V2精选71项，来源为assets2中的六批、补充包和9:20背景；动画资源另有7项映射。实际接入及缺口以[最新验收](../docs/45-r1-r4-acceptance-next-design.md)和[动画设计](../docs/42-animation-start-physics-design.md)为准，不把图集存在当作全部效果完成。
 
 - `assets2/`：六批、新背景、动画及补充素材原包，保留，不全量打包。
 - [旧制作库索引](library/catalog.json)：原稿、母版、原始导出和来源/使用权；不代表当前运行绑定。

@@ -1,0 +1,39 @@
+{
+  "extends": "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "module": "commonjs",
+    "target": "ES2019",
+    "outDir": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\rewarded-tests\\js",
+    "rootDir": "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts",
+    "types": []
+  },
+  "files": [
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\contracts\\types.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\CloneState.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\Sha256.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\ConfigLoader.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\RunRng.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\SpawnRng.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\EventIdentity.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\RunEngine.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\persistence\\SaveCodec.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\persistence\\SaveValidator.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\persistence\\SaveMigration.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\persistence\\RewardLedger.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\persistence\\ReviveLedger.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\persistence\\LocalSaveRepository.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\application\\RewardedShakeService.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\application\\RewardedAdCoordinator.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\application\\SpillReviveService.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\platform\\TapRewardedAdProvider.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\platform\\RewardedAdProviderFactory.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\debug\\FakeRewardedAdProvider.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\RewardedAdPolicyLoader.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\SpillRevivePolicyLoader.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\Clock.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤\\assets\\scripts\\core\\ArtLoadBudget.ts",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\rewarded-tests\\cc-env.d.ts"
+  ],
+  "include": []
+}

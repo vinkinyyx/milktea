@@ -21,7 +21,7 @@ export interface RngState { algorithm: 'xorshift32_v1_nonzero_seed'; state: numb
 export interface SpawnRngState { algorithm: 'spawn-xorshift32-v1'; state: number; drawCount: number }
 export interface SpawnDescriptor { level: Level; xDu: number; vxDuPerSecond: number; angularVelocity: number }
 export interface RunSnapshot {
-  saveSchemaVersion: 4; rulesVersion: string; appVersion: string; runId: UUID; epoch: number;
+  saveSchemaVersion: 5; rulesVersion: string; appVersion: string; runId: UUID; epoch: number;
   revision: number; stageId: StageId; mode: GameMode; boardType: BoardType;
   state: PhaseState; tick: number; nextEntityId: number; nextCommandSequence: number;
   score: number; maxLevel: Level; dropIndex: number; currentLevel: Level; nextLevel: Level;
@@ -31,7 +31,26 @@ export interface RunSnapshot {
   spawnRng: SpawnRngState;
   cupMotion: { offsetXDu: number; velocityXDuPerSecond: number; targetOffsetXDu: number; control: 'IDLE'|'DRAGGING'|'SETTLING' };
   autoDrop: { nextDueTick: number; pendingSpawn: SpawnDescriptor };
+  revive: RunReviveState;
   terminalReason: TerminalReason | null; checksum: string;
+}
+/** Per-run revive entitlement. A pending failure freezes the run until the player accepts or declines the offer. */
+export interface RunReviveState { used: 0 | 1; pendingFailure: SpillPendingFailure | null; committedReceiptId: UUID | null }
+/** Frozen spill metadata. The cleaned candidate is rebuilt deterministically from the paused snapshot and config. */
+export interface SpillPendingFailure {
+  version: 1; failureId: UUID; detectedTick: number; reason: 'SPILLED';
+  spilledEntityIds: number[]; clearanceDu: number; candidateHash: string;
+  /** Entities kept after clearance projection, recorded so a restore can be verified against the candidate hash. */
+  retainedEntityIds: number[];
+}
+export interface SpillReviveCandidate {
+  candidateId: UUID; failureId: UUID; detectedTick: number; spilledEntityIds: number[];
+  removedEntityIds: number[]; retainedEntityIds: number[];
+  score: number; maxLevel: Level; dropIndex: number; currentLevel: Level; nextLevel: Level;
+  nextEntityId: number; tick: number; rng: RngState; spawnRng: SpawnRngState;
+  cupOffsetXDu: number; shake: ShakeState; dangerTicks: number;
+  autoDrop: { nextDueTick: number; pendingSpawn: SpawnDescriptor };
+  ingredients: IngredientState[]; candidateHash: string;
 }
 interface CommandBase { runId: UUID; commandId: UUID; sequence: number; tick: number }
 export type RunCommand =
@@ -45,6 +64,8 @@ export type DomainEvent =
   | (EventBase & { kind: 'MergeCommitted'; parents: [number, number]; childId: number; childLevel: Level; scoreDelta: number; units: number; positionDu: Vec2 })
   | (EventBase & { kind: 'ShakeConsumed'; source: 'base' | 'coupon' | 'rewarded_ad'; consumeEventId?: UUID })
   | (EventBase & { kind: 'DangerChanged'; dangerTicks: number })
+  | (EventBase & { kind: 'SpillReviveOffered'; failureId: UUID; candidateHash: string })
+  | (EventBase & { kind: 'SpillReviveCommitted'; failureId: UUID; receiptId: UUID; candidateHash: string })
   | (EventBase & { kind: 'RunEnded'; reason: TerminalReason; score: number });
 export interface ContactPair { contactId: string; firstId: number; secondId: number | null; normalSpeed: number }
 /** secondId=null means a static cup boundary. Logical eligibility stays owned by RunEngine. */
@@ -81,11 +102,13 @@ export interface CommandOutcome {
 }
 export interface LocalCommandEnvelope { command: RunCommand; ownerEpoch: number }
 
+/** Legacy schema (v4 run / v2 profile) kept only for safe migration reads. */
+export type LegacyRunSnapshotV4 = Omit<RunSnapshot, 'saveSchemaVersion' | 'revive'> & { saveSchemaVersion: 4 };
+export type LegacyRunSnapshotV3 = Omit<RunSnapshot, 'saveSchemaVersion' | 'spawnRng' | 'autoDrop' | 'revive'> & { saveSchemaVersion:3; autoDrop:{nextDueTick:number} };
 /** Legacy schema (v2 runs / v1 profile) kept only for safe migration reads. */
-export type LegacyRunSnapshotV2 = Omit<RunSnapshot, 'saveSchemaVersion' | 'shake'> & {
+export type LegacyRunSnapshotV2 = Omit<RunSnapshot, 'saveSchemaVersion' | 'shake' | 'spawnRng' | 'autoDrop' | 'revive'> & {
   saveSchemaVersion: 2; shake: { baseUsed: number; extraUsed: number; activeStartTick: number | null; cooldownUntilTick: number };
 };
-export type LegacyRunSnapshotV3 = Omit<RunSnapshot, 'saveSchemaVersion' | 'spawnRng' | 'autoDrop'> & { saveSchemaVersion:3; autoDrop:{nextDueTick:number} };
 export interface LegacyLocalLastResult {
   runId: UUID; reason: TerminalReason; score: number; maxLevel: Level; dropIndex: number; baseUsed: number; extraUsed: 0; rulesVersion?: string;
 }
@@ -97,6 +120,11 @@ export interface RewardedShakeReceipt {
 }
 export interface RewardedShakePending { attemptId: UUID; runId: UUID; policyVersion: string; amount: 1; dayKey: string; startedAt: number }
 export interface RewardedShakeLedger { dayKey: string | null; dailyGranted: number; pendingAttempt: RewardedShakePending | null; receipts: RewardedShakeReceipt[] }
+export interface RewardedReviveReceipt {
+  attemptId: UUID; runId: UUID; failureId: UUID; rewardKind: 'spill_revive'; amount: 1; policyVersion: string; dayKey: string; status: 'COMMITTED'; grantedAt: number;
+}
+export interface RewardedRevivePending { attemptId: UUID; runId: UUID; failureId: UUID; policyVersion: string; amount: 1; dayKey: string; startedAt: number }
+export interface RewardedReviveLedger { dayKey: string | null; dailyGranted: number; pendingAttempt: RewardedRevivePending | null; receipts: RewardedReviveReceipt[] }
 export interface LocalLastResult {
   runId: UUID; reason: TerminalReason; score: number; maxLevel: Level; dropIndex: number; baseUsed: number; extraUsed: number;
   boardType: BoardType; rulesVersion?: string;
@@ -126,11 +154,14 @@ export interface LocalProfileV1 {
   activeRunId: UUID | null; revision: number;
 }
 export interface LocalProfile extends Omit<LocalProfileV1, 'schemaVersion'> {
-  schemaVersion: 2;
+  schemaVersion: 3;
   /** Proof that a trusted natural run (CUP_FULL/SPILLED) finished on this device. */
   firstNaturalRunCompleted: boolean;
   rewardedShake: RewardedShakeLedger;
+  rewardedRevive: RewardedReviveLedger;
 }
+/** Previous profile schema kept only for migration reads. */
+export type LocalProfileV2 = Omit<LocalProfile, 'schemaVersion' | 'rewardedRevive'> & { schemaVersion: 2 };
 export interface ISaveRepository {
   readProfile(): Result<LocalProfile>;
   readActiveRun(): Result<RunSnapshot | null>;
@@ -175,6 +206,12 @@ export interface RewardedAdPolicy { enabled: boolean; policyVersion: string; rew
 export interface RewardedShakePolicy {
   enabled: boolean; policyVersion: string; adUnitId: string | null; placement: 'extra-shake';
   maxExtraShakesPerRun: number; maxDailyRewardedShakes: number;
+  minForegroundSecondsFirstSession: number; requireTutorialComplete: boolean; requireFirstNaturalRunCompleted: boolean;
+}
+/** Runtime Tap rewarded-video policy for the once-per-run spill revive placement. Closed by default. */
+export interface SpillRevivePolicy {
+  enabled: boolean; policyVersion: string; adUnitId: string | null; placement: 'spill-revive';
+  maxRevivesPerRun: 1; clearanceDu: number; autoDropDelayTicks: number;
   minForegroundSecondsFirstSession: number; requireTutorialComplete: boolean; requireFirstNaturalRunCompleted: boolean;
 }
 export type RewardedAdCapability = 'SUPPORTED' | 'UNSUPPORTED' | 'UNCONFIGURED' | 'DISABLED';

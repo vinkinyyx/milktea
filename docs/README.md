@@ -3,8 +3,8 @@
 ## 当前执行
 
 - [当前事实与未完成项](22-current-progress-and-resume.md)
-- [最新独立验收与整改设计](44-tap-host-start-review.md)
-- [开发执行提示词](../evidence/Acceptance/20261105-tap-host-review/execution-prompt.md)
+- [R1–R4最新验收与详细整改设计](45-r1-r4-acceptance-next-design.md)
+- [开发执行提示词](45-r1-r4-acceptance-next-design.md#12-开发执行提示词)
 - [复活产品/存档/性能分册](43-spill-revive-performance-design.md)
 - [动画与自然落料设计](42-animation-start-physics-design.md)，已做与未做以最新验收为准
 - [开发交接](13-developer-handoff.md)、[Tap入口](38-taptap-minigame-current.md)

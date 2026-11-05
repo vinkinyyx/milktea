@@ -2,11 +2,11 @@
 
 竖屏2D奶茶小料合成游戏。Cocos Creator 3.8.8；发布目标为 TapTap 小游戏 `game.zip`。
 
-**当前验收未通过，整改尚未执行。** Tap自测只有背景、复活领取回读失败、取消广告提前结算及未经授权的每日复活上限仍待修复。真实广告与平台启动/内存复测未完成。
+**当前验收BLOCKED。** bd12b73已有部分R1–R4改动并已同步远端；R2原始回读场景、R3取消冻结和R4第四局资格通过本地检查，但加载超时未接通、Release裁剪编译失败、领取并发边界和复活重试UI仍待修复。真实Tap、广告及性能复测未完成。
 
 - [当前事实与待办](docs/22-current-progress-and-resume.md)
-- [最新验收报告](docs/44-tap-host-start-review.md)
-- [下一轮开发执行提示词](evidence/Acceptance/20261105-tap-host-review/execution-prompt.md)
+- [最新验收与详细实施设计](docs/45-r1-r4-acceptance-next-design.md)
+- [下一轮开发执行提示词](docs/45-r1-r4-acceptance-next-design.md#12-开发执行提示词)
 - [唯一候选及SHA](output/taptap-upload/CURRENT-CANDIDATE.md)
 - [文档导航](docs/README.md)、[开发交接](docs/13-developer-handoff.md)、[工具命令](tools/README.md)
 - [素材与来源](assets/README.md)、[历史归档与清理记录](docs/archive-location.md)

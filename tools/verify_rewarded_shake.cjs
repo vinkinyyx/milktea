@@ -16,7 +16,7 @@ const scripts = path.join(project, 'assets', 'scripts');
 const files = [
   'contracts/types.ts', 'core/CloneState.ts', 'core/Sha256.ts', 'core/ConfigLoader.ts', 'core/RunRng.ts', 'core/SpawnRng.ts', 'core/EventIdentity.ts', 'core/RunEngine.ts',
   'persistence/SaveCodec.ts', 'persistence/SaveValidator.ts', 'persistence/SaveMigration.ts', 'persistence/RewardLedger.ts', 'persistence/ReviveLedger.ts', 'persistence/LocalSaveRepository.ts',
-  'application/RewardedShakeService.ts', 'application/RewardedAdCoordinator.ts', 'application/SpillReviveService.ts', 'platform/TapRewardedAdProvider.ts', 'platform/RewardedAdProviderFactory.ts', 'debug/FakeRewardedAdProvider.ts', 'core/RewardedAdPolicyLoader.ts', 'core/SpillRevivePolicyLoader.ts', 'core/Clock.ts',
+  'application/RewardedShakeService.ts', 'application/RewardedAdCoordinator.ts', 'application/SpillReviveService.ts', 'platform/TapRewardedAdProvider.ts', 'platform/RewardedAdProviderFactory.ts', 'debug/FakeRewardedAdProvider.ts', 'core/RewardedAdPolicyLoader.ts', 'core/SpillRevivePolicyLoader.ts', 'core/Clock.ts', 'core/ArtLoadBudget.ts',
 ].map((file) => path.join(scripts, file));
 
 fs.rmSync(path.dirname(outDir), { recursive: true, force: true });
@@ -48,6 +48,7 @@ const { RewardedShakeService } = load('application/RewardedShakeService.js');
 const { TapRewardedAdProvider } = load('platform/TapRewardedAdProvider.js');
 const { RewardedAdPolicyLoader } = load('core/RewardedAdPolicyLoader.js');
 const { ReviveLedger } = load('persistence/ReviveLedger.js');
+const { ArtLoadBudget } = load('core/ArtLoadBudget.js');
 const { SpillReviveService } = load('application/SpillReviveService.js');
 const { SpillRevivePolicyLoader } = load('core/SpillRevivePolicyLoader.js');
 const { RewardedAdCoordinator } = load('application/RewardedAdCoordinator.js');
@@ -355,7 +356,7 @@ const profileFor = (run, extra = {}) => ({
 
   // 8. Spill revive: deterministic cleanup, once-per-run, atomic receipt
   globalThis.tap={getStorageSync:(key)=>store.get(key)??'',setStorageSync:(key,value)=>{store.set(key,value);},removeStorageSync:(key)=>{store.delete(key);},createRewardedVideoAd:()=>({onLoad(){},onError(){},onClose(){},load:async()=>{},show:async()=>{},destroy(){}})};
-  const revivePolicy = { enabled:true, policyVersion:'revive-test', adUnitId:'debug-mock', placement:'spill-revive', maxRevivesPerRun:1, maxDailyRevives:3, clearanceDu:40, autoDropDelayTicks:120, minForegroundSecondsFirstSession:0, requireTutorialComplete:true, requireFirstNaturalRunCompleted:true };
+  const revivePolicy = { enabled:true, policyVersion:'revive-test', adUnitId:'debug-mock', placement:'spill-revive', maxRevivesPerRun:1, clearanceDu:40, autoDropDelayTicks:120, minForegroundSecondsFirstSession:0, requireTutorialComplete:true, requireFirstNaturalRunCompleted:true };
   const reviveOptions = { enabled:true, clearanceDu:40, autoDropDelayTicks:120 };
   const RTOP=rules.cup.inner_top_y_du, RRAD=rules.ingredients[0].radius_du, RECEIPT='77777777-7777-4777-8777-777777777777';
   const spillRun = SaveCodec.sealSnapshot({...makeRun(), tick:200, state:'PAUSED', score:40, maxLevel:2, currentLevel:1, nextLevel:2, nextEntityId:4,
@@ -392,7 +393,8 @@ const profileFor = (run, extra = {}) => ({
   check('RV-10 a used revive cannot offer again and settles normally',!exhaustedEngine.spillPending&&exhaustedEngine.phase==='SETTLING'&&exhaustedEvents.some(e=>e.kind==='RunEnded'&&e.reason==='SPILLED'));
 
   const reviveLedger=ReviveLedger.normalize({dayKey:'2026-11-03',dailyGranted:3,pendingAttempt:null,receipts:[]},'2026-11-03');
-  check('RV-11 daily revive quota blocks the third completion',ReviveLedger.dailyRemaining(reviveLedger,revivePolicy,'2026-11-03')===0);
+  const sameRunOffer=ReviveLedger.checkOffer({policy:revivePolicy,capability:'SUPPORTED',profile:profileFor(pendingSnap,{rewardedRevive:reviveLedger}),run:pendingSnap,foregroundSeconds:60,tutorialComplete:true,nowMs:NOW});
+  check('RV-11 daily revive cap has been removed; three prior same-day grants still allow this run',sameRunOffer.allowed&&ReviveLedger.grantedForDay(reviveLedger,'2026-11-03')===3);
   const revisePending={attemptId:'88888888-8888-4888-8888-888888888888',runId:RUN_ID,failureId:'99999999-9999-4999-8999-999999999999',policyVersion:'revive-test',amount:1,dayKey:'2026-11-03',startedAt:NOW};
   check('RV-12 pending attempt blocks a second offer for the same run',!ReviveLedger.checkOffer({policy:revivePolicy,capability:'SUPPORTED',profile:profileFor(spillRun,{rewardedRevive:{dayKey:'2026-11-03',dailyGranted:0,pendingAttempt:revisePending,receipts:[]}}),run:spillRun,foregroundSeconds:60,tutorialComplete:true,nowMs:NOW}).allowed);
   const reviveReceipt={...ReviveLedger.receiptFor(revisePending,NOW),rewardKind:'spill_revive',failureId:revisePending.failureId};
@@ -449,11 +451,21 @@ const profileFor = (run, extra = {}) => ({
   const cancelReviveHost={...reviveHost,getActiveRunSnapshot:()=>cancelLive.snapshot(),getBundle:()=>cancelSpillBundle,getSaveRevision:()=>cancelRev,
     onSpillReviveCommitted:(next,revision)=>{cancelSpillBundle=next;cancelRev=revision;},projectRevive:(r)=>cancelLive.projectRevive(r),
     applyCommittedRevive:(r)=>cancelLive.reviveReceiptId===r||cancelLive.applyRevive(r).ok,declineSpillRevive:()=>{cancelLive.declineRevive();},pauseForRewardedAd:()=>{}};
-  const cancelSpillProvider={providerName:'debug-mock',capability:()=>'SUPPORTED',prepare:async()=>({ok:true,data:undefined}),show:async(attemptId)=>({kind:'CANCELLED',attemptId,errorCode:'CLOSED_EARLY'}),dispose:()=>{}};
+  let cancelShowCount=0;
+  const cancelSpillProvider={providerName:'debug-mock',capability:()=>'SUPPORTED',prepare:async()=>({ok:true,data:undefined}),show:async(attemptId)=>({kind:(++cancelShowCount===1?'CANCELLED':'COMPLETED'),attemptId,errorCode:cancelShowCount===1?'CLOSED_EARLY':undefined}),dispose:()=>{}};
   const cancelReviveService=SpillReviveService.create({provider:cancelSpillProvider,policy:revivePolicy},cancelSpillRepo,()=>NOW);
   cancelReviveService.bind(cancelReviveHost);cancelReviveService.setForegroundSeconds(60);cancelReviveService.openOffer();await cancelReviveService.watch();
   const cancelRevivePersisted=await cancelSpillRepo.readBundle();
-  check('RV-25 cancelled revive ad grants nothing and settles the spill',cancelRevivePersisted.ok&&cancelRevivePersisted.data.envelope.payload.profile.rewardedRevive.receipts.length===0&&cancelRevivePersisted.data.envelope.payload.profile.rewardedRevive.pendingAttempt===null&&cancelLive.phase==='SETTLING'&&cancelReviveService.getView().phase==='ERROR');
+  const cancelView=cancelReviveService.getView();
+  check('RV-25 cancelled revive ad grants nothing, clears pending, keeps the run frozen and surfaces ERROR',
+    cancelRevivePersisted.ok&&cancelRevivePersisted.data.envelope.payload.profile.rewardedRevive.receipts.length===0&&cancelRevivePersisted.data.envelope.payload.profile.rewardedRevive.pendingAttempt===null
+    &&cancelLive.phase==='PAUSED'&&cancelLive.reviveUsed===0&&cancelView.phase==='ERROR'&&!cancelView.retrySettle&&!cancelView.pendingAttempt);
+  cancelReviveService.retryWatch();await cancelReviveService.watch();
+  const rewatchPersisted=await cancelSpillRepo.readBundle();
+  const rewatchPayload=rewatchPersisted.data.envelope.payload;
+  check('RV-25b rewatch after cancel grants exactly once with the same run id and score',
+    cancelReviveService.getView().phase==='GRANTED'&&cancelLive.reviveUsed===1&&rewatchPersisted.ok
+    &&rewatchPayload.run.runId===RUN_ID&&rewatchPayload.run.score===40&&rewatchPayload.profile.rewardedRevive.receipts.length===1);
 
   delete globalThis.__milkteaSpillRevive;
   const retryRepo=new LocalSaveRepository('revive-retry');await retryRepo.acquireWriteLease();
@@ -471,6 +483,42 @@ const profileFor = (run, extra = {}) => ({
   retryCommitCount=999;
   await retryService.retrySettlement();
   check('RV-27 trusted retry grants exactly once after the save recovers',retryService.getView().phase==='GRANTED'&&retryLive.reviveUsed===1&&retryLive.reviveReceiptId!==null);
+
+  // R2c: rebinding the host during a retry settlement must give the previous owner zero callbacks.
+  delete globalThis.__milkteaSpillRevive;
+  const r2cRepo=new LocalSaveRepository('revive-r2c');await r2cRepo.acquireWriteLease();
+  let r2cBundle={profile:profileFor(spillRun),run:spillRun,lastResult:null};
+  const r2cInitial=await r2cRepo.commitBundle(0,null,r2cBundle);let r2cRev=r2cInitial.ok?r2cInitial.data.revision:0;
+  let r2cCommitCount=0;const r2cOriginal=r2cRepo.commitBundle.bind(r2cRepo);
+  const r2cOriginalRead=r2cRepo.readBundle.bind(r2cRepo);
+  let r2cReadDefer=null;
+  const r2cWrappedRepo=Object.create(r2cRepo);
+  r2cWrappedRepo.commitBundle=async(...args)=>{r2cCommitCount++;if(r2cCommitCount===2)return{ok:false,error:{code:'SAVE_CONFLICT',message:'fault'}};return r2cOriginal(...args);};
+  r2cWrappedRepo.readBundle=async()=>{if(r2cReadDefer)await r2cReadDefer;return r2cOriginalRead();};
+  const r2cLive=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  let oldCommitCalls=0,oldApplyCalls=0;
+  const oldHost={...reviveHost,getActiveRunSnapshot:()=>r2cLive.snapshot(),getBundle:()=>r2cBundle,getSaveRevision:()=>r2cRev,
+    onSpillReviveCommitted:(n,r)=>{oldCommitCalls++;r2cBundle=n;r2cRev=r;},projectRevive:(r)=>r2cLive.projectRevive(r),
+    applyCommittedRevive:(r)=>{oldApplyCalls++;return r2cLive.reviveReceiptId===r||r2cLive.applyRevive(r).ok;},declineSpillRevive:()=>r2cLive.declineRevive(),pauseForRewardedAd:()=>{}};
+  const r2cService=SpillReviveService.create({provider:reviveProvider,policy:revivePolicy},r2cWrappedRepo,()=>NOW);
+  r2cService.bind(oldHost);r2cService.setForegroundSeconds(60);r2cService.openOffer();await r2cService.watch();
+  check('R2c setup reaches retry-settle ERROR after an injected commit fault',r2cService.getView().phase==='ERROR'&&r2cService.getView().retrySettle&&r2cLive.reviveUsed===0);
+  r2cReadDefer=new Promise((r)=>setTimeout(r,8));
+  const beforeCommit=oldCommitCalls,beforeApply=oldApplyCalls;
+  const r2cRetry=r2cService.retrySettlement();
+  const otherLive=new RunEngine(reviveAdapter,rules,'other-run-id',99999,spillRun,reviveOptions);
+  r2cService.bind({...oldHost,getActiveRunSnapshot:()=>otherLive.snapshot()});
+  await r2cRetry;
+  check('R2c rebinding host during retry settlement leaves the previous owner with zero callbacks',oldCommitCalls===beforeCommit&&oldApplyCalls===beforeApply);
+
+  const budget=new ArtLoadBudget(0,1,15000);
+  check('AB-01 14s foreground does not expire the 15s budget',(()=>{budget.advance(14000,true);return!budget.expired&&budget.remainingMs===1000;})());
+  check('AB-02 15s foreground expires the budget',(()=>{budget.advance(1000,true);return budget.expired;})());
+  const bgBudget=new ArtLoadBudget(0,2,15000);
+  check('AB-03 background time never counts toward the deadline',(()=>{bgBudget.advance(60000,false);return!bgBudget.expired&&bgBudget.foregroundMs===0;})());
+  const cancelBudget=new ArtLoadBudget(0,3,15000);let cancelSettled=false;
+  const waiter=cancelBudget.cancelled().then(()=>{},()=>{cancelSettled=true;});cancelBudget.cancel();await waiter;
+  check('AB-04 cancellation rejects pending waiters immediately',cancelSettled);
 
   RewardedAdCoordinator.release('spill-revive');RewardedAdCoordinator.release('extra-shake');
   check('RV-28 one rewarded slot is shared by both ad kinds',RewardedAdCoordinator.claim('spill-revive')&&!RewardedAdCoordinator.claim('extra-shake')&&!RewardedAdCoordinator.claim('spill-revive'));

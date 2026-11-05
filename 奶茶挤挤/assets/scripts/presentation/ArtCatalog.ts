@@ -31,6 +31,7 @@ export class ArtCatalog {
     for (const variants of this.byId.values()) variants.sort((a, b) => Math.max(...a.size) - Math.max(...b.size));
   }
   get ids(): string[] { return Array.from(this.byId.keys()); }
+  get variantCount(): number { let count = 0; for (const variants of this.byId.values()) count += variants.length; return count; }
   select(assetId: string, targetPixels: number): ArtVariant {
     if (!Number.isFinite(targetPixels) || targetPixels <= 0) throw new Error('目标贴图尺寸必须为正有限数');
     const variants = this.byId.get(assetId);

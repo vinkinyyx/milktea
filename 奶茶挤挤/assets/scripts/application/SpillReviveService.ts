@@ -6,7 +6,7 @@ import { RewardedAdCoordinator } from './RewardedAdCoordinator';
 export type SpillRevivePhase = 'IDLE' | 'OFFER' | 'PREPARING' | 'SHOWING' | 'SETTLING' | 'GRANTED' | 'ERROR';
 export interface SpillReviveView {
   phase: SpillRevivePhase; block: ReviveOfferBlock | null; message: string | null; retrySettle: boolean;
-  capability: RewardedAdCapability; providerName: string; usedThisRun: 0 | 1; dailyRemaining: number;
+  capability: RewardedAdCapability; providerName: string; usedThisRun: 0 | 1;
   pendingAttempt: boolean; simulated: boolean; blockingRunId: string | null;
 }
 export interface SpillReviveHost {
@@ -56,6 +56,7 @@ export class SpillReviveService {
   private host: SpillReviveHost | null = null;
   private boundRunId: string | null = null;
   private hostGeneration = 0;
+  private attemptIdentity: { owner: SpillReviveHost; generation: number; runId: string; failureId: string; attemptId: UUID } | null = null;
   private constructor(private readonly env: ReviveAdEnvironment, private readonly repo: IBundleSaveRepository, private readonly now: () => number) {}
   static create(env: ReviveAdEnvironment, repo: IBundleSaveRepository, now: () => number = () => Date.now()): SpillReviveService {
     const service = new SpillReviveService(env, repo, now);
@@ -90,12 +91,24 @@ export class SpillReviveService {
     return {
       phase: this.phase, block: this.stalePending ? 'PENDING_ATTEMPT' : check.block, message: this.message, retrySettle: this.retrySettle,
       capability: this.env.provider.capability(), providerName: this.env.provider.providerName,
-      usedThisRun: run?.revive.used ?? 0, dailyRemaining: ReviveLedger.dailyRemaining(ledger, this.env.policy, ReviveLedger.dayKey(this.now())),
+      usedThisRun: run?.revive.used ?? 0,
       pendingAttempt: this.stalePending || !!(ledger.pendingAttempt && run && ledger.pendingAttempt.runId === run.runId),
       simulated: this.env.provider.providerName !== 'tap', blockingRunId: this.stalePending ? run?.runId ?? null : null,
     };
   }
   canOffer(): boolean { const view = this.getView(); return view.phase === 'IDLE' && view.block === null; }
+  /** Same host/generation and the bound run is still the one this attempt was recorded for. */
+  private stillOwns(ctx: { owner: SpillReviveHost; generation: number; runId: string }): boolean {
+    return this.host === ctx.owner && this.hostGeneration === ctx.generation && this.host.getActiveRunSnapshot()?.runId === ctx.runId;
+  }
+  /** After a clear/error, allow the same run to re-watch once more (no daily cap). Guarded by engine/policy checks. */
+  retryWatch(): void {
+    if (!this.host || this.busy || this.phase !== 'ERROR' || this.retrySettle || this.stalePending || this.pendingAttempt) return;
+    const check = this.check();
+    if (!check.allowed) { this.message = this.blockMessage(check.block); this.changed(); return; }
+    this.phase = 'OFFER'; this.message = null; this.retrySettle = false;
+    this.host.pauseForRewardedAd(); this.changed();
+  }
   openOffer(): void {
     if (!this.host || this.busy) return;
     const check = this.check();
@@ -133,6 +146,7 @@ export class SpillReviveService {
       if (!pendingCommit.ok) { this.busy = false; this.phase = 'ERROR'; this.message = '无法写入待确认的复活记录，广告未展示。'; this.changed(); return; }
       owner.onSpillReviveCommitted(frozen, pendingCommit.data.revision);
       this.pendingAttempt = attemptId; this.trustedCompletionAttempt = null;
+      this.attemptIdentity = { owner, generation, runId: run.runId, failureId: run.revive.pendingFailure.failureId, attemptId };
       const prepared = await this.env.provider.prepare();
       if (this.host !== owner || generation !== this.hostGeneration) throw new Error('REVIVE_ATTEMPT_OWNER_CHANGED');
       if (!prepared.ok) { if (!await this.clearPending('复活广告暂时无法加载，未发放奖励。')) throw new Error('REVIVE_PENDING_CLEAR_FAILED'); this.busy = false; return; }
@@ -160,49 +174,52 @@ export class SpillReviveService {
    * 没有凭证时才用最新宿主 revision 重试 CAS。
    */
   async retrySettlement(): Promise<void> {
-    if (!this.host || this.busy || !this.pendingAttempt || this.trustedCompletionAttempt !== this.pendingAttempt) return;
+    const ctx = this.attemptIdentity;
+    if (!this.host || this.busy || !ctx || this.trustedCompletionAttempt !== ctx.attemptId) return;
     this.busy = true; this.phase = 'SETTLING'; this.message = null; this.changed();
     try {
-      const owner = this.host; const generation = this.hostGeneration;
-      // R2 整改：先读最新完整信封，找到已落盘的 receipt
       const fresh = await this.repo.readBundle();
-      if (fresh.ok && fresh.data.envelope) {
-        const envelope = fresh.data.envelope;
-        const freshBundle = envelope.payload;
-        const ledger = freshBundle.profile.rewardedRevive;
-        const committedRun = freshBundle.run;
-        const attemptId = this.pendingAttempt;
-        // 验证：receipt 存在 + runId 匹配 + used=1 + committedReceiptId 匹配
-        if (ReviveLedger.hasReceipt(ledger, attemptId)) {
-          const receipt = ledger.receipts.find((r) => r.attemptId === attemptId);
-          if (receipt && committedRun && committedRun.runId === receipt.runId && committedRun.revive.used === 1
-            && committedRun.revive.committedReceiptId === attemptId) {
-            // 凭证已落盘 → 同步宿主 revision → 免费应用 → 不重看、不二次发奖
-            owner.onSpillReviveCommitted(freshBundle, envelope.revision);
-            if (this.host === owner && generation === this.hostGeneration && owner.applyCommittedRevive(attemptId)) {
-              this.pendingAttempt = null; this.stalePending = false; this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.changed();
-              return;
-            }
-            // apply 失败：revision 已同步，retry 下次还能找到同一份凭证
-            this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活凭证已保存但应用失败，可稍后重试领取。'; this.changed();
-            return;
-          }
+      if (!this.stillOwns(ctx)) return;
+      if (!fresh.ok || !fresh.data.envelope) { this.phase = 'ERROR'; this.retrySettle = true; this.message = '无法读取最新存档，可稍后重试领取。'; this.changed(); return; }
+      const envelope = fresh.data.envelope, freshBundle = envelope.payload;
+      const ledger = freshBundle.profile.rewardedRevive, committedRun = freshBundle.run;
+      if (ReviveLedger.hasReceipt(ledger, ctx.attemptId)) {
+        const receipt = ledger.receipts.find((r) => r.attemptId === ctx.attemptId);
+        // Strict identity check: same attempt/run/failure and the run was already granted (used=1).
+        const validReceipt = !!receipt && receipt.runId === ctx.runId && receipt.failureId === ctx.failureId
+          && receipt.rewardKind === 'spill_revive' && receipt.amount === 1;
+        const validRun = !!committedRun && committedRun.runId === ctx.runId && committedRun.revive.used === 1
+          && committedRun.revive.committedReceiptId === ctx.attemptId;
+        if (!validReceipt || !validRun) { this.phase = 'ERROR'; this.retrySettle = false; this.message = '复活凭证与当前局不匹配，未应用。'; this.changed(); return; }
+        ctx.owner.onSpillReviveCommitted(freshBundle, envelope.revision);
+        if (!this.stillOwns(ctx)) return;
+        if (ctx.owner.applyCommittedRevive(ctx.attemptId)) {
+          this.pendingAttempt = null; this.stalePending = false; this.attemptIdentity = null; this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.changed(); return;
         }
-        // 信封里没有对应 receipt —— 可能 write-before 故障导致只写了 pendingAttempt 但没写 receipt
-        // 这种情况让 settle() 走正常 CAS 流程（宿主 revision 已经是最新的）
+        this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活凭证已保存但应用失败，可稍后重试领取。'; this.changed(); return;
       }
-      // R2 整改：宿主 revision 可能已被 settle commit 成功的分支同步过了，
-      // 用最新 revision 起点走 settle（如果 commit 是上一条错误路径，revision 还停在旧值也能正确报 CONFLICT_REVISION）
-      await this.settle(this.pendingAttempt);
-    } catch { this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活保存仍未完成，可稍后重试。'; this.changed(); }
-    finally { this.busy = false; }
+      // No receipt yet: only retry CAS when the pending attempt still belongs to this same run/failure.
+      const pending = ledger.pendingAttempt;
+      const activeRun = this.host.getActiveRunSnapshot();
+      if (!pending || pending.attemptId !== ctx.attemptId || pending.runId !== ctx.runId || pending.failureId !== ctx.failureId
+        || !activeRun || activeRun.runId !== ctx.runId || activeRun.revive.used !== 0
+        || activeRun.revive.pendingFailure?.failureId !== ctx.failureId) {
+        this.phase = 'ERROR'; this.retrySettle = false; this.message = '找不到本局待确认的复活记录，未发放。'; this.changed(); return;
+      }
+      // Sync the verified envelope+revision (read fresh) before applying the receipt, so the live engine sees the same revision base.
+      ctx.owner.onSpillReviveCommitted(freshBundle, envelope.revision);
+      if (!this.stillOwns(ctx)) return;
+      await this.settle(ctx.attemptId);
+    } catch {
+      if (this.stillOwns(ctx)) { this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活保存仍未完成，可稍后重试。'; this.changed(); }
+    } finally { this.busy = false; }
   }
   async abandonPending(): Promise<void> {
     if (!this.host || this.busy) return;
     this.busy = true;
     const cleared = await this.clearPending('已放弃未确认的复活奖励。', false);
     if (!cleared) { this.busy = false; this.phase = 'ERROR'; this.message = '放弃操作未能保存，请重试。'; this.changed(); return; }
-    this.stalePending = false; this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.retrySettle = false; this.busy = false;
+    this.stalePending = false; this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.attemptIdentity = null; this.retrySettle = false; this.busy = false;
     this.host.declineSpillRevive(); this.changed();
   }
   acknowledgeGrant(): void {
@@ -234,7 +251,7 @@ export class SpillReviveService {
       owner.onSpillReviveCommitted(next, committed.data.revision);
     }
     this.pendingAttempt = null; this.phase = 'ERROR'; this.retrySettle = false; this.message = message; this.changed();
-    this.trustedCompletionAttempt = null;
+    this.trustedCompletionAttempt = null; this.attemptIdentity = null;
     // R3 整改：默认保留 pendingFailure，不提前 SETTLING。
     // owner.declineSpillRevive() 由 closeOffer() 或 abandonPending() 显式调用。
     if (resume) { owner.declineSpillRevive(); }
@@ -253,11 +270,15 @@ export class SpillReviveService {
     if (ReviveLedger.hasReceipt(ledger, attemptId)) {
       const receipt = ledger.receipts.find((item) => item.attemptId === attemptId);
       const persisted = bundle.run;
-      if (!receipt || receipt.runId !== run.runId || !persisted || persisted.runId !== run.runId || persisted.revive.used !== 1 || persisted.revive.committedReceiptId !== attemptId) {
+      if (!receipt || receipt.runId !== run.runId || receipt.failureId !== run.revive.pendingFailure?.failureId
+        || receipt.rewardKind !== 'spill_revive' || receipt.amount !== 1
+        || !persisted || persisted.runId !== run.runId || persisted.revive.used !== 1 || persisted.revive.committedReceiptId !== attemptId) {
         this.phase = 'ERROR'; this.retrySettle = false; this.message = '复活凭证与当前局不匹配，未应用。'; this.changed(); return;
       }
+      owner.onSpillReviveCommitted(bundle, owner.getSaveRevision());
+      if (this.host !== owner || generation !== this.hostGeneration) return;
       if (!owner.applyCommittedRevive(attemptId)) { this.phase = 'ERROR'; this.retrySettle = false; this.message = '复活凭证无法应用到当前局，请返回结算。'; this.changed(); return; }
-      this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.pendingAttempt = null; this.changed();
+      this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.pendingAttempt = null; this.attemptIdentity = null; this.changed();
       return;
     }
     if (ledger.pendingAttempt?.attemptId !== attemptId || ledger.pendingAttempt.runId !== run.runId) {
@@ -290,9 +311,9 @@ export class SpillReviveService {
       || persistedBundle.run.revive.used !== 1 || persistedBundle.run.revive.committedReceiptId !== attemptId) {
       this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活账本与本局状态未能一致回读，可重试领取。'; this.changed(); return;
     }
-    owner.onSpillReviveCommitted(persistedBundle, committed.data.revision);
+    owner.onSpillReviveCommitted(persistedBundle, readback.data.envelope.revision);
     if (!owner.applyCommittedRevive(attemptId)) { this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活已保存，但应用失败，可重试领取。'; this.changed(); return; }
-    this.pendingAttempt = null; this.stalePending = false; this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.changed();
+    this.pendingAttempt = null; this.stalePending = false; this.attemptIdentity = null; this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.changed();
   }
   private changed(): void { this.host?.onSpillReviveChanged(); }
   private blockMessage(block: ReviveOfferBlock | null): string {
@@ -302,7 +323,6 @@ export class SpillReviveService {
       case 'AD_UNSUPPORTED': return '当前环境不支持激励广告';
       case 'NO_ACTIVE_RUN': case 'NOT_SPILL_PENDING': return '当前没有可复活的洒出局';
       case 'RUN_LIMIT': return '本局已使用过复活';
-      case 'DAILY_LIMIT': return '今日复活次数已达上限';
       case 'TUTORIAL_REQUIRED': return '完成教程后可观看复活广告';
       case 'FIRST_RUN_REQUIRED': return '完成一局真实游戏后可观看复活广告';
       case 'FOREGROUND_REQUIRED': return '游戏时间稍短，暂不可观看复活广告';

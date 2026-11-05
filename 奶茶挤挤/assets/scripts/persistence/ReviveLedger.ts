@@ -2,7 +2,7 @@ import type { LocalProfile, RewardedAdCapability, RewardedReviveLedger, Rewarded
 
 export type ReviveOfferBlock =
   | 'POLICY_DISABLED' | 'AD_UNSUPPORTED' | 'AD_UNCONFIGURED' | 'NO_ACTIVE_RUN' | 'NOT_SPILL_PENDING'
-  | 'RUN_LIMIT' | 'DAILY_LIMIT' | 'TUTORIAL_REQUIRED' | 'FIRST_RUN_REQUIRED' | 'FOREGROUND_REQUIRED' | 'PENDING_ATTEMPT';
+  | 'RUN_LIMIT' | 'TUTORIAL_REQUIRED' | 'FIRST_RUN_REQUIRED' | 'FOREGROUND_REQUIRED' | 'PENDING_ATTEMPT';
 
 /** Quota and eligibility rules for the once-per-run spill revive; pure so tools can test them without storage. */
 export class ReviveLedger {
@@ -15,9 +15,6 @@ export class ReviveLedger {
   static grantedForDay(ledger: RewardedReviveLedger, day: string): number {
     const receipts = ledger.receipts.filter((receipt) => receipt.dayKey === day).length;
     return Math.max(ledger.dayKey === day ? ledger.dailyGranted : 0, receipts);
-  }
-  static dailyRemaining(ledger: RewardedReviveLedger, policy: SpillRevivePolicy, today: string): number {
-    return Math.max(0, policy.maxDailyRevives - this.grantedForDay(ledger, today));
   }
   static pendingForRun(ledger: RewardedReviveLedger, runId: string | null): RewardedRevivePending | null {
     return runId && ledger.pendingAttempt?.runId === runId ? ledger.pendingAttempt : null;
@@ -35,9 +32,7 @@ export class ReviveLedger {
     if (capability !== 'SUPPORTED') return { allowed: false, block: 'AD_UNSUPPORTED' };
     if (!run || run.state !== 'PAUSED' || !run.revive.pendingFailure) return { allowed: false, block: 'NOT_SPILL_PENDING' };
     if (run.revive.used >= policy.maxRevivesPerRun) return { allowed: false, block: 'RUN_LIMIT' };
-    // 每日上限阻断未经用户授权，已移除（R4 整改）。dailyRemaining 仍可用于审计/UI 显示。
-    // const today = this.dayKey(nowMs);
-    // if (this.dailyRemaining(profile.rewardedRevive, policy, today) < 1) return { allowed: false, block: 'DAILY_LIMIT' };
+    // 每日复活上限未经用户授权，不阻断；保留 dayKey/dailyGranted/receipts 仅用于审计。
     if (policy.requireTutorialComplete && !tutorialComplete) return { allowed: false, block: 'TUTORIAL_REQUIRED' };
     if (policy.requireFirstNaturalRunCompleted && !profile.firstNaturalRunCompleted) return { allowed: false, block: 'FIRST_RUN_REQUIRED' };
     if (!(foregroundSeconds >= policy.minForegroundSecondsFirstSession)) return { allowed: false, block: 'FOREGROUND_REQUIRED' };

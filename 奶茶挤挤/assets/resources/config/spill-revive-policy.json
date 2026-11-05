@@ -4,7 +4,6 @@
   "adUnitId": null,
   "placement": "spill-revive",
   "maxRevivesPerRun": 1,
-  "maxDailyRevives": 3,
   "clearanceDu": 40,
   "autoDropDelayTicks": 120,
   "minForegroundSecondsFirstSession": 60,

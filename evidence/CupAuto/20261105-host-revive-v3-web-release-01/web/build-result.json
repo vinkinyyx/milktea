@@ -1,0 +1,21 @@
+{
+  "buildId": "20261105-host-revive-v3-web-release-01",
+  "project": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261105-host-revive-v3-web-release-01",
+  "output": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build\\20261105-host-revive-v3-web-release-01",
+  "status": "WEB_CANDIDATE_BUILD_PASS",
+  "startedAt": "2026-11-06T00:54:23.462709+08:00",
+  "release-codeExitCode": 0,
+  "release-assetsExitCode": 0,
+  "typecheckExitCode": 0,
+  "creatorExitCode": 36,
+  "mode": "release",
+  "indexHtmlSha256": "3ba9d9a28f72987fac665296378dd66293926cbba4c474aebc70fe9b0f6d21c5",
+  "settingsSha256": "ab537d01153f32aa3356517987c4777848479eb4fe1a02615023be11d1161cc3",
+  "outputBytes": 5051376,
+  "templateApplied": true,
+  "releaseSettingsVerified": true,
+  "sourceMapCount": 0,
+  "documentTitle": "奶茶挤挤",
+  "debugApiStringsVerifiedAbsent": true,
+  "finishedAt": "2026-11-06T00:59:16.479174+08:00"
+}

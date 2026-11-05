@@ -34,7 +34,7 @@ const CLOSED_REWARDED_POLICY:Readonly<RewardedShakePolicy>=Object.freeze({
 });
 const CLOSED_SPILL_REVIVE_POLICY:Readonly<SpillRevivePolicy>=Object.freeze({
   enabled:false,policyVersion:'policy-unavailable',adUnitId:null,placement:'spill-revive' as const,
-  maxRevivesPerRun:1,maxDailyRevives:3,clearanceDu:40,autoDropDelayTicks:120,
+  maxRevivesPerRun:1,clearanceDu:40,autoDropDelayTicks:120,
   minForegroundSecondsFirstSession:60,requireTutorialComplete:true,requireFirstNaturalRunCompleted:true,
 });
 interface Rect { x:number;y:number;w:number;h:number }
@@ -87,17 +87,18 @@ export class GameRoot extends Component {
   private lease:(()=>void)|null=null; private persistent=false; private loading=false; private saveInFlight=false; private activeSaveTaskId=0; private saveTaskSequence=0; private saveIdleWaiters:Array<()=>void>=[]; private saveDirty=false; private settingsDirty=false; private saveAge=0; private baseTick=0;
   private leaseInitialized=false; private bundleInitialized=false; private artRetryTask:Promise<void>|null=null; private artLoadGeneration=0; private pendingStartRequested=false;
   private buttons:UiButton[]=[]; private labels=new Map<string,Label>(); private previewX=375; private primaryPointer:number|null=null; private dropStartX=0; private dropStartPreviewX=375;
-  private pointerKind:'ui'|'drop'|'cup'|null=null; private startedInButton:string|null=null; private ignoreMouseUntil=0; private ownerEpoch=0; private lastCommand:CommandOutcome|null=null;
+  private pointerKind:'ui'|'drop'|'cup'|'overlay'|null=null; private startedInButton:string|null=null; private startedInOverlay:string|null=null; private ignoreMouseUntil=0; private ownerEpoch=0; private lastCommand:CommandOutcome|null=null;
   private cupPointerStartX=0; private cupPointerStartOffset=0;
   private lastEvents:DomainEvent[]=[]; private events=new DiagnosticRing<DomainEvent>(4096);
   private commands=new DiagnosticRing<RunCommand>(512); private frames=new DiagnosticRing<Record<string,unknown>>(8192); private timingSaveMs=0;
-  // R1 整改：开局阶段日志（docs44 要求环形内存最多 32 条，禁止逐帧写盘）
-  private readonly stages=new DiagnosticRing<Record<string,unknown>>(64); private readonly stageStartedAtMs=performance.now();
   private dangerStepTrace=new DiagnosticRing<Record<string,unknown>>(4096); private dangerStepTraceEnabled=false;
   private pressureStepTrace=new DiagnosticRing<Record<string,unknown>>(8192); private pressureStepTraceEnabled=false; private pressurePreviousPositions=new Map<number,PointDu>(); private pressurePenetrationTicks=new Map<string,number>();
   private pauseOwners=new Set<string>(); private lifecycleOff:(()=>void)|null=null; private notice=''; private mode:'drag_release'|'tap_confirm'='drag_release'; private reducedMotion=false;
   private settingsReturnScreen:'MENU'|'PAUSED'='MENU'; private tutorialStep=0; private tutorialReturnScreen:Screen='PLAYING';
   private resultSaved=false; private resultFinalized=false; private resultError=''; private runBestScoreAtStart=0; private uiRoot:Node|null=null;
+  // Independent startup state layer: lives under the Canvas node, never destroyed by render(), always on top.
+  private overlayRoot:Node|null=null; private overlayButtons:UiButton[]=[]; private overlayVisible=false;
+  private startupTraceId=0; private firstTickTraceId=-1;
   private recoveryUsedRunId:string|null=null;
   private showPhysicsDiagnostics=false;
   private previewGraphic:Sprite|null=null;
@@ -114,6 +115,7 @@ export class GameRoot extends Component {
     window.addEventListener('keydown',this.keydown);
     window.addEventListener('blur',this.onWindowBlur);
     this.uiRoot=new Node('P1BPlayerUI');this.node.addChild(this.uiRoot);this.uiRoot.setSiblingIndex(this.node.children.length-1);this.effects=new EffectsController(this.uiRoot);
+    this.overlayRoot=new Node('P1BStartupOverlay');this.node.addChild(this.overlayRoot);this.overlayRoot.setSiblingIndex(this.node.children.length-1);
     void this.initialize();
     // initialize() synchronously paints the player loading UI before its first
     // await. Retire the earlier brand layer so it cannot cover a later shop
@@ -125,40 +127,44 @@ export class GameRoot extends Component {
   private buttonSkins=new Map<string,{node:Node;family:string}>();
   private static nextSceneId=1;
   private static nextWorldId=1;
-  /** R1 整改：记录开局阶段，环形内存（最多64条，docs44要求实际报告取最新32条），禁止逐帧写盘。 */
-  private appendStage(name:string,result:string='ok',detail?:Record<string,unknown>):void{
-    this.stages.append({name,result,msSinceBoot:performance.now()-this.stageStartedAtMs,epoch:this.ownerEpoch,detail});
-  }
   private async initialize():Promise<void>{
     if(this.loading)return;this.loading=true;this.artLoading=true;this.render();
-    this.appendStage('BOOT_CONFIG','start');
+    const owner=this.ownerEpoch, trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner);
+    this.art.beginLoadScope(owner,trace,15000);
     try{
-      if(!this.leaseInitialized){const lock=await this.repo.acquireWriteLease();this.leaseInitialized=true;if(lock.ok){if(!this.isOwner()){lock.data.release();this.appendStage('BOOT_CONFIG','error',{reason:'not_owner'});return;}this.lease=lock.data.release;this.persistent=lock.data.mode==='persistent';}}
-      this.appendStage('BOOT_CONFIG','ok',{persistent:this.persistent,leaseHeld:!!this.lease});
+      if(!this.leaseInitialized){const lock=await this.repo.acquireWriteLease();this.leaseInitialized=true;
+        if(lock.ok){if(!this.isOwner()){lock.data.release();return;}this.lease=lock.data.release;this.persistent=lock.data.mode==='persistent';}
+        else AppRuntime.startup.stage('SAVE_READ','error',{code:lock.error.code},owner,trace);}
       if(!this.isOwner())return;
       if(!this.bundleInitialized){const stored=await this.repo.readBundle();if(!this.isOwner())return;
         if(stored.ok){if(stored.data.envelope){this.bundle=stored.data.envelope.payload;this.bundleRevision=stored.data.envelope.revision;}
-          if(stored.data.warning)this.notice=stored.data.warning;}
-        else{this.persistent=false;this.notice=`存档不可续用：${stored.error.message}。原始槽保留；为保护存档，当前禁止持久化覆盖。`;}this.bundleInitialized=true;}
-      this.appendStage('SAVE_READ',this.bundleInitialized?'ok':'error',{hasRun:!!this.bundle.run,revision:this.bundleRevision});
+          if(stored.data.warning)this.notice=stored.data.warning;
+          AppRuntime.startup.stage('SAVE_READ','ok',{code:stored.data.envelope?'':'EMPTY_SAVE',assetId:`revision:${this.bundleRevision}`,bundleName:`hasRun:${!!this.bundle.run}`},owner,trace);}
+        else{this.persistent=false;this.notice=`存档不可续用：${stored.error.message}。原始槽保留；为保护存档，当前禁止持久化覆盖。`;
+          AppRuntime.startup.stage('SAVE_READ','error',{code:stored.error.code,bundleName:'memory-only'},owner,trace);}this.bundleInitialized=true;}
       this.mode=this.bundle.profile.settings.dropMode;this.reducedMotion=this.bundle.profile.settings.reducedMotion;
       if(!this.rewarded)await this.initializeRewardedShake();if(!this.isOwner())return;
       if(!this.spillRevive)await this.initializeSpillRevive();if(!this.isOwner())return;
-      this.appendStage('SAVE_READ','ok',{rewardedShake:!!this.rewarded,spillRevive:!!this.spillRevive});
       await this.art.initialize();if(!this.isOwner()){this.art.dispose();return;}this.artReady=true;
-      this.appendStage('ART_CATALOG','ok',{catalogSize:this.art.catalog?0:0});
+      const ids=this.art.catalog.ids.length, variants=this.art.catalog.variantCount;
+      AppRuntime.startup.stage('ART_CATALOG','ok',{assetId:`ids:${ids}`,bundleName:`variants:${variants}`},owner,trace);
       await this.loadRequiredArt();
       if(!this.isOwner()){this.art.dispose();return;}
-      this.appendStage('ART_CATALOG','ok',{loadedArt:this.art.loadedCount});
-      this.artLoading=false;this.render();this.bindRewardedShake();this.bindSpillRevive();void this.loadAudioClips();if(!this.isOwner())return;
-      this.appendStage('MENU_READY','ok',{screen:this.screen});
+      this.art.settleLoadScope();
+      this.artLoading=false;this.hideOverlay();this.render();this.bindRewardedShake();this.bindSpillRevive();void this.loadAudioClips();if(!this.isOwner())return;
+      this.notice='';
+      AppRuntime.startup.stage('MENU_READY','ok',{assetId:`loaded:${this.art.loadedCount}`,bundleName:`screen:${this.screen}`},owner,trace);
       if(DEBUG)this.publishDiagnostics();
-      if(this.bundle.run){this.notice=this.bundle.run.rulesVersion===AppRuntime.rules?.design_rules_version?'发现可续局存档。选择“继续上局”后仍需明确点击继续。':'发现旧版玩法未完成局；原存档已保留，可取消确认或明确开始新局。';}
-    }catch(error){this.artLoading=false;if(this.isOwner()){this.appendStage('BOOT_CONFIG','error',{reason:String(error)});this.screen='ERROR';this.notice=`启动失败：${String(error)}`;this.render();}}
+      if(this.bundle.run){this.notice=this.bundle.run.rulesVersion===AppRuntime.rules?.design_rules_version?'发现可续局存档。选择“继续上局”后仍需明确点击继续。':'发现旧版玩法未完成局；原存档已保留，可取消确认或明确开始新局。';this.render();}
+    }catch(error){
+      this.art.cancelScope(this.startupErrorCode(error));
+      this.artLoading=false;
+      if(this.isOwner()){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}
+    }
     finally{if(this.isOwner()){this.loading=false;if(this.pendingStartRequested&&this.artReady&&this.screen==='MENU'){this.pendingStartRequested=false;void this.startNew();}}}
   }
   onDestroy():void{
-    this.ownerEpoch++;this.lifecycleOff?.();this.lifecycleOff=null;if(this.rewarded&&this.rewardedHost)this.rewarded.unbind(this.rewardedHost);this.rewardedHost=null;if(this.spillRevive&&this.spillReviveHost)this.spillRevive.unbind(this.spillReviveHost);this.spillReviveHost=null;
+    this.ownerEpoch++;this.art.cancelScope('START_ART_CANCELLED');this.clearOverlay();this.lifecycleOff?.();this.lifecycleOff=null;if(this.rewarded&&this.rewardedHost)this.rewarded.unbind(this.rewardedHost);this.rewardedHost=null;if(this.spillRevive&&this.spillReviveHost)this.spillRevive.unbind(this.spillReviveHost);this.spillReviveHost=null;
     input.off(Input.EventType.TOUCH_START,this.onTouchStart,this);input.off(Input.EventType.TOUCH_MOVE,this.onTouchMove,this);input.off(Input.EventType.TOUCH_END,this.onTouchEnd,this);input.off(Input.EventType.TOUCH_CANCEL,this.onTouchCancel,this);
     input.off(Input.EventType.MOUSE_DOWN,this.onMouseDown,this);input.off(Input.EventType.MOUSE_MOVE,this.onMouseMove,this);input.off(Input.EventType.MOUSE_UP,this.onMouseUp,this);window.removeEventListener('keydown',this.keydown);window.removeEventListener('blur',this.onWindowBlur);
     this.clock?.pause();this.clock=null;this.engine?.dispose();this.engine=null;this.effects?.dispose();this.effects=null;this.art.dispose();this.audio?.dispose();this.audio=null;
@@ -166,6 +172,7 @@ export class GameRoot extends Component {
     this.debugLease?.();this.debugLease=null;this.debugRepo=null;this.lease?.();this.lease=null;
   }
   update(dt:number):void{
+    const foreground=!HostLifecycleCoordinator.backgrounded;if(foreground)AppRuntime.startup.tickForeground(Math.max(0,dt)*1000);
     const probing=this.probeMode()!=='off';const begin=probing?performance.now():0;const before=this.engine?.tick??0;let stepCount=0;this.framePhysicsMs=0;this.frameLogicMs=0;
     if(this.screen==='PLAYING'&&this.tutorialStep===0&&this.clock&&this.engine){
       try{
@@ -325,6 +332,7 @@ export class GameRoot extends Component {
     if(view.phase==='ERROR'){
       if(view.retrySettle)this.button('revive-retry','重试领取',185,620,380,96,()=>void this.spillRevive?.retrySettlement());
       else if(view.pendingAttempt)this.button('revive-abandon','放弃未确认奖励',185,620,380,96,()=>void this.spillRevive?.abandonPending());
+      else if(view.block===null)this.button('revive-rewatch','重新观看复活',185,620,380,96,()=>{this.spillRevive?.retryWatch();void this.spillRevive?.watch();});
       this.button('revive-end','结束本局',185,490,380,96,()=>this.spillRevive?.closeOffer());
     }else if(view.pendingAttempt){
       this.text('revive-status','上次复活广告未得到可信完成确认，未发放。',375,790,22);
@@ -344,7 +352,6 @@ export class GameRoot extends Component {
       case 'AD_UNSUPPORTED':return '当前环境不支持激励广告';
       case 'NO_ACTIVE_RUN':case 'NOT_SPILL_PENDING':return '当前没有可复活的洒出局';
       case 'RUN_LIMIT':return '本局已使用过复活';
-      case 'DAILY_LIMIT':return '今日复活次数已达上限';
       case 'TUTORIAL_REQUIRED':return '完成教程后可观看复活广告';
       case 'FIRST_RUN_REQUIRED':return '完成一局真实游戏后可观看复活广告';
       case 'FOREGROUND_REQUIRED':return '游戏时间稍短，暂不可观看复活广告';
@@ -353,25 +360,37 @@ export class GameRoot extends Component {
     }
   }
   private async startNew(memoryOnly=false,seedOverride?:number,attemptId?:string):Promise<void>{
-    while(this.saveInFlight)await this.waitForSaveIdle();if(this.loading||this.screen==='PLAYING')return;this.loading=true;this.notice='正在建立新局…';this.render();const owner=++this.ownerEpoch;
+    while(this.saveInFlight)await this.waitForSaveIdle();if(this.loading||this.screen==='PLAYING')return;this.loading=true;const owner=++this.ownerEpoch,trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner);
+    this.notice='';this.render();
+    AppRuntime.startup.stage('START_REQUEST','start',{code:memoryOnly?'memory-only':'start'},owner,trace);
+    this.scheduleOnce(()=>{if(this.loading&&this.isOwner()&&owner===this.ownerEpoch)this.showStartupOverlay('正在准备这杯…','正在加载杯子与小料，请稍候。',[]);},0);
+    this.art.beginLoadScope(owner,trace,15000);
     try{
-      if(!this.artReady)throw new Error('美术资源尚未就绪');
+      if(!this.artReady)throw new Error('START_ART_FAILED: 美术资源尚未就绪');
+      AppRuntime.startup.stage('GAME_ART','start',{assetId:`count:${this.art.catalog.ids.length}`},owner,trace);
       await this.loadGameArt();if(!this.isOwner()||owner!==this.ownerEpoch)return;
-      const rules=AppRuntime.rules!;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[rules.design_rules_version]?.classic?.standard??0;const runId=this.makeUuid();const seed=seedOverride??this.seed();if(attemptId)this.diagnosticAttemptId=attemptId;const adapter=this.createWorld();
+      this.art.settleLoadScope();
+      AppRuntime.startup.stage('GAME_ART','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);
+      const rules=AppRuntime.rules!;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[rules.design_rules_version]?.classic?.standard??0;const runId=this.makeUuid();const seed=seedOverride??this.seed();if(attemptId)this.diagnosticAttemptId=attemptId;
+      AppRuntime.startup.stage('WORLD_CREATE','start',{code:'classic'},owner,trace);
+      const adapter=this.createWorld();
       const engine=new RunEngine(adapter,rules,runId,seed,undefined,this.reviveOptions());engine.setTimingDiagnostics(this.probeMode()!=='off');this.adapter=adapter;this.engine=engine;this.baseTick=0;this.lastEvents=[];this.events.clear();this.commands.clear();this.consumedDomainEventIds.clear();this.lastConsumedDomainEvent=null;this.resultSaved=false;this.resultError='';this.screen='PLAYING';
+      AppRuntime.startup.stage('RUN_CREATE','ok',{code:runId},owner,trace);
       this.tutorialStep=this.bundle.profile.tutorialRulesVersion===rules.design_rules_version?0:1;this.tutorialReturnScreen='PLAYING';
       this.pauseOwners.clear();const host=HostLifecycleCoordinator.snapshot();if(host.resumeRequired)this.pauseOwners.add('RESUME_REQUIRED');if(host.backgrounded)this.pauseOwners.add('HOST_HIDDEN');if(this.tutorialStep){engine.pause('MODAL');this.pauseOwners.add('MODAL');}
       const snap=engine.snapshot();const pendingReward=this.bundle.profile.rewardedShake.pendingAttempt;const pendingRevive=this.bundle.profile.rewardedRevive.pendingAttempt;const next={...this.bundle,profile:{...this.bundle.profile,activeRunId:runId,revision:this.bundle.profile.revision+1,rewardedShake:pendingReward&&pendingReward.runId!==runId?RewardLedger.clearPending(this.bundle.profile.rewardedShake):this.bundle.profile.rewardedShake,rewardedRevive:pendingRevive&&pendingRevive.runId!==runId?ReviveLedger.clearPending(this.bundle.profile.rewardedRevive):this.bundle.profile.rewardedRevive},run:snap,lastResult:null};
       const repository=this.activeSaveRepository();
+      AppRuntime.startup.stage('INITIAL_SAVE','start',{code:`revision:${this.bundleRevision}`},owner,trace);
       if(!memoryOnly&&repository&&this.persistent){const committed=await repository.commitBundle(this.bundleRevision,this.bundle.run?.runId??null,next);
-        if(!committed.ok){engine.dispose();this.engine=null;this.adapter=null;this.world?.destroy();this.world=null;this.clock=null;this.screen='ERROR';this.notice=`新局存档失败：${committed.error.message}。可重试或明确选择仅内存新局。`;this.resultError=this.notice;this.render();return;}
-        this.bundleRevision=committed.data.revision;this.bundle=next;this.notice=committed.data.warning??'';
-      }else{this.bundle=next;if(!this.debugMode)this.persistent=false;this.notice=this.debugMode?'':'仅内存模式：此局不会跨关闭页面保存。';}
+        if(!committed.ok){AppRuntime.startup.stage('INITIAL_SAVE','error',{code:committed.error.code,error:committed.error},owner,trace);engine.dispose();this.engine=null;this.adapter=null;this.world?.destroy();this.world=null;this.clock=null;this.hideOverlay();this.screen='ERROR';this.notice=`新局存档失败：${committed.error.message}。可重试或明确选择仅内存新局。`;this.resultError=this.notice;this.render();return;}
+        this.bundleRevision=committed.data.revision;this.bundle=next;this.notice=committed.data.warning??'';AppRuntime.startup.stage('INITIAL_SAVE','ok',{code:`revision:${this.bundleRevision}`},owner,trace);
+      }else{this.bundle=next;if(!this.debugMode)this.persistent=false;this.notice=this.debugMode?'':'仅内存模式：此局不会跨关闭页面保存。';AppRuntime.startup.stage('INITIAL_SAVE','ok',{code:memoryOnly?'memory-only':'no-repository'},owner,trace);}
       if(!this.isOwner()||owner!==this.ownerEpoch)return;
       this.clock=new FixedClock(rules.physics.fixed_hz,rules.physics.max_catchup_steps,()=>this.advanceRunTick());
       if(this.pauseOwners.size){if(!this.pauseOwners.has('MODAL')){this.engine.pause(this.pauseOwners.has('HOST_HIDDEN')?'HOST_HIDDEN':'RESUME_REQUIRED');this.screen='PAUSED';}this.clock.pause();}
-      this.previewX=rules.cup.center_x_du;this.lastSaveTick=0;this.resultFinalized=false;this.resultSaved=false;this.resultError='';this.saveDirty=true;this.bindRewardedShake();this.bindSpillRevive();this.render();
-    }catch(error){if(this.isOwner()&&owner===this.ownerEpoch){this.enterTechnicalError(String(error));}}
+      this.previewX=rules.cup.center_x_du;this.lastSaveTick=0;this.resultFinalized=false;this.resultSaved=false;this.resultError='';this.saveDirty=true;this.bindRewardedShake();this.bindSpillRevive();this.render();this.hideOverlay();
+      AppRuntime.startup.stage('HUD_READY','ok',{assetId:`cup:${this.art.loadedCount}`,bundleName:`screen:${this.screen}`},owner,trace);
+    }catch(error){this.art.cancelScope(this.startupErrorCode(error));if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage(code==='START_ART_TIMEOUT'?'GAME_ART':'WORLD_CREATE','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}
     finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}
   }
   private createWorld():CocosPhysicsAdapter{
@@ -498,6 +517,48 @@ export class GameRoot extends Component {
     await this.startNew();
   }
   private async returnToMenuConfirmed():Promise<void>{const owner=this.ownerEpoch;while(this.saveInFlight)await this.waitForSaveIdle();if(!this.isOwner()||owner!==this.ownerEpoch)return;if(this.engine&&!this.resultSaved){const ended=this.engine.abandon();if(ended){this.lastEvents.push(ended);this.processEvents();await this.commitResult();}while(this.saveInFlight)await this.waitForSaveIdle();if(!this.isOwner()||owner!==this.ownerEpoch||!this.resultSaved&&!!this.activeSaveRepository()){this.notice=this.resultError||'结果仍未保存，保留当前局面供重试。';this.render();return;}}this.engine?.dispose();this.engine=null;this.adapter=null;this.clock=null;this.world?.destroy();this.screen='MENU';this.render();}
+  private startupErrorCode(error:unknown):string{
+    const text=error instanceof Error?error.message:String(error);
+    const match=text.match(/START_[A-Z_]+/);return match?match[0]:'START_ART_FAILED';
+  }
+  private clearOverlay():void{this.overlayButtons=[];this.overlayVisible=false;if(!this.overlayRoot?.isValid)return;for(const child of [...this.overlayRoot.children])child.destroy();}
+  private hideOverlay():void{this.clearOverlay();}
+  private showStartupOverlay(title:string,detail:string,actions:Array<{id:string;label:string;action:()=>void}>):void{
+    if(!this.overlayRoot?.isValid)return;
+    this.clearOverlay();this.overlayVisible=true;
+    const size=presentationSize(),root=this.overlayRoot;
+    const dim=new Node('StartupOverlayDim');root.addChild(dim);dim.addComponent(UITransform).setContentSize(size.width,size.height);
+    const g=dim.addComponent(Graphics);g.fillColor=new Color(24,18,14,205);g.rect(-size.width/2,-size.height/2,size.width,size.height);g.fill();
+    const titleNode=new Node('StartupOverlayTitle');root.addChild(titleNode);titleNode.addComponent(UITransform).setContentSize(680,70);titleNode.setPosition(0,180,0);
+    const titleLabel=titleNode.addComponent(Label);titleLabel.string=title;titleLabel.fontSize=38;titleLabel.lineHeight=46;titleLabel.isBold=true;titleLabel.color=new Color(255,244,225);
+    const detailNode=new Node('StartupOverlayDetail');root.addChild(detailNode);detailNode.addComponent(UITransform).setContentSize(620,150);detailNode.setPosition(0,70,0);
+    const detailLabel=detailNode.addComponent(Label);detailLabel.string=detail;detailLabel.fontSize=22;detailLabel.lineHeight=30;detailLabel.color=new Color(235,220,200);
+    detailLabel.overflow=Label.Overflow.CLAMP;detailLabel.enableWrapText=true;
+    actions.forEach((action,index)=>{
+      const node=new Node(`StartupOverlayButton-${action.id}`);root.addChild(node);
+      const w=430,h=88,y=70-(index+1)*118;node.setPosition(0,y,0);node.addComponent(UITransform).setContentSize(w,h);
+      const bg=node.addComponent(Graphics);bg.fillColor=new Color(255,207,75);bg.roundRect(-w/2,-h/2,w,h,22);bg.fill();
+      const labelNode=new Node('Label');node.addChild(labelNode);labelNode.addComponent(UITransform).setContentSize(w-24,h-12);
+      const label=labelNode.addComponent(Label);label.string=action.label;label.fontSize=28;label.lineHeight=34;label.isBold=true;
+      label.color=new Color(103,58,32);label.overflow=Label.Overflow.SHRINK;label.enableWrapText=true;
+      this.overlayButtons.push({id:action.id,label:action.label,rect:{x:375-w/2,y:667+y-h/2,w,h},action:action.action});
+    });
+  }
+  private showStartupFailure(code:string,message:string,trace:number):void{
+    this.screen='ERROR';this.notice=`${code}：${message}`;this.loading=false;this.artLoading=false;this.render();
+    const retry=()=>{if(code.startsWith('START_ART')||!this.artReady)void this.retryArtAndStart();else void this.startNew();};
+    this.showStartupOverlay('暂时无法开始',`${code}\n${message.slice(0,180)}`, [
+      {id:'startup-retry',label:'重试准备',action:retry},
+      {id:'startup-menu',label:'返回菜单',action:()=>{this.art.cancelScope('START_ART_CANCELLED');this.screen='MENU';this.notice='';this.render();}},
+      {id:'startup-diagnostic',label:'查看诊断',action:()=>this.showStartupDiagnostics(trace)},
+    ]);
+  }
+  private showStartupDiagnostics(trace:number):void{
+    const rows=AppRuntime.startup.latest(32).map(row=>`#${row.value.traceId} ${row.value.phase} ${row.value.result}${row.value.code?` ${row.value.code}`:''}`);
+    const text=`构建 ${AppRuntime.buildId}\ntrace ${trace} · 最近 ${rows.length} 条\n${rows.slice(-10).join('\n')}`;
+    try{console.info('[startup-trace]',AppRuntime.startup.exportJson());}catch{}
+    this.showStartupOverlay('启动诊断',text,[{id:'startup-back',label:'返回',action:()=>this.hideOverlay()}]);
+  }
   private render():void{
     if(!this.uiRoot?.isValid)return;this.buttons=[];this.buttonSkins.clear();this.previewGraphic=null;
     for(const child of [...this.uiRoot.children])child.destroy();this.labels.clear();
@@ -633,13 +694,15 @@ export class GameRoot extends Component {
   private async loadArtBatch(ids:readonly string[]):Promise<void>{for(let start=0;start<ids.length;start+=4)await Promise.all(ids.slice(start,start+4).map(id=>this.art.load(id,id.startsWith('spr_ing_')?700:1000)));}
   private async loadGameArt():Promise<void>{await this.loadArtBatch(this.art.catalog.ids.filter(id=>!id.startsWith('bg_shop_extend_')));}
   private async retryArtAndStart():Promise<void>{
-    if(this.artRetryTask)return this.artRetryTask;if(this.loading)return;const owner=this.ownerEpoch,generation=++this.artLoadGeneration;
-    const task=(async()=>{this.loading=true;this.artLoading=true;this.notice='正在重试资源加载…';this.render();
+    if(this.artRetryTask)return this.artRetryTask;if(this.loading)return;const owner=this.ownerEpoch,generation=++this.artLoadGeneration,trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner);
+    const task=(async()=>{this.loading=true;this.artLoading=true;this.notice='正在重试资源加载…';this.render();this.art.beginLoadScope(owner,trace,15000);
       try{
-        if(!this.art.catalog){await this.art.initialize();if(!this.isOwner()||owner!==this.ownerEpoch||generation!==this.artLoadGeneration)return;this.artReady=true;}
-        await this.loadRequiredArt();if(!this.isOwner()||owner!==this.ownerEpoch||generation!==this.artLoadGeneration)return;
-        this.artLoading=false;this.screen='MENU';this.notice=this.bundle.run?'资源已恢复。请选择继续上局或开始新局。':'';this.render();if(DEBUG)this.publishDiagnostics();void this.loadAudioClips();
-      }catch(error){if(this.isOwner()&&owner===this.ownerEpoch&&generation===this.artLoadGeneration){this.artLoading=false;this.screen='ERROR';this.notice=`资源重试失败：${String(error)}`;this.render();}}
+        if(!this.art.catalog){AppRuntime.startup.stage('ART_CATALOG','start',undefined,owner,trace);await this.art.initialize();if(!this.isOwner()||owner!==this.ownerEpoch||generation!==this.artLoadGeneration)return;this.artReady=true;const cat=(this.art as unknown as{catalog:ArtCatalog}).catalog;AppRuntime.startup.stage('ART_CATALOG','ok',{assetId:`ids:${cat.ids.length}`,bundleName:`variants:${cat.variantCount}`},owner,trace);}
+        AppRuntime.startup.stage('GAME_ART','start',undefined,owner,trace);await this.loadRequiredArt();if(!this.isOwner()||owner!==this.ownerEpoch||generation!==this.artLoadGeneration)return;
+        this.art.settleLoadScope();
+        this.artLoading=false;this.screen='MENU';this.hideOverlay();this.notice=this.bundle.run?'资源已恢复。请选择继续上局或开始新局。':'';this.render();if(DEBUG)this.publishDiagnostics();void this.loadAudioClips();
+        AppRuntime.startup.stage('MENU_READY','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);
+      }catch(error){this.art.cancelScope(this.startupErrorCode(error));if(this.isOwner()&&owner===this.ownerEpoch&&generation===this.artLoadGeneration){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}
       finally{if(this.isOwner()&&owner===this.ownerEpoch&&generation===this.artLoadGeneration){this.loading=false;this.artRetryTask=null;}}
     })();this.artRetryTask=task;return task;
   }
@@ -740,17 +803,20 @@ export class GameRoot extends Component {
   private onMouseUp(event:any):void{if(Date.now()<this.ignoreMouseUntil)return;if(this.primaryPointer===-1)this.endPointer(event);}
   private updatePressedState(event:any):void{if(this.pointerKind!=='ui'||!this.startedInButton)return;const b=this.buttons.find(v=>v.id===this.startedInButton),p=this.point(event);if(b)this.setButtonState(b.id,this.contains(b.rect,p.x,p.y)?'pressed':'normal');}
   private inDropBand(p:{x:number;y:number}):boolean{return p.x>=80&&p.x<=670&&p.y>=180&&p.y<=320;}
-  private beginPointer(event:any,id:number):void{if(this.primaryPointer!==null)return;const p=this.point(event);const hit=this.buttons.find(b=>this.contains(b.rect,p.x,p.y));this.primaryPointer=id;
+  private beginPointer(event:any,id:number):void{if(this.primaryPointer!==null)return;const p=this.point(event);
+    if(this.overlayVisible){const hit=this.overlayButtons.find(b=>this.contains(b.rect,p.x,p.y));this.primaryPointer=id;this.pointerKind='overlay';this.startedInOverlay=hit?.id??null;return;}
+    const hit=this.buttons.find(b=>this.contains(b.rect,p.x,p.y));this.primaryPointer=id;
     if(hit){this.pointerKind='ui';this.startedInButton=hit.id;void this.effects?.play('tap',p.x,p.y,`button:${hit.id}`,this.reducedMotion);if(hit.enabled!==false)this.setButtonState(hit.id,'pressed');return;}if(this.screen==='PLAYING'&&this.hitCup(p)){this.pointerKind='cup';const snap=this.engine!.snapshot();this.cupPointerStartX=p.x;this.cupPointerStartOffset=snap.cupMotion.offsetXDu;return;}this.pointerKind='ui';this.startedInButton=null;}
   private hitCup(p:{x:number;y:number}):boolean{const cup=AppRuntime.rules!.cup,cx=cup.center_x_du+(this.engine?.snapshot().cupMotion.offsetXDu??0),x=Math.abs(p.x-cx);if(p.y>=180&&p.y<=340)return x<=cup.bottom_width_du/2+16;if(p.y<360||p.y>720)return false;const half=cup.bottom_width_du/2+(p.y-360)*(cup.top_width_du-cup.bottom_width_du)/(2*640);return x<=half+16;}
   private moveCup(event:any):void{const p=this.point(event);this.engine?.setCupTarget(this.cupPointerStartOffset+(p.x-this.cupPointerStartX)*(AppRuntime.rules?.cup_motion.input_gain??1));}
   private moveDrop(event:any):void{const p=this.point(event);if(this.inDropBand(p)){this.previewX=this.clampPreview(this.dropStartPreviewX+(p.x-this.dropStartX)*2);this.updatePreviewPosition();}}
-  private endPointer(event:any):void{const p=this.point(event);if(this.pointerKind==='ui'&&this.startedInButton){const hit=this.buttons.find(b=>b.id===this.startedInButton&&this.contains(b.rect,p.x,p.y));this.setButtonState(this.startedInButton,'normal');if(hit&&hit.enabled!==false){this.unlockAudioFromGesture();this.audio?.play('ui_tap');hit.action();}}
+  private endPointer(event:any):void{const p=this.point(event);if(this.pointerKind==='overlay'){const hit=this.startedInOverlay?this.overlayButtons.find(b=>b.id===this.startedInOverlay&&this.contains(b.rect,p.x,p.y)):null;this.primaryPointer=null;this.pointerKind=null;this.startedInOverlay=null;if(hit){this.unlockAudioFromGesture();this.audio?.play('ui_tap');hit.action();}return;}
+    if(this.pointerKind==='ui'&&this.startedInButton){const hit=this.buttons.find(b=>b.id===this.startedInButton&&this.contains(b.rect,p.x,p.y));this.setButtonState(this.startedInButton,'normal');if(hit&&hit.enabled!==false){this.unlockAudioFromGesture();this.audio?.play('ui_tap');hit.action();}}
     else if(this.pointerKind==='cup'&&this.screen==='PLAYING'){this.moveCup(event);this.engine?.releaseCup();this.unlockAudioFromGesture();}
     else if(this.pointerKind==='drop'&&this.screen==='PLAYING'&&this.inDropBand(p)){const overUi=this.buttons.some(b=>this.contains(b.rect,p.x,p.y));
       if(!overUi){this.previewX=this.clampPreview(this.dropStartPreviewX+(p.x-this.dropStartX)*2);this.updatePreviewPosition();this.unlockAudioFromGesture();if(this.mode==='drag_release')this.enqueue('DROP',this.previewX);}}
     this.primaryPointer=null;this.pointerKind=null;this.startedInButton=null;}
-  private cancelPointer():void{if(this.startedInButton)this.setButtonState(this.startedInButton,'normal');if(this.pointerKind==='cup')this.engine?.cancelCupInput(false);this.primaryPointer=null;this.pointerKind=null;this.startedInButton=null;this.dropStartX=0;this.dropStartPreviewX=this.previewX;}
+  private cancelPointer():void{if(this.startedInButton)this.setButtonState(this.startedInButton,'normal');if(this.pointerKind==='cup')this.engine?.cancelCupInput(false);this.primaryPointer=null;this.pointerKind=null;this.startedInButton=null;this.startedInOverlay=null;this.dropStartX=0;this.dropStartPreviewX=this.previewX;}
   private point(event:any):{x:number;y:number}{
     // getUILocation() already removes the pixel scale. Only remove the centered
     // decorative margins; do not apply UITransform or a second scale conversion.
@@ -759,11 +825,11 @@ export class GameRoot extends Component {
   }
   private contains(r:Rect,x:number,y:number):boolean{return x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h;}
   private clampPreview(x:number):number{const r=AppRuntime.rules!.ingredients.find(i=>i.level===this.engine?.snapshot().currentLevel)?.radius_du??18;const cup=AppRuntime.rules!.cup;return Math.max(cup.center_x_du-cup.top_width_du/2+r,Math.min(cup.center_x_du+cup.top_width_du/2-r,x));}
-  private async restoreRun():Promise<void>{if(this.loading||!this.bundle.run)return;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[this.bundle.run.rulesVersion]?.classic?.standard??this.bundle.profile.bestScores[this.bundle.run.stageId]?.standard??0;if(this.bundle.run.rulesVersion!==AppRuntime.rules?.design_rules_version){this.notice='这是旧杯型的未完成局，已保留但不会载入新杯。确认开始新杯后才替换。';this.render();return;}this.loading=true;this.screen='PAUSED';this.render();const owner=++this.ownerEpoch;
+  private async restoreRun():Promise<void>{if(this.loading||!this.bundle.run)return;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[this.bundle.run.rulesVersion]?.classic?.standard??this.bundle.profile.bestScores[this.bundle.run.stageId]?.standard??0;if(this.bundle.run.rulesVersion!==AppRuntime.rules?.design_rules_version){this.notice='这是旧杯型的未完成局，已保留但不会载入新杯。确认开始新杯后才替换。';this.render();return;}this.loading=true;this.screen='PAUSED';this.render();const owner=++this.ownerEpoch,trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner);this.art.beginLoadScope(owner,trace,15000);
     try{const stored=await this.repo.readBundle();if(!this.isOwner()||owner!==this.ownerEpoch)return;if(!stored.ok)throw new Error(stored.error.message);if(!stored.data.envelope)throw new Error('没有可续局档案');this.bundle=stored.data.envelope.payload;this.bundleRevision=stored.data.envelope.revision;
-      await this.loadGameArt();if(!this.isOwner()||owner!==this.ownerEpoch)return;const rules=AppRuntime.rules!;const run=this.bundle.run!;this.adapter=this.createWorld();this.engine=new RunEngine(this.adapter,rules,run.runId,run.rng.state,run,this.reviveOptions());this.engine.setTimingDiagnostics(this.probeMode()!=='off');this.baseTick=run.tick;this.clock=new FixedClock(rules.physics.fixed_hz,rules.physics.max_catchup_steps,()=>this.advanceRunTick());this.clock.pause();this.pauseOwners=new Set(['RESTORING']);
-      this.pauseOwners.delete('RESTORING');if(HostLifecycleCoordinator.snapshot().resumeRequired)this.pauseOwners.add('RESUME_REQUIRED');this.screen=this.engine.spillPending?'REVIVE':'PAUSED';this.notice=this.engine.spillPending?'已恢复洒出局面：可观看广告复活一次，或结束本局。':'已从最近完整保存恢复；点击“继续”后才推进。';this.bindRewardedShake();this.bindSpillRevive();this.render();
-    }catch(error){if(this.isOwner()&&owner===this.ownerEpoch){this.screen='ERROR';this.notice=`续局失败：${String(error)}`;this.render();}}finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}}
+      AppRuntime.startup.stage('GAME_ART','start',{assetId:`count:${this.art.catalog.ids.length}`},owner,trace);await this.loadGameArt();if(!this.isOwner()||owner!==this.ownerEpoch)return;this.art.settleLoadScope();AppRuntime.startup.stage('GAME_ART','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);const rules=AppRuntime.rules!;const run=this.bundle.run!;this.adapter=this.createWorld();this.engine=new RunEngine(this.adapter,rules,run.runId,run.rng.state,run,this.reviveOptions());this.engine.setTimingDiagnostics(this.probeMode()!=='off');this.baseTick=run.tick;this.clock=new FixedClock(rules.physics.fixed_hz,rules.physics.max_catchup_steps,()=>this.advanceRunTick());this.clock.pause();this.pauseOwners=new Set(['RESTORING']);
+      this.pauseOwners.delete('RESTORING');if(HostLifecycleCoordinator.snapshot().resumeRequired)this.pauseOwners.add('RESUME_REQUIRED');this.screen=this.engine.spillPending?'REVIVE':'PAUSED';this.notice=this.engine.spillPending?'已恢复洒出局面：可观看广告复活一次，或结束本局。':'已从最近完整保存恢复；点击“继续”后才推进。';this.bindRewardedShake();this.bindSpillRevive();this.render();this.hideOverlay();AppRuntime.startup.stage('HUD_READY','ok',{assetId:`screen:${this.screen}`},owner,trace);
+    }catch(error){this.art.cancelScope(this.startupErrorCode(error));if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}}
   private async persistSettings():Promise<void>{const repository=this.activeSaveRepository();if(!repository){this.notice='设置仅保存在当前页面内存中。';return;}if(this.saveInFlight){this.settingsDirty=true;return;}const task=this.beginSaveTask();if(task===null){this.settingsDirty=true;return;}const owner=this.ownerEpoch,expectedRevision=this.bundleRevision,expectedRunId=this.bundle.run?.runId??null;
     const profile={...this.bundle.profile,settings:{...this.bundle.profile.settings,dropMode:this.mode,reducedMotion:this.reducedMotion},revision:this.bundle.profile.revision+1};const next={...this.bundle,profile};
     try{const r=await repository.commitBundle(expectedRevision,expectedRunId,next);if(!this.ownsSaveTask(task,owner))return;if(r.ok){this.bundle=next;this.bundleRevision=r.data.revision;}else{this.notice=`设置未保存：${r.error.message}`;}}
@@ -1111,6 +1177,7 @@ export class GameRoot extends Component {
   }
   private advanceRunTick():boolean{const events=this.engine?.advanceOneTick()??[];if(this.engine){this.readContactFeedback();this.framePhysicsMs+=this.engine.lastPhysicsMs;this.frameLogicMs+=this.engine.lastLogicMs;if(this.engine.phase==='SETTLING'||this.engine.spillPending)this.clock?.pause();this.recordPressureStep(events);if(this.engine.lastTickFault){this.clock?.pause();this.pauseOwners.add('TECHNICAL_ERROR');this.cancelPointer();this.screen='ERROR';const rollbackFailed=this.engine.lastTickFault.includes('|ROLLBACK:');this.notice=rollbackFailed?'本局恢复未完成，原存档保持不变。错误编号 PHYSICS_ROLLBACK_FAILED':'本局遇到问题，已恢复到上一个完整物理步。错误编号 PHYSICS_TICK_ROLLED_BACK';if(rollbackFailed)this.saveDirty=false;else{this.saveDirty=true;void this.commitCheckpoint(true);}this.frames.append({kind:'technical-fault',code:rollbackFailed?'PHYSICS_ROLLBACK_FAILED':'PHYSICS_TICK_ROLLED_BACK',tick:this.engine.tick});this.render();return false;}
       if(this.dangerStepTraceEnabled){const snap=this.engine.snapshot();const dangerBodies=snap.ingredients.filter(i=>i.dangerEligible&&i.positionDu.y+(AppRuntime.rules!.ingredients.find(v=>v.level===i.level)?.radius_du??0)>AppRuntime.rules!.cup.danger_line_y_du).map(i=>({entityId:i.entityId,level:i.level,topY:i.positionDu.y+(AppRuntime.rules!.ingredients.find(v=>v.level===i.level)?.radius_du??0),eligible:i.dangerEligible}));this.dangerStepTrace.append({logicalTick:snap.tick,adapterStep:this.adapter?.stepCount??0,dangerTicks:snap.dangerTicks,phase:snap.state,terminalReason:snap.terminalReason,runEnded:events.filter(e=>e.kind==='RunEnded').map(e=>({eventId:e.eventId,reason:(e as any).reason,tick:e.tick})),dangerBodies,ingredients:snap.ingredients.map(i=>({entityId:i.entityId,level:i.level,x:i.positionDu.x,y:i.positionDu.y,vx:i.velocityDuPerSecond.x,vy:i.velocityDuPerSecond.y,eligible:i.dangerEligible,sleeping:i.sleeping})),contactCount:this.adapter?.contactCount??0,contactBeginEvents:this.adapter?.contactBeginEvents??0,physicsMs:this.engine.lastPhysicsMs,logicMs:this.engine.lastLogicMs});}}
+    if(this.startupTraceId!==this.firstTickTraceId&&this.engine){this.firstTickTraceId=this.startupTraceId;AppRuntime.startup.stage('FIRST_TICK','ok',{code:`tick:${this.engine.tick}`},this.ownerEpoch,this.startupTraceId);}
     this.lastEvents.push(...events);return true;}
   private publishDiagnostics():void{const w=globalThis as any;w.__P1B_DIAGNOSTICS__={identity:()=>({buildId:AppRuntime.buildId,attemptId:this.diagnosticAttemptId??new URLSearchParams(location.search).get('attemptId'),probeVersion:'p1b-probe-v3',sceneId:this.sceneId,cocos:'3.8.8',box2d:'1.0.2',ptm:AppRuntime.mapper?.cocosPtmRatio,autoSimulation:false,configRulesHash:AppRuntime.configRulesHash,worldId:this.worldId}),snapshot:()=>this.engine?.snapshot()??null,
       readFrames:(after=0,limit=256)=>this.frames.page(after,limit).records.map(row=>({seq:row.seq,...row.value})),

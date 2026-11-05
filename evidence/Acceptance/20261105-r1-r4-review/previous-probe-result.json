@@ -1,0 +1,46 @@
+{
+  "scope": "Node pure-state/service probes, not Tap host",
+  "readbackFailure": {
+    "afterWatch": {
+      "view": {
+        "phase": "ERROR",
+        "block": "PENDING_ATTEMPT",
+        "message": "复活存档回读失败，可重试领取。",
+        "retrySettle": true,
+        "capability": "SUPPORTED",
+        "providerName": "debug-mock",
+        "usedThisRun": 0,
+        "dailyRemaining": 3,
+        "pendingAttempt": true,
+        "simulated": true,
+        "blockingRunId": null
+      },
+      "memoryRevision": 2,
+      "persistedRevision": 3,
+      "liveUsed": 0
+    },
+    "afterTwoRetries": {
+      "view": {
+        "phase": "ERROR",
+        "block": "PENDING_ATTEMPT",
+        "message": "广告已完成，但复活存档保存失败；请稍后重试领取。",
+        "retrySettle": true,
+        "capability": "SUPPORTED",
+        "providerName": "debug-mock",
+        "usedThisRun": 0,
+        "dailyRemaining": 3,
+        "pendingAttempt": true,
+        "simulated": true,
+        "blockingRunId": null
+      },
+      "memoryRevision": 2,
+      "persistedRevision": 3,
+      "liveUsed": 0
+    }
+  },
+  "cancelledAd": {
+    "state": "SETTLING",
+    "reviveUsed": 0,
+    "phase": "ERROR"
+  }
+}

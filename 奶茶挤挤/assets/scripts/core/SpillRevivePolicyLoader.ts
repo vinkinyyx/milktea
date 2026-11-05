@@ -16,14 +16,14 @@ export class SpillRevivePolicyLoader {
         return Number(value);
       };
       if (p.maxRevivesPerRun !== 1) throw new Error('maxRevivesPerRun 必须为 1');
-      const maxDaily = amount('maxDailyRevives', 1, 3);
+      // maxDailyRevives 已下线（R4）：旧配置可带该字段，读取时忽略，不阻断、不发新上限。
       const clearanceDu = amount('clearanceDu', 8, 120);
       const autoDropDelayTicks = amount('autoDropDelayTicks', 0, 240);
       const foreground = amount('minForegroundSecondsFirstSession', 0, 600);
       if (typeof p.requireTutorialComplete !== 'boolean' || typeof p.requireFirstNaturalRunCompleted !== 'boolean') throw new Error('资格开关必须是 boolean');
       const policy: SpillRevivePolicy = {
         enabled: p.enabled, policyVersion: p.policyVersion, adUnitId: p.adUnitId as string | null, placement: 'spill-revive',
-        maxRevivesPerRun: 1, maxDailyRevives: maxDaily, clearanceDu, autoDropDelayTicks,
+        maxRevivesPerRun: 1, clearanceDu, autoDropDelayTicks,
         minForegroundSecondsFirstSession: foreground,
         requireTutorialComplete: p.requireTutorialComplete, requireFirstNaturalRunCompleted: p.requireFirstNaturalRunCompleted,
       };

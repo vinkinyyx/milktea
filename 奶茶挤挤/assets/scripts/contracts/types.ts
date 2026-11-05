@@ -211,7 +211,7 @@ export interface RewardedShakePolicy {
 /** Runtime Tap rewarded-video policy for the once-per-run spill revive placement. Closed by default. */
 export interface SpillRevivePolicy {
   enabled: boolean; policyVersion: string; adUnitId: string | null; placement: 'spill-revive';
-  maxRevivesPerRun: 1; maxDailyRevives: number; clearanceDu: number; autoDropDelayTicks: number;
+  maxRevivesPerRun: 1; clearanceDu: number; autoDropDelayTicks: number;
   minForegroundSecondsFirstSession: number; requireTutorialComplete: boolean; requireFirstNaturalRunCompleted: boolean;
 }
 export type RewardedAdCapability = 'SUPPORTED' | 'UNSUPPORTED' | 'UNCONFIGURED' | 'DISABLED';

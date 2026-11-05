@@ -1,0 +1,16 @@
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "b6c89066-5b88-46fe-af3c-8b89dfe02921",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "isBundle": true,
+    "bundleConfigID": "p1c-common",
+    "bundleName": "common",
+    "priority": 8,
+    "compressionType": "merge_dep",
+    "isRemoteBundle": false
+  }
+}
