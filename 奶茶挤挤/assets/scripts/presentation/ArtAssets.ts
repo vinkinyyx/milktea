@@ -13,6 +13,11 @@ export class ArtAssets {
   private readonly pending = new Map<string, Promise<LoadedArt>>();
   private readonly bundles = new Map<string, AssetManager.Bundle>();
   private readonly bundleLoads = new Map<string, Promise<AssetManager.Bundle>>();
+  // R1 整改：前台加载总超时（毫秒）。前台累计到 15s 触发取消，后台不累计。generation 失效自动取消。
+  private static readonly FOREGROUND_LOAD_TIMEOUT_MS = 15_000;
+  // 外部可注入 generation owner（GameRoot.artLoadGeneration），失效时 cancelPending 后新 generation 会重新加载。
+  private externalGeneration = 0;
+  setGeneration(owner: number): void { this.externalGeneration = owner; }
   async initialize(): Promise<void> {
     const json = await new Promise<JsonAsset>((resolve, reject) => resources.load('art/p1/catalog', JsonAsset,
       (error, asset) => error || !asset ? reject(error ?? new Error('美术索引缺失')) : resolve(asset)));

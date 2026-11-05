@@ -35,8 +35,9 @@ export class ReviveLedger {
     if (capability !== 'SUPPORTED') return { allowed: false, block: 'AD_UNSUPPORTED' };
     if (!run || run.state !== 'PAUSED' || !run.revive.pendingFailure) return { allowed: false, block: 'NOT_SPILL_PENDING' };
     if (run.revive.used >= policy.maxRevivesPerRun) return { allowed: false, block: 'RUN_LIMIT' };
-    const today = this.dayKey(nowMs);
-    if (this.dailyRemaining(profile.rewardedRevive, policy, today) < 1) return { allowed: false, block: 'DAILY_LIMIT' };
+    // 每日上限阻断未经用户授权，已移除（R4 整改）。dailyRemaining 仍可用于审计/UI 显示。
+    // const today = this.dayKey(nowMs);
+    // if (this.dailyRemaining(profile.rewardedRevive, policy, today) < 1) return { allowed: false, block: 'DAILY_LIMIT' };
     if (policy.requireTutorialComplete && !tutorialComplete) return { allowed: false, block: 'TUTORIAL_REQUIRED' };
     if (policy.requireFirstNaturalRunCompleted && !profile.firstNaturalRunCompleted) return { allowed: false, block: 'FIRST_RUN_REQUIRED' };
     if (!(foregroundSeconds >= policy.minForegroundSecondsFirstSession)) return { allowed: false, block: 'FOREGROUND_REQUIRED' };

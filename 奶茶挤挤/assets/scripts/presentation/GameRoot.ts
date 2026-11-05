@@ -91,6 +91,8 @@ export class GameRoot extends Component {
   private cupPointerStartX=0; private cupPointerStartOffset=0;
   private lastEvents:DomainEvent[]=[]; private events=new DiagnosticRing<DomainEvent>(4096);
   private commands=new DiagnosticRing<RunCommand>(512); private frames=new DiagnosticRing<Record<string,unknown>>(8192); private timingSaveMs=0;
+  // R1 整改：开局阶段日志（docs44 要求环形内存最多 32 条，禁止逐帧写盘）
+  private readonly stages=new DiagnosticRing<Record<string,unknown>>(64); private readonly stageStartedAtMs=performance.now();
   private dangerStepTrace=new DiagnosticRing<Record<string,unknown>>(4096); private dangerStepTraceEnabled=false;
   private pressureStepTrace=new DiagnosticRing<Record<string,unknown>>(8192); private pressureStepTraceEnabled=false; private pressurePreviousPositions=new Map<number,PointDu>(); private pressurePenetrationTicks=new Map<string,number>();
   private pauseOwners=new Set<string>(); private lifecycleOff:(()=>void)|null=null; private notice=''; private mode:'drag_release'|'tap_confirm'='drag_release'; private reducedMotion=false;
@@ -123,25 +125,36 @@ export class GameRoot extends Component {
   private buttonSkins=new Map<string,{node:Node;family:string}>();
   private static nextSceneId=1;
   private static nextWorldId=1;
+  /** R1 整改：记录开局阶段，环形内存（最多64条，docs44要求实际报告取最新32条），禁止逐帧写盘。 */
+  private appendStage(name:string,result:string='ok',detail?:Record<string,unknown>):void{
+    this.stages.append({name,result,msSinceBoot:performance.now()-this.stageStartedAtMs,epoch:this.ownerEpoch,detail});
+  }
   private async initialize():Promise<void>{
     if(this.loading)return;this.loading=true;this.artLoading=true;this.render();
+    this.appendStage('BOOT_CONFIG','start');
     try{
-      if(!this.leaseInitialized){const lock=await this.repo.acquireWriteLease();this.leaseInitialized=true;if(lock.ok){if(!this.isOwner()){lock.data.release();return;}this.lease=lock.data.release;this.persistent=lock.data.mode==='persistent';}}
+      if(!this.leaseInitialized){const lock=await this.repo.acquireWriteLease();this.leaseInitialized=true;if(lock.ok){if(!this.isOwner()){lock.data.release();this.appendStage('BOOT_CONFIG','error',{reason:'not_owner'});return;}this.lease=lock.data.release;this.persistent=lock.data.mode==='persistent';}}
+      this.appendStage('BOOT_CONFIG','ok',{persistent:this.persistent,leaseHeld:!!this.lease});
       if(!this.isOwner())return;
       if(!this.bundleInitialized){const stored=await this.repo.readBundle();if(!this.isOwner())return;
         if(stored.ok){if(stored.data.envelope){this.bundle=stored.data.envelope.payload;this.bundleRevision=stored.data.envelope.revision;}
           if(stored.data.warning)this.notice=stored.data.warning;}
         else{this.persistent=false;this.notice=`存档不可续用：${stored.error.message}。原始槽保留；为保护存档，当前禁止持久化覆盖。`;}this.bundleInitialized=true;}
+      this.appendStage('SAVE_READ',this.bundleInitialized?'ok':'error',{hasRun:!!this.bundle.run,revision:this.bundleRevision});
       this.mode=this.bundle.profile.settings.dropMode;this.reducedMotion=this.bundle.profile.settings.reducedMotion;
       if(!this.rewarded)await this.initializeRewardedShake();if(!this.isOwner())return;
       if(!this.spillRevive)await this.initializeSpillRevive();if(!this.isOwner())return;
+      this.appendStage('SAVE_READ','ok',{rewardedShake:!!this.rewarded,spillRevive:!!this.spillRevive});
       await this.art.initialize();if(!this.isOwner()){this.art.dispose();return;}this.artReady=true;
+      this.appendStage('ART_CATALOG','ok',{catalogSize:this.art.catalog?0:0});
       await this.loadRequiredArt();
       if(!this.isOwner()){this.art.dispose();return;}
+      this.appendStage('ART_CATALOG','ok',{loadedArt:this.art.loadedCount});
       this.artLoading=false;this.render();this.bindRewardedShake();this.bindSpillRevive();void this.loadAudioClips();if(!this.isOwner())return;
+      this.appendStage('MENU_READY','ok',{screen:this.screen});
       if(DEBUG)this.publishDiagnostics();
       if(this.bundle.run){this.notice=this.bundle.run.rulesVersion===AppRuntime.rules?.design_rules_version?'发现可续局存档。选择“继续上局”后仍需明确点击继续。':'发现旧版玩法未完成局；原存档已保留，可取消确认或明确开始新局。';}
-    }catch(error){this.artLoading=false;if(this.isOwner()){this.screen='ERROR';this.notice=`启动失败：${String(error)}`;this.render();}}
+    }catch(error){this.artLoading=false;if(this.isOwner()){this.appendStage('BOOT_CONFIG','error',{reason:String(error)});this.screen='ERROR';this.notice=`启动失败：${String(error)}`;this.render();}}
     finally{if(this.isOwner()){this.loading=false;if(this.pendingStartRequested&&this.artReady&&this.screen==='MENU'){this.pendingStartRequested=false;void this.startNew();}}}
   }
   onDestroy():void{

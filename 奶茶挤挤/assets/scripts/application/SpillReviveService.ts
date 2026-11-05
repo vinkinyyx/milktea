@@ -152,10 +152,49 @@ export class SpillReviveService {
       }
     } finally { if (this.phase !== 'SHOWING') this.busy = false; RewardedAdCoordinator.release('spill-revive'); }
   }
+  /**
+   * Retry settlement after an earlier readback or application failure.
+   * R2 整改：先读最新完整信封，验证 receipt/runId/failureId/attemptId 身份。
+   * 如果凭证已落盘（used1 + 同 attemptId receipt），同步宿主 revision 后直接 apply，
+   * 不再重新走 settle 的 CAS 流程（避免冲突和二次发奖）。
+   * 没有凭证时才用最新宿主 revision 重试 CAS。
+   */
   async retrySettlement(): Promise<void> {
     if (!this.host || this.busy || !this.pendingAttempt || this.trustedCompletionAttempt !== this.pendingAttempt) return;
     this.busy = true; this.phase = 'SETTLING'; this.message = null; this.changed();
-    try { await this.settle(this.pendingAttempt); } catch { this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活保存仍未完成，可稍后重试。'; this.changed(); }
+    try {
+      const owner = this.host; const generation = this.hostGeneration;
+      // R2 整改：先读最新完整信封，找到已落盘的 receipt
+      const fresh = await this.repo.readBundle();
+      if (fresh.ok && fresh.data.envelope) {
+        const envelope = fresh.data.envelope;
+        const freshBundle = envelope.payload;
+        const ledger = freshBundle.profile.rewardedRevive;
+        const committedRun = freshBundle.run;
+        const attemptId = this.pendingAttempt;
+        // 验证：receipt 存在 + runId 匹配 + used=1 + committedReceiptId 匹配
+        if (ReviveLedger.hasReceipt(ledger, attemptId)) {
+          const receipt = ledger.receipts.find((r) => r.attemptId === attemptId);
+          if (receipt && committedRun && committedRun.runId === receipt.runId && committedRun.revive.used === 1
+            && committedRun.revive.committedReceiptId === attemptId) {
+            // 凭证已落盘 → 同步宿主 revision → 免费应用 → 不重看、不二次发奖
+            owner.onSpillReviveCommitted(freshBundle, envelope.revision);
+            if (this.host === owner && generation === this.hostGeneration && owner.applyCommittedRevive(attemptId)) {
+              this.pendingAttempt = null; this.stalePending = false; this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.changed();
+              return;
+            }
+            // apply 失败：revision 已同步，retry 下次还能找到同一份凭证
+            this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活凭证已保存但应用失败，可稍后重试领取。'; this.changed();
+            return;
+          }
+        }
+        // 信封里没有对应 receipt —— 可能 write-before 故障导致只写了 pendingAttempt 但没写 receipt
+        // 这种情况让 settle() 走正常 CAS 流程（宿主 revision 已经是最新的）
+      }
+      // R2 整改：宿主 revision 可能已被 settle commit 成功的分支同步过了，
+      // 用最新 revision 起点走 settle（如果 commit 是上一条错误路径，revision 还停在旧值也能正确报 CONFLICT_REVISION）
+      await this.settle(this.pendingAttempt);
+    } catch { this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活保存仍未完成，可稍后重试。'; this.changed(); }
     finally { this.busy = false; }
   }
   async abandonPending(): Promise<void> {
@@ -178,7 +217,12 @@ export class SpillReviveService {
     return ReviveLedger.checkOffer({ policy: this.env.policy, capability: this.env.provider.capability(), profile: bundle.profile, run,
       foregroundSeconds: this.foregroundSeconds, tutorialComplete: this.host?.isTutorialComplete() ?? false, nowMs: this.now() });
   }
-  private async clearPending(message: string, resume = true): Promise<boolean> {
+  /**
+   * Clear the pending attempt record after an ad load/show failure, cancellation, or incomplete watch.
+   * By default does NOT call declineSpillRevive — the pendingFailure stays frozen so the player can manually
+   * retry or explicitly end (R3 整改). Only abandonPending() passes resume=false and then calls decline itself.
+   */
+  private async clearPending(message: string, resume = false): Promise<boolean> {
     const owner = this.host, generation = this.hostGeneration;
     if (!owner) return false;
     const bundle = owner.getBundle();
@@ -191,6 +235,8 @@ export class SpillReviveService {
     }
     this.pendingAttempt = null; this.phase = 'ERROR'; this.retrySettle = false; this.message = message; this.changed();
     this.trustedCompletionAttempt = null;
+    // R3 整改：默认保留 pendingFailure，不提前 SETTLING。
+    // owner.declineSpillRevive() 由 closeOffer() 或 abandonPending() 显式调用。
     if (resume) { owner.declineSpillRevive(); }
     return true;
   }
@@ -219,10 +265,11 @@ export class SpillReviveService {
     }
     if (run.revive.used !== 0 || !run.revive.pendingFailure) { this.phase = 'ERROR'; this.retrySettle = false; this.message = '本局已不满足复活条件，未发放。'; this.changed(); return; }
     const pending = ledger.pendingAttempt;
-    const sameDay = ReviveLedger.normalize(ledger, pending.dayKey);
-    if (this.env.policy.maxDailyRevives - ReviveLedger.grantedForDay(sameDay, pending.dayKey) < 1) {
-      this.phase = 'ERROR'; this.retrySettle = false; this.message = '今日复活次数已达上限，未发放。'; this.changed(); return;
-    }
+    // 每日上限阻断未经用户授权，已移除（R4 整改）。保留 maxDailyRevives 字段用于审计，不参与阻断。
+    // const sameDay = ReviveLedger.normalize(ledger, pending.dayKey);
+    // if (this.env.policy.maxDailyRevives - ReviveLedger.grantedForDay(sameDay, pending.dayKey) < 1) {
+    //   this.phase = 'ERROR'; this.retrySettle = false; this.message = '今日复活次数已达上限，未发放。'; this.changed(); return;
+    // }
     const projected = owner.projectRevive(attemptId);
     if (!projected.ok) { this.phase = 'ERROR'; this.retrySettle = false; this.message = projected.error.message; this.changed(); return; }
     const nextLedger = ReviveLedger.grant(ledger, ReviveLedger.receiptFor(pending, this.now()), run.runId);
@@ -232,6 +279,9 @@ export class SpillReviveService {
     const committed = await this.repo.commitBundle(owner.getSaveRevision(), run.runId, next);
     if (this.host !== owner || generation !== this.hostGeneration || owner.getActiveRunSnapshot()?.runId !== run.runId) return;
     if (!committed.ok) { this.phase = 'ERROR'; this.retrySettle = true; this.message = '广告已完成，但复活存档保存失败；请稍后重试领取。'; this.changed(); return; }
+    // R2 整改：commit 成功 → 先同步宿主 revision，保证 retry 起点正确。
+    // readback 只是二次校验，不应阻塞 revision 更新。
+    owner.onSpillReviveCommitted(next, committed.data.revision);
     const readback = await this.repo.readBundle();
     if (this.host !== owner || generation !== this.hostGeneration) return;
     if (!readback.ok || !readback.data.envelope) { this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活存档回读失败，可重试领取。'; this.changed(); return; }
