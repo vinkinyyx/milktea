@@ -1,6 +1,6 @@
 # 工具入口
 
-当前工作以[最新验收与提示词](../docs/45-r1-r4-acceptance-next-design.md)为准。清理不修改运行代码，不表示验收通过。
+当前工作以[最新验收与提示词](../docs/46-v3-review-and-host-closeout-design.md)为准。清理不修改运行代码，不表示验收通过。
 
 在项目根执行现有检查：
 
@@ -12,7 +12,7 @@ npm run verify:art --prefix 奶茶挤挤
 node tools/verify_rewarded_shake.cjs
 ```
 
-`verify_rewarded_shake`会重建build-artifacts/rewarded-tests；该目录是缓存。现有111项只覆盖已写场景，额外复活故障复现位于evidence/Acceptance/20261105-tap-host-review/probe-revive-boundaries.cjs。
+`verify_rewarded_shake`会重建build-artifacts/rewarded-tests；该目录是缓存。现有118项只覆盖已写场景，额外复活故障复现位于evidence/Acceptance/20261105-tap-host-review/probe-revive-boundaries.cjs。
 
 构建每次使用新唯一ID，不能照抄现有候选ID：
 

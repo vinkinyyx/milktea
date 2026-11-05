@@ -1,0 +1,18 @@
+{
+  "scope": "Node fixture probes; no real Tap device or ad",
+  "ownerProbe": {
+    "writesToOldHostAfterRebind": 0,
+    "phase": "SETTLING"
+  },
+  "checkpointProbe": {
+    "memoryRevision": 4,
+    "persistedRevision": 4,
+    "used": 1,
+    "phase": "GRANTED",
+    "message": null
+  },
+  "fourthRunOffer": {
+    "allowed": true,
+    "block": null
+  }
+}

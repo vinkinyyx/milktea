@@ -1,6 +1,8 @@
 # 当前交付候选
 
-2026-11-06：本轮整改候选，基于 `bd12b731a91bc3a2952af02faf4219ff1e286fc9` + 未提交整改（工作区脏）。状态：**本地构建与回归通过；Tap 宿主/真实广告/真机性能 NOT_RUN，整体仍 BLOCKED，不能作为正式验收通过包。**
+2026-11-06：本轮整改候选，基于 `bd12b731a91bc3a2952af02faf4219ff1e286fc9` + 未提交整改（工作区脏）。状态：**BLOCKED。本地构建、118项和正常Web链路通过，但额外异常复核失败；Tap宿主/真实广告/平台性能仍NOT_RUN。不能作为正式完成版。**
+
+最新结论与下一轮设计见[docs46](../../docs/46-v3-review-and-host-closeout-design.md)。本轮复核未改变下列包体；广告开关改变将产生新buildId/SHA，需重新验证。
 
 ## 本轮 buildId
 
@@ -10,7 +12,7 @@
 | Web Release | `20261105-host-revive-v3-web-release-01` | [build](../../build-artifacts/cocos-p1b-build/20261105-host-revive-v3-web-release-01) | 5,051,376 | settings `ab537d01153f32aa3356517987c4777848479eb4fe1a02615023be11d1161cc3` |
 | Tap Release | `20261105-host-revive-v3-tap-release-01` | [game.zip](../../build-artifacts/cocos-taptap-minigame-build/20261105-host-revive-v3-tap-release-01/TapBuild/game.zip) | 3,026,101 | `b2c3519df4371255346590a583c0413260c003d3b56b6a8842e36f18640a57e7` |
 
-## 本轮已验证（同 SHA 源码）
+## 构建输入与既有门禁（不代表额外异常场景全部通过）
 
 - 原工程 `tsc` 0 错误；Release 裁剪隔离副本 `tsc` 0 错误，裁剪精确命中数未变（GameRoot 5+46，AppRoot 4）。
 - 合同 `tools/sync_client_contracts.py --check` 逐字节一致。

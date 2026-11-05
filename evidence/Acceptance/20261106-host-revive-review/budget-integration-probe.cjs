@@ -6,7 +6,11 @@ const budget=require(path.join(root,'build-artifacts/rewarded-tests/js/core/ArtL
 const source=fs.readFileSync(path.join(root,'奶茶挤挤/assets/scripts/presentation/ArtAssets.ts'),'utf8');
 const js=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2019,module:ts.ModuleKind.CommonJS}}).outputText;
 function fixture(){
- let now=0,timer=null;const host={backgrounded:false};const module={exports:{}};
+ let now=0,timer=null,hidden=false;const listeners=new Set();
+ const host={get backgrounded(){return hidden;},set backgrounded(value){hidden=value;for(const fn of listeners)fn(host.snapshot());},
+   snapshot:()=>({backgrounded:hidden,domHidden:hidden,engineHidden:false,revision:0,hideEpoch:hidden?1:0,resumeRequired:hidden,events:[]}),
+   subscribe:fn=>{listeners.add(fn);fn(host.snapshot());return()=>listeners.delete(fn);}};
+ const module={exports:{}};
  const context={module,exports:module.exports,performance:{now:()=>now},Date,Promise,Map,Error,Number,Math,
    setInterval:cb=>{timer=cb;return 1;},clearInterval:()=>{timer=null;},require:name=>{
      if(name==='cc')return {};

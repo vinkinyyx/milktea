@@ -1,6 +1,6 @@
 # 当前开发交接
 
-先读[当前事实](22-current-progress-and-resume.md)和[最新验收](45-r1-r4-acceptance-next-design.md)，随后执行[本轮整改提示词](45-r1-r4-acceptance-next-design.md#12-开发执行提示词)。复活业务与持久化要求以[docs43及其分册](43-spill-revive-performance-design.md)为依据；不要执行历史归档中的旧阶段队列。
+先读[当前事实](22-current-progress-and-resume.md)和[最新验收](46-v3-review-and-host-closeout-design.md)，随后执行[本轮整改提示词](46-v3-review-and-host-closeout-design.md#12-完成标准与执行提示词)。复活业务与持久化要求以[docs43及其分册](43-spill-revive-performance-design.md)为依据；不要执行历史归档中的旧阶段队列。
 
 工程：`D:\Workspace\TapTap\奶茶挤挤\奶茶挤挤`，Creator3.8.8，Boot为玩家入口。唯一配置与类型源位于根config/design-baseline.json、contracts/types.ts。物理固定步、真实刚体移杯、原子合成与事件去重保持；动画不能直接驱动物理。
 

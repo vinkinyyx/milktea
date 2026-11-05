@@ -1,6 +1,6 @@
 # 奶茶挤挤项目约定
 
-- 当前事实入口：README.md、docs/22-current-progress-and-resume.md。当前待执行整改为docs/45-r1-r4-acceptance-next-design.md及其中执行提示词；历史记录不能覆盖最新验收。
+- 当前事实入口：README.md、docs/22-current-progress-and-resume.md。当前待执行整改为docs/46-v3-review-and-host-closeout-design.md及其中执行提示词；历史记录不能覆盖最新验收。
 - 目标是Cocos Creator3.8.8经Tap扩展发布Tap小游戏，非H5托管或APK。不得擅自换引擎、恢复已暂停的抖音/APK路线或扩大核心玩法。
 - 经典窄杯、定时自动落料、按住杯子真实左右移动、同级合成。复活需求是洒出时自愿完整观看激励视频，同局同分继续，每局最多一次成功复活；无授权不添加每日上限。
 - 参数唯一源是config/design-baseline.json，类型唯一源是contracts/types.ts，修改时校验工程镜像。待验证初值不能宣称已通过平衡或性能验收。

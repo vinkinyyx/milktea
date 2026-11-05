@@ -1,15 +1,16 @@
 # TapTap小游戏当前入口
 
-当前形态：Creator3.8.8 + 工程内taptap-minigame-tools1.2.2，经中间构建转换Tap小游戏。配置在config/taptap-minigame.json；当前不是H5托管或APK。
+2026-11-06，当前整体BLOCKED。V3构建、合同、118项回归与正常Web链路通过，但额外预算/错误层/设置/宿主交接场景失败，详见[docs46](46-v3-review-and-host-closeout-design.md)。真实Tap、真实广告、手机晃杯和平台启动/内存仍未验，不是可选项。
 
-**BLOCKED**：用户反馈Tap自测开局只有背景；复活逻辑有新增验收缺陷；真实广告、晃杯异常根因、启动和内存平台复测均未关闭。最新验收见[docs45](45-r1-r4-acceptance-next-design.md)。bd12b73已同步GitHub，但Release裁剪类型检查失败，尚无对应新包。
+平台路线：Creator3.8.8 + 工程内Tap扩展1.2.2，经中间构建转换Tap小游戏，非H5托管/APK。配置在config/taptap-minigame.json。
 
-唯一保留的前轮复现基线（不含bd12b73，不代表本轮代码）：[game.zip](../build-artifacts/cocos-taptap-minigame-build/20261104-spill-revive-tap-02/TapBuild/game.zip)，buildId `20261104-spill-revive-tap-02`，3,021,177 bytes，SHA256 `f768704568d3c43a7122f2a205a79f253650026c3a6a13d4512a0e7ddcd93a3e`。本地转换通过、runtimeVerified=false，复活策略enabled=false/adUnitId=null。用户已上传的文件身份仍待核对。
+V3复测基线：[game.zip](../build-artifacts/cocos-taptap-minigame-build/20261105-host-revive-v3-tap-release-01/TapBuild/game.zip)，3,026,101 bytes，SHA256 `b2c3519df4371255346590a583c0413260c003d3b56b6a8842e36f18640a57e7`。本次复核71+7资源、CRC/派生哈希通过；构建原清单313项与当前原工程一致。源码是bd12b73加未提交整改，不单凭旧commit标识。
 
 - [候选清单](../output/taptap-upload/CURRENT-CANDIDATE.md)
-- [构建原始结果](../evidence/TapTap/20261104-spill-revive-tap-02/result.json)
-- [优化资产复核](../evidence/TapTap/20261104-spill-revive-tap-02/optimized-asset-verification.json)
-- [检查与构建命令](../tools/README.md)
-- [历史包和资料归档](archive-location.md)
+- [原始转换结果](../evidence/TapTap/20261105-host-revive-v3-tap-release-01/result.json)
+- [本次验收与新包/设备计划](46-v3-review-and-host-closeout-design.md)
+- [检查与构建工具](../tools/README.md)
 
-清理保留最新ZIP及验证所需派生快照，删除解压副本、旧转换输出和构建缓存。未重新打包、上传、提审或发布。后续构建须用新buildId；缺少真实广告配置和实测证据时保持关闭策略。
+广告策略未配置真实位时关闭。关闭/开启广告包是不同buildId/SHA，开启包必须补对应启动/存档/性能验证。下一轮代码修复后用新唯一ID，保留V3作失败边界复现。上传/广告配置/提审/发布按具体授权，本次未执行。
+
+更早f7687045包和历史资料仅供溯源，见[归档入口](archive-location.md)，不作为本轮源码验收产物。
