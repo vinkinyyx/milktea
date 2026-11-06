@@ -423,6 +423,7 @@ export class GameRoot extends Component {
     }
     // Audio nodes are siblings too; keep the full-screen cup art below the player HUD.
     if(this.uiRoot?.isValid)this.uiRoot.setSiblingIndex(this.node.children.length-1);
+    if(this.overlayRoot?.isValid)this.overlayRoot.setSiblingIndex(this.node.children.length-1);
   }
   private syncCupArt():void{
     const engine=this.engine;const offset=engine?.presentationCupOffsetXDu??0;
@@ -541,6 +542,10 @@ export class GameRoot extends Component {
   private hideOverlay():void{this.clearOverlay();}
   private showStartupOverlay(title:string,detail:string,actions:Array<{id:string;label:string;action:()=>void}>):void{
     if(!this.overlayRoot?.isValid)return;
+    // The cup/HUD layer is raised above every other sibling when a run is created, so the overlay must be
+    // re-raised here. Otherwise a full-screen error background in the HUD layer hides the only readable
+    // failure/retry UI and the host looks like "background only".
+    this.overlayRoot.setSiblingIndex(this.node.children.length-1);
     this.clearOverlay();this.overlayVisible=true;
     const size=presentationSize(),root=this.overlayRoot;
     const dim=new Node('StartupOverlayDim');root.addChild(dim);dim.addComponent(UITransform).setContentSize(size.width,size.height);

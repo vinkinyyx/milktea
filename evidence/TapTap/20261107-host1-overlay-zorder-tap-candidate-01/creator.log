@@ -1,0 +1,1565 @@
+
+init **** success
+Arguments:
+  C:\ProgramData\cocos\editors\Creator\3.8.8\CocosCreator.exe: true
+  user-data-dir: D:\Workspace\TapTap\奶茶挤挤\evidence\TapTap\20261107-host1-overlay-zorder-tap-candidate-01\creator-user-data
+  project: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01
+  build: configPath=D:\Workspace\TapTap\奶茶挤挤\evidence\TapTap\20261107-host1-overlay-zorder-tap-candidate-01\creator-build-config.json
+  dev: false
+  home: C:\Users\vinki\.CocosCreator
+ 
+[Package] metrics@1.0.0 enable
+[Package] menu@1.0.0 enable
+[Package] profile@1.0.0 enable
+[Package] project@1.0.6 enable
+[Package] messages@1.0.0 enable
+[Package] utils@1.0.0 enable
+[Package] program@1.0.4 enable
+[Package] tester@1.0.0 enable
+[Package] information@1.0.1 enable
+[Package] preferences@1.0.0 enable
+[EditorQuickCompiler]Version information looks good.
+Note, quick compiler does not get launched.
+engine:compile-builtin-engine-success (154ms)
+Load engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine
+Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\native
+[Package] engine@1.0.12 enable
+[Package] programming@1.0.0 enable
+[Package] window@1.0.0 enable
+Request namespace: device-list
+[Package] Profile migrateLocal: device(0.0.0)...
+[Package] device@1.0.1 enable
+[Package] ui-kit@1.0.1 enable
+[Package] asset-db@1.0.0 enable
+[Package] scene@1.0.3 enable
+[Package] server@1.0.0 enable
+[Package] preview@1.0.1 enable
+Preview import map: {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "cc/env": "cc/editor/populate-internal-constants",
+    "cce.env": "cc/editor/populate-internal-constants",
+    "cc/userland/macro": "./userland/macro"
+  }
+}
+[Package] animator@1.0.0 enable
+[Build] internalRegister pkg(scene) in android platform success!
+[Package] builder@1.3.9 enable
+[Build] internalRegister pkg(scene) in google-play platform success!
+[Build] internalRegister pkg(scene) in ohos platform success!
+[Build] internalRegister pkg(scene) in harmonyos-next platform success!
+[Build] internalRegister pkg(scene) in huawei-agc platform success!
+[Build] internalRegister pkg(scene) in ios platform success!
+[Build] internalRegister pkg(scene) in windows platform success!
+[Build] internalRegister pkg(scene) in mac platform success!
+平台 linux 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(scene) in openpaas platform success!
+[Build] internalRegister pkg(scene) in alipay-mini-game platform success!
+平台 taobao-creative-app 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(scene) in taobao-mini-game platform success!
+[Build] internalRegister pkg(scene) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(scene) in oppo-mini-game platform success!
+[Build] internalRegister pkg(scene) in huawei-quick-game platform success!
+[Build] internalRegister pkg(scene) in migu-mini-game platform success!
+[Build] internalRegister pkg(scene) in honor-mini-game platform success!
+[Build] internalRegister pkg(scene) in vivo-mini-game platform success!
+[Build] internalRegister pkg(scene) in xiaomi-quick-game platform success!
+平台 baidu-mini-game 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(scene) in wechatgame platform success!
+平台 wechatprogram 不存在，不支持向该平台注册任何内容
+平台 link-sure 不存在，不支持向该平台注册任何内容
+平台 qtt 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(scene) in fb-instant-games platform success!
+[Build] internalRegister pkg(scene) in web-desktop platform success!
+[Build] internalRegister pkg(scene) in web-mobile platform success!
+[Build] internalRegister pkg(scene) in cocos-runtime platform success!
+[Build] internalRegister pkg(scene) in platform-example platform success!
+[Build] internalRegister pkg(scene) in online platform success!
+[Build] internalRegister pkg(scene) in xr-meta platform success!
+[Build] internalRegister pkg(scene) in xr-huaweivr platform success!
+[Build] internalRegister pkg(scene) in xr-pico platform success!
+[Build] internalRegister pkg(scene) in xr-rokid platform success!
+[Build] internalRegister pkg(scene) in xr-monado platform success!
+[Build] internalRegister pkg(scene) in xr-spaces platform success!
+[Build] internalRegister pkg(scene) in xr-seed platform success!
+[Build] internalRegister pkg(scene) in ar-android platform success!
+[Build] internalRegister pkg(scene) in ar-ios platform success!
+[Build] internalRegister pkg(scene) in xr-gsxr platform success!
+[Build] internalRegister pkg(scene) in xr-yvr platform success!
+[Build] internalRegister pkg(scene) in xr-htc platform success!
+[Build] internalRegister pkg(scene) in xr-iqiyi platform success!
+[Build] internalRegister pkg(scene) in xr-skyworth platform success!
+[Build] internalRegister pkg(scene) in xr-ffalcon platform success!
+[Build] internalRegister pkg(scene) in xr-nreal platform success!
+[Build] internalRegister pkg(scene) in xr-inmo platform success!
+[Build] internalRegister pkg(scene) in xr-lenovo platform success!
+平台 android-hmi 不存在，不支持向该平台注册任何内容
+[Build-plugin] register pkg scene: 36ms
+Builder PluginManager init: 37ms
+[Package] shortcuts@1.0.1 enable
+[Package] animation-graph@1.0.0 enable
+[Package] about@1.0.0 enable
+[Package] assets@1.0.0 enable
+[Package] console@1.0.0 enable
+[Package] crash-reporter@1.0.0 enable
+[Package] extension@3.1.4 enable
+[Package] feedback@1.0.0 enable
+[Package] hierarchy@1.0.0 enable
+[Package] inspector@1.0.0 enable
+[Package] light-probe@1.0.4 enable
+[Package] lightmap@1.0.4 enable
+[Package] node-library@1.0.1 enable
+[Package] package-asset@1.0.3 enable
+[Package] process@1.0.0 enable
+[Package] reference-image@1.0.0 enable
+[Package] reflection-probe@1.0.4 enable
+[Package] engine-extends@1.0.0 enable
+[Package] adsense-h5g-plugin@1.0.1 enable
+[Build] internalRegister pkg(adsense-h5g-plugin) in android platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in google-play platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ohos platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in harmonyos-next platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in huawei-agc platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ios platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in windows platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in mac platform success!
+平台 linux 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(adsense-h5g-plugin) in openpaas platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in alipay-mini-game platform success!
+平台 taobao-creative-app 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(adsense-h5g-plugin) in taobao-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in oppo-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in huawei-quick-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in migu-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in honor-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in vivo-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xiaomi-quick-game platform success!
+平台 baidu-mini-game 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(adsense-h5g-plugin) in wechatgame platform success!
+平台 wechatprogram 不存在，不支持向该平台注册任何内容
+平台 link-sure 不存在，不支持向该平台注册任何内容
+平台 qtt 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(adsense-h5g-plugin) in fb-instant-games platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-desktop platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-mobile platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in cocos-runtime platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in platform-example platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in online platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-meta platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-huaweivr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-pico platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-rokid platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-monado platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-spaces platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-seed platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ar-android platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ar-ios platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-gsxr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-yvr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-htc platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-iqiyi platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-skyworth platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-ffalcon platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-nreal platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-inmo platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-lenovo platform success!
+平台 android-hmi 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-desktop platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-mobile platform success!
+[Build-plugin] register pkg adsense-h5g-plugin: 6ms
+[Package] alipay-mini-game@1.0.2 enable
+[Build] internalRegister pkg(alipay-mini-game) in alipay-mini-game platform success!
+[Build-plugin] register pkg alipay-mini-game: 10ms
+[Package] android@1.0.1 enable
+[Build] internalRegister pkg(android) in android platform success!
+[Build] internalRegister pkg(android) in huawei-agc platform success!
+[Build-plugin] register pkg android: 10ms
+[Package] bytedance-mini-game@1.0.3 enable
+[Build] internalRegister pkg(bytedance-mini-game) in bytedance-mini-game platform success!
+[Build-plugin] register pkg bytedance-mini-game: 5ms
+[Package] certificate@1.0.0 enable
+[Package] channel-upload-tools@1.0.0 enable
+[Package] fb-instant-games@1.0.0 enable
+[Build] internalRegister pkg(fb-instant-games) in fb-instant-games platform success!
+[Build-plugin] register pkg fb-instant-games: 6ms
+[Package] google-play@1.0.1 enable
+[Build] internalRegister pkg(google-play) in google-play platform success!
+[Build-plugin] register pkg google-play: 7ms
+[Package] harmonyos-next@1.0.0 enable
+[Build] internalRegister pkg(harmonyos-next) in harmonyos-next platform success!
+[Build-plugin] register pkg harmonyos-next: 7ms
+[Package] honor-mini-game@1.0.0 enable
+[Build] internalRegister pkg(honor-mini-game) in honor-mini-game platform success!
+[Build-plugin] register pkg honor-mini-game: 4ms
+[Package] huawei-agc@1.0.0 enable
+[Build] internalRegister pkg(huawei-agc) in huawei-agc platform success!
+[Build-plugin] register pkg huawei-agc: 8ms
+[Package] huawei-quick-game@1.0.3 enable
+[Build] internalRegister pkg(huawei-quick-game) in huawei-quick-game platform success!
+[Build-plugin] register pkg huawei-quick-game: 7ms
+[Package] ios@1.0.1 enable
+The provided project name "奶茶挤挤" is not suitable for use as an executable name. 'CocosGame' is applied instead.
+[Build-plugin] register pkg ios: 5ms
+[Package] linux@1.0.0 enable
+平台 linux 不存在，无法添加该平台
+[Package] mac@1.0.0 enable
+[Build-plugin] register pkg mac: 6ms
+[Package] migu-mini-game@1.0.0 enable
+[Build] internalRegister pkg(migu-mini-game) in migu-mini-game platform success!
+[Build-plugin] register pkg migu-mini-game: 5ms
+[Package] native@1.0.2 enable
+[Build] internalRegister pkg(native) in ios platform success!
+[Build] internalRegister pkg(native) in android platform success!
+[Build] internalRegister pkg(native) in huawei-agc platform success!
+[Build] internalRegister pkg(native) in windows platform success!
+[Build] internalRegister pkg(native) in mac platform success!
+[Build] internalRegister pkg(native) in google-play platform success!
+[Build] internalRegister pkg(native) in ohos platform success!
+[Build] internalRegister pkg(native) in harmonyos-next platform success!
+平台 linux 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(native) in xr-huaweivr platform success!
+[Build] internalRegister pkg(native) in xr-meta platform success!
+[Build] internalRegister pkg(native) in xr-pico platform success!
+[Build] internalRegister pkg(native) in xr-rokid platform success!
+[Build] internalRegister pkg(native) in xr-monado platform success!
+[Build] internalRegister pkg(native) in ar-android platform success!
+[Build] internalRegister pkg(native) in ar-ios platform success!
+[Build] internalRegister pkg(native) in xr-spaces platform success!
+[Build] internalRegister pkg(native) in xr-seed platform success!
+[Build] internalRegister pkg(native) in xr-gsxr platform success!
+[Build] internalRegister pkg(native) in xr-yvr platform success!
+[Build] internalRegister pkg(native) in xr-htc platform success!
+[Build] internalRegister pkg(native) in xr-iqiyi platform success!
+[Build] internalRegister pkg(native) in xr-skyworth platform success!
+[Build] internalRegister pkg(native) in xr-ffalcon platform success!
+[Build] internalRegister pkg(native) in xr-nreal platform success!
+[Build] internalRegister pkg(native) in xr-inmo platform success!
+[Build] internalRegister pkg(native) in xr-lenovo platform success!
+[Build-plugin] register pkg native: 7ms
+[Package] ohos@1.0.0 enable
+[Build] internalRegister pkg(ohos) in ohos platform success!
+[Build-plugin] register pkg ohos: 3ms
+[Package] oppo-mini-game@1.0.3 enable
+[Build] internalRegister pkg(oppo-mini-game) in oppo-mini-game platform success!
+[Build-plugin] register pkg oppo-mini-game: 5ms
+[Package] runtime-dev-tools@1.0.0 enable
+[Package] taobao-mini-game@1.0.1 enable
+[Build] internalRegister pkg(taobao-mini-game) in taobao-mini-game platform success!
+[Build-plugin] register pkg taobao-mini-game: 4ms
+[Package] vivo-mini-game@1.0.3 enable
+[Build] internalRegister pkg(vivo-mini-game) in vivo-mini-game platform success!
+[Build-plugin] register pkg vivo-mini-game: 4ms
+[Package] web-desktop@1.0.1 enable
+[Build] internalRegister pkg(web-desktop) in web-desktop platform success!
+[Build-plugin] register pkg web-desktop: 4ms
+[Package] web-mobile@1.0.1 enable
+[Build] internalRegister pkg(web-mobile) in web-mobile platform success!
+[Build-plugin] register pkg web-mobile: 3ms
+[Package] wechatgame@1.0.4 enable
+[Build] internalRegister pkg(wechatgame) in wechatgame platform success!
+[Build-plugin] register pkg wechatgame: 3ms
+[Package] wechatprogram@1.0.2 enable
+平台 wechatprogram 不存在，无法添加该平台
+[Package] windows@1.0.1 enable
+[Build] internalRegister pkg(windows) in windows platform success!
+[Build-plugin] register pkg windows: 4ms
+[Package] xiaomi-quick-game@1.0.2 enable
+[Build] internalRegister pkg(xiaomi-quick-game) in xiaomi-quick-game platform success!
+[Build-plugin] register pkg xiaomi-quick-game: 3ms
+[builder-ui] card-page 本地服务已启动: http://127.0.0.1:24111/builder-home/
+[builder-ui][ota] {"stage":"schedule","status":"started","env":"prod","intervalMs":3600000,"id":1,"at":"2026-11-07T00:38:15.023+08:00"}
+[Package] builder-ui@1.1.56 enable
+[Package] cocos-service@3.0.9 enable
+[Build] internalRegister pkg(cocos-service) in android platform success!
+[Build] internalRegister pkg(cocos-service) in google-play platform success!
+[Build] internalRegister pkg(cocos-service) in ohos platform success!
+[Build] internalRegister pkg(cocos-service) in harmonyos-next platform success!
+[Build] internalRegister pkg(cocos-service) in huawei-agc platform success!
+[Build] internalRegister pkg(cocos-service) in ios platform success!
+[Build] internalRegister pkg(cocos-service) in windows platform success!
+[Build] internalRegister pkg(cocos-service) in mac platform success!
+平台 linux 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(cocos-service) in openpaas platform success!
+[Build] internalRegister pkg(cocos-service) in alipay-mini-game platform success!
+平台 taobao-creative-app 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(cocos-service) in taobao-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in oppo-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in huawei-quick-game platform success!
+[Build] internalRegister pkg(cocos-service) in migu-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in honor-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in vivo-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in xiaomi-quick-game platform success!
+平台 baidu-mini-game 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(cocos-service) in wechatgame platform success!
+平台 wechatprogram 不存在，不支持向该平台注册任何内容
+平台 link-sure 不存在，不支持向该平台注册任何内容
+平台 qtt 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(cocos-service) in fb-instant-games platform success!
+[Build] internalRegister pkg(cocos-service) in web-desktop platform success!
+[Build] internalRegister pkg(cocos-service) in web-mobile platform success!
+[Build] internalRegister pkg(cocos-service) in cocos-runtime platform success!
+[Build] internalRegister pkg(cocos-service) in platform-example platform success!
+[Build] internalRegister pkg(cocos-service) in online platform success!
+[Build] internalRegister pkg(cocos-service) in xr-meta platform success!
+[Build] internalRegister pkg(cocos-service) in xr-huaweivr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-pico platform success!
+[Build] internalRegister pkg(cocos-service) in xr-rokid platform success!
+[Build] internalRegister pkg(cocos-service) in xr-monado platform success!
+[Build] internalRegister pkg(cocos-service) in xr-spaces platform success!
+[Build] internalRegister pkg(cocos-service) in xr-seed platform success!
+[Build] internalRegister pkg(cocos-service) in ar-android platform success!
+[Build] internalRegister pkg(cocos-service) in ar-ios platform success!
+[Build] internalRegister pkg(cocos-service) in xr-gsxr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-yvr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-htc platform success!
+[Build] internalRegister pkg(cocos-service) in xr-iqiyi platform success!
+[Build] internalRegister pkg(cocos-service) in xr-skyworth platform success!
+[Build] internalRegister pkg(cocos-service) in xr-ffalcon platform success!
+[Build] internalRegister pkg(cocos-service) in xr-nreal platform success!
+[Build] internalRegister pkg(cocos-service) in xr-inmo platform success!
+[Build] internalRegister pkg(cocos-service) in xr-lenovo platform success!
+平台 android-hmi 不存在，不支持向该平台注册任何内容
+[Build-plugin] register pkg cocos-service: 4ms
+[Package] im-plugin@3.0.14 enable
+[Package] openpaas@1.0.1 enable
+[Build] internalRegister pkg(openpaas) in openpaas platform success!
+[Build-plugin] register pkg openpaas: 3ms
+[openpaas-debugger] runtime {"adapter":"electron31-chromium126","electron":"31.3.1","chromium":"126.0.6478.185","node":"20.15.1","devToolsBundle":"modern91","verification":"pending-creator-verification"}
+[Package] openpaas-debugger@0.1.4 enable
+[codex-editor-bridge] disabled for this build process
+[Package] codex-editor-bridge@0.1.0 enable
+[Tap小游戏] ========================================
+[Tap小游戏] TapTap 小游戏构建插件 v1.2.0
+[Tap小游戏] ----------------------------------------
+[Tap小游戏] 类型定义已就绪 → 代码中输入 tap. 即可获得提示
+[Tap小游戏] ----------------------------------------
+[Tap小游戏] AI Skills 位于 extensions/taptap-minigame-tools/ai-skills/
+[Tap小游戏]   tap-sdk-skill.md        → SDK 基础模块
+[Tap小游戏]   tap-ad-skill.md         → 广告模块
+[Tap小游戏]   tap-cloud-save-skill.md → 云存档模块
+[Tap小游戏] ========================================
+[Package] taptap-minigame-tools@1.2.2 enable
+[Build] internalRegister pkg(taptap-minigame-tools) in wechatgame platform success!
+[Build-plugin] register pkg taptap-minigame-tools: 16ms
+[Package] placeholder@1.0.0 enable
+[builder-ui][ota] {"stage":"check","status":"started","env":"prod","dataEnvironment":"prod","dataVersion":"R010","reason":"data-check","id":2,"at":"2026-11-07T00:38:15.974+08:00"}
+[builder-ui][ota] {"stage":"check","status":"success","url":"https://download.sudden.ltd/restricted-assets/pink-ide-web/prod/R010/builder-home-0.1.24.zip","version":"1.0.9","channel":"stable","durationMs":1334,"id":3,"at":"2026-11-07T00:38:16.357+08:00"}
+[builder-ui][ota] {"stage":"download","status":"started","url":"https://download.sudden.ltd/restricted-assets/pink-ide-web/prod/R010/builder-home-0.1.24.zip","version":"1.0.9","channel":"stable","id":4,"at":"2026-11-07T00:38:16.378+08:00"}
+[builder-ui][ota] {"stage":"download","status":"success","url":"https://download.sudden.ltd/restricted-assets/pink-ide-web/prod/R010/builder-home-0.1.24.zip","version":"1.0.9","channel":"stable","durationMs":1021,"bytes":1966890,"id":5,"at":"2026-11-07T00:38:17.397+08:00"}
+[builder-ui][ota] {"stage":"verify","status":"success","version":"1.0.9","channel":"stable","id":6,"at":"2026-11-07T00:38:17.403+08:00"}
+[builder-ui][ota] {"stage":"check","status":"skipped","errorCode":"OTA_DATA_NOT_NEWER","env":"prod","durationMs":3151,"id":7,"at":"2026-11-07T00:38:18.174+08:00"}
+Start enter command build with options {"configPath":"D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\TapTap\\20261107-host1-overlay-zorder-tap-candidate-01\\creator-build-config.json"}
+Read config from path D:\Workspace\TapTap\奶茶挤挤\evidence\TapTap\20261107-host1-overlay-zorder-tap-candidate-01\creator-build-config.json...
+wechatgame 插件构建配置无版本号，将跳过数据迁移
+taptap-minigame-tools 插件构建配置无版本号，将跳过数据迁移
+init builder manager success
+[[Facet.reload]], before lock, count: 1
+[[Facet.reload]], after lock, count: 1
+[[Facet.reload]], before unlock, count: 1
+[[Facet.reload]], after unlock, count: 1
+auto refresh because script compiled or scene changed
+trackTimeEnd failed! Can not find the track time asset-db:worker-startup-database[internal] start
+trackTimeEnd failed! Can not find the track time asset-db:worker-startup-database[assets] start
+asset-db is ready!
+Check and complete build options {
+  platform: 'wechatgame',
+  name: '奶茶挤挤',
+  buildPath: 'D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-taptap-minigame-build\\20261107-host1-overlay-zorder-tap-candidate-01',
+  outputName: 'wechatgame',
+  debug: false,
+  sourceMaps: false,
+  startScene: '44e30fdb-084f-5609-8283-4fdd8d2fab81',
+  scenes: [
+    {
+      uuid: '44e30fdb-084f-5609-8283-4fdd8d2fab81',
+      url: 'db://assets/scenes/Boot.scene'
+    }
+  ],
+  packages: {
+    wechatgame: { orientation: 'portrait', appid: '' },
+    'taptap-minigame-tools': {
+      enableTapConvert: true,
+      tapAppid: 'tapmccrbqbepy6dfz3',
+      gameVersion: '0.1.0',
+      usePythonScript: false,
+      deleteWechatBuild: false
+    }
+  },
+  taskName: 'wechatgame',
+  buildMode: 'normal'
+}
+构建参数 mainBundleCompressionType (merge_dep) 校验失败,  compression type(undefined) is invalid for this platform!, 将会使用默认值 "merge_dep"
+start preview settings manager
+构建参数 options.packages.wechatgame.appid ("") 校验失败, 该选项为必填项，不允许为空, 将会使用默认值 "wx6ac3f5090a6b99c5"
+2026-11-7 00:38:59 - debug: =================================== build Task (wechatgame) Start ================================
+
+2026-11-7 00:38:59 - debug: Start build task, options:{"platform":"wechatgame","name":"奶茶挤挤","buildPath":"D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-taptap-minigame-build\\20261107-host1-overlay-zorder-tap-candidate-01","outputName":"wechatgame","debug":false,"sourceMaps":false,"startScene":"44e30fdb-084f-5609-8283-4fdd8d2fab81","scenes":[{"uuid":"44e30fdb-084f-5609-8283-4fdd8d2fab81","url":"db://assets/scenes/Boot.scene"}],"packages":{"wechatgame":{"orientation":"portrait","appid":"wx6ac3f5090a6b99c5","buildOpenDataContextTemplate":"","separateEngine":false,"highPerformanceMode":false},"taptap-minigame-tools":{"enableTapConvert":true,"tapAppid":"tapmccrbqbepy6dfz3","gameVersion":"0.1.0","usePythonScript":false,"deleteWechatBuild":false}},"taskName":"wechatgame","buildMode":"normal","mainBundleCompressionType":"merge_dep","server":"","engineModulesConfigKey":"defaultConfig","mangleProperties":false,"md5Cache":false,"skipCompressTexture":false,"overwriteProjectSettings":{"macroConfig":{"cleanupImageCache":"on"},"includeModules":{"physics":"inherit-project-setting","physics-2d":"inherit-project-setting","gfx-webgl2":"off"}},"nativeCodeBundleMode":"wasm","polyfills":{"asyncFunctions":false},"experimentalEraseModules":false,"startSceneAssetBundle":false,"bundleConfigs":[],"inlineEnum":true,"useBuiltinServer":false,"md5CacheOptions":{"excludes":[],"includes":[],"replaceOnly":[],"handleTemplateMd5Link":true},"mainBundleIsRemote":false,"useSplashScreen":true,"bundleCommonChunk":false,"packAutoAtlas":true,"wasmCompressionMode":false,"binGroupConfig":{"threshold":16,"enable":false},"logDest":"project://temp/builder/log/wechatgame2026-11-7 00-38.log"}
+
+2026-11-7 00:38:59 - debug: Build with Cocos Creator 3.8.8
+
+[[Facet.reload]], before lock, count: 2
+[[Facet.reload]], after lock, count: 2
+[[Facet.reload]], before unlock, count: 2
+[[Facet.reload]], after unlock, count: 2
+Warn: [Assets] 'BaseNode' is deprecated since v3.7.0, please use 'Node' instead.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at NewConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1637)
+    at warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:162864:12)
+    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:163052:5)
+    at _checkObsoleteByName (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:168465:7)
+    at __checkObsolete__ (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:168484:7)
+    at Object.execute (file:///D:/Workspace/TapTap/%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4/build-artifacts/cocos-p1b-build-source/20261107-host1-overlay-zorder-tap-candidate-01/temp/programming/packer-driver/targets/editor/chunks/81/81b98efa2855fd8dcf215f120f3bd70648f541c5.js:66:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Workspace/TapTap/%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4/build-artifacts/cocos-p1b-build-source/20261107-host1-overlay-zorder-tap-candidate-01/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:13:13
+    at Object.execute (file:///D:/Workspace/TapTap/%E5%A5%B6%E8%8C%B6%E6%8C%A4%E6%8C%A4/build-artifacts/cocos-p1b-build-source/20261107-host1-overlay-zorder-tap-candidate-01/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:8:7)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:2605
+    at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:1309
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:1706)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:1477)
+    at loadScript (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\script\load-script.ccc:1:1858)
+    at BundleManager.loadScript (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\bundle\index.ccc:1:3083)
+    at BundleManager.initAsset (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\asset-handler\bundle\index.ccc:1:4524)
+    at BuildTask.handle (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\tasks\data-task\asset.ccc:1:43)
+    at BuildTask.runBuildTask (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:13628)
+    at BuildTask.run (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:4127)
+    at build (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\index.ccc:1:4763)
+    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\msg-util.ccc:1:210)
+2026-11-7 00:38:59 - debug: wechatgame:(onBeforeBuild) start..., progress: 0%
+
+2026-11-7 00:38:59 - debug: // ---- build task wechatgame：onBeforeBuild ----
+
+2026-11-7 00:38:59 - debug: // ---- build task wechatgame：onBeforeBuild ---- (4ms)
+
+2026-11-7 00:38:59 - debug: wechatgame:(onBeforeBuild) in 4 ms ✓, progress: 2%
+
+2026-11-7 00:38:59 - debug: cocos-service:(onBeforeBuild) start..., progress: 2%
+
+2026-11-7 00:38:59 - debug: // ---- build task cocos-service：onBeforeBuild ----
+
+2026-11-7 00:38:59 - debug: // ---- build task cocos-service：onBeforeBuild ---- (5ms)
+
+2026-11-7 00:38:59 - debug: cocos-service:(onBeforeBuild) in 5 ms ✓, progress: 4%
+
+2026-11-7 00:38:59 - debug: scene:(onBeforeBuild) start..., progress: 4%
+
+2026-11-7 00:38:59 - debug: // ---- build task scene：onBeforeBuild ----
+
+2026-11-7 00:38:59 - debug: // ---- build task scene：onBeforeBuild ---- (3ms)
+
+2026-11-7 00:38:59 - debug: scene:(onBeforeBuild) in 3 ms ✓, progress: 5%
+
+2026-11-7 00:38:59 - debug: taptap-minigame-tools:(onBeforeBuild) start..., progress: 5%
+
+2026-11-7 00:38:59 - debug: // ---- build task taptap-minigame-tools：onBeforeBuild ----
+
+2026-11-7 00:38:59 - log: [Tap小游戏] 准备构建微信小游戏
+
+2026-11-7 00:38:59 - log: [Tap小游戏] Cocos Creator版本:3.8.8
+
+2026-11-7 00:38:59 - debug: // ---- build task taptap-minigame-tools：onBeforeBuild ---- (3ms)
+
+2026-11-7 00:38:59 - debug: taptap-minigame-tools:(onBeforeBuild) in 3 ms ✓, progress: 7%
+
+2026-11-7 00:38:59 - debug: Start lock asset db..., progress: 7%
+
+2026-11-7 00:38:59 - log: Asset DB is paused with build!
+
+2026-11-7 00:38:59 - debug: Query all assets info in project
+
+2026-11-7 00:38:59 - debug: init custom config: keepNodeUuid: false, useCache: true
+
+2026-11-7 00:38:59 - debug: wechatgame:(onAfterInit) start..., progress: 7%
+
+2026-11-7 00:38:59 - debug: // ---- build task wechatgame：onAfterInit ----
+
+2026-11-7 00:38:59 - debug: // ---- build task wechatgame：onAfterInit ---- (3ms)
+
+2026-11-7 00:38:59 - debug: wechatgame:(onAfterInit) in 3 ms ✓, progress: 9%
+
+2026-11-7 00:38:59 - debug: cocos-service:(onAfterInit) start..., progress: 9%
+
+2026-11-7 00:38:59 - debug: // ---- build task cocos-service：onAfterInit ----
+
+2026-11-7 00:38:59 - debug: // ---- build task cocos-service：onAfterInit ---- (4ms)
+
+2026-11-7 00:38:59 - debug: cocos-service:(onAfterInit) in 4 ms ✓, progress: 11%
+
+2026-11-7 00:38:59 - debug: Skip compress image, progress: 0%
+
+2026-11-7 00:38:59 - debug: wechatgame:(onBeforeBundleInit) start..., progress: 11%
+
+2026-11-7 00:38:59 - debug: wechatgame:(onBeforeBundleInit) start..., progress: 0%
+
+2026-11-7 00:38:59 - debug: // ---- build task wechatgame：onBeforeBundleInit ----
+
+2026-11-7 00:38:59 - debug: // ---- build task wechatgame：onBeforeBundleInit ---- (3ms)
+
+2026-11-7 00:38:59 - debug: wechatgame:(onBeforeBundleInit) in 3 ms ✓, progress: 11%
+
+2026-11-7 00:38:59 - debug: wechatgame:(onBeforeBundleInit) in 3 ms ✓, progress: 7%
+
+2026-11-7 00:38:59 - debug: adsense-h5g-plugin:(onBeforeBundleInit) start..., progress: 11%
+
+2026-11-7 00:38:59 - debug: adsense-h5g-plugin:(onBeforeBundleInit) start..., progress: 7%
+
+2026-11-7 00:38:59 - debug: // ---- build task adsense-h5g-plugin：onBeforeBundleInit ----
+
+2026-11-7 00:38:59 - debug: [adsense-h5g-plugin] remove script success
+
+2026-11-7 00:38:59 - debug: // ---- build task adsense-h5g-plugin：onBeforeBundleInit ---- (4ms)
+
+2026-11-7 00:38:59 - debug: adsense-h5g-plugin:(onBeforeBundleInit) in 4 ms ✓, progress: 11%
+
+2026-11-7 00:38:59 - debug: adsense-h5g-plugin:(onBeforeBundleInit) in 4 ms ✓, progress: 13%
+
+2026-11-7 00:38:59 - debug: Init all bundles start..., progress: 11%
+
+2026-11-7 00:38:59 - debug: Init all bundles start..., progress: 13%
+
+2026-11-7 00:38:59 - debug: Num of bundles: 5..., progress: 11%
+
+2026-11-7 00:38:59 - debug: Num of bundles: 5..., progress: 13%
+
+2026-11-7 00:38:59 - debug: 查询 Asset Bundle start, progress: 11%
+
+2026-11-7 00:38:59 - debug: // ---- build task 查询 Asset Bundle ----
+
+2026-11-7 00:38:59 - debug: Init bundle root assets start..., progress: 11%
+
+2026-11-7 00:38:59 - debug: Init bundle root assets start..., progress: 13%
+
+2026-11-7 00:38:59 - debug: Query preload assets/scripts from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,6a2d0734-bd9e-4ddf-946e-caa52498cb75,ff9b0199-ce04-4cfe-86cc-6c719f08d6e4,de1c2107-70c8-4021-8459-6399f24d01c6,cbf30902-517f-40dc-af90-a550bac27cf1,5c601d96-e4c7-4698-991b-7ee674b11079
+
+2026-11-7 00:38:59 - debug:   Number of all scenes: 1
+
+2026-11-7 00:38:59 - debug:   Number of all scripts: 45
+
+2026-11-7 00:38:59 - debug:   Number of other assets: 484
+
+2026-11-7 00:38:59 - debug: Init bundle root assets success..., progress: 11%
+
+2026-11-7 00:38:59 - debug: Init bundle root assets success..., progress: 13%
+
+2026-11-7 00:38:59 - debug: reload all scripts.
+
+2026-11-7 00:38:59 - log: creating executor ...
+
+2026-11-7 00:38:59 - debug: [[Executor]] reload before lock
+
+2026-11-7 00:38:59 - debug: Set detail map pack:///resolution-detail-map.json: {}
+
+2026-11-7 00:38:59 - groupCollapsed: Invalidate all modules
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\93\93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\93\93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-empty" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgpu" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/sorting" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/rich-text" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/mask" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/graphics" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui-skew" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/affine-transform" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/sorting-2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-cannon" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-physx" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-ammo" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-builtin" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d-jsb" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-builtin" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d-wasm" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/light-probe" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/vendor-google" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline-post-process" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/legacy-pipeline" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-empty" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgpu" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/sorting" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/rich-text" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/mask" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/graphics" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui-skew" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/affine-transform" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/sorting-2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-cannon" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-physx" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-ammo" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-builtin" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-builtin" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d-wasm" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/light-probe" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline-post-process" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/legacy-pipeline" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/vendor-google" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d-jsb" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js" loaded.
+
+2026-11-7 00:38:59 - debug: Invalidating 'pack:///chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js'
+
+2026-11-7 00:38:59 - groupEnd: Invalidate all modules
+
+2026-11-7 00:38:59 - groupCollapsed: Imports all modules
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\6d\6d8fd2b0177941b032ddc0733af48a561fb60657.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\6d\6d8fd2b0177941b032ddc0733af48a561fb60657.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\50\50ec684ab28702df18cf262b25c26ec6d899c3a5.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\50\50ec684ab28702df18cf262b25c26ec6d899c3a5.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\6a\6a5019a719a9014c047e67aa1cf34453ab8392ce.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\6a\6a5019a719a9014c047e67aa1cf34453ab8392ce.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\e2\e2831fde95d58c09916d0f882742b7597544b8d1.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\e2\e2831fde95d58c09916d0f882742b7597544b8d1.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\b1\b18130d786bcadd1d0cb653401afdf2ede79b799.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\b1\b18130d786bcadd1d0cb653401afdf2ede79b799.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\fd\fd74c742a972dbbcd3691d204a338b19a4515b62.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\fd\fd74c742a972dbbcd3691d204a338b19a4515b62.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7d\7dd5f1b51da4ae6cb44c6f9d41d8fc719b109223.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7d\7dd5f1b51da4ae6cb44c6f9d41d8fc719b109223.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/engine-export-to-editor/cc/editor/populate-internal-constants" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/7d/7dd5f1b51da4ae6cb44c6f9d41d8fc719b109223.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "cce:/internal/x/engine-export-to-editor/cc/editor/populate-internal-constants" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Register BuiltinPipelineSettings
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/e2/e2831fde95d58c09916d0f882742b7597544b8d1.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/fd/fd74c742a972dbbcd3691d204a338b19a4515b62.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Register BuiltinPipelinePassBuilder
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/b1/b18130d786bcadd1d0cb653401afdf2ede79b799.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Register BuiltinDepthOfFieldPass
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/50/50ec684ab28702df18cf262b25c26ec6d899c3a5.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\62\621a159ce4a7bac550092546e00c97e12458f12b.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\62\621a159ce4a7bac550092546e00c97e12458f12b.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Register DebugViewRuntimeControl
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/62/621a159ce4a7bac550092546e00c97e12458f12b.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\81\81b98efa2855fd8dcf215f120f3bd70648f541c5.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\81\81b98efa2855fd8dcf215f120f3bd70648f541c5.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/81/81b98efa2855fd8dcf215f120f3bd70648f541c5.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\d0\d0ac3206e7a5c2977d25172df8f3d6ae575f074e.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\d0\d0ac3206e7a5c2977d25172df8f3d6ae575f074e.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/d0/d0ac3206e7a5c2977d25172df8f3d6ae575f074e.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\e4\e40c2af9d1219a49d53c18dd4aed7b106405a4b6.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\e4\e40c2af9d1219a49d53c18dd4aed7b106405a4b6.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\c2\c2b9bb6cb12f126fcf7f5bb4e83910be4723ecb2.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\c2\c2b9bb6cb12f126fcf7f5bb4e83910be4723ecb2.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/c2/c2b9bb6cb12f126fcf7f5bb4e83910be4723ecb2.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/e4/e40c2af9d1219a49d53c18dd4aed7b106405a4b6.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\25\2544a68716329e02ef2516a8724630674eeecdec.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\25\2544a68716329e02ef2516a8724630674eeecdec.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7c\7c603f9ea8d40fe63ba50ac807f07bd96eb3dea3.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7c\7c603f9ea8d40fe63ba50ac807f07bd96eb3dea3.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/7c/7c603f9ea8d40fe63ba50ac807f07bd96eb3dea3.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/25/2544a68716329e02ef2516a8724630674eeecdec.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\63\6369d8ea09db8964fb8aee23f9295e0a8518b5cb.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\63\6369d8ea09db8964fb8aee23f9295e0a8518b5cb.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\3f\3fe11900ed7cf9868420fd28933e99e08f5475e8.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\3f\3fe11900ed7cf9868420fd28933e99e08f5475e8.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7e\7efe57610411349b42880c911ad7764ce1afd8cd.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7e\7efe57610411349b42880c911ad7764ce1afd8cd.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\94\94aa38e646dcc991660aa1faf21425c2a2e8a9be.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\94\94aa38e646dcc991660aa1faf21425c2a2e8a9be.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\14\142449fd0a77817b0d3f7851acc1761ca24f2761.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\14\142449fd0a77817b0d3f7851acc1761ca24f2761.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\c1\c15426bd3a330777ccb4776d54b2d4477842deda.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\c1\c15426bd3a330777ccb4776d54b2d4477842deda.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\d3\d39e5ae7d4a4319ad9d1f133ea6774828bf0e7f8.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\d3\d39e5ae7d4a4319ad9d1f133ea6774828bf0e7f8.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\11\1105545ad6b584d90f2d7c79ca0699e938dea079.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\11\1105545ad6b584d90f2d7c79ca0699e938dea079.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\4c\4c248f0ff799918e7ec5f767107b9bf2839c81ac.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\4c\4c248f0ff799918e7ec5f767107b9bf2839c81ac.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\c6\c66c022ddedabf10c9f695f753bc52d08251510f.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\c6\c66c022ddedabf10c9f695f753bc52d08251510f.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\60\6018dfe9f2cd0ac09b0edc19d0a21d0ec3e1864d.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\60\6018dfe9f2cd0ac09b0edc19d0a21d0ec3e1864d.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\51\51940f61ef7564197aac76e0f2bf7ab036b16821.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\51\51940f61ef7564197aac76e0f2bf7ab036b16821.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\9e\9e214b546ae51be52ee779ceab7fc9e8f3749cbc.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\9e\9e214b546ae51be52ee779ceab7fc9e8f3749cbc.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7a\7ae3eacb38c6a73a8bb08891e45504e669893df1.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7a\7ae3eacb38c6a73a8bb08891e45504e669893df1.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7f\7f0675efc771c9f916bd44fd9bf6887dabb49304.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\7f\7f0675efc771c9f916bd44fd9bf6887dabb49304.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\48\48399b76a9ed0c2dcedceb7fb4ce787801a96f09.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\48\48399b76a9ed0c2dcedceb7fb4ce787801a96f09.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\b1\b18b76dd2342cdb6eaf049c24e8603dba613416c.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\b1\b18b76dd2342cdb6eaf049c24e8603dba613416c.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\29\299b6b61bcf300e80e1fa7f4115bca6f88cee8ff.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\29\299b6b61bcf300e80e1fa7f4115bca6f88cee8ff.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\31\31e50b84daf1b3d489e90044377cfbbe483f264d.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\31\31e50b84daf1b3d489e90044377cfbbe483f264d.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\cf\cfc86abaef3039d9a1224667b44529fb5e5a7655.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\cf\cfc86abaef3039d9a1224667b44529fb5e5a7655.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\82\827f2bb84e4417a5aa6d063fde06f807aeca0b08.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\82\827f2bb84e4417a5aa6d063fde06f807aeca0b08.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\cb\cb5a130630a4a6c90e8b867dd9269b68891edf4d.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\cb\cb5a130630a4a6c90e8b867dd9269b68891edf4d.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\d0\d0acb96685c6986b8bc0e91357b82bd645513af1.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\d0\d0acb96685c6986b8bc0e91357b82bd645513af1.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\3c\3c8f121c770af3fb85fb0456e5634e39747ef83d.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\3c\3c8f121c770af3fb85fb0456e5634e39747ef83d.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\d2\d242b0f602a0464ecaea15aef18cb93b49d6b649.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\d2\d242b0f602a0464ecaea15aef18cb93b49d6b649.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\e4\e4ee06d97aadddd983592981207690e88d16f173.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\e4\e4ee06d97aadddd983592981207690e88d16f173.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\b1\b19fe681a9761a9b56a92034c31c0fcfa98821bc.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\b1\b19fe681a9761a9b56a92034c31c0fcfa98821bc.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\ed\ed240628ed046759984cc00b01650a164fb0bf5d.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\ed\ed240628ed046759984cc00b01650a164fb0bf5d.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\af\aff413c045806fad7886fbaabf89dd93ab7ef9e1.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\af\aff413c045806fad7886fbaabf89dd93ab7ef9e1.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\be\beff9b76c9a86ff99998ddc1c64b95acd36ec759.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\be\beff9b76c9a86ff99998ddc1c64b95acd36ec759.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\e3\e36f8429f7d3f353f4873fab2ead435712c21882.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\e3\e36f8429f7d3f353f4873fab2ead435712c21882.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/c1/c15426bd3a330777ccb4776d54b2d4477842deda.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/3f/3fe11900ed7cf9868420fd28933e99e08f5475e8.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/14/142449fd0a77817b0d3f7851acc1761ca24f2761.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/7e/7efe57610411349b42880c911ad7764ce1afd8cd.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/c6/c66c022ddedabf10c9f695f753bc52d08251510f.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/d0/d0acb96685c6986b8bc0e91357b82bd645513af1.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/3c/3c8f121c770af3fb85fb0456e5634e39747ef83d.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/d2/d242b0f602a0464ecaea15aef18cb93b49d6b649.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/e4/e4ee06d97aadddd983592981207690e88d16f173.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/b1/b19fe681a9761a9b56a92034c31c0fcfa98821bc.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/4c/4c248f0ff799918e7ec5f767107b9bf2839c81ac.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/cb/cb5a130630a4a6c90e8b867dd9269b68891edf4d.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/11/1105545ad6b584d90f2d7c79ca0699e938dea079.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/94/94aa38e646dcc991660aa1faf21425c2a2e8a9be.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/ed/ed240628ed046759984cc00b01650a164fb0bf5d.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/7a/7ae3eacb38c6a73a8bb08891e45504e669893df1.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/60/6018dfe9f2cd0ac09b0edc19d0a21d0ec3e1864d.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/af/aff413c045806fad7886fbaabf89dd93ab7ef9e1.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/51/51940f61ef7564197aac76e0f2bf7ab036b16821.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/9e/9e214b546ae51be52ee779ceab7fc9e8f3749cbc.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/31/31e50b84daf1b3d489e90044377cfbbe483f264d.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/be/beff9b76c9a86ff99998ddc1c64b95acd36ec759.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/29/299b6b61bcf300e80e1fa7f4115bca6f88cee8ff.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/7f/7f0675efc771c9f916bd44fd9bf6887dabb49304.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/b1/b18b76dd2342cdb6eaf049c24e8603dba613416c.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/48/48399b76a9ed0c2dcedceb7fb4ce787801a96f09.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/e3/e36f8429f7d3f353f4873fab2ead435712c21882.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/82/827f2bb84e4417a5aa6d063fde06f807aeca0b08.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/cf/cfc86abaef3039d9a1224667b44529fb5e5a7655.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Register GameRoot
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/d3/d39e5ae7d4a4319ad9d1f133ea6774828bf0e7f8.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Register AppRoot
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/63/6369d8ea09db8964fb8aee23f9295e0a8518b5cb.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\1c\1c7db6024ce2878062e6184f0e08d461ea617b72.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\1c\1c7db6024ce2878062e6184f0e08d461ea617b72.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/1c/1c7db6024ce2878062e6184f0e08d461ea617b72.js" loaded.
+
+2026-11-7 00:38:59 - debug: D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\69\6915575e372d1f972ddf16a4ffb883f0119cecae.js resolved to D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\temp\programming\packer-driver\targets\editor\chunks\69\6915575e372d1f972ddf16a4ffb883f0119cecae.js is not in module cache!
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/69/6915575e372d1f972ddf16a4ffb883f0119cecae.js" loaded.
+
+2026-11-7 00:38:59 - debug: [[Executor]] Module "pack:///chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js" loaded.
+
+2026-11-7 00:38:59 - groupEnd: Imports all modules
+
+2026-11-7 00:38:59 - debug: [[Executor]] after unlock
+
+2026-11-7 00:38:59 - debug: Incremental keys: regeneratorRuntime,b2jsb
+
+2026-11-7 00:38:59 - debug: Init bundle share assets start..., progress: 11%
+
+2026-11-7 00:38:59 - debug: Init bundle share assets start..., progress: 13%
+
+2026-11-7 00:38:59 - debug: Init bundle share assets success..., progress: 11%
+
+2026-11-7 00:38:59 - debug: Init bundle share assets success..., progress: 13%
+
+2026-11-7 00:38:59 - debug: handle json group in bundle internal
+
+2026-11-7 00:38:59 - debug: handle json group in bundle internal success
+
+2026-11-7 00:38:59 - debug: handle json group in bundle common
+
+2026-11-7 00:38:59 - debug: handle json group in bundle resources
+
+2026-11-7 00:38:59 - debug: handle json group in bundle classic
+
+2026-11-7 00:38:59 - debug: handle json group in bundle main
+
+2026-11-7 00:38:59 - debug: init image compress task 0 in bundle internal
+
+2026-11-7 00:38:59 - debug: handle json group in bundle main success
+
+2026-11-7 00:38:59 - debug: init image compress task 0 in bundle main
+
+2026-11-7 00:38:59 - debug: handle json group in bundle resources success
+
+2026-11-7 00:38:59 - debug: init image compress task 0 in bundle resources
+
+2026-11-7 00:38:59 - debug: handle json group in bundle classic success
+
+2026-11-7 00:38:59 - debug: init image compress task 0 in bundle classic
+
+2026-11-7 00:38:59 - debug: handle json group in bundle common success
+
+2026-11-7 00:38:59 - debug: init image compress task 0 in bundle common
+
+2026-11-7 00:38:59 - debug: // ---- build task 查询 Asset Bundle ---- (404ms)
+
+2026-11-7 00:38:59 - log: run build task 查询 Asset Bundle success in 404 ms√, progress: 16%
+
+2026-11-7 00:38:59 - debug: [Build Memory track]: 查询 Asset Bundle start:234.27MB, end 268.99MB, increase: 34.72MB
+
+2026-11-7 00:38:59 - debug: 查询 Asset Bundle start, progress: 16%
+
+2026-11-7 00:38:59 - debug: // ---- build task 查询 Asset Bundle ----
+
+2026-11-7 00:38:59 - debug: // ---- build task 查询 Asset Bundle ---- (6ms)
+
+2026-11-7 00:38:59 - log: run build task 查询 Asset Bundle success in 6 ms√, progress: 21%
+
+2026-11-7 00:38:59 - debug: [Build Memory track]: 查询 Asset Bundle start:269.04MB, end 269.21MB, increase: 170.36KB
+
+2026-11-7 00:38:59 - debug: 打包脚本 start, progress: 21%
+
+2026-11-7 00:38:59 - debug: // ---- build task 打包脚本 ----
+
+auto refresh because script compiled or scene changed
+2026-11-7 00:39:00 - log: [buildPolyfillsCommand]enter sub process 18156, 9229, see: chrome://inspect/#devices
+
+2026-11-7 00:39:04 - debug: execute-script-end with buildPolyfillsCommand 4264ms
+
+2026-11-7 00:39:04 - debug: Generate systemJs..., progress: 21%
+
+2026-11-7 00:39:07 - debug: execute-script-end with buildSystemJsCommand 3113ms
+
+2026-11-7 00:39:07 - debug: 构建项目脚本 start..., progress: 21%
+
+2026-11-7 00:39:07 - debug: 构建项目脚本 start..., progress: 13%
+
+2026-11-7 00:39:13 - log: [buildScriptCommand]Number of non-entry chunks: 5
+
+2026-11-7 00:39:13 - debug: execute-script-end with buildScriptCommand 5618ms
+
+2026-11-7 00:39:13 - debug: Copy externalScripts success!
+
+2026-11-7 00:39:13 - debug: 构建项目脚本 in (5668 ms) √, progress: 21%
+
+2026-11-7 00:39:13 - debug: 构建项目脚本 in (5668 ms) √, progress: 13%
+
+2026-11-7 00:39:13 - debug: 构建引擎脚本 start..., progress: 21%
+
+2026-11-7 00:39:13 - debug: mangleProperties is enabled, found engine-mangle-config.json, use it
+
+2026-11-7 00:39:13 - debug: Error: Exit process with code:null, signal:SIGTERM in task build-script    at ChildProcess.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\worker-pools\sub-process-manager.ccc:1:2409)    at ChildProcess.emit (node:events:519:28)    at Process.ChildProcess._handle.onexit (node:internal/child_process:294:12)
+
+2026-11-7 00:39:13 - debug: Use cache engine: {link(C:\Users\vinki\AppData\Local\Temp\CocosCreator\3.8.8\builder\engine\a8fd0d8d6dad11e81de1c7ed9238dcca)}
+
+2026-11-7 00:39:13 - debug: Use cache, md5String: debug=false,sourceMaps=false,includeModules=["2d","affine-transform","audio","base","custom-pipeline","gfx-webgl","graphics","physics-2d-box2d","rich-text","tween","ui","ui-skew","custom-pipeline-builtin-scripts"],engineVersion="3.8.8",platformType="WECHAT",split=undefined,nativeCodeBundleMode="wasm",targets=undefined,entry="C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\resources\\3d\\engine",noDeprecatedFeatures=undefined,loose=true,assetURLFormat="relative-from-out",flags={"DEBUG":false,"LOAD_BULLET_MANUALLY":false,"LOAD_SPINE_MANUALLY":false},preserveType=undefined,wasmCompressionMode=false,enableNamedRegisterForSystemJSModuleFormat=undefined,mangleProperties=false,inlineEnum=true,
+
+2026-11-7 00:39:13 - debug: Use cache, options: {  "entry": "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\resources\\3d\\engine",  "debug": false,  "mangleProperties": false,  "inlineEnum": true,  "sourceMaps": false,  "includeModules": [    "2d",    "affine-transform",    "audio",    "base",    "custom-pipeline",    "gfx-webgl",    "graphics",    "physics-2d-box2d",    "rich-text",    "tween",    "ui",    "ui-skew",    "custom-pipeline-builtin-scripts"  ],  "engineVersion": "3.8.8",  "md5Map": [],  "engineName": "cocos-js",  "output": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-taptap-minigame-build\\20261107-host1-overlay-zorder-tap-candidate-01\\wechatgame\\cocos-js",  "platformType": "WECHAT",  "useCache": true,  "nativeCodeBundleMode": "wasm",  "wasmCompressionMode": false,  "assetURLFormat": "relative-from-out",  "flags": {    "DEBUG": false,    "LOAD_BULLET_MANUALLY": false,    "LOAD_SPINE_MANUALLY": false  }}
+
+2026-11-7 00:39:13 - debug: 构建引擎脚本 in (120 ms) √, progress: 21%
+
+2026-11-7 00:39:13 - debug: Copy plugin script ..., progress: 21%
+
+2026-11-7 00:39:13 - debug: Generate import-map..., progress: 21%
+
+2026-11-7 00:39:13 - debug: // ---- build task 打包脚本 ---- (13251ms)
+
+2026-11-7 00:39:13 - log: run build task 打包脚本 success in 13 s√, progress: 26%
+
+2026-11-7 00:39:13 - debug: [Build Memory track]: 打包脚本 start:269.37MB, end 267.95MB, increase: -1453.18KB
+
+2026-11-7 00:39:13 - debug: Build Assets start, progress: 26%
+
+2026-11-7 00:39:13 - debug: // ---- build task Build Assets ----
+
+2026-11-7 00:39:13 - debug: Build bundles..., progress: 26%
+
+2026-11-7 00:39:13 - debug: Pack Images start, progress: 26%
+
+2026-11-7 00:39:13 - debug: Pack Images start, progress: 13%
+
+2026-11-7 00:39:13 - debug: Number of pac assets: 1
+
+2026-11-7 00:39:13 - debug: No pack results
+
+2026-11-7 00:39:13 - debug: Compress image start..., progress: 26%
+
+2026-11-7 00:39:13 - debug: Compress image start..., progress: 13%
+
+2026-11-7 00:39:13 - group: Compress image...
+
+2026-11-7 00:39:13 - debug: sort compress task {}
+
+2026-11-7 00:39:13 - debug: Num of all image compress task 0, really: 0, configTasks: 0
+
+2026-11-7 00:39:13 - debug: No image need to compress
+
+2026-11-7 00:39:13 - groupEnd: Compress image...
+
+2026-11-7 00:39:13 - debug: Compress image success..., progress: 26%
+
+2026-11-7 00:39:13 - debug: Compress image success..., progress: 13%
+
+2026-11-7 00:39:13 - debug: Output asset in bundles start, progress: 26%
+
+2026-11-7 00:39:13 - debug: Output asset in bundles start, progress: 13%
+
+2026-11-7 00:39:13 - debug: Handle all json groups in bundle internal
+
+2026-11-7 00:39:13 - debug: handle json group
+
+2026-11-7 00:39:13 - debug: Handle all json groups in bundle common
+
+2026-11-7 00:39:13 - debug: handle json group
+
+2026-11-7 00:39:13 - debug: Handle all json groups in bundle resources
+
+2026-11-7 00:39:13 - debug: handle json group
+
+2026-11-7 00:39:13 - debug: Handle all json groups in bundle classic
+
+2026-11-7 00:39:13 - debug: handle json group
+
+2026-11-7 00:39:13 - debug: Handle all json groups in bundle main
+
+2026-11-7 00:39:13 - debug: handle json group
+
+2026-11-7 00:39:13 - debug(4): handle single json
+
+2026-11-7 00:39:13 - debug: Json group(0e107f583) compile success，json number: 6
+
+2026-11-7 00:39:13 - debug: handle single json
+
+2026-11-7 00:39:13 - debug: Output asset in bundles success, progress: 26%
+
+2026-11-7 00:39:13 - debug: Output asset in bundles success, progress: 13%
+
+2026-11-7 00:39:13 - debug: Output asset in bundles start, progress: 26%
+
+2026-11-7 00:39:13 - debug: Output asset in bundles start, progress: 13%
+
+2026-11-7 00:39:13 - debug: compress config of bundle internal...
+
+2026-11-7 00:39:13 - debug: compress config of bundle internal success
+
+2026-11-7 00:39:13 - debug: compress config of bundle common...
+
+2026-11-7 00:39:13 - debug: compress config of bundle common success
+
+2026-11-7 00:39:13 - debug: compress config of bundle resources...
+
+2026-11-7 00:39:13 - debug: compress config of bundle resources success
+
+2026-11-7 00:39:13 - debug: compress config of bundle classic...
+
+2026-11-7 00:39:13 - debug: compress config of bundle classic success
+
+2026-11-7 00:39:13 - debug: compress config of bundle main...
+
+2026-11-7 00:39:13 - debug: compress config of bundle main success
+
+2026-11-7 00:39:13 - debug: output config of bundle internal
+
+2026-11-7 00:39:13 - debug: output config of bundle internal success
+
+2026-11-7 00:39:13 - debug: output config of bundle common
+
+2026-11-7 00:39:13 - debug: output config of bundle common success
+
+2026-11-7 00:39:13 - debug: output config of bundle resources
+
+2026-11-7 00:39:13 - debug: output config of bundle resources success
+
+2026-11-7 00:39:13 - debug: output config of bundle classic
+
+2026-11-7 00:39:13 - debug: output config of bundle classic success
+
+2026-11-7 00:39:13 - debug: output config of bundle main
+
+2026-11-7 00:39:13 - debug: output config of bundle main success
+
+2026-11-7 00:39:13 - debug: Output asset in bundles success, progress: 26%
+
+2026-11-7 00:39:13 - debug: Output asset in bundles success, progress: 13%
+
+2026-11-7 00:39:13 - debug: // ---- build task Build Assets ---- (649ms)
+
+2026-11-7 00:39:13 - log: run build task Build Assets success in 649 ms√, progress: 31%
+
+2026-11-7 00:39:13 - debug: [Build Memory track]: Build Assets start:268.00MB, end 269.84MB, increase: 1.84MB
+
+2026-11-7 00:39:13 - debug: wechatgame:(onAfterBundleBuildTask) start..., progress: 31%
+
+2026-11-7 00:39:13 - debug: wechatgame:(onAfterBundleBuildTask) start..., progress: 13%
+
+2026-11-7 00:39:13 - debug: // ---- build task wechatgame：onAfterBundleBuildTask ----
+
+2026-11-7 00:39:13 - debug: // ---- build task wechatgame：onAfterBundleBuildTask ---- (4ms)
+
+2026-11-7 00:39:13 - debug: wechatgame:(onAfterBundleBuildTask) in 4 ms ✓, progress: 31%
+
+2026-11-7 00:39:13 - debug: wechatgame:(onAfterBundleBuildTask) in 4 ms ✓, progress: 20%
+
+2026-11-7 00:39:13 - debug: wechatgame:(onAfterBuildAssets) start..., progress: 31%
+
+2026-11-7 00:39:13 - debug: // ---- build task wechatgame：onAfterBuildAssets ----
+
+2026-11-7 00:39:13 - debug: // ---- build task wechatgame：onAfterBuildAssets ---- (2ms)
+
+2026-11-7 00:39:13 - debug: wechatgame:(onAfterBuildAssets) in 2 ms ✓, progress: 33%
+
+2026-11-7 00:39:13 - debug: 整理部分构建选项内数据到 settings.json start, progress: 33%
+
+2026-11-7 00:39:13 - debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+
+2026-11-7 00:39:13 - debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (3ms)
+
+2026-11-7 00:39:13 - log: run build task 整理部分构建选项内数据到 settings.json success in 3 ms√, progress: 34%
+
+2026-11-7 00:39:13 - debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:270.13MB, end 270.12MB, increase: -11.57KB
+
+2026-11-7 00:39:13 - debug: 填充脚本数据到 settings.json start, progress: 34%
+
+2026-11-7 00:39:13 - debug: // ---- build task 填充脚本数据到 settings.json ----
+
+2026-11-7 00:39:13 - debug: // ---- build task 填充脚本数据到 settings.json ---- (4ms)
+
+2026-11-7 00:39:13 - log: run build task 填充脚本数据到 settings.json success in 4 ms√, progress: 36%
+
+2026-11-7 00:39:13 - debug: [Build Memory track]: 填充脚本数据到 settings.json start:270.16MB, end 270.19MB, increase: 37.03KB
+
+2026-11-7 00:39:13 - debug: 整理部分构建选项内数据到 settings.json start, progress: 36%
+
+2026-11-7 00:39:13 - debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+
+2026-11-7 00:39:13 - debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (8ms)
+
+2026-11-7 00:39:13 - log: run build task 整理部分构建选项内数据到 settings.json success in 8 ms√, progress: 38%
+
+2026-11-7 00:39:13 - debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:270.23MB, end 270.38MB, increase: 148.30KB
+
+2026-11-7 00:39:13 - debug: wechatgame:(onBeforeCompressSettings) start..., progress: 38%
+
+2026-11-7 00:39:13 - debug: // ---- build task wechatgame：onBeforeCompressSettings ----
+
+2026-11-7 00:39:13 - debug: // ---- build task wechatgame：onBeforeCompressSettings ---- (3ms)
+
+2026-11-7 00:39:13 - debug: wechatgame:(onBeforeCompressSettings) in 3 ms ✓, progress: 40%
+
+2026-11-7 00:39:13 - debug: cocos-service:(onBeforeCompressSettings) start..., progress: 40%
+
+2026-11-7 00:39:13 - debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+
+2026-11-7 00:39:13 - debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (4ms)
+
+2026-11-7 00:39:13 - debug: cocos-service:(onBeforeCompressSettings) in 4 ms ✓, progress: 41%
+
+2026-11-7 00:39:13 - debug: 整理静态模板文件 start, progress: 41%
+
+2026-11-7 00:39:13 - debug: // ---- build task 整理静态模板文件 ----
+
+2026-11-7 00:39:13 - debug: // ---- build task 整理静态模板文件 ---- (52ms)
+
+2026-11-7 00:39:13 - log: run build task 整理静态模板文件 success in 52 ms√, progress: 46%
+
+2026-11-7 00:39:13 - debug: [Build Memory track]: 整理静态模板文件 start:270.58MB, end 272.62MB, increase: 2.03MB
+
+2026-11-7 00:39:13 - debug: cocos-service:(onAfterCompressSettings) start..., progress: 46%
+
+2026-11-7 00:39:13 - debug: // ---- build task cocos-service：onAfterCompressSettings ----
+
+2026-11-7 00:39:13 - debug: // ---- build task cocos-service：onAfterCompressSettings ---- (5ms)
+
+2026-11-7 00:39:13 - debug: cocos-service:(onAfterCompressSettings) in 5 ms ✓, progress: 48%
+
+2026-11-7 00:39:13 - debug: wechatgame:(onBeforeCopyBuildTemplate) start..., progress: 48%
+
+2026-11-7 00:39:13 - debug: // ---- build task wechatgame：onBeforeCopyBuildTemplate ----
+
+2026-11-7 00:39:14 - debug: // ---- build task wechatgame：onBeforeCopyBuildTemplate ---- (38ms)
+
+2026-11-7 00:39:14 - debug: wechatgame:(onBeforeCopyBuildTemplate) in 38 ms ✓, progress: 50%
+
+2026-11-7 00:39:14 - debug: wechatgame:(onAfterCopyBuildTemplate) start..., progress: 50%
+
+2026-11-7 00:39:14 - debug: // ---- build task wechatgame：onAfterCopyBuildTemplate ----
+
+2026-11-7 00:39:14 - debug: // ---- build task wechatgame：onAfterCopyBuildTemplate ---- (23ms)
+
+2026-11-7 00:39:14 - debug: wechatgame:(onAfterCopyBuildTemplate) in 23 ms ✓, progress: 52%
+
+2026-11-7 00:39:14 - debug: 给所有的资源加上 MD5 后缀 start, progress: 52%
+
+2026-11-7 00:39:14 - debug: // ---- build task 给所有的资源加上 MD5 后缀 ----
+
+2026-11-7 00:39:14 - debug: // ---- build task 给所有的资源加上 MD5 后缀 ---- (2ms)
+
+2026-11-7 00:39:14 - log: run build task 给所有的资源加上 MD5 后缀 success in 2 ms√, progress: 62%
+
+2026-11-7 00:39:14 - debug: [Build Memory track]: 给所有的资源加上 MD5 后缀 start:270.78MB, end 270.81MB, increase: 34.46KB
+
+2026-11-7 00:39:14 - debug: wechatgame:(onAfterBuild) start..., progress: 62%
+
+2026-11-7 00:39:14 - debug: // ---- build task wechatgame：onAfterBuild ----
+
+2026-11-7 00:39:15 - debug: // ---- build task wechatgame：onAfterBuild ---- (1097ms)
+
+Error: [Assets] [BABEL] Note: The code generator has deoptimised the styling of D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\TapBuild\game\cocos-js\cc.js as it exceeds the max of 500KB.
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at NewConsole.error (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1536)
+    at NewConsole.error (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:2258)
+    at normalizeOptions (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules\@babel\generator\src\index.ts:75:15)
+    at generate (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules\@babel\generator\src\index.ts:256:18)
+    at generateCode (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules\@babel\core\src\transformation\file\generate.ts:35:22)
+    at run (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules\@babel\core\src\transformation\index.ts:60:48)
+    at run.next (<anonymous>)
+    at Function.<anonymous> (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules\@babel\core\src\transform-file.ts:27:20)
+    at Generator.next (<anonymous>)
+    at evaluateSync (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules\gensync\index.js:251:28)
+    at Function.sync (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules\gensync\index.js:89:14)
+    at Object.transformFileSync (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules\@babel\core\src\transform-file.ts:49:30)
+    at runBabelTransform (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\dist\converter-ts.js:391:34)
+    at convertWechatToTap (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\dist\converter-ts.js:559:15)
+    at onAfterBuild (D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\dist\hooks.js:305:9)
+    at BuildTask.handleHook (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:14154)
+    at BuildTask.runPluginTask (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\manager\task-base.ccc:1:1233)
+    at BuildTask.run (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:5460)
+    at build (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\index.ccc:1:4763)
+    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\worker\msg-util.ccc:1:210)
+2026-11-7 00:39:15 - debug: wechatgame:(onAfterBuild) in 1097 ms ✓, progress: 64%
+
+2026-11-7 00:39:15 - debug: cocos-service:(onAfterBuild) start..., progress: 64%
+
+2026-11-7 00:39:15 - debug: // ---- build task cocos-service：onAfterBuild ----
+
+2026-11-7 00:39:15 - debug: // ---- build task cocos-service：onAfterBuild ---- (5ms)
+
+2026-11-7 00:39:15 - debug: cocos-service:(onAfterBuild) in 5 ms ✓, progress: 65%
+
+2026-11-7 00:39:15 - debug: adsense-h5g-plugin:(onAfterBuild) start..., progress: 65%
+
+2026-11-7 00:39:15 - debug: // ---- build task adsense-h5g-plugin：onAfterBuild ----
+
+2026-11-7 00:39:15 - debug: // ---- build task adsense-h5g-plugin：onAfterBuild ---- (2ms)
+
+2026-11-7 00:39:15 - debug: adsense-h5g-plugin:(onAfterBuild) in 2 ms ✓, progress: 67%
+
+2026-11-7 00:39:15 - debug: taptap-minigame-tools:(onAfterBuild) start..., progress: 67%
+
+2026-11-7 00:39:15 - debug: // ---- build task taptap-minigame-tools：onAfterBuild ----
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 微信小游戏构建完成！
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 开始转换为Tap小游戏...
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 微信小游戏路径:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\wechatgame
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 创建TapBuild目录:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\TapBuild
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 📦 使用TypeScript转换器
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ========================================
+
+2026-11-7 00:39:15 - log: === Tap小游戏转换器 (TypeScript版本) ===
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 步骤1: 检查转换器依赖
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] Node.js版本:v20.15.1
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ✓ Node.js版本兼容
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ✓ 转换器依赖已安装
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 依赖路径:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\node_modules
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 步骤2: 验证源路径
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 正在验证微信小游戏源路径...
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ✓ 源路径验证通过
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 源路径:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\wechatgame
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 正在准备输出目录...
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 删除旧的目标目录...
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ✓ 目标目录创建成功
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 输出目录:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\TapBuild\game
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 步骤3: 复制项目文件
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 正在复制微信小游戏文件...
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 源目录:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\wechatgame
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 目标目录:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\TapBuild\game
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ✓ 文件复制完成
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 步骤4: 处理game.json配置
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 处理game.json配置...
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 游戏配置:
+
+2026-11-7 00:39:15 - log:   companyName:undefined
+
+2026-11-7 00:39:15 - log:   productName:undefined
+
+2026-11-7 00:39:15 - log:   productVersion:0.1.0
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ✓ 配置处理完成
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 步骤5: 注入插件
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 复制插件文件...
+
+2026-11-7 00:39:15 - log: [Tap小游戏] ✓ 插件复制完成
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 步骤6: 运行Babel转换
+
+2026-11-7 00:39:15 - log: ========================================
+
+2026-11-7 00:39:15 - log: [Tap小游戏] 正在进行JavaScript兼容性转换...
+
+2026-11-7 00:39:18 - log: [Tap小游戏] Babel配置:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-p1b-build-source\20261107-host1-overlay-zorder-tap-candidate-01\extensions\taptap-minigame-tools\converter\.babelrc
+
+2026-11-7 00:39:18 - log: [Tap小游戏] 转换目录:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\TapBuild\game
+
+2026-11-7 00:39:18 - log: [Tap小游戏] 发现 15 个JS文件需要转换
+
+Error: 2026-11-7 00:39:29 - error: [BABEL] Note: The code generator has deoptimised the styling of D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\TapBuild\game\cocos-js\cc.js as it exceeds the max of 500KB.
+
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\sentry\dist\main\main.ccc:41:45)
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-logger\lib\browser\index.js:1:1710)
+    at EventEmitter.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\builder\dist\browser\tasks.ccc:1:10717)
+    at EventEmitter.emit (node:events:519:28)
+    at EventEmitter.emit (node:domain:488:12)
+    at EventEmitter.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-worker\lib\browser.ccc:1:2415)
+    at EventEmitter.emit (node:events:519:28)
+    at EventEmitter.emit (node:domain:488:12)
+    at IpcMainImpl.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-base-ipc\dist\browser.ccc:1:3556)
+2026-11-7 00:39:30 - log: [Tap小游戏] Babel转换完成: 成功 15, 跳过 0, 失败 0
+
+2026-11-7 00:39:30 - log: [Tap小游戏] ✓ Babel转换完成
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 步骤7: 注入运行时代码
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 注入运行时代码...
+
+2026-11-7 00:39:30 - log: [Tap小游戏] ✓ 运行时代码注入完成
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 步骤8: 处理WASM兼容性
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 处理WASM兼容性...
+
+2026-11-7 00:39:30 - log: [Tap小游戏] - wasm-split.js不存在，跳过
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 步骤9: 处理coverviewCustomized设置
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 处理coverviewCustomized设置...
+
+2026-11-7 00:39:30 - log: [Tap小游戏] - UnityPlugin/index.js不存在，跳过
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 步骤10: 复制版本检查文件
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 复制版本检查文件...
+
+2026-11-7 00:39:30 - log: [Tap小游戏] ✓ 版本检查文件复制完成
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 步骤11: 创建分发包
+
+2026-11-7 00:39:30 - log: ========================================
+
+2026-11-7 00:39:30 - log: [Tap小游戏] 创建ZIP包...
+
+2026-11-7 00:39:32 - log: [Tap小游戏] ✓ game.zip创建完成: 2.89 MB
+
+2026-11-7 00:39:32 - log: ========================================
+
+2026-11-7 00:39:32 - log: [Tap小游戏] ✅ 转换完成！
+
+2026-11-7 00:39:32 - log: ========================================
+
+2026-11-7 00:39:32 - log: [Tap小游戏] 输出目录:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\TapBuild
+
+2026-11-7 00:39:32 - log: [Tap小游戏] game.zip已生成，可以上传到TapTap开发者中心
+
+2026-11-7 00:39:32 - log: ========================================
+
+2026-11-7 00:39:32 - log: [Tap小游戏] ✅ TypeScript转换器执行成功
+
+2026-11-7 00:39:32 - log: [Tap小游戏] ========================================
+
+2026-11-7 00:39:32 - log: [Tap小游戏] ✅ 转换完成！
+
+2026-11-7 00:39:32 - log: [Tap小游戏] ========================================
+
+2026-11-7 00:39:32 - log: [Tap小游戏] game.zip已生成:D:\Workspace\TapTap\奶茶挤挤\build-artifacts\cocos-taptap-minigame-build\20261107-host1-overlay-zorder-tap-candidate-01\TapBuild\game.zip
+
+2026-11-7 00:39:32 - log: [Tap小游戏] 文件大小:2.89MB
+
+2026-11-7 00:39:32 - debug: // ---- build task taptap-minigame-tools：onAfterBuild ---- (17439ms)
+
+2026-11-7 00:39:32 - debug: taptap-minigame-tools:(onAfterBuild) in 17439 ms ✓, progress: 69%
+
+2026-11-7 00:39:32 - log: Asset DB is resume!
+
+2026-11-7 00:39:32 - debug: builder:build-project-total (33077ms)
+
+2026-11-7 00:39:32 - debug: build task(wechatgame) in 33077!
+
+2026-11-7 00:39:32 - debug: [Build Memory track]: builder:build-project-total start:230.95MB, end 679.99MB, increase: 449.04MB
+
+2026-11-7 00:39:32 - debug: ================================ build Task (wechatgame) Finished in (33 s)ms ================================
+
