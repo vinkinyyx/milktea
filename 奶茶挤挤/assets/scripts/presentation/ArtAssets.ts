@@ -4,7 +4,21 @@ import { ArtLoadBudget, makeBudgetError } from '../core/ArtLoadBudget';
 import { HostLifecycleCoordinator } from '../core/HostLifecycleCoordinator';
 
 interface LoadedArt { variant: ArtVariant; image: ImageAsset; texture: Texture2D; frame: SpriteFrame }
-interface LoadScope { budget: ArtLoadBudget; generation: number }
+/**
+ * A scoped load batch. Time is accumulated in real foreground segments: every timestamp transition
+ * (hide/show, timer, resource callback, assert, settle) first charges the elapsed span to the visibility
+ * state that was in force, then flips the state. Background spans are therefore never charged.
+ * Valid large deltas are never clamped — a real 20s foreground stall must still expire a 15s budget.
+ */
+interface LoadScope {
+  budget: ArtLoadBudget;
+  generation: number;
+  kind: string;
+  lastAccountedAtMs: number;
+  previousForeground: boolean;
+  unsubscribeVisibility: (() => void) | null;
+  closed: boolean;
+}
 
 function safeNow(): number {
   try { return typeof performance !== 'undefined' && typeof performance.now === 'function' ? performance.now() : Date.now(); }
@@ -23,33 +37,52 @@ export class ArtAssets {
   private readonly bundleLoads = new Map<string, Promise<AssetManager.Bundle>>();
   private scope: LoadScope | null = null;
   private budgetTimer: ReturnType<typeof setInterval> | null = null;
-  private lastTickMs = 0;
 
-  /** Start the single foreground budget shared by every load in this batch (index + menu, or one game start). */
-  beginLoadScope(ownerEpoch: number, traceId: number, budgetMs = 15_000): ArtLoadBudget {
+  /**
+   * Start the single foreground budget shared by every load in this batch (index + menu, or one game start).
+   * The returned budget is the scope token: pass it to settleLoadScope/cancelScope so a stale batch's
+   * `finally` cannot tear down a scope that already replaced it.
+   */
+  beginLoadScope(ownerEpoch: number, traceId: number, budgetMs = 15_000, kind = 'GAME_ART'): ArtLoadBudget {
     this.cancelScope('START_ART_CANCELLED');
     this.generation++;
     const budget = new ArtLoadBudget(ownerEpoch, traceId, budgetMs);
-    const scope: LoadScope = { budget, generation: this.generation };
+    const scope: LoadScope = {
+      budget, generation: this.generation, kind,
+      lastAccountedAtMs: safeNow(),
+      previousForeground: !HostLifecycleCoordinator.backgrounded,
+      unsubscribeVisibility: null, closed: false,
+    };
     this.scope = scope;
     this.pending.clear(); this.bundleLoads.clear();
-    this.lastTickMs = safeNow();
+    // Subscribe first so the initial synchronous snapshot seeds previousForeground from the live host state
+    // (a batch may legitimately begin while the host is already in the background).
+    scope.unsubscribeVisibility = HostLifecycleCoordinator.subscribe(() => {
+      if (this.scope !== scope || scope.closed) return;
+      this.accountUntil(scope, safeNow());
+      scope.previousForeground = !HostLifecycleCoordinator.backgrounded;
+      if (scope.budget.expired) this.failScope(scope);
+    });
     this.budgetTimer = setInterval(() => this.tickBudget(scope), 150);
     return budget;
   }
-  settleLoadScope(): void {
+  /** Settle the batch. When a token is supplied it must still own the scope, otherwise this is a no-op. */
+  settleLoadScope(handle?: ArtLoadBudget): void {
     const scope = this.scope;
     if (!scope) return;
+    if (handle && scope.budget !== handle) return;
+    this.accountUntil(scope, safeNow());
+    if (!scope.budget.active) { this.failScope(scope); return; }
     scope.budget.settle();
-    this.stopBudgetTimer();
-    if (this.scope === scope) this.scope = null;
+    this.closeScope(scope);
   }
-  cancelScope(code = 'START_ART_CANCELLED'): void {
+  /** Cancel the batch. A token that no longer owns the scope cannot cancel the replacement batch. */
+  cancelScope(code = 'START_ART_CANCELLED', handle?: ArtLoadBudget): void {
     const scope = this.scope;
     if (!scope) return;
+    if (handle && scope.budget !== handle) return;
     scope.budget.cancel(code);
-    this.scope = null;
-    this.stopBudgetTimer();
+    this.closeScope(scope);
     this.generation++;
     this.pending.clear(); this.bundleLoads.clear();
   }
@@ -101,21 +134,51 @@ export class ArtAssets {
   private requireActiveScope(): LoadScope {
     const scope = this.scope;
     if (!scope) throw makeBudgetError('START_ART_CANCELLED');
+    this.accountUntil(scope, safeNow());
     scope.budget.assertActive();
     return scope;
   }
   private assertScope(scope: LoadScope): void {
-    if (this.disposed || this.scope !== scope || scope.generation !== this.generation) throw makeBudgetError('START_ART_CANCELLED');
+    if (this.disposed || this.scope !== scope || scope.generation !== this.generation || scope.closed)
+      throw makeBudgetError('START_ART_CANCELLED');
+    // Charge the span since the last checkpoint *before* accepting the result. A callback that lands after the
+    // foreground deadline must reject here even if the 150ms timer has not fired yet.
+    this.accountUntil(scope, safeNow());
     scope.budget.assertActive();
+  }
+  /**
+   * Charge `nowMs - lastAccountedAtMs` to the visibility state that was in force during that span, then move the
+   * checkpoint. Background spans contribute nothing; foreground spans contribute in full, however large.
+   */
+  private accountUntil(scope: LoadScope, nowMs: number): void {
+    if (scope.closed) return;
+    const elapsed = nowMs - scope.lastAccountedAtMs;
+    scope.lastAccountedAtMs = nowMs;
+    if (!Number.isFinite(elapsed) || elapsed <= 0) return;
+    if (!scope.previousForeground) return;
+    scope.budget.advance(elapsed, true);
+  }
+  private closeScope(scope: LoadScope): void {
+    if (scope.closed) return;
+    scope.closed = true;
+    if (scope.unsubscribeVisibility) { scope.unsubscribeVisibility(); scope.unsubscribeVisibility = null; }
+    if (this.scope === scope) { this.scope = null; this.stopBudgetTimer(); }
+  }
+  /** Terminate an expired scope so pending waiters see START_ART_TIMEOUT instead of hanging on a dead batch. */
+  private failScope(scope: LoadScope): void {
+    if (scope.closed) return;
+    this.closeScope(scope);
+    this.generation++;
+    this.pending.clear(); this.bundleLoads.clear();
   }
   private raceBudget<T>(scope: LoadScope, task: Promise<T>): Promise<T> {
     return Promise.race([task, scope.budget.cancelled()]);
   }
   private tickBudget(scope: LoadScope): void {
-    if (this.scope !== scope) { this.stopBudgetTimer(); return; }
-    const now = safeNow(); const delta = Math.max(0, now - this.lastTickMs); this.lastTickMs = now;
-    const backgrounded = HostLifecycleCoordinator.backgrounded;
-    if (scope.budget.advance(delta, !backgrounded)) { this.cancelScope('START_ART_TIMEOUT'); this.stopBudgetTimer(); }
+    // A superseded scope must not touch the shared timer handle: it now belongs to the replacement batch.
+    if (scope.closed || this.scope !== scope) return;
+    this.accountUntil(scope, safeNow());
+    if (!scope.budget.active) this.failScope(scope);
   }
   private stopBudgetTimer(): void {
     if (this.budgetTimer !== null) { clearInterval(this.budgetTimer); this.budgetTimer = null; }

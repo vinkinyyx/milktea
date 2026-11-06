@@ -3,9 +3,9 @@ import { DiagnosticRing } from './DiagnosticRing';
 export type StartupResult = 'start' | 'ok' | 'error' | 'cancel';
 export interface StartupRecord {
   buildId: string; traceId: number; ownerEpoch: number; phase: string; result: StartupResult;
-  elapsedMs: number; foregroundElapsedMs: number; code?: string; assetId?: string; bundleName?: string;
+  elapsedMs: number; foregroundElapsedMs: number; code?: string; assetId?: string; bundleName?: string; stack?: string;
 }
-export interface StartupDetail { code?: string; assetId?: string; bundleName?: string; error?: unknown }
+export interface StartupDetail { code?: string; assetId?: string; bundleName?: string; error?: unknown; stack?: string }
 
 function safeNow(): number {
   try { return typeof performance !== 'undefined' && typeof performance.now === 'function' ? performance.now() : Date.now(); }
@@ -47,6 +47,7 @@ export class StartupTrace {
       if (detail?.code) record.code = this.summary(detail.code);
       if (detail?.assetId) record.assetId = this.summary(detail.assetId);
       if (detail?.bundleName) record.bundleName = this.summary(detail.bundleName);
+      if (detail?.stack) record.stack = this.summary(detail.stack);
       if (detail?.error !== undefined) record.code = record.code ?? this.summary(detail.error);
       this.ring.append(record);
     } catch { /* diagnostics must never break the boot path */ }

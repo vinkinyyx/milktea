@@ -351,8 +351,10 @@ const profileFor = (run, extra = {}) => ({
   check('policy rejects daily limit above 5', !RewardedAdPolicyLoader.validate({ ...loaded.data, maxDailyRewardedShakes: 6 }).ok);
   const dailyBlocked = RewardLedger.checkOffer({ policy, capability: 'SUPPORTED', profile: profileFor(runNow, { rewardedShake: { dayKey: RewardLedger.dayKey(NOW), dailyGranted: 5, pendingAttempt: null, receipts: [] } }), run: runNow, foregroundSeconds: 60, tutorialComplete: true, nowMs: NOW });
   check('daily quota blocks the offer', !dailyBlocked.allowed && dailyBlocked.block === 'DAILY_LIMIT');
-  const earlyBlocked = RewardLedger.checkOffer({ policy, capability: 'SUPPORTED', profile: profileFor(runNow), run: runNow, foregroundSeconds: 59, tutorialComplete: true, nowMs: NOW });
-  check('short foreground blocks the offer', !earlyBlocked.allowed && earlyBlocked.block === 'FOREGROUND_REQUIRED');
+  const earlyBlocked = RewardLedger.checkOffer({ policy, capability: 'SUPPORTED', profile: profileFor(runNow, { firstNaturalRunCompleted: false }), run: runNow, foregroundSeconds: 59, tutorialComplete: true, nowMs: NOW });
+  check('short foreground blocks the offer before the first natural run', !earlyBlocked.allowed && earlyBlocked.block === 'FOREGROUND_REQUIRED');
+  const veteranOffer = RewardLedger.checkOffer({ policy, capability: 'SUPPORTED', profile: profileFor(runNow), run: runNow, foregroundSeconds: 0, tutorialComplete: true, nowMs: NOW });
+  check('the first-session window does not permanently gate a completed first run', veteranOffer.allowed);
 
   // 8. Spill revive: deterministic cleanup, once-per-run, atomic receipt
   globalThis.tap={getStorageSync:(key)=>store.get(key)??'',setStorageSync:(key,value)=>{store.set(key,value);},removeStorageSync:(key)=>{store.delete(key);},createRewardedVideoAd:()=>({onLoad(){},onError(){},onClose(){},load:async()=>{},show:async()=>{},destroy(){}})};
@@ -519,6 +521,62 @@ const profileFor = (run, extra = {}) => ({
   const cancelBudget=new ArtLoadBudget(0,3,15000);let cancelSettled=false;
   const waiter=cancelBudget.cancelled().then(()=>{},()=>{cancelSettled=true;});cancelBudget.cancel();await waiter;
   check('AB-04 cancellation rejects pending waiters immediately',cancelSettled);
+
+  // RV-32: rebinding while an ad batch is mid-flight must not strand the new host in a transient phase.
+  RewardedAdCoordinator.release('spill-revive');RewardedAdCoordinator.release('extra-shake');
+  delete globalThis.__milkteaSpillRevive;
+  const rv32Repo=new LocalSaveRepository('revive-rv32');await rv32Repo.acquireWriteLease();
+  let rv32Bundle={profile:profileFor(spillRun),run:spillRun,lastResult:null};
+  const rv32Init=await rv32Repo.commitBundle(0,null,rv32Bundle);let rv32Rev=rv32Init.ok?rv32Init.data.revision:0;
+  const rv32Live=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  const rv32Host={...reviveHost,getActiveRunSnapshot:()=>rv32Live.snapshot(),getBundle:()=>rv32Bundle,getSaveRevision:()=>rv32Rev,
+    onSpillReviveCommitted:(n,r)=>{rv32Bundle=n;rv32Rev=r;},projectRevive:(r)=>rv32Live.projectRevive(r),
+    applyCommittedRevive:(r)=>rv32Live.reviveReceiptId===r||rv32Live.applyRevive(r).ok,declineSpillRevive:()=>rv32Live.declineRevive(),pauseForRewardedAd:()=>{}};
+  const rv32Provider={providerName:'debug-mock',capability:()=>'SUPPORTED',prepare:async()=>({ok:true,data:undefined}),show:async(attemptId)=>({kind:'COMPLETED',attemptId}),dispose:()=>{}};
+  const rv32Service=SpillReviveService.create({provider:rv32Provider,policy:revivePolicy},rv32Repo,()=>NOW);
+  rv32Service.bind(rv32Host);rv32Service.setForegroundSeconds(60);rv32Service.openOffer();
+  const rv32Watch=rv32Service.watch();
+  check('RV-32a a new ad batch reports a transient phase',rv32Service.getView().phase==='PREPARING');
+  const rv32Next=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  rv32Service.bind({...rv32Host,getActiveRunSnapshot:()=>rv32Next.snapshot(),projectRevive:(r)=>rv32Next.projectRevive(r),
+    applyCommittedRevive:(r)=>rv32Next.reviveReceiptId===r||rv32Next.applyRevive(r).ok,declineSpillRevive:()=>rv32Next.declineRevive()});
+  const rv32View=rv32Service.getView();
+  check('RV-32b host handoff clears PREPARING/SHOWING/SETTLING instead of stranding the new host',rv32View.phase==='IDLE'&&!rv32View.pendingAttempt,JSON.stringify(rv32View));
+  await rv32Watch;
+  check('RV-32c the superseded completion cannot grant on either host',rv32Next.reviveUsed===0&&rv32Live.reviveUsed===0&&rv32Bundle.profile.rewardedRevive.receipts.length===0&&rv32Service.getView().phase!=='GRANTED');
+
+  // RV-31: a receipt already committed for this run is owned — never re-offered after a rebind.
+  delete globalThis.__milkteaSpillRevive;
+  const rv31Repo=new LocalSaveRepository('revive-rv31');await rv31Repo.acquireWriteLease();
+  let rv31Bundle={profile:profileFor(spillRun),run:spillRun,lastResult:null};
+  const rv31Init=await rv31Repo.commitBundle(0,null,rv31Bundle);let rv31Rev=rv31Init.ok?rv31Init.data.revision:0;
+  const rv31Live=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  const rv31Host={...reviveHost,getActiveRunSnapshot:()=>rv31Live.snapshot(),getBundle:()=>rv31Bundle,getSaveRevision:()=>rv31Rev,
+    onSpillReviveCommitted:(n,r)=>{rv31Bundle=n;rv31Rev=r;},projectRevive:(r)=>rv31Live.projectRevive(r),
+    applyCommittedRevive:(r)=>rv31Live.reviveReceiptId===r||rv31Live.applyRevive(r).ok,declineSpillRevive:()=>rv31Live.declineRevive(),pauseForRewardedAd:()=>{}};
+  const rv31Service=SpillReviveService.create({provider:rv32Provider,policy:revivePolicy},rv31Repo,()=>NOW);
+  rv31Service.bind(rv31Host);rv31Service.setForegroundSeconds(60);rv31Service.openOffer();await rv31Service.watch();
+  check('RV-31a the first watch commits a revive receipt',rv31Live.reviveUsed===1&&rv31Bundle.profile.rewardedRevive.receipts.length===1);
+  rv31Service.bind({...rv31Host,getActiveRunSnapshot:()=>new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions).snapshot()});
+  check('RV-31b a committed revive receipt is never re-sold on the same run',rv31Service.getView().phase==='GRANTED'&&!rv31Service.canOffer(),JSON.stringify(rv31Service.getView()));
+
+  // RS-30: a committed extra-shake receipt must be restored for free, never re-offered.
+  delete globalThis.__milkteaRewardedShake;
+  const rs30Run=makeRun();
+  const rs30Repo=new LocalSaveRepository('shake-rs30');await rs30Repo.acquireWriteLease();
+  let rs30Bundle={profile:profileFor(rs30Run),run:rs30Run,lastResult:null};
+  const rs30Init=await rs30Repo.commitBundle(0,null,rs30Bundle);let rs30Rev=rs30Init.ok?rs30Init.data.revision:0;
+  const rs30Engine=new RunEngine(adapter,rules,RUN_ID,12345,rs30Run);
+  const rs30Host={getActiveRunSnapshot:()=>rs30Engine.snapshot(),getBundle:()=>rs30Bundle,getSaveRevision:()=>rs30Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{rs30Engine.pause('AD');},resumeFromRewardedAd:()=>{},
+    onRewardedShakeChanged:()=>{},onRewardedShakeCommitted:(n,r)=>{rs30Bundle=n;rs30Rev=r;},
+    applyCommittedExtraGrant:()=>rs30Engine.commitExtraGrant(1),waitForSaveIdle:async()=>{}};
+  const rs30Service=RewardedShakeService.create({provider:rv32Provider,policy},rs30Repo,()=>NOW);
+  rs30Service.bind(rs30Host);rs30Service.setForegroundSeconds(60);rs30Service.openOffer();await rs30Service.watch();
+  check('RS-30a the first watch grants one extra shake and stores a receipt',rs30Engine.snapshot().shake.extraGranted===1&&rs30Bundle.profile.rewardedShake.receipts.length===1);
+  const rs30Restarted=new RunEngine(adapter,rules,RUN_ID,12345,rs30Run);
+  rs30Service.bind({...rs30Host,getActiveRunSnapshot:()=>rs30Restarted.snapshot(),applyCommittedExtraGrant:()=>rs30Restarted.commitExtraGrant(1)});
+  check('RS-30b a committed extra-shake receipt is restored without a second ad',rs30Restarted.snapshot().shake.extraGranted===1&&rs30Service.getView().phase==='GRANTED'&&!rs30Service.canOffer(),JSON.stringify(rs30Service.getView()));
 
   RewardedAdCoordinator.release('spill-revive');RewardedAdCoordinator.release('extra-shake');
   check('RV-28 one rewarded slot is shared by both ad kinds',RewardedAdCoordinator.claim('spill-revive')&&!RewardedAdCoordinator.claim('extra-shake')&&!RewardedAdCoordinator.claim('spill-revive'));

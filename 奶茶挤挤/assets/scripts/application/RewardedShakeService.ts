@@ -67,14 +67,43 @@ export class RewardedShakeService {
   get policy(): Readonly<RewardedShakePolicy> { return this.env.policy; }
   bind(host: RewardedShakeHost): void {
     const nextRun=host.getActiveRunSnapshot()?.runId??null;
-    if(this.host!==host||this.boundRunId!==nextRun){this.hostGeneration++;this.boundRunId=nextRun;}
+    const changed=this.host!==host||this.boundRunId!==nextRun;
+    if(changed){
+      this.hostGeneration++;this.boundRunId=nextRun;
+      // Attempt-scoped memory belongs to the superseded generation and can never resolve again; reset it so the
+      // new host is not stuck on a dead SETTLING or a phantom pending attempt.
+      this.busy=false;this.pendingAttempt=null;this.trustedCompletionAttempt=null;
+      if(this.phase==='PREPARING'||this.phase==='SHOWING'||this.phase==='SETTLING'){
+        this.phase='IDLE';this.message=null;this.retrySettle=false;
+      }
+    }
     this.host = host;
     const ledger = host.getBundle()?.profile.rewardedShake;
     const run = host.getActiveRunSnapshot();
     this.stalePending = !!(ledger?.pendingAttempt && run && ledger.pendingAttempt.runId === run.runId);
+    // A receipt already committed for this run is owned, not re-sold: never re-ask the player to watch, and repair
+    // the live grant for free when the engine lags behind the persisted state.
+    const receipt = run ? ledger?.receipts?.find((item) => item.runId === run.runId && item.rewardKind === 'extra_shake' && item.amount === 1) : undefined;
+    if (this.stalePending && run && !receipt) {
+      // A pending attempt from a superseded host can never be confirmed; keeping it would block the new host
+      // forever with PENDING_ATTEMPT. Release the block now, drop the record asynchronously.
+      this.stalePending = false;
+      void this.clearStalePending(host);
+    }
+    if (run && receipt) {
+      const persisted = host.getBundle()?.run;
+      this.busy = false; this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.retrySettle = false;
+      this.phase = 'GRANTED'; this.message = null;
+      if (persisted && persisted.runId === run.runId && persisted.shake.extraGranted > run.shake.extraGranted) host.applyCommittedExtraGrant();
+      return;
+    }
     if(!this.busy){this.phase = 'IDLE'; this.message = this.stalePending ? '上次广告奖励未得到可信完成确认，未发放。' : null;this.retrySettle = false;}
   }
   unbind(host: RewardedShakeHost): void { if (this.host === host) this.host = null; }
+  /** A superseded batch must never clear the busy flag of a batch that already replaced it on a new host. */
+  private releaseBusy(owner: RewardedShakeHost, generation: number): void {
+    if (this.host === owner && this.hostGeneration === generation) this.busy = false;
+  }
   setForegroundSeconds(seconds: number): void { this.foregroundSeconds = Math.max(0, seconds); }
   providerDisposed(): boolean { return false; }
   dispose(): void { this.env.provider.dispose(); }
@@ -155,31 +184,35 @@ export class RewardedShakeService {
     this.trustedCompletionAttempt = null;
     const prepared = await this.env.provider.prepare();
     if(this.host!==owner||generation!==this.hostGeneration)throw new Error('REWARD_ATTEMPT_OWNER_CHANGED');
-    if (!prepared.ok) { if(!await this.clearPending('广告暂时无法加载，未发放奖励。'))throw new Error('REWARD_PENDING_CLEAR_FAILED'); this.busy = false; return; }
+    if (!prepared.ok) { if(!await this.clearPending('广告暂时无法加载，未发放奖励。'))throw new Error('REWARD_PENDING_CLEAR_FAILED'); this.releaseBusy(owner, generation); return; }
     this.phase = 'SHOWING'; this.changed();
     const outcome = await this.env.provider.show(attemptId);
-    if(this.host!==owner||generation!==this.hostGeneration||owner.getActiveRunSnapshot()?.runId!==run.runId){this.busy=false;return;}
+    if(this.host!==owner||generation!==this.hostGeneration||owner.getActiveRunSnapshot()?.runId!==run.runId)return;
     if (outcome.kind !== 'COMPLETED') {
       if(!await this.clearPending(outcome.kind === 'CANCELLED' ? '观看未完成，未发放奖励。' : '广告播放失败，未发放奖励。'))throw new Error('REWARD_PENDING_CLEAR_FAILED');
-      this.busy = false; return;
+      this.releaseBusy(owner, generation); return;
     }
     this.trustedCompletionAttempt = attemptId;
     this.phase = 'SETTLING'; this.changed();
     await this.settle(attemptId);
-    this.busy = false;
+    this.releaseBusy(owner, generation);
     }catch(error){if(this.host===owner&&generation===this.hostGeneration){this.phase='ERROR';this.retrySettle=!!this.pendingAttempt&&this.trustedCompletionAttempt===this.pendingAttempt;this.message='广告流程暂时未完成；存档保持待确认状态，可重试或返回游戏。';this.changed();}}
-    finally{if(this.phase!=='SHOWING')this.busy=false;RewardedAdCoordinator.release('extra-shake');}
+    finally{if(this.host===owner&&generation===this.hostGeneration&&this.phase!=='SHOWING')this.busy=false;RewardedAdCoordinator.release('extra-shake');}
   }
   async retrySettlement(): Promise<void> {
     if (!this.host || this.busy || !this.pendingAttempt || this.trustedCompletionAttempt !== this.pendingAttempt) return;
+    const owner=this.host,generation=this.hostGeneration;
     this.busy = true; this.phase = 'SETTLING'; this.message = null; this.changed();
-    try{await this.settle(this.pendingAttempt);}catch{this.phase='ERROR';this.retrySettle=true;this.message='奖励保存仍未完成，可稍后重试。';this.changed();}
-    finally{this.busy=false;}
+    try{await this.settle(this.pendingAttempt);}catch{if(this.host!==owner||generation!==this.hostGeneration)return;this.phase='ERROR';this.retrySettle=true;this.message='奖励保存仍未完成，可稍后重试。';this.changed();}
+    finally{this.releaseBusy(owner,generation);}
   }
   async abandonPending(): Promise<void> {
     if (!this.host || this.busy) return;
+    const owner=this.host,generation=this.hostGeneration;
     this.busy = true;
     const cleared=await this.clearPending('已放弃未确认的广告奖励。');
+    // A handoff during the write means this generation no longer owns the live UI/run; bind() already reset it.
+    if(this.host!==owner||generation!==this.hostGeneration)return;
     if(!cleared){this.busy=false;this.phase='ERROR';this.message='放弃操作未能保存，请重试。';this.changed();return;}
     this.stalePending = false; this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.retrySettle = false; this.phase = 'IDLE'; this.busy = false;
     this.changed();
@@ -198,6 +231,18 @@ export class RewardedShakeService {
       policy: this.env.policy, capability: this.env.provider.capability(), profile: bundle.profile, run,
       foregroundSeconds: this.foregroundSeconds, tutorialComplete: this.host?.isTutorialComplete() ?? false, nowMs: this.now(),
     });
+  }
+  /**
+   * Drop a pending attempt left behind by a superseded host. No grant, no resume, no run-state change; a CAS
+   * failure means a newer attempt already wrote and is simply left alone.
+   */
+  private async clearStalePending(owner: RewardedShakeHost): Promise<void> {
+    const bundle = owner.getBundle();
+    if (!bundle) return;
+    const next = copy(bundle);
+    next.profile.rewardedShake = RewardLedger.clearPending(next.profile.rewardedShake);
+    const committed = await this.repo.commitBundle(owner.getSaveRevision(), bundle.profile.activeRunId, next);
+    if (committed.ok) owner.onRewardedShakeCommitted(next, committed.data.revision);
   }
   private async clearPending(message: string): Promise<boolean> {
     const owner=this.host,generation=this.hostGeneration;

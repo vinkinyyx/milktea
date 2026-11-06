@@ -2,6 +2,7 @@ import { _decorator, assetManager, AssetManager, AudioClip, Color, Component, Gr
 import { DEBUG } from 'cc/env';
 import type { CommandOutcome, DomainEvent, IBundleSaveRepository, IngredientState, Level, LocalSaveBundle, Result, RewardedShakePolicy, RunCommand, RunSnapshot, SpillRevivePolicy } from '../contracts/types';
 import { FixedClock } from '../core/Clock';
+import type { ArtLoadBudget } from '../core/ArtLoadBudget';
 import { RunEngine, type RunEngineReviveOptions } from '../core/RunEngine';
 import { HostLifecycleCoordinator, HostLifecycleSnapshot } from '../core/HostLifecycleCoordinator';
 import { AppRuntime } from '../core/AppRuntime';
@@ -125,12 +126,14 @@ export class GameRoot extends Component {
   }
   private artLoading=false;
   private buttonSkins=new Map<string,{node:Node;family:string}>();
+  private settingsArtBudget:ArtLoadBudget|null=null;
+  private renderFailureShown=false;
   private static nextSceneId=1;
   private static nextWorldId=1;
   private async initialize():Promise<void>{
     if(this.loading)return;this.loading=true;this.artLoading=true;this.render();
     const owner=this.ownerEpoch, trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner);
-    this.art.beginLoadScope(owner,trace,15000);
+    const artBudget=this.art.beginLoadScope(owner,trace,15000,'GAME_ART');
     try{
       if(!this.leaseInitialized){const lock=await this.repo.acquireWriteLease();this.leaseInitialized=true;
         if(lock.ok){if(!this.isOwner()){lock.data.release();return;}this.lease=lock.data.release;this.persistent=lock.data.mode==='persistent';}
@@ -150,21 +153,21 @@ export class GameRoot extends Component {
       AppRuntime.startup.stage('ART_CATALOG','ok',{assetId:`ids:${ids}`,bundleName:`variants:${variants}`},owner,trace);
       await this.loadRequiredArt();
       if(!this.isOwner()){this.art.dispose();return;}
-      this.art.settleLoadScope();
+      this.art.settleLoadScope(artBudget);
       this.artLoading=false;this.hideOverlay();this.render();this.bindRewardedShake();this.bindSpillRevive();void this.loadAudioClips();if(!this.isOwner())return;
       this.notice='';
       AppRuntime.startup.stage('MENU_READY','ok',{assetId:`loaded:${this.art.loadedCount}`,bundleName:`screen:${this.screen}`},owner,trace);
       if(DEBUG)this.publishDiagnostics();
       if(this.bundle.run){this.notice=this.bundle.run.rulesVersion===AppRuntime.rules?.design_rules_version?'发现可续局存档。选择“继续上局”后仍需明确点击继续。':'发现旧版玩法未完成局；原存档已保留，可取消确认或明确开始新局。';this.render();}
     }catch(error){
-      this.art.cancelScope(this.startupErrorCode(error));
+      this.art.cancelScope(this.startupErrorCode(error), artBudget);
       this.artLoading=false;
       if(this.isOwner()){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}
     }
     finally{if(this.isOwner()){this.loading=false;if(this.pendingStartRequested&&this.artReady&&this.screen==='MENU'){this.pendingStartRequested=false;void this.startNew();}}}
   }
   onDestroy():void{
-    this.ownerEpoch++;this.art.cancelScope('START_ART_CANCELLED');this.clearOverlay();this.lifecycleOff?.();this.lifecycleOff=null;if(this.rewarded&&this.rewardedHost)this.rewarded.unbind(this.rewardedHost);this.rewardedHost=null;if(this.spillRevive&&this.spillReviveHost)this.spillRevive.unbind(this.spillReviveHost);this.spillReviveHost=null;
+    this.ownerEpoch++;this.settingsArtBudget=null;this.art.cancelScope('START_ART_CANCELLED');this.clearOverlay();this.lifecycleOff?.();this.lifecycleOff=null;if(this.rewarded&&this.rewardedHost)this.rewarded.unbind(this.rewardedHost);this.rewardedHost=null;if(this.spillRevive&&this.spillReviveHost)this.spillRevive.unbind(this.spillReviveHost);this.spillReviveHost=null;
     input.off(Input.EventType.TOUCH_START,this.onTouchStart,this);input.off(Input.EventType.TOUCH_MOVE,this.onTouchMove,this);input.off(Input.EventType.TOUCH_END,this.onTouchEnd,this);input.off(Input.EventType.TOUCH_CANCEL,this.onTouchCancel,this);
     input.off(Input.EventType.MOUSE_DOWN,this.onMouseDown,this);input.off(Input.EventType.MOUSE_MOVE,this.onMouseMove,this);input.off(Input.EventType.MOUSE_UP,this.onMouseUp,this);window.removeEventListener('keydown',this.keydown);window.removeEventListener('blur',this.onWindowBlur);
     this.clock?.pause();this.clock=null;this.engine?.dispose();this.engine=null;this.effects?.dispose();this.effects=null;this.art.dispose();this.audio?.dispose();this.audio=null;
@@ -364,12 +367,12 @@ export class GameRoot extends Component {
     this.notice='';this.render();
     AppRuntime.startup.stage('START_REQUEST','start',{code:memoryOnly?'memory-only':'start'},owner,trace);
     this.scheduleOnce(()=>{if(this.loading&&this.isOwner()&&owner===this.ownerEpoch)this.showStartupOverlay('正在准备这杯…','正在加载杯子与小料，请稍候。',[]);},0);
-    this.art.beginLoadScope(owner,trace,15000);
+    const artBudget=this.art.beginLoadScope(owner,trace,15000,'GAME_ART');
     try{
       if(!this.artReady)throw new Error('START_ART_FAILED: 美术资源尚未就绪');
       AppRuntime.startup.stage('GAME_ART','start',{assetId:`count:${this.art.catalog.ids.length}`},owner,trace);
       await this.loadGameArt();if(!this.isOwner()||owner!==this.ownerEpoch)return;
-      this.art.settleLoadScope();
+      this.art.settleLoadScope(artBudget);
       AppRuntime.startup.stage('GAME_ART','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);
       const rules=AppRuntime.rules!;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[rules.design_rules_version]?.classic?.standard??0;const runId=this.makeUuid();const seed=seedOverride??this.seed();if(attemptId)this.diagnosticAttemptId=attemptId;
       AppRuntime.startup.stage('WORLD_CREATE','start',{code:'classic'},owner,trace);
@@ -390,7 +393,7 @@ export class GameRoot extends Component {
       if(this.pauseOwners.size){if(!this.pauseOwners.has('MODAL')){this.engine.pause(this.pauseOwners.has('HOST_HIDDEN')?'HOST_HIDDEN':'RESUME_REQUIRED');this.screen='PAUSED';}this.clock.pause();}
       this.previewX=rules.cup.center_x_du;this.lastSaveTick=0;this.resultFinalized=false;this.resultSaved=false;this.resultError='';this.saveDirty=true;this.bindRewardedShake();this.bindSpillRevive();this.render();this.hideOverlay();
       AppRuntime.startup.stage('HUD_READY','ok',{assetId:`cup:${this.art.loadedCount}`,bundleName:`screen:${this.screen}`},owner,trace);
-    }catch(error){this.art.cancelScope(this.startupErrorCode(error));if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage(code==='START_ART_TIMEOUT'?'GAME_ART':'WORLD_CREATE','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}
+    }catch(error){this.art.cancelScope(this.startupErrorCode(error),artBudget);if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage(code==='START_ART_TIMEOUT'?'GAME_ART':'WORLD_CREATE','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}
     finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}
   }
   private createWorld():CocosPhysicsAdapter{
@@ -507,8 +510,16 @@ export class GameRoot extends Component {
   private togglePause():void{if(this.screen==='PLAYING'){this.engine?.pause('MANUAL');this.clock?.pause();this.pauseOwners.add('MANUAL');this.cancelPointer();this.screen='PAUSED';this.notice='已暂停。';this.saveDirty=true;void this.commitCheckpoint(true);this.render();}else if(this.screen==='PAUSED')void this.continueRun();}
   private resumeByUser():void{if(this.screen==='PAUSED')void this.continueRun();}
   private isModalScreen():boolean{return this.screen==='SETTINGS'||this.screen==='CONFIRM_RESTART'||this.screen==='CONFIRM_MENU'||this.screen==='REWARD'||this.screen==='REVIVE';}
-  private openModal(screen:'SETTINGS'|'CONFIRM_RESTART'|'CONFIRM_MENU'):void{this.cancelPointer();if(screen==='SETTINGS')this.settingsReturnScreen=this.engine?'PAUSED':'MENU';this.pauseOwners.add('MODAL');if(this.engine){this.engine.pause('MODAL');this.clock?.pause();}this.screen=screen;this.render();if(screen==='SETTINGS'){const owner=this.ownerEpoch;void this.loadArtBatch(this.art.catalog.ids.filter(id=>id.startsWith('ui_'))).then(()=>{if(this.isOwner()&&owner===this.ownerEpoch&&this.screen==='SETTINGS')this.render();},()=>{if(this.isOwner()&&owner===this.ownerEpoch&&this.screen==='SETTINGS'){this.notice='部分设置图片加载失败，文字控件仍可操作。';this.render();}});}}
-  private closeModal():void{this.pauseOwners.delete('MODAL');this.cancelPointer();this.screen=this.screen==='SETTINGS'?this.settingsReturnScreen:(this.engine?'PAUSED':'MENU');this.render();}
+  private openModal(screen:'SETTINGS'|'CONFIRM_RESTART'|'CONFIRM_MENU'):void{this.cancelPointer();if(screen==='SETTINGS')this.settingsReturnScreen=this.engine?'PAUSED':'MENU';this.pauseOwners.add('MODAL');if(this.engine){this.engine.pause('MODAL');this.clock?.pause();}this.screen=screen;this.render();if(screen==='SETTINGS'){
+    // The settings panel owns a dedicated scope. Reusing the startup scope would fail with START_ART_CANCELLED
+    // because that batch is already settled; keeping the token means a late settings `finally` can never
+    // cancel a newer GAME_ART batch. Loading stays on demand: only ui_* assets are pulled here.
+    const owner=this.ownerEpoch,budget=this.art.beginLoadScope(owner,this.startupTraceId,15000,'SETTINGS_UI');this.settingsArtBudget=budget;
+    const uiIds=(this.art.catalog?.ids??[]).filter(id=>id.startsWith('ui_'));
+    void this.loadArtBatch(uiIds).then(()=>{this.art.settleLoadScope(budget);if(this.settingsArtBudget===budget)this.settingsArtBudget=null;if(this.isOwner()&&owner===this.ownerEpoch&&this.screen==='SETTINGS')this.render();},()=>{this.art.cancelScope('SETTINGS_ART_CANCELLED',budget);if(this.settingsArtBudget===budget)this.settingsArtBudget=null;if(this.isOwner()&&owner===this.ownerEpoch&&this.screen==='SETTINGS'){this.notice='部分设置图片加载失败，文字控件仍可操作。';this.render();}});}}
+  /** Drop the settings batch only if it is still the live scope; a replaced token is a no-op by design. */
+  private cancelSettingsArtScope():void{const budget=this.settingsArtBudget;this.settingsArtBudget=null;if(budget)this.art.cancelScope('SETTINGS_ART_CANCELLED',budget);}
+  private closeModal():void{this.cancelSettingsArtScope();this.pauseOwners.delete('MODAL');this.cancelPointer();this.screen=this.screen==='SETTINGS'?this.settingsReturnScreen:(this.engine?'PAUSED':'MENU');this.render();}
   private async restartConfirmed():Promise<void>{
     const owner=this.ownerEpoch;while(this.saveInFlight)await this.waitForSaveIdle();if(!this.isOwner()||owner!==this.ownerEpoch)return;
     this.engine?.pause('MANUAL');this.clock?.pause();this.engine?.dispose();this.engine=null;this.adapter=null;this.clock=null;
@@ -545,13 +556,28 @@ export class GameRoot extends Component {
     });
   }
   private showStartupFailure(code:string,message:string,trace:number):void{
+    // render() is throw-safe (see above), so the overlay below is created even when the normal paint fails.
     this.screen='ERROR';this.notice=`${code}：${message}`;this.loading=false;this.artLoading=false;this.render();
     const retry=()=>{if(code.startsWith('START_ART')||!this.artReady)void this.retryArtAndStart();else void this.startNew();};
     this.showStartupOverlay('暂时无法开始',`${code}\n${message.slice(0,180)}`, [
       {id:'startup-retry',label:'重试准备',action:retry},
-      {id:'startup-menu',label:'返回菜单',action:()=>{this.art.cancelScope('START_ART_CANCELLED');this.screen='MENU';this.notice='';this.render();}},
+      {id:'startup-menu',label:'返回菜单',action:()=>this.returnToMenuFromError()},
       {id:'startup-diagnostic',label:'查看诊断',action:()=>this.showStartupDiagnostics(trace)},
     ]);
+  }
+  /**
+   * Leave the error layer for a genuinely usable menu: the overlay, its stale buttons and every pointer/engine
+   * hold must be dropped, otherwise `overlayVisible` keeps hijacking input and "开始新局" can never be clicked.
+   */
+  private returnToMenuFromError():void{
+    this.cancelPointer();
+    this.clearOverlay();
+    this.pauseOwners.clear();
+    this.engine?.dispose();this.engine=null;this.adapter=null;this.clock=null;
+    this.world?.destroy();this.world=null;
+    this.ingredientViews.clear();this.shakeArcNodes=[];this.lastEvents=[];this.events.clear();this.commands.clear();this.consumedDomainEventIds.clear();
+    this.tutorialStep=0;this.resultFinalized=false;this.resultSaved=false;this.resultError='';this.saveDirty=false;
+    this.renderFailureShown=false;this.screen='MENU';this.notice='';this.render();
   }
   private showStartupDiagnostics(trace:number):void{
     const rows=AppRuntime.startup.latest(32).map(row=>`#${row.value.traceId} ${row.value.phase} ${row.value.result}${row.value.code?` ${row.value.code}`:''}`);
@@ -559,7 +585,21 @@ export class GameRoot extends Component {
     try{console.info('[startup-trace]',AppRuntime.startup.exportJson());}catch{}
     this.showStartupOverlay('启动诊断',text,[{id:'startup-back',label:'返回',action:()=>this.hideOverlay()}]);
   }
+  /**
+   * The normal screen paint must never be the only thing standing between a crash and a usable exit. A throw here
+   * is caught, recorded as a real startup phase failure, and replaced by the standalone overlay error layer.
+   */
   private render():void{
+    try{this.renderUnsafe();this.renderFailureShown=false;}
+    catch(error){
+      if(this.renderFailureShown)return;
+      this.renderFailureShown=true;
+      try{AppRuntime.startup.stage('RENDER','error',{code:'RENDER_FAILED',error},this.ownerEpoch,this.startupTraceId);}catch{}
+      try{if(this.uiRoot?.isValid)for(const child of [...this.uiRoot.children])child.destroy();this.buttons=[];this.buttonSkins.clear();}catch{}
+      this.showStartupFailure('RENDER_FAILED',`界面渲染失败：${String(error)}`,this.startupTraceId);
+    }
+  }
+  private renderUnsafe():void{
     if(!this.uiRoot?.isValid)return;this.buttons=[];this.buttonSkins.clear();this.previewGraphic=null;
     for(const child of [...this.uiRoot.children])child.destroy();this.labels.clear();
     if(this.artLoading){this.themeBackground(true);if(this.art.getLoadedVariant('ui_title_logo'))this.themeSprite('ui_title_logo',375,900,640,224);else this.text('loading-brand','奶茶挤挤',375,900,72,new Color(103,58,32));this.text('loading','正在准备杯子与小料…',375,480,28);this.button('loading-start','开始新局',135,330,480,104,()=>{this.pendingStartRequested=true;this.notice='已收到开始请求，准备完成后立即进入游戏。';this.render();});if(this.notice){this.themePanel('ui_panel_toast',375,200,670,96);this.text('loading-notice',this.notice,375,200,22);}this.drawButtons();return;}
@@ -695,14 +735,14 @@ export class GameRoot extends Component {
   private async loadGameArt():Promise<void>{await this.loadArtBatch(this.art.catalog.ids.filter(id=>!id.startsWith('bg_shop_extend_')));}
   private async retryArtAndStart():Promise<void>{
     if(this.artRetryTask)return this.artRetryTask;if(this.loading)return;const owner=this.ownerEpoch,generation=++this.artLoadGeneration,trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner);
-    const task=(async()=>{this.loading=true;this.artLoading=true;this.notice='正在重试资源加载…';this.render();this.art.beginLoadScope(owner,trace,15000);
+    const task=(async()=>{this.loading=true;this.artLoading=true;this.notice='正在重试资源加载…';this.render();const artBudget=this.art.beginLoadScope(owner,trace,15000,'GAME_ART');
       try{
         if(!this.art.catalog){AppRuntime.startup.stage('ART_CATALOG','start',undefined,owner,trace);await this.art.initialize();if(!this.isOwner()||owner!==this.ownerEpoch||generation!==this.artLoadGeneration)return;this.artReady=true;const cat=(this.art as unknown as{catalog:ArtCatalog}).catalog;AppRuntime.startup.stage('ART_CATALOG','ok',{assetId:`ids:${cat.ids.length}`,bundleName:`variants:${cat.variantCount}`},owner,trace);}
         AppRuntime.startup.stage('GAME_ART','start',undefined,owner,trace);await this.loadRequiredArt();if(!this.isOwner()||owner!==this.ownerEpoch||generation!==this.artLoadGeneration)return;
-        this.art.settleLoadScope();
+        this.art.settleLoadScope(artBudget);
         this.artLoading=false;this.screen='MENU';this.hideOverlay();this.notice=this.bundle.run?'资源已恢复。请选择继续上局或开始新局。':'';this.render();if(DEBUG)this.publishDiagnostics();void this.loadAudioClips();
         AppRuntime.startup.stage('MENU_READY','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);
-      }catch(error){this.art.cancelScope(this.startupErrorCode(error));if(this.isOwner()&&owner===this.ownerEpoch&&generation===this.artLoadGeneration){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}
+      }catch(error){this.art.cancelScope(this.startupErrorCode(error),artBudget);if(this.isOwner()&&owner===this.ownerEpoch&&generation===this.artLoadGeneration){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}
       finally{if(this.isOwner()&&owner===this.ownerEpoch&&generation===this.artLoadGeneration){this.loading=false;this.artRetryTask=null;}}
     })();this.artRetryTask=task;return task;
   }
@@ -761,7 +801,7 @@ export class GameRoot extends Component {
     this.button('again','再来一杯',160,650,430,96,()=>void this.restartConfirmed());this.button('menu','回菜单',160,510,430,96,()=>{this.screen='MENU';this.engine?.dispose();this.engine=null;this.clock=null;this.world?.destroy();this.render();});
     if(!this.resultSaved&&this.activeSaveRepository())this.button('retry-save','重试保存',160,370,430,96,()=>void this.retryResultSave());}
   private renderError():void{const physics=this.notice.includes('PHYSICS_');this.themePanel('ui_panel_modal',375,780,670,850,true);this.themeSprite('ui_icon_warning',375,1130,80,80);this.text('error',physics?'本局暂时遇到问题':'暂时无法开始',375,990,40);this.text('error-detail',physics?this.notice:/图片|加载/.test(this.notice)?'图片暂时没加载完成，请点击重试。\n已有存档会保留。':this.notice||'请重试或重新打开游戏。',375,860,26);this.labels.get('error-detail')?.node.getComponent(UITransform)?.setContentSize(560,150);
-    if(physics){if(this.engine&&this.recoveryUsedRunId!==this.engine.snapshot().runId&&(this.engine.recoveryCheckpoint||this.activeSaveRepository()))this.button('retry-checkpoint','恢复本局',160,650,430,96,()=>void this.retryTechnicalRecovery());this.button('error-menu','返回菜单',160,510,430,96,()=>{this.screen='MENU';this.engine?.dispose();this.engine=null;this.clock=null;this.world?.destroy();this.render();});this.button('physics-details','查看错误详情',160,390,430,72,()=>{this.showPhysicsDiagnostics=!this.showPhysicsDiagnostics;this.render();});if(this.showPhysicsDiagnostics){const fault=(this.engine?.lastTickFault??'无可用错误摘要').slice(0,240);this.text('physics-diagnostic',`构建 ${AppRuntime.buildId}\n${fault}`,375,290,18);this.labels.get('physics-diagnostic')?.node.getComponent(UITransform)?.setContentSize(560,140);}return;}
+    if(physics){if(this.engine&&this.recoveryUsedRunId!==this.engine.snapshot().runId&&(this.engine.recoveryCheckpoint||this.activeSaveRepository()))this.button('retry-checkpoint','恢复本局',160,650,430,96,()=>void this.retryTechnicalRecovery());this.button('error-menu','返回菜单',160,510,430,96,()=>this.returnToMenuFromError());this.button('physics-details','查看错误详情',160,390,430,72,()=>{this.showPhysicsDiagnostics=!this.showPhysicsDiagnostics;this.render();});if(this.showPhysicsDiagnostics){const fault=(this.engine?.lastTickFault??'无可用错误摘要').slice(0,240);this.text('physics-diagnostic',`构建 ${AppRuntime.buildId}\n${fault}`,375,290,18);this.labels.get('physics-diagnostic')?.node.getComponent(UITransform)?.setContentSize(560,140);}return;}
     this.button('retry-load','重试资源加载',160,680,430,96,()=>void this.retryArtAndStart());if(this.artReady)this.button('memory-new','仅内存新局',160,540,430,96,()=>void this.startNew(true));}
   private async retryTechnicalRecovery():Promise<void>{
     const failedRunId=this.engine?.snapshot().runId;if(!failedRunId||this.recoveryUsedRunId===failedRunId)return;
@@ -825,11 +865,11 @@ export class GameRoot extends Component {
   }
   private contains(r:Rect,x:number,y:number):boolean{return x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h;}
   private clampPreview(x:number):number{const r=AppRuntime.rules!.ingredients.find(i=>i.level===this.engine?.snapshot().currentLevel)?.radius_du??18;const cup=AppRuntime.rules!.cup;return Math.max(cup.center_x_du-cup.top_width_du/2+r,Math.min(cup.center_x_du+cup.top_width_du/2-r,x));}
-  private async restoreRun():Promise<void>{if(this.loading||!this.bundle.run)return;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[this.bundle.run.rulesVersion]?.classic?.standard??this.bundle.profile.bestScores[this.bundle.run.stageId]?.standard??0;if(this.bundle.run.rulesVersion!==AppRuntime.rules?.design_rules_version){this.notice='这是旧杯型的未完成局，已保留但不会载入新杯。确认开始新杯后才替换。';this.render();return;}this.loading=true;this.screen='PAUSED';this.render();const owner=++this.ownerEpoch,trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner);this.art.beginLoadScope(owner,trace,15000);
+  private async restoreRun():Promise<void>{if(this.loading||!this.bundle.run)return;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[this.bundle.run.rulesVersion]?.classic?.standard??this.bundle.profile.bestScores[this.bundle.run.stageId]?.standard??0;if(this.bundle.run.rulesVersion!==AppRuntime.rules?.design_rules_version){this.notice='这是旧杯型的未完成局，已保留但不会载入新杯。确认开始新杯后才替换。';this.render();return;}this.loading=true;this.screen='PAUSED';this.render();const owner=++this.ownerEpoch,trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner),artBudget=this.art.beginLoadScope(owner,trace,15000,'GAME_ART');
     try{const stored=await this.repo.readBundle();if(!this.isOwner()||owner!==this.ownerEpoch)return;if(!stored.ok)throw new Error(stored.error.message);if(!stored.data.envelope)throw new Error('没有可续局档案');this.bundle=stored.data.envelope.payload;this.bundleRevision=stored.data.envelope.revision;
-      AppRuntime.startup.stage('GAME_ART','start',{assetId:`count:${this.art.catalog.ids.length}`},owner,trace);await this.loadGameArt();if(!this.isOwner()||owner!==this.ownerEpoch)return;this.art.settleLoadScope();AppRuntime.startup.stage('GAME_ART','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);const rules=AppRuntime.rules!;const run=this.bundle.run!;this.adapter=this.createWorld();this.engine=new RunEngine(this.adapter,rules,run.runId,run.rng.state,run,this.reviveOptions());this.engine.setTimingDiagnostics(this.probeMode()!=='off');this.baseTick=run.tick;this.clock=new FixedClock(rules.physics.fixed_hz,rules.physics.max_catchup_steps,()=>this.advanceRunTick());this.clock.pause();this.pauseOwners=new Set(['RESTORING']);
+      AppRuntime.startup.stage('GAME_ART','start',{assetId:`count:${this.art.catalog.ids.length}`},owner,trace);await this.loadGameArt();if(!this.isOwner()||owner!==this.ownerEpoch)return;this.art.settleLoadScope(artBudget);AppRuntime.startup.stage('GAME_ART','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);const rules=AppRuntime.rules!;const run=this.bundle.run!;this.adapter=this.createWorld();this.engine=new RunEngine(this.adapter,rules,run.runId,run.rng.state,run,this.reviveOptions());this.engine.setTimingDiagnostics(this.probeMode()!=='off');this.baseTick=run.tick;this.clock=new FixedClock(rules.physics.fixed_hz,rules.physics.max_catchup_steps,()=>this.advanceRunTick());this.clock.pause();this.pauseOwners=new Set(['RESTORING']);
       this.pauseOwners.delete('RESTORING');if(HostLifecycleCoordinator.snapshot().resumeRequired)this.pauseOwners.add('RESUME_REQUIRED');this.screen=this.engine.spillPending?'REVIVE':'PAUSED';this.notice=this.engine.spillPending?'已恢复洒出局面：可观看广告复活一次，或结束本局。':'已从最近完整保存恢复；点击“继续”后才推进。';this.bindRewardedShake();this.bindSpillRevive();this.render();this.hideOverlay();AppRuntime.startup.stage('HUD_READY','ok',{assetId:`screen:${this.screen}`},owner,trace);
-    }catch(error){this.art.cancelScope(this.startupErrorCode(error));if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}}
+    }catch(error){this.art.cancelScope(this.startupErrorCode(error),artBudget);if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}}
   private async persistSettings():Promise<void>{const repository=this.activeSaveRepository();if(!repository){this.notice='设置仅保存在当前页面内存中。';return;}if(this.saveInFlight){this.settingsDirty=true;return;}const task=this.beginSaveTask();if(task===null){this.settingsDirty=true;return;}const owner=this.ownerEpoch,expectedRevision=this.bundleRevision,expectedRunId=this.bundle.run?.runId??null;
     const profile={...this.bundle.profile,settings:{...this.bundle.profile.settings,dropMode:this.mode,reducedMotion:this.reducedMotion},revision:this.bundle.profile.revision+1};const next={...this.bundle,profile};
     try{const r=await repository.commitBundle(expectedRevision,expectedRunId,next);if(!this.ownsSaveTask(task,owner))return;if(r.ok){this.bundle=next;this.bundleRevision=r.data.revision;}else{this.notice=`设置未保存：${r.error.message}`;}}

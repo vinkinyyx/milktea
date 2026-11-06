@@ -34,8 +34,10 @@ export class ReviveLedger {
     if (run.revive.used >= policy.maxRevivesPerRun) return { allowed: false, block: 'RUN_LIMIT' };
     // 每日复活上限未经用户授权，不阻断；保留 dayKey/dailyGranted/receipts 仅用于审计。
     if (policy.requireTutorialComplete && !tutorialComplete) return { allowed: false, block: 'TUTORIAL_REQUIRED' };
+    // 无限模式没有关卡：用“完成一局自然游戏”映射平台的“首个关卡内不展示广告”。60 秒前台保护只约束
+    // 首局完成之前，首局完成后不再要求，避免一次性的首次体验保护变成永久的隐形阻断。
+    if (!profile.firstNaturalRunCompleted && !(foregroundSeconds >= policy.minForegroundSecondsFirstSession)) return { allowed: false, block: 'FOREGROUND_REQUIRED' };
     if (policy.requireFirstNaturalRunCompleted && !profile.firstNaturalRunCompleted) return { allowed: false, block: 'FIRST_RUN_REQUIRED' };
-    if (!(foregroundSeconds >= policy.minForegroundSecondsFirstSession)) return { allowed: false, block: 'FOREGROUND_REQUIRED' };
     if (this.pendingForRun(profile.rewardedRevive, run.runId)) return { allowed: false, block: 'PENDING_ATTEMPT' };
     return { allowed: true, block: null };
   }

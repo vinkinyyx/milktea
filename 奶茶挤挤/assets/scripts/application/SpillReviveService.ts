@@ -68,12 +68,47 @@ export class SpillReviveService {
   get policy(): Readonly<SpillRevivePolicy> { return this.env.policy; }
   bind(host: SpillReviveHost): void {
     const nextRun = host.getActiveRunSnapshot()?.runId ?? null;
-    if (this.host !== host || this.boundRunId !== nextRun) { this.hostGeneration++; this.boundRunId = nextRun; }
+    const changed = this.host !== host || this.boundRunId !== nextRun;
+    if (changed) {
+      this.hostGeneration++;
+      this.boundRunId = nextRun;
+      // Attempt-scoped memory belongs to the superseded generation: stillOwns() rejects its callbacks forever,
+      // so nothing can advance it. Keeping phase/busy here would strand the new host with no usable action.
+      this.busy = false;
+      this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.attemptIdentity = null;
+      if (this.phase === 'PREPARING' || this.phase === 'SHOWING' || this.phase === 'SETTLING') {
+        this.phase = 'IDLE'; this.message = null; this.retrySettle = false;
+      }
+    }
     this.host = host;
-    const ledger = host.getBundle()?.profile.rewardedRevive;
+    const bundle = host.getBundle();
+    const ledger = bundle?.profile.rewardedRevive;
     const run = host.getActiveRunSnapshot();
     this.stalePending = !!(ledger?.pendingAttempt && run && ledger.pendingAttempt.runId === run.runId);
-    if (!this.busy) { this.phase = 'IDLE'; this.message = this.stalePending ? '上次复活广告未得到可信完成确认，未发放。' : null; this.retrySettle = false; }
+    // A receipt already committed for this run is owned, not re-sold: the player must never be asked to watch
+    // again, and a stale in-memory used=0 snapshot must never overwrite the persisted used=1 state.
+    const receipt = run ? ledger?.receipts?.find((r) => r.runId === run.runId && r.rewardKind === 'spill_revive' && r.amount === 1) : undefined;
+    if (this.stalePending && run && !receipt) {
+      // The superseded owner can never confirm this pending attempt, so keeping it would block the new host
+      // forever with PENDING_ATTEMPT. Release the block now and drop the record asynchronously; a failed write
+      // is harmless and simply retried on the next bind.
+      this.stalePending = false;
+      void this.clearStalePending(host);
+    }
+    if (run && receipt) {
+      const applied = run.revive.used === 1 && run.revive.committedReceiptId === receipt.attemptId
+        ? true : host.applyCommittedRevive(receipt.attemptId);
+      this.busy = false;
+      this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.attemptIdentity = null; this.retrySettle = false;
+      this.phase = 'GRANTED';
+      this.message = applied ? '本局复活已生效。' : '本局复活权益已保存，重新进入对局后自动恢复。';
+      return;
+    }
+    if (!this.busy) {
+      this.phase = 'IDLE';
+      this.message = this.stalePending ? '上次复活广告未得到可信完成确认，未发放。' : null;
+      this.retrySettle = false;
+    }
   }
   unbind(host: SpillReviveHost): void { if (this.host === host) this.host = null; }
   setForegroundSeconds(seconds: number): void { this.foregroundSeconds = Math.max(0, seconds); }
@@ -100,6 +135,10 @@ export class SpillReviveService {
   /** Same host/generation and the bound run is still the one this attempt was recorded for. */
   private stillOwns(ctx: { owner: SpillReviveHost; generation: number; runId: string }): boolean {
     return this.host === ctx.owner && this.hostGeneration === ctx.generation && this.host.getActiveRunSnapshot()?.runId === ctx.runId;
+  }
+  /** A superseded batch must never clear the busy flag of a batch that already replaced it on a new host. */
+  private releaseBusy(owner: SpillReviveHost, generation: number): void {
+    if (this.host === owner && this.hostGeneration === generation) this.busy = false;
   }
   /** After a clear/error, allow the same run to re-watch once more (no daily cap). Guarded by engine/policy checks. */
   retryWatch(): void {
@@ -149,22 +188,27 @@ export class SpillReviveService {
       this.attemptIdentity = { owner, generation, runId: run.runId, failureId: run.revive.pendingFailure.failureId, attemptId };
       const prepared = await this.env.provider.prepare();
       if (this.host !== owner || generation !== this.hostGeneration) throw new Error('REVIVE_ATTEMPT_OWNER_CHANGED');
-      if (!prepared.ok) { if (!await this.clearPending('复活广告暂时无法加载，未发放奖励。')) throw new Error('REVIVE_PENDING_CLEAR_FAILED'); this.busy = false; return; }
+      if (!prepared.ok) { if (!await this.clearPending('复活广告暂时无法加载，未发放奖励。')) throw new Error('REVIVE_PENDING_CLEAR_FAILED'); this.releaseBusy(owner, generation); return; }
       this.phase = 'SHOWING'; this.changed();
       const outcome = await this.env.provider.show(attemptId);
-      if (this.host !== owner || generation !== this.hostGeneration) { this.busy = false; return; }
+      if (this.host !== owner || generation !== this.hostGeneration) return;
       if (outcome.kind !== 'COMPLETED') {
         if (!await this.clearPending(outcome.kind === 'CANCELLED' ? '观看未完成，未发放复活。' : '广告播放失败，未发放复活。')) throw new Error('REVIVE_PENDING_CLEAR_FAILED');
-        this.busy = false; return;
+        this.releaseBusy(owner, generation); return;
       }
       this.trustedCompletionAttempt = attemptId; this.phase = 'SETTLING'; this.changed();
-      await this.settle(attemptId); this.busy = false;
+      await this.settle(attemptId); this.releaseBusy(owner, generation);
     } catch {
       if (this.host === owner && generation === this.hostGeneration) {
         this.phase = 'ERROR'; this.retrySettle = !!this.pendingAttempt && this.trustedCompletionAttempt === this.pendingAttempt;
         this.message = '复活广告流程暂时未完成；存档保持待确认状态，可重试或放弃。'; this.changed();
       }
-    } finally { if (this.phase !== 'SHOWING') this.busy = false; RewardedAdCoordinator.release('spill-revive'); }
+    } finally {
+      // The ad lock is always released, but a superseded generation must not clear the busy flag of a batch that
+      // already replaced it on a new host.
+      if (this.host === owner && generation === this.hostGeneration && this.phase !== 'SHOWING') this.busy = false;
+      RewardedAdCoordinator.release('spill-revive');
+    }
   }
   /**
    * Retry settlement after an earlier readback or application failure.
@@ -176,6 +220,7 @@ export class SpillReviveService {
   async retrySettlement(): Promise<void> {
     const ctx = this.attemptIdentity;
     if (!this.host || this.busy || !ctx || this.trustedCompletionAttempt !== ctx.attemptId) return;
+    const owner = this.host, generation = this.hostGeneration;
     this.busy = true; this.phase = 'SETTLING'; this.message = null; this.changed();
     try {
       const fresh = await this.repo.readBundle();
@@ -212,14 +257,17 @@ export class SpillReviveService {
       await this.settle(ctx.attemptId);
     } catch {
       if (this.stillOwns(ctx)) { this.phase = 'ERROR'; this.retrySettle = true; this.message = '复活保存仍未完成，可稍后重试。'; this.changed(); }
-    } finally { this.busy = false; }
+    } finally { this.releaseBusy(owner, generation); }
   }
   async abandonPending(): Promise<void> {
     if (!this.host || this.busy) return;
+    const owner = this.host, generation = this.hostGeneration;
     this.busy = true;
     const cleared = await this.clearPending('已放弃未确认的复活奖励。', false);
-    if (!cleared) { this.busy = false; this.phase = 'ERROR'; this.message = '放弃操作未能保存，请重试。'; this.changed(); return; }
-    this.stalePending = false; this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.attemptIdentity = null; this.retrySettle = false; this.busy = false;
+    // A handoff during the write means this generation no longer owns the live UI/run; bind() already reset it.
+    if (this.host !== owner || generation !== this.hostGeneration) return;
+    if (!cleared) { this.releaseBusy(owner, generation); this.phase = 'ERROR'; this.message = '放弃操作未能保存，请重试。'; this.changed(); return; }
+    this.stalePending = false; this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.attemptIdentity = null; this.retrySettle = false; this.releaseBusy(owner, generation);
     this.host.declineSpillRevive(); this.changed();
   }
   acknowledgeGrant(): void {
@@ -233,6 +281,18 @@ export class SpillReviveService {
     if (!bundle || !run) return { allowed: false, block: 'NO_ACTIVE_RUN' as ReviveOfferBlock };
     return ReviveLedger.checkOffer({ policy: this.env.policy, capability: this.env.provider.capability(), profile: bundle.profile, run,
       foregroundSeconds: this.foregroundSeconds, tutorialComplete: this.host?.isTutorialComplete() ?? false, nowMs: this.now() });
+  }
+  /**
+   * Drop a pending attempt left behind by a superseded host. It never grants, never resumes and never touches the
+   * run state; a CAS failure (a newer attempt already wrote) simply leaves the newer record intact.
+   */
+  private async clearStalePending(owner: SpillReviveHost): Promise<void> {
+    const bundle = owner.getBundle();
+    if (!bundle) return;
+    const next = copy(bundle);
+    next.profile.rewardedRevive = ReviveLedger.clearPending(next.profile.rewardedRevive);
+    const committed = await this.repo.commitBundle(owner.getSaveRevision(), bundle.profile.activeRunId, next);
+    if (committed.ok) owner.onSpillReviveCommitted(next, committed.data.revision);
   }
   /**
    * Clear the pending attempt record after an ad load/show failure, cancellation, or incomplete watch.
