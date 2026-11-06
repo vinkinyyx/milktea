@@ -1,9 +1,0 @@
-{
-  "command": [
-    "node.exe",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\strip_p1c_release_debug.cjs",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-spill-revive-web-release-02",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\CupAuto\\20261104-spill-revive-web-release-02\\web\\release-code-staging.json"
-  ],
-  "cwd": "D:\\Workspace\\TapTap\\奶茶挤挤"
-}

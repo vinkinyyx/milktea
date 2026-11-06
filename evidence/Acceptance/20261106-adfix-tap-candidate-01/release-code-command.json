@@ -1,9 +1,0 @@
-{
-  "command": [
-    "node.exe",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\strip_p1c_release_debug.cjs",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261106-adfix-tap-candidate-01",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\Acceptance\\20261106-adfix-tap-candidate-01\\release-code-staging.json"
-  ],
-  "cwd": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261106-adfix-tap-candidate-01"
-}

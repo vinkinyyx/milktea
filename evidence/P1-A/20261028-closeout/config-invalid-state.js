@@ -1,1 +1,0 @@
-async page=>await page.evaluate(()=>{let s=window.cc?.director.getScene(),b=s?.getChildByName('BootRoot'),l=s?.getChildByName('PhysicsLabRoot')?.getComponent('PhysicsLab');return {scene:s?.name,bootError:!!b?.getChildByName('ConfigErrorRetry'),ready:l?.ready,message:l?.message}})

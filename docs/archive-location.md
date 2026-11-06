@@ -1,5 +1,17 @@
 # 历史归档与清理
 
+2026-11-07清理归档：
+
+`D:\Workspace\TapTap\_cleanup-backups\奶茶挤挤-20261107-project-cleanup`
+
+目录内保留原相对路径：P1-A/CupAuto 旧验收证据、旧 Tap ZIP 证据（1.3.0/1.4.0/1.5.0 之前候选）、旧验收目录、已过期的进度/评审文档、旧设计汇总（complete-design）、旧设计 ZIP、旧 `client/` 工程副本。本轮只移出项目、不删除归档；需要历史材料时按原相对路径取回并核对内容。
+
+- 执行记录（逐项动作与字节数）：[execution.jsonl](../evidence/maintenance/20261107-project-cleanup/execution.jsonl)
+
+本轮直接删除、不承诺恢复的内容：`build-artifacts/cocos-p1b-build-source`（源码构建副本）、`build-artifacts/cocos-p1b-build`（旧Web/调试构建）、旧 `cocos-taptap-minigame-build` 候选、`rewarded-tests`、`__pycache__`、`.trae-html-share-packages`、`.playwright-cli`、`.screenshots`。均可用现用源码与 tools 脚本重新生成。
+
+保留不动：`assets/`、`assets/library/`（含 source 原稿与许可证）、`assets2/`（美术设计包原稿）、`audio/`（音频原稿）、`config/`、`contracts/`、`奶茶挤挤/extensions`（Tap 转换扩展）、`奶茶挤挤/node_modules`（开发依赖）、`skills/`、`research/`。
+
 2026-11-05清理归档：
 
 `D:\Workspace\TapTap\_cleanup-backups\奶茶挤挤-20261105-project-cleanup`

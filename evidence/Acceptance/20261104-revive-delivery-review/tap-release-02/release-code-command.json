@@ -1,9 +1,0 @@
-{
-  "command": [
-    "node.exe",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\strip_p1c_release_debug.cjs",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-recovery-memory-tap-release-02",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\Acceptance\\20261104-revive-delivery-review\\tap-release-02\\release-code-staging.json"
-  ],
-  "cwd": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261104-recovery-memory-tap-release-02"
-}

@@ -1,9 +1,0 @@
-{
-  "command": [
-    "node.exe",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\tools\\strip_p1c_release_debug.cjs",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261105-host-revive-v3-tap-release-01",
-    "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\TapTap\\20261105-host-revive-v3-tap-release-01\\release-code-staging.json"
-  ],
-  "cwd": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261105-host-revive-v3-tap-release-01"
-}
