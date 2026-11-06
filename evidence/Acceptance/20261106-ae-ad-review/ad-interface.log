@@ -1,0 +1,73 @@
+{
+  "scope": "Fake API contract/fault injection, NOT real Tap ad validation",
+  "completed": {
+    "resolvedByShowPromise": false,
+    "outcome": "COMPLETED",
+    "created": 1,
+    "destroy": 1,
+    "offLoad": 1,
+    "offError": 1,
+    "offClose": 1
+  },
+  "early": {
+    "resolvedByShowPromise": false,
+    "outcome": "CANCELLED",
+    "created": 1,
+    "destroy": 1,
+    "offLoad": 1,
+    "offError": 1,
+    "offClose": 1
+  },
+  "nested": {
+    "resolvedByShowPromise": false,
+    "outcome": "CANCELLED",
+    "created": 1,
+    "destroy": 1,
+    "offLoad": 1,
+    "offError": 1,
+    "offClose": 1
+  },
+  "missingFlag": {
+    "resolvedByShowPromise": false,
+    "outcome": "CANCELLED",
+    "created": 1,
+    "destroy": 1,
+    "offLoad": 1,
+    "offError": 1,
+    "offClose": 1
+  },
+  "offLoadThrows": {
+    "created": 1,
+    "destroy": 0,
+    "offLoad": 1,
+    "offError": 0,
+    "offClose": 0,
+    "registeredHandlers": [
+      "load",
+      "error",
+      "close"
+    ]
+  },
+  "partialInstance": {
+    "created": 1,
+    "destroy": 0,
+    "offLoad": 0,
+    "offError": 0,
+    "offClose": 0,
+    "result": {
+      "ok": false,
+      "error": {
+        "code": "REWARD_AD_UNSUPPORTED",
+        "message": "REWARD_AD_UNSUPPORTED",
+        "retryable": true
+      }
+    }
+  },
+  "disposeDuringShow": {
+    "created": 1,
+    "destroy": 2,
+    "offLoad": 2,
+    "offError": 2,
+    "offClose": 2
+  }
+}

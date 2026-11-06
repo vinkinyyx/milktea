@@ -1,0 +1,11 @@
+
+> 奶茶挤挤@0.1.0 verify:art
+> python -X utf8 ../tools/verify_runtime_art.py
+
+{
+  "status": "PASS",
+  "selectedImages": 71,
+  "packageImagesPresent": null,
+  "errors": [],
+  "scope": "Static source/package integrity; does not verify Cocos rendering or touch behavior."
+}

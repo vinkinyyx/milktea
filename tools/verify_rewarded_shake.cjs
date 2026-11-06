@@ -55,6 +55,8 @@ const { RewardedAdCoordinator } = load('application/RewardedAdCoordinator.js');
 const { FixedClock } = load('core/Clock.js');
 
 let passed = 0; const failures = [];
+const unhandledRejections = [];
+process.on('unhandledRejection', (error) => unhandledRejections.push(error));
 const check = (name, condition, detail = '') => { if (condition) { passed++; console.log(`PASS ${name}`); } else { failures.push(`${name}${detail ? `: ${detail}` : ''}`); console.log(`FAIL ${name}${detail ? `: ${detail}` : ''}`); } };
 const NOW = Date.UTC(2026, 10, 3, 4, 0, 0); // 2026-11-03 12:00 Asia/Shanghai
 const RUN_ID = '11111111-1111-4111-8111-111111111111';
@@ -258,7 +260,7 @@ const profileFor = (run, extra = {}) => ({
     pauseForRewardedAd: () => { paused = true; serviceEngine.pause('AD'); },
     resumeFromRewardedAd: (notice) => { paused = false; resumedNotice = notice; },
     onRewardedShakeChanged: () => {}, onRewardedShakeCommitted: (next, nextRevision) => { bundle = next; revision = nextRevision; },
-    applyCommittedExtraGrant: () => serviceEngine.commitExtraGrant(1), waitForSaveIdle: async () => {},
+    applyCommittedExtraGrant: (amount) => serviceEngine.commitExtraGrant(amount).ok, waitForSaveIdle: async () => {},
   };
   const provider = { providerName: 'debug-mock', capability: () => 'SUPPORTED', prepare: async () => ({ ok: true, data: undefined }), show: async (attemptId) => ({ kind: 'COMPLETED', attemptId }), dispose: () => {} };
   const service = RewardedShakeService.create({ provider, policy }, repo, () => NOW);
@@ -284,7 +286,7 @@ const profileFor = (run, extra = {}) => ({
   const cancelInitial = await cancelRepo.commitBundle(0, null, { profile: profileFor(cancelRun), run: cancelRun, lastResult: null });
   let cancelBundle = { profile: profileFor(cancelRun), run: cancelRun, lastResult: null }; let cancelRevision = cancelInitial.ok ? cancelInitial.data.revision : 0;
   const cancelEngine = new RunEngine(adapter, rules, RUN_ID, 12345, cancelRun);
-  const cancelHost = { ...host, getActiveRunSnapshot: () => cancelEngine.snapshot(), getBundle: () => cancelBundle, getSaveRevision: () => cancelRevision, onRewardedShakeCommitted: (next, rev) => { cancelBundle = next; cancelRevision = rev; }, pauseForRewardedAd: () => cancelEngine.pause('AD'), applyCommittedExtraGrant: () => cancelEngine.commitExtraGrant(1) };
+  const cancelHost = { ...host, getActiveRunSnapshot: () => cancelEngine.snapshot(), getBundle: () => cancelBundle, getSaveRevision: () => cancelRevision, onRewardedShakeCommitted: (next, rev) => { cancelBundle = next; cancelRevision = rev; }, pauseForRewardedAd: () => cancelEngine.pause('AD'), applyCommittedExtraGrant: (amount) => cancelEngine.commitExtraGrant(amount).ok };
   const cancelProvider = { providerName: 'debug-mock', capability: () => 'SUPPORTED', prepare: async () => ({ ok: true, data: undefined }), show: async (attemptId) => ({ kind: 'CANCELLED', attemptId, errorCode: 'CLOSED_EARLY' }), dispose: () => {} };
   const cancelService = RewardedShakeService.create({ provider: cancelProvider, policy }, cancelRepo, () => NOW);
   cancelService.bind(cancelHost); cancelService.setForegroundSeconds(60); cancelService.openOffer(); await cancelService.watch();
@@ -309,7 +311,7 @@ const profileFor = (run, extra = {}) => ({
   unsafeRevision = unsafeInitial.ok ? unsafeInitial.data.revision : 0;
   const unsafeEngine = new RunEngine(adapter, rules, RUN_ID, 12345, unsafeRun);
   const unsafeHost = { ...host, getActiveRunSnapshot: () => unsafeEngine.snapshot(), getBundle: () => unsafeBundle, getSaveRevision: () => unsafeRevision,
-    onRewardedShakeCommitted: (next, revision) => { unsafeBundle = next; unsafeRevision = revision; }, pauseForRewardedAd: () => unsafeEngine.pause('AD'), applyCommittedExtraGrant: () => unsafeEngine.commitExtraGrant(1) };
+    onRewardedShakeCommitted: (next, revision) => { unsafeBundle = next; unsafeRevision = revision; }, pauseForRewardedAd: () => unsafeEngine.pause('AD'), applyCommittedExtraGrant: (amount) => unsafeEngine.commitExtraGrant(amount).ok };
   const unavailableProvider = { providerName: 'tap', capability: () => 'SUPPORTED', prepare: async () => ({ ok: false, error: { code: 'NO_FILL', message: 'no fill' } }), show: async () => { throw new Error('must not show'); }, dispose() {} };
   const unsafeService = RewardedShakeService.create({ provider: unavailableProvider, policy }, unsafeRepo, () => NOW);
   unsafeService.bind(unsafeHost); unsafeService.setForegroundSeconds(60); unsafeService.openOffer(); await unsafeService.watch();
@@ -338,6 +340,46 @@ const profileFor = (run, extra = {}) => ({
   globalThis.tap={createRewardedVideoAd:()=>makeAdInstance(()=>Promise.reject(new Error('load')))};
   const failedLoadProvider=new TapRewardedAdProvider(providerPolicy);const failedLoad=await failedLoadProvider.prepare();
   check('rejected load Promise resolves prepare as failure',!failedLoad.ok&&failedLoad.error.code==='REWARD_AD_LOAD_REJECTED');
+
+  // AD05: native lifecycle ownership — idempotent destroy, independent off, partial creation/registration cleanup,
+  // and late callbacks from a released instance must never settle a newer attempt.
+  const makeLifecycleInstance=(overrides={})=>{
+    const listeners={load:new Set(),error:new Set(),close:new Set()};const counts={load:0,error:0,close:0,destroy:0};
+    const inst={onLoad:f=>listeners.load.add(f),offLoad:f=>{counts.load++;listeners.load.delete(f);},
+      onError:f=>listeners.error.add(f),offError:f=>{counts.error++;listeners.error.delete(f);},
+      onClose:f=>listeners.close.add(f),offClose:f=>{counts.close++;listeners.close.delete(f);},
+      load:()=>Promise.resolve(),show:()=>Promise.resolve(),destroy:()=>{counts.destroy++;},
+      emit:(key,value)=>{for(const f of [...listeners[key]])f(value);},counts,...overrides};
+    return inst;
+  };
+  const idemInst=makeLifecycleInstance();globalThis.tap={createRewardedVideoAd:()=>idemInst};
+  const idemProvider=new TapRewardedAdProvider(providerPolicy);await idemProvider.prepare();idemProvider.dispose();idemProvider.dispose();
+  idemInst.emit('close',{isEnded:true}); // late close after dispose: ignored, no throw
+  check('AD05-a repeated dispose unregisters each listener once and destroys once',
+    idemInst.counts.load===1&&idemInst.counts.error===1&&idemInst.counts.close===1&&idemInst.counts.destroy===1);
+  const throwOffInst=makeLifecycleInstance({offLoad:()=>{throw new Error('off load');}});
+  globalThis.tap={createRewardedVideoAd:()=>throwOffInst};
+  const throwOffProvider=new TapRewardedAdProvider(providerPolicy);await throwOffProvider.prepare();
+  let throwOffEscaped=false;try{throwOffProvider.dispose();}catch{throwOffEscaped=true;}
+  check('AD05-b a throwing offLoad does not block the other listeners or destroy',
+    !throwOffEscaped&&throwOffInst.counts.error===1&&throwOffInst.counts.close===1&&throwOffInst.counts.destroy===1);
+  const missingOffInst=makeLifecycleInstance();delete missingOffInst.offClose;
+  globalThis.tap={createRewardedVideoAd:()=>missingOffInst};
+  const missingProvider=new TapRewardedAdProvider(providerPolicy);const missingPrepare=await missingProvider.prepare();
+  check('AD05-c a partial interface is rejected and the created instance is destroyed',
+    !missingPrepare.ok&&missingOffInst.counts.destroy===1);
+  const partialInst=makeLifecycleInstance();partialInst.onError=()=>{throw new Error('register error');};
+  globalThis.tap={createRewardedVideoAd:()=>partialInst};
+  const partialProvider=new TapRewardedAdProvider(providerPolicy);const partialPrepare=await partialProvider.prepare();
+  check('AD05-d a registration throw unregisters the registered listeners and destroys once',
+    !partialPrepare.ok&&partialInst.counts.load===1&&partialInst.counts.destroy===1);
+  const lateInst=makeLifecycleInstance();globalThis.tap={createRewardedVideoAd:()=>lateInst};
+  const lateProvider=new TapRewardedAdProvider(providerPolicy);await lateProvider.prepare();
+  let lateSettles=0;const lateAttempt='bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+  const latePromise=lateProvider.show(lateAttempt).then(value=>{lateSettles++;return value;});
+  lateInst.emit('close',{isEnded:true});lateInst.emit('close',{isEnded:true});
+  check('AD05-e duplicate close settles once and destroys the released instance once',
+    (await latePromise).kind==='COMPLETED'&&lateSettles===1&&lateInst.counts.destroy===1);
 
   // 7. Policy/block gates
   const disabled = await new TapRewardedAdProvider({ ...policy, enabled: false }).capability();
@@ -486,7 +528,32 @@ const profileFor = (run, extra = {}) => ({
   await retryService.retrySettlement();
   check('RV-27 trusted retry grants exactly once after the save recovers',retryService.getView().phase==='GRANTED'&&retryLive.reviveUsed===1&&retryLive.reviveReceiptId!==null);
 
-  // R2c: rebinding the host during a retry settlement must give the previous owner zero callbacks.
+  // RC01: a durable receipt whose live application fails must never report success; recovery stays free of ads.
+  delete globalThis.__milkteaSpillRevive;
+  const rc01Repo=new LocalSaveRepository('revive-apply-fail');await rc01Repo.acquireWriteLease();
+  let rc01Bundle={profile:profileFor(spillRun),run:spillRun,lastResult:null};
+  const rc01Initial=await rc01Repo.commitBundle(0,null,rc01Bundle);let rc01Rev=rc01Initial.ok?rc01Initial.data.revision:0;
+  const rc01Live=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  let rc01Apply=false,rc01ShowCount=0;
+  const rc01Host={getActiveRunSnapshot:()=>rc01Live.snapshot(),getBundle:()=>rc01Bundle,getSaveRevision:()=>rc01Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{rc01Live.pause('AD');},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
+    onSpillReviveCommitted:(n,r)=>{rc01Bundle=n;rc01Rev=r;},projectRevive:(r)=>rc01Live.projectRevive(r),
+    applyCommittedRevive:(r)=>rc01Apply&&(rc01Live.reviveReceiptId===r||rc01Live.applyRevive(r).ok),declineSpillRevive:()=>{rc01Live.declineRevive();},waitForSaveIdle:async()=>{}};
+  const rc01Provider={providerName:'debug-mock',capability:()=>'SUPPORTED',prepare:async()=>({ok:true,data:undefined}),
+    show:async(attemptId)=>{rc01ShowCount++;return{kind:'COMPLETED',attemptId};},dispose:()=>{}};
+  const rc01Service=SpillReviveService.create({provider:rc01Provider,policy:revivePolicy},rc01Repo,()=>NOW);
+  rc01Service.bind(rc01Host);rc01Service.setForegroundSeconds(60);rc01Service.openOffer();await rc01Service.watch();
+  const rc01View=rc01Service.getView();const rc01Disk=await rc01Repo.readBundle();
+  check('RC01-a a committed receipt with failed live application is ERROR, not GRANTED',
+    rc01View.phase==='ERROR'&&rc01View.retrySettle&&rc01Live.reviveUsed===0&&rc01Disk.ok
+    &&rc01Disk.data.envelope.payload.profile.rewardedRevive.receipts.length===1&&rc01Disk.data.envelope.payload.run.revive.used===1);
+  rc01Apply=true;
+  await rc01Service.retrySettlement();
+  check('RC01-b committed-receipt recovery retries for free and grants exactly once',
+    rc01Service.getView().phase==='GRANTED'&&rc01Live.reviveUsed===1&&rc01ShowCount===1);
+
+  // R2c: a host handoff during a retry settlement must leave the previous owner with zero callbacks.
+  // Two distinct scenarios: same run / new owner, and a genuinely new run (valid UUID, verified changed snapshot).
   delete globalThis.__milkteaSpillRevive;
   const r2cRepo=new LocalSaveRepository('revive-r2c');await r2cRepo.acquireWriteLease();
   let r2cBundle={profile:profileFor(spillRun),run:spillRun,lastResult:null};
@@ -499,19 +566,191 @@ const profileFor = (run, extra = {}) => ({
   r2cWrappedRepo.readBundle=async()=>{if(r2cReadDefer)await r2cReadDefer;return r2cOriginalRead();};
   const r2cLive=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
   let oldCommitCalls=0,oldApplyCalls=0;
-  const oldHost={...reviveHost,getActiveRunSnapshot:()=>r2cLive.snapshot(),getBundle:()=>r2cBundle,getSaveRevision:()=>r2cRev,
+  const oldHost={getActiveRunSnapshot:()=>r2cLive.snapshot(),getBundle:()=>r2cBundle,getSaveRevision:()=>r2cRev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
     onSpillReviveCommitted:(n,r)=>{oldCommitCalls++;r2cBundle=n;r2cRev=r;},projectRevive:(r)=>r2cLive.projectRevive(r),
-    applyCommittedRevive:(r)=>{oldApplyCalls++;return r2cLive.reviveReceiptId===r||r2cLive.applyRevive(r).ok;},declineSpillRevive:()=>r2cLive.declineRevive(),pauseForRewardedAd:()=>{}};
+    applyCommittedRevive:(r)=>{oldApplyCalls++;return r2cLive.reviveReceiptId===r||r2cLive.applyRevive(r).ok;},declineSpillRevive:()=>r2cLive.declineRevive(),waitForSaveIdle:async()=>{}};
   const r2cService=SpillReviveService.create({provider:reviveProvider,policy:revivePolicy},r2cWrappedRepo,()=>NOW);
   r2cService.bind(oldHost);r2cService.setForegroundSeconds(60);r2cService.openOffer();await r2cService.watch();
   check('R2c setup reaches retry-settle ERROR after an injected commit fault',r2cService.getView().phase==='ERROR'&&r2cService.getView().retrySettle&&r2cLive.reviveUsed===0);
+
+  // R2c-1: same run, a different host object takes ownership while the retry read is in flight.
+  const r2cDisk=await r2cOriginalRead();
+  let nextBundle=r2cDisk.ok?r2cDisk.data.envelope.payload:r2cBundle;let nextRev=r2cDisk.ok?r2cDisk.data.envelope.revision:r2cRev;
+  const nextSameRunLive=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  let nextCommitCalls=0,nextApplyCalls=0;
+  const nextSameRunHost={getActiveRunSnapshot:()=>nextSameRunLive.snapshot(),getBundle:()=>nextBundle,getSaveRevision:()=>nextRev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
+    onSpillReviveCommitted:(n,r)=>{nextCommitCalls++;nextBundle=n;nextRev=r;},projectRevive:(r)=>nextSameRunLive.projectRevive(r),
+    applyCommittedRevive:(r)=>{nextApplyCalls++;return nextSameRunLive.reviveReceiptId===r||nextSameRunLive.applyRevive(r).ok;},
+    declineSpillRevive:()=>{nextSameRunLive.declineRevive();},waitForSaveIdle:async()=>{}};
   r2cReadDefer=new Promise((r)=>setTimeout(r,8));
   const beforeCommit=oldCommitCalls,beforeApply=oldApplyCalls;
   const r2cRetry=r2cService.retrySettlement();
-  const otherLive=new RunEngine(reviveAdapter,rules,'other-run-id',99999,spillRun,reviveOptions);
-  r2cService.bind({...oldHost,getActiveRunSnapshot:()=>otherLive.snapshot()});
+  r2cService.bind(nextSameRunHost);
   await r2cRetry;
-  check('R2c rebinding host during retry settlement leaves the previous owner with zero callbacks',oldCommitCalls===beforeCommit&&oldApplyCalls===beforeApply);
+  await new Promise((r)=>setTimeout(r,30));
+  check('R2c-1 same-run handoff during retry leaves the previous owner with zero callbacks',oldCommitCalls===beforeCommit&&oldApplyCalls===beforeApply);
+  check('R2c-1 the new owner receives the stale-pending cleanup itself',nextCommitCalls===1&&nextBundle.profile.rewardedRevive.pendingAttempt===null);
+  check('R2c-1 same-run handoff is not stranded',r2cService.getView().phase==='IDLE'&&!r2cService.getView().pendingAttempt,JSON.stringify(r2cService.getView()));
+
+  // R2c-2: a genuinely new run must use a valid UUID and a snapshot whose runId really changed.
+  const OTHER_RUN_ID='33333333-3333-4333-8333-333333333333';
+  const otherSeed=SaveCodec.sealSnapshot({...pendingSnap,runId:OTHER_RUN_ID,checksum:''});
+  const otherProbe=new RunEngine(reviveAdapter,rules,OTHER_RUN_ID,99999,SaveCodec.sealSnapshot(otherSeed),reviveOptions);
+  const otherHash=otherProbe.spillCandidate().candidateHash;
+  // The candidate hash binds the run identity, so re-seal the frozen failure for the new run instead of reusing it.
+  const otherSnap=SaveCodec.sealSnapshot({...otherSeed,revive:{...otherSeed.revive,pendingFailure:{...otherSeed.revive.pendingFailure,candidateHash:otherHash}},checksum:''});
+  const otherCommit=await r2cOriginal(nextRev,RUN_ID,{profile:profileFor(otherSnap),run:otherSnap,lastResult:null});
+  check('R2c-2 setup commits a distinct run id for the new owner',otherCommit.ok&&otherSnap.runId!==RUN_ID,JSON.stringify(otherCommit));
+  let otherBundle=otherCommit.ok?{profile:profileFor(otherSnap),run:otherSnap,lastResult:null}:null;let otherRev=otherCommit.ok?otherCommit.data.revision:0;
+  const otherLive=new RunEngine(reviveAdapter,rules,OTHER_RUN_ID,99999,SaveCodec.sealSnapshot(otherSnap),reviveOptions);
+  check('R2c-2 the new engine snapshot keeps its own valid run id',otherLive.snapshot().runId===OTHER_RUN_ID&&otherSnap.runId!==r2cLive.snapshot().runId);
+  let otherCommitCalls=0,otherApplyCalls=0;
+  const otherHost={getActiveRunSnapshot:()=>otherLive.snapshot(),getBundle:()=>otherBundle,getSaveRevision:()=>otherRev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{otherLive.pause('AD');},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
+    onSpillReviveCommitted:(n,r)=>{otherCommitCalls++;otherBundle=n;otherRev=r;},projectRevive:(r)=>otherLive.projectRevive(r),
+    applyCommittedRevive:(r)=>{otherApplyCalls++;return otherLive.reviveReceiptId===r||otherLive.applyRevive(r).ok;},
+    declineSpillRevive:()=>{otherLive.declineRevive();},waitForSaveIdle:async()=>{}};
+  r2cService.bind(otherHost);r2cService.setForegroundSeconds(60);r2cService.openOffer();await r2cService.watch();
+  check('R2c-2 the previous owner still receives zero callbacks after the new run recovers',
+    oldCommitCalls===beforeCommit&&oldApplyCalls===beforeApply);
+  check('R2c-2 the new run recovers through its own callbacks and bundle',
+    r2cService.getView().phase==='GRANTED'&&otherLive.reviveUsed===1&&otherApplyCalls>=1&&otherCommitCalls>=2
+    &&otherBundle.profile.rewardedRevive.receipts.length===1&&otherBundle.run.runId===OTHER_RUN_ID,
+    JSON.stringify({view:r2cService.getView(),used:otherLive.reviveUsed,apply:otherApplyCalls,commit:otherCommitCalls,
+      receipts:otherBundle?.profile.rewardedRevive?.receipts?.length,runId:otherBundle?.run?.runId}));
+
+  // OW02: host B's stale cleanup commit is still in flight when host C takes over the same run.
+  // B must get zero callbacks; C must re-read the newest revision and finish a fresh attempt without losing the reward.
+  delete globalThis.__milkteaSpillRevive;
+  const cloneJson=(value)=>JSON.parse(JSON.stringify(value));
+  const owStalePending={attemptId:'44444444-4444-4444-8444-444444444441',runId:RUN_ID,failureId:pendingSnap.revive.pendingFailure.failureId,
+    policyVersion:'revive-test',amount:1,dayKey:'2026-11-03',startedAt:NOW-1000};
+  const owBundleWithPending=()=>({profile:profileFor(pendingSnap,{rewardedRevive:{dayKey:'2026-11-03',dailyGranted:0,
+    pendingAttempt:cloneJson(owStalePending),receipts:[]}}),run:SaveCodec.sealSnapshot(pendingSnap),lastResult:null});
+  const ow02Repo=new LocalSaveRepository('revive-ow02');await ow02Repo.acquireWriteLease();
+  let ow02Bundle=owBundleWithPending();
+  const ow02Init=await ow02Repo.commitBundle(0,null,ow02Bundle);let ow02Rev=ow02Init.ok?ow02Init.data.revision:0;
+  const ow02OriginalCommit=ow02Repo.commitBundle.bind(ow02Repo),ow02OriginalRead=ow02Repo.readBundle.bind(ow02Repo);
+  let ow02GateResolve=null,ow02Gated=false;
+  const ow02Wrapped=Object.create(ow02Repo);
+  ow02Wrapped.commitBundle=async(...args)=>{if(!ow02Gated){ow02Gated=true;await new Promise((r)=>{ow02GateResolve=r;});}return ow02OriginalCommit(...args);};
+  const ow02LiveB=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  let ow02BCallbacks=0;
+  const ow02HostB={getActiveRunSnapshot:()=>ow02LiveB.snapshot(),getBundle:()=>ow02Bundle,getSaveRevision:()=>ow02Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
+    onSpillReviveCommitted:(n,r)=>{ow02BCallbacks++;ow02Bundle=n;ow02Rev=r;},projectRevive:(r)=>ow02LiveB.projectRevive(r),
+    applyCommittedRevive:(r)=>ow02LiveB.reviveReceiptId===r||ow02LiveB.applyRevive(r).ok,declineSpillRevive:()=>ow02LiveB.declineRevive(),waitForSaveIdle:async()=>{}};
+  const ow02Service=SpillReviveService.create({provider:reviveProvider,policy:revivePolicy},ow02Wrapped,()=>NOW);
+  ow02Service.bind(ow02HostB);
+  await new Promise((r)=>setTimeout(r,10));
+  check('OW02 setup keeps the superseded cleanup commit in flight',ow02Gated);
+  const ow02LiveC=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  let ow02CBundle=cloneJson(ow02Bundle),ow02CRev=ow02Rev,ow02CCallbacks=0;
+  const ow02HostC={getActiveRunSnapshot:()=>ow02LiveC.snapshot(),getBundle:()=>ow02CBundle,getSaveRevision:()=>ow02CRev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
+    onSpillReviveCommitted:(n,r)=>{ow02CCallbacks++;ow02CBundle=n;ow02CRev=r;},projectRevive:(r)=>ow02LiveC.projectRevive(r),
+    applyCommittedRevive:(r)=>ow02LiveC.reviveReceiptId===r||ow02LiveC.applyRevive(r).ok,declineSpillRevive:()=>ow02LiveC.declineRevive(),waitForSaveIdle:async()=>{}};
+  ow02Service.bind(ow02HostC);
+  ow02GateResolve();
+  await new Promise((r)=>setTimeout(r,25));
+  const ow02Disk=await ow02OriginalRead();
+  check('OW02-a the superseded owner B receives zero callbacks after C takes over',ow02BCallbacks===0);
+  check('OW02-b the in-flight cleanup still lands once on disk',ow02Disk.ok
+    &&ow02Disk.data.envelope.payload.profile.rewardedRevive.pendingAttempt===null&&ow02Disk.data.envelope.revision===ow02Rev+1,
+    JSON.stringify({ok:ow02Disk.ok,rev:ow02Disk.ok?ow02Disk.data.envelope.revision:null,expect:ow02Rev+1}));
+  ow02CBundle=ow02Disk.data.envelope.payload;ow02CRev=ow02Disk.data.envelope.revision;
+  ow02Service.bind(ow02HostC);ow02Service.setForegroundSeconds(60);ow02Service.openOffer();await ow02Service.watch();
+  const ow02After=await ow02OriginalRead();
+  check('OW02-c host C starts from the newest revision and completes a fresh attempt without losing the reward',
+    ow02Service.getView().phase==='GRANTED'&&ow02LiveC.reviveUsed===1&&ow02CCallbacks>=1&&ow02After.ok
+    &&ow02After.data.envelope.payload.profile.rewardedRevive.receipts.length===1,JSON.stringify(ow02Service.getView()));
+
+  // OW03: stale cleanup must survive CAS conflicts, repository throws and a newer pending written mid-cleanup.
+  delete globalThis.__milkteaSpillRevive;
+  const ow03aRepo=new LocalSaveRepository('revive-ow03a');await ow03aRepo.acquireWriteLease();
+  let ow03aBundle=owBundleWithPending();
+  const ow03aInit=await ow03aRepo.commitBundle(0,null,ow03aBundle);let ow03aRev=ow03aInit.ok?ow03aInit.data.revision:0;
+  const ow03aWrapped=Object.create(ow03aRepo);
+  ow03aWrapped.commitBundle=async()=>({ok:false,error:{code:'SAVE_CONFLICT',message:'injected cleanup conflict'}});
+  const ow03aLive=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  let ow03aCallbacks=0;
+  const ow03aHost={getActiveRunSnapshot:()=>ow03aLive.snapshot(),getBundle:()=>ow03aBundle,getSaveRevision:()=>ow03aRev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
+    onSpillReviveCommitted:(n,r)=>{ow03aCallbacks++;ow03aBundle=n;ow03aRev=r;},projectRevive:(r)=>ow03aLive.projectRevive(r),
+    applyCommittedRevive:(r)=>ow03aLive.reviveReceiptId===r||ow03aLive.applyRevive(r).ok,declineSpillRevive:()=>ow03aLive.declineRevive(),waitForSaveIdle:async()=>{}};
+  const ow03aService=SpillReviveService.create({provider:reviveProvider,policy:revivePolicy},ow03aWrapped,()=>NOW);
+  ow03aService.bind(ow03aHost);
+  await new Promise((r)=>setTimeout(r,25));
+  const ow03aDisk=await ow03aRepo.readBundle();
+  check('OW03-a a CAS conflict during stale cleanup keeps the record without callbacks and stays actionable',
+    ow03aCallbacks===0&&ow03aDisk.ok&&ow03aDisk.data.envelope.payload.profile.rewardedRevive.pendingAttempt?.attemptId===owStalePending.attemptId
+    &&ow03aService.getView().phase==='IDLE'&&ow03aService.getView().pendingAttempt===true);
+
+  delete globalThis.__milkteaSpillRevive;
+  const ow03bRepo=new LocalSaveRepository('revive-ow03b');await ow03bRepo.acquireWriteLease();
+  let ow03bBundle=owBundleWithPending();
+  const ow03bInit=await ow03bRepo.commitBundle(0,null,ow03bBundle);let ow03bRev=ow03bInit.ok?ow03bInit.data.revision:0;
+  const ow03bOriginalRead=ow03bRepo.readBundle.bind(ow03bRepo);
+  let ow03bThrowOnce=true;
+  const ow03bWrapped=Object.create(ow03bRepo);
+  ow03bWrapped.readBundle=async()=>{if(ow03bThrowOnce){ow03bThrowOnce=false;throw new Error('storage offline');}return ow03bOriginalRead();};
+  const ow03bLive=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  let ow03bCallbacks=0;
+  const ow03bHost={getActiveRunSnapshot:()=>ow03bLive.snapshot(),getBundle:()=>ow03bBundle,getSaveRevision:()=>ow03bRev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
+    onSpillReviveCommitted:(n,r)=>{ow03bCallbacks++;ow03bBundle=n;ow03bRev=r;},projectRevive:(r)=>ow03bLive.projectRevive(r),
+    applyCommittedRevive:(r)=>ow03bLive.reviveReceiptId===r||ow03bLive.applyRevive(r).ok,declineSpillRevive:()=>ow03bLive.declineRevive(),waitForSaveIdle:async()=>{}};
+  const ow03bService=SpillReviveService.create({provider:reviveProvider,policy:revivePolicy},ow03bWrapped,()=>NOW);
+  ow03bService.bind(ow03bHost);
+  await new Promise((r)=>setTimeout(r,20));
+  const ow03bBefore=await ow03bOriginalRead();
+  check('OW03-b a throwing repository is contained and leaves the pending record for a later retry',
+    ow03bBefore.ok&&ow03bBefore.data.envelope.payload.profile.rewardedRevive.pendingAttempt?.attemptId===owStalePending.attemptId&&ow03bCallbacks===0);
+  ow03bService.bind(ow03bHost);
+  await new Promise((r)=>setTimeout(r,25));
+  const ow03bAfter=await ow03bOriginalRead();
+  check('OW03-b the next bind retries the cleanup and notifies only the current owner',
+    ow03bAfter.ok&&ow03bAfter.data.envelope.payload.profile.rewardedRevive.pendingAttempt===null&&ow03bCallbacks===1);
+
+  delete globalThis.__milkteaSpillRevive;
+  const ow03cRepo=new LocalSaveRepository('revive-ow03c');await ow03cRepo.acquireWriteLease();
+  let ow03cBundle=owBundleWithPending();
+  const ow03cInit=await ow03cRepo.commitBundle(0,null,ow03cBundle);let ow03cRev=ow03cInit.ok?ow03cInit.data.revision:0;
+  const ow03cOriginalRead=ow03cRepo.readBundle.bind(ow03cRepo),ow03cOriginalCommit=ow03cRepo.commitBundle.bind(ow03cRepo);
+  let ow03cRelease=null;const ow03cGate=new Promise((r)=>{ow03cRelease=r;});let ow03cDefer=true;
+  const ow03cWrapped=Object.create(ow03cRepo);
+  ow03cWrapped.readBundle=async()=>{if(ow03cDefer){ow03cDefer=false;await ow03cGate;}return ow03cOriginalRead();};
+  const ow03cLive=new RunEngine(reviveAdapter,rules,RUN_ID,12345,SaveCodec.sealSnapshot(pendingSnap),reviveOptions);
+  let ow03cCallbacks=0;
+  const ow03cHost={getActiveRunSnapshot:()=>ow03cLive.snapshot(),getBundle:()=>ow03cBundle,getSaveRevision:()=>ow03cRev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onSpillReviveChanged:()=>{},
+    onSpillReviveCommitted:(n,r)=>{ow03cCallbacks++;ow03cBundle=n;ow03cRev=r;},projectRevive:(r)=>ow03cLive.projectRevive(r),
+    applyCommittedRevive:(r)=>ow03cLive.reviveReceiptId===r||ow03cLive.applyRevive(r).ok,declineSpillRevive:()=>ow03cLive.declineRevive(),waitForSaveIdle:async()=>{}};
+  const ow03cService=SpillReviveService.create({provider:reviveProvider,policy:revivePolicy},ow03cWrapped,()=>NOW);
+  ow03cService.bind(ow03cHost);
+  await new Promise((r)=>setTimeout(r,10));
+  const owNewPending={...owStalePending,attemptId:'55555555-5555-4555-8555-555555555551'};
+  const owNewBundle=cloneJson(ow03cBundle);
+  owNewBundle.profile.rewardedRevive={...owNewBundle.profile.rewardedRevive,pendingAttempt:owNewPending};
+  const owNewCommit=await ow03cOriginalCommit(ow03cRev,RUN_ID,owNewBundle);
+  check('OW03-c setup writes a newer pending while the old cleanup is still reading',owNewCommit.ok,JSON.stringify(owNewCommit));
+  ow03cRelease();
+  await new Promise((r)=>setTimeout(r,25));
+  const ow03cDisk=await ow03cOriginalRead();
+  check('OW03-c the old cleanup never clears the newer pending and reports no callback',
+    ow03cDisk.ok&&ow03cDisk.data.envelope.payload.profile.rewardedRevive.pendingAttempt?.attemptId===owNewPending.attemptId&&ow03cCallbacks===0);
+  ow03cBundle=ow03cDisk.data.envelope.payload;ow03cRev=ow03cDisk.data.envelope.revision;
+  const ow03cBeforeRev=ow03cRev;
+  ow03cService.bind(ow03cHost);
+  await new Promise((r)=>setTimeout(r,25));
+  const ow03cFinal=await ow03cOriginalRead();
+  check('OW03-c the next owner starts from the newest revision and resolves the preserved pending exactly once',
+    ow03cFinal.ok&&ow03cFinal.data.envelope.payload.profile.rewardedRevive.pendingAttempt===null&&ow03cCallbacks===1
+    &&ow03cFinal.data.envelope.revision===ow03cBeforeRev+1,
+    JSON.stringify({ok:ow03cFinal.ok,pending:ow03cFinal.ok?ow03cFinal.data.envelope.payload.profile.rewardedRevive.pendingAttempt:null,
+      callbacks:ow03cCallbacks,rev:ow03cFinal.ok?ow03cFinal.data.envelope.revision:null,expect:ow03cBeforeRev+1}));
 
   const budget=new ArtLoadBudget(0,1,15000);
   check('AB-01 14s foreground does not expire the 15s budget',(()=>{budget.advance(14000,true);return!budget.expired&&budget.remainingMs===1000;})());
@@ -570,19 +809,264 @@ const profileFor = (run, extra = {}) => ({
   const rs30Host={getActiveRunSnapshot:()=>rs30Engine.snapshot(),getBundle:()=>rs30Bundle,getSaveRevision:()=>rs30Rev,
     isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{rs30Engine.pause('AD');},resumeFromRewardedAd:()=>{},
     onRewardedShakeChanged:()=>{},onRewardedShakeCommitted:(n,r)=>{rs30Bundle=n;rs30Rev=r;},
-    applyCommittedExtraGrant:()=>rs30Engine.commitExtraGrant(1),waitForSaveIdle:async()=>{}};
+    applyCommittedExtraGrant:(amount)=>rs30Engine.commitExtraGrant(amount).ok,waitForSaveIdle:async()=>{}};
   const rs30Service=RewardedShakeService.create({provider:rv32Provider,policy},rs30Repo,()=>NOW);
   rs30Service.bind(rs30Host);rs30Service.setForegroundSeconds(60);rs30Service.openOffer();await rs30Service.watch();
   check('RS-30a the first watch grants one extra shake and stores a receipt',rs30Engine.snapshot().shake.extraGranted===1&&rs30Bundle.profile.rewardedShake.receipts.length===1);
   const rs30Restarted=new RunEngine(adapter,rules,RUN_ID,12345,rs30Run);
-  rs30Service.bind({...rs30Host,getActiveRunSnapshot:()=>rs30Restarted.snapshot(),applyCommittedExtraGrant:()=>rs30Restarted.commitExtraGrant(1)});
+  rs30Service.bind({...rs30Host,getActiveRunSnapshot:()=>rs30Restarted.snapshot(),applyCommittedExtraGrant:(amount)=>rs30Restarted.commitExtraGrant(amount).ok});
   check('RS-30b a committed extra-shake receipt is restored without a second ad',rs30Restarted.snapshot().shake.extraGranted===1&&rs30Service.getView().phase==='GRANTED'&&!rs30Service.canOffer(),JSON.stringify(rs30Service.getView()));
+
+  // RC02: several committed extra-shake receipts must restore the persisted TOTAL, once, without touching used shakes.
+  delete globalThis.__milkteaRewardedShake;
+  const rc02Run=makeRun();
+  const rc02Persisted=SaveCodec.sealSnapshot({...rc02Run,shake:{...rc02Run.shake,extraGranted:3,extraUsed:1}});
+  const rc02Receipts=['aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1','aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2','aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3']
+    .map((attemptId,index)=>RewardLedger.receiptFor({attemptId,runId:RUN_ID,policyVersion:'rc02',amount:1,dayKey:'2026-11-03',startedAt:NOW+index},NOW));
+  const rc02Repo=new LocalSaveRepository('shake-rc02');await rc02Repo.acquireWriteLease();
+  let rc02Bundle={profile:profileFor(rc02Run,{rewardedShake:{dayKey:RewardLedger.dayKey(NOW),dailyGranted:3,pendingAttempt:null,receipts:rc02Receipts}}),run:rc02Persisted,lastResult:null};
+  const rc02Initial=await rc02Repo.commitBundle(0,null,rc02Bundle);let rc02Rev=rc02Initial.ok?rc02Initial.data.revision:0;
+  const rc02MemSnap=SaveCodec.sealSnapshot({...rc02Run,shake:{...rc02Run.shake,extraGranted:1,extraUsed:1}});
+  const rc02Engine=new RunEngine(adapter,rules,RUN_ID,12345,rc02MemSnap);
+  const rc02Host={getActiveRunSnapshot:()=>rc02Engine.snapshot(),getBundle:()=>rc02Bundle,getSaveRevision:()=>rc02Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onRewardedShakeChanged:()=>{},
+    onRewardedShakeCommitted:(n,r)=>{rc02Bundle=n;rc02Rev=r;},applyCommittedExtraGrant:(amount)=>rc02Engine.commitExtraGrant(amount).ok,waitForSaveIdle:async()=>{}};
+  const rc02Service=RewardedShakeService.create({provider:rv32Provider,policy},rc02Repo,()=>NOW);
+  rc02Service.bind(rc02Host);rc02Service.setForegroundSeconds(60);
+  const rc02Snap=rc02Engine.snapshot();
+  check('RC02-a committed extra shakes restore the persisted total, not a single unit',
+    rc02Snap.shake.extraGranted===3&&rc02Snap.shake.extraUsed===1&&rc02Service.getView().phase==='GRANTED');
+  rc02Service.bind(rc02Host);
+  const rc02Again=rc02Engine.snapshot();
+  check('RC02-b repeated bind never double-grants or converts consumed shakes into free ones',
+    rc02Again.shake.extraGranted===3&&rc02Again.shake.extraUsed===1&&!rc02Service.canOffer());
+
+  // SR01–SR07: committed extra-shake recovery must never strand the player on a CAS conflict after readback failure.
+  // All SR scenarios keep the original 152 assertions intact; these add the production recovery path.
+  const srPolicy={enabled:true,policyVersion:'sr',adUnitId:'debug-mock',placement:'extra-shake',maxExtraShakesPerRun:5,maxDailyRewardedShakes:5,minForegroundSecondsFirstSession:60,requireTutorialComplete:true,requireFirstNaturalRunCompleted:true};
+
+  // SR01: reward commit succeeds, the post-commit readback fails once. Host revision must equal the committed
+  // revision; ERROR offers free retry and must never claim GRANTED before the live grant is applied.
+  delete globalThis.__milkteaRewardedShake;
+  const sr01Run=makeRun();
+  const sr01Repo=new LocalSaveRepository('shake-sr01');await sr01Repo.acquireWriteLease();
+  let sr01Bundle={profile:profileFor(sr01Run),run:sr01Run,lastResult:null};
+  const sr01Init=await sr01Repo.commitBundle(0,null,sr01Bundle);let sr01Rev=sr01Init.ok?sr01Init.data.revision:0;
+  const sr01OriginalRead=sr01Repo.readBundle.bind(sr01Repo);
+  const sr01OriginalCommit=sr01Repo.commitBundle.bind(sr01Repo);
+  let sr01ReadCalls=0;
+  const sr01Wrapped=Object.create(sr01Repo);
+  sr01Wrapped.readBundle=async()=>{sr01ReadCalls++;const c=sr01ReadCalls;const r=sr01OriginalRead();if(c===3)return{ok:false,error:{code:'READBACK_FAIL'}};return r;};
+  sr01Wrapped.commitBundle=async(...args)=>{return sr01OriginalCommit(...args);};
+  const sr01Engine=new RunEngine(adapter,rules,RUN_ID,12345,sr01Run);
+  let sr01Show=0;
+  const sr01Host={getActiveRunSnapshot:()=>sr01Engine.snapshot(),getBundle:()=>sr01Bundle,getSaveRevision:()=>sr01Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>sr01Engine.pause('AD'),resumeFromRewardedAd:()=>{},onRewardedShakeChanged:()=>{},
+    onRewardedShakeCommitted:(n,r)=>{sr01Bundle=n;sr01Rev=r;},applyCommittedExtraGrant:(amount)=>sr01Engine.commitExtraGrant(amount).ok,waitForSaveIdle:async()=>{}};
+  const sr01Provider={providerName:'debug-mock',capability:()=>'SUPPORTED',prepare:async()=>({ok:true}),show:async(a)=>{sr01Show++;return{kind:'COMPLETED',attemptId:a};},dispose:()=>{}};
+  const sr01Service=RewardedShakeService.create({provider:sr01Provider,policy:srPolicy},sr01Wrapped,()=>NOW);
+  sr01Service.bind(sr01Host);sr01Service.setForegroundSeconds(60);sr01Service.openOffer();await sr01Service.watch();
+  const sr01Disk=await sr01OriginalRead();
+  check('SR01 readback failure after commit keeps committed revision synced and exposes free retry, not GRANTED',
+    sr01Service.getView().phase==='ERROR'&&sr01Service.getView().retrySettle&&sr01Engine.snapshot().shake.extraGranted===0
+    &&sr01Disk.ok&&sr01Disk.data.envelope.payload.profile.rewardedShake.receipts.length===1
+    &&sr01Rev===sr01Disk.data.envelope.revision,
+    JSON.stringify({rev:sr01Rev,diskRev:sr01Disk.ok?sr01Disk.data.envelope.revision:null,extra:sr01Engine.snapshot().shake.extraGranted,phase:sr01Service.getView().phase,retry:sr01Service.getView().retrySettle,receipts:sr01Disk.ok?sr01Disk.data.envelope.payload.profile.rewardedShake.receipts.length:null}));
+
+  // SR02: retry twice after SR01. First retry applies the committed grant for free; second retry is idempotent.
+  await sr01Service.retrySettlement();
+  const sr02Disk=await sr01OriginalRead();
+  check('SR02-a first free retry applies exactly one committed grant without re-watching',
+    sr01Service.getView().phase==='GRANTED'&&sr01Engine.snapshot().shake.extraGranted===1&&sr01Show===1);
+  check('SR02-b retry never appends a receipt or re-consumes daily/run quota',
+    sr02Disk.ok&&sr02Disk.data.envelope.payload.profile.rewardedShake.receipts.length===1
+    &&sr02Disk.data.envelope.payload.profile.rewardedShake.dailyGranted===1);
+  await sr01Service.retrySettlement();
+  check('SR02-c second retry after GRANTED is idempotent',
+    sr01Service.getView().phase==='GRANTED'&&sr01Engine.snapshot().shake.extraGranted===1&&sr01Show===1);
+
+  // SR03: commit succeeds but the live apply fails once; retry applies it for free without re-watching.
+  delete globalThis.__milkteaRewardedShake;
+  const sr03Run=makeRun();
+  const sr03Repo=new LocalSaveRepository('shake-sr03');await sr03Repo.acquireWriteLease();
+  let sr03Bundle={profile:profileFor(sr03Run),run:sr03Run,lastResult:null};
+  const sr03Init=await sr03Repo.commitBundle(0,null,sr03Bundle);let sr03Rev=sr03Init.ok?sr03Init.data.revision:0;
+  const sr03Engine=new RunEngine(adapter,rules,RUN_ID,12345,sr03Run);
+  let sr03ApplyFail=true,sr03Show=0;
+  const sr03Host={getActiveRunSnapshot:()=>sr03Engine.snapshot(),getBundle:()=>sr03Bundle,getSaveRevision:()=>sr03Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>sr03Engine.pause('AD'),resumeFromRewardedAd:()=>{},onRewardedShakeChanged:()=>{},
+    onRewardedShakeCommitted:(n,r)=>{sr03Bundle=n;sr03Rev=r;},
+    applyCommittedExtraGrant:(amount)=>{if(sr03ApplyFail){sr03ApplyFail=false;return false;}return sr03Engine.commitExtraGrant(amount).ok;},waitForSaveIdle:async()=>{}};
+  const sr03Provider={providerName:'debug-mock',capability:()=>'SUPPORTED',prepare:async()=>({ok:true}),show:async(a)=>{sr03Show++;return{kind:'COMPLETED',attemptId:a};},dispose:()=>{}};
+  const sr03Service=RewardedShakeService.create({provider:sr03Provider,policy:srPolicy},sr03Repo,()=>NOW);
+  sr03Service.bind(sr03Host);sr03Service.setForegroundSeconds(60);sr03Service.openOffer();await sr03Service.watch();
+  check('SR03-a failed live application after commit is ERROR, not GRANTED, and keeps a free retry',
+    sr03Service.getView().phase==='ERROR'&&sr03Service.getView().retrySettle&&sr03Engine.snapshot().shake.extraGranted===0&&sr03Show===1);
+  await sr03Service.retrySettlement();
+  check('SR03-b free retry applies the committed grant once without re-watching or re-consuming quota',
+    sr03Service.getView().phase==='GRANTED'&&sr03Engine.snapshot().shake.extraGranted===1&&sr03Show===1);
+
+  // SR04: a host/run handoff during the retry read must leave the previous owner with zero callbacks and never
+  // grant into a different run; the current owner reconciles through its own recovery entry.
+  delete globalThis.__milkteaRewardedShake;
+  const sr04Run=makeRun();
+  const sr04Repo=new LocalSaveRepository('shake-sr04');await sr04Repo.acquireWriteLease();
+  let sr04Bundle={profile:profileFor(sr04Run),run:sr04Run,lastResult:null};
+  const sr04Init=await sr04Repo.commitBundle(0,null,sr04Bundle);let sr04Rev=sr04Init.ok?sr04Init.data.revision:0;
+  const sr04OriginalRead=sr04Repo.readBundle.bind(sr04Repo);
+  const sr04OriginalCommit=sr04Repo.commitBundle.bind(sr04Repo);
+  let sr04ReadCalls=0;let sr04Defer=null;const sr04Gate=new Promise(r=>{sr04Defer=r;});
+  const sr04Wrapped=Object.create(sr04Repo);
+  sr04Wrapped.readBundle=async()=>{
+    sr04ReadCalls++;const c=sr04ReadCalls;
+    if(c===3)return{ok:false,error:{code:'READBACK_FAIL'}}; // post-commit readback fails → ERROR+retrySettle
+    if(c===4){await sr04Gate;} // retry fresh read is deferred so a handoff can land in flight
+    return sr04OriginalRead();
+  };
+  sr04Wrapped.commitBundle=async(...args)=>sr04OriginalCommit(...args);
+  const sr04EngineA=new RunEngine(adapter,rules,RUN_ID,12345,sr04Run);
+  let sr04ACallbacks=0,sr04Show=0;
+  const sr04HostA={getActiveRunSnapshot:()=>sr04EngineA.snapshot(),getBundle:()=>sr04Bundle,getSaveRevision:()=>sr04Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>sr04EngineA.pause('AD'),resumeFromRewardedAd:()=>{},onRewardedShakeChanged:()=>{},
+    onRewardedShakeCommitted:(n,r)=>{sr04ACallbacks++;sr04Bundle=n;sr04Rev=r;},applyCommittedExtraGrant:(amount)=>sr04EngineA.commitExtraGrant(amount).ok,waitForSaveIdle:async()=>{}};
+  const sr04Provider={providerName:'debug-mock',capability:()=>'SUPPORTED',prepare:async()=>({ok:true}),show:async(a)=>{sr04Show++;return{kind:'COMPLETED',attemptId:a};},dispose:()=>{}};
+  const sr04Service=RewardedShakeService.create({provider:sr04Provider,policy:srPolicy},sr04Wrapped,()=>NOW);
+  sr04Service.bind(sr04HostA);sr04Service.setForegroundSeconds(60);sr04Service.openOffer();await sr04Service.watch();
+  check('SR04 setup reaches retry-settle ERROR after injected readback failure',
+    sr04Service.getView().phase==='ERROR'&&sr04Service.getView().retrySettle&&sr04EngineA.snapshot().shake.extraGranted===0);
+  // Start retry; its fresh read (call #4) is deferred. Snapshot A's callback count before the handoff.
+  const sr04BeforeHandoff=sr04ACallbacks;
+  const sr04Retry=sr04Service.retrySettlement();
+  await new Promise(r=>setTimeout(r,10));
+  // Hand off to a new owner on the same run while the retry read is in flight.
+  const sr04Disk=await sr04OriginalRead();
+  let sr04BundleB=sr04Disk.ok?sr04Disk.data.envelope.payload:sr04Bundle;let sr04RevB=sr04Disk.ok?sr04Disk.data.envelope.revision:sr04Rev;
+  const sr04EngineB=new RunEngine(adapter,rules,RUN_ID,12345,sr04Run);
+  let sr04BCallbacks=0;
+  const sr04HostB={getActiveRunSnapshot:()=>sr04EngineB.snapshot(),getBundle:()=>sr04BundleB,getSaveRevision:()=>sr04RevB,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onRewardedShakeChanged:()=>{},
+    onRewardedShakeCommitted:(n,r)=>{sr04BCallbacks++;sr04BundleB=n;sr04RevB=r;},applyCommittedExtraGrant:(amount)=>sr04EngineB.commitExtraGrant(amount).ok,waitForSaveIdle:async()=>{}};
+  sr04Service.bind(sr04HostB);
+  sr04Defer();
+  await sr04Retry;
+  await new Promise(r=>setTimeout(r,20));
+  check('SR04 handoff during retry leaves the previous owner with zero callbacks',sr04ACallbacks===sr04BeforeHandoff);
+  check('SR04 the current owner reconciles the committed grant through its own entry',
+    sr04EngineB.snapshot().shake.extraGranted===1&&sr04Service.getView().phase==='GRANTED'&&sr04Show===1);
+
+  // SR05: the readback envelope may advance beyond the commit result. The host must adopt the envelope's own
+  // revision so the next legal save does not keep CAS-conflicting.
+  delete globalThis.__milkteaRewardedShake;
+  const sr05Run=makeRun();
+  const sr05Repo=new LocalSaveRepository('shake-sr05');await sr05Repo.acquireWriteLease();
+  let sr05Bundle={profile:profileFor(sr05Run),run:sr05Run,lastResult:null};
+  const sr05Init=await sr05Repo.commitBundle(0,null,sr05Bundle);let sr05Rev=sr05Init.ok?sr05Init.data.revision:0;
+  const sr05OriginalRead=sr05Repo.readBundle.bind(sr05Repo);
+  const sr05OriginalCommit=sr05Repo.commitBundle.bind(sr05Repo);
+  let sr05ReadCalls=0;
+  const sr05Wrapped=Object.create(sr05Repo);
+  sr05Wrapped.readBundle=async()=>{
+    sr05ReadCalls++;
+    const real=await sr05OriginalRead();
+    if(sr05ReadCalls===3&&real.ok){
+      // Simulate a concurrent save that advanced the revision without changing this payload.
+      const bump=JSON.parse(JSON.stringify(real));bump.data.envelope.revision+=5;return bump;
+    }
+    return real;
+  };
+  sr05Wrapped.commitBundle=async(...args)=>sr05OriginalCommit(...args);
+  const sr05Engine=new RunEngine(adapter,rules,RUN_ID,12345,sr05Run);
+  let sr05Show=0;
+  const sr05Host={getActiveRunSnapshot:()=>sr05Engine.snapshot(),getBundle:()=>sr05Bundle,getSaveRevision:()=>sr05Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>sr05Engine.pause('AD'),resumeFromRewardedAd:()=>{},onRewardedShakeChanged:()=>{},
+    onRewardedShakeCommitted:(n,r)=>{sr05Bundle=n;sr05Rev=r;},applyCommittedExtraGrant:(amount)=>sr05Engine.commitExtraGrant(amount).ok,waitForSaveIdle:async()=>{}};
+  const sr05Provider={providerName:'debug-mock',capability:()=>'SUPPORTED',prepare:async()=>({ok:true}),show:async(a)=>{sr05Show++;return{kind:'COMPLETED',attemptId:a};},dispose:()=>{}};
+  const sr05Service=RewardedShakeService.create({provider:sr05Provider,policy:srPolicy},sr05Wrapped,()=>NOW);
+  sr05Service.bind(sr05Host);sr05Service.setForegroundSeconds(60);sr05Service.openOffer();await sr05Service.watch();
+  const sr05PostRev=sr05Rev;
+  check('SR05 host adopts the readback envelope own revision even when it exceeds the commit result',sr05Service.getView().phase==='GRANTED'&&sr05PostRev>sr05Init.data.revision+2,JSON.stringify({rev:sr05PostRev,initRev:sr05Init.data.revision}));
+  // A subsequent legal save (a second grant) must succeed instead of CAS-conflicting on the stale commit revision.
+  sr05Service.acknowledgeGrant();sr05Service.openOffer();await sr05Service.watch();
+  check('SR05 the next legal save succeeds with no recurring CAS conflict',sr05Service.getView().phase==='GRANTED'&&sr05Engine.snapshot().shake.extraGranted===2&&sr05Show===2);
+
+  // SR06: receipt mismatch or storage unreadable must never fabricate a reward, overwrite old state, or loop.
+  delete globalThis.__milkteaRewardedShake;
+  const sr06Run=makeRun();
+  const sr06Repo=new LocalSaveRepository('shake-sr06');await sr06Repo.acquireWriteLease();
+  const sr06Receipt=RewardLedger.receiptFor({attemptId:'66666666-6666-4666-8666-666666666666',runId:RUN_ID,policyVersion:'sr06',amount:1,dayKey:'2026-11-03',startedAt:NOW},NOW);
+  let sr06Bundle={profile:profileFor(sr06Run,{rewardedShake:{dayKey:'2026-11-03',dailyGranted:1,pendingAttempt:null,receipts:[sr06Receipt]}}),run:SaveCodec.sealSnapshot({...sr06Run,shake:{...sr06Run.shake,extraGranted:1}}),lastResult:null};
+  const sr06Init=await sr06Repo.commitBundle(0,null,sr06Bundle);let sr06Rev=sr06Init.ok?sr06Init.data.revision:0;
+  const sr06OriginalRead=sr06Repo.readBundle.bind(sr06Repo);
+  const sr06OriginalCommit=sr06Repo.commitBundle.bind(sr06Repo);
+  let sr06ThrowOnce=true;
+  const sr06Wrapped=Object.create(sr06Repo);
+  sr06Wrapped.readBundle=async()=>{if(sr06ThrowOnce){sr06ThrowOnce=false;throw new Error('storage offline');}return sr06OriginalRead();};
+  sr06Wrapped.commitBundle=async(...args)=>sr06OriginalCommit(...args);
+  const sr06Engine=new RunEngine(adapter,rules,RUN_ID,12345,sr06Run);
+  let sr06Apply=false;
+  const sr06Host={getActiveRunSnapshot:()=>sr06Engine.snapshot(),getBundle:()=>sr06Bundle,getSaveRevision:()=>sr06Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onRewardedShakeChanged:()=>{},
+    onRewardedShakeCommitted:(n,r)=>{sr06Bundle=n;sr06Rev=r;},applyCommittedExtraGrant:(amount)=>sr06Apply&&sr06Engine.commitExtraGrant(amount).ok,waitForSaveIdle:async()=>{}};
+  const sr06Service=RewardedShakeService.create({provider:rv32Provider,policy:srPolicy},sr06Wrapped,()=>NOW);
+  sr06Service.bind(sr06Host);sr06Service.setForegroundSeconds(60);
+  check('SR06-a unreadable storage during bind recovery is contained and leaves an actionable retry entry',
+    sr06Service.getView().phase==='ERROR'&&sr06Service.getView().retrySettle&&sr06Engine.snapshot().shake.extraGranted===0);
+  sr06Apply=true;
+  // The first retry hits the still-offline storage read; it stays actionable. The second retry recovers for free.
+  await sr06Service.retrySettlement();
+  await sr06Service.retrySettlement();
+  check('SR06-b after storage recovers the committed grant applies for free',
+    sr06Service.getView().phase==='GRANTED'&&sr06Engine.snapshot().shake.extraGranted===1);
+  // A receipt committed for a different run must never grant the current run (cross-run isolation).
+  const SR06_OTHER_RUN='66666666-6666-4666-8666-666666666667';
+  const sr06OtherReceipt=RewardLedger.receiptFor({attemptId:'66666666-6666-4666-8666-666666666668',runId:SR06_OTHER_RUN,policyVersion:'sr06',amount:1,dayKey:'2026-11-03',startedAt:NOW},NOW);
+  const sr06OtherBundle={profile:profileFor(sr06Run,{rewardedShake:{dayKey:'2026-11-03',dailyGranted:1,pendingAttempt:null,receipts:[sr06OtherReceipt]}}),run:SaveCodec.sealSnapshot({...sr06Run,shake:{...sr06Run.shake,extraGranted:0}}),lastResult:null};
+  const sr06OtherCommit=await sr06Repo.commitBundle(sr06Rev,RUN_ID,sr06OtherBundle);
+  check('SR06-c setup writes a receipt for a different run',sr06OtherCommit.ok,JSON.stringify(sr06OtherCommit));
+  sr06Bundle=sr06OtherBundle;sr06Rev=sr06OtherCommit.ok?sr06OtherCommit.data.revision:sr06Rev;
+  const sr06OtherService=RewardedShakeService.create({provider:rv32Provider,policy:srPolicy},sr06Repo,()=>NOW);
+  sr06OtherService.bind(sr06Host);sr06OtherService.setForegroundSeconds(60);
+  check('SR06-d a receipt for a different run never grants the current run and leaves state untouched',
+    sr06OtherService.getView().phase==='IDLE'&&sr06Engine.snapshot().shake.extraGranted===1&&!sr06OtherService.getView().retrySettle);
+
+  // SR07: committed total is 3 while live is 1 with extraUsed 1; retry must apply only the delta of 2, never
+  // restore consumed shakes, and repeated retry must stay idempotent.
+  delete globalThis.__milkteaRewardedShake;
+  const sr07Run=makeRun();
+  const sr07Receipts=['77777777-7777-4777-8777-777777777771','77777777-7777-4777-8777-777777777772','77777777-7777-4777-8777-777777777773']
+    .map((attemptId,i)=>RewardLedger.receiptFor({attemptId,runId:RUN_ID,policyVersion:'sr07',amount:1,dayKey:'2026-11-03',startedAt:NOW+i},NOW));
+  const sr07Repo=new LocalSaveRepository('shake-sr07');await sr07Repo.acquireWriteLease();
+  let sr07Bundle={profile:profileFor(sr07Run,{rewardedShake:{dayKey:'2026-11-03',dailyGranted:3,pendingAttempt:null,receipts:sr07Receipts}}),run:SaveCodec.sealSnapshot({...sr07Run,boardType:'assisted',shake:{...sr07Run.shake,extraGranted:3,extraUsed:1}}),lastResult:null};
+  const sr07Init=await sr07Repo.commitBundle(0,null,sr07Bundle);let sr07Rev=sr07Init.ok?sr07Init.data.revision:0;
+  const sr07MemSnap=SaveCodec.sealSnapshot({...sr07Run,boardType:'assisted',shake:{...sr07Run.shake,extraGranted:1,extraUsed:1}});
+  const sr07Engine=new RunEngine(adapter,rules,RUN_ID,12345,sr07MemSnap);
+  let sr07Apply=false;
+  const sr07Host={getActiveRunSnapshot:()=>sr07Engine.snapshot(),getBundle:()=>sr07Bundle,getSaveRevision:()=>sr07Rev,
+    isTutorialComplete:()=>true,getForegroundSeconds:()=>60,pauseForRewardedAd:()=>{},resumeFromRewardedAd:()=>{},onRewardedShakeChanged:()=>{},
+    onRewardedShakeCommitted:(n,r)=>{sr07Bundle=n;sr07Rev=r;},applyCommittedExtraGrant:(amount)=>sr07Apply&&sr07Engine.commitExtraGrant(amount).ok,waitForSaveIdle:async()=>{}};
+  const sr07Service=RewardedShakeService.create({provider:rv32Provider,policy:srPolicy},sr07Repo,()=>NOW);
+  sr07Service.bind(sr07Host);sr07Service.setForegroundSeconds(60);
+  check('SR07-a bind recovery with a failed live apply exposes free retry instead of claiming GRANTED',
+    sr07Service.getView().phase==='ERROR'&&sr07Service.getView().retrySettle&&sr07Engine.snapshot().shake.extraGranted===1);
+  sr07Apply=true;
+  await sr07Service.retrySettlement();
+  check('SR07-b free retry applies only the committed delta (2) and never restores consumed shakes',
+    sr07Service.getView().phase==='GRANTED'&&sr07Engine.snapshot().shake.extraGranted===3&&sr07Engine.snapshot().shake.extraUsed===1);
+  await sr07Service.retrySettlement();
+  const sr07Disk=await sr07Repo.readBundle();
+  check('SR07-c repeated retry is idempotent and leaves receipts/quota untouched',
+    sr07Service.getView().phase==='GRANTED'&&sr07Engine.snapshot().shake.extraGranted===3&&sr07Engine.snapshot().shake.extraUsed===1
+    &&sr07Disk.ok&&sr07Disk.data.envelope.payload.profile.rewardedShake.receipts.length===3
+    &&sr07Disk.data.envelope.payload.profile.rewardedShake.dailyGranted===3);
 
   RewardedAdCoordinator.release('spill-revive');RewardedAdCoordinator.release('extra-shake');
   check('RV-28 one rewarded slot is shared by both ad kinds',RewardedAdCoordinator.claim('spill-revive')&&!RewardedAdCoordinator.claim('extra-shake')&&!RewardedAdCoordinator.claim('spill-revive'));
   RewardedAdCoordinator.release('spill-revive');
   check('RV-29 releasing the slot allows the other ad kind',RewardedAdCoordinator.claim('extra-shake'));
   RewardedAdCoordinator.release('extra-shake');
+
+  check('OW03 no stale-cleanup rejection escapes as unhandled',unhandledRejections.length===0,
+    unhandledRejections.map((error)=>String(error&&error.message||error)).join('|'));
 
   console.log(`\n${passed} checks passed, ${failures.length} failed`);
   if (failures.length) { console.error(failures.join('\n')); process.exit(1); }

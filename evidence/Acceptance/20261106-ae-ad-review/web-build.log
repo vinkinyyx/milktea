@@ -1,0 +1,18 @@
+{
+  "buildId": "20261106-ae-ad-review-web-release-01",
+  "project": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261106-ae-ad-review-web-release-01",
+  "output": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build\\20261106-ae-ad-review-web-release-01",
+  "status": "FAIL",
+  "startedAt": "2026-11-06T21:44:24.172434+08:00",
+  "release-codeExitCode": 1,
+  "error": "release-code failed; inspect D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\Acceptance\\20261106-ae-ad-review\\web-release\\release-code.log",
+  "finishedAt": "2026-11-06T21:44:24.918343+08:00"
+}
+Traceback (most recent call last):
+  File "D:\Workspace\TapTap\奶茶挤挤\tools\build_cupauto_web.py", line 66, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\Workspace\TapTap\奶茶挤挤\tools\build_cupauto_web.py", line 38, in main
+    if record[name+'ExitCode']!=0: raise RuntimeError(f'{name} failed; inspect {evidence/name}.log')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: release-code failed; inspect D:\Workspace\TapTap\奶茶挤挤\evidence\Acceptance\20261106-ae-ad-review\web-release\release-code.log

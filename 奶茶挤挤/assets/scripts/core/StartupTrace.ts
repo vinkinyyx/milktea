@@ -3,7 +3,8 @@ import { DiagnosticRing } from './DiagnosticRing';
 export type StartupResult = 'start' | 'ok' | 'error' | 'cancel';
 export interface StartupRecord {
   buildId: string; traceId: number; ownerEpoch: number; phase: string; result: StartupResult;
-  elapsedMs: number; foregroundElapsedMs: number; code?: string; assetId?: string; bundleName?: string; stack?: string;
+  elapsedMs: number; foregroundElapsedMs: number; code?: string; assetId?: string; bundleName?: string;
+  stack?: string; errorSummary?: string;
 }
 export interface StartupDetail { code?: string; assetId?: string; bundleName?: string; error?: unknown; stack?: string }
 
@@ -48,7 +49,10 @@ export class StartupTrace {
       if (detail?.assetId) record.assetId = this.summary(detail.assetId);
       if (detail?.bundleName) record.bundleName = this.summary(detail.bundleName);
       if (detail?.stack) record.stack = this.summary(detail.stack);
-      if (detail?.error !== undefined) record.code = record.code ?? this.summary(detail.error);
+      if (detail?.error !== undefined) {
+        // errorSummary is independent from the machine code: code must never erase the concrete cause.
+        record.errorSummary = this.errorSummary(detail.error);
+      }
       this.ring.append(record);
     } catch { /* diagnostics must never break the boot path */ }
   }
@@ -70,5 +74,18 @@ export class StartupTrace {
   private summary(value: unknown): string {
     const text = value instanceof Error ? `${value.name}: ${value.message}` : String(value);
     return text.length <= 512 ? text : `${text.slice(0, 509)}...`;
+  }
+  private errorSummary(error: unknown): string {
+    try {
+      if (error instanceof Error) return this.summary(`${error.name}: ${error.message}`);
+      if (typeof error === 'string') return this.summary(error);
+      if (error && typeof error === 'object') {
+        const message = (error as { message?: unknown }).message;
+        if (typeof message === 'string' && message.length) return this.summary(message);
+        return this.summary(JSON.stringify(error));
+      }
+      if (error === null) return 'null';
+      return this.summary(String(error));
+    } catch { return 'error summary unavailable'; }
   }
 }

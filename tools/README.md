@@ -1,6 +1,6 @@
 # 工具入口
 
-当前工作以[最新验收与提示词](../docs/46-v3-review-and-host-closeout-design.md)为准。清理不修改运行代码，不表示验收通过。
+当前工作以[最终交付方案与提示词](../docs/49-final-delivery-platform-device-plan.md)为准。170/0及独立回读失败恢复探针已通过，94baeac3候选资源/源清单核对通过；下一步是实际MCP认证、包体能力核对和USB真机。ADB路径与命令见docs49，不再重复修已关闭的CAS问题或索要手工广告ID。
 
 在项目根执行现有检查：
 

@@ -1,0 +1,42 @@
+{
+  "scope": "fault injection only, not real ad",
+  "afterWatch": {
+    "view": {
+      "phase": "ERROR",
+      "block": "PENDING_ATTEMPT",
+      "message": "奖励已提交但回读未确认，可重试领取。",
+      "retrySettle": true,
+      "capability": "SUPPORTED",
+      "providerName": "debug-mock",
+      "availableExtra": 0,
+      "grantedThisRun": 0,
+      "runLimit": 5,
+      "dailyRemaining": 5,
+      "pendingAttempt": true,
+      "simulated": true
+    },
+    "memoryRevision": 2,
+    "diskRevision": 3,
+    "extra": 0
+  },
+  "afterTwoRetries": {
+    "view": {
+      "phase": "ERROR",
+      "block": "PENDING_ATTEMPT",
+      "message": "广告已完成，但奖励保存失败；请在稍后重试领取。",
+      "retrySettle": true,
+      "capability": "SUPPORTED",
+      "providerName": "debug-mock",
+      "availableExtra": 0,
+      "grantedThisRun": 0,
+      "runLimit": 5,
+      "dailyRemaining": 5,
+      "pendingAttempt": true,
+      "simulated": true
+    },
+    "memoryRevision": 2,
+    "extra": 0
+  },
+  "shows": 1,
+  "diskReceipts": 1
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\Workspace\TapTap\奶茶挤挤\tools\validate_design.py", line 206, in <module>
+    report = validate()
+  File "D:\Workspace\TapTap\奶茶挤挤\tools\validate_design.py", line 158, in validate
+    assert cfg["cup"]["bottom_width_du"] * stages[-1]["cup_width_scale"] > 2 * ing[-1]["radius_du"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

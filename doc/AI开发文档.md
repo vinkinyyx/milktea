@@ -1,5 +1,11 @@
 # AI开发上下文
 
+2026-11-07最新执行[docs49](../docs/49-final-delivery-platform-device-plan.md)：170/0及独立恢复/摘要探针通过；94baeac3候选源/包核对通过。目标503251/1021353和安卓USB路线已由用户确认，ADB已准备但无设备；实际广告MCP TOKEN_REVOKED且缓存矛盾，CLI有效，包体声明有warning。先处理这些真实接入条件，不再索要手工广告ID或反复重修已过客户端逻辑。
+
+最新独立验收见[docs48](../docs/48-adfix-review-and-device-closeout-design.md)：152/0、Web与候选包核验通过，但额外晃杯提交后回读失败时免费重试持续CAS冲突。真实广告和Tap性能未交付。执行docs48第9节，保留已有整改，不沿用下方历史结论覆盖新故障。
+
+2026-11-06独立验收更新：当前源码 `f1c49c0`，本机具备完整工具；原回归125通过1失败，新Release裁剪46/48失败。真实广告关闭且无ID，存在宿主清理归属、复活应用失败假成功、SDK清理缺陷。以[docs47](../docs/47-ad-acceptance-and-final-package-design.md)及[docs22最新节](../docs/22-current-progress-and-resume.md)为准；下方为上一执行机历史，不代表本轮通过或缺工具。
+
 2026-11-06（第二整改轮）。当前入口为[docs46验收与收口设计](../docs/46-v3-review-and-host-closeout-design.md)。工程奶茶挤挤/、Creator3.8.8、Tap小游戏；当前源码是 `cc70736` 加本轮工作区改动，完整身份以实际源清单为准。
 
 ## 本轮已完成的代码整改（验证未执行）

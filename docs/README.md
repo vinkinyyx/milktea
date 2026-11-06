@@ -3,8 +3,10 @@
 ## 当前执行
 
 - [当前事实与未完成项](22-current-progress-and-resume.md)
-- [R1–R4最新验收与详细整改设计](46-v3-review-and-host-closeout-design.md)
-- [开发执行提示词](46-v3-review-and-host-closeout-design.md#12-完成标准与执行提示词)
+- [最新验收、未完成根因与最终交付方案](49-final-delivery-platform-device-plan.md)
+- [开发执行提示词](49-final-delivery-platform-device-plan.md#9-下一agent完整执行提示词)
+- [前轮本地整改设计](48-adfix-review-and-device-closeout-design.md)
+- [前轮真实广告与小包设计约束](47-ad-acceptance-and-final-package-design.md)
 - [复活产品/存档/性能分册](43-spill-revive-performance-design.md)
 - [动画与自然落料设计](42-animation-start-physics-design.md)，已做与未做以最新验收为准
 - [开发交接](13-developer-handoff.md)、[Tap入口](38-taptap-minigame-current.md)

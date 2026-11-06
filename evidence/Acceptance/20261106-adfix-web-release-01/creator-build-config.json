@@ -1,0 +1,14 @@
+{
+  "platform": "web-mobile",
+  "buildPath": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build",
+  "outputName": "20261106-adfix-web-release-01",
+  "debug": false,
+  "sourceMaps": false,
+  "startScene": "44e30fdb-084f-5609-8283-4fdd8d2fab81",
+  "scenes": [
+    {
+      "uuid": "44e30fdb-084f-5609-8283-4fdd8d2fab81",
+      "url": "db://assets/scenes/Boot.scene"
+    }
+  ]
+}

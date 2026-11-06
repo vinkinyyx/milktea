@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "artMappings": 71,
+  "effectMappings": 7,
+  "packageAssetsPresent": 78,
+  "rgbaBefore": 60251896,
+  "rgbaAfter": 24119392,
+  "bytes": 3030312,
+  "sha256": "94baeac3409b4109d397f922db095e6b0df6d6e639a1b826f38fdd5ee231bc89",
+  "errors": []
+}

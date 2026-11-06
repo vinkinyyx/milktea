@@ -94,7 +94,7 @@ def extended_checks():
     scores=fixture["rank"]["scores"]
     assert [1+sum(y>x for y in scores) for x in scores]==fixture["rank"]["expected_ranks"]
     policy=json.loads((ROOT/"config/rewarded-ad-policy.json").read_text(encoding="utf-8"))
-    assert not policy["enabled"] and policy["amount"]==policy["dailyLimit"]==0
+    assert not policy["enabled"] and policy["maxExtraShakesPerRun"] == policy["maxDailyRewardedShakes"] == 5
     assert len(re.findall(r"AC-\d{3}",(ROOT/"docs/16-phase-verification.md").read_text(encoding="utf-8")))==45
     return {"phase_designs":len(PHASES),"image_items":len(rows),"image_methods":dict(Counter(r["production_method"] for r in rows)),
         "api_operations":len(ops),"api_local_refs_checked":len(refs),"wire_fixture_checks":12,

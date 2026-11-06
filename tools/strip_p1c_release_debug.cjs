@@ -78,6 +78,7 @@ const gameRootProbeFields = new Set(['events', 'commands', 'frames', 'timingSave
   'pressureStepTrace', 'pressureStepTraceEnabled', 'pressurePreviousPositions', 'pressurePenetrationTicks', 'diagnosticAttemptId',
   'priorFrameWall', 'lastPresentationMs', 'probeSetting', 'framePhysicsMs', 'frameLogicMs', 'lastConsumedDomainEvent']);
 const gameRootProbeMethods = new Set(['recordFrame', 'recordPressureStep', 'probeMode']);
+const probeRingClearStatements = new Set(['this.events.clear()', 'this.commands.clear()']);
 editAst('assets/scripts/presentation/GameRoot.ts', (node, ast) => {
   if (typescript.isPropertyDeclaration(node) && node.name && gameRootProbeFields.has(node.name.getText(ast))) return {};
   if (typescript.isMethodDeclaration(node) && node.name && gameRootProbeMethods.has(node.name.getText(ast))) return {};
@@ -88,14 +89,18 @@ editAst('assets/scripts/presentation/GameRoot.ts', (node, ast) => {
       node.expression.getText(ast).includes('timingSaveMs') || node.thenStatement.getText(ast).includes('timingSaveMs') ||
       (node.expression.getText(ast).includes('probeMode') && node.thenStatement.getText(ast).includes('.append')) ||
       node.thenStatement.getText(ast).includes('recordFrame('))) return {};
-  if (typescript.isExpressionStatement(node) && /this\.(events|commands|frames)\.clear\(\)|this\.frames\.append\(|this\.lastConsumedDomainEvent\s*=|this\.probeSetting\s*=|this\.(framePhysicsMs|frameLogicMs|lastPresentationMs)\s*(?:\+=|=)/.test(node.expression.getText(ast))) return {};
+  // The ring clears must be standalone statements: both probeState resets are split across individual statements, so
+  // matching the exact text never deletes an adjacent runtime reset such as ingredientViews.clear()/consumedDomainEventIds.
+  // f1c49c0 added the pair inside returnToMenuFromError (error layer -> menu reset); that is the +2 over 46.
+  if (typescript.isExpressionStatement(node) && probeRingClearStatements.has(node.expression.getText(ast))) return {};
+  if (typescript.isExpressionStatement(node) && /this\.frames\.append\(|this\.lastConsumedDomainEvent\s*=|this\.probeSetting\s*=|this\.(framePhysicsMs|frameLogicMs|lastPresentationMs)\s*(?:\+=|=)/.test(node.expression.getText(ast))) return {};
   if (typescript.isExpressionStatement(node) && node.expression.getText(ast).includes('recordPressureStep(')) return {};
   if (typescript.isBinaryExpression(node) && typescript.isCallExpression(node.left) && node.left.expression.getText(ast) === 'this.probeMode' &&
       (node.operatorToken.kind === typescript.SyntaxKind.EqualsEqualsEqualsToken || node.operatorToken.kind === typescript.SyntaxKind.ExclamationEqualsEqualsToken)) {
     return { replacement: 'false' };
   }
   return null;
-}, 46);
+}, 48);
 
 // Remove adapter fault/probe seams and their fields; they exist only for P1-B fixture injection.
 const adapterTestFields = new Set(['contactEnumerationReversed', 'lastEnumeratedContactIds', 'staleCallbackProbes', 'fixtureAccelerationProbe',

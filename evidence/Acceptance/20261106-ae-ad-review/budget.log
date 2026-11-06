@@ -1,0 +1,42 @@
+{
+  "scope": "Actual ArtAssets adapter with mocked clock/host, not a real device performance sample",
+  "background": {
+    "scenario": "5s foreground, 20s background with timer suspension, then resume",
+    "expectedForegroundMs": 5000,
+    "actualForegroundMs": 5000,
+    "status": "ACTIVE"
+  },
+  "overdue": {
+    "scenario": "foreground callback after 16s before interval dispatch",
+    "elapsedMs": 16000,
+    "scopeAccepted": false,
+    "status": "EXPIRED",
+    "accountedForegroundMs": 16000
+  },
+  "startedBackground": {
+    "scenario": "batch starts hidden, 20s background, then 15s foreground",
+    "backgroundOnly": {
+      "status": "ACTIVE",
+      "foregroundMs": 0,
+      "remainingMs": 15000
+    },
+    "status": "EXPIRED",
+    "foregroundMs": 15000,
+    "scopeStillActive": false
+  },
+  "tokens": {
+    "scenario": "stale handle cannot settle or cancel the replacement batch",
+    "oldBudgetCancelledByBegin": true,
+    "afterOldSettle": {
+      "oldStatus": "CANCELLED",
+      "newStatus": "ACTIVE",
+      "activeIsNew": true
+    },
+    "afterOldCancel": {
+      "oldStatus": "CANCELLED",
+      "newStatus": "ACTIVE",
+      "activeIsNew": true
+    },
+    "newSettled": true
+  }
+}

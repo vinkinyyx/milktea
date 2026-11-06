@@ -19,7 +19,8 @@ export interface RewardedShakeHost {
   resumeFromRewardedAd(notice: string | null): void;
   onRewardedShakeChanged(): void;
   onRewardedShakeCommitted(bundle: LocalSaveBundle, revision: number): void;
-  applyCommittedExtraGrant(): void;
+  /** Apply the missing committed extra shakes (delta, never the consumed count). False means the live repair failed. */
+  applyCommittedExtraGrant(amount: number): boolean;
   waitForSaveIdle(): Promise<void>;
 }
 
@@ -52,6 +53,8 @@ export class RewardedShakeService {
   private host: RewardedShakeHost | null = null;
   private boundRunId: string | null = null;
   private hostGeneration = 0;
+  /** Attempt id currently being dropped by clearStalePending; repeated binds must not race the same record. */
+  private clearingAttemptId: UUID | null = null;
   private constructor(
     private readonly env: RewardedAdEnvironment,
     private readonly repo: IBundleSaveRepository,
@@ -88,13 +91,27 @@ export class RewardedShakeService {
       // A pending attempt from a superseded host can never be confirmed; keeping it would block the new host
       // forever with PENDING_ATTEMPT. Release the block now, drop the record asynchronously.
       this.stalePending = false;
-      void this.clearStalePending(host);
+      void this.clearStalePending(host, {
+        attemptId: ledger?.pendingAttempt?.attemptId ?? null,
+        runId: run.runId, revision: host.getSaveRevision(), generation: this.hostGeneration,
+      });
     }
     if (run && receipt) {
       const persisted = host.getBundle()?.run;
-      this.busy = false; this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.retrySettle = false;
+      this.busy = false; this.retrySettle = false;
+      // Restore the committed TOTAL, not one unit: multiple receipts may have been persisted while memory lagged.
+      // extraUsed is untouched, so consumed shakes can never turn into free ones.
+      const delta = persisted && persisted.runId === run.runId ? persisted.shake.extraGranted - run.shake.extraGranted : 0;
+      if (delta > 0 && !host.applyCommittedExtraGrant(delta)) {
+        // Keep the committed receipt as a trusted attempt identity so retrySettlement() can recover for free
+        // without re-watching, and never re-sell the same grant.
+        this.pendingAttempt = receipt.attemptId; this.trustedCompletionAttempt = receipt.attemptId;
+        this.phase = 'ERROR'; this.retrySettle = true;
+        this.message = '奖励已保存，但本次恢复未完成；可重试领取，无需再次观看广告。';
+        return;
+      }
+      this.pendingAttempt = null; this.trustedCompletionAttempt = null;
       this.phase = 'GRANTED'; this.message = null;
-      if (persisted && persisted.runId === run.runId && persisted.shake.extraGranted > run.shake.extraGranted) host.applyCommittedExtraGrant();
       return;
     }
     if(!this.busy){this.phase = 'IDLE'; this.message = this.stalePending ? '上次广告奖励未得到可信完成确认，未发放。' : null;this.retrySettle = false;}
@@ -165,6 +182,14 @@ export class RewardedShakeService {
     try {
     await this.host.waitForSaveIdle();
     if(this.host!==owner||generation!==this.hostGeneration||owner.getActiveRunSnapshot()?.runId!==run.runId)throw new Error('REWARD_ATTEMPT_OWNER_CHANGED');
+    // Sync a revision advanced by a stale-owner cleanup before the reward CAS, otherwise this host can only conflict.
+    const synced = await this.repo.readBundle();
+    if(this.host!==owner||generation!==this.hostGeneration||owner.getActiveRunSnapshot()?.runId!==run.runId)throw new Error('REWARD_ATTEMPT_OWNER_CHANGED');
+    if(synced.ok&&synced.data.envelope){
+      const payload=synced.data.envelope.payload;
+      if(payload.profile.activeRunId===run.runId&&payload.run?.runId===run.runId&&synced.data.envelope.revision!==owner.getSaveRevision())
+        owner.onRewardedShakeCommitted(payload,synced.data.envelope.revision);
+    }
     bundle=owner.getBundle();run=owner.getActiveRunSnapshot();if(!bundle||!run)throw new Error('REWARD_ATTEMPT_RUN_MISSING');
     const attemptId = makeUuid() as UUID;
     const pending: RewardedShakePending = {
@@ -236,23 +261,45 @@ export class RewardedShakeService {
    * Drop a pending attempt left behind by a superseded host. No grant, no resume, no run-state change; a CAS
    * failure means a newer attempt already wrote and is simply left alone.
    */
-  private async clearStalePending(owner: RewardedShakeHost): Promise<void> {
-    const bundle = owner.getBundle();
-    if (!bundle) return;
-    const next = copy(bundle);
-    next.profile.rewardedShake = RewardLedger.clearPending(next.profile.rewardedShake);
-    const committed = await this.repo.commitBundle(owner.getSaveRevision(), bundle.profile.activeRunId, next);
-    if (committed.ok) owner.onRewardedShakeCommitted(next, committed.data.revision);
+  private async clearStalePending(owner: RewardedShakeHost, expected: {
+    attemptId: UUID | null; runId: string; revision: number; generation: number;
+  }): Promise<void> {
+    if (!expected.attemptId || this.clearingAttemptId === expected.attemptId) return;
+    this.clearingAttemptId = expected.attemptId;
+    try {
+      // Re-read first so only the original pending record is dropped and the write uses the newest revision.
+      const fresh = await this.repo.readBundle();
+      if (!fresh.ok || !fresh.data.envelope) return;
+      const payload = fresh.data.envelope.payload;
+      const pending = payload.profile.rewardedShake?.pendingAttempt;
+      if (!pending || pending.attemptId !== expected.attemptId || pending.runId !== expected.runId) return;
+      const next = copy(payload);
+      next.profile.rewardedShake = RewardLedger.clearPending(next.profile.rewardedShake);
+      const committed = await this.repo.commitBundle(fresh.data.envelope.revision, payload.profile.activeRunId, next);
+      if (!committed.ok) return;
+      if (this.host === owner && this.hostGeneration === expected.generation
+        && owner.getActiveRunSnapshot()?.runId === expected.runId) {
+        owner.onRewardedShakeCommitted(next, committed.data.revision);
+      }
+    } catch {
+      // Best effort: a failed cleanup is retried on the next bind and must never reject unhandled.
+    } finally {
+      if (this.clearingAttemptId === expected.attemptId) this.clearingAttemptId = null;
+    }
   }
   private async clearPending(message: string): Promise<boolean> {
     const owner=this.host,generation=this.hostGeneration;
     if (!owner) return false;
+    const runId = owner.getActiveRunSnapshot()?.runId ?? null;
     const bundle = owner.getBundle();
     if (bundle) {
       const next = copy(bundle);
       next.profile.rewardedShake = RewardLedger.clearPending(next.profile.rewardedShake);
-      const committed = await this.repo.commitBundle(owner.getSaveRevision(), bundle.profile.activeRunId, next);
+      let committed: Awaited<ReturnType<IBundleSaveRepository['commitBundle']>>;
+      try { committed = await this.repo.commitBundle(owner.getSaveRevision(), bundle.profile.activeRunId, next); }
+      catch { return false; }
       if(this.host!==owner||generation!==this.hostGeneration||!committed.ok)return false;
+      if (runId !== null && owner.getActiveRunSnapshot()?.runId !== runId) return false;
       owner.onRewardedShakeCommitted(next, committed.data.revision);
     }
     this.pendingAttempt = null; this.phase = 'ERROR'; this.retrySettle = false; this.message = message; this.changed();
@@ -262,20 +309,30 @@ export class RewardedShakeService {
   private async settle(attemptId: UUID): Promise<void> {
     const owner=this.host,generation=this.hostGeneration;
     if (!owner) return;
-    let bundle = owner.getBundle();
     const run = owner.getActiveRunSnapshot();
-    if (!bundle || !run) return;
+    if (!run) return;
     await owner.waitForSaveIdle();
     if(this.host!==owner||generation!==this.hostGeneration||owner.getActiveRunSnapshot()?.runId!==run.runId)return;
-    bundle=owner.getBundle();if(!bundle)return;
-    const ledger = bundle.profile.rewardedShake;
+    // Always re-read the freshest committed envelope. A prior readback failure must never leave this host CAS-ing
+    // against a stale revision; the committed envelope owns the canonical payload AND revision.
+    const fresh = await this.repo.readBundle();
+    if(this.host!==owner||generation!==this.hostGeneration||owner.getActiveRunSnapshot()?.runId!==run.runId)return;
+    if(!fresh.ok||!fresh.data.envelope){this.phase='ERROR';this.retrySettle=this.trustedCompletionAttempt===attemptId;this.message='无法读取最新存档，可重试领取。';this.changed();return;}
+    const envelope=fresh.data.envelope;
+    const bundle=envelope.payload;
+    if(bundle.profile.activeRunId!==run.runId||bundle.run?.runId!==run.runId){this.phase='ERROR';this.retrySettle=false;this.message='当前局与存档不一致，未发放。';this.changed();return;}
+    // Sync host to the committed revision immediately; do not let a later readback failure block revision.
+    owner.onRewardedShakeCommitted(bundle, envelope.revision);
+    const ledger=bundle.profile.rewardedShake;
     if (RewardLedger.hasReceipt(ledger, attemptId)) {
-      // Crash after commit before applying to the live engine: repair the in-memory grant once.
+      // Crash/readback gap after commit: the grant is already on disk. Repair the live delta for free, never re-watch,
+      // never append a receipt, never re-consume daily/run quota.
       const receipt=ledger.receipts.find(item=>item.attemptId===attemptId);
-      const persisted = bundle.run;
-      if(!receipt||receipt.runId!==run.runId||!persisted||persisted.runId!==run.runId||persisted.shake.extraGranted<run.shake.extraGranted){this.phase='ERROR';this.retrySettle=false;this.message='奖励凭证与当前局不匹配，未应用。';this.changed();return;}
-      if(persisted.shake.extraGranted>run.shake.extraGranted)owner.applyCommittedExtraGrant();
-      this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.pendingAttempt = null; this.changed();
+      if(!receipt||receipt.runId!==run.runId||receipt.rewardKind!=='extra_shake'||receipt.amount!==1){this.phase='ERROR';this.retrySettle=false;this.message='奖励凭证与本局不匹配，未应用。';this.changed();return;}
+      if(bundle.run.shake.extraGranted<run.shake.extraGranted){this.phase='ERROR';this.retrySettle=false;this.message='奖励账本与本局额度不一致，未应用。';this.changed();return;}
+      const delta=bundle.run.shake.extraGranted-run.shake.extraGranted;
+      if(delta>0&&!owner.applyCommittedExtraGrant(delta)){this.phase='ERROR';this.retrySettle=true;this.message='奖励已保存，但本次恢复未完成，可重试领取。';this.changed();return;}
+      this.pendingAttempt=null;this.stalePending=false;this.phase='GRANTED';this.message=null;this.retrySettle=false;this.changed();
       return;
     }
     if (ledger.pendingAttempt?.attemptId !== attemptId||ledger.pendingAttempt.runId!==run.runId) {
@@ -297,21 +354,30 @@ export class RewardedShakeService {
     const next = copy(bundle);
     next.profile.rewardedShake = nextLedger;
     next.run = projectedRun;
-    const committed = await this.repo.commitBundle(owner.getSaveRevision(), run.runId, next);
+    const committed = await this.repo.commitBundle(envelope.revision, run.runId, next);
     if(this.host!==owner||generation!==this.hostGeneration||owner.getActiveRunSnapshot()?.runId!==run.runId)return;
     if (!committed.ok) {
-      this.phase = 'ERROR'; this.retrySettle = true;
+      this.phase = 'ERROR'; this.retrySettle = this.trustedCompletionAttempt === attemptId;
       this.message = '广告已完成，但奖励保存失败；请在稍后重试领取。'; this.changed(); return;
     }
+    // The commit is authoritative: sync host to the committed payload AND revision before readback so a readback
+    // failure can never strand the host on the old revision (which would make every retry CAS-conflict).
+    owner.onRewardedShakeCommitted(next, committed.data.revision);
     const readback=await this.repo.readBundle();
     if(this.host!==owner||generation!==this.hostGeneration)return;
     if(!readback.ok||!readback.data.envelope||!RewardLedger.hasReceipt(readback.data.envelope.payload.profile.rewardedShake,attemptId)){
+      // The grant is committed; retry will hit the receipt branch above and apply it for free.
       this.phase='ERROR';this.retrySettle=true;this.message='奖励已提交但回读未确认，可重试领取。';this.changed();return;
     }
     const persistedBundle=readback.data.envelope.payload;
     if(persistedBundle.run?.runId!==run.runId||persistedBundle.run.shake.extraGranted<run.shake.extraGranted+1){this.phase='ERROR';this.retrySettle=true;this.message='奖励账本与本局额度未能一致回读，可重试领取。';this.changed();return;}
-    owner.onRewardedShakeCommitted(persistedBundle, committed.data.revision);
-    owner.applyCommittedExtraGrant();
+    // Use the adopted envelope's own revision (readback may advance beyond the commit result).
+    owner.onRewardedShakeCommitted(persistedBundle, readback.data.envelope.revision);
+    const appliedDelta = persistedBundle.run.shake.extraGranted - run.shake.extraGranted;
+    if (appliedDelta > 0 && !owner.applyCommittedExtraGrant(appliedDelta)) {
+      this.phase = 'ERROR'; this.retrySettle = true;
+      this.message = '奖励已提交但未能应用到当前局，可重试领取。'; this.changed(); return;
+    }
     this.pendingAttempt = null; this.stalePending = false; this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.changed();
   }
   private changed(): void { this.host?.onRewardedShakeChanged(); }

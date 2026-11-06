@@ -224,7 +224,12 @@ export class GameRoot extends Component {
       resumeFromRewardedAd:(notice)=>this.resumeFromRewardedAd(notice),
       onRewardedShakeChanged:()=>this.onRewardedChanged(),
       onRewardedShakeCommitted:(bundle,revision)=>{this.bundle=bundle;this.bundleRevision=revision;},
-      applyCommittedExtraGrant:()=>{const applied=this.engine?.commitExtraGrant(1);if(applied&&!applied.ok)this.enterTechnicalError(applied.error.message);},
+      applyCommittedExtraGrant:(amount:number)=>{
+        if(!this.engine||!Number.isSafeInteger(amount)||amount<=0)return false;
+        const applied=this.engine.commitExtraGrant(amount);
+        if(!applied.ok){this.enterTechnicalError(applied.error.message);return false;}
+        return true;
+      },
       waitForSaveIdle:()=>this.waitForSaveIdle(),
     };
   }

@@ -1,12 +1,48 @@
 {
   "status": "pass",
-  "authored_markdown_files": 42,
-  "local_links_checked": 240,
+  "authored_markdown_files": 74,
+  "local_links_checked": 371,
   "skills_read_and_snapshotted": 13,
   "snapshot_files": 18,
   "ingredients": 9,
   "stages": 5,
   "requirements": 30,
+  "classic_cup_bottom_du": 300,
+  "max_ingredient_diameter_du": 280,
+  "deferred_stage_fit": [
+    {
+      "stage": "coconut_green",
+      "phase": "P3",
+      "cup_width_scale": 0.95,
+      "bottom_width_du": 285.0,
+      "max_diameter_du": 280,
+      "fits": true
+    },
+    {
+      "stage": "taro_boba",
+      "phase": "P3",
+      "cup_width_scale": 0.9,
+      "bottom_width_du": 270.0,
+      "max_diameter_du": 280,
+      "fits": false
+    },
+    {
+      "stage": "brown_sugar",
+      "phase": "P3",
+      "cup_width_scale": 0.85,
+      "bottom_width_du": 255.0,
+      "max_diameter_du": 280,
+      "fits": false
+    },
+    {
+      "stage": "mochi_special",
+      "phase": "P3",
+      "cup_width_scale": 0.8,
+      "bottom_width_du": 240.0,
+      "max_diameter_du": 280,
+      "fits": false
+    }
+  ],
   "merge_area_release_percent_range": [
     11.11,
     21.88

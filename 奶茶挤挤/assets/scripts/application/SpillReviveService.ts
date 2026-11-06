@@ -57,6 +57,8 @@ export class SpillReviveService {
   private boundRunId: string | null = null;
   private hostGeneration = 0;
   private attemptIdentity: { owner: SpillReviveHost; generation: number; runId: string; failureId: string; attemptId: UUID } | null = null;
+  /** Attempt id currently being dropped by clearStalePending; repeated binds must not race the same record. */
+  private clearingAttemptId: UUID | null = null;
   private constructor(private readonly env: ReviveAdEnvironment, private readonly repo: IBundleSaveRepository, private readonly now: () => number) {}
   static create(env: ReviveAdEnvironment, repo: IBundleSaveRepository, now: () => number = () => Date.now()): SpillReviveService {
     const service = new SpillReviveService(env, repo, now);
@@ -93,15 +95,26 @@ export class SpillReviveService {
       // forever with PENDING_ATTEMPT. Release the block now and drop the record asynchronously; a failed write
       // is harmless and simply retried on the next bind.
       this.stalePending = false;
-      void this.clearStalePending(host);
+      void this.clearStalePending(host, {
+        attemptId: ledger?.pendingAttempt?.attemptId ?? null,
+        runId: run.runId, revision: host.getSaveRevision(), generation: this.hostGeneration,
+      });
     }
     if (run && receipt) {
-      const applied = run.revive.used === 1 && run.revive.committedReceiptId === receipt.attemptId
-        ? true : host.applyCommittedRevive(receipt.attemptId);
-      this.busy = false;
-      this.pendingAttempt = null; this.trustedCompletionAttempt = null; this.attemptIdentity = null; this.retrySettle = false;
-      this.phase = 'GRANTED';
-      this.message = applied ? '本局复活已生效。' : '本局复活权益已保存，重新进入对局后自动恢复。';
+      const alreadyApplied = run.revive.used === 1 && run.revive.committedReceiptId === receipt.attemptId;
+      const applied = alreadyApplied ? true : host.applyCommittedRevive(receipt.attemptId);
+      this.busy = false; this.pendingAttempt = null; this.retrySettle = false;
+      if (applied) {
+        this.trustedCompletionAttempt = null; this.attemptIdentity = null;
+        this.phase = 'GRANTED'; this.message = '本局复活已生效。';
+      } else {
+        // The receipt is durable but the live engine could not be repaired. Never paint this as success and never
+        // ask for another ad: keep a free, retryable recovery entry scoped to this committed receipt.
+        this.attemptIdentity = { owner: host, generation: this.hostGeneration, runId: run.runId, failureId: receipt.failureId, attemptId: receipt.attemptId };
+        this.trustedCompletionAttempt = receipt.attemptId;
+        this.phase = 'ERROR'; this.retrySettle = true;
+        this.message = '复活权益已保存，但本次恢复未完成；可重试领取，无需再次观看广告。';
+      }
       return;
     }
     if (!this.busy) {
@@ -171,7 +184,20 @@ export class SpillReviveService {
     try {
       await this.host.waitForSaveIdle();
       if (this.host !== owner || generation !== this.hostGeneration) throw new Error('REVIVE_ATTEMPT_OWNER_CHANGED');
-      let bundle = owner.getBundle(); let run = owner.getActiveRunSnapshot();
+      let run = owner.getActiveRunSnapshot();
+      if (!run) throw new Error('REVIVE_ATTEMPT_RUN_MISSING');
+      // A stale-owner cleanup or another writer may have committed while this host still holds the old revision.
+      // Read once before writing so the reward CAS never starts from a phi revision that can only conflict.
+      const synced = await this.repo.readBundle();
+      if (this.host !== owner || generation !== this.hostGeneration) throw new Error('REVIVE_ATTEMPT_OWNER_CHANGED');
+      if (synced.ok && synced.data.envelope) {
+        const payload = synced.data.envelope.payload;
+        if (payload.profile.activeRunId === run.runId && payload.run?.runId === run.runId
+          && synced.data.envelope.revision !== owner.getSaveRevision()) {
+          owner.onSpillReviveCommitted(payload, synced.data.envelope.revision);
+        }
+      }
+      let bundle = owner.getBundle(); run = owner.getActiveRunSnapshot();
       if (!bundle || !run?.revive.pendingFailure) throw new Error('REVIVE_ATTEMPT_RUN_MISSING');
       if (this.env.provider.capability() !== 'SUPPORTED') throw new Error('REVIVE_AD_UNSUPPORTED');
       const attemptId = makeUuid() as UUID;
@@ -286,13 +312,35 @@ export class SpillReviveService {
    * Drop a pending attempt left behind by a superseded host. It never grants, never resumes and never touches the
    * run state; a CAS failure (a newer attempt already wrote) simply leaves the newer record intact.
    */
-  private async clearStalePending(owner: SpillReviveHost): Promise<void> {
-    const bundle = owner.getBundle();
-    if (!bundle) return;
-    const next = copy(bundle);
-    next.profile.rewardedRevive = ReviveLedger.clearPending(next.profile.rewardedRevive);
-    const committed = await this.repo.commitBundle(owner.getSaveRevision(), bundle.profile.activeRunId, next);
-    if (committed.ok) owner.onSpillReviveCommitted(next, committed.data.revision);
+  private async clearStalePending(owner: SpillReviveHost, expected: {
+    attemptId: UUID | null; runId: string; revision: number; generation: number;
+  }): Promise<void> {
+    if (!expected.attemptId || this.clearingAttemptId === expected.attemptId) return;
+    this.clearingAttemptId = expected.attemptId;
+    try {
+      // Re-read before clearing: the record must still be the same pending attempt, otherwise a newer attempt or a
+      // committed receipt now owns the slot and must be left untouched. CAS uses the fresh revision, never the
+      // possibly stale host revision.
+      const fresh = await this.repo.readBundle();
+      if (!fresh.ok || !fresh.data.envelope) return;
+      const payload = fresh.data.envelope.payload;
+      const pending = payload.profile.rewardedRevive?.pendingAttempt;
+      if (!pending || pending.attemptId !== expected.attemptId || pending.runId !== expected.runId) return;
+      const next = copy(payload);
+      next.profile.rewardedRevive = ReviveLedger.clearPending(next.profile.rewardedRevive);
+      const committed = await this.repo.commitBundle(fresh.data.envelope.revision, payload.profile.activeRunId, next);
+      // A CAS conflict means another writer already advanced the slot; keep its record and let the next bind/battle
+      // read the newest revision. Only the generation that asked for the cleanup may receive the callback.
+      if (!committed.ok) return;
+      if (this.host === owner && this.hostGeneration === expected.generation
+        && owner.getActiveRunSnapshot()?.runId === expected.runId) {
+        owner.onSpillReviveCommitted(next, committed.data.revision);
+      }
+    } catch {
+      // Stale cleanup is best effort and must never surface as an unhandled rejection; the next bind retries.
+    } finally {
+      if (this.clearingAttemptId === expected.attemptId) this.clearingAttemptId = null;
+    }
   }
   /**
    * Clear the pending attempt record after an ad load/show failure, cancellation, or incomplete watch.
@@ -302,12 +350,16 @@ export class SpillReviveService {
   private async clearPending(message: string, resume = false): Promise<boolean> {
     const owner = this.host, generation = this.hostGeneration;
     if (!owner) return false;
+    const runId = owner.getActiveRunSnapshot()?.runId ?? null;
     const bundle = owner.getBundle();
     if (bundle) {
       const next = copy(bundle);
       next.profile.rewardedRevive = ReviveLedger.clearPending(next.profile.rewardedRevive);
-      const committed = await this.repo.commitBundle(owner.getSaveRevision(), bundle.profile.activeRunId, next);
+      let committed: Awaited<ReturnType<IBundleSaveRepository['commitBundle']>>;
+      try { committed = await this.repo.commitBundle(owner.getSaveRevision(), bundle.profile.activeRunId, next); }
+      catch { return false; }
       if (this.host !== owner || generation !== this.hostGeneration || !committed.ok) return false;
+      if (runId !== null && owner.getActiveRunSnapshot()?.runId !== runId) return false;
       owner.onSpillReviveCommitted(next, committed.data.revision);
     }
     this.pendingAttempt = null; this.phase = 'ERROR'; this.retrySettle = false; this.message = message; this.changed();
@@ -337,7 +389,11 @@ export class SpillReviveService {
       }
       owner.onSpillReviveCommitted(bundle, owner.getSaveRevision());
       if (this.host !== owner || generation !== this.hostGeneration) return;
-      if (!owner.applyCommittedRevive(attemptId)) { this.phase = 'ERROR'; this.retrySettle = false; this.message = '复活凭证无法应用到当前局，请返回结算。'; this.changed(); return; }
+      if (!owner.applyCommittedRevive(attemptId)) {
+        // Durable receipt, failed live application: offer the free retry path instead of forcing settlement.
+        this.phase = 'ERROR'; this.retrySettle = true;
+        this.message = '复活权益已保存，但本次恢复未完成；可重试领取，无需再次观看广告。'; this.changed(); return;
+      }
       this.phase = 'GRANTED'; this.message = null; this.retrySettle = false; this.pendingAttempt = null; this.attemptIdentity = null; this.changed();
       return;
     }

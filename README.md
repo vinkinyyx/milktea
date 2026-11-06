@@ -2,11 +2,11 @@
 
 竖屏2D奶茶小料合成游戏。Cocos Creator 3.8.8；发布目标为 TapTap 小游戏 `game.zip`。
 
-**当前验收BLOCKED。** V3本地编译、合同镜像、118项回归和正常Web开局/移动/晃杯/刷新续局通过；新增集成复核发现后台预算误计、错误页菜单输入残留、render兜底失败、首屏设置scope及宿主SETTLING状态缺口。真实Tap、广告和平台启动/内存复测未完成。
+**2026-11-07独立验收：客户端本地通过，进入平台真机收尾，整体尚未完成。** 170/0、回读失败免费恢复独立探针、StartupTrace摘要/32条环、typecheck/镜像/设计及94baeac3候选资源和313项源清单通过。实际平台阻断：广告MCP服务端TOKEN_REVOKED但本地仍认为有效；CLI可登录、应用1021353的包体声明/绑定有不一致提示。用户已确认1021353并选择安卓USB调试；ADB已就绪但尚无设备。下一步执行账号恢复、平台能力核对、真实两广告和同SHA启动/内存验证，不再反复重修已通过逻辑。
 
 - [当前事实与待办](docs/22-current-progress-and-resume.md)
-- [最新验收与详细实施设计](docs/46-v3-review-and-host-closeout-design.md)
-- [下一轮开发执行提示词](docs/46-v3-review-and-host-closeout-design.md#12-完成标准与执行提示词)
+- [最新验收、根因与最终交付方案](docs/49-final-delivery-platform-device-plan.md)
+- [下一轮开发执行提示词](docs/49-final-delivery-platform-device-plan.md#9-下一agent完整执行提示词)
 - [唯一候选及SHA](output/taptap-upload/CURRENT-CANDIDATE.md)
 - [文档导航](docs/README.md)、[开发交接](docs/13-developer-handoff.md)、[工具命令](tools/README.md)
 - [素材与来源](assets/README.md)、[历史归档与清理记录](docs/archive-location.md)

@@ -28,3 +28,6 @@ coverage/
 /.agents/
 /.codex/
 /奶茶挤挤/.creator/
+
+# Local HTML share package cache
+/.trae-html-share-packages/

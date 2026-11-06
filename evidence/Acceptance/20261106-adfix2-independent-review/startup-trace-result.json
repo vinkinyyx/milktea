@@ -1,0 +1,11 @@
+{
+  "codePreserved": true,
+  "messages": [
+    "Error: message survives",
+    "text",
+    "object",
+    "null"
+  ],
+  "ringCount": 32,
+  "bounded": true
+}
