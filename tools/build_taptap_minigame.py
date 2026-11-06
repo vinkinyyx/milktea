@@ -17,6 +17,32 @@ def manifest(project):
     return {p.relative_to(project).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 
 
+BOOTSTRAP_PLATFORM_OLD = "sysInfo.platform.toLocaleLowerCase() === 'android'"
+BOOTSTRAP_PLATFORM_NEW = "String((sysInfo && sysInfo.platform) || '').toLowerCase() === 'android'"
+
+
+def patch_tap_game_js(package: Path, unpacked: Path) -> dict:
+    """Make the converted Tap bootstrap survive hosts without fetch/GameGlobal/platform.
+
+    The Tap converter prepends wx_unity.js, which used to throw before the engine booted; the host then
+    only showed its launch cover. This patch is deterministic and verified before the package is kept.
+    """
+    patched = unpacked.read_text(encoding="utf-8")
+    if "throw new Error('fetch is not defined')" in patched:
+        raise ValueError("Tap bootstrap still contains the fatal fetch guard")
+    if BOOTSTRAP_PLATFORM_OLD not in patched:
+        raise ValueError("Tap bootstrap platform check not found")
+    patched = patched.replace(BOOTSTRAP_PLATFORM_OLD, BOOTSTRAP_PLATFORM_NEW)
+    unpacked.write_text(patched, encoding="utf-8")
+    tmp = package.with_name("game.patched.zip")
+    with zipfile.ZipFile(package) as source, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as target:
+        for item in source.infolist():
+            data = patched.encode("utf-8") if item.filename == "game.js" else source.read(item.filename)
+            target.writestr(item, data)
+    tmp.replace(package)
+    return {"bootstrapFatalFetchGuardRemoved": True, "bootstrapPlatformGuardAdded": True}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--build-id", required=True)
@@ -90,6 +116,7 @@ def main():
         if record["creatorExitCode"] != 36:
             raise RuntimeError(f"Creator exit {record['creatorExitCode']}; expected installed 3.8.8 BUILD_SUCCESS=36")
         package = output / "TapBuild/game.zip"
+        record.update(patch_tap_game_js(package, output / "TapBuild/game/game.js"))
         with zipfile.ZipFile(package) as z:
             if z.testzip() is not None:
                 raise ValueError("ZIP integrity failure")

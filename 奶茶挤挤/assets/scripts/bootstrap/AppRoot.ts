@@ -3,6 +3,7 @@ import { ConfigLoader, RulesConfig } from '../core/ConfigLoader';
 import { HostLifecycleCoordinator } from '../core/HostLifecycleCoordinator';
 import { CoordinateMapper } from '../physics/CoordinateMapper';
 import { configureViewport, presentationSize } from './Viewport';
+import { BootDiagnostics } from './BootDiagnostics';
 import { GameRoot } from '../presentation/GameRoot';
 import { AppRuntime } from '../core/AppRuntime';
 export { AppRuntime } from '../core/AppRuntime';
@@ -25,6 +26,8 @@ export class AppRoot extends Component {
     configureViewport(this.node, { width_du: 750, height_du: 1334 });
     HostLifecycleCoordinator.install();
     this.showBrandFrame();
+    // The host must show something readable even when later boot stages fail; see docs/50.
+    this.node.addComponent(BootDiagnostics);
     (globalThis as any).__p1aLifecycle = { snapshot: () => HostLifecycleCoordinator.snapshot(),
       verifyResumeTransitions: () => HostLifecycleCoordinator.verifyResumeTransitionsForTests() };
     input.on(Input.EventType.TOUCH_END, this.onRetryTouch, this);
@@ -76,6 +79,7 @@ export class AppRoot extends Component {
       configureViewport(this.node, result.data.viewport);
       AppRuntime.rules = result.data; this.retryNode?.destroy(); this.retryNode = null;
       AppRuntime.startup.stage('BOOT_CONFIG', 'ok', { code: `rules:${result.data.design_rules_version}`, bundleName: `viewport:${result.data.viewport.width_du}x${result.data.viewport.height_du}` }, 0, trace);
+      BootDiagnostics.mark('config-ok', `rules:${result.data.design_rules_version}`);
       const mapper = AppRuntime.mapper = new CoordinateMapper(result.data.viewport.width_du, result.data.viewport.height_du,
         result.data.viewport.du_per_spec_physics_unit, PHYSICS_2D_PTM_RATIO);
       const physics = PhysicsSystem2D.instance;
@@ -105,7 +109,7 @@ export class AppRoot extends Component {
           this.finishStartup(token); this.showError('诊断场景切换未启动：未找到PhysicsLab场景', 'BOOT_LAB_SCENE');
         }
       } else {
-        try { this.node.addComponent(GameRoot); this.finishStartup(token); }
+        try { BootDiagnostics.mark('gameRoot-created'); this.node.addComponent(GameRoot); this.finishStartup(token); }
         catch (error) { this.finishStartup(token); this.showError(`玩家界面初始化失败：${String(error)}`, 'BOOT_GAMEROOT_FAILED', error); }
       }
     });
@@ -116,6 +120,7 @@ export class AppRoot extends Component {
    */
   private showError(message: string, code = 'BOOT_CONFIG_FAILED', error?: unknown): void {
     AppRuntime.loadError = message;
+    BootDiagnostics.mark('boot-error', `${code} ${message}`);
     try { AppRuntime.startup.stage('BOOT_CONFIG', 'error', { code, error: error ?? message, stack: this.stackSummary(error) }, 0, this.bootTrace); } catch {}
     if (this.retryNode?.isValid) this.retryNode.destroy();
     const root = this.retryNode = new Node('ConfigErrorRetry'); this.node.addChild(root);

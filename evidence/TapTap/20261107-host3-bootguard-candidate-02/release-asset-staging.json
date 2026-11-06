@@ -1,0 +1,1433 @@
+{
+  "buildId": "20261107-host3-bootguard-candidate-02",
+  "project": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-host3-bootguard-candidate-02",
+  "bundleFolders": {
+    "common": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-host3-bootguard-candidate-02\\assets\\common",
+    "classic": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-host3-bootguard-candidate-02\\assets\\classic"
+  },
+  "selectedVariantCount": 71,
+  "selectedVariantBytes": 1051325,
+  "selectedAudioCount": 9,
+  "selectedAudioBytes": 1004216,
+  "artPngVariantsRemovedFromResources": 71,
+  "artPngBytesRemovedFromResources": 1051325,
+  "selectedVariants": [
+    {
+      "assetId": "spr_ing_sago_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_sago_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_sago_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_sago_base.png",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 14294,
+      "sha256": "aa558c3782edeeec5aabe2c957f57201e53efcb95cdfd8971b38c4d93353d679",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_ing_red_bean_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_red_bean_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_red_bean_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_red_bean_base.png",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 14151,
+      "sha256": "a01f5d219a45bd3892d4f9cb037cb5b90ff48053d0b084f7e475af63ac8e7d8d",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_ing_small_pearl_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_small_pearl_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_small_pearl_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_small_pearl_base.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 27472,
+      "sha256": "91d03c08d4ce6d0160c1b1cfbd6cbb513361b23d282498d9321cf223becae17d",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_ing_coconut_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_coconut_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_coconut_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_coconut_base.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 32192,
+      "sha256": "42677f5b4642a938f1f8c5df7e7bc19cd7c47bfc12bd10773b0c45cd0725fb02",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_ing_large_pearl_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_large_pearl_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_large_pearl_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_large_pearl_base.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 27876,
+      "sha256": "d76c368537a9e5bd43e4ef4a5f05935df059af0782127ab838eed399d421cf79",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_ing_grass_jelly_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_grass_jelly_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_grass_jelly_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_grass_jelly_base.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 43217,
+      "sha256": "031a733214b8a127b9331c1bcc83b2f6ad64c9c2806a2946a200c72c2a9b0e0d",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_ing_pudding_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_pudding_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_pudding_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_pudding_base.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 45581,
+      "sha256": "7a1c62eeb5ed5c88b78d906a9f378490d80435186f8ceb3cc98d756476165447",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_ing_taro_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_taro_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_taro_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_taro_base.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 43534,
+      "sha256": "fcc595fc6e9fdc36d51b7d1fdda72d333877457492b00be942cba5bbcde52b73",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_ing_mochi_base",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/spr_ing_mochi_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_ing_mochi_base.png",
+      "destination": "assets/common/art/p1/v2/spr_ing_mochi_base.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 30833,
+      "sha256": "85949c68e70be445273ea171356b0d5185a24fbf37ead70932a2daa5d8280392",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_cup_classic_back",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/spr_cup_classic_back/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_cup_classic_back.png",
+      "destination": "assets/classic/art/p1/v2/spr_cup_classic_back.png",
+      "size": [
+        375,
+        500
+      ],
+      "bytes": 26682,
+      "sha256": "3c8e319f7f160f8de02f8f4e6b731c96075e1f0d751ea57d4ec554818dd87eb4",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_cup_classic_tea",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/spr_cup_classic_tea/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_cup_classic_tea.png",
+      "destination": "assets/classic/art/p1/v2/spr_cup_classic_tea.png",
+      "size": [
+        375,
+        500
+      ],
+      "bytes": 7188,
+      "sha256": "d91b7617d8fbd7188f85b9ebde0ff4f85628042e8f45f4d984d4f3d6fb244dd0",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_cup_classic_rim_back",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/spr_cup_classic_rim_back/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_cup_classic_rim_back.png",
+      "destination": "assets/classic/art/p1/v2/spr_cup_classic_rim_back.png",
+      "size": [
+        375,
+        500
+      ],
+      "bytes": 7283,
+      "sha256": "a647ae4e792a5426405f39d6d243372812c3ab608674c1ff99d509d3a2bd56c0",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_cup_classic_front",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/spr_cup_classic_front/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_cup_classic_front.png",
+      "destination": "assets/classic/art/p1/v2/spr_cup_classic_front.png",
+      "size": [
+        375,
+        500
+      ],
+      "bytes": 7638,
+      "sha256": "186ac24c4c32c61d2c89a2d3c5ec5ef00bf32320dd16879c46729b23e749d4ed",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_cup_classic_rim_front",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/spr_cup_classic_rim_front/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_cup_classic_rim_front.png",
+      "destination": "assets/classic/art/p1/v2/spr_cup_classic_rim_front.png",
+      "size": [
+        375,
+        500
+      ],
+      "bytes": 7308,
+      "sha256": "6973716404850ec5e9bd4df9ac7a3c8a18cddd47bc84f967cae27cd92bfb338a",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_cup_classic_base",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/spr_cup_classic_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_cup_classic_base.png",
+      "destination": "assets/classic/art/p1/v2/spr_cup_classic_base.png",
+      "size": [
+        375,
+        500
+      ],
+      "bytes": 4643,
+      "sha256": "7b06155d20e0b1962e33066e1efa19ed90ea0fcddab32e22ff63352b7d908a28",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_cup_classic_label",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/spr_cup_classic_label/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_cup_classic_label.png",
+      "destination": "assets/classic/art/p1/v2/spr_cup_classic_label.png",
+      "size": [
+        375,
+        500
+      ],
+      "bytes": 3844,
+      "sha256": "5cbc4f4091234037f042f72823b52eb2d7195375bfe0f3b5d7e5249477b4bf86",
+      "metaCopied": true
+    },
+    {
+      "assetId": "spr_cup_shadow",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/spr_cup_shadow/spriteFrame",
+      "source": "assets/resources/art/p1/v2/spr_cup_shadow.png",
+      "destination": "assets/classic/art/p1/v2/spr_cup_shadow.png",
+      "size": [
+        512,
+        128
+      ],
+      "bytes": 7163,
+      "sha256": "43c605dff20650f64779a67f05f671bacca800ef95680ff70f8b3e52c1944760",
+      "metaCopied": true
+    },
+    {
+      "assetId": "bg_shop_base",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/bg_shop_base/spriteFrame",
+      "source": "assets/resources/art/p1/v2/bg_shop_base.jpg",
+      "destination": "assets/classic/art/p1/v2/bg_shop_base.jpg",
+      "size": [
+        600,
+        1334
+      ],
+      "bytes": 79729,
+      "sha256": "cbca115ad0cb6d5a2ec2039ee52024750d15f4a437e52494588b0a520487a297",
+      "metaCopied": true
+    },
+    {
+      "assetId": "bg_shop_extend_top",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/bg_shop_extend_top/spriteFrame",
+      "source": "assets/resources/art/p1/v2/bg_shop_extend_top.jpg",
+      "destination": "assets/classic/art/p1/v2/bg_shop_extend_top.jpg",
+      "size": [
+        600,
+        320
+      ],
+      "bytes": 6673,
+      "sha256": "bf34ec1f0b668f8a32ec8d1f2f1ec97f074a8aefcf79005df9847455fcb62e31",
+      "metaCopied": true
+    },
+    {
+      "assetId": "bg_shop_extend_bottom",
+      "bundle": "classic",
+      "resourceKey": "art/p1/v2/bg_shop_extend_bottom/spriteFrame",
+      "source": "assets/resources/art/p1/v2/bg_shop_extend_bottom.jpg",
+      "destination": "assets/classic/art/p1/v2/bg_shop_extend_bottom.jpg",
+      "size": [
+        600,
+        320
+      ],
+      "bytes": 8982,
+      "sha256": "b9e74b9f5c5d4bbb2d903e52f5b9d07d14f0a5b5038f659f4c5b32d1e7f9b097",
+      "metaCopied": true
+    },
+    {
+      "assetId": "bg_brand",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/bg_brand/spriteFrame",
+      "source": "assets/resources/art/p1/v2/bg_brand.jpg",
+      "destination": "assets/common/art/p1/v2/bg_brand.jpg",
+      "size": [
+        600,
+        1334
+      ],
+      "bytes": 178124,
+      "sha256": "2f77c0d9f17229cc0110dba40b0e5b829130a74416c90bae619902e14b3d68dd",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_title_logo",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_title_logo/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_title_logo.png",
+      "destination": "assets/common/art/p1/v2/ui_title_logo.png",
+      "size": [
+        600,
+        210
+      ],
+      "bytes": 60438,
+      "sha256": "6a6c8ab5b1f283ed5716bcdefd40071c02b3b8e4254024e9421f48cf921598f5",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_primary_normal",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_primary_normal/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_primary_normal.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_primary_normal.png",
+      "size": [
+        256,
+        96
+      ],
+      "bytes": 3809,
+      "sha256": "0602c280c6ac0b95f65d2aea228a7e18e2003279825962be989465c77fac70b8",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_primary_pressed",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_primary_pressed/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_primary_pressed.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_primary_pressed.png",
+      "size": [
+        256,
+        96
+      ],
+      "bytes": 3582,
+      "sha256": "51cbcf69a4e13ea979190868acc185c37af070c753082e7c6f3f5dfdb87c8693",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_primary_disabled",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_primary_disabled/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_primary_disabled.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_primary_disabled.png",
+      "size": [
+        256,
+        96
+      ],
+      "bytes": 3885,
+      "sha256": "4450f5d1ea9d7cfd2532f10fab4cf3a81048d38c51753d10a82565d6da46d452",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_primary_selected",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_primary_selected/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_primary_selected.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_primary_selected.png",
+      "size": [
+        256,
+        96
+      ],
+      "bytes": 5133,
+      "sha256": "cd5f626217726e994da34f15f1321cf3c35b4af8e4ce22a473770fac7fe55dfe",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_secondary_normal",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_secondary_normal/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_secondary_normal.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_secondary_normal.png",
+      "size": [
+        256,
+        96
+      ],
+      "bytes": 3841,
+      "sha256": "262ba00eb2e6b46392cb5212bdbb5af43ee7f5ffa2b1734948fccbd449599fac",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_secondary_pressed",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_secondary_pressed/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_secondary_pressed.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_secondary_pressed.png",
+      "size": [
+        256,
+        96
+      ],
+      "bytes": 3603,
+      "sha256": "f29c7d2c88a12791fbb0de959201b8ce69d26a698e9c6628bfb5a94464f60875",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_secondary_disabled",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_secondary_disabled/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_secondary_disabled.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_secondary_disabled.png",
+      "size": [
+        256,
+        96
+      ],
+      "bytes": 3896,
+      "sha256": "42222e5bcda6985e634a15177a93bd3a04350ca0f1c8cc7a6aacf46398f3810f",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_secondary_selected",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_secondary_selected/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_secondary_selected.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_secondary_selected.png",
+      "size": [
+        256,
+        96
+      ],
+      "bytes": 5014,
+      "sha256": "a47548a92fb8db9ec2adf6f4b7c089f229c445b6d78c639de5cbb4dc6a4b6fb5",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_icon_normal",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_icon_normal/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_icon_normal.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_icon_normal.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 6369,
+      "sha256": "3729314b0e5347a8c900503bf7fe84b1b7958b4fe4ec81ccb10dcc6ca1110122",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_icon_pressed",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_icon_pressed/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_icon_pressed.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_icon_pressed.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 5479,
+      "sha256": "adff0b7be04b89b87d685d033edfa40977da488e9c86e8cf064c678b516aa8e0",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_icon_disabled",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_icon_disabled/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_icon_disabled.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_icon_disabled.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 6592,
+      "sha256": "a6e89a99d8d2a09816a86f1a025a5e21df05eca78a51add6100bad61c8db5b01",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_btn_icon_selected",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_btn_icon_selected/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_btn_icon_selected.png",
+      "destination": "assets/common/art/p1/v2/ui_btn_icon_selected.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 8440,
+      "sha256": "f6683989ee5ed86f5f8cc2e61c0741b4adaaaa15258f52f29ca0539db48a99d1",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_panel_modal",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_panel_modal/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_panel_modal.png",
+      "destination": "assets/common/art/p1/v2/ui_panel_modal.png",
+      "size": [
+        320,
+        360
+      ],
+      "bytes": 6711,
+      "sha256": "e2791c03423e387ccb0a637ad603be2b5bab22a49af9ef44dc9532e13faf034f",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_panel_hud",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_panel_hud/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_panel_hud.png",
+      "destination": "assets/common/art/p1/v2/ui_panel_hud.png",
+      "size": [
+        340,
+        60
+      ],
+      "bytes": 2901,
+      "sha256": "23d791a851075c64daf3d3bcb6ad44a231ad15ee55f26647db37b340b2939fa6",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_panel_next",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_panel_next/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_panel_next.png",
+      "destination": "assets/common/art/p1/v2/ui_panel_next.png",
+      "size": [
+        140,
+        140
+      ],
+      "bytes": 5316,
+      "sha256": "2178f0eace5aa7a9ac85f0dfa6137ae59bcdaa340ff1f3b587d9a1efc54c2b45",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_panel_toast",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_panel_toast/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_panel_toast.png",
+      "destination": "assets/common/art/p1/v2/ui_panel_toast.png",
+      "size": [
+        250,
+        40
+      ],
+      "bytes": 1753,
+      "sha256": "c2c4822a06da2631bea7de7cc3b4964fa3b977b76d0fe907938b9bcfa2aaac08",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_panel_results",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_panel_results/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_panel_results.png",
+      "destination": "assets/common/art/p1/v2/ui_panel_results.png",
+      "size": [
+        330,
+        410
+      ],
+      "bytes": 7814,
+      "sha256": "335db8ec2e5497db038a953398e4af7cf56fe7e78ac3964def962662a63e38c7",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_play",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_play/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_play.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_play.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 2569,
+      "sha256": "471b92977d28ad521b673eaa778d6230577887a110d7868689f6a6b616727eed",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_continue",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_continue/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_continue.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_continue.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 1428,
+      "sha256": "41dd9f96f916ae936d359948b8cd485827c2f9242c2de082fe6bf64a41c5d906",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_pause",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_pause/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_pause.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_pause.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 1449,
+      "sha256": "057f5a4470123099a4995094bac5c4570bb8ee2fe6ec53b3f914938b714ed316",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_settings",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_settings/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_settings.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_settings.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 4825,
+      "sha256": "cb88b87fc2669c589092b55b16f67e073575afdcb56436f857bd8391380567ff",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_close",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_close/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_close.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_close.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 1597,
+      "sha256": "e8f9a6da35191fa5236f40dcd49a955870775f112fa3721a14034c0c7022b87e",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_back",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_back/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_back.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_back.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 2001,
+      "sha256": "7226b2498be43fd278884cca754277dcbccd47e448ab278efc9800c9e303ce97",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_restart",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_restart/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_restart.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_restart.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 2630,
+      "sha256": "1b1bc157c00ab64dc71aec74c41f7a6ca774ec6ba7b41c4724985097c0161268",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_home",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_home/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_home.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_home.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 3101,
+      "sha256": "0897add573f55a6af13058edf6381d9e15ab8fa33e1c1b76308e57adf39ef57f",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_music_on",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_music_on/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_music_on.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_music_on.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 2245,
+      "sha256": "739c0d39a88d800de13fff9b8578a821d7a5128bfea44998f33c05556002b0e6",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_music_off",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_music_off/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_music_off.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_music_off.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 2611,
+      "sha256": "c7509d4cbadbc6e2cfef1a12dccfe58e981327a60f7ae8d7ec1abbd6a4688f24",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_sfx_on",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_sfx_on/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_sfx_on.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_sfx_on.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 2992,
+      "sha256": "2e2441e8e88994f5011f0495602f9c70184aab2f04383043d22eacad4d5b422b",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_sfx_off",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_sfx_off/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_sfx_off.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_sfx_off.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 2510,
+      "sha256": "8653dbcffd75079f22618919f0189234e6a1337cff0a1915f93cf4fa83f00883",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_reduced_motion",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_reduced_motion/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_reduced_motion.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_reduced_motion.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 3495,
+      "sha256": "babd1bd26b33714fe2dabd60bb4180b4809d2e48085f6218b92e76f6f0b382e6",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_shake",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_shake/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_shake.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_shake.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 3989,
+      "sha256": "50f1b2ea7715bab212a33d4179e0e18ea6242f4193520f84cfb3e83ad192769e",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_info",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_info/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_info.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_info.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 3861,
+      "sha256": "2bc3790a191c32927b2fba0def291e39baa92a2acf4ec17eee6748eddefd80fe",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_warning",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_warning/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_warning.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_warning.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 3143,
+      "sha256": "55df063bca82ca7f9deb84445e52e3c3fe9ecd3030e3ea1403d4110119ee594c",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_check",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_check/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_check.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_check.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 5231,
+      "sha256": "24c50a49d3e2cf08d95b74c13854b01bab5f51c5e6dda036b5a7bf4b4ddd3fb9",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_icon_next",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_icon_next/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_icon_next.png",
+      "destination": "assets/common/art/p1/v2/ui_icon_next.png",
+      "size": [
+        96,
+        96
+      ],
+      "bytes": 2042,
+      "sha256": "990e5f631b4c260e8e4761d8b5052dba3884c774fb27dcd5a003a33ce2190e3c",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_slider_track_empty",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_slider_track_empty/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_slider_track_empty.png",
+      "destination": "assets/common/art/p1/v2/ui_slider_track_empty.png",
+      "size": [
+        256,
+        24
+      ],
+      "bytes": 1192,
+      "sha256": "572715bb7025808ed825c7632f3153872b4f2d8f93105e3687c15e60768097b6",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_slider_fill_full",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_slider_fill_full/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_slider_fill_full.png",
+      "destination": "assets/common/art/p1/v2/ui_slider_fill_full.png",
+      "size": [
+        256,
+        24
+      ],
+      "bytes": 930,
+      "sha256": "976088a90dedb618a9c27046965ac4faf5130c68f187dd68e3be92e240d6ec88",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_slider_knob",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_slider_knob/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_slider_knob.png",
+      "destination": "assets/common/art/p1/v2/ui_slider_knob.png",
+      "size": [
+        64,
+        64
+      ],
+      "bytes": 2624,
+      "sha256": "059a6fc861716ee6a6364322e3210eee785df8eaff076fc7422611f96d90408b",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_toggle_track",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_toggle_track/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_toggle_track.png",
+      "destination": "assets/common/art/p1/v2/ui_toggle_track.png",
+      "size": [
+        128,
+        64
+      ],
+      "bytes": 3059,
+      "sha256": "a2207b0172cf6d14d1d00e7737e5ec8c2e75c3acdc5fb02b14fdef53bd87d082",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_toggle_knob",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_toggle_knob/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_toggle_knob.png",
+      "destination": "assets/common/art/p1/v2/ui_toggle_knob.png",
+      "size": [
+        64,
+        64
+      ],
+      "bytes": 2666,
+      "sha256": "d63fe0c77d9ebdeaf4a1ddec366e2e6883a25de1f7e0f42003178b970fa2e324",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_badge_record",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_badge_record/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_badge_record.png",
+      "destination": "assets/common/art/p1/v2/ui_badge_record.png",
+      "size": [
+        256,
+        128
+      ],
+      "bytes": 9601,
+      "sha256": "c537be3c8892225e02a3f305a32d0cc9fc75c9f74a7e1606de0930bfa7e90d80",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_badge_mochi",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_badge_mochi/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_badge_mochi.png",
+      "destination": "assets/common/art/p1/v2/ui_badge_mochi.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 9725,
+      "sha256": "4fa334e4b4f0f8e0677d6209eaa33b229c63d45f6a6ef73f693dfca466a9b695",
+      "metaCopied": true
+    },
+    {
+      "assetId": "fx_merge_ring",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/fx_merge_ring/spriteFrame",
+      "source": "assets/resources/art/p1/v2/fx_merge_ring.png",
+      "destination": "assets/common/art/p1/v2/fx_merge_ring.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 51956,
+      "sha256": "53838488a926dec0d39f439166a2f2f7b4ccfdf2aa0fb990c2bc3e066d539dbd",
+      "metaCopied": true
+    },
+    {
+      "assetId": "fx_sparkle",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/fx_sparkle/spriteFrame",
+      "source": "assets/resources/art/p1/v2/fx_sparkle.png",
+      "destination": "assets/common/art/p1/v2/fx_sparkle.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 43257,
+      "sha256": "5d212ff8894e0d10b29af40dda8f4a23e42e05d1c405b74b407ca7b9b347a738",
+      "metaCopied": true
+    },
+    {
+      "assetId": "fx_crumb",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/fx_crumb/spriteFrame",
+      "source": "assets/resources/art/p1/v2/fx_crumb.png",
+      "destination": "assets/common/art/p1/v2/fx_crumb.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 4776,
+      "sha256": "beb5ec4154fab91f33f4b47f708fb88309a7c6184cb53de6954353f9cb887584",
+      "metaCopied": true
+    },
+    {
+      "assetId": "fx_drop_ping",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/fx_drop_ping/spriteFrame",
+      "source": "assets/resources/art/p1/v2/fx_drop_ping.png",
+      "destination": "assets/common/art/p1/v2/fx_drop_ping.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 41108,
+      "sha256": "8d758a5db118dce25b98f36178df634e0aefe5221a9b727fb07219bdd6fcd4d9",
+      "metaCopied": true
+    },
+    {
+      "assetId": "fx_mochi_star",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/fx_mochi_star/spriteFrame",
+      "source": "assets/resources/art/p1/v2/fx_mochi_star.png",
+      "destination": "assets/common/art/p1/v2/fx_mochi_star.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 39919,
+      "sha256": "2f544efda96d899ff6136eba571cb8d581f2317721313e558f364eb912b9fbdf",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_tutorial_hand_move",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_tutorial_hand_move/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_tutorial_hand_move.png",
+      "destination": "assets/common/art/p1/v2/ui_tutorial_hand_move.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 10127,
+      "sha256": "353e19ff5bf9af8b79f58b8b93abd63ada66f3432495d3fc877c0f3813bc8b5d",
+      "metaCopied": true
+    },
+    {
+      "assetId": "ui_tutorial_hand_release",
+      "bundle": "common",
+      "resourceKey": "art/p1/v2/ui_tutorial_hand_release/spriteFrame",
+      "source": "assets/resources/art/p1/v2/ui_tutorial_hand_release.png",
+      "destination": "assets/common/art/p1/v2/ui_tutorial_hand_release.png",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 9683,
+      "sha256": "5400964f6ec6dfaae18b8ea8d8ee7177b69a7df08b2cdc02d1f19678f9499db4",
+      "metaCopied": true
+    }
+  ],
+  "audio": [
+    {
+      "name": "bgm_classic.mp3",
+      "source": "assets/resources/audio/p1c/bgm_classic.mp3",
+      "destination": "assets/classic/audio/p1c/bgm_classic.mp3",
+      "bytes": 823484,
+      "sha256": "7f502da15fe5b921421e80f856fae0e06f55d14d2b05346cce49138c5733d423"
+    },
+    {
+      "name": "ui_tap.wav",
+      "source": "assets/resources/audio/p1c/ui_tap.wav",
+      "destination": "assets/classic/audio/p1c/ui_tap.wav",
+      "bytes": 6780,
+      "sha256": "63afbd7b04f656e86b37c93b7bb0fc02aa15b948d00ef7088b6c85c539b05582"
+    },
+    {
+      "name": "drop.wav",
+      "source": "assets/resources/audio/p1c/drop.wav",
+      "destination": "assets/classic/audio/p1c/drop.wav",
+      "bytes": 10574,
+      "sha256": "05855a675079eb137bc56af73c787e7352d3cf881084a50ca7827e0beac5155a"
+    },
+    {
+      "name": "collision_soft.wav",
+      "source": "assets/resources/audio/p1c/collision_soft.wav",
+      "destination": "assets/classic/audio/p1c/collision_soft.wav",
+      "bytes": 12604,
+      "sha256": "3eb301c07730454096bbf96c910bc8d6d9555400b171c83544d74b21359c53ac"
+    },
+    {
+      "name": "merge_small.wav",
+      "source": "assets/resources/audio/p1c/merge_small.wav",
+      "destination": "assets/classic/audio/p1c/merge_small.wav",
+      "bytes": 16572,
+      "sha256": "0949f05e62264184445a9267e9f0fb9c9656c39a36d69a12bd736019723583cc"
+    },
+    {
+      "name": "merge_large.wav",
+      "source": "assets/resources/audio/p1c/merge_large.wav",
+      "destination": "assets/classic/audio/p1c/merge_large.wav",
+      "bytes": 25302,
+      "sha256": "fb4698ddc1bdc359e560bd19c9278237268dcce8cdbbacfbd791809da27e7e3b"
+    },
+    {
+      "name": "shake_start.wav",
+      "source": "assets/resources/audio/p1c/shake_start.wav",
+      "destination": "assets/classic/audio/p1c/shake_start.wav",
+      "bytes": 45414,
+      "sha256": "cb360970a333d48d314fbd25032f1688eaae1e6c6459e5e550cedef04178fcfb"
+    },
+    {
+      "name": "danger_tick.wav",
+      "source": "assets/resources/audio/p1c/danger_tick.wav",
+      "destination": "assets/classic/audio/p1c/danger_tick.wav",
+      "bytes": 9252,
+      "sha256": "ec6dbeb34e62824f97152ea9c92a79b755e2777e6afe06985e7d0d6c51c259a6"
+    },
+    {
+      "name": "result.wav",
+      "source": "assets/resources/audio/p1c/result.wav",
+      "destination": "assets/classic/audio/p1c/result.wav",
+      "bytes": 54234,
+      "sha256": "8f7e3d7ace8550683af149e0d0cf4150e4fc960dd6085367b3f39e4377ed36a4"
+    }
+  ],
+  "removedResourcesPng": [
+    {
+      "path": "assets/resources/art/p1/v2/fx_crumb.png",
+      "bytes": 4776,
+      "sha256": "beb5ec4154fab91f33f4b47f708fb88309a7c6184cb53de6954353f9cb887584"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/fx_drop_ping.png",
+      "bytes": 41108,
+      "sha256": "8d758a5db118dce25b98f36178df634e0aefe5221a9b727fb07219bdd6fcd4d9"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/fx_merge_ring.png",
+      "bytes": 51956,
+      "sha256": "53838488a926dec0d39f439166a2f2f7b4ccfdf2aa0fb990c2bc3e066d539dbd"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/fx_mochi_star.png",
+      "bytes": 39919,
+      "sha256": "2f544efda96d899ff6136eba571cb8d581f2317721313e558f364eb912b9fbdf"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/fx_sparkle.png",
+      "bytes": 43257,
+      "sha256": "5d212ff8894e0d10b29af40dda8f4a23e42e05d1c405b74b407ca7b9b347a738"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_cup_classic_back.png",
+      "bytes": 26682,
+      "sha256": "3c8e319f7f160f8de02f8f4e6b731c96075e1f0d751ea57d4ec554818dd87eb4"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_cup_classic_base.png",
+      "bytes": 4643,
+      "sha256": "7b06155d20e0b1962e33066e1efa19ed90ea0fcddab32e22ff63352b7d908a28"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_cup_classic_front.png",
+      "bytes": 7638,
+      "sha256": "186ac24c4c32c61d2c89a2d3c5ec5ef00bf32320dd16879c46729b23e749d4ed"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_cup_classic_label.png",
+      "bytes": 3844,
+      "sha256": "5cbc4f4091234037f042f72823b52eb2d7195375bfe0f3b5d7e5249477b4bf86"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_cup_classic_rim_back.png",
+      "bytes": 7283,
+      "sha256": "a647ae4e792a5426405f39d6d243372812c3ab608674c1ff99d509d3a2bd56c0"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_cup_classic_rim_front.png",
+      "bytes": 7308,
+      "sha256": "6973716404850ec5e9bd4df9ac7a3c8a18cddd47bc84f967cae27cd92bfb338a"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_cup_classic_tea.png",
+      "bytes": 7188,
+      "sha256": "d91b7617d8fbd7188f85b9ebde0ff4f85628042e8f45f4d984d4f3d6fb244dd0"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_cup_shadow.png",
+      "bytes": 7163,
+      "sha256": "43c605dff20650f64779a67f05f671bacca800ef95680ff70f8b3e52c1944760"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_coconut_base.png",
+      "bytes": 32192,
+      "sha256": "42677f5b4642a938f1f8c5df7e7bc19cd7c47bfc12bd10773b0c45cd0725fb02"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_grass_jelly_base.png",
+      "bytes": 43217,
+      "sha256": "031a733214b8a127b9331c1bcc83b2f6ad64c9c2806a2946a200c72c2a9b0e0d"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_large_pearl_base.png",
+      "bytes": 27876,
+      "sha256": "d76c368537a9e5bd43e4ef4a5f05935df059af0782127ab838eed399d421cf79"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_mochi_base.png",
+      "bytes": 30833,
+      "sha256": "85949c68e70be445273ea171356b0d5185a24fbf37ead70932a2daa5d8280392"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_pudding_base.png",
+      "bytes": 45581,
+      "sha256": "7a1c62eeb5ed5c88b78d906a9f378490d80435186f8ceb3cc98d756476165447"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_red_bean_base.png",
+      "bytes": 14151,
+      "sha256": "a01f5d219a45bd3892d4f9cb037cb5b90ff48053d0b084f7e475af63ac8e7d8d"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_sago_base.png",
+      "bytes": 14294,
+      "sha256": "aa558c3782edeeec5aabe2c957f57201e53efcb95cdfd8971b38c4d93353d679"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_small_pearl_base.png",
+      "bytes": 27472,
+      "sha256": "91d03c08d4ce6d0160c1b1cfbd6cbb513361b23d282498d9321cf223becae17d"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/spr_ing_taro_base.png",
+      "bytes": 43534,
+      "sha256": "fcc595fc6e9fdc36d51b7d1fdda72d333877457492b00be942cba5bbcde52b73"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_badge_mochi.png",
+      "bytes": 9725,
+      "sha256": "4fa334e4b4f0f8e0677d6209eaa33b229c63d45f6a6ef73f693dfca466a9b695"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_badge_record.png",
+      "bytes": 9601,
+      "sha256": "c537be3c8892225e02a3f305a32d0cc9fc75c9f74a7e1606de0930bfa7e90d80"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_icon_disabled.png",
+      "bytes": 6592,
+      "sha256": "a6e89a99d8d2a09816a86f1a025a5e21df05eca78a51add6100bad61c8db5b01"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_icon_normal.png",
+      "bytes": 6369,
+      "sha256": "3729314b0e5347a8c900503bf7fe84b1b7958b4fe4ec81ccb10dcc6ca1110122"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_icon_pressed.png",
+      "bytes": 5479,
+      "sha256": "adff0b7be04b89b87d685d033edfa40977da488e9c86e8cf064c678b516aa8e0"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_icon_selected.png",
+      "bytes": 8440,
+      "sha256": "f6683989ee5ed86f5f8cc2e61c0741b4adaaaa15258f52f29ca0539db48a99d1"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_primary_disabled.png",
+      "bytes": 3885,
+      "sha256": "4450f5d1ea9d7cfd2532f10fab4cf3a81048d38c51753d10a82565d6da46d452"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_primary_normal.png",
+      "bytes": 3809,
+      "sha256": "0602c280c6ac0b95f65d2aea228a7e18e2003279825962be989465c77fac70b8"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_primary_pressed.png",
+      "bytes": 3582,
+      "sha256": "51cbcf69a4e13ea979190868acc185c37af070c753082e7c6f3f5dfdb87c8693"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_primary_selected.png",
+      "bytes": 5133,
+      "sha256": "cd5f626217726e994da34f15f1321cf3c35b4af8e4ce22a473770fac7fe55dfe"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_secondary_disabled.png",
+      "bytes": 3896,
+      "sha256": "42222e5bcda6985e634a15177a93bd3a04350ca0f1c8cc7a6aacf46398f3810f"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_secondary_normal.png",
+      "bytes": 3841,
+      "sha256": "262ba00eb2e6b46392cb5212bdbb5af43ee7f5ffa2b1734948fccbd449599fac"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_secondary_pressed.png",
+      "bytes": 3603,
+      "sha256": "f29c7d2c88a12791fbb0de959201b8ce69d26a698e9c6628bfb5a94464f60875"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_btn_secondary_selected.png",
+      "bytes": 5014,
+      "sha256": "a47548a92fb8db9ec2adf6f4b7c089f229c445b6d78c639de5cbb4dc6a4b6fb5"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_back.png",
+      "bytes": 2001,
+      "sha256": "7226b2498be43fd278884cca754277dcbccd47e448ab278efc9800c9e303ce97"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_check.png",
+      "bytes": 5231,
+      "sha256": "24c50a49d3e2cf08d95b74c13854b01bab5f51c5e6dda036b5a7bf4b4ddd3fb9"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_close.png",
+      "bytes": 1597,
+      "sha256": "e8f9a6da35191fa5236f40dcd49a955870775f112fa3721a14034c0c7022b87e"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_continue.png",
+      "bytes": 1428,
+      "sha256": "41dd9f96f916ae936d359948b8cd485827c2f9242c2de082fe6bf64a41c5d906"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_home.png",
+      "bytes": 3101,
+      "sha256": "0897add573f55a6af13058edf6381d9e15ab8fa33e1c1b76308e57adf39ef57f"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_info.png",
+      "bytes": 3861,
+      "sha256": "2bc3790a191c32927b2fba0def291e39baa92a2acf4ec17eee6748eddefd80fe"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_music_off.png",
+      "bytes": 2611,
+      "sha256": "c7509d4cbadbc6e2cfef1a12dccfe58e981327a60f7ae8d7ec1abbd6a4688f24"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_music_on.png",
+      "bytes": 2245,
+      "sha256": "739c0d39a88d800de13fff9b8578a821d7a5128bfea44998f33c05556002b0e6"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_next.png",
+      "bytes": 2042,
+      "sha256": "990e5f631b4c260e8e4761d8b5052dba3884c774fb27dcd5a003a33ce2190e3c"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_pause.png",
+      "bytes": 1449,
+      "sha256": "057f5a4470123099a4995094bac5c4570bb8ee2fe6ec53b3f914938b714ed316"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_play.png",
+      "bytes": 2569,
+      "sha256": "471b92977d28ad521b673eaa778d6230577887a110d7868689f6a6b616727eed"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_reduced_motion.png",
+      "bytes": 3495,
+      "sha256": "babd1bd26b33714fe2dabd60bb4180b4809d2e48085f6218b92e76f6f0b382e6"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_restart.png",
+      "bytes": 2630,
+      "sha256": "1b1bc157c00ab64dc71aec74c41f7a6ca774ec6ba7b41c4724985097c0161268"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_settings.png",
+      "bytes": 4825,
+      "sha256": "cb88b87fc2669c589092b55b16f67e073575afdcb56436f857bd8391380567ff"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_sfx_off.png",
+      "bytes": 2510,
+      "sha256": "8653dbcffd75079f22618919f0189234e6a1337cff0a1915f93cf4fa83f00883"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_sfx_on.png",
+      "bytes": 2992,
+      "sha256": "2e2441e8e88994f5011f0495602f9c70184aab2f04383043d22eacad4d5b422b"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_shake.png",
+      "bytes": 3989,
+      "sha256": "50f1b2ea7715bab212a33d4179e0e18ea6242f4193520f84cfb3e83ad192769e"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_icon_warning.png",
+      "bytes": 3143,
+      "sha256": "55df063bca82ca7f9deb84445e52e3c3fe9ecd3030e3ea1403d4110119ee594c"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_panel_hud.png",
+      "bytes": 2901,
+      "sha256": "23d791a851075c64daf3d3bcb6ad44a231ad15ee55f26647db37b340b2939fa6"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_panel_modal.png",
+      "bytes": 6711,
+      "sha256": "e2791c03423e387ccb0a637ad603be2b5bab22a49af9ef44dc9532e13faf034f"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_panel_next.png",
+      "bytes": 5316,
+      "sha256": "2178f0eace5aa7a9ac85f0dfa6137ae59bcdaa340ff1f3b587d9a1efc54c2b45"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_panel_results.png",
+      "bytes": 7814,
+      "sha256": "335db8ec2e5497db038a953398e4af7cf56fe7e78ac3964def962662a63e38c7"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_panel_toast.png",
+      "bytes": 1753,
+      "sha256": "c2c4822a06da2631bea7de7cc3b4964fa3b977b76d0fe907938b9bcfa2aaac08"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_slider_fill_full.png",
+      "bytes": 930,
+      "sha256": "976088a90dedb618a9c27046965ac4faf5130c68f187dd68e3be92e240d6ec88"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_slider_knob.png",
+      "bytes": 2624,
+      "sha256": "059a6fc861716ee6a6364322e3210eee785df8eaff076fc7422611f96d90408b"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_slider_track_empty.png",
+      "bytes": 1192,
+      "sha256": "572715bb7025808ed825c7632f3153872b4f2d8f93105e3687c15e60768097b6"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_title_logo.png",
+      "bytes": 60438,
+      "sha256": "6a6c8ab5b1f283ed5716bcdefd40071c02b3b8e4254024e9421f48cf921598f5"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_toggle_knob.png",
+      "bytes": 2666,
+      "sha256": "d63fe0c77d9ebdeaf4a1ddec366e2e6883a25de1f7e0f42003178b970fa2e324"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_toggle_track.png",
+      "bytes": 3059,
+      "sha256": "a2207b0172cf6d14d1d00e7737e5ec8c2e75c3acdc5fb02b14fdef53bd87d082"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_tutorial_hand_move.png",
+      "bytes": 10127,
+      "sha256": "353e19ff5bf9af8b79f58b8b93abd63ada66f3432495d3fc877c0f3813bc8b5d"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/ui_tutorial_hand_release.png",
+      "bytes": 9683,
+      "sha256": "5400964f6ec6dfaae18b8ea8d8ee7177b69a7df08b2cdc02d1f19678f9499db4"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/bg_brand.jpg",
+      "bytes": 178124,
+      "sha256": "2f77c0d9f17229cc0110dba40b0e5b829130a74416c90bae619902e14b3d68dd"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/bg_shop_base.jpg",
+      "bytes": 79729,
+      "sha256": "cbca115ad0cb6d5a2ec2039ee52024750d15f4a437e52494588b0a520487a297"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/bg_shop_extend_bottom.jpg",
+      "bytes": 8982,
+      "sha256": "b9e74b9f5c5d4bbb2d903e52f5b9d07d14f0a5b5038f659f4c5b32d1e7f9b097"
+    },
+    {
+      "path": "assets/resources/art/p1/v2/bg_shop_extend_top.jpg",
+      "bytes": 6673,
+      "sha256": "bf34ec1f0b668f8a32ec8d1f2f1ec97f074a8aefcf79005df9847455fcb62e31"
+    }
+  ],
+  "metaPolicy": "Original workspace assets and sidecar metadata were not changed; selected existing PNG sidecar hashes copied byte-for-byte; only two isolated bundle directory meta files were generated for this release source."
+}
