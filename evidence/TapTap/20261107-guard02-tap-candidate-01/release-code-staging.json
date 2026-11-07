@@ -1,0 +1,118 @@
+{
+  "project": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-guard02-tap-candidate-01",
+  "edits": [
+    {
+      "path": "assets/scenes/PhysicsLab.scene",
+      "removedSha256": "5437dfcee7d5fd213738463c47ae55ce1a86981947846f3db99e631506d27e2f",
+      "bytes": 5192
+    },
+    {
+      "path": "assets/scenes/PhysicsLab.scene.meta",
+      "removedSha256": "59c60acb1eb19edd951dbe246bd1ac433c7cc7be209fa7ed92bacfdfb2277e57",
+      "bytes": 192
+    },
+    {
+      "path": "assets/scripts/debug.meta",
+      "removedSha256": "2e0fc5d690762a7259c6526b19b7d8cbd8f37f7b502d5e481922a8fe42bb913a",
+      "bytes": 178
+    },
+    {
+      "path": "assets/scripts/debug/ArtGallery.ts",
+      "sha256": "9643acec06b8998e05c09880d2abff933bf4e179cc8bdf8d3ce9f82c9a68c1ee",
+      "bytes": 5034
+    },
+    {
+      "path": "assets/scripts/debug/ArtGallery.ts.meta",
+      "sha256": "0c5cf23ee0908a747e938fe41f2e501b3aab233e550cfb02540cede54841e478",
+      "bytes": 171
+    },
+    {
+      "path": "assets/scripts/debug/FakeRewardedAdProvider.ts",
+      "sha256": "e4fe0bb5a28d2d35b76868eef14f44278936e0909002ffa82f6b91c039d3eb60",
+      "bytes": 2126
+    },
+    {
+      "path": "assets/scripts/debug/FakeRewardedAdProvider.ts.meta",
+      "sha256": "3944726938410c9edd78b23e5650f7aec72aa2d6b99a6526e812e04e05d38733",
+      "bytes": 171
+    },
+    {
+      "path": "assets/scripts/debug/LabPauseGate.ts",
+      "sha256": "6ecfbd9a0fe098a0efac1731b14a6441bf235867d898c60ce7face8ee74d4d96",
+      "bytes": 2345
+    },
+    {
+      "path": "assets/scripts/debug/LabPauseGate.ts.meta",
+      "sha256": "ab1be38d51638bc558a152e9b98025fd5a4e47edb0ad4a9a2af37b50f5f6ca87",
+      "bytes": 211
+    },
+    {
+      "path": "assets/scripts/debug/LabProbe.ts",
+      "sha256": "eeb2de1c4efe9cb3aac3742806cbcea0e97374876b395970409bb82a37ad869a",
+      "bytes": 22216
+    },
+    {
+      "path": "assets/scripts/debug/LabProbe.ts.meta",
+      "sha256": "0c23bfc7dc815cadceb1586e6ff4391bd1ac790eb040c52a0d278bf5353f86ec",
+      "bytes": 211
+    },
+    {
+      "path": "assets/scripts/debug/NineSizeQueueLedger.ts",
+      "sha256": "443c142206bca7ca87a2812db6959ab93a9ce7255b11c2017fdf116b3746263e",
+      "bytes": 2539
+    },
+    {
+      "path": "assets/scripts/debug/NineSizeQueueLedger.ts.meta",
+      "sha256": "c288c46fc2fcd76b7e876471e7a1c0f4c52062f54cf6f16612dff08465e55398",
+      "bytes": 211
+    },
+    {
+      "path": "assets/scripts/debug/PhysicsLab.ts",
+      "sha256": "03720580e5e9ad2f8096cde047ff9fe0c042dd9ebfa7dee8745a9f20cb76d3f8",
+      "bytes": 73518
+    },
+    {
+      "path": "assets/scripts/debug/PhysicsLab.ts.meta",
+      "sha256": "3791bc3f766950b72e30ee51761f30b2e4d55454a383c735ed845e959ccabf42",
+      "bytes": 211
+    },
+    {
+      "path": "assets/scripts/bootstrap/AppRoot.ts",
+      "beforeSha256": "1c0ed70d1120a1ab3c4234158f327f92af8b210d9b57cc75d6e8fc8d4789ac95",
+      "afterSha256": "814e40537fc4e5a9c2e8bc44c404f879d8a8522df894e78c0d3b5b0d935b6e52",
+      "exactNodeEdits": 4
+    },
+    {
+      "path": "assets/scripts/presentation/GameRoot.ts",
+      "beforeSha256": "718ab3ebdb427975784ec51fcf7556aab1ead482bc8ed58c4f1efb3f0b5874af",
+      "afterSha256": "860e82881ff0d8cd10f8a064e9f8b7419da7c966556182805ea918c990338358",
+      "exactNodeEdits": 5
+    },
+    {
+      "path": "assets/scripts/presentation/GameRoot.ts",
+      "beforeSha256": "860e82881ff0d8cd10f8a064e9f8b7419da7c966556182805ea918c990338358",
+      "afterSha256": "728aa76e77b64d39fafd24c6b06473b727575cbc4c3f06fc05c1d970f9a744cc",
+      "exactNodeEdits": 54
+    },
+    {
+      "path": "assets/scripts/physics/CocosPhysicsAdapter.ts",
+      "beforeSha256": "b40ffeaf4885733ac0476acece0d420c9a7b2449848a8146ff300fb860110c7d",
+      "afterSha256": "9750302998fcbc8f55cd8adf27913ba51fd21ff5fe4bfb312a25348aa8cdfbae",
+      "exactNodeEdits": 30
+    },
+    {
+      "path": "assets/scripts/core/RunEngine.ts",
+      "beforeSha256": "23390166cf8051a335d448591c057e6bfb3490717690593309bccad571ecb00c",
+      "afterSha256": "5dd9db725589be9f0ad87326951cd7b573f8b2b72ec1b02937e14e3088346102",
+      "exactNodeEdits": 2
+    },
+    {
+      "path": "assets/scripts/platform/RewardedAdProviderFactory.ts",
+      "beforeSha256": "6b6ed8e92c9b1f05d159698e6a5abed6f1e680447c9db84b0cff1c86d206dc10",
+      "afterSha256": "6c7a4483989f72e4de2f00065626daf9e3d9b4ee69f502c10664eb48207ca266",
+      "exactNodeEdits": 4
+    }
+  ],
+  "parser": "TypeScript compiler AST; exact node kinds/names/counts asserted; no text-pattern rewrite",
+  "workspaceSourcesAndAssetsModified": false
+}

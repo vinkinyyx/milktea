@@ -1,5 +1,73 @@
 # 当前交付候选
 
+## 2026-11-07 强颠杯与杯口保护候选（当前构建，未上传）
+
+| buildId | 产物 | 版本 | 字节 | SHA256 |
+|---|---|---|---|---|
+| `20261107-guard02-tap-candidate-01` | [game.zip](../../build-artifacts/cocos-taptap-minigame-build/20261107-guard02-tap-candidate-01/TapBuild/game.zip) | 1.7.3 | 3,040,925 | `b7a8d0acf69b172ead446602ea8e8b47be8fb939c972d4e9d44d8bb7c3b2147f` |
+
+- 本轮按 docs53 完成 CUP-01 至 CUP-03（低处猛颠、高处横拨、随真实杯体移动的杯口物理保护）和 REC-01/02（首存失败可重试、渲染/续局失败保留活动局）。定稿参数与实测表见 [docs53 第 12 节](../../docs/53-strong-cup-bump-and-release-closeout.md#12-本轮实施与验收状态2026-11-07)。
+- 本地验收：真实 Edge + Playwright **45/45 PASS**；`verify_rewarded_shake.cjs` **200 PASS / 0 FAIL**（普通与无 `TextEncoder` 环境一致）；config/contract 镜像、typecheck、`verify:host-utf8`（110 样本/660 比较/6 模式）、`verify:art`（71 图，errors=[]）全部通过。
+- 包身份：解压 5,217,185 字节、394 文件、77 PNG；`assets/main/index.js` 仅含本 buildId 一次，无旧 `20261107-bump01…`、`__P1B_FIXTURES__`、`INJECTED_RENDER_FAULT`、`debugRenderFaults`、source map 或 PhysicsLab；315 项源清单，`originalSourceChanges=[]`。
+- `runtimeVerified=false`，`status=LOCAL_CONVERSION_PASS_NOT_HOST_VALIDATED`。**未上传、未真机、未提审、未发布**，不能把本地转换通过当作 Tap 宿主或广告验收。
+- 证据目录：`evidence/TapTap/20261107-guard02-tap-candidate-01/`、`evidence/CupAuto/20261107-guard04-web-debug-01/web/runtime/`。
+- 外部阻断：广告未开通（`status=0`，无 `space_id`）→ ADS-01 BLOCKED；草稿主包仍指向失效 `433619`，`region_flag_ios` 缺失，资质查询被阻塞；ADB 无设备 → HOST-01/PERF-01 NOT_RUN。上传、绑定、资料/资质写入与提审均待用户具体授权。
+
+## 2026-11-07 一键颠杯候选（历史构建，未上传）
+
+| buildId | 产物 | 版本 | 字节 | SHA256 |
+|---|---|---|---|---|
+| `20261107-bump01-tap-candidate-01` | [game.zip](../../build-artifacts/cocos-taptap-minigame-build/20261107-bump01-tap-candidate-01/TapBuild/game.zip) | 1.7.2 | 3,036,668 | `fd7239e226f9e5a1acd07cdb7c55fe6c84faa52fe996f266b65eddc8870e8b11` |
+
+- 本轮实施 BUMP-01 至 BUMP-06：一次真实物理速度脉冲（垂直 320 DU/s、水平向心 70 + 散布 20、向上钳制 420）、动作 39 tick + 冷却 21 tick、launch delay 6 tick、基础 2 次/奖励 5 次、空杯不扣次数、杯身 6/12 DU 表现位移、HUD 单一状态源与颠杯文案。
+- 本地门禁：config/contract 镜像、typecheck、`verify:host-utf8`、`verify:art` 通过；回归 **193 PASS / 0 FAIL**，普通与无 `TextEncoder` 环境一致。真实浏览器证据见 `evidence/CupAuto/20261107-bump02-web-debug-01/web/runtime/`：不同质量实体 delta 均为 3.2 m/s、静置后上移 48.5/47.6 DU、暂停冻结、刷新同 runId/tick/baseUsed、次数耗尽无脉冲。
+- 包身份：398 文件（77 PNG）、解压 5,192,757 字节、CRC 通过；staging UTF-8 门禁 PASS（110 样本/660 比较/6 种宿主模式）；`assets/main/index.js` 仅含本 buildId 一次，无旧 buildId、Debug API 字符串或 source map；315 项源清单，`originalSourceChanges=[]`。
+- `runtimeVerified=false`，`status=LOCAL_CONVERSION_PASS_NOT_HOST_VALIDATED`。**未上传、未真机、未提审、未发布**，不能把本地转换通过当作宿主或广告验收。
+- 证据目录：`evidence/TapTap/20261107-bump01-tap-candidate-01/`（result.json、package-identity.json、staged-source-manifest.json、host-utf8-gate.log）。
+- 外部阻断：广告未开通（无 space_id）；草稿主包仍指向失效的 433619；`region_flag_ios` 缺失；资质查询被草稿引用阻塞；ADB 无设备。上传、绑定、资料/资质写入与提审均待用户具体授权。
+
+## 2026-11-07 用户上传后的自测核查
+
+TapTap 开发包 `444838` 已就绪，平台显示版本 `1.7.0`、大小 `3,035,417` 字节，与本地 host6 ZIP 大小一致。平台列表未返回 SHA256。用户报障截图顶部显示 `20261107-host3-bootguard-candidate-02`，本地 host6 ZIP 的 `assets/main/index.js` 则含 `20261107-host6-gate-candidate-01`。用户已确认通过 [444838 专属自测入口](../../build-artifacts/taptap-selftest-444838.png) 可以自测。完整真机验收仍待补齐，原始构建记录中的 `runtimeVerified=false` 保留。
+
+## 2026-11-07 1.7.1 host6（当前构建；host5仍是未宿验证的同源包）
+
+| buildId | 产物 | 字节 | SHA256 |
+|---|---|---|---|
+| `20261107-host6-gate-candidate-01` | [game.zip](../../build-artifacts/cocos-taptap-minigame-build/20261107-host6-gate-candidate-01/TapBuild/game.zip) | 3,035,417 | `ba395b0c13f11735217b7d99a3c01f83f6090155a87f44f861c2219c4661b287` |
+
+- 本轮只改构建/测试工具与 `奶茶挤挤/package.json` 命令，运行时代码与host5同源；host6的价值是带强制门禁、可追溯的新构建，不宣称宿主已验证。`runtimeVerified=false`，`status=LOCAL_CONVERSION_PASS_NOT_HOST_VALIDATED`。
+- DEV-01：`npm run verify:host-utf8 --prefix 奶茶挤挤` 通过；`build_taptap_minigame.py` 在Creator之前用**隔离staging源码**执行门禁（660比较/6种TextEncoder形态），失败即停止。失败注入构建`20261107-dev01-gate-injection-01`确实在Creator前退出，未生成`creator.log`/ZIP，证据在`evidence/Acceptance/20261107-dev01-gate-injection-01/`。
+- DEV-02：`node tools/verify_rewarded_shake.cjs` 现为 **185 PASS / 0 FAIL**（原170项保留 + TextEncoder缺失/不可构造/构造抛错三种模式下真实`LocalSaveRepository`新存档commit、readback、续局runId/checksum，共15项）；无全局TextEncoder整轮回归同为185/0。
+- DEV-03：`result.json`记录`hostUtf8Gate`（PASS、staging源路径、源SHA256 `c3e14dbc…2b72`、6模式、660比较）、`sourceManifestCount=315`、`sourceManifestSha256=d41d426f…7545`、`packageBytes/packageSha256`、`runtimeVerified=false`；本表与ZIP实际字节/SHA一致。Creator退出36，ZIP CRC通过，398文件/77PNG，构建脚本对全部JS扫描确认无`FakeRewardedAdProvider`/`debug-mock`/`rewardedMock`/`__P1B_FIXTURES__`/`makeFixtureSnapshot`/`__P1B_DIAGNOSTICS__`，且无source map（引擎`cc.js`中的普通英文词fixture不属于项目调试入口）。
+- 其他本地门禁：typecheck 0错误；`verify:art` 71 art + 7 effect 通过；合同镜像逐字节一致；`validate_design.py`仍因历史`client/README.md`路径不存在而未跑完（既有问题，与本次改动无关，未修改脚本）。
+- 平台只读事实（2026-11-07）：包体列表有1.0.0–1.6.0开发包，资料页`main`槽绑定的仍是1.2.0（package 433619）；`get-available-package-types`返回`available=[]`、`declared=["spark"]`，与已存在的小游戏包不一致，需平台侧确认，未改声明/绑定。广告MCP当前为**未开通**（status=0），无真实广告位；CLI登录有效。
+- 未上传、未提审、未发布、未替换线上包。host5（1.7.0，3,035,170字节，`b0a3217d…b840`）仍保留作对照；两者都必须用同SHA Tap宿主验证，旧host3截图不能判定本轮失败。
+
+## 2026-11-07 1.7.0 host5（历史候选，未宿验证）
+
+| buildId | 产物 | 字节 | SHA256 |
+|---|---|---|---|
+| `20261107-host5-utf8-candidate-01` | [game.zip](../../build-artifacts/cocos-taptap-minigame-build/20261107-host5-utf8-candidate-01/TapBuild/game.zip) | 3,035,170 | `b0a3217d9b4e1442a6228390c3b732eae90bc559b400cd902710fa527077b840` |
+
+- 用户截图是host3/1.5.0，明确错误为新局存档哈希的`TextEncoder is not a constructor`。host4/1.6.0的typeof检查仍无法处理“函数但不可构造”；本轮已在VM复现。
+- host5统一手写UTF-8，不依赖宿主TextEncoder；660组比较通过，普通/缺失TextEncoder环境完整回归各170/0，typecheck通过。
+- Creator返回36，构建成功；71art+7effect、78资源、CRC/派生哈希通过。315项源清单一致，`originalSourceChanges=[]`。无source map/fixture全局/FakeRewardedAdProvider。
+- 版本1.7.0，解压5,187,680字节、396文件、77PNG，比host4小30字节。源稿、存档schema、SHA算法、广告策略未改。
+- **只代表本地修复与候选打包通过**：`runtimeVerified=false`，本轮未上传；正常开局与错误UI、真实广告、启动/内存仍需同SHA Tap验证。手机顶部须显示host5才是本次包，host3截图不能用于判定本包失败。
+- 详细根因和验证见[docs50](../../docs/50-host-boot-injection-fix/spec.md)，原始构建/校验结果见`evidence/TapTap/20261107-host5-utf8-candidate-01/`。
+
+## 2026-11-07 1.6.0 候选（宿主 TextEncoder 修复，优先）
+
+| 类型 | buildId | 产物 | 字节 | SHA256 |
+|---|---|---|---|---|
+| Tap 候选 | `20261107-host4-textencoder-candidate-01` | [game.zip](../../build-artifacts/cocos-taptap-minigame-build/20261107-host4-textencoder-candidate-01/TapBuild/game.zip) | 3,035,200 | `a125f699f34b48f7640073139f54099170688051b7a5786a7332d184ebf310cc` |
+
+- 触发证据：1.5.0 在 Tap 宿主内诊断条显示 `render-error | 新局存档失败：档案规范化失败：TypeError: TextEncoder is not a constructor`。
+- 修复：`assets/scripts/core/Sha256.ts` 的 `sha256Utf8()` 增加手写 UTF-8 回退（优先 `TextEncoder`），已与浏览器实现逐字节比对一致。
+- 本地断言：`typecheck=0`、`creatorExitCode=36`、注入块无致命 `fetch` 抛错、platform 判断为安全版、包内含 `BootDiagnostics` 与 UTF-8 回退；`runtimeVerified=false`，状态 `LOCAL_CONVERSION_PASS_NOT_HOST_VALIDATED`。
+- 下一步：上传该 `game.zip`（版本 1.6.0）→ 取新 `package_id` 与自测码 → 宿主实测回传截图。仍未上传、未提审、未发布。
+
 ## 2026-11-07 最新独立核验（优先）
 
 94baeac3…31bc89、3,030,312字节候选及313项源身份核对通过；170/0和独立免费恢复探针通过。当前需要处理的是实际平台登录/包体声明与真机接入，见[docs49](../../docs/49-final-delivery-platform-device-plan.md)，不再将已修客户端缺陷列为阻断。广告MCP TOKEN_REVOKED、CLI有效；用户确认1021353与USB调试路线；ADB尚无设备。尚无真实两广告/同SHA Tap开局及400MB峰值关闭证据，仍为诊断候选，未上传或晋升。

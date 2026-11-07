@@ -102,12 +102,16 @@ export class LocalSaveRepository implements IBundleSaveRepository {
         const payload={...parsed.payload,profile:SaveMigration.profileV2(parsed.payload.profile),run:null};
         return {envelope:SaveCodec.createEnvelopeV2(parsed.revision,payload),error:null,migrated:true};
       }
+      if(parsed?.schemaVersion===2&&parsed.payload?.run?.saveSchemaVersion===5&&SaveCodec.verifyEnvelopeV2(parsed)&&SaveValidator.profileV2(parsed.payload.profile)&&SaveValidator.legacySnapshotV5(parsed.payload.run).valid){
+        const payload={...parsed.payload,profile:parsed.payload.profile,run:SaveMigration.runV5(parsed.payload.run)};
+        return {envelope:SaveCodec.createEnvelopeV2(parsed.revision,payload),error:null,migrated:true};
+      }
       if(parsed?.schemaVersion===2&&parsed.payload?.run?.saveSchemaVersion===4&&SaveCodec.verifyEnvelopeV2(parsed)&&SaveValidator.profileV2(parsed.payload.profile)&&SaveValidator.legacySnapshotV4(parsed.payload.run).valid){
-        const payload={...parsed.payload,profile:SaveMigration.profileV2(parsed.payload.profile),run:SaveMigration.runV4(parsed.payload.run)};
+        const payload={...parsed.payload,profile:SaveMigration.profileV2(parsed.payload.profile),run:SaveMigration.runV5(SaveMigration.runV4(parsed.payload.run))};
         return {envelope:SaveCodec.createEnvelopeV2(parsed.revision,payload),error:null,migrated:true};
       }
       if(parsed?.schemaVersion===2&&parsed.payload?.run?.saveSchemaVersion===3&&SaveCodec.verifyEnvelopeV2(parsed)&&SaveValidator.profileV2(parsed.payload.profile)&&SaveValidator.legacySnapshot(parsed.payload.run,3).valid){
-        const payload={...parsed.payload,profile:SaveMigration.profileV2(parsed.payload.profile),run:SaveMigration.runV3(parsed.payload.run)};
+        const payload={...parsed.payload,profile:SaveMigration.profileV2(parsed.payload.profile),run:SaveMigration.runV5(SaveMigration.runV3(parsed.payload.run))};
         return {envelope:SaveCodec.createEnvelopeV2(parsed.revision,payload),error:null,migrated:true};
       }
       if(SaveValidator.legacyEnvelope(parsed)){

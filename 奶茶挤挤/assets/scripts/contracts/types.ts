@@ -16,12 +16,12 @@ export interface IngredientState {
   angleRadians: number; angularVelocity: number; bornTick: number;
   dangerEligible: boolean; hasEnteredCup: boolean; spillTicks: number; sleeping: boolean;
 }
-export interface ShakeState { baseUsed: number; extraGranted: number; extraUsed: number; activeStartTick: number | null; cooldownUntilTick: number }
+export interface ShakeState { baseUsed: number; extraGranted: number; extraUsed: number; activeStartTick: number | null; cooldownUntilTick: number; guardMembers: number[]; guardStableTicks: number; guardReleased: boolean }
 export interface RngState { algorithm: 'xorshift32_v1_nonzero_seed'; state: number; drawCount: number }
 export interface SpawnRngState { algorithm: 'spawn-xorshift32-v1'; state: number; drawCount: number }
 export interface SpawnDescriptor { level: Level; xDu: number; vxDuPerSecond: number; angularVelocity: number }
 export interface RunSnapshot {
-  saveSchemaVersion: 5; rulesVersion: string; appVersion: string; runId: UUID; epoch: number;
+  saveSchemaVersion: 6; rulesVersion: string; appVersion: string; runId: UUID; epoch: number;
   revision: number; stageId: StageId; mode: GameMode; boardType: BoardType;
   state: PhaseState; tick: number; nextEntityId: number; nextCommandSequence: number;
   score: number; maxLevel: Level; dropIndex: number; currentLevel: Level; nextLevel: Level;
@@ -83,7 +83,14 @@ export interface IPhysicsAdapter {
   replaceParentsWithChild(parents: readonly [number, number], child: BodyDefinition): Result<void>;
   stepFixed(): void;
     readonly lastStepTimings?: { syncToPhysics: number; physicsStep: number; syncFromPhysics: number; velocityClamp: number };
-  applyHorizontalAcceleration(entityId: number, accelerationSpecUnits: number): void;
+  /** Apply one deterministic velocity-impulse to a live body. delta is in DU/s; the adapter converts by real mass. */
+  applyVelocityImpulse(entityId: number, deltaVelocityDuPerSecond: Vec2): void;
+  /**
+   * Arm/refresh the temporary mouth guard that follows the real kinematic cup. Contacts are filtered so only the
+   * current protected members collide with it; the guard is removed at release.
+   */
+  ensureShakeGuard(members: readonly number[], cue: { centerXDu: number; offsetXDu: number; velocityXDuPerSecond: number }): void;
+  releaseShakeGuard(): void;
   getContacts(): readonly ContactPair[];
   getBody(entityId: number): PhysicalBodyState | undefined;
   restoreBodies(states: readonly IngredientState[]): void;
@@ -104,6 +111,8 @@ export interface LocalCommandEnvelope { command: RunCommand; ownerEpoch: number 
 
 /** Legacy schema (v4 run / v2 profile) kept only for safe migration reads. */
 export type LegacyRunSnapshotV4 = Omit<RunSnapshot, 'saveSchemaVersion' | 'revive'> & { saveSchemaVersion: 4 };
+/** Schema-5 saves predate the guarded bump window; migrated with guard fields released. */
+export type LegacyRunSnapshotV5 = Omit<RunSnapshot, 'saveSchemaVersion' | 'shake'> & { saveSchemaVersion: 5; shake: { baseUsed: number; extraGranted: number; extraUsed: number; activeStartTick: number | null; cooldownUntilTick: number } };
 export type LegacyRunSnapshotV3 = Omit<RunSnapshot, 'saveSchemaVersion' | 'spawnRng' | 'autoDrop' | 'revive'> & { saveSchemaVersion:3; autoDrop:{nextDueTick:number} };
 /** Legacy schema (v2 runs / v1 profile) kept only for safe migration reads. */
 export type LegacyRunSnapshotV2 = Omit<RunSnapshot, 'saveSchemaVersion' | 'shake' | 'spawnRng' | 'autoDrop' | 'revive'> & {

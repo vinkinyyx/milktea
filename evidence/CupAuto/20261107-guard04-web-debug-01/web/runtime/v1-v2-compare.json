@@ -1,0 +1,195 @@
+{
+  "startedAt": "2026-11-07T06:55:50.920Z",
+  "variants": {
+    "A-noop-v2": {
+      "url": "http://127.0.0.1:8766/",
+      "action": "noop",
+      "t0": 86,
+      "metrics": [
+        {
+          "id": 1,
+          "level": 1,
+          "baseY": 379.26,
+          "rise": 0,
+          "peakAbsVx": 0
+        },
+        {
+          "id": 2,
+          "level": 2,
+          "baseY": 385.57,
+          "rise": 0,
+          "peakAbsVx": 187.27
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "baseY": 967.92,
+          "rise": -7.53,
+          "peakAbsVx": 11.72
+        }
+      ],
+      "impulses": 0,
+      "status": {
+        "lastTickFault": null,
+        "tick": 216
+      }
+    },
+    "B-shake-v1": {
+      "url": "http://127.0.0.1:8765/",
+      "action": "shake",
+      "t0": 88,
+      "metrics": [
+        {
+          "id": 1,
+          "level": 1,
+          "baseY": 379.26,
+          "rise": 49.07,
+          "peakAbsVx": 5.68
+        },
+        {
+          "id": 2,
+          "level": 2,
+          "baseY": 385.57,
+          "rise": 49.07,
+          "peakAbsVx": 5.68
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "baseY": 952.6,
+          "rise": -8.06,
+          "peakAbsVx": 30.71
+        }
+      ],
+      "impulses": 3,
+      "status": {
+        "lastTickFault": null,
+        "tick": 218
+      }
+    },
+    "C-shake-v2": {
+      "url": "http://127.0.0.1:8766/",
+      "action": "shake",
+      "t0": 86,
+      "metrics": [
+        {
+          "id": 1,
+          "level": 1,
+          "baseY": 379.26,
+          "rise": 107.91,
+          "peakAbsVx": 108.27
+        },
+        {
+          "id": 2,
+          "level": 2,
+          "baseY": 385.57,
+          "rise": 114.01,
+          "peakAbsVx": 108.67
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "baseY": 967.92,
+          "rise": -7.53,
+          "peakAbsVx": 135.21
+        }
+      ],
+      "impulses": 3,
+      "status": {
+        "lastTickFault": null,
+        "tick": 216
+      }
+    }
+  },
+  "diff": {
+    "v1VsNoop": [
+      {
+        "id": 1,
+        "level": 1,
+        "riseA": 0,
+        "riseB": 49.07,
+        "riseDelta": 49.07,
+        "vxA": 0,
+        "vxB": 5.68
+      },
+      {
+        "id": 2,
+        "level": 2,
+        "riseA": 0,
+        "riseB": 49.07,
+        "riseDelta": 49.07,
+        "vxA": 187.27,
+        "vxB": 5.68
+      },
+      {
+        "id": 3,
+        "level": 1,
+        "riseA": -7.53,
+        "riseB": -8.06,
+        "riseDelta": -0.53,
+        "vxA": 11.72,
+        "vxB": 30.71
+      }
+    ],
+    "v2VsNoop": [
+      {
+        "id": 1,
+        "level": 1,
+        "riseA": 0,
+        "riseB": 107.91,
+        "riseDelta": 107.91,
+        "vxA": 0,
+        "vxB": 108.27
+      },
+      {
+        "id": 2,
+        "level": 2,
+        "riseA": 0,
+        "riseB": 114.01,
+        "riseDelta": 114.01,
+        "vxA": 187.27,
+        "vxB": 108.67
+      },
+      {
+        "id": 3,
+        "level": 1,
+        "riseA": -7.53,
+        "riseB": -7.53,
+        "riseDelta": 0,
+        "vxA": 11.72,
+        "vxB": 135.21
+      }
+    ],
+    "v2VsV1": [
+      {
+        "id": 1,
+        "riseV1": 49.07,
+        "riseV2": 107.91,
+        "riseGain": 58.84,
+        "vxV1": 5.68,
+        "vxV2": 108.27
+      },
+      {
+        "id": 2,
+        "riseV1": 49.07,
+        "riseV2": 114.01,
+        "riseGain": 64.94,
+        "vxV1": 5.68,
+        "vxV2": 108.67
+      },
+      {
+        "id": 3,
+        "riseV1": -8.06,
+        "riseV2": -7.53,
+        "riseGain": 0.53,
+        "vxV1": 30.71,
+        "vxV2": 135.21
+      }
+    ]
+  },
+  "pass": {
+    "v2LowRise": true,
+    "v2StrongerThanV1": true
+  },
+  "finishedAt": "2026-11-07T06:56:11.206Z"
+}

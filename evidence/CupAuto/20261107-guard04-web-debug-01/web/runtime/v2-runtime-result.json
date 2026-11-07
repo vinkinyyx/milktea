@@ -1,0 +1,4437 @@
+{
+  "url": "http://127.0.0.1:8767/",
+  "expectedBuildId": "20261107-guard04-web-debug-01",
+  "startedAt": "2026-11-07T06:53:39.997Z",
+  "steps": [
+    {
+      "ctx": "A-real",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "A",
+      "initialMenu": {
+        "screen": "MENU",
+        "phase": "MENU",
+        "paused": false,
+        "pauseReasons": [],
+        "stepCount": 0,
+        "clockTick": 0,
+        "baseTick": 0,
+        "tick": 0,
+        "lastCommandOutcome": null,
+        "lastTickFault": null,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "contactEnumeration": null,
+        "listenerCount": 0,
+        "worldId": 0,
+        "notice": "",
+        "saveRevision": 0,
+        "saveMode": "persistent"
+      }
+    },
+    {
+      "ctx": "A-real",
+      "click": "menu-start-new",
+      "design": [
+        375,
+        404
+      ],
+      "at": "2026-11-07T06:53:43.435Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "tutorial-skip-while-error",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:53:43.985Z"
+    },
+    {
+      "ctx": "A",
+      "rec01aError": {
+        "status": {
+          "screen": "ERROR",
+          "phase": "MENU",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 0,
+          "tick": 0,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": null,
+          "listenerCount": 0,
+          "worldId": 1,
+          "notice": "INITIAL_SAVE_FAILED：写入异常且无法确认提交状态，禁止盲目重试：Error: INJECTED_WRITE_BEFORE",
+          "saveRevision": 0,
+          "saveMode": "persistent"
+        },
+        "snapshot": null,
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": null,
+          "runId": null,
+          "score": null,
+          "state": null,
+          "tick": null,
+          "baseUsed": null,
+          "tutorial": null
+        }
+      },
+      "rec01aAfterSkip": {
+        "status": {
+          "screen": "ERROR",
+          "phase": "MENU",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 0,
+          "tick": 0,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": null,
+          "listenerCount": 0,
+          "worldId": 1,
+          "notice": "INITIAL_SAVE_FAILED：写入异常且无法确认提交状态，禁止盲目重试：Error: INJECTED_WRITE_BEFORE",
+          "saveRevision": 0,
+          "saveMode": "persistent"
+        },
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": null,
+          "runId": null,
+          "score": null,
+          "state": null,
+          "tick": null,
+          "baseUsed": null,
+          "tutorial": null
+        }
+      }
+    },
+    {
+      "ctx": "A-real",
+      "click": "retry-save",
+      "design": [
+        375,
+        575
+      ],
+      "at": "2026-11-07T06:53:44.432Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:53:45.253Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "menu-continue",
+      "design": [
+        375,
+        404
+      ],
+      "at": "2026-11-07T06:53:49.345Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "menu-start-new-with-save",
+      "design": [
+        375,
+        276
+      ],
+      "at": "2026-11-07T06:53:52.784Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "error-menu",
+      "design": [
+        375,
+        457
+      ],
+      "at": "2026-11-07T06:53:53.096Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "menu-continue",
+      "design": [
+        375,
+        404
+      ],
+      "at": "2026-11-07T06:53:53.230Z"
+    },
+    {
+      "ctx": "A",
+      "menuAfterReload": {
+        "status": {
+          "screen": "MENU",
+          "phase": "MENU",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 0,
+          "tick": 0,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": null,
+          "listenerCount": 0,
+          "worldId": 0,
+          "notice": "发现可续局存档。选择“继续上局”后仍需明确点击继续。",
+          "saveRevision": 6,
+          "saveMode": "persistent"
+        },
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": 6,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 0,
+          "state": "PAUSED",
+          "tick": 75,
+          "baseUsed": 0,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        }
+      },
+      "rec01bError": {
+        "status": {
+          "screen": "ERROR",
+          "phase": "MENU",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 0,
+          "tick": 0,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": null,
+          "listenerCount": 0,
+          "worldId": 1,
+          "notice": "INITIAL_SAVE_FAILED：写入异常且无法确认提交状态，禁止盲目重试：Error: INJECTED_WRITE_BEFORE",
+          "saveRevision": 8,
+          "saveMode": "persistent"
+        },
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": 8,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 0,
+          "state": "PAUSED",
+          "tick": 75,
+          "baseUsed": 0,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        }
+      },
+      "menuB": {
+        "ok": true,
+        "error": null,
+        "revision": 8,
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "score": 0,
+        "state": "PAUSED",
+        "tick": 75,
+        "baseUsed": 0,
+        "tutorial": "design-v0.7-guarded-bump-01"
+      },
+      "restoredB": {
+        "status": {
+          "screen": "PAUSED",
+          "phase": "PAUSED",
+          "paused": true,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 75,
+          "tick": 75,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": []
+          },
+          "listenerCount": 4,
+          "worldId": 2,
+          "notice": "已从最近完整保存恢复；点击“继续”后才推进。",
+          "saveRevision": 8,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 120,
+            "pendingSpawn": {
+              "angularVelocity": 0,
+              "level": 2,
+              "vxDuPerSecond": -8,
+              "xDu": 363
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "03f31590b5178adc44aa608bd20ffee823d7724fafbc9581e5bd718b419db2e7",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 2,
+          "dangerTicks": 0,
+          "dropIndex": 1,
+          "epoch": 5,
+          "ingredients": [
+            {
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 60,
+              "dangerEligible": false,
+              "entityId": 1,
+              "hasEnteredCup": false,
+              "level": 2,
+              "positionDu": {
+                "x": 355.82255423069,
+                "y": 1033.1621570587158
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": -11.841128021478653,
+                "y": -259.4914436340332
+              }
+            }
+          ],
+          "lastDropTick": 60,
+          "maxLevel": 2,
+          "mode": "classic",
+          "nextCommandSequence": 1,
+          "nextEntityId": 2,
+          "nextLevel": 2,
+          "revision": 76,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 3442731060,
+            "drawCount": 3
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 0,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 0,
+            "cooldownUntilTick": 0,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 1007982934,
+            "drawCount": 4
+          },
+          "stageId": "classic",
+          "state": "PAUSED",
+          "terminalReason": null,
+          "tick": 75
+        },
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": 8,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 0,
+          "state": "PAUSED",
+          "tick": 75,
+          "baseUsed": 0,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        }
+      }
+    },
+    {
+      "ctx": "A-real",
+      "click": "resume",
+      "design": [
+        375,
+        848
+      ],
+      "at": "2026-11-07T06:53:53.791Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "pause-trigger-render-fault",
+      "design": [
+        708,
+        96
+      ],
+      "at": "2026-11-07T06:53:54.442Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "retry-render",
+      "design": [
+        375,
+        575
+      ],
+      "at": "2026-11-07T06:53:54.727Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "resume-after-render-retry",
+      "design": [
+        375,
+        848
+      ],
+      "at": "2026-11-07T06:53:54.870Z"
+    },
+    {
+      "ctx": "A",
+      "afterResumeRetry": {
+        "screen": "PAUSED",
+        "phase": "PAUSED",
+        "paused": true,
+        "pauseReasons": [
+          "MANUAL",
+          "MODAL"
+        ],
+        "stepCount": 39,
+        "clockTick": 39,
+        "baseTick": 75,
+        "tick": 114,
+        "lastCommandOutcome": null,
+        "lastTickFault": null,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": []
+        },
+        "listenerCount": 4,
+        "worldId": 2,
+        "notice": "请先关闭弹窗或处理错误后再继续。",
+        "saveRevision": 10,
+        "saveMode": "persistent"
+      }
+    },
+    {
+      "ctx": "A-real",
+      "click": "pause-trigger-persistent-render-fault",
+      "design": [
+        708,
+        96
+      ],
+      "at": "2026-11-07T06:53:55.366Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "resume-fallback",
+      "design": [
+        375,
+        848
+      ],
+      "at": "2026-11-07T06:53:56.007Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "pause-trigger-persistent-render-fault-2",
+      "design": [
+        708,
+        96
+      ],
+      "at": "2026-11-07T06:53:56.436Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "retry-render-still-failing",
+      "design": [
+        375,
+        575
+      ],
+      "at": "2026-11-07T06:53:56.565Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "error-menu-persistent",
+      "design": [
+        375,
+        457
+      ],
+      "at": "2026-11-07T06:53:57.012Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "menu-continue-after-render",
+      "design": [
+        375,
+        404
+      ],
+      "at": "2026-11-07T06:53:57.147Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "menu-continue-corrupt",
+      "design": [
+        375,
+        404
+      ],
+      "at": "2026-11-07T06:54:00.454Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "retry-reload-same-run",
+      "design": [
+        375,
+        575
+      ],
+      "at": "2026-11-07T06:54:00.598Z"
+    },
+    {
+      "ctx": "A",
+      "renderError": {
+        "status": {
+          "screen": "ERROR",
+          "phase": "PAUSED",
+          "paused": true,
+          "pauseReasons": [
+            "MANUAL"
+          ],
+          "stepCount": 39,
+          "clockTick": 39,
+          "baseTick": 75,
+          "tick": 114,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": []
+          },
+          "listenerCount": 4,
+          "worldId": 2,
+          "notice": "RENDER_FAILED：界面渲染失败：Error: INJECTED_RENDER_FAULT",
+          "saveRevision": 10,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 135,
+            "pendingSpawn": {
+              "angularVelocity": 0,
+              "level": 2,
+              "vxDuPerSecond": -8,
+              "xDu": 363
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "03f31590b5178adc44aa608bd20ffee823d7724fafbc9581e5bd718b419db2e7",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 2,
+          "dangerTicks": 0,
+          "dropIndex": 1,
+          "epoch": 6,
+          "ingredients": [
+            {
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "entityId": 1,
+              "hasEnteredCup": true,
+              "level": 2,
+              "positionDu": {
+                "x": 348.2526510953903,
+                "y": 657.3359673917294
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": -11.462633311748505,
+                "y": -877.7002334594727
+              }
+            }
+          ],
+          "lastDropTick": 60,
+          "maxLevel": 2,
+          "mode": "classic",
+          "nextCommandSequence": 1,
+          "nextEntityId": 2,
+          "nextLevel": 2,
+          "revision": 116,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 3442731060,
+            "drawCount": 3
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 0,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 0,
+            "cooldownUntilTick": 0,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 1007982934,
+            "drawCount": 4
+          },
+          "stageId": "classic",
+          "state": "PAUSED",
+          "terminalReason": null,
+          "tick": 114
+        },
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": 10,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 0,
+          "state": "PAUSED",
+          "tick": 114,
+          "baseUsed": 0,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        }
+      },
+      "stillError": {
+        "screen": "ERROR",
+        "phase": "PAUSED",
+        "paused": true,
+        "pauseReasons": [
+          "MANUAL",
+          "MODAL"
+        ],
+        "stepCount": 39,
+        "clockTick": 39,
+        "baseTick": 75,
+        "tick": 114,
+        "lastCommandOutcome": null,
+        "lastTickFault": null,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": []
+        },
+        "listenerCount": 4,
+        "worldId": 2,
+        "notice": "RENDER_FAILED：界面渲染失败：Error: INJECTED_RENDER_FAULT",
+        "saveRevision": 10,
+        "saveMode": "persistent"
+      },
+      "menuC": {
+        "ok": true,
+        "error": null,
+        "revision": 10,
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "score": 0,
+        "state": "PAUSED",
+        "tick": 114,
+        "baseUsed": 0,
+        "tutorial": "design-v0.7-guarded-bump-01"
+      },
+      "restoredC": {
+        "status": {
+          "screen": "PAUSED",
+          "phase": "PAUSED",
+          "paused": true,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 114,
+          "tick": 114,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": []
+          },
+          "listenerCount": 4,
+          "worldId": 3,
+          "notice": "已从最近完整保存恢复；点击“继续”后才推进。",
+          "saveRevision": 10,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 135,
+            "pendingSpawn": {
+              "angularVelocity": 0,
+              "level": 2,
+              "vxDuPerSecond": -8,
+              "xDu": 363
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "872ba34dfd3803002da2d817b750e46e3d65e19de4e4c5427522df88ca61aafe",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 2,
+          "dangerTicks": 0,
+          "dropIndex": 1,
+          "epoch": 7,
+          "ingredients": [
+            {
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "entityId": 1,
+              "hasEnteredCup": true,
+              "level": 2,
+              "positionDu": {
+                "x": 348.2526510953903,
+                "y": 657.3359673917294
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": -11.462633311748505,
+                "y": -877.7002334594727
+              }
+            }
+          ],
+          "lastDropTick": 60,
+          "maxLevel": 2,
+          "mode": "classic",
+          "nextCommandSequence": 1,
+          "nextEntityId": 2,
+          "nextLevel": 2,
+          "revision": 116,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 3442731060,
+            "drawCount": 3
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 0,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 0,
+            "cooldownUntilTick": 0,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 1007982934,
+            "drawCount": 4
+          },
+          "stageId": "classic",
+          "state": "PAUSED",
+          "terminalReason": null,
+          "tick": 114
+        }
+      },
+      "restoreError": {
+        "status": {
+          "screen": "ERROR",
+          "phase": "MENU",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 0,
+          "tick": 0,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": null,
+          "listenerCount": 0,
+          "worldId": 0,
+          "notice": "START_ART_FAILED：Error: 双槽均不可恢复：A=SAVE_PARSE:SyntaxError: Unexpected end of JSON input；B=SAVE_PARSE:SyntaxError: Unexpected end of JSON input",
+          "saveRevision": 12,
+          "saveMode": "persistent"
+        },
+        "bundle": {
+          "ok": false,
+          "error": {
+            "code": "STORAGE_CORRUPT",
+            "message": "双槽均不可恢复：A=SAVE_PARSE:SyntaxError: Unexpected end of JSON input；B=SAVE_PARSE:SyntaxError: Unexpected end of JSON input",
+            "retryable": false
+          },
+          "revision": null,
+          "runId": null,
+          "score": null,
+          "state": null,
+          "tick": null,
+          "baseUsed": null,
+          "tutorial": null
+        }
+      },
+      "restoredD": {
+        "status": {
+          "screen": "PAUSED",
+          "phase": "PAUSED",
+          "paused": true,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 114,
+          "tick": 114,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": []
+          },
+          "listenerCount": 4,
+          "worldId": 1,
+          "notice": "已从最近完整保存恢复；点击“继续”后才推进。",
+          "saveRevision": 12,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 135,
+            "pendingSpawn": {
+              "angularVelocity": 0,
+              "level": 2,
+              "vxDuPerSecond": -8,
+              "xDu": 363
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "c81b8a75ad3b899f4d282e42c46ab8010ea20f2dfad59ff84eee2853c5eacc8c",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 2,
+          "dangerTicks": 0,
+          "dropIndex": 1,
+          "epoch": 8,
+          "ingredients": [
+            {
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "entityId": 1,
+              "hasEnteredCup": true,
+              "level": 2,
+              "positionDu": {
+                "x": 348.2526510953903,
+                "y": 657.3359673917294
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": -11.462633311748505,
+                "y": -877.7002334594727
+              }
+            }
+          ],
+          "lastDropTick": 60,
+          "maxLevel": 2,
+          "mode": "classic",
+          "nextCommandSequence": 1,
+          "nextEntityId": 2,
+          "nextLevel": 2,
+          "revision": 116,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 3442731060,
+            "drawCount": 3
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 0,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 0,
+            "cooldownUntilTick": 0,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 1007982934,
+            "drawCount": 4
+          },
+          "stageId": "classic",
+          "state": "PAUSED",
+          "terminalReason": null,
+          "tick": 114
+        },
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": 12,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 0,
+          "state": "PAUSED",
+          "tick": 114,
+          "baseUsed": 0,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        }
+      }
+    },
+    {
+      "ctx": "A-real",
+      "click": "resume-after-restore",
+      "design": [
+        375,
+        848
+      ],
+      "at": "2026-11-07T06:54:01.365Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "touch-cup-noop-click",
+      "design": [
+        375,
+        500
+      ],
+      "at": "2026-11-07T06:54:01.903Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "shake-1",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:54:02.035Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "pause-2",
+      "design": [
+        708,
+        96
+      ],
+      "at": "2026-11-07T06:54:04.136Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "settings",
+      "design": [
+        375,
+        718
+      ],
+      "at": "2026-11-07T06:54:04.274Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "toggle-reduced-motion",
+      "design": [
+        375,
+        508
+      ],
+      "at": "2026-11-07T06:54:04.721Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "settings-back",
+      "design": [
+        375,
+        268
+      ],
+      "at": "2026-11-07T06:54:04.870Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "resume-2",
+      "design": [
+        375,
+        848
+      ],
+      "at": "2026-11-07T06:54:05.205Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "shake-2",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:54:05.753Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "shake-3-exhausted",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:54:07.502Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "shake-before-refresh",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:54:08.963Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "continue-after-refresh",
+      "design": [
+        375,
+        404
+      ],
+      "at": "2026-11-07T06:54:12.099Z"
+    },
+    {
+      "ctx": "A-real",
+      "click": "resume-after-refresh",
+      "design": [
+        375,
+        848
+      ],
+      "at": "2026-11-07T06:54:12.718Z"
+    },
+    {
+      "ctx": "A",
+      "v210a": {
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 143,
+          "clockTick": 143,
+          "baseTick": 114,
+          "tick": 257,
+          "lastCommandOutcome": {
+            "commandId": "77f708db-c817-4ce6-8d58-6dbd53e74c2a",
+            "sequence": 1,
+            "status": "APPLIED",
+            "appliedTick": 154
+          },
+          "lastTickFault": null,
+          "contactCount": 1,
+          "contactBeginEvents": 4,
+          "contactEndEvents": 3,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "1|cup:0"
+            ]
+          },
+          "listenerCount": 5,
+          "worldId": 1,
+          "notice": "已继续；后台时间不会补算。",
+          "saveRevision": 15,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 288,
+            "pendingSpawn": {
+              "level": 2,
+              "xDu": 367,
+              "vxDuPerSecond": 12,
+              "angularVelocity": 0
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "c81b8a75ad3b899f4d282e42c46ab8010ea20f2dfad59ff84eee2853c5eacc8c",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 2,
+          "dangerTicks": 0,
+          "dropIndex": 2,
+          "epoch": 9,
+          "ingredients": [
+            {
+              "angleRadians": -1.3854476540273413,
+              "angularVelocity": -2.544478871293858,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "entityId": 1,
+              "hasEnteredCup": true,
+              "level": 2,
+              "positionDu": {
+                "x": 484.0067982673645,
+                "y": 385.0619478225708
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": 60.38295030593872,
+                "y": -8.799346351450258e-16
+              }
+            },
+            {
+              "entityId": 2,
+              "level": 2,
+              "positionDu": {
+                "x": 359.0512126684189,
+                "y": 944.5341510772705
+              },
+              "velocityDuPerSecond": {
+                "x": -7.802560925483704,
+                "y": -483.7267875671387
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 228,
+              "dangerEligible": false,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            }
+          ],
+          "lastDropTick": 228,
+          "maxLevel": 2,
+          "mode": "classic",
+          "nextCommandSequence": 2,
+          "nextEntityId": 3,
+          "nextLevel": 2,
+          "revision": 261,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 3063100910,
+            "drawCount": 4
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 0,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 1,
+            "cooldownUntilTick": 246,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 4065817576,
+            "drawCount": 6
+          },
+          "stageId": "classic",
+          "state": "PLAYING",
+          "terminalReason": null,
+          "tick": 257
+        }
+      },
+      "v210b": {
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 302,
+          "clockTick": 302,
+          "baseTick": 114,
+          "tick": 416,
+          "lastCommandOutcome": {
+            "commandId": "888b9381-0b85-4710-a1aa-a865c9df3a4b",
+            "sequence": 2,
+            "status": "APPLIED",
+            "appliedTick": 313
+          },
+          "lastTickFault": null,
+          "contactCount": 1,
+          "contactBeginEvents": 10,
+          "contactEndEvents": 9,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "3|cup:0"
+            ]
+          },
+          "listenerCount": 5,
+          "worldId": 1,
+          "notice": "已继续；后台时间不会补算。",
+          "saveRevision": 21,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 447,
+            "pendingSpawn": {
+              "level": 2,
+              "xDu": 379,
+              "vxDuPerSecond": -12,
+              "angularVelocity": 0
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "c81b8a75ad3b899f4d282e42c46ab8010ea20f2dfad59ff84eee2853c5eacc8c",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 2,
+          "dangerTicks": 0,
+          "dropIndex": 3,
+          "epoch": 10,
+          "ingredients": [
+            {
+              "entityId": 3,
+              "level": 3,
+              "positionDu": {
+                "x": 416.55283868312836,
+                "y": 393.4281749725342
+              },
+              "velocityDuPerSecond": {
+                "x": -4.466530308127403,
+                "y": -4.329541081080127e-16
+              },
+              "angleRadians": -0.31545205445666274,
+              "angularVelocity": 0.13995480218178377,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 4,
+              "level": 2,
+              "positionDu": {
+                "x": 372.92318511754274,
+                "y": 944.5341510772705
+              },
+              "velocityDuPerSecond": {
+                "x": 11.703842133283615,
+                "y": -483.7267875671387
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 387,
+              "dangerEligible": false,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            }
+          ],
+          "lastDropTick": 387,
+          "maxLevel": 3,
+          "mode": "classic",
+          "nextCommandSequence": 3,
+          "nextEntityId": 5,
+          "nextLevel": 2,
+          "revision": 422,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 3590136537,
+            "drawCount": 5
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 30,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 2,
+            "cooldownUntilTick": 404,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 81800074,
+            "drawCount": 8
+          },
+          "stageId": "classic",
+          "state": "PLAYING",
+          "terminalReason": null,
+          "tick": 416
+        }
+      },
+      "v210c": {
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 340,
+          "clockTick": 340,
+          "baseTick": 114,
+          "tick": 454,
+          "lastCommandOutcome": {
+            "commandId": "888b9381-0b85-4710-a1aa-a865c9df3a4b",
+            "sequence": 2,
+            "status": "APPLIED",
+            "appliedTick": 313
+          },
+          "lastTickFault": null,
+          "contactCount": 1,
+          "contactBeginEvents": 10,
+          "contactEndEvents": 9,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "3|cup:0"
+            ]
+          },
+          "listenerCount": 6,
+          "worldId": 1,
+          "notice": "广告奖励尚未开启",
+          "saveRevision": 22,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 507,
+            "pendingSpawn": {
+              "level": 2,
+              "xDu": 363,
+              "vxDuPerSecond": 8,
+              "angularVelocity": 0
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "c81b8a75ad3b899f4d282e42c46ab8010ea20f2dfad59ff84eee2853c5eacc8c",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 2,
+          "dangerTicks": 0,
+          "dropIndex": 4,
+          "epoch": 10,
+          "ingredients": [
+            {
+              "entityId": 3,
+              "level": 3,
+              "positionDu": {
+                "x": 413.82865011692047,
+                "y": 393.4281749725342
+              },
+              "velocityDuPerSecond": {
+                "x": -4.148459434509277,
+                "y": -4.329541081080127e-16
+              },
+              "angleRadians": -0.23009193798035327,
+              "angularVelocity": 0.12998833086617034,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 4,
+              "level": 2,
+              "positionDu": {
+                "x": 380.21649308502674,
+                "y": 443.60303115844727
+              },
+              "velocityDuPerSecond": {
+                "x": 11.339176446199417,
+                "y": -1079.3462753295898
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 387,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 5,
+              "level": 2,
+              "positionDu": {
+                "x": 377.4059833958745,
+                "y": 1060.2271718978882
+              },
+              "velocityDuPerSecond": {
+                "x": -11.920298635959625,
+                "y": -130.17802238464355
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 447,
+              "dangerEligible": false,
+              "hasEnteredCup": false,
+              "spillTicks": 0,
+              "sleeping": false
+            }
+          ],
+          "lastDropTick": 447,
+          "maxLevel": 3,
+          "mode": "classic",
+          "nextCommandSequence": 3,
+          "nextEntityId": 6,
+          "nextLevel": 1,
+          "revision": 460,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 1164016458,
+            "drawCount": 6
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 30,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 2,
+            "cooldownUntilTick": 404,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 3361687404,
+            "drawCount": 10
+          },
+          "stageId": "classic",
+          "state": "PLAYING",
+          "terminalReason": null,
+          "tick": 454
+        }
+      },
+      "preRefresh": {
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 507,
+            "pendingSpawn": {
+              "level": 2,
+              "xDu": 363,
+              "vxDuPerSecond": 8,
+              "angularVelocity": 0
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "c81b8a75ad3b899f4d282e42c46ab8010ea20f2dfad59ff84eee2853c5eacc8c",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 2,
+          "dangerTicks": 0,
+          "dropIndex": 4,
+          "epoch": 10,
+          "ingredients": [
+            {
+              "entityId": 3,
+              "level": 3,
+              "positionDu": {
+                "x": 492.03470945358276,
+                "y": 392.79994201660156
+              },
+              "velocityDuPerSecond": {
+                "x": 84.75778102874756,
+                "y": -4.329541081080127e-16
+              },
+              "angleRadians": -0.873906869659507,
+              "angularVelocity": -2.6822104136665916,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 4,
+              "level": 2,
+              "positionDu": {
+                "x": 248.28344583511353,
+                "y": 385.52803230285645
+              },
+              "velocityDuPerSecond": {
+                "x": -23.099930584430695,
+                "y": -3.6189995523419765e-16
+              },
+              "angleRadians": -0.38128511942493665,
+              "angularVelocity": 0.9639420733019232,
+              "bornTick": 387,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 5,
+              "level": 2,
+              "positionDu": {
+                "x": 367.680474370718,
+                "y": 611.8929369449615
+              },
+              "velocityDuPerSecond": {
+                "x": -11.434024572372437,
+                "y": -924.4278907775879
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 447,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            }
+          ],
+          "lastDropTick": 447,
+          "maxLevel": 3,
+          "mode": "classic",
+          "nextCommandSequence": 3,
+          "nextEntityId": 6,
+          "nextLevel": 1,
+          "revision": 510,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 1164016458,
+            "drawCount": 6
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 30,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 2,
+            "cooldownUntilTick": 404,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 3361687404,
+            "drawCount": 10
+          },
+          "stageId": "classic",
+          "state": "PLAYING",
+          "terminalReason": null,
+          "tick": 504
+        },
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": 22,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 30,
+          "state": "PLAYING",
+          "tick": 447,
+          "baseUsed": 2,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        }
+      },
+      "menuD": {
+        "status": {
+          "screen": "MENU",
+          "phase": "MENU",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 0,
+          "tick": 0,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": null,
+          "listenerCount": 0,
+          "worldId": 0,
+          "notice": "发现可续局存档。选择“继续上局”后仍需明确点击继续。",
+          "saveRevision": 25,
+          "saveMode": "persistent"
+        },
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": 25,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 30,
+          "state": "PAUSED",
+          "tick": 524,
+          "baseUsed": 2,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        }
+      },
+      "restoredE": {
+        "status": {
+          "screen": "PAUSED",
+          "phase": "PAUSED",
+          "paused": true,
+          "pauseReasons": [],
+          "stepCount": 0,
+          "clockTick": 0,
+          "baseTick": 524,
+          "tick": 524,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 0,
+          "contactEndEvents": 0,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": []
+          },
+          "listenerCount": 7,
+          "worldId": 1,
+          "notice": "已从最近完整保存恢复；点击“继续”后才推进。",
+          "saveRevision": 26,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 567,
+            "pendingSpawn": {
+              "angularVelocity": 0,
+              "level": 1,
+              "vxDuPerSecond": -12,
+              "xDu": 363
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "d5ca365bd1cf9c2343552791ce36fd6fb159b0d8d40c7a2946ff154912620e2f",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 1,
+          "dangerTicks": 0,
+          "dropIndex": 5,
+          "epoch": 11,
+          "ingredients": [
+            {
+              "angleRadians": -0.7064209546173295,
+              "angularVelocity": 0.00009916515985141173,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "entityId": 3,
+              "hasEnteredCup": true,
+              "level": 3,
+              "positionDu": {
+                "x": 494.8772072792053,
+                "y": 393.03771686553955
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": -0.0031454048439627513,
+                "y": -4.329541081080127e-16
+              }
+            },
+            {
+              "angleRadians": -0.3609721852950187,
+              "angularVelocity": -0.001072734388106512,
+              "bornTick": 387,
+              "dangerEligible": true,
+              "entityId": 4,
+              "hasEnteredCup": true,
+              "level": 2,
+              "positionDu": {
+                "x": 247.90658950805664,
+                "y": 385.52803230285645
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": 0.025707032182253897,
+                "y": -8.799346351450258e-16
+              }
+            },
+            {
+              "angleRadians": 0.035022766458581975,
+              "angularVelocity": 0.307927694157107,
+              "bornTick": 447,
+              "dangerEligible": true,
+              "entityId": 5,
+              "hasEnteredCup": true,
+              "level": 2,
+              "positionDu": {
+                "x": 364.33434039354324,
+                "y": 394.41715908050537
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": -7.409600168466568,
+                "y": 38.517025113105774
+              }
+            },
+            {
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 507,
+              "dangerEligible": false,
+              "entityId": 6,
+              "hasEnteredCup": false,
+              "level": 2,
+              "positionDu": {
+                "x": 365.38110598921776,
+                "y": 1023.7074775695801
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": 7.880944758653641,
+                "y": -291.6853904724121
+              }
+            }
+          ],
+          "lastDropTick": 507,
+          "maxLevel": 3,
+          "mode": "classic",
+          "nextCommandSequence": 3,
+          "nextEntityId": 7,
+          "nextLevel": 1,
+          "revision": 530,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 722061198,
+            "drawCount": 7
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 30,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 2,
+            "cooldownUntilTick": 404,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 730576632,
+            "drawCount": 12
+          },
+          "stageId": "classic",
+          "state": "PAUSED",
+          "terminalReason": null,
+          "tick": 524
+        }
+      },
+      "restoredF": {
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 115,
+          "clockTick": 115,
+          "baseTick": 524,
+          "tick": 639,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 3,
+          "contactBeginEvents": 9,
+          "contactEndEvents": 6,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "4|cup:0",
+              "4|cup:1",
+              "9|cup:0"
+            ]
+          },
+          "listenerCount": 6,
+          "worldId": 1,
+          "notice": "已继续；后台时间不会补算。",
+          "saveRevision": 30,
+          "saveMode": "persistent"
+        },
+        "snap": {
+          "appVersion": "0.1.0",
+          "autoDrop": {
+            "nextDueTick": 644,
+            "pendingSpawn": {
+              "level": 1,
+              "xDu": 391,
+              "vxDuPerSecond": 8,
+              "angularVelocity": 0
+            }
+          },
+          "boardType": "standard",
+          "challenge": null,
+          "checksum": "d5ca365bd1cf9c2343552791ce36fd6fb159b0d8d40c7a2946ff154912620e2f",
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "currentLevel": 1,
+          "dangerTicks": 0,
+          "dropIndex": 6,
+          "epoch": 12,
+          "ingredients": [
+            {
+              "angleRadians": -0.0018408408712159423,
+              "angularVelocity": -0.0008579968735447682,
+              "bornTick": 387,
+              "dangerEligible": true,
+              "entityId": 4,
+              "hasEnteredCup": true,
+              "level": 2,
+              "positionDu": {
+                "x": 247.95070886611938,
+                "y": 385.52803230285645
+              },
+              "sleeping": false,
+              "spillTicks": 0,
+              "velocityDuPerSecond": {
+                "x": 0.020561057317536324,
+                "y": -3.6189995523419765e-16
+              }
+            },
+            {
+              "entityId": 8,
+              "level": 1,
+              "positionDu": {
+                "x": 352.06176936626434,
+                "y": 642.447815656662
+              },
+              "velocityDuPerSecond": {
+                "x": -11.453089118003845,
+                "y": -893.2890892028809
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 584,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 9,
+              "level": 4,
+              "positionDu": {
+                "x": 464.85968828201294,
+                "y": 403.0647678375244
+              },
+              "velocityDuPerSecond": {
+                "x": 5.948016792535782,
+                "y": 1.0935375674426554e-15
+              },
+              "angleRadians": -0.4236234407155156,
+              "angularVelocity": -0.14252752895852647,
+              "bornTick": 60,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            }
+          ],
+          "lastDropTick": 584,
+          "maxLevel": 4,
+          "mode": "classic",
+          "nextCommandSequence": 3,
+          "nextEntityId": 10,
+          "nextLevel": 1,
+          "revision": 646,
+          "revive": {
+            "committedReceiptId": null,
+            "pendingFailure": null,
+            "used": 0
+          },
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 1828306994,
+            "drawCount": 8
+          },
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "saveSchemaVersion": 6,
+          "score": 120,
+          "settleStartedTick": null,
+          "shake": {
+            "activeStartTick": null,
+            "baseUsed": 2,
+            "cooldownUntilTick": 404,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "guardMembers": [],
+            "guardReleased": true,
+            "guardStableTicks": 0
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 3040856784,
+            "drawCount": 14
+          },
+          "stageId": "classic",
+          "state": "PLAYING",
+          "terminalReason": null,
+          "tick": 639
+        }
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":1}-noop",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":1}-noop",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:54:17.670Z"
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":1}-shake",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":1}-shake",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:54:24.354Z"
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":1}-shake",
+      "click": "fixture-shake",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:54:24.722Z"
+    },
+    {
+      "ctx": "B",
+      "layout": 1,
+      "comparison": {
+        "layout": 1,
+        "t0": 21,
+        "dx": [
+          {
+            "id": 1,
+            "controlX": 264.12,
+            "shakeX": 314.86,
+            "dx": 50.74,
+            "peakDx": 52.93,
+            "peakTick": 168
+          },
+          {
+            "id": 3,
+            "controlX": 384.24,
+            "shakeX": 361.44,
+            "dx": -22.81,
+            "peakDx": 26.86,
+            "peakTick": 183
+          },
+          {
+            "id": 4,
+            "controlX": 439.44,
+            "shakeX": 434.89,
+            "dx": -4.54,
+            "peakDx": 43.38,
+            "peakTick": 82
+          },
+          {
+            "id": 5,
+            "controlX": 500,
+            "shakeX": 508.17,
+            "dx": 8.17,
+            "peakDx": 65.6,
+            "peakTick": 90
+          }
+        ],
+        "peakLift": [
+          {
+            "id": 1,
+            "level": 4,
+            "baseY": 403.28,
+            "peakY": 520.99,
+            "rise": 117.71
+          },
+          {
+            "id": 3,
+            "level": 2,
+            "baseY": 385.28,
+            "peakY": 487.16,
+            "rise": 101.87
+          },
+          {
+            "id": 4,
+            "level": 3,
+            "baseY": 393.28,
+            "peakY": 515.35,
+            "rise": 122.07
+          },
+          {
+            "id": 5,
+            "level": 1,
+            "baseY": 379.28,
+            "peakY": 484.55,
+            "rise": 105.27
+          }
+        ],
+        "probe": 5,
+        "cup": {
+          "control": 0,
+          "shaken": 0
+        },
+        "shake": {
+          "baseUsed": 1,
+          "extraGranted": 0,
+          "extraUsed": 0,
+          "activeStartTick": null,
+          "cooldownUntilTick": 117,
+          "guardMembers": [],
+          "guardStableTicks": 0,
+          "guardReleased": true
+        },
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 191,
+          "clockTick": 191,
+          "baseTick": 0,
+          "tick": 191,
+          "lastCommandOutcome": {
+            "commandId": "e9b00ff9-0683-4903-a636-ad634e979d5f",
+            "sequence": 1,
+            "status": "APPLIED",
+            "appliedTick": 22
+          },
+          "lastTickFault": null,
+          "contactCount": 9,
+          "contactBeginEvents": 37,
+          "contactEndEvents": 28,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "2|cup:0",
+              "3|cup:0",
+              "1|2",
+              "5|cup:0",
+              "5|cup:2",
+              "1|3",
+              "4|5",
+              "6|cup:0",
+              "4|cup:0"
+            ]
+          },
+          "listenerCount": 10,
+          "worldId": 2,
+          "notice": "",
+          "saveRevision": 6,
+          "saveMode": "attempt-scoped-debug"
+        }
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":2}-noop",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":2}-noop",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:54:30.987Z"
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":2}-shake",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":2}-shake",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:54:37.652Z"
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":2}-shake",
+      "click": "fixture-shake",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:54:38.026Z"
+    },
+    {
+      "ctx": "B",
+      "layout": 2,
+      "comparison": {
+        "layout": 2,
+        "t0": 21,
+        "dx": [
+          {
+            "id": 5,
+            "controlX": 500,
+            "shakeX": 436.33,
+            "dx": -63.67,
+            "peakDx": 70.75,
+            "peakTick": 191
+          }
+        ],
+        "peakLift": [
+          {
+            "id": 5,
+            "level": 1,
+            "baseY": 379.28,
+            "peakY": 486.83,
+            "rise": 107.54
+          }
+        ],
+        "probe": 3,
+        "cup": {
+          "control": 0,
+          "shaken": 0
+        },
+        "shake": {
+          "baseUsed": 1,
+          "extraGranted": 0,
+          "extraUsed": 0,
+          "activeStartTick": null,
+          "cooldownUntilTick": 113,
+          "guardMembers": [],
+          "guardStableTicks": 0,
+          "guardReleased": true
+        },
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 191,
+          "clockTick": 191,
+          "baseTick": 0,
+          "tick": 191,
+          "lastCommandOutcome": {
+            "commandId": "bd72e848-42ed-417b-8b49-310b3313eba6",
+            "sequence": 1,
+            "status": "APPLIED",
+            "appliedTick": 22
+          },
+          "lastTickFault": null,
+          "contactCount": 2,
+          "contactBeginEvents": 13,
+          "contactEndEvents": 11,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "5|cup:0",
+              "8|cup:0"
+            ]
+          },
+          "listenerCount": 7,
+          "worldId": 2,
+          "notice": "",
+          "saveRevision": 8,
+          "saveMode": "attempt-scoped-debug"
+        }
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":3}-noop",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":3}-noop",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:54:44.274Z"
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":3}-shake",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":3}-shake",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:54:50.923Z"
+    },
+    {
+      "ctx": "B-guard-half-{\"layout\":3}-shake",
+      "click": "fixture-shake",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:54:51.288Z"
+    },
+    {
+      "ctx": "B",
+      "layout": 3,
+      "comparison": {
+        "layout": 3,
+        "t0": 21,
+        "dx": [
+          {
+            "id": 5,
+            "controlX": 480.32,
+            "shakeX": 486.69,
+            "dx": 6.37,
+            "peakDx": 55.56,
+            "peakTick": 85
+          }
+        ],
+        "peakLift": [
+          {
+            "id": 5,
+            "level": 4,
+            "baseY": 403.28,
+            "peakY": 523.87,
+            "rise": 120.59
+          }
+        ],
+        "probe": 5,
+        "cup": {
+          "control": 0,
+          "shaken": 0
+        },
+        "shake": {
+          "baseUsed": 1,
+          "extraGranted": 0,
+          "extraUsed": 0,
+          "activeStartTick": null,
+          "cooldownUntilTick": 132,
+          "guardMembers": [],
+          "guardStableTicks": 0,
+          "guardReleased": true
+        },
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 191,
+          "clockTick": 191,
+          "baseTick": 0,
+          "tick": 191,
+          "lastCommandOutcome": {
+            "commandId": "ce6c6ee4-b8ef-4b5f-a743-61650521ef64",
+            "sequence": 1,
+            "status": "APPLIED",
+            "appliedTick": 22
+          },
+          "lastTickFault": null,
+          "contactCount": 3,
+          "contactBeginEvents": 34,
+          "contactEndEvents": 31,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "5|cup:0",
+              "5|cup:2",
+              "9|cup:0"
+            ]
+          },
+          "listenerCount": 7,
+          "worldId": 2,
+          "notice": "",
+          "saveRevision": 9,
+          "saveMode": "attempt-scoped-debug"
+        }
+      }
+    },
+    {
+      "ctx": "C-drag",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "C-drag",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:54:57.557Z"
+    },
+    {
+      "ctx": "C-drag",
+      "click": "shake-before-drag",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:54:58.931Z"
+    },
+    {
+      "ctx": "C",
+      "before": {
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 81,
+          "clockTick": 81,
+          "baseTick": 0,
+          "tick": 81,
+          "lastCommandOutcome": null,
+          "lastTickFault": null,
+          "contactCount": 3,
+          "contactBeginEvents": 6,
+          "contactEndEvents": 3,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "5|cup:0",
+              "4|cup:0",
+              "7|cup:0"
+            ]
+          },
+          "listenerCount": 7,
+          "worldId": 2,
+          "notice": "",
+          "saveRevision": 5,
+          "saveMode": "attempt-scoped-debug"
+        },
+        "snap": {
+          "saveSchemaVersion": 6,
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "appVersion": "0.1.0",
+          "runId": "05304547-8a81-4fe1-a1b5-89661c1d1b8a",
+          "epoch": 3,
+          "revision": 82,
+          "stageId": "classic",
+          "mode": "classic",
+          "boardType": "standard",
+          "state": "PLAYING",
+          "tick": 81,
+          "nextEntityId": 9,
+          "nextCommandSequence": 1,
+          "score": 40,
+          "maxLevel": 3,
+          "dropIndex": 1,
+          "currentLevel": 1,
+          "nextLevel": 3,
+          "lastDropTick": 60,
+          "settleStartedTick": null,
+          "challenge": null,
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 4187450913,
+            "drawCount": 3
+          },
+          "ingredients": [
+            {
+              "entityId": 4,
+              "level": 3,
+              "positionDu": {
+                "x": 439.9999976158142,
+                "y": 393.28233432769775
+              },
+              "velocityDuPerSecond": {
+                "x": 0,
+                "y": -4.329541081080127e-16
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 0,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 5,
+              "level": 1,
+              "positionDu": {
+                "x": 500,
+                "y": 379.2823476791382
+              },
+              "velocityDuPerSecond": {
+                "x": 0,
+                "y": 1.5324137924281802e-15
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 0,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 7,
+              "level": 3,
+              "positionDu": {
+                "x": 357.99999982118607,
+                "y": 393.1542558670044
+              },
+              "velocityDuPerSecond": {
+                "x": 0,
+                "y": -4.329541081080127e-16
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 0,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 8,
+              "level": 1,
+              "positionDu": {
+                "x": 374.64188719168305,
+                "y": 1001.5845460891724
+              },
+              "velocityDuPerSecond": {
+                "x": -11.782094836235046,
+                "y": -355.91259002685547
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 60,
+              "dangerEligible": false,
+              "hasEnteredCup": false,
+              "spillTicks": 0,
+              "sleeping": false
+            }
+          ],
+          "shake": {
+            "baseUsed": 0,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "activeStartTick": null,
+            "cooldownUntilTick": 0,
+            "guardMembers": [],
+            "guardStableTicks": 0,
+            "guardReleased": true
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 338850052,
+            "drawCount": 4
+          },
+          "dangerTicks": 0,
+          "terminalReason": null,
+          "cupMotion": {
+            "offsetXDu": 0,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": 0,
+            "control": "IDLE"
+          },
+          "autoDrop": {
+            "nextDueTick": 120,
+            "pendingSpawn": {
+              "level": 1,
+              "xDu": 387,
+              "vxDuPerSecond": -12,
+              "angularVelocity": 0
+            }
+          },
+          "revive": {
+            "used": 0,
+            "pendingFailure": null,
+            "committedReceiptId": null
+          },
+          "checksum": "541d792a78e4a89825472c87fbbd485a7a5a18c2f704ed1c025c157a35ac26be"
+        }
+      },
+      "after": {
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 197,
+          "clockTick": 197,
+          "baseTick": 0,
+          "tick": 197,
+          "lastCommandOutcome": {
+            "commandId": "5a01249f-f4d9-40c9-bc09-b6375b4aae30",
+            "sequence": 1,
+            "status": "APPLIED",
+            "appliedTick": 82
+          },
+          "lastTickFault": null,
+          "contactCount": 3,
+          "contactBeginEvents": 26,
+          "contactEndEvents": 23,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "9|cup:1",
+              "9|cup:0",
+              "10|cup:0"
+            ]
+          },
+          "listenerCount": 6,
+          "worldId": 2,
+          "notice": "",
+          "saveRevision": 9,
+          "saveMode": "attempt-scoped-debug"
+        },
+        "snap": {
+          "saveSchemaVersion": 6,
+          "rulesVersion": "design-v0.7-guarded-bump-01",
+          "appVersion": "0.1.0",
+          "runId": "05304547-8a81-4fe1-a1b5-89661c1d1b8a",
+          "epoch": 3,
+          "revision": 199,
+          "stageId": "classic",
+          "mode": "classic",
+          "boardType": "standard",
+          "state": "PLAYING",
+          "tick": 197,
+          "nextEntityId": 12,
+          "nextCommandSequence": 2,
+          "score": 110,
+          "maxLevel": 4,
+          "dropIndex": 2,
+          "currentLevel": 3,
+          "nextLevel": 2,
+          "lastDropTick": 174,
+          "settleStartedTick": null,
+          "challenge": null,
+          "rng": {
+            "algorithm": "xorshift32_v1_nonzero_seed",
+            "state": 2654717192,
+            "drawCount": 4
+          },
+          "ingredients": [
+            {
+              "entityId": 9,
+              "level": 4,
+              "positionDu": {
+                "x": 156.2511682510376,
+                "y": 403.2541675567627
+              },
+              "velocityDuPerSecond": {
+                "x": 0.11915202485397458,
+                "y": 1.0935375674426554e-15
+              },
+              "angleRadians": -0.9869707153893142,
+              "angularVelocity": -0.0028486795977979346,
+              "bornTick": 0,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 10,
+              "level": 2,
+              "positionDu": {
+                "x": 224.74724054336548,
+                "y": 384.7999258041382
+              },
+              "velocityDuPerSecond": {
+                "x": 5.585452541708946,
+                "y": -8.799343042727808e-16
+              },
+              "angleRadians": -0.036730659397630996,
+              "angularVelocity": -0.23667189575418635,
+              "bornTick": 0,
+              "dangerEligible": true,
+              "hasEnteredCup": true,
+              "spillTicks": 0,
+              "sleeping": false
+            },
+            {
+              "entityId": 11,
+              "level": 1,
+              "positionDu": {
+                "x": 382.24963918328285,
+                "y": 988.919846534729
+              },
+              "velocityDuPerSecond": {
+                "x": -11.762482672929764,
+                "y": -387.9460334777832
+              },
+              "angleRadians": 0,
+              "angularVelocity": 0,
+              "bornTick": 174,
+              "dangerEligible": false,
+              "hasEnteredCup": false,
+              "spillTicks": 0,
+              "sleeping": false
+            }
+          ],
+          "shake": {
+            "baseUsed": 1,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "activeStartTick": null,
+            "cooldownUntilTick": 189,
+            "guardMembers": [],
+            "guardStableTicks": 0,
+            "guardReleased": true
+          },
+          "spawnRng": {
+            "algorithm": "spawn-xorshift32-v1",
+            "state": 1281388083,
+            "drawCount": 6
+          },
+          "dangerTicks": 0,
+          "terminalReason": null,
+          "cupMotion": {
+            "offsetXDu": -107.2744369506836,
+            "velocityXDuPerSecond": 0,
+            "targetOffsetXDu": -107.27443121097706,
+            "control": "IDLE"
+          },
+          "autoDrop": {
+            "nextDueTick": 234,
+            "pendingSpawn": {
+              "level": 3,
+              "xDu": 359,
+              "vxDuPerSecond": -8,
+              "angularVelocity": 0
+            }
+          },
+          "revive": {
+            "used": 0,
+            "pendingFailure": null,
+            "committedReceiptId": null
+          },
+          "checksum": "541d792a78e4a89825472c87fbbd485a7a5a18c2f704ed1c025c157a35ac26be"
+        }
+      }
+    },
+    {
+      "ctx": "D-guard-near-full",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "D-guard-near-full",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:55:04.228Z"
+    },
+    {
+      "ctx": "D-guard-near-full",
+      "click": "shake-1",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:05.590Z"
+    },
+    {
+      "ctx": "D-guard-near-full",
+      "click": "shake-2",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:07.632Z"
+    },
+    {
+      "ctx": "D",
+      "fixtureId": "guard-near-full",
+      "bodies": 7,
+      "samples": 216,
+      "finalState": "PLAYING",
+      "reason": null,
+      "violations": []
+    },
+    {
+      "ctx": "E-outside",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "E-outside",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:55:14.304Z"
+    },
+    {
+      "ctx": "E-outside",
+      "click": "shake-shake-empty",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:14.977Z"
+    },
+    {
+      "ctx": "E",
+      "fixtureId": "shake-empty",
+      "before": [],
+      "after": [
+        {
+          "id": 1,
+          "level": 1,
+          "x": 364.2,
+          "y": 387.99,
+          "vx": -7.36,
+          "vy": 22.17,
+          "entered": true,
+          "spill": 0,
+          "danger": true
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "x": 383.23,
+          "y": 1018.58,
+          "vx": -11.81,
+          "vy": -307.76,
+          "entered": false,
+          "spill": 0,
+          "danger": false
+        }
+      ],
+      "status": {
+        "screen": "PLAYING",
+        "phase": "PLAYING",
+        "paused": false,
+        "pauseReasons": [],
+        "stepCount": 138,
+        "clockTick": 138,
+        "baseTick": 0,
+        "tick": 138,
+        "lastCommandOutcome": null,
+        "lastTickFault": null,
+        "contactCount": 0,
+        "contactBeginEvents": 1,
+        "contactEndEvents": 1,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": []
+        },
+        "listenerCount": 5,
+        "worldId": 2,
+        "notice": "杯里还没有小料",
+        "saveRevision": 5,
+        "saveMode": "attempt-scoped-debug"
+      }
+    },
+    {
+      "ctx": "E-outside",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:55:16.640Z"
+    },
+    {
+      "ctx": "E-outside",
+      "click": "shake-entered",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:17.301Z"
+    },
+    {
+      "ctx": "E",
+      "fixtureId": "entered",
+      "before": [
+        {
+          "id": 1,
+          "level": 1,
+          "x": 330,
+          "y": 1026,
+          "vx": 0,
+          "vy": 0,
+          "entered": false,
+          "spill": 0,
+          "danger": false
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "x": 420,
+          "y": 981,
+          "vx": 0,
+          "vy": 0,
+          "entered": false,
+          "spill": 0,
+          "danger": false
+        }
+      ],
+      "after": [
+        {
+          "id": 1,
+          "level": 1,
+          "x": 330,
+          "y": 1026,
+          "vx": 0,
+          "vy": 0,
+          "entered": false,
+          "spill": 0,
+          "danger": false
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "x": 420,
+          "y": 981,
+          "vx": 0,
+          "vy": 0,
+          "entered": false,
+          "spill": 0,
+          "danger": false
+        }
+      ],
+      "status": {
+        "screen": "SETTINGS",
+        "phase": "PAUSED",
+        "paused": true,
+        "pauseReasons": [
+          "MODAL"
+        ],
+        "stepCount": 0,
+        "clockTick": 0,
+        "baseTick": 0,
+        "tick": 0,
+        "lastCommandOutcome": null,
+        "lastTickFault": null,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": []
+        },
+        "listenerCount": 5,
+        "worldId": 3,
+        "notice": "杯里还没有小料",
+        "saveRevision": 1,
+        "saveMode": "attempt-scoped-debug"
+      }
+    },
+    {
+      "ctx": "E-outside",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:55:18.951Z"
+    },
+    {
+      "ctx": "E-outside",
+      "click": "shake-spill-never-entered",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:19.603Z"
+    },
+    {
+      "ctx": "E",
+      "fixtureId": "spill-never-entered",
+      "before": [
+        {
+          "id": 1,
+          "level": 1,
+          "x": 375,
+          "y": 1026,
+          "vx": 0,
+          "vy": 0,
+          "entered": false,
+          "spill": 0,
+          "danger": false
+        }
+      ],
+      "after": [
+        {
+          "id": 1,
+          "level": 1,
+          "x": 375,
+          "y": 1026,
+          "vx": 0,
+          "vy": 0,
+          "entered": false,
+          "spill": 0,
+          "danger": false
+        }
+      ],
+      "status": {
+        "screen": "SETTINGS",
+        "phase": "PAUSED",
+        "paused": true,
+        "pauseReasons": [
+          "MODAL"
+        ],
+        "stepCount": 0,
+        "clockTick": 0,
+        "baseTick": 100,
+        "tick": 100,
+        "lastCommandOutcome": null,
+        "lastTickFault": null,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": []
+        },
+        "listenerCount": 4,
+        "worldId": 5,
+        "notice": "",
+        "saveRevision": 2,
+        "saveMode": "attempt-scoped-debug"
+      }
+    },
+    {
+      "ctx": "F-pause",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "F-pause",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:55:24.391Z"
+    },
+    {
+      "ctx": "F-pause",
+      "click": "shake-now",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:25.457Z"
+    },
+    {
+      "ctx": "F-pause",
+      "click": "pause-pre-delay",
+      "design": [
+        708,
+        96
+      ],
+      "at": "2026-11-07T06:55:25.626Z"
+    },
+    {
+      "ctx": "F-pause",
+      "click": "resume",
+      "design": [
+        375,
+        848
+      ],
+      "at": "2026-11-07T06:55:26.786Z"
+    },
+    {
+      "ctx": "F",
+      "pausedA": {
+        "status": {
+          "screen": "PAUSED",
+          "phase": "PAUSED",
+          "paused": true,
+          "pauseReasons": [
+            "MANUAL"
+          ],
+          "stepCount": 73,
+          "clockTick": 73,
+          "baseTick": 0,
+          "tick": 73,
+          "lastCommandOutcome": {
+            "commandId": "5fe6520f-0eef-4844-9798-b792ba381a3b",
+            "sequence": 1,
+            "status": "APPLIED",
+            "appliedTick": 64
+          },
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 6,
+          "contactEndEvents": 6,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": []
+          },
+          "listenerCount": 10,
+          "worldId": 2,
+          "notice": "已暂停。",
+          "saveRevision": 6,
+          "saveMode": "attempt-scoped-debug"
+        },
+        "probe": 3
+      },
+      "pausedB": {
+        "status": {
+          "screen": "PAUSED",
+          "phase": "PAUSED",
+          "paused": true,
+          "pauseReasons": [
+            "MANUAL"
+          ],
+          "stepCount": 73,
+          "clockTick": 73,
+          "baseTick": 0,
+          "tick": 73,
+          "lastCommandOutcome": {
+            "commandId": "5fe6520f-0eef-4844-9798-b792ba381a3b",
+            "sequence": 1,
+            "status": "APPLIED",
+            "appliedTick": 64
+          },
+          "lastTickFault": null,
+          "contactCount": 0,
+          "contactBeginEvents": 6,
+          "contactEndEvents": 6,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": []
+          },
+          "listenerCount": 10,
+          "worldId": 2,
+          "notice": "已暂停。",
+          "saveRevision": 6,
+          "saveMode": "attempt-scoped-debug"
+        },
+        "probe": 3
+      },
+      "done": {
+        "probe": 3,
+        "shake": {
+          "baseUsed": 1,
+          "extraGranted": 0,
+          "extraUsed": 0,
+          "activeStartTick": null,
+          "cooldownUntilTick": 181,
+          "guardMembers": [],
+          "guardStableTicks": 0,
+          "guardReleased": true
+        },
+        "status": {
+          "screen": "PLAYING",
+          "phase": "PLAYING",
+          "paused": false,
+          "pauseReasons": [],
+          "stepCount": 177,
+          "clockTick": 177,
+          "baseTick": 0,
+          "tick": 177,
+          "lastCommandOutcome": {
+            "commandId": "5fe6520f-0eef-4844-9798-b792ba381a3b",
+            "sequence": 1,
+            "status": "APPLIED",
+            "appliedTick": 64
+          },
+          "lastTickFault": null,
+          "contactCount": 3,
+          "contactBeginEvents": 16,
+          "contactEndEvents": 13,
+          "contactEnumeration": {
+            "reversed": false,
+            "contactIds": [
+              "9|cup:0",
+              "5|cup:0",
+              "8|cup:0"
+            ]
+          },
+          "listenerCount": 7,
+          "worldId": 2,
+          "notice": "已继续；后台时间不会补算。",
+          "saveRevision": 9,
+          "saveMode": "attempt-scoped-debug"
+        }
+      }
+    },
+    {
+      "ctx": "H-cleanup",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "H-cleanup",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:55:31.890Z"
+    },
+    {
+      "ctx": "H-cleanup",
+      "click": "shake-cycle-0",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:32.957Z"
+    },
+    {
+      "ctx": "H-cleanup",
+      "click": "shake-cycle-1",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:34.833Z"
+    },
+    {
+      "ctx": "H-cleanup",
+      "click": "shake-cycle-2",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:35.238Z"
+    },
+    {
+      "ctx": "H",
+      "baseline": {
+        "listener": 9,
+        "contact": 5,
+        "shake": {
+          "baseUsed": 0,
+          "extraGranted": 0,
+          "extraUsed": 0,
+          "activeStartTick": null,
+          "cooldownUntilTick": 0,
+          "guardMembers": [],
+          "guardStableTicks": 0,
+          "guardReleased": true
+        }
+      },
+      "cycles": [
+        {
+          "status": {
+            "listener": 10,
+            "contact": 8,
+            "fault": null
+          },
+          "shake": {
+            "baseUsed": 1,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "activeStartTick": null,
+            "cooldownUntilTick": 181,
+            "guardMembers": [],
+            "guardStableTicks": 0,
+            "guardReleased": true
+          }
+        },
+        {
+          "status": {
+            "listener": 10,
+            "contact": 9,
+            "fault": null
+          },
+          "shake": {
+            "baseUsed": 1,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "activeStartTick": null,
+            "cooldownUntilTick": 181,
+            "guardMembers": [],
+            "guardStableTicks": 0,
+            "guardReleased": true
+          }
+        },
+        {
+          "status": {
+            "listener": 10,
+            "contact": 9,
+            "fault": null
+          },
+          "shake": {
+            "baseUsed": 2,
+            "extraGranted": 0,
+            "extraUsed": 0,
+            "activeStartTick": null,
+            "cooldownUntilTick": 318,
+            "guardMembers": [],
+            "guardStableTicks": 0,
+            "guardReleased": true
+          }
+        }
+      ],
+      "rebuilt": {
+        "oldWorldId": 2,
+        "newWorldId": 3,
+        "stale": {
+          "contactCount": 0,
+          "beginEvents": 72,
+          "endEvents": 72,
+          "colliderOwners": 0
+        },
+        "runId": "38504006-23e6-439a-a8f2-23a1569c7f73"
+      },
+      "afterRebuild": {
+        "screen": "PAUSED",
+        "phase": "PAUSED",
+        "paused": true,
+        "pauseReasons": [
+          "MANUAL"
+        ],
+        "stepCount": 0,
+        "clockTick": 0,
+        "baseTick": 350,
+        "tick": 350,
+        "lastCommandOutcome": null,
+        "lastTickFault": null,
+        "contactCount": 0,
+        "contactBeginEvents": 0,
+        "contactEndEvents": 0,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": []
+        },
+        "listenerCount": 10,
+        "worldId": 3,
+        "notice": "",
+        "saveRevision": 9,
+        "saveMode": "attempt-scoped-debug"
+      }
+    },
+    {
+      "ctx": "G-drop",
+      "boot": {
+        "buildId": "20261107-guard04-web-debug-01",
+        "attemptId": null,
+        "probeVersion": "p1b-probe-v3",
+        "sceneId": 1,
+        "cocos": "3.8.8",
+        "box2d": "1.0.2",
+        "ptm": 32,
+        "autoSimulation": false,
+        "configRulesHash": "c4c93c79d0b1d1bfd0eb65ade281e3f7ef29ea95124c54a60bdcafde5d716d02",
+        "worldId": 0
+      }
+    },
+    {
+      "ctx": "G-drop",
+      "click": "tutorial-skip",
+      "design": [
+        535,
+        698
+      ],
+      "at": "2026-11-07T06:55:41.205Z"
+    },
+    {
+      "ctx": "G-drop",
+      "click": "shake-drop",
+      "design": [
+        142,
+        96
+      ],
+      "at": "2026-11-07T06:55:42.078Z"
+    },
+    {
+      "ctx": "G",
+      "before": {
+        "spawn": {
+          "level": 1,
+          "xDu": 379,
+          "vxDuPerSecond": -12,
+          "angularVelocity": 0
+        },
+        "dropIndex": 0,
+        "tick": 51
+      },
+      "guarded": {
+        "spawn": {
+          "level": 1,
+          "xDu": 379,
+          "vxDuPerSecond": -12,
+          "angularVelocity": 0
+        },
+        "dropIndex": 0,
+        "shake": {
+          "baseUsed": 1,
+          "extraGranted": 0,
+          "extraUsed": 0,
+          "activeStartTick": 52,
+          "cooldownUntilTick": 0,
+          "guardMembers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "guardStableTicks": 0,
+          "guardReleased": false
+        }
+      },
+      "after": {
+        "dropIndex": 1,
+        "shake": {
+          "baseUsed": 1,
+          "extraGranted": 0,
+          "extraUsed": 0,
+          "activeStartTick": null,
+          "cooldownUntilTick": 147,
+          "guardMembers": [],
+          "guardStableTicks": 0,
+          "guardReleased": true
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "name": "REC-01 error screen owns input (tutorial skip does nothing)",
+      "ok": true,
+      "detail": {
+        "screen": "ERROR",
+        "runId": null
+      }
+    },
+    {
+      "name": "REC-01 failure leaves no engine and no committed run",
+      "ok": true,
+      "detail": {
+        "engine": null,
+        "bundle": {
+          "ok": true,
+          "error": null,
+          "revision": null,
+          "runId": null,
+          "score": null,
+          "state": null,
+          "tick": null,
+          "baseUsed": null,
+          "tutorial": null
+        }
+      }
+    },
+    {
+      "name": "REC-01 retry commits exactly one readable run",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "revision": 2,
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "score": 0,
+        "state": "PAUSED",
+        "tick": 0,
+        "baseUsed": 0,
+        "tutorial": null
+      }
+    },
+    {
+      "name": "REC-01 retry keeps tutorial and score 0",
+      "ok": true,
+      "detail": {
+        "screen": "PLAYING",
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14"
+      }
+    },
+    {
+      "name": "REC-01 same run plays after retry",
+      "ok": true,
+      "detail": {
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "phase": "PLAYING"
+      }
+    },
+    {
+      "name": "REC-01 reload offers the same committed run",
+      "ok": true,
+      "detail": {
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "screen": "MENU"
+      }
+    },
+    {
+      "name": "REC-01 menu continue pauses the same run for an explicit resume",
+      "ok": true,
+      "detail": {
+        "screen": "PAUSED",
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14"
+      }
+    },
+    {
+      "name": "REC-01 failed new start preserves the previous run",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "revision": 8,
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "score": 0,
+        "state": "PAUSED",
+        "tick": 75,
+        "baseUsed": 0,
+        "tutorial": "design-v0.7-guarded-bump-01"
+      }
+    },
+    {
+      "name": "REC-01 error menu keeps the committed run (no implicit abandon)",
+      "ok": true,
+      "detail": {
+        "before": {
+          "ok": true,
+          "error": null,
+          "revision": 6,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 0,
+          "state": "PAUSED",
+          "tick": 75,
+          "baseUsed": 0,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        },
+        "after": {
+          "ok": true,
+          "error": null,
+          "revision": 8,
+          "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+          "score": 0,
+          "state": "PAUSED",
+          "tick": 75,
+          "baseUsed": 0,
+          "tutorial": "design-v0.7-guarded-bump-01"
+        }
+      }
+    },
+    {
+      "name": "REC-01 menu continue reloads the original run",
+      "ok": true,
+      "detail": {
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "revision": 8
+      }
+    },
+    {
+      "name": "REC-02 render failure keeps the persisted run",
+      "ok": true,
+      "detail": {
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14"
+      }
+    },
+    {
+      "name": "REC-02 render retry restores the same run without a second start",
+      "ok": true,
+      "detail": {
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "score": 0
+      }
+    },
+    {
+      "name": "REC-02 persistent render failure keeps an actionable error layer",
+      "ok": true,
+      "detail": {
+        "screen": "ERROR",
+        "notice": "RENDER_FAILED：界面渲染失败：Error: INJECTED_RENDER_FAULT"
+      }
+    },
+    {
+      "name": "REC-02 error menu does not abandon or replace the run",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "revision": 10,
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "score": 0,
+        "state": "PAUSED",
+        "tick": 114,
+        "baseUsed": 0,
+        "tutorial": "design-v0.7-guarded-bump-01"
+      }
+    },
+    {
+      "name": "REC-02 continue after render failures keeps runId",
+      "ok": true,
+      "detail": {
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14"
+      }
+    },
+    {
+      "name": "REC-02 reload after error recovery still offers the same run",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "revision": 12,
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "score": 0,
+        "state": "PAUSED",
+        "tick": 114,
+        "baseUsed": 0,
+        "tutorial": "design-v0.7-guarded-bump-01"
+      }
+    },
+    {
+      "name": "REC-02 unreadable save produces RESTORE failure without writing",
+      "ok": true,
+      "detail": {
+        "screen": "ERROR",
+        "bundleOk": false
+      }
+    },
+    {
+      "name": "REC-02 restore retry keeps runId and revision",
+      "ok": true,
+      "detail": {
+        "runId": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "revision": 12
+      }
+    },
+    {
+      "name": "V2-10 first real shake consumed one free use and released the guard",
+      "ok": true,
+      "detail": {
+        "baseUsed": 1,
+        "guardReleased": true,
+        "guardMembers": []
+      }
+    },
+    {
+      "name": "V2-10 reducedMotion changes presentation only; second shake consumes the second free use",
+      "ok": true,
+      "detail": {
+        "baseUsed": 2,
+        "reduced": true
+      }
+    },
+    {
+      "name": "V2-10 exhausted free quota adds no pulse and no use",
+      "ok": true,
+      "detail": {
+        "baseUsed": 2,
+        "notice": "广告奖励尚未开启"
+      }
+    },
+    {
+      "name": "V2-07 refresh inside the guard keeps runId and restores without a tick fault",
+      "ok": true,
+      "detail": {
+        "before": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "after": "1d5df9e6-50b0-48e6-a4f9-12570298ad14",
+        "fault": null
+      }
+    },
+    {
+      "name": "V2-01 half-cup low body rises 75-110 DU",
+      "ok": true,
+      "detail": [
+        {
+          "id": 1,
+          "level": 4,
+          "baseY": 403.28,
+          "peakY": 520.99,
+          "rise": 117.71
+        },
+        {
+          "id": 3,
+          "level": 2,
+          "baseY": 385.28,
+          "peakY": 487.16,
+          "rise": 101.87
+        },
+        {
+          "id": 4,
+          "level": 3,
+          "baseY": 393.28,
+          "peakY": 515.35,
+          "rise": 122.07
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "baseY": 379.28,
+          "peakY": 484.55,
+          "rise": 105.27
+        }
+      ]
+    },
+    {
+      "name": "V2-02 layout 1 shows visible rearrangement vs no-op (>=2 moved 25 DU, or one moved plus a real contact/merge change)",
+      "ok": true,
+      "detail": {
+        "moved": [
+          {
+            "id": 1,
+            "controlX": 264.12,
+            "shakeX": 314.86,
+            "dx": 50.74,
+            "peakDx": 52.93,
+            "peakTick": 168
+          },
+          {
+            "id": 3,
+            "controlX": 384.24,
+            "shakeX": 361.44,
+            "dx": -22.81,
+            "peakDx": 26.86,
+            "peakTick": 183
+          },
+          {
+            "id": 4,
+            "controlX": 439.44,
+            "shakeX": 434.89,
+            "dx": -4.54,
+            "peakDx": 43.38,
+            "peakTick": 82
+          },
+          {
+            "id": 5,
+            "controlX": 500,
+            "shakeX": 508.17,
+            "dx": 8.17,
+            "peakDx": 65.6,
+            "peakTick": 90
+          }
+        ],
+        "mergedDuringShake": 1,
+        "detail": [
+          {
+            "id": 1,
+            "controlX": 264.12,
+            "shakeX": 314.86,
+            "dx": 50.74,
+            "peakDx": 52.93,
+            "peakTick": 168
+          },
+          {
+            "id": 3,
+            "controlX": 384.24,
+            "shakeX": 361.44,
+            "dx": -22.81,
+            "peakDx": 26.86,
+            "peakTick": 183
+          },
+          {
+            "id": 4,
+            "controlX": 439.44,
+            "shakeX": 434.89,
+            "dx": -4.54,
+            "peakDx": 43.38,
+            "peakTick": 82
+          },
+          {
+            "id": 5,
+            "controlX": 500,
+            "shakeX": 508.17,
+            "dx": 8.17,
+            "peakDx": 65.6,
+            "peakTick": 90
+          }
+        ]
+      }
+    },
+    {
+      "name": "V2-06 layout 1 exactly one impulse per live body",
+      "ok": true,
+      "detail": {
+        "probe": 5,
+        "bodies": 5
+      }
+    },
+    {
+      "name": "V2-02 layout 2 shows visible rearrangement vs no-op (>=2 moved 25 DU, or one moved plus a real contact/merge change)",
+      "ok": true,
+      "detail": {
+        "moved": [
+          {
+            "id": 5,
+            "controlX": 500,
+            "shakeX": 436.33,
+            "dx": -63.67,
+            "peakDx": 70.75,
+            "peakTick": 191
+          }
+        ],
+        "mergedDuringShake": 2,
+        "detail": [
+          {
+            "id": 5,
+            "controlX": 500,
+            "shakeX": 436.33,
+            "dx": -63.67,
+            "peakDx": 70.75,
+            "peakTick": 191
+          }
+        ]
+      }
+    },
+    {
+      "name": "V2-06 layout 2 exactly one impulse per live body",
+      "ok": true,
+      "detail": {
+        "probe": 3,
+        "bodies": 3
+      }
+    },
+    {
+      "name": "V2-02 layout 3 shows visible rearrangement vs no-op (>=2 moved 25 DU, or one moved plus a real contact/merge change)",
+      "ok": true,
+      "detail": {
+        "moved": [
+          {
+            "id": 5,
+            "controlX": 480.32,
+            "shakeX": 486.69,
+            "dx": 6.37,
+            "peakDx": 55.56,
+            "peakTick": 85
+          }
+        ],
+        "mergedDuringShake": 4,
+        "detail": [
+          {
+            "id": 5,
+            "controlX": 480.32,
+            "shakeX": 486.69,
+            "dx": 6.37,
+            "peakDx": 55.56,
+            "peakTick": 85
+          }
+        ]
+      }
+    },
+    {
+      "name": "V2-06 layout 3 exactly one impulse per live body",
+      "ok": true,
+      "detail": {
+        "probe": 5,
+        "bodies": 5
+      }
+    },
+    {
+      "name": "V2-04 fast drag inside guard keeps the cup/guard attached without a tick fault",
+      "ok": true,
+      "detail": {
+        "fault": null
+      }
+    },
+    {
+      "name": "V2-04 guard released after drag and no residual members",
+      "ok": true,
+      "detail": {
+        "baseUsed": 1,
+        "extraGranted": 0,
+        "extraUsed": 0,
+        "activeStartTick": null,
+        "cooldownUntilTick": 189,
+        "guardMembers": [],
+        "guardStableTicks": 0,
+        "guardReleased": true
+      }
+    },
+    {
+      "name": "V2-04 cup offset tracked real drag input",
+      "ok": true,
+      "detail": {
+        "before": {
+          "offsetXDu": 0,
+          "velocityXDuPerSecond": 0,
+          "targetOffsetXDu": 0,
+          "control": "IDLE"
+        },
+        "after": {
+          "offsetXDu": -107.2744369506836,
+          "velocityXDuPerSecond": 0,
+          "targetOffsetXDu": -107.27443121097706,
+          "control": "IDLE"
+        }
+      }
+    },
+    {
+      "name": "V2-03 guard-near-full: no guarded body leaves the finite cup profile",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "V2-03 guard-near-full: zero technical rollback during two shakes",
+      "ok": true,
+      "detail": {
+        "faults": [],
+        "last": null
+      }
+    },
+    {
+      "name": "V2-03 guard-near-full: run stays playable (no forced terminal/revive from the guard)",
+      "ok": true,
+      "detail": {
+        "state": "PLAYING",
+        "reason": null,
+        "bodies": 7
+      }
+    },
+    {
+      "name": "V2-05 empty cup shake is rejected without consuming a use",
+      "ok": true,
+      "detail": {
+        "baseUsed": 0,
+        "notice": "杯里还没有小料"
+      }
+    },
+    {
+      "name": "V2-05 entered outside bodies keep their own spill eligibility",
+      "ok": true,
+      "detail": {
+        "outside": [
+          {
+            "id": 1,
+            "entered": false,
+            "danger": false,
+            "spill": 0
+          },
+          {
+            "id": 2,
+            "entered": false,
+            "danger": false,
+            "spill": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "V2-05 spill-never-entered outside bodies keep their own spill eligibility",
+      "ok": true,
+      "detail": {
+        "outside": [
+          {
+            "id": 1,
+            "entered": false,
+            "danger": false,
+            "spill": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "V2-06 pause freezes the pre-delay without replay or extra impulse",
+      "ok": true,
+      "detail": {
+        "a": 3,
+        "b": 3
+      }
+    },
+    {
+      "name": "V2-06 exactly one impulse per body across pause/resume (a body merged before launch is no longer live)",
+      "ok": true,
+      "detail": {
+        "perEntity": {
+          "4": 1,
+          "5": 1,
+          "7": 1
+        },
+        "total": 3,
+        "bodies": 4
+      }
+    },
+    {
+      "name": "V2-08 three guard cycles leave listener count and contacts at baseline",
+      "ok": true,
+      "detail": {
+        "baseline": 9,
+        "cycles": [
+          10,
+          10,
+          10
+        ]
+      }
+    },
+    {
+      "name": "V2-08 rebuild with a guarded world keeps runId and never reports a tick fault",
+      "ok": true,
+      "detail": {
+        "runId": "38504006-23e6-439a-a8f2-23a1569c7f73",
+        "fault": null
+      }
+    },
+    {
+      "name": "V2-08 guard members are empty after release/rebuild",
+      "ok": true,
+      "detail": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "name": "V2-09 pendingSpawn and RNG stay unchanged during the guard window",
+      "ok": true,
+      "detail": {
+        "before": {
+          "level": 1,
+          "xDu": 379,
+          "vxDuPerSecond": -12,
+          "angularVelocity": 0
+        },
+        "guarded": {
+          "level": 1,
+          "xDu": 379,
+          "vxDuPerSecond": -12,
+          "angularVelocity": 0
+        },
+        "rng": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "name": "V2-09 at most one drop lands after the guard releases",
+      "ok": true,
+      "detail": {
+        "before": 0,
+        "after": 1
+      }
+    }
+  ],
+  "halfCup": [
+    {
+      "layout": 1,
+      "t0": 21,
+      "dx": [
+        {
+          "id": 1,
+          "controlX": 264.12,
+          "shakeX": 314.86,
+          "dx": 50.74,
+          "peakDx": 52.93,
+          "peakTick": 168
+        },
+        {
+          "id": 3,
+          "controlX": 384.24,
+          "shakeX": 361.44,
+          "dx": -22.81,
+          "peakDx": 26.86,
+          "peakTick": 183
+        },
+        {
+          "id": 4,
+          "controlX": 439.44,
+          "shakeX": 434.89,
+          "dx": -4.54,
+          "peakDx": 43.38,
+          "peakTick": 82
+        },
+        {
+          "id": 5,
+          "controlX": 500,
+          "shakeX": 508.17,
+          "dx": 8.17,
+          "peakDx": 65.6,
+          "peakTick": 90
+        }
+      ],
+      "peakLift": [
+        {
+          "id": 1,
+          "level": 4,
+          "baseY": 403.28,
+          "peakY": 520.99,
+          "rise": 117.71
+        },
+        {
+          "id": 3,
+          "level": 2,
+          "baseY": 385.28,
+          "peakY": 487.16,
+          "rise": 101.87
+        },
+        {
+          "id": 4,
+          "level": 3,
+          "baseY": 393.28,
+          "peakY": 515.35,
+          "rise": 122.07
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "baseY": 379.28,
+          "peakY": 484.55,
+          "rise": 105.27
+        }
+      ],
+      "probe": 5,
+      "cup": {
+        "control": 0,
+        "shaken": 0
+      },
+      "shake": {
+        "baseUsed": 1,
+        "extraGranted": 0,
+        "extraUsed": 0,
+        "activeStartTick": null,
+        "cooldownUntilTick": 117,
+        "guardMembers": [],
+        "guardStableTicks": 0,
+        "guardReleased": true
+      },
+      "status": {
+        "screen": "PLAYING",
+        "phase": "PLAYING",
+        "paused": false,
+        "pauseReasons": [],
+        "stepCount": 191,
+        "clockTick": 191,
+        "baseTick": 0,
+        "tick": 191,
+        "lastCommandOutcome": {
+          "commandId": "e9b00ff9-0683-4903-a636-ad634e979d5f",
+          "sequence": 1,
+          "status": "APPLIED",
+          "appliedTick": 22
+        },
+        "lastTickFault": null,
+        "contactCount": 9,
+        "contactBeginEvents": 37,
+        "contactEndEvents": 28,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": [
+            "2|cup:0",
+            "3|cup:0",
+            "1|2",
+            "5|cup:0",
+            "5|cup:2",
+            "1|3",
+            "4|5",
+            "6|cup:0",
+            "4|cup:0"
+          ]
+        },
+        "listenerCount": 10,
+        "worldId": 2,
+        "notice": "",
+        "saveRevision": 6,
+        "saveMode": "attempt-scoped-debug"
+      }
+    },
+    {
+      "layout": 2,
+      "t0": 21,
+      "dx": [
+        {
+          "id": 5,
+          "controlX": 500,
+          "shakeX": 436.33,
+          "dx": -63.67,
+          "peakDx": 70.75,
+          "peakTick": 191
+        }
+      ],
+      "peakLift": [
+        {
+          "id": 5,
+          "level": 1,
+          "baseY": 379.28,
+          "peakY": 486.83,
+          "rise": 107.54
+        }
+      ],
+      "probe": 3,
+      "cup": {
+        "control": 0,
+        "shaken": 0
+      },
+      "shake": {
+        "baseUsed": 1,
+        "extraGranted": 0,
+        "extraUsed": 0,
+        "activeStartTick": null,
+        "cooldownUntilTick": 113,
+        "guardMembers": [],
+        "guardStableTicks": 0,
+        "guardReleased": true
+      },
+      "status": {
+        "screen": "PLAYING",
+        "phase": "PLAYING",
+        "paused": false,
+        "pauseReasons": [],
+        "stepCount": 191,
+        "clockTick": 191,
+        "baseTick": 0,
+        "tick": 191,
+        "lastCommandOutcome": {
+          "commandId": "bd72e848-42ed-417b-8b49-310b3313eba6",
+          "sequence": 1,
+          "status": "APPLIED",
+          "appliedTick": 22
+        },
+        "lastTickFault": null,
+        "contactCount": 2,
+        "contactBeginEvents": 13,
+        "contactEndEvents": 11,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": [
+            "5|cup:0",
+            "8|cup:0"
+          ]
+        },
+        "listenerCount": 7,
+        "worldId": 2,
+        "notice": "",
+        "saveRevision": 8,
+        "saveMode": "attempt-scoped-debug"
+      }
+    },
+    {
+      "layout": 3,
+      "t0": 21,
+      "dx": [
+        {
+          "id": 5,
+          "controlX": 480.32,
+          "shakeX": 486.69,
+          "dx": 6.37,
+          "peakDx": 55.56,
+          "peakTick": 85
+        }
+      ],
+      "peakLift": [
+        {
+          "id": 5,
+          "level": 4,
+          "baseY": 403.28,
+          "peakY": 523.87,
+          "rise": 120.59
+        }
+      ],
+      "probe": 5,
+      "cup": {
+        "control": 0,
+        "shaken": 0
+      },
+      "shake": {
+        "baseUsed": 1,
+        "extraGranted": 0,
+        "extraUsed": 0,
+        "activeStartTick": null,
+        "cooldownUntilTick": 132,
+        "guardMembers": [],
+        "guardStableTicks": 0,
+        "guardReleased": true
+      },
+      "status": {
+        "screen": "PLAYING",
+        "phase": "PLAYING",
+        "paused": false,
+        "pauseReasons": [],
+        "stepCount": 191,
+        "clockTick": 191,
+        "baseTick": 0,
+        "tick": 191,
+        "lastCommandOutcome": {
+          "commandId": "ce6c6ee4-b8ef-4b5f-a743-61650521ef64",
+          "sequence": 1,
+          "status": "APPLIED",
+          "appliedTick": 22
+        },
+        "lastTickFault": null,
+        "contactCount": 3,
+        "contactBeginEvents": 34,
+        "contactEndEvents": 31,
+        "contactEnumeration": {
+          "reversed": false,
+          "contactIds": [
+            "5|cup:0",
+            "5|cup:2",
+            "9|cup:0"
+          ]
+        },
+        "listenerCount": 7,
+        "worldId": 2,
+        "notice": "",
+        "saveRevision": 9,
+        "saveMode": "attempt-scoped-debug"
+      }
+    }
+  ],
+  "finishedAt": "2026-11-07T06:55:44.678Z",
+  "passed": 45,
+  "failed": 0
+}

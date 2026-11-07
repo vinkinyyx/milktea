@@ -11,7 +11,7 @@ export interface RulesConfig {
   };
   cup: { center_x_du: number; inner_bottom_y_du: number; inner_top_y_du: number; bottom_width_du: number; top_width_du: number; spawn_y_du: number; danger_line_y_du: number };
   cup_motion: { max_offset_du:number; max_speed_du_per_second:number; acceleration_du_per_second2:number; response_seconds:number; snap_epsilon_du:number; settle_max_ticks:number; input_gain:number };
-  shake: { duration_seconds:number; cooldown_seconds:number; acceleration_amplitude:number; frequency_hz:number; visual_offset_max_du:number; guaranteed_merge:boolean };
+  shake: { motion:'guarded_bump_v2'; duration_seconds:number; cooldown_seconds:number; launch_delay_ticks:number; settle_ticks:number; guard_diagnostic_max_ticks:number; vertical_delta_velocity_du_per_second:number; max_upward_velocity_du_per_second:number; headroom_stop_du:number; headroom_full_du:number; horizontal_lateral_low_du_per_second:number; horizontal_lateral_high_du_per_second:number; horizontal_scatter_du_per_second:number; horizontal_centering_max_du_per_second:number; max_relative_horizontal_velocity_du_per_second:number; settle_upward_max_du_per_second:number; settle_vertical_max_du_per_second:number; guard_lift_du:number; guard_thickness_du:number; visual_compress_du:number; visual_rebound_du:number; guaranteed_merge:boolean };
   auto_drop: { interval_ticks:number; blocked_retry_ticks:number; resume_delay_ticks:number };
   spawn_jitter:{x_offsets_du:number[];vx_du_per_second:number[]};
   drop: { spawn_levels: Array<{ level: number; weight: number }> };
@@ -74,9 +74,24 @@ export class ConfigLoader {
       if (c.cup.spawn_y_du > c.viewport.height_du || c.cup.danger_line_y_du > c.viewport.height_du) throw new Error('投放高度和危险线必须位于设计视口内');
       for(const [key,value] of Object.entries(c.cup_motion)) finite(value,`cup_motion.${key}`,key==='input_gain'?0:0);
       if(c.cup_motion.max_offset_du<=0||c.cup_motion.max_speed_du_per_second<=0||c.cup_motion.acceleration_du_per_second2<=0)throw new Error('cup_motion参数必须大于0');
-      for(const key of ['duration_seconds','cooldown_seconds','acceleration_amplitude','frequency_hz','visual_offset_max_du'] as const)finite(c.shake[key],`shake.${key}`,0);
+      if(c.shake.motion!=='guarded_bump_v2')throw new Error('shake.motion当前仅支持guarded_bump_v2');
+      for(const key of ['duration_seconds','vertical_delta_velocity_du_per_second','max_upward_velocity_du_per_second','horizontal_lateral_low_du_per_second','horizontal_lateral_high_du_per_second','horizontal_centering_max_du_per_second','max_relative_horizontal_velocity_du_per_second','guard_thickness_du','visual_compress_du','visual_rebound_du'] as const){finite(c.shake[key],`shake.${key}`,0);if(c.shake[key]<=0)throw new Error(`shake.${key}必须大于0`);}
+      for(const key of ['cooldown_seconds','horizontal_scatter_du_per_second','headroom_stop_du','headroom_full_du','settle_upward_max_du_per_second','settle_vertical_max_du_per_second','guard_lift_du'] as const)finite(c.shake[key],`shake.${key}`,0);
       if(typeof c.shake.guaranteed_merge!=='boolean')throw new Error('shake.guaranteed_merge必须是boolean');
-      if(c.shake.duration_seconds<=0||c.shake.frequency_hz<=0||c.shake.visual_offset_max_du>6)throw new Error('shake参数超出已验证边界');
+      for(const key of ['launch_delay_ticks','settle_ticks','guard_diagnostic_max_ticks'] as const)if(!Number.isSafeInteger(c.shake[key])||c.shake[key]<0)throw new Error(`shake.${key}必须是非负安全整数`);
+      if(c.shake.settle_ticks<1)throw new Error('shake.settle_ticks必须大于0');
+      const shakeDurationTicks=Math.round(c.shake.duration_seconds*c.physics.fixed_hz);
+      if(shakeDurationTicks<1||c.shake.launch_delay_ticks>=shakeDurationTicks)throw new Error('shake.launch_delay_ticks必须小于动作时长');
+      if(c.shake.guard_diagnostic_max_ticks<shakeDurationTicks+c.shake.settle_ticks)throw new Error('shake.guard_diagnostic_max_ticks必须覆盖动作时长与静置窗口');
+      if(c.shake.headroom_full_du<=c.shake.headroom_stop_du)throw new Error('shake.headroom_full_du必须大于headroom_stop_du');
+      if(c.shake.horizontal_lateral_low_du_per_second>c.shake.horizontal_lateral_high_du_per_second)throw new Error('shake横向偏置低值不能大于高值');
+      if(c.shake.max_upward_velocity_du_per_second<c.shake.vertical_delta_velocity_du_per_second)throw new Error('shake向上速度上限必须覆盖垂直增量');
+      if(c.shake.guard_lift_du<4||c.shake.guard_lift_du>120)throw new Error('shake.guard_lift_du必须位于4至120之间');
+      const maxLinearDuPerSecond=c.physics.max_linear_speed*c.viewport.du_per_spec_physics_unit;
+      if(c.shake.max_upward_velocity_du_per_second>maxLinearDuPerSecond)throw new Error('shake向上速度上限超过全局线速度上限');
+      if(c.shake.max_relative_horizontal_velocity_du_per_second>maxLinearDuPerSecond)throw new Error('shake相对水平速度上限超过全局线速度上限');
+      if(c.shake.horizontal_lateral_high_du_per_second+c.shake.horizontal_scatter_du_per_second+c.shake.horizontal_centering_max_du_per_second>maxLinearDuPerSecond)throw new Error('shake水平速度上限超过全局线速度上限');
+      if(c.shake.visual_compress_du>12||c.shake.visual_rebound_du>24)throw new Error('shake视觉位移超出已确认边界');
       for(const [key,value] of Object.entries(c.auto_drop)){finite(value,`auto_drop.${key}`,1);if(!Number.isSafeInteger(value))throw new Error(`auto_drop.${key}必须是安全整数`);}
       for(const key of ['x_offsets_du','vx_du_per_second'] as const){const values=c.spawn_jitter[key];if(!Array.isArray(values)||values.length<2||values.some(v=>!Number.isFinite(v)))throw new Error(`spawn_jitter.${key}无效`);}
       if (!Array.isArray(c.stages) || c.stages.length < 1) throw new Error('stages 不能为空');

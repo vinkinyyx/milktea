@@ -27,7 +27,7 @@ export class CocosPhysicsAdapter implements IPhysicsAdapter {
   private readonly samplePosition = new Vec3();
   private readonly stepTimings = { syncToPhysics: 0, physicsStep: 0, syncFromPhysics: 0, velocityClamp: 0 };
   private timingDiagnostics = false;
-  private fixtureAccelerationProbe: Array<{ preStepIndex: number; entityId: number; accelerationSpecUnits: number; accelerationDu: number; accelerationBox2D: number; mass: number; forceX: number }> | null = null;
+  private fixtureImpulseProbe: Array<{ preStepIndex: number; entityId: number; deltaDu: { x: number; y: number }; deltaBox2D: { x: number; y: number }; mass: number; impulseBox2D: { x: number; y: number }; beforeVelocityDu: { x: number; y: number }; awakeBefore: boolean }> | null = null;
   private fixtureMergeFault: 'create-child-once'|'second-commit-once'|null=null;
   private fixtureMergeCommitCount=0;
   private fixtureMergeProbe: Array<Record<string,unknown>>|null=null;
@@ -84,14 +84,22 @@ export class CocosPhysicsAdapter implements IPhysicsAdapter {
   }
   readFixtureMergeProbe():readonly Record<string,unknown>[]{return cloneState(this.fixtureMergeProbe??[]);}
   setTimingDiagnostics(enabled: boolean): void { this.timingDiagnostics = enabled; }
-  /** Attempt-scoped diagnostic used only by the real shake sample fixture. */
-  enableFixtureAccelerationProbe(): void { this.fixtureAccelerationProbe = []; }
-  readFixtureAccelerationProbe(): readonly { preStepIndex: number; entityId: number; accelerationSpecUnits: number; accelerationDu: number; accelerationBox2D: number; mass: number; forceX: number }[] {
-    return (this.fixtureAccelerationProbe ?? []).map(sample => ({ ...sample }));
+  /** Attempt-scoped diagnostic used only by the real cup-bump fixture. */
+  enableFixtureImpulseProbe(): void { this.fixtureImpulseProbe = []; }
+  readFixtureImpulseProbe(): readonly { preStepIndex: number; entityId: number; deltaDu: { x: number; y: number }; deltaBox2D: { x: number; y: number }; mass: number; impulseBox2D: { x: number; y: number }; beforeVelocityDu: { x: number; y: number }; awakeBefore: boolean }[] {
+    return (this.fixtureImpulseProbe ?? []).map(sample => ({ ...sample, deltaDu: { ...sample.deltaDu }, deltaBox2D: { ...sample.deltaBox2D }, impulseBox2D: { ...sample.impulseBox2D }, beforeVelocityDu: { ...sample.beforeVelocityDu } }));
   }
 
   private cupOffsetXDu = 0;
   private cupBodies: RigidBody2D[] = [];
+  private readonly guardNodes: Node[] = [];
+  private readonly guardBodies: RigidBody2D[] = [];
+  private readonly guardColliders: BoxCollider2D[] = [];
+  private readonly guardMembers = new Set<number>();
+  private guardActive = false;
+  private cupRimYDu = 0;
+  private cupTopHalfWidthDu = 0;
+  private cupWallThicknessDu = 16;
   createCup(stageId: StageId, offsetXDu = 0): void {
     this.assertAlive(); this.destroyCup();
     const scale = this.rules.stages.find(s => s.id === stageId)?.cup_width_scale;
@@ -100,6 +108,9 @@ export class CocosPhysicsAdapter implements IPhysicsAdapter {
     this.cupOffsetXDu = offsetXDu;
     this.cupShape = CupGeometry.build({ centerXDu: cup.center_x_du + offsetXDu, bottomYDu: cup.inner_bottom_y_du,
       topYDu: cup.inner_top_y_du, bottomWidthDu: cup.bottom_width_du, topWidthDu: cup.top_width_du, widthScale: scale });
+    this.cupRimYDu = this.cupShape.leftTop.y;
+    this.cupTopHalfWidthDu = this.cupShape.innerWidthAtTop / 2;
+    this.cupWallThicknessDu = this.cupShape.segments[1]?.thicknessDu ?? 16;
     for (let segmentIndex = 0; segmentIndex < this.cupShape.segments.length; segmentIndex++) {
       const segment = this.cupShape.segments[segmentIndex];
       const node = new Node(`CupBoundary-${segment.kind}`); this.root.addChild(node);
@@ -123,6 +134,90 @@ export class CocosPhysicsAdapter implements IPhysicsAdapter {
     const node=this.staticNodes[0]; if(!node)return this.cupOffsetXDu;
     const x=this.mapper.cocosWorldToDu(node.position.x)+this.rules.viewport.width_du/2;
     return x-this.rules.cup.center_x_du;
+  }
+  /**
+   * CUP-02 guarded bump: a kinematic mouth guard (lid plus two short corner rails) that follows the
+   * real cup and only collides with the guarded members. Non-members keep their original path so a
+   * falling drop or an already-spilled body is never bounced back by the guard.
+   */
+  ensureShakeGuard(members: readonly number[], cue: { centerXDu: number; offsetXDu: number; velocityXDuPerSecond: number }): void {
+    this.assertAlive();
+    if (!this.cupShape) return;
+    this.guardMembers.clear();
+    for (const id of members) if (this.bodies.has(id)) this.guardMembers.add(id);
+    if (this.guardActive) return;
+    const actualOffset = this.getCupOffsetX();
+    const offset = Number.isFinite(actualOffset) ? actualOffset : cue.offsetXDu;
+    let highestTop = -Infinity;
+    for (const id of this.guardMembers) {
+      const state = this.getBody(id); const radius = this.bodies.get(id)?.radiusDu ?? 0;
+      if (state) highestTop = Math.max(highestTop, state.positionDu.y + radius);
+    }
+    // Cap underside sits above the rim; if a body is already protruding, raise the lid instead of
+    // creating an overlapping kinematic box (which would inject a large penetration correction).
+    const capUnderside = Math.max(this.cupRimYDu + this.rules.shake.guard_lift_du, highestTop + 2);
+    this.buildShakeGuard(this.rules.cup.center_x_du + offset, capUnderside);
+    this.guardActive = true;
+  }
+  releaseShakeGuard(): void {
+    if (this.disposed) return;
+    this.destroyShakeGuard();
+  }
+  get shakeGuardActive(): boolean { return this.guardActive; }
+  get shakeGuardNodes(): readonly Node[] { return this.guardNodes; }
+  private buildShakeGuard(centerXDu: number, capUndersideYDu: number): void {
+    const thickness = Math.max(4, this.rules.shake.guard_thickness_du);
+    const railWidth = Math.max(4, this.cupWallThicknessDu);
+    const capTopYDu = capUndersideYDu + thickness;
+    const railHeight = Math.max(4, capTopYDu - this.cupRimYDu);
+    const specs = [
+      { name: 'cap', xDu: centerXDu, yDu: capUndersideYDu + thickness / 2, widthDu: this.cupTopHalfWidthDu * 2 + this.cupWallThicknessDu * 2, heightDu: thickness },
+      { name: 'rail-left', xDu: centerXDu - this.cupTopHalfWidthDu - railWidth / 2, yDu: this.cupRimYDu + railHeight / 2, widthDu: railWidth, heightDu: railHeight },
+      { name: 'rail-right', xDu: centerXDu + this.cupTopHalfWidthDu + railWidth / 2, yDu: this.cupRimYDu + railHeight / 2, widthDu: railWidth, heightDu: railHeight },
+    ];
+    const shared = this.cupBodies[0]?.linearVelocity;
+    for (const spec of specs) {
+      const node = new Node(`ShakeGuard-${spec.name}`); this.root.addChild(node);
+      node.setPosition(this.mapper.duToCocosWorld(spec.xDu - this.rules.viewport.width_du / 2),
+        this.mapper.duToCocosWorld(spec.yDu - this.rules.viewport.height_du / 2), 0);
+      const body = node.addComponent(RigidBody2D);
+      body.type = ERigidBody2DType.Kinematic; body.enabledContactListener = true; body.gravityScale = 0;
+      body.linearVelocity = new Vec2(shared?.x ?? 0, 0);
+      const collider = node.addComponent(BoxCollider2D);
+      collider.size = new Size(this.mapper.duToCocosWorld(spec.widthDu), this.mapper.duToCocosWorld(spec.heightDu));
+      collider.friction = this.rules.physics.friction; collider.restitution = this.rules.physics.restitution;
+      collider.apply();
+      this.guardNodes.push(node); this.guardBodies.push(body); this.guardColliders.push(collider);
+      // Guard bodies follow the cup through the same kinematic velocity channel as the cup walls,
+      // but stay out of staticNodes so getCupOffsetX and wall probes still describe the real cup.
+      this.cupBodies.push(body);
+      this.installGuardFilter(collider, this.guardColliders.length - 1);
+    }
+  }
+  private installGuardFilter(collider: BoxCollider2D, index: number): void {
+    const generation = this.generation;
+    this.colliderOwners.set(collider, { entityId: null, boundaryIndex: null });
+    const preSolve = (_self: Collider2D, other: Collider2D, contact: IPhysics2DContact | null): void => {
+      if (this.disposed || generation !== this.generation) return;
+      const otherId = this.idFromCollider(other);
+      if (otherId !== null && this.guardMembers.has(otherId)) return;
+      if (contact) (contact as unknown as { disabled?: boolean }).disabled = true;
+    };
+    collider.on(Contact2DType.PRE_SOLVE, preSolve);
+    const dispose = () => { collider.off(Contact2DType.PRE_SOLVE, preSolve); this.colliderOwners.delete(collider); };
+    Object.defineProperty(dispose, 'name', { value: `listener:guard:${index}` });
+    this.listenerDisposers.push(dispose);
+  }
+  private destroyShakeGuard(): void {
+    for (let i = 0; i < this.guardColliders.length; i++) this.removeListener(`listener:guard:${i}`);
+    for (const body of this.guardBodies) body.enabled = false;
+    for (const node of this.guardNodes) if (node.isValid) node.destroy();
+    if (this.guardBodies.length) {
+      const removed = new Set(this.guardBodies);
+      this.cupBodies = this.cupBodies.filter(body => !removed.has(body));
+    }
+    this.guardNodes.length = 0; this.guardBodies.length = 0; this.guardColliders.length = 0;
+    this.guardMembers.clear(); this.guardActive = false;
   }
 
   createBody(definition: BodyDefinition): void {
@@ -220,13 +315,18 @@ export class CocosPhysicsAdapter implements IPhysicsAdapter {
         this.mapper.box2DVelocityToDu(velocity.x), this.mapper.box2DVelocityToDu(velocity.y), ref.body.isAwake());
     }
   }
-  applyHorizontalAcceleration(entityId: number, accelerationSpecUnits: number): void {
-    const ref = this.bodies.get(entityId); if (!ref) return;
-    const accelerationDu = accelerationSpecUnits * this.rules.viewport.du_per_spec_physics_unit;
-    const accelerationBox2D = this.mapper.duAccelerationToBox2D(accelerationDu);
-    const mass = ref.body.getMass(), forceX = accelerationBox2D * mass;
-    this.fixtureAccelerationProbe?.push({ preStepIndex: this._stepCount, entityId, accelerationSpecUnits, accelerationDu, accelerationBox2D, mass, forceX });
-    ref.body.applyForceToCenter(new Vec2(forceX, 0), true);
+  applyVelocityImpulse(entityId: number, deltaVelocityDuPerSecond: { x: number; y: number }): void {
+    this.assertAlive();
+    const ref = this.bodies.get(entityId); if (!ref) throw new Error(`Impulse target ${entityId} is not a live body`);
+    if (!Number.isFinite(deltaVelocityDuPerSecond.x) || !Number.isFinite(deltaVelocityDuPerSecond.y)) throw new Error('Impulse delta must be finite');
+    const mass = ref.body.getMass();
+    if (!Number.isFinite(mass) || mass <= 0) throw new Error(`Impulse target ${entityId} has invalid mass`);
+    const deltaBox2D = { x: this.mapper.duVelocityToBox2D(deltaVelocityDuPerSecond.x), y: this.mapper.duVelocityToBox2D(deltaVelocityDuPerSecond.y) };
+    const impulseBox2D = { x: deltaBox2D.x * mass, y: deltaBox2D.y * mass };
+    const before = ref.body.linearVelocity;
+    const awakeBefore = ref.body.isAwake();
+    this.fixtureImpulseProbe?.push({ preStepIndex: this._stepCount, entityId, deltaDu: { ...deltaVelocityDuPerSecond }, deltaBox2D: { ...deltaBox2D }, mass, impulseBox2D: { ...impulseBox2D }, beforeVelocityDu: { x: this.mapper.box2DVelocityToDu(before.x), y: this.mapper.box2DVelocityToDu(before.y) }, awakeBefore });
+    ref.body.applyLinearImpulseToCenter(new Vec2(impulseBox2D.x, impulseBox2D.y), true);
   }
   getContacts(): readonly ContactPair[] {
     const contacts = Array.from(this.activeContacts.values(), c => ({ ...c }));
@@ -361,6 +461,7 @@ export class CocosPhysicsAdapter implements IPhysicsAdapter {
     if(!this.listenerDisposers.some(dispose=>dispose.name===`listener:${entityId}`)) this.installContacts(ref.collider,entityId);
   }
   private destroyCup(): void {
+    this.destroyShakeGuard();
     for (let i = 0; i < this.staticNodes.length; i++) { this.removeListener(`listener:cup:${i}`); this.staticNodes[i].destroy(); }
     for (const [key, contact] of this.activeContacts) if (contact.secondId === null) this.activeContacts.delete(key);
     this.staticNodes.length = 0; this.cupBodies.length=0; this.cupShape = null; this.cupOffsetXDu=0;

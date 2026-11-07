@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "design_rules_version": "design-v0.5-natural-spawn-01",
+  "design_rules_version": "design-v0.7-guarded-bump-01",
   "status": "implemented_pending_device_acceptance",
   "baseline_date": "2026-10-26",
   "product": {
@@ -90,13 +90,29 @@
     "shake_time_counts": true
   },
   "shake": {
+    "motion": "guarded_bump_v2",
     "base_per_run": 2,
     "extra_max_per_run": 5,
-    "duration_seconds": 0.8,
-    "cooldown_seconds": 0.5,
-    "acceleration_amplitude": 4.8,
-    "frequency_hz": 2.5,
-    "visual_offset_max_du": 6,
+    "duration_seconds": 0.65,
+    "cooldown_seconds": 0.35,
+    "launch_delay_ticks": 6,
+    "settle_ticks": 6,
+    "guard_diagnostic_max_ticks": 96,
+    "vertical_delta_velocity_du_per_second": 480,
+    "max_upward_velocity_du_per_second": 520,
+    "headroom_stop_du": 16,
+    "headroom_full_du": 112,
+    "horizontal_lateral_low_du_per_second": 120,
+    "horizontal_lateral_high_du_per_second": 160,
+    "horizontal_scatter_du_per_second": 20,
+    "horizontal_centering_max_du_per_second": 35,
+    "max_relative_horizontal_velocity_du_per_second": 320,
+    "settle_upward_max_du_per_second": 20,
+    "settle_vertical_max_du_per_second": 55,
+    "guard_lift_du": 12,
+    "guard_thickness_du": 10,
+    "visual_compress_du": 8,
+    "visual_rebound_du": 16,
     "guaranteed_merge": false
   },
   "reward": {

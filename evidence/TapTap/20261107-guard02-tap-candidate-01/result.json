@@ -1,0 +1,53 @@
+{
+  "buildId": "20261107-guard02-tap-candidate-01",
+  "startedAt": "2026-11-07T14:58:30.541018+08:00",
+  "originalProject": "D:\\Workspace\\TapTap\\奶茶挤挤\\奶茶挤挤",
+  "stagedProject": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-guard02-tap-candidate-01",
+  "output": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-taptap-minigame-build\\20261107-guard02-tap-candidate-01",
+  "appIdProvided": true,
+  "miniAppId": "tapmccrbqbepy6dfz3",
+  "gameId": 1021353,
+  "runtimeVerified": false,
+  "status": "LOCAL_CONVERSION_PASS_NOT_HOST_VALIDATED",
+  "sourceManifestCount": 315,
+  "sourceManifestSha256": "74abc683baef50616defecf94a80c06088e64d472ef231395b34608f78570c9c",
+  "tools": {
+    "python": "3.14.3",
+    "node": "v24.13.0",
+    "creator": "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\CocosCreator.exe",
+    "tapExtension": "1.2.2"
+  },
+  "release-assetsExitCode": 0,
+  "release-codeExitCode": 0,
+  "typecheckExitCode": 0,
+  "host-utf8-gateExitCode": 0,
+  "hostUtf8Gate": {
+    "project": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-guard02-tap-candidate-01",
+    "exitCode": 0,
+    "log": "D:\\Workspace\\TapTap\\奶茶挤挤\\evidence\\TapTap\\20261107-guard02-tap-candidate-01\\host-utf8-gate.log",
+    "status": "PASS",
+    "source": "D:/Workspace/TapTap/奶茶挤挤/build-artifacts/cocos-p1b-build-source/20261107-guard02-tap-candidate-01/assets/scripts/core/Sha256.ts",
+    "sourceSha256": "c3e14dbc9230f8cce5e0747ea9e79a73f515dcc654023ef0a4f04509590c2b72",
+    "hostModes": [
+      "native",
+      "missing",
+      "null",
+      "object",
+      "nonConstructible",
+      "throwing"
+    ],
+    "samples": 110,
+    "comparisons": 660
+  },
+  "creatorExitCode": 36,
+  "bootstrapFatalFetchGuardRemoved": true,
+  "bootstrapPlatformGuardAdded": true,
+  "package": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-taptap-minigame-build\\20261107-guard02-tap-candidate-01\\TapBuild\\game.zip",
+  "packageBytes": 3040925,
+  "packageSha256": "b7a8d0acf69b172ead446602ea8e8b47be8fb939c972d4e9d44d8bb7c3b2147f",
+  "uncompressedBytes": 5217185,
+  "fileCount": 394,
+  "pngCount": 77,
+  "originalSourceChanges": [],
+  "finishedAt": "2026-11-07T15:00:17.969680+08:00"
+}

@@ -2,11 +2,15 @@
 
 竖屏2D奶茶小料合成游戏。Cocos Creator 3.8.8；发布目标为 TapTap 小游戏 `game.zip`。
 
-**2026-11-07独立验收：客户端本地通过，进入平台真机收尾，整体尚未完成。** 170/0、回读失败免费恢复独立探针、StartupTrace摘要/32条环、typecheck/镜像/设计及94baeac3候选资源和313项源清单通过。实际平台阻断：广告MCP服务端TOKEN_REVOKED但本地仍认为有效；CLI可登录、应用1021353的包体声明/绑定有不一致提示。用户已确认1021353并选择安卓USB调试；ADB已就绪但尚无设备。下一步执行账号恢复、平台能力核对、真实两广告和同SHA启动/内存验证，不再反复重修已通过逻辑。
+**2026-11-07 当前执行入口**。用户反馈颠杯偏轻，已选定低处猛颠、高处横拨并保护杯内小料。新版设计、存档恢复修复、补充验收和执行提示词见 [强颠杯与上线前开发收口](docs/53-strong-cup-bump-and-release-closeout.md)。当前候选和剩余项见 [当前事实](docs/22-current-progress-and-resume.md)。
 
+**2026-11-07 host5复核：整体尚未完成。** 用户host3截图已定位新局存档哈希构造TextEncoder失败；host4的typeof判断仍有不可构造函数缺口。本轮消除该宿主依赖，660组UTF-8/SHA比较一致，普通/无TextEncoder两环境完整回归均170/0。host5/1.7.0候选实际身份见CURRENT。同SHA Tap正常开局、错误UI、真实两广告及启动/内存尚待验证，不把浏览器通过当作宿主通过。
+
+- [host5后开发闭环总设计与完整提示词](docs/51-development-closure-masterplan.md)
 - [当前事实与待办](docs/22-current-progress-and-resume.md)
+- [当前截图根因与host5修复](docs/50-host-boot-injection-fix/spec.md)
 - [最新验收、根因与最终交付方案](docs/49-final-delivery-platform-device-plan.md)
-- [下一轮开发执行提示词](docs/49-final-delivery-platform-device-plan.md#9-下一agent完整执行提示词)
+- [当前开发执行提示词](docs/53-strong-cup-bump-and-release-closeout.md#11-可直接执行的提示词)
 - [唯一候选及SHA](output/taptap-upload/CURRENT-CANDIDATE.md)
 - [文档导航](docs/README.md)、[开发交接](docs/13-developer-handoff.md)、[工具命令](tools/README.md)
 - [素材与来源](assets/README.md)、[历史归档与清理记录](docs/archive-location.md)

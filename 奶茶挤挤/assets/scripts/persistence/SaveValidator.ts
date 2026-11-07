@@ -12,7 +12,7 @@ const uuid=(v:unknown):v is string=>typeof v==='string'&&/^[0-9a-f]{8}-[0-9a-f]{
 const dayKey=(v:unknown):v is string=>typeof v==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(v);
 const stages:readonly StageId[]=['classic','coconut_green','taro_boba','brown_sugar','mochi_special'];
 const reasons:readonly TerminalReason[]=['CUP_FULL','SPILLED','BUDGET_EXHAUSTED','ABANDONED','TECHNICAL_ERROR'];
-const rulesVersions:readonly string[]=['design-v0.1','design-v0.2-short-cup-01','design-v0.3-cup-auto-01','design-v0.4-mobile-feel-ads-01','design-v0.5-natural-spawn-01'];
+const rulesVersions:readonly string[]=['design-v0.1','design-v0.2-short-cup-01','design-v0.3-cup-auto-01','design-v0.4-mobile-feel-ads-01','design-v0.5-natural-spawn-01','design-v0.6-cup-bump-01','design-v0.7-guarded-bump-01'];
 const levels=(v:unknown):v is number=>integer(v,1,9);
 const boards=(v:unknown):v is string=>v==='standard'||v==='assisted';
 const common=['saveSchemaVersion','rulesVersion','appVersion','runId','epoch','revision','stageId','mode','boardType','state','tick','nextEntityId','nextCommandSequence','score','maxLevel','dropIndex','currentLevel','nextLevel','lastDropTick','settleStartedTick','challenge','rng','ingredients','shake','dangerTicks','terminalReason','checksum'];
@@ -131,9 +131,10 @@ export class SaveValidator {
   static snapshot(value:unknown):Validation {
     try {
       if(!object(value))return bad('SAVE_RUN_HEADER','运行快照结构无效');
-      if(!keys(value,[...common,'cupMotion','autoDrop','spawnRng','revive'])||value.saveSchemaVersion!==5||!rulesVersions.includes(String(value.rulesVersion))||value.appVersion!=='0.1.0')return bad('SAVE_RUN_HEADER','运行快照头无效或版本不兼容');
+      if(!keys(value,[...common,'cupMotion','autoDrop','spawnRng','revive'])||value.saveSchemaVersion!==6||!rulesVersions.includes(String(value.rulesVersion))||value.appVersion!=='0.1.0')return bad('SAVE_RUN_HEADER','运行快照头无效或版本不兼容');
       const s=value as unknown as RunSnapshot,shake=s.shake;
-      if(!object(shake)||!keys(shake,['baseUsed','extraGranted','extraUsed','activeStartTick','cooldownUntilTick'])||!integer(shake.baseUsed,0,2)||!integer(shake.extraGranted,0,5)||!integer(shake.extraUsed,0,5)||shake.extraUsed>shake.extraGranted||(shake.activeStartTick!==null&&!integer(shake.activeStartTick,0,s.tick))||!integer(shake.cooldownUntilTick,0))return bad('SAVE_RULE_STATE_INVALID','危险或晃杯状态越界');
+      if(!object(shake)||!keys(shake,['baseUsed','extraGranted','extraUsed','activeStartTick','cooldownUntilTick','guardMembers','guardStableTicks','guardReleased'])||!integer(shake.baseUsed,0,2)||!integer(shake.extraGranted,0,5)||!integer(shake.extraUsed,0,5)||shake.extraUsed>shake.extraGranted||(shake.activeStartTick!==null&&!integer(shake.activeStartTick,0,s.tick))||!integer(shake.cooldownUntilTick,0)||typeof shake.guardReleased!=='boolean'||!integer(shake.guardStableTicks,0,96)||!Array.isArray(shake.guardMembers)||shake.guardMembers.length>64||shake.guardMembers.some(x=>!integer(x,0,s.nextEntityId))||new Set(shake.guardMembers).size!==shake.guardMembers.length)return bad('SAVE_RULE_STATE_INVALID','危险或颠杯状态越界');
+      if(!shake.guardReleased&&shake.activeStartTick===null)return bad('SAVE_RULE_STATE_INVALID','颠杯护栏状态与动作窗口不一致');
       const revive=s.revive,expectedAssisted=shake.extraUsed>0||revive?.used===1;
       if(!object(revive)||!keys(revive,['used','pendingFailure','committedReceiptId'])||integer(revive.used,0,1)===false)return bad('SAVE_RULE_STATE_INVALID','复活账本无效');
       if(revive.pendingFailure!==null){
@@ -149,14 +150,31 @@ export class SaveValidator {
       return ok();
     } catch { return bad('SAVE_RUN_INVALID','运行快照结构无效'); }
   }
+  /** Schema-5 run snapshot accepted only as migration input (pre-guard bump saves). */
+  static legacySnapshotV5(value:unknown):Validation {
+    try {
+      if(!object(value))return bad('SAVE_RUN_HEADER','运行快照结构无效');
+      if(!keys(value,[...common,'cupMotion','autoDrop','spawnRng','revive'])||value.saveSchemaVersion!==5||!rulesVersions.includes(String(value.rulesVersion))||value.appVersion!=='0.1.0')return bad('SAVE_RUN_HEADER','运行快照头无效或版本不兼容');
+      const s=value as unknown as RunSnapshot,shake=s.shake;
+      if(!object(shake)||!keys(shake,['baseUsed','extraGranted','extraUsed','activeStartTick','cooldownUntilTick'])||!integer(shake.baseUsed,0,2)||!integer(shake.extraGranted,0,5)||!integer(shake.extraUsed,0,5)||shake.extraUsed>shake.extraGranted||(shake.activeStartTick!==null&&!integer(shake.activeStartTick,0,s.tick))||!integer(shake.cooldownUntilTick,0))return bad('SAVE_RULE_STATE_INVALID','危险或颠杯状态越界');
+      const revive=s.revive,expectedAssisted=shake.extraUsed>0||revive?.used===1;
+      if(!object(revive)||!keys(revive,['used','pendingFailure','committedReceiptId'])||integer(revive.used,0,1)===false)return bad('SAVE_RULE_STATE_INVALID','复活账本无效');
+      if(expectedAssisted&&s.boardType!=='assisted'||!expectedAssisted&&s.boardType==='assisted')return bad('SAVE_RULE_STATE_INVALID','辅助局与奖励计数不一致');
+      const base=this.runCommon(value);if(!base.valid)return base;
+      if(!object(value.spawnRng)||!keys(value.spawnRng,['algorithm','state','drawCount'])||value.spawnRng.algorithm!=='spawn-xorshift32-v1'||!integer(value.spawnRng.state,1,0xffffffff)||!integer(value.spawnRng.drawCount,0,Number.MAX_SAFE_INTEGER)||!object(value.autoDrop)||!keys(value.autoDrop,['nextDueTick','pendingSpawn']))return bad('SAVE_SPAWN_INVALID','自然落料随机流状态无效');
+      const motion=this.motionAndAuto(value,s);if(!motion.valid)return motion;
+      return ok();
+    } catch { return bad('SAVE_RUN_INVALID','运行快照结构无效'); }
+  }
+
   /** Schema-4 run snapshot accepted only as migration input (pre-spill-revive saves). */
   static legacySnapshotV4(value:unknown):Validation {
     try {
       if(!object(value))return bad('SAVE_RUN_HEADER','运行快照结构无效');
       if(!keys(value,[...common,'cupMotion','autoDrop','spawnRng'])||value.saveSchemaVersion!==4||!rulesVersions.includes(String(value.rulesVersion))||value.appVersion!=='0.1.0')return bad('SAVE_RUN_HEADER','运行快照头无效或版本不兼容');
       const s=value as unknown as RunSnapshot,shake=s.shake;
-      if(!object(shake)||!keys(shake,['baseUsed','extraGranted','extraUsed','activeStartTick','cooldownUntilTick'])||!integer(shake.baseUsed,0,2)||!integer(shake.extraGranted,0,5)||!integer(shake.extraUsed,0,5)||shake.extraUsed>shake.extraGranted||(shake.activeStartTick!==null&&!integer(shake.activeStartTick,0,s.tick))||!integer(shake.cooldownUntilTick,0))return bad('SAVE_RULE_STATE_INVALID','危险或晃杯状态越界');
-      if(shake.extraUsed>0&&s.boardType!=='assisted'||shake.extraUsed===0&&s.boardType==='assisted')return bad('SAVE_RULE_STATE_INVALID','辅助局与额外晃杯计数不一致');
+      if(!object(shake)||!keys(shake,['baseUsed','extraGranted','extraUsed','activeStartTick','cooldownUntilTick'])||!integer(shake.baseUsed,0,2)||!integer(shake.extraGranted,0,5)||!integer(shake.extraUsed,0,5)||shake.extraUsed>shake.extraGranted||(shake.activeStartTick!==null&&!integer(shake.activeStartTick,0,s.tick))||!integer(shake.cooldownUntilTick,0))return bad('SAVE_RULE_STATE_INVALID','危险或颠杯状态越界');
+      if(shake.extraUsed>0&&s.boardType!=='assisted'||shake.extraUsed===0&&s.boardType==='assisted')return bad('SAVE_RULE_STATE_INVALID','辅助局与额外颠杯计数不一致');
       const base=this.runCommon(value);if(!base.valid)return base;
       if(!object(value.spawnRng)||!keys(value.spawnRng,['algorithm','state','drawCount'])||value.spawnRng.algorithm!=='spawn-xorshift32-v1'||!integer(value.spawnRng.state,1,0xffffffff)||!integer(value.spawnRng.drawCount,0,Number.MAX_SAFE_INTEGER)||!object(value.autoDrop)||!keys(value.autoDrop,['nextDueTick','pendingSpawn']))return bad('SAVE_SPAWN_INVALID','自然落料随机流状态无效');
       const motion=this.motionAndAuto(value,s);if(!motion.valid)return motion;
@@ -170,7 +188,7 @@ export class SaveValidator {
       const allowed=schema===1?common:[...common,'cupMotion','autoDrop'];
       if(!keys(value,allowed)||value.saveSchemaVersion!==schema||!rulesVersions.includes(String(value.rulesVersion))||value.appVersion!=='0.1.0')return bad('SAVE_RUN_HEADER','运行快照头无效或版本不兼容');
       const s=value as unknown as RunSnapshot,shake=s.shake;
-      if(!object(shake)||!keys(shake,['baseUsed','extraUsed','activeStartTick','cooldownUntilTick'])||!integer(shake.baseUsed,0,2)||shake.extraUsed!==0||s.boardType!=='standard'||(shake.activeStartTick!==null&&!integer(shake.activeStartTick,0,s.tick))||!integer(shake.cooldownUntilTick,0))return bad('SAVE_RULE_STATE_INVALID','危险或晃杯状态越界');
+      if(!object(shake)||!keys(shake,['baseUsed','extraUsed','activeStartTick','cooldownUntilTick'])||!integer(shake.baseUsed,0,2)||shake.extraUsed!==0||s.boardType!=='standard'||(shake.activeStartTick!==null&&!integer(shake.activeStartTick,0,s.tick))||!integer(shake.cooldownUntilTick,0))return bad('SAVE_RULE_STATE_INVALID','危险或颠杯状态越界');
       const base=this.runCommon(value);if(!base.valid)return base;
       if(schema>=2){const motion=this.motionAndAuto(value,s);if(!motion.valid)return motion;}
       return ok();

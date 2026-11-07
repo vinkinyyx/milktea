@@ -93,6 +93,48 @@ def validate(config: dict) -> None:
         raise ValueError("physics.sleep 必须是boolean")
     for key in ("x", "y"):
         finite(physics.get("gravity", {}).get(key), f"physics.gravity.{key}", -math.inf)
+    shake = config.get("shake", {})
+    if shake.get("motion") != "guarded_bump_v2":
+        raise ValueError("shake.motion 当前仅支持guarded_bump_v2")
+    for key in ("duration_seconds", "vertical_delta_velocity_du_per_second", "max_upward_velocity_du_per_second",
+                "horizontal_lateral_low_du_per_second", "horizontal_lateral_high_du_per_second",
+                "horizontal_centering_max_du_per_second", "max_relative_horizontal_velocity_du_per_second",
+                "guard_thickness_du", "visual_compress_du", "visual_rebound_du"):
+        finite(shake.get(key), f"shake.{key}", 0, exclusive=True)
+    for key in ("cooldown_seconds", "horizontal_scatter_du_per_second", "headroom_stop_du", "headroom_full_du",
+                "settle_upward_max_du_per_second", "settle_vertical_max_du_per_second", "guard_lift_du"):
+        finite(shake.get(key), f"shake.{key}", 0)
+    if not isinstance(shake.get("guaranteed_merge"), bool):
+        raise ValueError("shake.guaranteed_merge 必须是boolean")
+    for key in ("launch_delay_ticks", "settle_ticks", "guard_diagnostic_max_ticks"):
+        value = shake.get(key)
+        if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+            raise ValueError(f"shake.{key} 必须是非负整数")
+    if shake["settle_ticks"] < 1:
+        raise ValueError("shake.settle_ticks 必须大于0")
+    launch_delay = shake["launch_delay_ticks"]
+    duration_ticks = round(shake["duration_seconds"] * physics["fixed_hz"])
+    if duration_ticks < 1 or launch_delay >= duration_ticks:
+        raise ValueError("shake.launch_delay_ticks 必须小于动作时长")
+    if shake["guard_diagnostic_max_ticks"] < duration_ticks + shake["settle_ticks"]:
+        raise ValueError("shake.guard_diagnostic_max_ticks 必须覆盖动作时长与静置窗口")
+    if shake["headroom_full_du"] <= shake["headroom_stop_du"]:
+        raise ValueError("shake.headroom_full_du 必须大于headroom_stop_du")
+    if shake["horizontal_lateral_low_du_per_second"] > shake["horizontal_lateral_high_du_per_second"]:
+        raise ValueError("shake横向偏置低值不能大于高值")
+    if shake["max_upward_velocity_du_per_second"] < shake["vertical_delta_velocity_du_per_second"]:
+        raise ValueError("shake向上速度上限必须覆盖垂直增量")
+    if not 4 <= shake["guard_lift_du"] <= 120:
+        raise ValueError("shake.guard_lift_du必须位于4至120之间")
+    max_linear_du = physics["max_linear_speed"] * viewport["du_per_spec_physics_unit"]
+    if shake["max_upward_velocity_du_per_second"] > max_linear_du:
+        raise ValueError("shake向上速度上限超过全局线速度上限")
+    if shake["max_relative_horizontal_velocity_du_per_second"] > max_linear_du:
+        raise ValueError("shake相对水平速度上限超过全局线速度上限")
+    if shake["horizontal_lateral_high_du_per_second"] + shake["horizontal_scatter_du_per_second"] + shake["horizontal_centering_max_du_per_second"] > max_linear_du:
+        raise ValueError("shake水平速度上限超过全局线速度上限")
+    if shake["visual_compress_du"] > 12 or shake["visual_rebound_du"] > 24:
+        raise ValueError("shake视觉位移超出已确认边界")
     for key, value in walk_numbers(config):
         if not math.isfinite(value):
             raise ValueError(f"{key} 必须为有限数值")

@@ -5,7 +5,8 @@
   "description": "奶茶挤挤：V2窄杯自动接料",
   "scripts": {
     "typecheck": "tsc --project tsconfig.json",
-    "verify:art": "python -X utf8 ../tools/verify_runtime_art.py"
+    "verify:art": "python -X utf8 ../tools/verify_runtime_art.py",
+    "verify:host-utf8": "node ../tools/verify_host_utf8.cjs"
   },
   "devDependencies": {
     "@cocos/creator-types": "3.8.8",

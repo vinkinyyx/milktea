@@ -27,4 +27,21 @@ export function sha256Bytes(input: Uint8Array): string {
   }
   return Array.from(h, value => value.toString(16).padStart(8,'0')).join('');
 }
-export function sha256Utf8(value: string): string { return sha256Bytes(new TextEncoder().encode(value)); }
+/** Deterministic UTF-8 without browser globals: Tap may expose a non-constructible TextEncoder. */
+function utf8Bytes(value: string): Uint8Array {
+  const bytes: number[] = [];
+  for (let index = 0; index < value.length; index++) {
+    let code = value.charCodeAt(index);
+    if (code >= 0xd800 && code <= 0xdbff) {
+      const low = index + 1 < value.length ? value.charCodeAt(index + 1) : 0;
+      if (low >= 0xdc00 && low <= 0xdfff) { code = 0x10000 + ((code - 0xd800) << 10) + (low - 0xdc00); index++; }
+      else code = 0xfffd;
+    } else if (code >= 0xdc00 && code <= 0xdfff) code = 0xfffd;
+    if (code < 0x80) bytes.push(code);
+    else if (code < 0x800) bytes.push(0xc0 | (code >> 6), 0x80 | (code & 0x3f));
+    else if (code < 0x10000) bytes.push(0xe0 | (code >> 12), 0x80 | ((code >> 6) & 0x3f), 0x80 | (code & 0x3f));
+    else bytes.push(0xf0 | (code >> 18), 0x80 | ((code >> 12) & 0x3f), 0x80 | ((code >> 6) & 0x3f), 0x80 | (code & 0x3f));
+  }
+  return new Uint8Array(bytes);
+}
+export function sha256Utf8(value: string): string { return sha256Bytes(utf8Bytes(value)); }

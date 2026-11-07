@@ -340,7 +340,7 @@ export class RewardedShakeService {
       return;
     }
     if (run.shake.extraGranted + 1 > this.env.policy.maxExtraShakesPerRun) {
-      this.phase = 'ERROR'; this.retrySettle = false; this.message = '本局奖励晃杯已达上限，未发放。'; this.changed(); return;
+      this.phase = 'ERROR'; this.retrySettle = false; this.message = '本局奖励颠杯已达上限，未发放。'; this.changed(); return;
     }
     const pending = ledger.pendingAttempt;
     const sameDay = RewardLedger.normalize(ledger, pending.dayKey);
@@ -387,8 +387,8 @@ export class RewardedShakeService {
       case 'AD_UNCONFIGURED': return '未配置真实广告位';
       case 'AD_UNSUPPORTED': return '当前环境不支持激励广告';
       case 'NO_ACTIVE_RUN': case 'NOT_PLAYING': return '当前局不可用';
-      case 'BASE_SHAKES_REMAINING': return '还有基础晃杯次数';
-      case 'RUN_LIMIT': return '本局奖励晃杯已达上限';
+      case 'BASE_SHAKES_REMAINING': return '还有基础颠杯次数';
+      case 'RUN_LIMIT': return '本局奖励颠杯已达上限';
       case 'DAILY_LIMIT': return '今日广告奖励已达上限';
       case 'TUTORIAL_REQUIRED': return '完成教程后可观看广告';
       case 'FIRST_RUN_REQUIRED': return '完成一局真实游戏后可观看广告';

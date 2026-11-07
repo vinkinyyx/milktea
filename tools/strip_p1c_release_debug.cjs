@@ -76,7 +76,7 @@ editAst('assets/scripts/presentation/GameRoot.ts', (node, ast) => {
 // Remove probe rings/timing collectors and their otherwise-dead update hooks from this Release copy.
 const gameRootProbeFields = new Set(['events', 'commands', 'frames', 'timingSaveMs', 'dangerStepTrace', 'dangerStepTraceEnabled',
   'pressureStepTrace', 'pressureStepTraceEnabled', 'pressurePreviousPositions', 'pressurePenetrationTicks', 'diagnosticAttemptId',
-  'priorFrameWall', 'lastPresentationMs', 'probeSetting', 'framePhysicsMs', 'frameLogicMs', 'lastConsumedDomainEvent']);
+  'priorFrameWall', 'lastPresentationMs', 'probeSetting', 'framePhysicsMs', 'frameLogicMs', 'lastConsumedDomainEvent', 'debugRenderFaults']);
 const gameRootProbeMethods = new Set(['recordFrame', 'recordPressureStep', 'probeMode']);
 const probeRingClearStatements = new Set(['this.events.clear()', 'this.commands.clear()']);
 editAst('assets/scripts/presentation/GameRoot.ts', (node, ast) => {
@@ -93,6 +93,7 @@ editAst('assets/scripts/presentation/GameRoot.ts', (node, ast) => {
   // matching the exact text never deletes an adjacent runtime reset such as ingredientViews.clear()/consumedDomainEventIds.
   // f1c49c0 added the pair inside returnToMenuFromError (error layer -> menu reset); that is the +2 over 46.
   if (typescript.isExpressionStatement(node) && probeRingClearStatements.has(node.expression.getText(ast))) return {};
+  if (typescript.isIfStatement(node) && node.getText(ast).includes('debugRenderFaults')) return {};
   if (typescript.isExpressionStatement(node) && /this\.frames\.append\(|this\.lastConsumedDomainEvent\s*=|this\.probeSetting\s*=|this\.(framePhysicsMs|frameLogicMs|lastPresentationMs)\s*(?:\+=|=)/.test(node.expression.getText(ast))) return {};
   if (typescript.isExpressionStatement(node) && node.expression.getText(ast).includes('recordPressureStep(')) return {};
   if (typescript.isBinaryExpression(node) && typescript.isCallExpression(node.left) && node.left.expression.getText(ast) === 'this.probeMode' &&
@@ -100,13 +101,13 @@ editAst('assets/scripts/presentation/GameRoot.ts', (node, ast) => {
     return { replacement: 'false' };
   }
   return null;
-}, 48);
+}, 54);
 
 // Remove adapter fault/probe seams and their fields; they exist only for P1-B fixture injection.
-const adapterTestFields = new Set(['contactEnumerationReversed', 'lastEnumeratedContactIds', 'staleCallbackProbes', 'fixtureAccelerationProbe',
+const adapterTestFields = new Set(['contactEnumerationReversed', 'lastEnumeratedContactIds', 'staleCallbackProbes', 'fixtureImpulseProbe',
   'fixtureMergeFault', 'fixtureMergeCommitCount', 'fixtureMergeProbe', 'fixtureWallProbe']);
 const adapterTestMethods = new Set(['setFixtureMergeFaultOnce', 'enableFixtureMergeProbe', 'enableFixtureWallProbe', 'readFixtureWallProbe',
-  'readFixtureWallGeometry', 'recordFixtureMerge', 'readFixtureMergeProbe', 'enableFixtureAccelerationProbe', 'readFixtureAccelerationProbe',
+  'readFixtureWallGeometry', 'recordFixtureMerge', 'readFixtureMergeProbe', 'enableFixtureImpulseProbe', 'readFixtureImpulseProbe',
   'setContactEnumerationReversedForFixture', 'fixtureContactEnumeration', 'setLinearDampingForTest', 'setBodyPositionForTest',
   'setBodyVelocityForTest', 'replayStaleContactCallbacksForTest']);
 editAst('assets/scripts/physics/CocosPhysicsAdapter.ts', (node, ast) => {
@@ -114,7 +115,7 @@ editAst('assets/scripts/physics/CocosPhysicsAdapter.ts', (node, ast) => {
   if (typescript.isMethodDeclaration(node) && node.name && adapterTestMethods.has(node.name.getText(ast))) return {};
   if (typescript.isGetAccessorDeclaration(node) && node.name && adapterTestMethods.has(node.name.getText(ast))) return {};
   if (typescript.isIfStatement(node) && /fixtureMergeFault|fixtureWallProbe|contactEnumerationReversed/.test(node.expression.getText(ast))) return {};
-  if (typescript.isExpressionStatement(node) && /fixtureAccelerationProbe|lastEnumeratedContactIds|staleCallbackProbes/.test(node.expression.getText(ast))) return {};
+  if (typescript.isExpressionStatement(node) && /fixtureImpulseProbe|lastEnumeratedContactIds|staleCallbackProbes/.test(node.expression.getText(ast))) return {};
   return null;
 }, 30);
 editAst('assets/scripts/core/RunEngine.ts', (node, ast) => {

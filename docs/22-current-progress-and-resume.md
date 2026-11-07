@@ -1,5 +1,46 @@
 # 当前事实与继续入口
 
+## 2026-11-07 强颠杯与剩余开发（当前）
+
+低处猛颠、高处横拨与杯口物理保护已按 [docs53](53-strong-cup-bump-and-release-closeout.md) 完成本地实现，REC-01/02 已修复并通过真实浏览器点测。实施状态、定稿参数和 V2-01..V2-10 实测表见 [docs53 第 12 节](53-strong-cup-bump-and-release-closeout.md#12-本轮实施与验收状态2026-11-07)。
+
+- 玩法：规则 `design-v0.7-guarded-bump-01` / `guarded_bump_v2`；向上增量 480、上限 520、净空 16→112 插值，横向 120→160、散布 20、向心 ≤35、相对杯 ≤320；动作 39 tick + 冷却 21 tick，连续稳定 6 tick 后释放，96 tick 诊断上限。
+- 保护：真实杯口 Kinematic 上挡面随杯体移动，`PRE_SOLVE` 只放行护栏成员；覆盖露头、贴壁、高速拖杯、合成子体、暂停续局；近满杯连续两次颠杯 7 体/216 采样，0 越界、0 技术回滚。
+- 存档：schema 6 持久化护栏成员/稳定计数/释放标志，兼容 schema 5；首存失败可重试且不丢旧局，渲染/续局失败重试保持同 `runId`。
+- 验收：真实 Edge + Playwright 45/45 PASS；`verify_rewarded_shake` 200/0（普通与无 TextEncoder）；config/contract/typecheck/host-utf8/art 门禁全通过。
+- 新 Tap 候选 `20261107-guard02-tap-candidate-01` / 1.7.3：`game.zip` 3,040,925 字节，SHA256 `b7a8d0acf69b172ead446602ea8e8b47be8fb939c972d4e9d44d8bb7c3b2147f`；包内 buildId 唯一，无 Debug/fixture/source map。**未上传、未宿主验证、未提审**。
+- 外部阻断：广告未开通（`status=0`，无 `space_id`）→ ADS-01 BLOCKED；无专属自测入口与 ADB 设备 → HOST-01/PERF-01 NOT_RUN；草稿主包仍指向失效 `433619`、`region_flag_ios` 缺失、资质查询被阻塞 → RELEASE-01 写入待授权。
+- 下一步：用户开通广告后执行 ADS-01；授权上传候选并绑定草稿后补 HOST-01/PERF-01；RELEASE-01 的绑定、资料/资质、提审与发布分别需要具体授权。
+
+## 2026-11-07 一键颠杯 v1 实施汇报（历史）
+
+BUMP-01 至 BUMP-06 已完成，设计细节与完整证据矩阵见 [docs52 第 14 节](52-cup-bump-and-release-design.md#14-实施状态2026-11-07-本轮)。
+
+- 玩法：一次 SHAKE 在动作起点后第 6 tick 对杯内已入杯、未洒出的小料施加一次真实速度冲量；垂直 +320 DU/s、水平向心 70 DU/s + 确定性散布 20 DU/s、向上钳制 420 DU/s；动作 39 tick + 冷却 21 tick；基础 2 次、奖励最多 5 次；空杯不扣次数；杯身只做 6/12 DU 表现位移。
+- 真实浏览器（buildId `20261107-bump02-web-debug-01`，fixture 静置后点击）：不同质量实体 delta 均为 3.2 m/s、冲量按质量缩放，相对静置基线上移 48.5/47.6 DU；暂停 600ms 期间 tick 与脉冲数冻结，恢复后单次脉冲；真实局刷新后同 runId、tick 209、baseUsed=1 并恢复 PAUSED；次数耗尽点击 probe 5→5、提示「广告奖励尚未开启」。
+- 回归 193 项在普通/无 TextEncoder 两环境均通过；config/contract 镜像、typecheck、host-utf8、art 门禁通过。修复了颠杯按钮回调使用渲染时旧快照、冷却后无法提示次数耗尽的缺陷。
+- Tap 候选 `20261107-bump01-tap-candidate-01` / 1.7.2：`build-artifacts/cocos-taptap-minigame-build/20261107-bump01-tap-candidate-01/TapBuild/game.zip`，3,036,668 字节，SHA256 `fd7239e226f9e5a1acd07cdb7c55fe6c84faa52fe996f266b65eddc8870e8b11`；staging UTF-8 门禁 PASS（110/660），包内 buildId 唯一，无旧 buildId、Debug API 或 source map。未上传、未真机。
+- 平台只读：广告仍未开通（无 space_id）；草稿主包仍指向失效的 433619，可用包 444838(1.7.0)/443886(1.6.0)；`region_flag_ios` 缺失；资质查询被草稿引用阻塞；ADB 无设备。
+- 外部下一步：用户开通广告后刷新状态并执行 ADS-01；授权绑定有效包并补 `region_flag_ios` 后重跑资质与 RELEASE-01；连接手机并接受 RSA 后执行 HOST-01/PERF-01。以上写入与上传均待具体授权。
+
+## 2026-11-07 一键颠杯设计（已实施）
+
+用户已选择一键颠杯。实现按 [docs52 设计与执行提示词](52-cup-bump-and-release-design.md) 完成；旧规则活动局沿用取消保留、明确确认后开始新规则局的现有策略。速度、时长和视觉幅度仍是调试初值，真机手感与平台证据未完成。
+
+## 2026-11-07 host6 开发自测确认
+
+用户确认开发包 `444838` 可以在手机上自测。本地候选 `20261107-host6-gate-candidate-01` 与该包体大小一致，平台显示版本 `1.7.0`。证据范围为用户反馈可自测，完整真机矩阵和平台 SHA 仍待核对。晃杯力度不足是当前玩法反馈。激励视频两处入口的客户端代码已准备，广告能力未开通。平台仍提示缺 `region_flag_ios`，资质查询因草稿绑定包体版本不存在被拒绝。版本核对和进度详见 [开发闭环](51-development-closure-masterplan.md#11-2026-11-07-用户上传后的自测核查)。
+
+## 2026-11-07 开发闭环总入口
+
+host5之后所有可开发事项、TextEncoder同类错误复发边界、门禁和唯一执行提示词见[docs51](51-development-closure-masterplan.md)。其中DEV-01/02是无需等待平台的本地开发缺口；host5同SHA Tap实测、真实广告和约400MB性能结论仍需设备/平台证据。不要把本地修复等同最终验收。
+
+## 2026-11-07 host5：截图报错根因修复（优先）
+
+用户截图运行host3/1.5.0：新局存档计算哈希时`TextEncoder is not a constructor`，进入ERROR，不能再泛称纯背景/网络加载。已有host4/1.6.0只按typeof判定，仍可被不可构造函数触发同错。
+
+本轮将Sha256 UTF-8编码统一为项目内实现，不依赖宿主TextEncoder；6种宿主状态660组比较一致，完整回归普通/无TextEncoder各170/0，typecheck通过。新buildId `20261107-host5-utf8-candidate-01`/1.7.0；实际包/SHA见CURRENT最新节。实现与证据见[docs50](50-host-boot-injection-fix/spec.md)。同SHA Tap正常开局和错误按钮显示仍需现场验证，广告/性能未关闭；本轮未上传或修改后台。
+
 ## 2026-11-07 独立验收与最终交付路径（优先）
 
 最新事实、未完成根因、用户操作与完整提示词见[docs49](49-final-delivery-platform-device-plan.md)。本轮客户端验收通过，整体进入平台/真机阶段，尚未最终晋升。

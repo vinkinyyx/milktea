@@ -1,5 +1,17 @@
 # 历史归档与清理
 
+2026-11-07 强颠杯收口后清理归档：
+
+`D:\Workspace\TapTap\_cleanup-backups\奶茶挤挤-20261107-guard-closeout-cleanup`
+
+目录内保留原相对路径：旧验收证据（CupAuto bump01/02、guard01–03）、旧 Tap 候选证据（bump01、guard01、host3–6）、Acceptance 全部门禁日志、asset-intake/supplement-2026-10-27、progress-2026-10-27-art-binding、tooling，以及过期评审文档 docs44–50（含 50-host-boot-injection-fix）。本轮只移出项目、不删除归档。
+
+- 执行记录：[execution.jsonl](../evidence/maintenance/20261107-guard-closeout-cleanup/execution.jsonl)
+
+本轮直接删除、不承诺恢复的内容：`build-artifacts/cocos-p1b-build-source`（1.24 GB staging 副本）、`build-artifacts/cocos-p1b-build`（6 个旧 Web 构建）、旧 Tap 包体（bump01、guard01、host3/4/5/6，仅保留当前候选 `20261107-guard02-tap-candidate-01`）、`runtime-deps`（Playwright 依赖副本）、`rewarded-tests`、`.screenshots`、`.trae-html-share-packages`、证据目录内的 Cocos 编辑器缓存 `creator-user-data`。均可用现用源码与 tools 脚本重新生成。
+
+保留不动：当前候选 guard02 及 TapTap/guard02 证据、CupAuto/guard04 验收证据、`evidence/maintenance`、docs 现行入口与基础设计文档（00–23、38、51–53、archive-location、README 及 art/development/spec/visuals 子目录）、`assets/`、`assets2/`、`assets/library/`（含 source 原稿与许可证）、`audio/`、`config/`、`contracts/`、工程 `assets`、`extensions`（Tap 转换扩展）、`node_modules`、`skills/`、`research/`。项目内未发现游离图片/视频素材：运行图片以 catalog 绑定的 71 项为准并由 `verify:art` 核验。
+
 2026-11-07清理归档：
 
 `D:\Workspace\TapTap\_cleanup-backups\奶茶挤挤-20261107-project-cleanup`

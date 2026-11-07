@@ -1,0 +1,1 @@
+{"status":"PASS","source":"D:/Workspace/TapTap/奶茶挤挤/build-artifacts/cocos-p1b-build-source/20261107-guard02-tap-candidate-01/assets/scripts/core/Sha256.ts","sourceSha256":"c3e14dbc9230f8cce5e0747ea9e79a73f515dcc654023ef0a4f04509590c2b72","hostModes":["native","missing","null","object","nonConstructible","throwing"],"samples":110,"comparisons":660}

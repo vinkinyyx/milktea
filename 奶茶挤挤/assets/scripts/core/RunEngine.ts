@@ -30,6 +30,8 @@ export class RunEngine {
   private _lastLogicMs = 0;
   private _lastTickFault: string | null = null;
   private _recoveryCheckpoint: RunSnapshot | null = null;
+  private shakePrevY = new Map<number, number>();
+  private lastShakeDiagnostic = '';
   private timingDiagnostics = false;
   private settleTicksRemaining = 0;
   constructor(private readonly adapter: IPhysicsAdapter, private readonly rules: Readonly<RulesConfig>, runId: UUID,
@@ -38,11 +40,11 @@ export class RunEngine {
     this.spawnRng = new SpawnRng(seed, restored?.spawnRng?.state, restored?.spawnRng?.drawCount ?? 0);
     const initialLevel=restored?.currentLevel;
     this.state = restored ? cloneState(restored) : {
-      saveSchemaVersion: 5, rulesVersion: rules.design_rules_version, appVersion: '0.1.0', runId, epoch: 1, revision: 0,
+      saveSchemaVersion: 6, rulesVersion: rules.design_rules_version, appVersion: '0.1.0', runId, epoch: 1, revision: 0,
       stageId: 'classic', mode: 'classic', boardType: 'standard', state: 'PLAYING', tick: 0, nextEntityId: 1,
       nextCommandSequence: 1, score: 0, maxLevel: 1, dropIndex: 0, currentLevel: this.rng.nextLevel(rules.drop.spawn_levels),
       nextLevel: this.rng.nextLevel(rules.drop.spawn_levels), lastDropTick: null, settleStartedTick: null, challenge: null,
-      rng: this.rng.snapshot(), ingredients: [], shake: { baseUsed: 0, extraGranted: 0, extraUsed: 0, activeStartTick: null, cooldownUntilTick: 0 },
+      rng: this.rng.snapshot(), ingredients: [], shake: { baseUsed: 0, extraGranted: 0, extraUsed: 0, activeStartTick: null, cooldownUntilTick: 0, guardMembers: [], guardStableTicks: 0, guardReleased: true },
       spawnRng:this.spawnRng.snapshot(),
       dangerTicks: 0, terminalReason: null, cupMotion:{offsetXDu:0,velocityXDuPerSecond:0,targetOffsetXDu:0,control:'IDLE'},
       autoDrop:{nextDueTick:rules.auto_drop.interval_ticks,pendingSpawn:{level:initialLevel??1,xDu:rules.cup.center_x_du,vxDuPerSecond:0,angularVelocity:0}},
@@ -51,6 +53,7 @@ export class RunEngine {
     if(!restored)this.state.autoDrop.pendingSpawn=this.nextSpawn(this.state.currentLevel);
     if (restored) {
       this.rng = new RunRng(seed, restored.rng.state, restored.rng.drawCount);
+      this.state.shake={...this.state.shake,guardMembers:[...(this.state.shake.guardMembers??[])],guardStableTicks:this.state.shake.guardStableTicks??0,guardReleased:this.state.shake.guardReleased??true};
       this.adapter.createCup(restored.stageId,restored.cupMotion?.offsetXDu??0);
       this.adapter.restoreBodies(restored.ingredients);
       this.state.state = 'PAUSED';
@@ -145,8 +148,8 @@ export class RunEngine {
     const snapshot=this.snapshot();snapshot.shake={...snapshot.shake,extraGranted:snapshot.shake.extraGranted+amount};snapshot.revision+=1;return snapshot;
   }
   commitExtraGrant(amount:number):Result<void> {
-    if(!Number.isSafeInteger(amount)||amount<=0||amount>5)return failure('INVALID_GRANT','奖励晃杯授予数量无效');
-    if(this.state.state!=='PLAYING'&&this.state.state!=='PAUSED')return failure('INVALID_PHASE','当前局不接受奖励晃杯');
+    if(!Number.isSafeInteger(amount)||amount<=0||amount>5)return failure('INVALID_GRANT','奖励颠杯授予数量无效');
+    if(this.state.state!=='PLAYING'&&this.state.state!=='PAUSED')return failure('INVALID_PHASE','当前局不接受奖励颠杯');
     this.state.shake.extraGranted+=amount;this.state.revision++;return success(undefined);
   }
   cancelCupInput(freeze=false):void {
@@ -169,7 +172,7 @@ export class RunEngine {
     if (Object.keys(command).some(k => !commandKeys.includes(k)) || commandKeys.some(k => !(k in command)))
       return failure('INVALID_COMMAND', '玩法命令字段不符合其类型');
     if(command.kind==='DROP')return failure('MANUAL_DROP_DISABLED','新版规则只按固定步自动落料');
-    if (command.kind === 'SHAKE' && command.source !== 'base' && command.source !== 'rewarded_ad') return failure('INVALID_COMMAND', '当前玩法只接受基础晃杯或广告奖励晃杯命令');
+    if (command.kind === 'SHAKE' && command.source !== 'base' && command.source !== 'rewarded_ad') return failure('INVALID_COMMAND', '当前玩法只接受基础颠杯或广告奖励颠杯命令');
     if (this.state.state !== 'PLAYING' || this.ended) return failure('INVALID_PHASE', '当前局不接受玩法命令');
     const previous = this.outcomes.get(command.commandId);
     if (previous) return previous.status === 'APPLIED' ? success({ accepted: true, sequence: previous.sequence }) : failure(previous.errorCode ?? 'COMMAND_REPLAY', previous.message ?? '此命令已处理');
@@ -200,6 +203,7 @@ export class RunEngine {
     const reported = this.adapter.lastStepTimings;
     this._lastPhysicsMs = !this.timingDiagnostics ? 0 : reported ? reported.syncToPhysics + reported.physicsStep + reported.syncFromPhysics + reported.velocityClamp : performance.now() - physicsStart;
     this.refreshPhysicalStates();
+    this.afterShakeStep(nextTick);
     const maxCupOffset=this.rules.cup_motion.max_offset_du;
     this.state.cupMotion.offsetXDu=Math.max(-maxCupOffset,Math.min(maxCupOffset,this.adapter.getCupOffsetX()));
     const contacts = this.adapter.getContacts();
@@ -269,7 +273,7 @@ export class RunEngine {
     this.state.epoch++; this.rng = new RunRng(snapshot.rng.state, snapshot.rng.state, snapshot.rng.drawCount); this.spawnRng=new SpawnRng(snapshot.spawnRng.state,snapshot.spawnRng.state,snapshot.spawnRng.drawCount);
     this.ended = !!snapshot.terminalReason; this.pending = null; return success(undefined);
   }
-  dispose(): void { this.pending = null; this.adapter.dispose(); }
+  dispose(): void { this.pending = null; this.shakePrevY.clear(); this.adapter.dispose(); }
   private consumePending(tick: number, events: DomainEvent[]): void {
     const pending = this.pending!; this.pending = null; const c = pending.envelope.command;
     let status: CommandOutcome['status'] = 'REJECTED'; let errorCode: string | undefined; let message: string | undefined;
@@ -277,11 +281,11 @@ export class RunEngine {
     else if (c.sequence !== this.state.nextCommandSequence) { errorCode = 'SEQUENCE_CONFLICT'; message = '命令序号不匹配'; }
     else if (c.kind === 'DROP') {
       const interval = Math.round(0.45 * this.rules.physics.fixed_hz);
-      const blocked = this.state.shake.activeStartTick !== null && tick < this.state.shake.activeStartTick + 48;
+      const blocked = this.shakeActive();
       const x = this.clampSpawnX(this.state.currentLevel, c.xDu);
       if (this.state.lastDropTick !== null && tick - this.state.lastDropTick < interval) { errorCode='COOLDOWN';message='投放间隔未到'; }
-      else if (blocked) { errorCode='SHAKE_ACTIVE';message='晃杯期间不能投放'; }
-      else if (!this.adapter.canSpawn(this.state.currentLevel, x)) { errorCode='SPAWN_BLOCKED';message='杯口被挡住，可移动或晃杯'; }
+      else if (blocked) { errorCode='SHAKE_ACTIVE';message='颠杯期间不能投放'; }
+      else if (!this.adapter.canSpawn(this.state.currentLevel, x)) { errorCode='SPAWN_BLOCKED';message='杯口被挡住，可移动或颠杯'; }
       else {
         const entityId = this.state.nextEntityId;
         const item = this.rules.ingredients.find(i => i.level === this.state.currentLevel)!;
@@ -300,17 +304,18 @@ export class RunEngine {
         } catch (error) { try { if(this.adapter.getBody(entityId))this.adapter.destroyBody(entityId); } catch {} errorCode='PHYSICS_CREATE_FAILED';message=String(error); }
       }
     } else if (c.kind === 'SHAKE') {
-      const shakeTicks=Math.round(this.rules.shake.duration_seconds*this.rules.physics.fixed_hz);
-      const active = this.state.shake.activeStartTick !== null && tick < this.state.shake.activeStartTick + shakeTicks;
+      const active = this.shakeActive();
       const availableExtra = this.state.shake.extraGranted - this.state.shake.extraUsed;
-      if (this.state.ingredients.length === 0) { errorCode='SHAKE_EMPTY';message='杯中还没有小料'; }
-      else if (c.source === 'base' && this.state.shake.baseUsed >= 2) { errorCode='NO_BASE_SHAKES';message='本局基础晃杯次数已用完'; }
-      else if (c.source === 'rewarded_ad' && availableExtra < 1) { errorCode='NO_EXTRA_SHAKES';message='本局奖励晃杯次数已用完'; }
-      else if (active || tick < this.state.shake.cooldownUntilTick) { errorCode='SHAKE_COOLDOWN';message='晃杯正在进行或冷却中'; }
+      const center = this.rules.cup.center_x_du + this.state.cupMotion.offsetXDu;
+      const hasTarget = this.state.ingredients.some(entity => this.isInsideCupProfile(entity, center));
+      if (!hasTarget) { errorCode='SHAKE_EMPTY';message='杯里还没有小料'; }
+      else if (c.source === 'base' && this.state.shake.baseUsed >= 2) { errorCode='NO_BASE_SHAKES';message='本局基础颠杯次数已用完'; }
+      else if (c.source === 'rewarded_ad' && availableExtra < 1) { errorCode='NO_EXTRA_SHAKES';message='本局奖励颠杯次数已用完'; }
+      else if (active || tick < this.state.shake.cooldownUntilTick) { errorCode='SHAKE_COOLDOWN';message='颠杯正在进行或冷却中'; }
       else {
         if (c.source === 'base') this.state.shake.baseUsed++;
         else { this.state.shake.extraUsed++; this.state.boardType = 'assisted'; }
-        this.state.shake.activeStartTick = tick; this.state.shake.cooldownUntilTick = tick + Math.round((this.rules.shake.duration_seconds+this.rules.shake.cooldown_seconds)*this.rules.physics.fixed_hz);
+        this.state.shake.activeStartTick = tick; this.state.shake.guardReleased = false; this.state.shake.guardMembers = []; this.state.shake.guardStableTicks = 0; this.state.shake.cooldownUntilTick = 0; this.shakePrevY.clear();
         events.push({ kind:'ShakeConsumed',eventId:deterministicEventId(this.state.runId,'ShakeConsumed',tick,[c.sequence]),runId:this.state.runId,tick,source:c.source }); status='APPLIED';
       }
     } else { errorCode='CONTROL_COMMAND_REQUIRES_SESSION'; message='控制命令必须由运行会话在控制边界处理'; }
@@ -331,16 +336,94 @@ export class RunEngine {
     if (this.outcomes.size > 256) this.outcomes.delete(this.outcomes.keys().next().value!);
     this.state.revision++;
   }
+  /** UI and command validation share this effective-target test so an empty cup never spends a shake. */
+  hasShakeTarget(): boolean {
+    const center = this.rules.cup.center_x_du + this.state.cupMotion.offsetXDu;
+    return this.state.ingredients.some(entity => this.isInsideCupProfile(entity, center));
+  }
+  /**
+   * One real impulse per protected body at the launch tick. Upward force is allocated from the *actual* headroom
+   * under the rim, so low pieces bump hard and pieces near the rim are pushed mostly sideways. The temporary mouth
+   * guard is re-armed every tick from the live membership and follows the real kinematic cup motion.
+   */
   private applyShake(tick: number): void {
-    const start = this.state.shake.activeStartTick,durationTicks=Math.round(this.rules.shake.duration_seconds*this.rules.physics.fixed_hz); if (start === null || tick < start || tick >= start + durationTicks) return;
-    const cfg=this.rules.shake,t=(tick-start)/this.rules.physics.fixed_hz;
-    const a=cfg.acceleration_amplitude*Math.sin(Math.PI*t/cfg.duration_seconds)**2*Math.sin(2*Math.PI*cfg.frequency_hz*t);
-    const cup=this.rules.cup,center=cup.center_x_du+this.state.cupMotion.offsetXDu;
-    for (const entity of this.state.ingredients) {
-      const radius=this.rules.ingredients.find(i=>i.level===entity.level)?.radius_du??0;
-      const withinCup=entity.hasEnteredCup&&entity.positionDu.y<=cup.inner_top_y_du+radius&&entity.positionDu.y>=cup.inner_bottom_y_du-radius&&Math.abs(entity.positionDu.x-center)<=cup.top_width_du/2+radius;
-      if(withinCup)this.adapter.applyHorizontalAcceleration(entity.entityId,a);
+    const shake = this.state.shake, cfg = this.rules.shake;
+    if (shake.activeStartTick === null || shake.guardReleased) return;
+    const cup = this.rules.cup, center = cup.center_x_du + this.state.cupMotion.offsetXDu;
+    const members = this.state.ingredients.filter(entity => entity.hasEnteredCup && entity.spillTicks === 0 && this.isInsideCupProfile(entity, center));
+    shake.guardMembers = members.map(entity => entity.entityId);
+    if (tick === shake.activeStartTick + cfg.launch_delay_ticks) {
+      const rim = cup.inner_top_y_du, cupVx = this.state.cupMotion.velocityXDuPerSecond;
+      const relativeLimit = cfg.max_relative_horizontal_velocity_du_per_second;
+      const headroomSpan = Math.max(1, cfg.headroom_full_du - cfg.headroom_stop_du);
+      for (const entity of members) {
+        const radius = this.radius(entity.level);
+        const gap = rim - (entity.positionDu.y + radius) - cfg.headroom_stop_du;
+        const headroom = gap <= 0 ? 0 : Math.min(1, gap / headroomSpan);
+        const currentUp = entity.velocityDuPerSecond.y;
+        const wanted = cfg.vertical_delta_velocity_du_per_second * headroom;
+        const upward = currentUp >= cfg.max_upward_velocity_du_per_second ? 0
+          : Math.max(0, Math.min(wanted, cfg.max_upward_velocity_du_per_second - currentUp));
+        const halfWidth = cup.top_width_du / 2;
+        const normalizedX = halfWidth > 0 ? Math.max(-1, Math.min(1, (entity.positionDu.x - center) / halfWidth)) : 0;
+        const verticalRatio = Math.max(0, Math.min(1, (entity.positionDu.y - cup.inner_bottom_y_du) / Math.max(1, rim - cup.inner_bottom_y_du)));
+        const lateralBase = cfg.horizontal_lateral_low_du_per_second + (cfg.horizontal_lateral_high_du_per_second - cfg.horizontal_lateral_low_du_per_second) * verticalRatio;
+        const direction = normalizedX === 0 ? (entity.entityId % 2 === 0 ? 1 : -1) : (normalizedX > 0 ? -1 : 1);
+        const scatter = entity.entityId % 2 === 0 ? cfg.horizontal_scatter_du_per_second : -cfg.horizontal_scatter_du_per_second;
+        const centering = -normalizedX * cfg.horizontal_centering_max_du_per_second;
+        const targetRelative = direction * lateralBase + scatter + centering;
+        const currentRelative = entity.velocityDuPerSecond.x - cupVx;
+        const delta = Math.max(-relativeLimit - currentRelative, Math.min(relativeLimit - currentRelative, targetRelative - currentRelative));
+        this.adapter.applyVelocityImpulse(entity.entityId, { x: delta, y: upward });
+      }
     }
+    this.adapter.ensureShakeGuard(shake.guardMembers, { centerXDu: cup.center_x_du, offsetXDu: this.state.cupMotion.offsetXDu, velocityXDuPerSecond: this.state.cupMotion.velocityXDuPerSecond });
+  }
+  /** Settle/release bookkeeping evaluated on post-step state; release only after the minimum window and a stable hold. */
+  private afterShakeStep(tick: number): void {
+    const shake = this.state.shake, cfg = this.rules.shake;
+    if (shake.activeStartTick === null || shake.guardReleased) { this.shakePrevY.clear(); return; }
+    const center = this.rules.cup.center_x_du + this.state.cupMotion.offsetXDu;
+    const guarded = new Set(shake.guardMembers);
+    const members = this.state.ingredients.filter(entity => guarded.has(entity.entityId) && this.isInsideCupProfile(entity, center));
+    const stable = members.every(entity => {
+      const previous = this.shakePrevY.get(entity.entityId) ?? entity.positionDu.y;
+      this.shakePrevY.set(entity.entityId, entity.positionDu.y);
+      const verticalVelocity = entity.velocityDuPerSecond.y;
+      return verticalVelocity <= cfg.settle_upward_max_du_per_second && verticalVelocity >= -cfg.settle_vertical_max_du_per_second && Math.abs(entity.positionDu.y - previous) <= 2;
+    });
+    for (const id of this.shakePrevY.keys()) if (!guarded.has(id)) this.shakePrevY.delete(id);
+    shake.guardStableTicks = stable ? shake.guardStableTicks + 1 : 0;
+    const durationTicks = Math.round(cfg.duration_seconds * this.rules.physics.fixed_hz);
+    const overdue = tick >= shake.activeStartTick + cfg.guard_diagnostic_max_ticks;
+    if ((tick >= shake.activeStartTick + durationTicks && shake.guardStableTicks >= cfg.settle_ticks) || overdue) this.releaseShakeGuard(tick, overdue);
+  }
+  private releaseShakeGuard(tick: number, overdue: boolean): void {
+    const shake = this.state.shake;
+    shake.guardReleased = true; shake.activeStartTick = null; shake.guardMembers = []; shake.guardStableTicks = 0;
+    shake.cooldownUntilTick = tick + Math.round(this.rules.shake.cooldown_seconds * this.rules.physics.fixed_hz);
+    this.lastShakeDiagnostic = overdue ? 'GUARD_WINDOW_CAP' : '';
+    this.shakePrevY.clear();
+    this.adapter.releaseShakeGuard();
+    this.state.revision++;
+  }
+  private shakeActive(): boolean {
+    const shake = this.state.shake;
+    return shake.activeStartTick !== null && !shake.guardReleased;
+  }
+  private isGuardedMember(entityId: number): boolean {
+    return this.shakeActive() && this.state.shake.guardMembers.includes(entityId);
+  }
+  private isInsideCupProfile(entity: IngredientState, centerXDu: number): boolean {
+    if (!entity.hasEnteredCup || entity.spillTicks !== 0) return false;
+    const cup = this.rules.cup;
+    const radius = this.rules.ingredients.find(i => i.level === entity.level)?.radius_du ?? 0;
+    const y = entity.positionDu.y;
+    if (y < cup.inner_bottom_y_du - radius || y > cup.inner_top_y_du + radius) return false;
+    const span = cup.inner_top_y_du - cup.inner_bottom_y_du;
+    const ratio = span > 0 ? Math.max(0, Math.min(1, (y - cup.inner_bottom_y_du) / span)) : 0;
+    const halfWidth = (cup.bottom_width_du + (cup.top_width_du - cup.bottom_width_du) * ratio) / 2;
+    return Math.abs(entity.positionDu.x - centerXDu) <= halfWidth + radius;
   }
   private advanceCupMotion():void {
     const m=this.state.cupMotion,dt=1/this.rules.physics.fixed_hz,cfg=this.rules.cup_motion,acc=cfg.acceleration_du_per_second2,maxV=cfg.max_speed_du_per_second;
@@ -360,7 +443,7 @@ export class RunEngine {
   }
   private tryAutomaticDrop(tick:number,events:DomainEvent[]):void {
     const a=this.state.autoDrop;if(tick<a.nextDueTick)return;
-    const shaking=this.state.shake.activeStartTick!==null&&tick<this.state.shake.activeStartTick+Math.round(this.rules.shake.duration_seconds*this.rules.physics.fixed_hz);
+    const shaking=this.shakeActive();
     const d=a.pendingSpawn;if(shaking||!this.adapter.canSpawn(d.level,d.xDu)){a.nextDueTick=tick+this.rules.auto_drop.blocked_retry_ticks;return;}
     const level=d.level,item=this.rules.ingredients.find(i=>i.level===level)!;const entityId=this.state.nextEntityId,x=d.xDu,y=this.rules.cup.spawn_y_du;
     this.adapter.createBody({entityId,level:level as Level,radiusDu:item.radius_du,positionDu:{x,y},velocityDuPerSecond:{x:d.vxDuPerSecond,y:0},angularVelocity:d.angularVelocity});
@@ -423,7 +506,9 @@ export class RunEngine {
   private updateSpill(_tick:number):number[]{
     const top=this.rules.cup.inner_top_y_du,spilled:number[]=[];
     for(const item of this.state.ingredients){if(item.positionDu.y+this.radius(item.level)<=top)item.hasEnteredCup=true;
-      if(item.hasEnteredCup&&item.positionDu.y-this.radius(item.level)>top)item.spillTicks++;else item.spillTicks=0;
+      // A piece inside the live guard is physically unable to leave the mouth; suspend its spill accumulation only
+      // for that window so pieces already outside keep the original spill judgement.
+      if(item.hasEnteredCup&&item.positionDu.y-this.radius(item.level)>top&&!this.isGuardedMember(item.entityId))item.spillTicks++;else item.spillTicks=0;
       if(item.spillTicks>=Math.round(.5*this.rules.physics.fixed_hz))spilled.push(item.entityId);}
     return spilled;
   }
@@ -492,9 +577,9 @@ export class RunEngine {
     return validPoints[0]??null;
   }
   private validateSnapshot(value:RunSnapshot):Result<void>{
-    if(!value||value.saveSchemaVersion!==5||!Number.isSafeInteger(value.tick)||value.tick<0||!Number.isSafeInteger(value.score)||value.score<0||!Array.isArray(value.ingredients)||!value.cupMotion||!Number.isFinite(value.cupMotion.offsetXDu)||Math.abs(value.cupMotion.offsetXDu)>this.rules.cup_motion.max_offset_du||!Number.isFinite(value.cupMotion.velocityXDuPerSecond)||Math.abs(value.cupMotion.velocityXDuPerSecond)>this.rules.cup_motion.max_speed_du_per_second||!Number.isFinite(value.cupMotion.targetOffsetXDu)||Math.abs(value.cupMotion.targetOffsetXDu)>this.rules.cup_motion.max_offset_du||!['IDLE','DRAGGING','SETTLING'].includes(value.cupMotion.control)||!Number.isSafeInteger(value.autoDrop?.nextDueTick)||value.autoDrop.nextDueTick<value.tick||!value.spawnRng||value.spawnRng.state===0||!value.autoDrop.pendingSpawn||value.autoDrop.pendingSpawn.level!==value.currentLevel)return failure('SAVE_INVALID','存档基础字段无效');
+    if(!value||value.saveSchemaVersion!==6||!Number.isSafeInteger(value.tick)||value.tick<0||!Number.isSafeInteger(value.score)||value.score<0||!Array.isArray(value.ingredients)||!value.cupMotion||!Number.isFinite(value.cupMotion.offsetXDu)||Math.abs(value.cupMotion.offsetXDu)>this.rules.cup_motion.max_offset_du||!Number.isFinite(value.cupMotion.velocityXDuPerSecond)||Math.abs(value.cupMotion.velocityXDuPerSecond)>this.rules.cup_motion.max_speed_du_per_second||!Number.isFinite(value.cupMotion.targetOffsetXDu)||Math.abs(value.cupMotion.targetOffsetXDu)>this.rules.cup_motion.max_offset_du||!['IDLE','DRAGGING','SETTLING'].includes(value.cupMotion.control)||!Number.isSafeInteger(value.autoDrop?.nextDueTick)||value.autoDrop.nextDueTick<value.tick||!value.spawnRng||value.spawnRng.state===0||!value.autoDrop.pendingSpawn||value.autoDrop.pendingSpawn.level!==value.currentLevel)return failure('SAVE_INVALID','存档基础字段无效');
     const shake=value.shake;
-    if(!shake||!Number.isSafeInteger(shake.baseUsed)||shake.baseUsed<0||shake.baseUsed>2||!Number.isSafeInteger(shake.extraGranted)||shake.extraGranted<0||shake.extraGranted>5||!Number.isSafeInteger(shake.extraUsed)||shake.extraUsed<0||shake.extraUsed>shake.extraGranted)return failure('SAVE_INVALID','存档晃杯账本无效');
+    if(!shake||!Number.isSafeInteger(shake.baseUsed)||shake.baseUsed<0||shake.baseUsed>2||!Number.isSafeInteger(shake.extraGranted)||shake.extraGranted<0||shake.extraGranted>5||!Number.isSafeInteger(shake.extraUsed)||shake.extraUsed<0||shake.extraUsed>shake.extraGranted||typeof shake.guardReleased!=='boolean'||!Array.isArray(shake.guardMembers)||!shake.guardMembers.every(id=>Number.isSafeInteger(id))||new Set(shake.guardMembers).size!==shake.guardMembers.length||!Number.isSafeInteger(shake.guardStableTicks)||shake.guardStableTicks<0||shake.guardStableTicks>this.rules.shake.guard_diagnostic_max_ticks||(shake.activeStartTick===null&&!shake.guardReleased))return failure('SAVE_INVALID','存档颠杯账本无效');
     const revive=value.revive;
     if(!revive||!Number.isSafeInteger(revive.used)||revive.used<0||revive.used>1)return failure('SAVE_INVALID','存档复活账本无效');
     if(revive.pendingFailure!==null){

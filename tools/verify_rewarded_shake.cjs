@@ -73,7 +73,7 @@ globalThis.tap = {
 const adapter = {
   createCup() {}, setCupVelocityX() {}, getCupOffsetX() { return 0; }, createBody() {}, destroyBody() {},
   replaceParentsWithChild() { return { ok: true, data: undefined }; }, stepFixed() {},
-  applyHorizontalAcceleration() {}, getContacts() { return []; }, getBody() { return undefined; },
+  applyVelocityImpulse() {}, ensureShakeGuard() {}, releaseShakeGuard() {}, getContacts() { return []; }, getBody() { return undefined; },
   restoreBodies() {}, canSpawn() { return true; }, dispose() {},
 };
 const makeRun = (extraGranted = 0) => {
@@ -81,9 +81,9 @@ const makeRun = (extraGranted = 0) => {
   const snapshot = engine.snapshot();
   engine.dispose();
   return SaveCodec.sealSnapshot({
-    ...snapshot, tick: 200, state: 'PAUSED', shake: { baseUsed: 2, extraGranted, extraUsed: 0, activeStartTick: null, cooldownUntilTick: 0 },
+    ...snapshot, tick: 200, state: 'PAUSED', shake: { baseUsed: 2, extraGranted, extraUsed: 0, activeStartTick: null, cooldownUntilTick: 0, guardMembers: [], guardStableTicks: 0, guardReleased: true },
     rng: { algorithm: 'xorshift32_v1_nonzero_seed', state: 12345, drawCount: 2 },
-    ingredients: [{ entityId: 1, level: 1, positionDu: { x: 430, y: 300 }, velocityDuPerSecond: { x: 0, y: 0 }, angleRadians: 0, angularVelocity: 0, bornTick: 0, dangerEligible: false, hasEnteredCup: false, spillTicks: 0, sleeping: false }],
+    ingredients: [{ entityId: 1, level: 1, positionDu: { x: 375, y: 500 }, velocityDuPerSecond: { x: 0, y: 0 }, angleRadians: 0, angularVelocity: 0, bornTick: 0, dangerEligible: false, hasEnteredCup: true, spillTicks: 0, sleeping: false }],
     nextEntityId: 2, autoDrop: { ...snapshot.autoDrop, nextDueTick: 220 }, checksum: '',
   });
 };
@@ -142,8 +142,8 @@ const profileFor = (run, extra = {}) => ({
   check('spawn RNG matches independent fixed-seed golden sequence', JSON.stringify(golden)===JSON.stringify([[391,8],[363,8],[367,0],[387,-8],[383,8]])&&spawnRng.snapshot().drawCount===10);
   const firstA=SaveCodec.sealSnapshot(new RunEngine(adapter,rules,RUN_ID,1).snapshot()),firstB=SaveCodec.sealSnapshot(new RunEngine(adapter,rules,RUN_ID,1).snapshot());
   check('same seed yields the same preview descriptor without changing level stream',JSON.stringify(firstA.autoDrop.pendingSpawn)===JSON.stringify(firstB.autoDrop.pendingSpawn)&&firstA.rng.drawCount===2&&firstA.spawnRng.drawCount===2);
-  check('schema5 run includes a valid checked spawn descriptor',SaveValidator.snapshot(firstA).valid&&firstA.autoDrop.pendingSpawn.level===firstA.currentLevel&&firstA.saveSchemaVersion===5);
-  const old3={...firstA,shake:{baseUsed:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0},boardType:'standard'};delete old3.spawnRng;delete old3.revive;old3.autoDrop={nextDueTick:firstA.autoDrop.nextDueTick};const legacy3=SaveCodec.sealSnapshot({...old3,saveSchemaVersion:3,checksum:''});const upgraded3=SaveMigration.runV3(legacy3);check('schema3 migration preserves old rule identity with centered pending spawn',SaveValidator.legacySnapshot(legacy3,3).valid&&upgraded3.saveSchemaVersion===5&&upgraded3.rulesVersion===firstA.rulesVersion&&upgraded3.autoDrop.pendingSpawn.xDu===375&&upgraded3.revive.used===0);
+  check('schema6 run includes a valid checked spawn descriptor',SaveValidator.snapshot(firstA).valid&&firstA.autoDrop.pendingSpawn.level===firstA.currentLevel&&firstA.saveSchemaVersion===6);
+  const old3={...firstA,shake:{baseUsed:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0},boardType:'standard'};delete old3.spawnRng;delete old3.revive;old3.autoDrop={nextDueTick:firstA.autoDrop.nextDueTick};const legacy3=SaveCodec.sealSnapshot({...old3,saveSchemaVersion:3,checksum:''});const upgraded3=SaveMigration.runV5(SaveMigration.runV3(legacy3));check('schema3 migration preserves old rule identity with centered pending spawn',SaveValidator.legacySnapshot(legacy3,3).valid&&upgraded3.saveSchemaVersion===6&&upgraded3.rulesVersion===firstA.rulesVersion&&upgraded3.autoDrop.pendingSpawn.xDu===375&&upgraded3.revive.used===0&&upgraded3.shake.guardReleased===true);
   const blockedAdapter={...adapter,canSpawn(){return false;}};const blockedEngine=new RunEngine(blockedAdapter,rules,RUN_ID,1);blockedEngine.resume();const blockedBefore=blockedEngine.snapshot();for(let i=0;i<65;i++)blockedEngine.advanceOneTick();const blockedAfter=blockedEngine.snapshot();
   check('blocked automatic spawn retries preserve the exact descriptor and RNG state',JSON.stringify(blockedAfter.autoDrop.pendingSpawn)===JSON.stringify(blockedBefore.autoDrop.pendingSpawn)&&JSON.stringify(blockedAfter.spawnRng)===JSON.stringify(blockedBefore.spawnRng)&&blockedAfter.dropIndex===0);
   const run = makeRun();
@@ -153,7 +153,7 @@ const profileFor = (run, extra = {}) => ({
   const legacyEnvelope = SaveCodec.createEnvelope(4, legacyBundle);
   check('legacy envelope validates', SaveValidator.legacyEnvelope(legacyEnvelope));
   const migrated = SaveMigration.bundle(legacyEnvelope.payload);
-  check('migration preserves run identity and tick', migrated.run.runId === RUN_ID && migrated.run.tick === legacyRun.tick && migrated.run.saveSchemaVersion === 5 && migrated.run.shake.extraGranted === 0 && migrated.run.revive.used === 0);
+  check('migration preserves run identity and tick', migrated.run.runId === RUN_ID && migrated.run.tick === legacyRun.tick && migrated.run.saveSchemaVersion === 6 && migrated.run.shake.extraGranted === 0 && migrated.run.revive.used === 0 && migrated.run.shake.guardReleased === true);
   check('migration upgrades profile and derives natural-run proof', migrated.profile.schemaVersion === 3 && migrated.profile.firstNaturalRunCompleted === true && migrated.profile.rewardedShake.receipts.length === 0 && migrated.profile.rewardedRevive.receipts.length === 0);
   check('migrated bundle passes V2 validation', SaveValidator.bundle(migrated).valid);
   const migratedEnvelope = SaveCodec.createEnvelopeV2(4, migrated);
@@ -200,8 +200,10 @@ const profileFor = (run, extra = {}) => ({
   check('extra grant applies once save is confirmed', grant.ok && engine.snapshot().shake.extraGranted === 2);
 
   // 4b. Actual RunEngine target controller and shake eligibility with a deterministic physics adapter.
-  let cupOffset=0,cupVelocity=0;const accelerations=[];
-  const motionAdapter={...adapter,createCup(){},setCupVelocityX(v){cupVelocity=v;},getCupOffsetX(){return cupOffset;},stepFixed(){cupOffset=Math.max(-110,Math.min(110,cupOffset+cupVelocity/60));},applyHorizontalAcceleration(id,a){accelerations.push([id,a]);},restoreBodies(){}};
+  let cupOffset=0,cupVelocity=0;const impulses=[];
+  const motionAdapter={...adapter,createCup(){},setCupVelocityX(v){cupVelocity=v;},getCupOffsetX(){return cupOffset;},stepFixed(){cupOffset=Math.max(-110,Math.min(110,cupOffset+cupVelocity/60));},applyVelocityImpulse(id,delta){impulses.push({id,...delta});},restoreBodies(){}};
+  const newImpulseAdapter=()=>{const state={cupOffset:0,cupVelocity:0,impulses:[]};return {state,adapter:{...adapter,createCup(){},setCupVelocityX(v){state.cupVelocity=v;},getCupOffsetX(){return state.cupOffset;},stepFixed(){state.cupOffset=Math.max(-110,Math.min(110,state.cupOffset+state.cupVelocity/60));},applyVelocityImpulse(id,delta){state.impulses.push({id,...delta});},restoreBodies(){}}};};
+  check('BP-01 guarded-bump config uses the selected rule version and tick geometry',rules.design_rules_version==='design-v0.7-guarded-bump-01'&&rules.shake.motion==='guarded_bump_v2'&&Math.round(rules.shake.duration_seconds*rules.physics.fixed_hz)===39&&Math.round(rules.shake.cooldown_seconds*rules.physics.fixed_hz)===21&&rules.shake.launch_delay_ticks===6&&rules.shake.settle_ticks===6&&rules.shake.headroom_stop_du===16&&rules.shake.headroom_full_du===112&&rules.shake.horizontal_lateral_low_du_per_second===120&&rules.shake.horizontal_lateral_high_du_per_second===160&&rules.shake.guard_lift_du===12&&rules.shake.guard_thickness_du===10&&rules.shake.max_upward_velocity_du_per_second===520&&rules.shake.guaranteed_merge===false);
   const motionEngine=new RunEngine(motionAdapter,rules,RUN_ID,345);
   motionEngine.setCupTarget(110);for(let i=0;i<9;i++)motionEngine.advanceOneTick();
   check('fast cup target tracks 110du within eight du after 150ms',Math.abs(motionEngine.presentationCupOffsetXDu-110)<=8);
@@ -211,38 +213,71 @@ const profileFor = (run, extra = {}) => ({
   check('release enters bounded settling instead of immediate brake',motionEngine.snapshot().cupMotion.control==='SETTLING');
   for(let i=0;i<9;i++)motionEngine.advanceOneTick();
   check('settling remains bounded to nine fixed steps',motionEngine.snapshot().cupMotion.control!=='SETTLING');
-  const shakeBase=makeRun();const shakeSnapshot=SaveCodec.sealSnapshot({...shakeBase,tick:200,state:'PAUSED',shake:{baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:200,cooldownUntilTick:278},ingredients:[
+  const shakeBase=makeRun();const shakeSnapshot=SaveCodec.sealSnapshot({...shakeBase,tick:200,state:'PAUSED',shake:{baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:200,cooldownUntilTick:260,guardMembers:[],guardStableTicks:0,guardReleased:false},ingredients:[
     {entityId:1,level:1,positionDu:{x:375,y:500},velocityDuPerSecond:{x:0,y:0},angleRadians:0,angularVelocity:0,bornTick:0,dangerEligible:false,hasEnteredCup:true,spillTicks:0,sleeping:false},
-    {entityId:2,level:1,positionDu:{x:375,y:1050},velocityDuPerSecond:{x:0,y:0},angleRadians:0,angularVelocity:0,bornTick:0,dangerEligible:false,hasEnteredCup:false,spillTicks:0,sleeping:false}],nextEntityId:3,checksum:''});
-  const shakeEngine=new RunEngine(motionAdapter,rules,RUN_ID,12345,shakeSnapshot);shakeEngine.resume();shakeEngine.advanceOneTick();shakeEngine.advanceOneTick();
-  check('shake force uses configured amplitude and excludes unentered next ingredient',accelerations.some(x=>x[0]===1&&Math.abs(x[1])>0)&&!accelerations.some(x=>x[0]===2));
-  const emptySnap=SaveCodec.sealSnapshot({...makeRun(),ingredients:[],nextEntityId:1,shake:{baseUsed:0,extraGranted:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0},autoDrop:{nextDueTick:1000},checksum:''});
+    {entityId:2,level:1,positionDu:{x:375,y:1050},velocityDuPerSecond:{x:0,y:0},angleRadians:0,angularVelocity:0,bornTick:0,dangerEligible:false,hasEnteredCup:false,spillTicks:0,sleeping:false},
+    {entityId:4,level:1,positionDu:{x:210,y:500},velocityDuPerSecond:{x:0,y:0},angleRadians:0,angularVelocity:0,bornTick:0,dangerEligible:false,hasEnteredCup:true,spillTicks:0,sleeping:false},
+    {entityId:5,level:1,positionDu:{x:540,y:500},velocityDuPerSecond:{x:0,y:0},angleRadians:0,angularVelocity:0,bornTick:0,dangerEligible:false,hasEnteredCup:true,spillTicks:0,sleeping:false},
+    {entityId:6,level:1,positionDu:{x:375,y:1020},velocityDuPerSecond:{x:0,y:0},angleRadians:0,angularVelocity:0,bornTick:0,dangerEligible:false,hasEnteredCup:true,spillTicks:3,sleeping:false}],nextEntityId:7,checksum:''});
+  const pulseAdapter=newImpulseAdapter(),shakeImpulses=pulseAdapter.state.impulses;
+  const shakeEngine=new RunEngine(pulseAdapter.adapter,rules,RUN_ID,12345,shakeSnapshot);shakeEngine.resume();for(let i=0;i<5;i++)shakeEngine.advanceOneTick();
+  check('BP-02 no impulse is applied before the fixed launch delay',shakeImpulses.length===0,JSON.stringify(shakeImpulses));
+  shakeEngine.advanceOneTick();shakeEngine.advanceOneTick();
+  const pulse=shakeImpulses.filter(item=>item.id===1);
+  check('BP-02 exactly one impulse per effective target at s+6',pulse.length===1&&!shakeImpulses.some(item=>item.id===2)&&!shakeImpulses.some(item=>item.id===6),JSON.stringify(shakeImpulses));
+  const expectedCenterBias=-rules.shake.horizontal_lateral_low_du_per_second-(rules.shake.horizontal_lateral_high_du_per_second-rules.shake.horizontal_lateral_low_du_per_second)*((500-rules.cup.inner_bottom_y_du)/(rules.cup.inner_top_y_du-rules.cup.inner_bottom_y_du))-rules.shake.horizontal_scatter_du_per_second;
+  check('BP-04/BP-05 headroom delta, low-tier lateral bias and center direction match the configured model',pulse.length===1&&pulse[0].y===rules.shake.vertical_delta_velocity_du_per_second&&Math.abs(pulse[0].x-expectedCenterBias)<1e-9&&shakeImpulses.find(item=>item.id===4)?.x>0&&shakeImpulses.find(item=>item.id===5)?.x<0,JSON.stringify({expectedCenterBias,shakeImpulses}));
+  for(let i=0;i<33;i++)shakeEngine.advanceOneTick();
+  check('BP-02 an accepted shake applies only one pulse across its 39-tick active window',shakeImpulses.filter(item=>item.id===1).length===1,JSON.stringify(shakeImpulses.length));
+  const reversedAdapter=newImpulseAdapter(),reversedImpulses=reversedAdapter.state.impulses;
+  const reversedSnapshot=SaveCodec.sealSnapshot({...shakeSnapshot,ingredients:[...shakeSnapshot.ingredients].reverse()});
+  const reversedEngine=new RunEngine(reversedAdapter.adapter,rules,RUN_ID,12345,reversedSnapshot);reversedEngine.resume();for(let i=0;i<6;i++)reversedEngine.advanceOneTick();
+  const key=(list)=>list.map(item=>`${item.id}:${item.x.toFixed(6)}:${item.y.toFixed(6)}`).sort().join('|');
+  check('BP-06 ingredient traversal order does not change any impulse',key(reversedImpulses)===key(shakeImpulses.filter(item=>[1,4,5].includes(item.id))),JSON.stringify({forward:key(shakeImpulses),reverse:key(reversedImpulses)}));
+  const emptySnap=SaveCodec.sealSnapshot({...makeRun(),ingredients:[],nextEntityId:1,shake:{baseUsed:0,extraGranted:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0,guardMembers:[],guardStableTicks:0,guardReleased:true},autoDrop:{nextDueTick:1000},checksum:''});
   const emptyEngine=new RunEngine(adapter,rules,RUN_ID,456,emptySnap);emptyEngine.resume();
   const emptyState=emptyEngine.snapshot();emptyEngine.dispatch({ownerEpoch:emptyState.epoch,command:{kind:'SHAKE',runId:RUN_ID,commandId:'88888888-8888-4888-8888-888888888888',sequence:emptyState.nextCommandSequence,tick:emptyState.tick+1,source:'base'}});
   emptyEngine.advanceOneTick();
   check('empty cup shake rejects without consuming a base use',emptyEngine.snapshot().shake.baseUsed===0&&emptyEngine.currentOutcome?.errorCode==='SHAKE_EMPTY',JSON.stringify({used:emptyEngine.snapshot().shake.baseUsed,outcome:emptyEngine.currentOutcome}));
   const spamState=emptyEngine.snapshot();for(let i=0;i<20;i++){const s=emptyEngine.snapshot();emptyEngine.dispatch({ownerEpoch:s.epoch,command:{kind:'SHAKE',runId:RUN_ID,commandId:`spam-${i}`,sequence:s.nextCommandSequence,tick:s.tick+1,source:'base'}});emptyEngine.advanceOneTick();}
   check('twenty rapid empty-cup requests never consume shake quota',emptyEngine.snapshot().shake.baseUsed===0,JSON.stringify({used:emptyEngine.snapshot().shake.baseUsed,outcome:emptyEngine.currentOutcome}));
-  const cooldownSnapshot=SaveCodec.sealSnapshot({...makeRun(),tick:276,shake:{baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:200,cooldownUntilTick:278},checksum:''});
+  const cooldownSnapshot=SaveCodec.sealSnapshot({...makeRun(),tick:258,shake:{baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:260,guardMembers:[],guardStableTicks:0,guardReleased:true},checksum:''});
   const cooldownEngine=new RunEngine(adapter,rules,RUN_ID,456,cooldownSnapshot);cooldownEngine.resume();let cs=cooldownEngine.snapshot();
   cooldownEngine.dispatch({ownerEpoch:cs.epoch,command:{kind:'SHAKE',runId:RUN_ID,commandId:'99999999-9999-4999-8999-999999999999',sequence:cs.nextCommandSequence,tick:cs.tick+1,source:'base'}});cooldownEngine.advanceOneTick();
   const cooldownRejected=cooldownEngine.lastCommandOutcome?.errorCode==='SHAKE_COOLDOWN';cs=cooldownEngine.snapshot();
   cooldownEngine.dispatch({ownerEpoch:cs.epoch,command:{kind:'SHAKE',runId:RUN_ID,commandId:'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',sequence:cs.nextCommandSequence,tick:cs.tick+1,source:'base'}});cooldownEngine.advanceOneTick();
-  check('shake cooldown rejects tick 77 and accepts tick 78',cooldownRejected&&cooldownEngine.lastCommandOutcome?.status==='APPLIED');
-  const midShakeSnap=SaveCodec.sealSnapshot({...makeRun(),tick:224,shake:{baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:200,cooldownUntilTick:278},checksum:''});
-  const midShakeEngine=new RunEngine(motionAdapter,rules,RUN_ID,789,midShakeSnap);midShakeEngine.resume();midShakeEngine.pause('MANUAL');const pausedShake=midShakeEngine.snapshot();
-  const resumedShake=new RunEngine(motionAdapter,rules,RUN_ID,789,pausedShake);resumedShake.resume();resumedShake.advanceOneTick();
-  check('pause and restore during shake preserve active phase',pausedShake.shake.activeStartTick===200&&resumedShake.snapshot().shake.activeStartTick===200&&accelerations.some(x=>x[0]===1&&Math.abs(x[1])>0));
-  const autoShakeSnap=SaveCodec.sealSnapshot({...makeRun(),autoDrop:{nextDueTick:201},shake:{baseUsed:0,extraGranted:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0},checksum:''});
+  check('BP-07 cooldown rejects s+59 and accepts s+60',cooldownRejected&&cooldownEngine.lastCommandOutcome?.status==='APPLIED');
+  const rapidSnapshot=SaveCodec.sealSnapshot({...shakeSnapshot,shake:{baseUsed:0,extraGranted:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0,guardMembers:[],guardStableTicks:0,guardReleased:true},ingredients:shakeSnapshot.ingredients.filter(item=>item.entityId!==6),nextEntityId:7});
+  const rapidAdapter=newImpulseAdapter();const rapidEngine=new RunEngine(rapidAdapter.adapter,rules,RUN_ID,321,rapidSnapshot);rapidEngine.resume();let accepted=0;
+  for(let i=0;i<70;i++){const s=rapidEngine.snapshot();rapidEngine.dispatch({ownerEpoch:s.epoch,command:{kind:'SHAKE',runId:RUN_ID,commandId:`00000000-0000-4000-8000-${String(i+1).padStart(12,'0')}`,sequence:s.nextCommandSequence,tick:s.tick+1,source:'base'}});rapidEngine.advanceOneTick();if(rapidEngine.lastCommandOutcome?.status==='APPLIED')accepted++;}
+  check('BP-12 rapid repeated input only consumes one available shake per cooldown window',accepted===2&&rapidEngine.snapshot().shake.baseUsed===2,JSON.stringify({accepted,used:rapidEngine.snapshot().shake.baseUsed}));
+  impulses.length=0;
+  const pauseAdapter=newImpulseAdapter(),pauseImpulses=pauseAdapter.state.impulses;
+  const midShakeSnap=SaveCodec.sealSnapshot({...makeRun(),tick:203,shake:{baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:200,cooldownUntilTick:260,guardMembers:[],guardStableTicks:0,guardReleased:false},ingredients:shakeSnapshot.ingredients.filter(item=>item.entityId!==6),nextEntityId:7,checksum:''});
+  const midShakeEngine=new RunEngine(pauseAdapter.adapter,rules,RUN_ID,789,midShakeSnap);midShakeEngine.resume();midShakeEngine.pause('MANUAL');const pausedShake=midShakeEngine.snapshot();
+  const resumedShake=new RunEngine(pauseAdapter.adapter,rules,RUN_ID,789,pausedShake);resumedShake.resume();for(let i=0;i<4;i++)resumedShake.advanceOneTick();
+  check('BP-03/BP-10 pause and restore in the pre-delay phase applies the single pulse exactly once',pausedShake.shake.activeStartTick===200&&resumedShake.snapshot().shake.activeStartTick===200&&pauseImpulses.filter(item=>item.id===1).length===1&&resumedShake.snapshot().shake.baseUsed===1,JSON.stringify(pauseImpulses));
+  const autoShakeSnap=SaveCodec.sealSnapshot({...makeRun(),autoDrop:{nextDueTick:201},shake:{baseUsed:0,extraGranted:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0,guardMembers:[],guardStableTicks:0,guardReleased:true},ingredients:shakeSnapshot.ingredients.filter(item=>item.entityId!==6),nextEntityId:7,checksum:''});
   const autoShakeEngine=new RunEngine(adapter,rules,RUN_ID,987,autoShakeSnap);autoShakeEngine.resume();const as=autoShakeEngine.snapshot();
   autoShakeEngine.dispatch({ownerEpoch:as.epoch,command:{kind:'SHAKE',runId:RUN_ID,commandId:'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',sequence:as.nextCommandSequence,tick:as.tick+1,source:'base'}});autoShakeEngine.advanceOneTick();
   check('automatic ingredient drop defers during a successfully consumed shake',autoShakeEngine.snapshot().dropIndex===makeRun().dropIndex&&autoShakeEngine.snapshot().autoDrop.nextDueTick>autoShakeEngine.snapshot().tick);
-  const faultAdapter={...adapter,stepFixed(){throw new Error('injected physics step failure');}};const faultRun=SaveCodec.sealSnapshot({...makeRun(),shake:{baseUsed:0,extraGranted:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0},checksum:''});const faultEngine=new RunEngine(faultAdapter,rules,RUN_ID,654,faultRun);faultEngine.resume();const fs=faultEngine.snapshot();
+  const faultAdapter={...adapter,stepFixed(){throw new Error('injected physics step failure');}};const faultRun=SaveCodec.sealSnapshot({...makeRun(),shake:{baseUsed:0,extraGranted:0,extraUsed:0,activeStartTick:null,cooldownUntilTick:0,guardMembers:[],guardStableTicks:0,guardReleased:true},ingredients:shakeSnapshot.ingredients,checksum:''});const faultEngine=new RunEngine(faultAdapter,rules,RUN_ID,654,faultRun);faultEngine.resume();const fs=faultEngine.snapshot();
   faultEngine.dispatch({ownerEpoch:fs.epoch,command:{kind:'SHAKE',runId:RUN_ID,commandId:'cccccccc-cccc-4ccc-8ccc-cccccccccccc',sequence:fs.nextCommandSequence,tick:fs.tick+1,source:'base'}});faultEngine.advanceOneTick();
   check('failed physics transaction rolls back shake consumption and freezes',faultEngine.snapshot().shake.baseUsed===0&&faultEngine.phase==='PAUSED'&&!!faultEngine.lastTickFault,JSON.stringify({used:faultEngine.snapshot().shake.baseUsed,phase:faultEngine.phase,fault:faultEngine.lastTickFault}));
   let failRollbackRestore=false;const rollbackFaultAdapter={...faultAdapter,restoreBodies(){if(failRollbackRestore)throw new Error('injected rollback failure');}};const rollbackEngine=new RunEngine(rollbackFaultAdapter,rules,RUN_ID,655,faultRun);rollbackEngine.resume();failRollbackRestore=true;
   rollbackEngine.advanceOneTick();
   check('rollback failure preserves both physical and recovery fault codes',rollbackEngine.phase==='PAUSED'&&rollbackEngine.lastTickFault?.includes('injected physics step failure|ROLLBACK:Error:injected rollback failure'));
+  let impulseCalls=0,impulseRestored=false;const impulseFaultAdapter=newImpulseAdapter();const impulseFaultTargets=impulseFaultAdapter.adapter;
+  impulseFaultTargets.applyVelocityImpulse=(id,delta)=>{impulseCalls++;if(impulseCalls===2)throw new Error('injected impulse failure');impulseFaultAdapter.state.impulses.push({id,...delta});};
+  impulseFaultTargets.restoreBodies=()=>{impulseRestored=true;};
+  const impulseFaultSnap=SaveCodec.sealSnapshot({...rapidSnapshot,checksum:''});
+  const impulseFaultEngine=new RunEngine(impulseFaultTargets,rules,RUN_ID,656,impulseFaultSnap);impulseFaultEngine.resume();const ifs=impulseFaultEngine.snapshot();
+  impulseFaultEngine.dispatch({ownerEpoch:ifs.epoch,command:{kind:'SHAKE',runId:RUN_ID,commandId:'dddddddd-dddd-4ddd-8ddd-dddddddddddd',sequence:ifs.nextCommandSequence,tick:ifs.tick+1,source:'base'}});
+  for(let i=0;i<6;i++)impulseFaultEngine.advanceOneTick();const beforeFault=impulseFaultEngine.snapshot();
+  impulseFaultEngine.advanceOneTick();const afterFault=impulseFaultEngine.snapshot();
+  check('BP-08 a second-target impulse failure restores the pre-tick state and keeps retry possible',impulseFaultEngine.phase==='PAUSED'&&impulseRestored&&impulseFaultAdapter.state.impulses.length===1&&afterFault.tick===beforeFault.tick&&afterFault.shake.baseUsed===beforeFault.shake.baseUsed&&afterFault.shake.activeStartTick===beforeFault.shake.activeStartTick&&afterFault.shake.cooldownUntilTick===beforeFault.shake.cooldownUntilTick&&!!impulseFaultEngine.lastTickFault?.includes('injected impulse failure'),JSON.stringify({calls:impulseCalls,restored:impulseRestored,tick:afterFault.tick,used:afterFault.shake.baseUsed,shake:afterFault.shake,fault:impulseFaultEngine.lastTickFault}));
+  impulseFaultEngine.resume();impulseFaultEngine.advanceOneTick();const retryPulse=new Set(impulseFaultAdapter.state.impulses.slice(1).map(item=>item.id)),liveFaultTargets=beforeFault.ingredients.filter(item=>item.hasEnteredCup&&item.spillTicks===0).length;
+  check('BP-08 retry after the fault applies one impulse per live body without double charging',impulseFaultAdapter.state.impulses.length===liveFaultTargets+1&&retryPulse.size===liveFaultTargets&&impulseFaultEngine.snapshot().shake.baseUsed===beforeFault.shake.baseUsed&&impulseFaultEngine.phase==='PLAYING',JSON.stringify({impulses:impulseFaultAdapter.state.impulses.length,retryTargets:retryPulse.size,liveFaultTargets,used:impulseFaultEngine.snapshot().shake.baseUsed}));
 
   // 5. Service completes, grants, and persists
   const runNow = makeRun();
@@ -1059,6 +1094,89 @@ const profileFor = (run, extra = {}) => ({
     &&sr07Disk.ok&&sr07Disk.data.envelope.payload.profile.rewardedShake.receipts.length===3
     &&sr07Disk.data.envelope.payload.profile.rewardedShake.dailyGranted===3);
 
+  // DEV-02: the real save chain (commit -> readback -> resume checksum) must not depend on a host
+  // TextEncoder that is missing, non-constructible, or throws from its constructor.
+  const hostEncoderExpectedChecksum = makeRun(0).checksum;
+  const hostEncoderOriginal = globalThis.TextEncoder;
+  const hostEncoderModes = {
+    missing: () => { delete globalThis.TextEncoder; return typeof globalThis.TextEncoder === 'undefined'; },
+    nonConstructible: () => { globalThis.TextEncoder = () => {}; try { new globalThis.TextEncoder(); return false; } catch { return typeof globalThis.TextEncoder === 'function'; } },
+    throwing: () => { globalThis.TextEncoder = function () { throw new Error('HOST_ENCODER_BROKEN'); }; try { new globalThis.TextEncoder(); return false; } catch { return typeof globalThis.TextEncoder === 'function'; } },
+  };
+  for (const [mode, install] of Object.entries(hostEncoderModes)) {
+    let lease = null;
+    try {
+      check(`HOSTENC-${mode}-a host TextEncoder mode is actually installed`, install());
+      const repo = new LocalSaveRepository(`host-encoder-${mode}`);
+      lease = await repo.acquireWriteLease();
+      check(`HOSTENC-${mode}-b persistent lease acquired without TextEncoder`, lease.ok && lease.data.mode === 'persistent', lease.ok ? lease.data.mode : lease.error.code);
+      const run = makeRun(0);
+      const bundle = { profile: profileFor(run), run, lastResult: null };
+      const commit = await repo.commitBundle(0, null, bundle);
+      check(`HOSTENC-${mode}-c new save commits with stable revision`, commit.ok && commit.data.revision === 1, commit.ok ? String(commit.data.revision) : commit.error.message);
+      const read = await repo.readBundle();
+      const envelope = read.ok ? read.data.envelope : null;
+      check(`HOSTENC-${mode}-d commit readback re-verifies envelope and run checksum`,
+        !!envelope && envelope.revision === 1 && SaveCodec.verifyEnvelopeV2(envelope) && SaveCodec.verifySnapshot(envelope.payload.run)
+        && envelope.payload.run.runId === RUN_ID && envelope.payload.run.checksum === hostEncoderExpectedChecksum,
+        read.ok ? JSON.stringify({ revision: envelope?.revision, checksum: envelope?.payload?.run?.checksum }) : read.error.message);
+      const nextProfile = { ...bundle.profile, revision: bundle.profile.revision + 1, settings: { ...bundle.profile.settings, musicGain: 0.5 } };
+      const nextCommit = await repo.commitBundle(1, RUN_ID, { ...bundle, profile: nextProfile });
+      const nextRead = await repo.readBundle();
+      check(`HOSTENC-${mode}-e resume read keeps runId/checksum after a second commit`,
+        nextCommit.ok && nextCommit.data.revision === 2 && nextRead.ok && !!nextRead.data.envelope
+        && SaveCodec.verifyEnvelopeV2(nextRead.data.envelope) && SaveCodec.verifySnapshot(nextRead.data.envelope.payload.run)
+        && nextRead.data.envelope.payload.run.runId === RUN_ID && nextRead.data.envelope.payload.run.checksum === hostEncoderExpectedChecksum,
+        nextRead.ok ? JSON.stringify({ revision: nextRead.data.envelope?.revision, checksum: nextRead.data.envelope?.payload?.run?.checksum }) : nextRead.error.message);
+    } finally {
+      try { lease?.ok && lease.data.release(); } catch {}
+      globalThis.TextEncoder = hostEncoderOriginal;
+    }
+  }
+
+  // 4c. V2 guarded-bump domain coverage. Real Box2D rearrangement, penetration and drag evidence is produced by the browser harness.
+  const v2ent=(entityId,level,x,y,extra={})=>({entityId,level,positionDu:{x,y},velocityDuPerSecond:{x:0,y:0},angleRadians:0,angularVelocity:0,bornTick:0,dangerEligible:false,hasEnteredCup:true,spillTicks:0,sleeping:false,...extra});
+  const v2ActiveShake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:200,cooldownUntilTick:0,guardMembers:[],guardStableTicks:0,guardReleased:false};
+  const v2Snapshot=(entities,nextEntityId,shake=v2ActiveShake)=>SaveCodec.sealSnapshot({...shakeBase,tick:200,state:'PAUSED',shake,ingredients:entities,nextEntityId,checksum:''});
+  const v2Run=(snapshot,ticks)=>{const impulses=[],guards=[];const a={...adapter,ensureShakeGuard(members){guards.push(members.slice());},releaseShakeGuard(){},applyVelocityImpulse(id,delta){impulses.push({id,...delta});}};const engine=new RunEngine(a,rules,RUN_ID,777,snapshot);engine.resume();for(let i=0;i<ticks;i++)engine.advanceOneTick();return {engine,impulses,guards};};
+  const lowHigh=v2Snapshot([v2ent(1,1,375,420),v2ent(2,1,375,940)],3);
+  const lh=v2Run(lowHigh,6);
+  const upLow=lh.impulses.find(i=>i.id===1)?.y??0,upHigh=lh.impulses.find(i=>i.id===2)?.y??0;
+  const xLow=lh.impulses.find(i=>i.id===1)?.x??0,xHigh=lh.impulses.find(i=>i.id===2)?.x??0;
+  check('V2-01/02 headroom split gives the low body the strong upward bump and the rim body a wider opposite lateral swap',
+    upLow===rules.shake.vertical_delta_velocity_du_per_second&&upHigh>0&&upHigh<upLow/2&&Math.abs(xHigh)>Math.abs(xLow)&&xHigh*xLow<0,JSON.stringify(lh.impulses));
+  const nearFull=v2Snapshot([v2ent(1,1,375,950),v2ent(2,2,300,940),v2ent(3,1,375,960),v2ent(4,3,450,930),v2ent(5,1,375,1000)],6);
+  const nf=v2Run(nearFull,6);
+  const nfGuards=nf.guards[nf.guards.length-1]??[];
+  const nfProtruding=nf.impulses.find(item=>item.id===5);
+  const nfEdge=nf.impulses.find(item=>item.id===4);
+  check('V2-03 near-full and protruding members stay guarded, up impulse fades and edge bodies are pushed inward',
+    nfGuards.join(',')==='1,2,3,4,5'&&nf.impulses.length===5
+    &&nf.impulses.every(item=>item.y>=0&&item.y<=rules.shake.vertical_delta_velocity_du_per_second)
+    &&!!nfProtruding&&nfProtruding.y===0&&!!nfEdge&&nfEdge.x<0,JSON.stringify({nfGuards,impulses:nf.impulses}));
+  const mixed=v2Snapshot([v2ent(1,1,375,500),v2ent(2,1,375,1100,{hasEnteredCup:false}),v2ent(3,1,375,1040,{spillTicks:2}),v2ent(4,1,375,1300,{hasEnteredCup:false})],5);
+  const mx=v2Run(mixed,6);
+  check('V2-05 outside, falling and already-spilled bodies are excluded from guard and impulse',
+    (mx.guards[mx.guards.length-1]??[]).join(',')==='1'&&mx.impulses.length===1&&mx.impulses[0].id===1,JSON.stringify({guards:mx.guards[mx.guards.length-1],impulses:mx.impulses}));
+  const midSnapshot=SaveCodec.sealSnapshot({...lowHigh,tick:206,shake:{baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:200,cooldownUntilTick:0,guardMembers:[1,2],guardStableTicks:0,guardReleased:false},checksum:''});
+  const mid=v2Run(midSnapshot,10);
+  check('V2-06 resumed guard window never replays the launched impulse and keeps the active start tick',
+    mid.impulses.length===0&&mid.engine.snapshot().shake.activeStartTick===200&&mid.engine.snapshot().shake.guardReleased===false,JSON.stringify({impulses:mid.impulses,shake:mid.engine.snapshot().shake}));
+  check('V2-07 guarded shake snapshots round-trip schema 6 with validated guard membership',
+    SaveValidator.snapshot(lowHigh).valid&&lowHigh.saveSchemaVersion===6&&SaveValidator.snapshot(midSnapshot).valid&&midSnapshot.shake.guardMembers.join(',')==='1,2',JSON.stringify({idle:SaveValidator.snapshot(lowHigh),mid:SaveValidator.snapshot(midSnapshot)}));
+  const guardLog=[];const lifecycleAdapter={...adapter,ensureShakeGuard(members){guardLog.push(`E${members.join('-')}`);},releaseShakeGuard(){guardLog.push('R');}};
+  const lifeEngine=new RunEngine(lifecycleAdapter,rules,RUN_ID,777,midSnapshot);lifeEngine.resume();for(let i=0;i<40;i++)lifeEngine.advanceOneTick();
+  const lifeShake=lifeEngine.snapshot().shake;
+  check('V2-08 guard is rebuilt on every active step and released exactly once after the minimum window',
+    guardLog.filter(x=>x==='R').length===1&&guardLog.filter(x=>x==='E1-2').length>=6&&lifeShake.guardReleased===true&&lifeShake.cooldownUntilTick>239,JSON.stringify({releases:guardLog.filter(x=>x==='R').length,ensures:guardLog.filter(x=>x==='E1-2').length,shake:lifeShake}));
+  const spawnSnapshot=SaveCodec.sealSnapshot({...lowHigh,tick:200,autoDrop:{nextDueTick:201,pendingSpawn:{level:2,xDu:400,vxDuPerSecond:0,angularVelocity:0}},shake:{baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:200,cooldownUntilTick:0,guardMembers:[1,2],guardStableTicks:0,guardReleased:false},checksum:''});
+  const spawnEngine=new RunEngine({...adapter,ensureShakeGuard(){},releaseShakeGuard(){}},rules,RUN_ID,777,spawnSnapshot);spawnEngine.resume();
+  for(let i=0;i<35;i++)spawnEngine.advanceOneTick();const spawnDuring=spawnEngine.snapshot();
+  for(let i=0;i<25;i++)spawnEngine.advanceOneTick();const spawnAfter=spawnEngine.snapshot();
+  check('V2-09 auto-drop and spawn RNG stay frozen during the guard window and release at most one drop afterwards',
+    spawnDuring.ingredients.length===2&&JSON.stringify(spawnDuring.autoDrop.pendingSpawn)===JSON.stringify(spawnSnapshot.autoDrop.pendingSpawn)
+    &&spawnDuring.spawnRng.state===spawnSnapshot.spawnRng.state&&spawnAfter.ingredients.length===3,
+    JSON.stringify({during:spawnDuring.ingredients.length,after:spawnAfter.ingredients.length,pending:spawnDuring.autoDrop.pendingSpawn}));
   RewardedAdCoordinator.release('spill-revive');RewardedAdCoordinator.release('extra-shake');
   check('RV-28 one rewarded slot is shared by both ad kinds',RewardedAdCoordinator.claim('spill-revive')&&!RewardedAdCoordinator.claim('extra-shake')&&!RewardedAdCoordinator.claim('spill-revive'));
   RewardedAdCoordinator.release('spill-revive');

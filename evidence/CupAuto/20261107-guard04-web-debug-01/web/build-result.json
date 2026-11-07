@@ -1,0 +1,16 @@
+{
+  "buildId": "20261107-guard04-web-debug-01",
+  "project": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-guard04-web-debug-01",
+  "output": "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build\\20261107-guard04-web-debug-01",
+  "status": "WEB_CANDIDATE_BUILD_PASS",
+  "startedAt": "2026-11-07T14:44:25.721621+08:00",
+  "release-assetsExitCode": 0,
+  "typecheckExitCode": 0,
+  "creatorExitCode": 36,
+  "mode": "debug",
+  "indexHtmlSha256": "3ba9d9a28f72987fac665296378dd66293926cbba4c474aebc70fe9b0f6d21c5",
+  "settingsSha256": "f56b99b47cd43f23eddd494a690ab89e99c31401f65a48a2863c7f81c793c18b",
+  "outputBytes": 23590019,
+  "templateApplied": true,
+  "finishedAt": "2026-11-07T14:45:43.230644+08:00"
+}

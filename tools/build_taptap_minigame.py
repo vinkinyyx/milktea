@@ -74,7 +74,11 @@ def main():
     save(evidence / "source-manifest.json", before)
     record = {"buildId": args.build_id, "startedAt": datetime.datetime.now().astimezone().isoformat(),
               "originalProject": str(project), "stagedProject": str(staged), "output": str(output),
-              "appIdProvided": bool(args.app_id), "miniAppId": args.app_id, "gameId": platform["gameId"], "runtimeVerified": False, "status": "STARTED"}
+              "appIdProvided": bool(args.app_id), "miniAppId": args.app_id, "gameId": platform["gameId"], "runtimeVerified": False, "status": "STARTED",
+              "sourceManifestCount": len(before),
+              "sourceManifestSha256": hashlib.sha256(json.dumps(before, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest(),
+              "tools": {"python": sys.version.split()[0], "node": subprocess.run(["node.exe", "--version"], capture_output=True, text=True).stdout.strip(),
+                        "creator": str(CREATOR), "tapExtension": "1.2.2"}}
 
     def run(name, command, env=None):
         save(evidence / (name + "-command.json"), {"command": command, "cwd": str(staged)})
@@ -83,6 +87,7 @@ def main():
         record[name + "ExitCode"] = code
         if code != 0:
             raise RuntimeError(f"{name} failed with exit {code}; see {evidence / (name + '.log')}")
+        return (evidence / (name + ".log")).read_text(encoding="utf-8")
 
     try:
         shutil.copytree(project, staged, ignore=shutil.ignore_patterns(*IGNORED))
@@ -97,6 +102,27 @@ def main():
         run("release-code", ["node.exe", str(ROOT / "tools/strip_p1c_release_debug.cjs"), str(staged), str(evidence / "release-code-staging.json")])
         tsc = staged / "node_modules/typescript/bin/tsc"
         run("typecheck", ["node.exe", str(tsc), "--project", str(staged / "tsconfig.json")])
+        # Hard gate: the UTF-8/SHA path must survive every host TextEncoder shape. Verify the isolated
+        # staging copy (the exact packaging input), and never start Creator when it fails.
+        gate_project = str(staged)
+        try:
+            gate_log = run("host-utf8-gate", ["node.exe", str(ROOT / "tools/verify_host_utf8.cjs"), "--project", gate_project])
+        except Exception as gate_error:
+            record["hostUtf8Gate"] = {"project": gate_project, "exitCode": record.get("host-utf8-gateExitCode"),
+                                      "status": "FAIL", "log": str(evidence / "host-utf8-gate.log"), "error": str(gate_error)}
+            raise
+        gate_lines = [line for line in gate_log.splitlines() if line.strip()]
+        try:
+            gate_summary = json.loads(gate_lines[-1])
+        except (IndexError, ValueError) as error:
+            record["hostUtf8Gate"] = {"project": gate_project, "exitCode": 0, "status": "FAIL",
+                                      "log": str(evidence / "host-utf8-gate.log"), "error": f"no JSON summary: {error}"}
+            raise RuntimeError(f"host-utf8-gate produced no JSON summary: {error}") from error
+        if gate_summary.get("status") != "PASS":
+            record["hostUtf8Gate"] = {"project": gate_project, "exitCode": 0, "status": "FAIL",
+                                      "log": str(evidence / "host-utf8-gate.log"), "summary": gate_summary}
+            raise RuntimeError(f"host-utf8-gate did not report PASS: {gate_summary}")
+        record["hostUtf8Gate"] = {"project": gate_project, "exitCode": 0, "log": str(evidence / "host-utf8-gate.log"), **gate_summary}
         boot = json.loads((staged / "assets/scenes/Boot.scene.meta").read_text(encoding="utf-8-sig"))["uuid"]
         config = {"platform": "wechatgame", "name": "奶茶挤挤", "buildPath": str(output), "outputName": "wechatgame",
                   "debug": False, "sourceMaps": False, "startScene": boot,

@@ -3,8 +3,10 @@
 ## 当前执行
 
 - [当前事实与未完成项](22-current-progress-and-resume.md)
+- [强颠杯、杯口保护与上线前开发收口（当前）](53-strong-cup-bump-and-release-closeout.md)
+- [一键颠杯 v1 设计与实施证据](52-cup-bump-and-release-design.md)
+- [host5后开发闭环总设计与完整提示词](51-development-closure-masterplan.md)
 - [最新验收、未完成根因与最终交付方案](49-final-delivery-platform-device-plan.md)
-- [开发执行提示词](49-final-delivery-platform-device-plan.md#9-下一agent完整执行提示词)
 - [前轮本地整改设计](48-adfix-review-and-device-closeout-design.md)
 - [前轮真实广告与小包设计约束](47-ad-acceptance-and-final-package-design.md)
 - [复活产品/存档/性能分册](43-spill-revive-performance-design.md)

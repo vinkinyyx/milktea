@@ -1,0 +1,36 @@
+{"action":"archive","path":"evidence/CupAuto/20261107-bump01-web-debug-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded web debug evidence"}
+{"action":"archive","path":"evidence/CupAuto/20261107-bump02-web-debug-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"v1 control evidence, recorded in docs53"}
+{"action":"archive","path":"evidence/CupAuto/20261107-guard01-web-debug-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded iteration"}
+{"action":"archive","path":"evidence/CupAuto/20261107-guard02-web-debug-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded iteration"}
+{"action":"archive","path":"evidence/CupAuto/20261107-guard03-web-debug-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded iteration"}
+{"action":"archive","path":"evidence/TapTap/20261107-bump01-tap-candidate-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded candidate evidence"}
+{"action":"archive","path":"evidence/TapTap/20261107-guard01-tap-candidate-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"failed build evidence"}
+{"action":"archive","path":"evidence/TapTap/20261107-host3-bootguard-candidate-02","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded host evidence"}
+{"action":"archive","path":"evidence/TapTap/20261107-host4-textencoder-candidate-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded host evidence"}
+{"action":"archive","path":"evidence/TapTap/20261107-host5-utf8-candidate-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded host evidence"}
+{"action":"archive","path":"evidence/TapTap/20261107-host6-gate-candidate-01","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded host evidence"}
+{"action":"archive","path":"evidence/Acceptance","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"gate logs from closed rounds"}
+{"action":"archive","path":"evidence/asset-intake-2026-10-27","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"closed intake evidence"}
+{"action":"archive","path":"evidence/asset-supplement-2026-10-27","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"closed intake evidence"}
+{"action":"archive","path":"evidence/progress-2026-10-27-art-binding","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"closed progress evidence"}
+{"action":"archive","path":"evidence/tooling","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"closed tooling evidence"}
+{"action":"archive","path":"docs/44-tap-host-start-review.md","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded review round"}
+{"action":"archive","path":"docs/45-r1-r4-acceptance-next-design.md","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded design round"}
+{"action":"archive","path":"docs/46-v3-review-and-host-closeout-design.md","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded design round"}
+{"action":"archive","path":"docs/47-ad-acceptance-and-final-package-design.md","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded design round"}
+{"action":"archive","path":"docs/48-adfix-review-and-device-closeout-design.md","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded design round"}
+{"action":"archive","path":"docs/49-final-delivery-platform-device-plan.md","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"superseded plan round"}
+{"action":"archive","path":"docs/50-host-boot-injection-fix","to":"D:\\Workspace\\TapTap\\_cleanup-backups\\奶茶挤挤-20261107-guard-closeout-cleanup","reason":"closed fix spec"}
+{"action":"delete","path":"build-artifacts/cocos-p1b-build-source","bytes":1300622623,"reason":"regenerable staging copies"}
+{"action":"delete","path":"build-artifacts/cocos-p1b-build","bytes":141348823,"reason":"regenerable web debug builds"}
+{"action":"delete","path":"build-artifacts/cocos-taptap-minigame-build/20261107-bump01-tap-candidate-01","bytes":13107200,"reason":"superseded package"}
+{"action":"delete","path":"build-artifacts/cocos-taptap-minigame-build/20261107-guard01-tap-candidate-01","bytes":0,"reason":"failed build shell"}
+{"action":"delete","path":"build-artifacts/cocos-taptap-minigame-build/20261107-host3-bootguard-candidate-02","bytes":13107200,"reason":"superseded package"}
+{"action":"delete","path":"build-artifacts/cocos-taptap-minigame-build/20261107-host4-textencoder-candidate-01","bytes":13107200,"reason":"superseded package"}
+{"action":"delete","path":"build-artifacts/cocos-taptap-minigame-build/20261107-host5-utf8-candidate-01","bytes":13107200,"reason":"superseded package"}
+{"action":"delete","path":"build-artifacts/cocos-taptap-minigame-build/20261107-host6-gate-candidate-01","bytes":13107200,"reason":"superseded package"}
+{"action":"delete","path":"build-artifacts/runtime-deps","bytes":12163482,"reason":"regenerable npm deps"}
+{"action":"delete","path":"build-artifacts/rewarded-tests","bytes":209715,"reason":"regenerable test output"}
+{"action":"delete","path":".screenshots","bytes":0,"reason":"automation cache"}
+{"action":"delete","path":".trae-html-share-packages","bytes":209715,"reason":"share cache"}
+{"action":"delete","path":"evidence/**/creator-user-data","bytes":44040192,"reason":"Cocos editor cache inside evidence"}

@@ -102,6 +102,12 @@ export class GameRoot extends Component {
   private overlayRoot:Node|null=null; private overlayButtons:UiButton[]=[]; private overlayVisible=false;
   private startupTraceId=0; private firstTickTraceId=-1;
   private recoveryUsedRunId:string|null=null;
+  /** Explicit failure origin, so a retry never guesses its target from message text. */
+  private failureContext:'START'|'RESTORE'|'RENDER'|'ART'|'INITIAL_SAVE'|null=null;
+  /** runId created by the most recent start attempt; used to tell "committed" from "never committed". */
+  private attemptedRunId:string|null=null;
+  /** An initial commit that has not been confirmed; retrying must reuse this exact intent. */
+  private pendingStart:{bundle:LocalSaveBundle;expectedRevision:number;expectedRunId:string|null;runId:string;seed:number}|null=null;
   private showPhysicsDiagnostics=false;
   private previewGraphic:Sprite|null=null;
   private diagnosticAttemptId:string|null=null; private priorFrameWall=0; private lastPresentationMs=0; private probeSetting:'off'|'summary'|'full'='off';
@@ -130,6 +136,7 @@ export class GameRoot extends Component {
   private buttonSkins=new Map<string,{node:Node;family:string}>();
   private settingsArtBudget:ArtLoadBudget|null=null;
   private renderFailureShown=false;
+  private debugRenderFaults=0;
   private static nextSceneId=1;
   private static nextWorldId=1;
   private async initialize():Promise<void>{
@@ -314,10 +321,10 @@ export class GameRoot extends Component {
     const view=this.rewardView();
     this.themePanel('ui_panel_modal',375,667,660,800,true);
     if(!view){this.text('reward-title','激励视频',375,930,36);this.text('reward-message','广告组件尚未就绪',375,820,22);this.button('reward-back','返回游戏',185,540,380,96,()=>this.rewarded?.closeOffer());return;}
-    const title=view.phase==='GRANTED'?'奖励已到账':view.phase==='ERROR'?'广告奖励':'额外晃杯';
+    const title=view.phase==='GRANTED'?'奖励已到账':view.phase==='ERROR'?'广告奖励':'额外颠杯';
     this.text('reward-title',title,375,950,38);
     this.text('reward-stats',`本局奖励 ${view.grantedThisRun}/${view.runLimit}  ·  今日剩余 ${view.dailyRemaining}`,375,870,22);
-    const message=view.phase==='OFFER'?'观看一段激励视频，本局额外获得 1 次晃杯。\n广告完整看完并保存成功后才计入本局。':view.phase==='PREPARING'?'正在准备激励视频…':view.phase==='SHOWING'?'广告播放中…':view.phase==='SETTLING'?'正在保存奖励…':view.phase==='GRANTED'?'奖励已保存。返回后点击“继续”恢复本局。':view.message??'广告暂时不可用。';
+    const message=view.phase==='OFFER'?'观看一段激励视频，本局额外获得 1 次颠杯。\n广告完整看完并保存成功后才计入本局。':view.phase==='PREPARING'?'正在准备激励视频…':view.phase==='SHOWING'?'广告播放中…':view.phase==='SETTLING'?'正在保存奖励…':view.phase==='GRANTED'?'奖励已保存。返回后点击“继续”恢复本局。':view.message??'广告暂时不可用。';
     this.text('reward-message',message,375,770,23);
     if(view.phase==='OFFER'){this.button('reward-watch','观看广告 +1 次',185,610,380,96,()=>void this.rewarded?.watch());this.button('reward-cancel','取消',185,480,380,96,()=>this.rewarded?.closeOffer());}
     else if(view.phase==='GRANTED'){this.button('reward-continue','继续游戏',185,520,380,96,()=>this.rewarded?.acknowledgeGrant());}
@@ -381,7 +388,7 @@ export class GameRoot extends Component {
       await this.loadGameArt();if(!this.isOwner()||owner!==this.ownerEpoch)return;
       this.art.settleLoadScope(artBudget);
       AppRuntime.startup.stage('GAME_ART','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);
-      const rules=AppRuntime.rules!;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[rules.design_rules_version]?.classic?.standard??0;const runId=this.makeUuid();const seed=seedOverride??this.seed();if(attemptId)this.diagnosticAttemptId=attemptId;
+      const rules=AppRuntime.rules!;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[rules.design_rules_version]?.classic?.standard??0;const runId=this.makeUuid();this.attemptedRunId=runId;this.failureContext=null;this.pendingStart=null;const seed=seedOverride??this.seed();if(attemptId)this.diagnosticAttemptId=attemptId;
       AppRuntime.startup.stage('WORLD_CREATE','start',{code:'classic'},owner,trace);
       const adapter=this.createWorld();
       const engine=new RunEngine(adapter,rules,runId,seed,undefined,this.reviveOptions());engine.setTimingDiagnostics(this.probeMode()!=='off');this.adapter=adapter;this.engine=engine;this.baseTick=0;this.lastEvents=[];this.events.clear();this.commands.clear();this.consumedDomainEventIds.clear();this.lastConsumedDomainEvent=null;this.resultSaved=false;this.resultError='';this.screen='PLAYING';
@@ -392,15 +399,20 @@ export class GameRoot extends Component {
       const repository=this.activeSaveRepository();
       AppRuntime.startup.stage('INITIAL_SAVE','start',{code:`revision:${this.bundleRevision}`},owner,trace);
       if(!memoryOnly&&repository&&this.persistent){const committed=await repository.commitBundle(this.bundleRevision,this.bundle.run?.runId??null,next);
-        if(!committed.ok){AppRuntime.startup.stage('INITIAL_SAVE','error',{code:committed.error.code,error:committed.error},owner,trace);engine.dispose();this.engine=null;this.adapter=null;this.world?.destroy();this.world=null;this.clock=null;this.hideOverlay();this.screen='ERROR';this.notice=`新局存档失败：${committed.error.message}。可重试或明确选择仅内存新局。`;this.resultError=this.notice;this.render();return;}
-        this.bundleRevision=committed.data.revision;this.bundle=next;this.notice=committed.data.warning??'';AppRuntime.startup.stage('INITIAL_SAVE','ok',{code:`revision:${this.bundleRevision}`},owner,trace);
+        if(!committed.ok){AppRuntime.startup.stage('INITIAL_SAVE','error',{code:committed.error.code,error:committed.error},owner,trace);engine.dispose();this.engine=null;this.adapter=null;this.world?.destroy();this.world=null;this.clock=null;this.hideOverlay();
+          // The run never became active: drop tutorial/pointer holds so the error layer owns input, and keep the
+          // exact start intent so a retry re-commits the same run instead of silently starting a second one.
+          this.cancelPointer();this.tutorialStep=0;this.tutorialReturnScreen='PLAYING';this.pauseOwners.clear();this.pendingStart={bundle:next,expectedRevision:this.bundleRevision,expectedRunId:this.bundle.run?.runId??null,runId,seed};
+          this.notice=`新局存档失败：${committed.error.message}。已保留原有存档，可重试保存或返回菜单。`;this.resultError=this.notice;
+          this.showStartupFailure('INITIAL_SAVE_FAILED',committed.error.message,trace,'INITIAL_SAVE');return;}
+        this.bundleRevision=committed.data.revision;this.bundle=next;this.pendingStart=null;this.failureContext=null;this.notice=committed.data.warning??'';AppRuntime.startup.stage('INITIAL_SAVE','ok',{code:`revision:${this.bundleRevision}`},owner,trace);
       }else{this.bundle=next;if(!this.debugMode)this.persistent=false;this.notice=this.debugMode?'':'仅内存模式：此局不会跨关闭页面保存。';AppRuntime.startup.stage('INITIAL_SAVE','ok',{code:memoryOnly?'memory-only':'no-repository'},owner,trace);}
       if(!this.isOwner()||owner!==this.ownerEpoch)return;
       this.clock=new FixedClock(rules.physics.fixed_hz,rules.physics.max_catchup_steps,()=>this.advanceRunTick());
       if(this.pauseOwners.size){if(!this.pauseOwners.has('MODAL')){this.engine.pause(this.pauseOwners.has('HOST_HIDDEN')?'HOST_HIDDEN':'RESUME_REQUIRED');this.screen='PAUSED';}this.clock.pause();}
-      this.previewX=rules.cup.center_x_du;this.lastSaveTick=0;this.resultFinalized=false;this.resultSaved=false;this.resultError='';this.saveDirty=true;this.bindRewardedShake();this.bindSpillRevive();this.render();this.hideOverlay();
+      this.previewX=rules.cup.center_x_du;this.lastSaveTick=0;this.resultFinalized=false;this.resultSaved=false;this.resultError='';this.saveDirty=true;this.bindRewardedShake();this.bindSpillRevive();this.render();if(!this.renderFailureShown)this.hideOverlay();
       AppRuntime.startup.stage('HUD_READY','ok',{assetId:`cup:${this.art.loadedCount}`,bundleName:`screen:${this.screen}`},owner,trace);
-    }catch(error){this.art.cancelScope(this.startupErrorCode(error),artBudget);if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage(code==='START_ART_TIMEOUT'?'GAME_ART':'WORLD_CREATE','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}
+    }catch(error){this.art.cancelScope(this.startupErrorCode(error),artBudget);if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage(code==='START_ART_TIMEOUT'?'GAME_ART':'WORLD_CREATE','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace,code.startsWith('START_ART')||!this.artReady?'ART':'START');}}
     finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}
   }
   private createWorld():CocosPhysicsAdapter{
@@ -428,11 +440,15 @@ export class GameRoot extends Component {
     if(this.overlayRoot?.isValid)this.overlayRoot.setSiblingIndex(this.node.children.length-1);
   }
   private syncCupArt():void{
-    const engine=this.engine;const offset=engine?.presentationCupOffsetXDu??0;
+    const engine=this.engine;const baseX=engine?.presentationCupOffsetXDu??0;
     const tick=engine?.presentationTick??0;const start=engine?.presentationShakeStartTick??null;const rules=AppRuntime.rules;
-    let visual=0;
-    if(start!==null&&rules){const elapsed=Math.max(0,(tick-start)/rules.physics.fixed_hz);const duration=rules.shake.duration_seconds;if(elapsed<duration){const amp=this.reducedMotion?Math.min(2,rules.shake.visual_offset_max_du):rules.shake.visual_offset_max_du;visual=amp*Math.sin(Math.PI*elapsed/duration)**2*Math.sin(2*Math.PI*rules.shake.frequency_hz*elapsed);}}
-    const x=offset+visual;if(this.rear?.isValid)this.rear.setPosition(x,0,0);if(this.front?.isValid)this.front.setPosition(x,0,0);
+    let bumpY=0;
+    if(start!==null&&rules){const elapsed=Math.max(0,(tick-start)/rules.physics.fixed_hz),duration=rules.shake.duration_seconds;if(elapsed<duration){
+      if(elapsed<0.10)bumpY=-rules.shake.visual_compress_du*(elapsed/0.10);
+      else if(elapsed<0.25)bumpY=rules.shake.visual_rebound_du*Math.sin(Math.PI*(elapsed-0.10)/0.15);
+      if(this.reducedMotion)bumpY*=0.35;
+    }}
+    if(this.rear?.isValid)this.rear.setPosition(baseX,bumpY,0);if(this.front?.isValid)this.front.setPosition(baseX,bumpY,0);
     const elapsed=start===null||!rules?-1:(tick-start)/rules.physics.fixed_hz;let alpha=0;
     if(rules&&elapsed>=0&&elapsed<rules.shake.duration_seconds){alpha=Math.min(1,elapsed/0.1,(rules.shake.duration_seconds-elapsed)/0.15);if(this.reducedMotion)alpha=Math.min(0.55,alpha);}
     for(const arc of this.shakeArcNodes)if(arc.node.isValid)arc.opacity.opacity=Math.max(0,Math.round(alpha*255));
@@ -455,7 +471,7 @@ export class GameRoot extends Component {
       if(event.kind==='IngredientDropped')this.audio?.play('drop');
       if(event.kind==='MergeCommitted'){this.showMergeFeedback(event.positionDu,event.scoreDelta);void this.effects?.play('merge',event.positionDu.x,event.positionDu.y,event.eventId,this.reducedMotion);void this.effects?.play('combo',event.positionDu.x,event.positionDu.y+72,event.eventId,this.reducedMotion);}
       if(event.kind==='MergeCommitted')this.audio?.play(event.childLevel<=4?'merge_small':'merge_large');
-      if(event.kind==='ShakeConsumed'){this.showTextFeedback('轻晃',375,1015,new Color(247,192,115));void this.effects?.play('tap',375,1015,event.eventId,this.reducedMotion);this.audio?.play('shake_start');}
+      if(event.kind==='ShakeConsumed'){this.showTextFeedback('颠杯',375,1015,new Color(247,192,115));void this.effects?.play('tap',375,1015,event.eventId,this.reducedMotion);this.audio?.play('shake_start');}
       if(event.kind==='DangerChanged'&&event.dangerTicks>0&&event.tick-this.lastDangerCueTick>=60){this.lastDangerCueTick=event.tick;void this.effects?.play('danger',375,740,event.eventId,true);this.audio?.play('danger_tick');}
       if(event.kind==='SpillReviveOffered'){this.audio?.play('result');void this.effects?.play('result',375,805,event.eventId,this.reducedMotion);this.enterSpillOffer();}
       if(event.kind==='RunEnded'){this.audio?.play('result');void this.effects?.play('result',375,805,event.eventId,this.reducedMotion);this.screen='RESULTS';this.clock?.pause();this.resultSaved=false;this.resultFinalized=false;}}
@@ -567,15 +583,87 @@ export class GameRoot extends Component {
       this.overlayButtons.push({id:action.id,label:action.label,rect:{x:375-w/2,y:667+y-h/2,w,h},action:action.action});
     });
   }
-  private showStartupFailure(code:string,message:string,trace:number):void{
+  private showStartupFailure(code:string,message:string,trace:number,context:'START'|'RESTORE'|'RENDER'|'ART'|'INITIAL_SAVE'='START'):void{
     // render() is throw-safe (see above), so the overlay below is created even when the normal paint fails.
-    this.screen='ERROR';this.notice=`${code}：${message}`;this.loading=false;this.artLoading=false;this.render();
-    const retry=()=>{if(code.startsWith('START_ART')||!this.artReady)void this.retryArtAndStart();else void this.startNew();};
-    this.showStartupOverlay('暂时无法开始',`${code}\n${message.slice(0,180)}`, [
-      {id:'startup-retry',label:'重试准备',action:retry},
+    if(!this.failureContext)this.failureContext=context;
+    this.screen='ERROR';this.notice=`${code}：${message}`;this.loading=false;this.artLoading=false;this.clock?.pause();this.render();
+    const active=this.failureContext;
+    const retry=active==='INITIAL_SAVE'?()=>void this.retryInitialSave()
+      :active==='RESTORE'?()=>void this.restoreRun()
+      :active==='RENDER'?()=>this.retryRenderSameRun()
+      :code.startsWith('START_ART')||!this.artReady?()=>void this.retryArtAndStart()
+      :()=>this.retryStartIntent();
+    const label=active==='INITIAL_SAVE'?'重试保存':active==='RESTORE'?'重新载入本局':active==='RENDER'?'重试显示':'重试准备';
+    const title=active==='INITIAL_SAVE'?'这局还没保存':active==='RESTORE'?'暂时无法载入本局':'暂时无法开始';
+    this.showStartupOverlay(title,`${code}\n${message.slice(0,180)}`, [
+      {id:'startup-retry',label,action:retry},
       {id:'startup-menu',label:'返回菜单',action:()=>this.returnToMenuFromError()},
       {id:'startup-diagnostic',label:'查看诊断',action:()=>this.showStartupDiagnostics(trace)},
     ]);
+  }
+  /**
+   * A generic startup retry must honour the original intent: an already committed run is re-adopted from storage
+   * (same runId/revision) instead of being replaced by a second new run.
+   */
+  private retryStartIntent():void{
+    if(this.attemptedRunId&&this.bundle.run?.runId===this.attemptedRunId)void this.restoreRun();
+    else void this.startNew();
+  }
+  private retryRenderSameRun():void{
+    this.renderFailureShown=false;this.clearOverlay();this.failureContext=null;
+    if(this.engine&&this.world?.isValid){this.clock?.pause();this.pauseOwners.add('MODAL');this.engine.pause('MODAL');this.screen='PAUSED';this.notice='已恢复同一局画面；点击“继续”后再操作。';}
+    this.render();
+  }
+  /**
+   * Retry the exact initial commit that failed. Read back first so an ambiguous write is either accepted as the
+   * same committed run or re-attempted with the original CAS expectation; never start a second run.
+   */
+  private async retryInitialSave():Promise<void>{
+    const pending=this.pendingStart;if(!pending||this.loading)return;
+    this.loading=true;const owner=++this.ownerEpoch,trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner);
+    this.notice='正在核对存档并重试保存…';this.render();
+    try{
+      const repository=this.activeSaveRepository();if(!repository)throw new Error('没有可用的持久化存档');
+      let stored=await repository.readBundle();if(!this.isOwner()||owner!==this.ownerEpoch)return;
+      if(!stored.ok)throw new Error(stored.error.message);
+      let envelope=stored.data.envelope,committedRevision:number|null=null;
+      if(envelope?.payload.run?.runId===pending.runId)committedRevision=envelope.revision;
+      else if((envelope?.revision??0)!==pending.expectedRevision||(envelope?.payload.run?.runId??null)!==pending.expectedRunId){
+        this.notice='存档已被其他操作更新，本次开局没有写入；请返回菜单后重新开始。';this.render();return;
+      }else{
+        const result=await repository.commitBundle(pending.expectedRevision,pending.expectedRunId,pending.bundle);
+        if(!this.isOwner()||owner!==this.ownerEpoch)return;
+        if(result.ok)committedRevision=result.data.revision;
+        else if(result.error.code==='SAVE_COMMIT_UNCERTAIN'){
+          stored=await repository.readBundle();if(!this.isOwner()||owner!==this.ownerEpoch)return;
+          const latest=stored.ok?stored.data.envelope:null;
+          if(latest?.payload.run?.runId===pending.runId)committedRevision=latest.revision;
+        }
+        if(committedRevision===null){this.notice=`重试保存仍未成功：${result.ok?'提交状态不确定':result.error.message}。原有存档未改变。`;this.render();return;}
+      }
+      const savedRun=pending.bundle.run;if(!savedRun||savedRun.runId!==pending.runId)throw new Error('待保存的新局快照缺失');
+      this.bundle=pending.bundle;this.bundleRevision=committedRevision;this.pendingStart=null;
+      this.adoptCommittedRun(savedRun);
+    }catch(error){if(this.isOwner()&&owner===this.ownerEpoch){this.notice=`重试保存失败：${String(error).slice(0,160)}`;this.render();}}
+    finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}
+  }
+  /** Rebuild the just-committed new run from its sealed snapshot, preserving the same runId and revision. */
+  private adoptCommittedRun(rawRun:RunSnapshot):void{
+    const rules=AppRuntime.rules!;const run=SaveCodec.sealSnapshot(rawRun);
+    this.clearOverlay();this.failureContext=null;this.attemptedRunId=null;this.renderFailureShown=false;
+    this.engine?.dispose();this.engine=null;this.adapter=null;this.clock=null;this.world?.destroy();this.world=null;this.ingredientViews.clear();this.shakeArcNodes=[];
+    const adapter=this.createWorld();let engine:RunEngine;
+    try{engine=new RunEngine(adapter,rules,run.runId,run.rng.state,run,this.reviveOptions());}catch(error){adapter.dispose();throw error;}
+    engine.setTimingDiagnostics(this.probeMode()!=='off');this.adapter=adapter;this.engine=engine;this.baseTick=run.tick;
+    this.lastEvents=[];this.events.clear();this.commands.clear();this.consumedDomainEventIds.clear();this.lastConsumedDomainEvent=null;
+    this.resultSaved=false;this.resultError='';this.resultFinalized=false;this.saveDirty=true;this.lastSaveTick=run.tick;
+    this.tutorialStep=this.bundle.profile.tutorialRulesVersion===rules.design_rules_version?0:1;this.tutorialReturnScreen='PLAYING';this.screen='PLAYING';
+    this.pauseOwners.clear();const host=HostLifecycleCoordinator.snapshot();if(host.resumeRequired)this.pauseOwners.add('RESUME_REQUIRED');if(host.backgrounded)this.pauseOwners.add('HOST_HIDDEN');
+    if(this.tutorialStep){engine.pause('MODAL');this.pauseOwners.add('MODAL');}
+    this.clock=new FixedClock(rules.physics.fixed_hz,rules.physics.max_catchup_steps,()=>this.advanceRunTick());
+    if(this.pauseOwners.size){if(!this.pauseOwners.has('MODAL')){this.engine.pause(this.pauseOwners.has('HOST_HIDDEN')?'HOST_HIDDEN':'RESUME_REQUIRED');this.screen='PAUSED';}this.clock.pause();}
+    else{engine.resume();this.screen='PLAYING';}
+    this.previewX=rules.cup.center_x_du;this.bindRewardedShake();this.bindSpillRevive();this.notice='新局已保存，接着玩吧。';this.render();if(!this.renderFailureShown)this.hideOverlay();
   }
   /**
    * Leave the error layer for a genuinely usable menu: the overlay, its stale buttons and every pointer/engine
@@ -589,6 +677,7 @@ export class GameRoot extends Component {
     this.world?.destroy();this.world=null;
     this.ingredientViews.clear();this.shakeArcNodes=[];this.lastEvents=[];this.events.clear();this.commands.clear();this.consumedDomainEventIds.clear();
     this.tutorialStep=0;this.resultFinalized=false;this.resultSaved=false;this.resultError='';this.saveDirty=false;
+    this.failureContext=null;this.pendingStart=null;
     this.renderFailureShown=false;this.screen='MENU';this.notice='';this.render();
   }
   private showStartupDiagnostics(trace:number):void{
@@ -602,13 +691,13 @@ export class GameRoot extends Component {
    * is caught, recorded as a real startup phase failure, and replaced by the standalone overlay error layer.
    */
   private render():void{
-    try{this.renderUnsafe();this.renderFailureShown=false;}
+    try{if(DEBUG&&this.debugRenderFaults>0){this.debugRenderFaults--;throw new Error('INJECTED_RENDER_FAULT');}this.renderUnsafe();this.renderFailureShown=false;}
     catch(error){
       if(this.renderFailureShown)return;
       this.renderFailureShown=true;
       try{AppRuntime.startup.stage('RENDER','error',{code:'RENDER_FAILED',error},this.ownerEpoch,this.startupTraceId);}catch{}
       try{if(this.uiRoot?.isValid)for(const child of [...this.uiRoot.children])child.destroy();this.buttons=[];this.buttonSkins.clear();}catch{}
-      this.showStartupFailure('RENDER_FAILED',`界面渲染失败：${String(error)}`,this.startupTraceId);
+      this.showStartupFailure('RENDER_FAILED',`界面渲染失败：${String(error)}`,this.startupTraceId,'RENDER');
     }
   }
   private renderUnsafe():void{
@@ -617,7 +706,7 @@ export class GameRoot extends Component {
     if(this.artLoading){this.themeBackground(true);if(this.art.getLoadedVariant('ui_title_logo'))this.themeSprite('ui_title_logo',375,900,640,224);else this.text('loading-brand','奶茶挤挤',375,900,72,new Color(103,58,32));this.text('loading','正在准备杯子与小料…',375,480,28);this.button('loading-start','开始新局',135,330,480,104,()=>{this.pendingStartRequested=true;this.notice='已收到开始请求，准备完成后立即进入游戏。';this.render();});if(this.notice){this.themePanel('ui_panel_toast',375,200,670,96);this.text('loading-notice',this.notice,375,200,22);}this.drawButtons();return;}
     if(this.screen==='MENU'||this.screen==='SETTINGS'||this.screen==='ERROR'||!this.world?.isValid)this.themeBackground(this.screen==='MENU');
     if(this.screen==='MENU')this.renderMenu();else if(this.screen==='PLAYING')this.renderGame();else if(this.screen==='PAUSED')this.renderPause();else if(this.screen==='SETTINGS')this.renderSettings();else if(this.screen==='CONFIRM_RESTART'||this.screen==='CONFIRM_MENU')this.renderConfirm();else if(this.screen==='RESULTS')this.renderResults();else if(this.screen==='REWARD')this.renderReward();else if(this.screen==='REVIVE')this.renderRevive();else this.renderError();
-    if(this.tutorialStep>0)this.renderTutorial();this.drawButtons();if(this.screen==='MENU')this.effects?.ensureCat(620,820);else this.effects?.hideCat();
+    if(this.tutorialStep>0&&this.screen!=='ERROR')this.renderTutorial();this.drawButtons();if(this.screen==='MENU')this.effects?.ensureCat(620,820);else this.effects?.hideCat();
   }
   private themeSprite(id:string,x:number,y:number,w:number,h:number,parent:Node=this.uiRoot!):Node|null{
     if(!this.art.getLoadedVariant(id))return null;
@@ -665,11 +754,37 @@ export class GameRoot extends Component {
     this.text('danger',snap.dangerTicks?`快满了 · ${Math.max(1,3-Math.floor(snap.dangerTicks/60))}`:'同级相遇，合成更大颗',375,1100,25,snap.dangerTicks?new Color(185,54,43):new Color(103,63,38));
     const due=Math.max(0,snap.autoDrop.nextDueTick-snap.tick);this.themePanel('ui_panel_modal',375,250,620,142);this.text('preview',`自动落料 · ${Math.ceil(due/AppRuntime.rules!.physics.fixed_hz)}秒后下一颗 · 按住杯子左右移动`,375,250,22);const planned=snap.autoDrop.pendingSpawn,mark=new Node('AutoDropSpawnPreview');this.uiRoot!.addChild(mark);mark.setPosition(planned.xDu-375,Math.min(AppRuntime.rules!.cup.spawn_y_du,AppRuntime.rules!.viewport.height_du-130)-667,0);mark.addComponent(UITransform).setContentSize(12,12);const dot=mark.addComponent(Graphics);dot.fillColor=new Color(255,199,93,230);dot.circle(0,0,6);dot.fill();
     this.drawGameIndicators(snap);
-    const shakeLeft=Math.max(0,2-snap.shake.baseUsed),extraLeft=Math.max(0,snap.shake.extraGranted-snap.shake.extraUsed),activeLeft=snap.shake.activeStartTick===null?0:Math.max(0,snap.shake.activeStartTick+48-snap.tick),cooldownLeft=Math.max(0,snap.shake.cooldownUntilTick-snap.tick);
-    const rewardedView=this.rewarded?.getView();
-    const shakeLabel=activeLeft>0?'晃杯中…':cooldownLeft>0?'晃杯冷却':shakeLeft>0?`晃杯 ${shakeLeft}`:extraLeft>0?`广告晃杯 ${extraLeft}`:rewardedView?.pendingAttempt?'奖励待确认':'看广告 +1 次';
-    this.button('shake',shakeLabel,42,48,200,96,()=>{if(shakeLeft>0||extraLeft>0)this.enqueue('SHAKE');else this.openRewardedOffer();});this.button('pause','暂停',508,48,200,96,()=>this.togglePause());
-    if(this.notice&&/失败|错误|异常|冲突|无法/.test(this.notice)){this.themePanel('ui_panel_toast',375,340,650,52);this.text('notice',this.notice,375,340,20);}
+    const shake=this.shakeControl(snap);
+    this.button('shake',shake.label,42,48,200,96,()=>this.onShakeControl());this.button('pause','暂停',508,48,200,96,()=>this.togglePause());
+    if(this.notice&&/失败|错误|异常|冲突|无法|杯里|用完|上限|尚未开启|未配置|不支持|稍短/.test(this.notice)){this.themePanel('ui_panel_toast',375,340,650,52);this.text('notice',this.notice,375,340,20);}
+  }
+  private shakeControl(snap:import('../contracts/types').RunSnapshot):{label:string;mode:'shake'|'reward'|'pending'|'blocked'|'wait'}{
+    const rules=AppRuntime.rules!,durationTicks=Math.round(rules.shake.duration_seconds*rules.physics.fixed_hz);
+    const activeLeft=snap.shake.activeStartTick===null?0:Math.max(0,snap.shake.activeStartTick+durationTicks-snap.tick),cooldownLeft=Math.max(0,snap.shake.cooldownUntilTick-snap.tick);
+    const baseLeft=Math.max(0,2-snap.shake.baseUsed),extraLeft=Math.max(0,snap.shake.extraGranted-snap.shake.extraUsed),view=this.rewarded?.getView();
+    if(activeLeft>0)return {label:'颠杯中…',mode:'wait'};
+    if(cooldownLeft>0)return {label:'稍等片刻',mode:'wait'};
+    if(baseLeft>0)return {label:`颠杯 ${baseLeft}`,mode:'shake'};
+    if(extraLeft>0)return {label:`奖励颠杯 ${extraLeft}`,mode:'shake'};
+    if(view?.pendingAttempt)return {label:'奖励待确认',mode:'pending'};
+    if(view?.block===null&&this.rewarded?.policy.enabled)return {label:'看视频 +1 次',mode:'reward'};
+    return {label:'本局次数已用完',mode:'blocked'};
+  }
+  private onShakeControl():void{
+    // The button is drawn once per screen; read the live snapshot so a stale
+    // render-time shake window cannot block or replay a later click.
+    const snap=this.engine?.snapshot();if(!snap)return;
+    const control=this.shakeControl(snap);
+    if(control.mode==='shake'){
+      if(!this.engine?.hasShakeTarget()){this.notice='杯里还没有小料';this.showTextFeedback('杯里还没有小料',375,1015,new Color(247,192,115));this.render();return;}
+      this.enqueue('SHAKE');return;
+    }
+    if(control.mode==='reward'||control.mode==='pending'){this.openRewardedOffer();return;}
+    if(control.mode==='blocked'){this.notice=this.shakeBlockText(this.rewarded?.getView().block??null);this.render();return;}
+    this.showTextFeedback(control.label,375,1015,new Color(247,192,115));
+  }
+  private shakeBlockText(block:string|null):string{
+    switch(block){case 'POLICY_DISABLED':return '广告奖励尚未开启';case 'AD_UNCONFIGURED':return '未配置真实广告位';case 'AD_UNSUPPORTED':return '当前环境不支持激励广告';case 'RUN_LIMIT':return '本局奖励颠杯已达上限';case 'DAILY_LIMIT':return '今日广告奖励已达上限';case 'TUTORIAL_REQUIRED':return '完成教程后可观看广告';case 'FIRST_RUN_REQUIRED':return '完成一局真实游戏后可观看广告';case 'FOREGROUND_REQUIRED':return '游戏时间稍短，暂不可观看广告';case 'PENDING_ATTEMPT':return '有未确认的广告奖励';default:return '本局颠杯次数已用完';}
   }
   private renderPause():void{
     this.themePanel('ui_panel_modal',375,685,620,850,true);this.text('paused','休息一下',375,1010,44);
@@ -769,7 +884,7 @@ export class GameRoot extends Component {
     this.buttons=[];
     const scrim=new Node('TutorialScrim');this.uiRoot!.addChild(scrim);const tr=scrim.addComponent(UITransform);tr.setContentSize(750,1334);const g=scrim.addComponent(Graphics);g.fillColor=new Color(35,28,22,185);g.rect(-375,-667,750,1334);g.fill();
     this.themePanel('ui_panel_modal',375,850,680,700);
-    const copy=[['第 1 步 · 自动落料','小料会定时落下，按住杯子左右移动来接料。'],['第 2 步 · 同级会合成','相同等级的小料相遇会合成，留意杯内危险线。'],['第 3 步 · 晃杯与暂停','每局可晃杯两次；暂停后明确继续，稍等一秒再落料。']][this.tutorialStep-1];
+    const copy=[['第 1 步 · 自动落料','小料会定时落下，按住杯子左右移动来接料。'],['第 2 步 · 同级会合成','相同等级的小料相遇会合成，留意杯内危险线。'],['第 3 步 · 颠杯与暂停','点一下颠杯，让小料弹起后重新碰撞。杯满时也可能洒出。']][this.tutorialStep-1];
     this.text('tutorial-title',copy[0],375,1080,33);this.text('tutorial-copy',copy[1],375,950,27);this.labels.get('tutorial-copy')?.node.getComponent(UITransform)?.setContentSize(560,125);this.themeSprite(this.tutorialStep===1?'ui_tutorial_hand_move':this.tutorialStep===2?'fx_merge_ring':'ui_icon_shake',375,805,130,130);
     this.button('tutorial-next',this.tutorialStep===3?'开始这杯':'下一步',80,650,270,96,()=>{if(this.tutorialStep<3){this.tutorialStep++;this.render();}else void this.finishTutorial(true);});
     this.button('tutorial-skip','跳过并开始',400,650,270,96,()=>void this.finishTutorial(true));
@@ -808,7 +923,7 @@ export class GameRoot extends Component {
     this.button('no','取消',420,790,270,96,()=>this.closeModal());}
   private renderResults():void{this.themePanel('ui_panel_results',375,720,650,1000,true);const r=this.bundle.lastResult;const s=this.engine?.snapshot();if((r?.score??s?.score??0)>this.runBestScoreAtStart)this.themeSprite('ui_badge_record',375,1140,170,85);this.text('result-title',r?.reason==='SPILLED'?'小料洒出来了':'这杯加满了',375,1050,44);
     this.text('result-score',`得分 ${r?.score??s?.score??0}  ·  最高等级 ${r?.maxLevel??s?.maxLevel??1}`,375,940,30);
-    this.text('result-drops',`投放 ${r?.dropIndex??s?.dropIndex??0} 次  ·  晃杯 ${r?.baseUsed??s?.shake.baseUsed??0}/2`,375,875,24);
+    this.text('result-drops',`投放 ${r?.dropIndex??s?.dropIndex??0} 次  ·  颠杯 ${r?.baseUsed??s?.shake.baseUsed??0}/2`,375,875,24);
     this.text('save-status',this.resultSaved?'已保存':this.resultError||'正在保存结算…',375,790,22,this.resultSaved?new Color(49,114,72):new Color(160,74,41));
     this.button('again','再来一杯',160,650,430,96,()=>void this.restartConfirmed());this.button('menu','回菜单',160,510,430,96,()=>{this.screen='MENU';this.engine?.dispose();this.engine=null;this.clock=null;this.world?.destroy();this.render();});
     if(!this.resultSaved&&this.activeSaveRepository())this.button('retry-save','重试保存',160,370,430,96,()=>void this.retryResultSave());}
@@ -843,7 +958,7 @@ export class GameRoot extends Component {
   }}
   private text(id:string,value:string,x:number,y:number,size:number,color=new Color(66,48,38)):void{const n=new Node(`P1BText-${id}`);this.uiRoot!.addChild(n);n.setPosition(x-375,y-667,0);n.addComponent(UITransform).setContentSize(700,60);const label=n.addComponent(Label);label.string=value;label.fontSize=size;label.lineHeight=size+8;label.color=color;label.isBold=true;label.overflow=Label.Overflow.SHRINK;label.enableWrapText=true;this.labels.set(id,label);}
   private button(id:string,label:string,x:number,y:number,w:number,h:number,action:()=>void):void{this.buttons.push({id,label,rect:{x,y,w,h},action});}
-  private refreshHud():void{if(this.screen!=='PLAYING')return;const snap=this.engine?.snapshot();if(!snap)return;BootDiagnostics.mark('playing',`score:${snap.score}`);const score=this.labels.get('score'),next=this.labels.get('next'),danger=this.labels.get('danger');const bucket=snap.boardType==='assisted'?'assisted':'standard';if(score)score.string=`分数 ${snap.score}  ·  纪录 ${this.bundle.profile.bestScoresByRules?.[snap.rulesVersion]?.classic?.[bucket]??0}`;if(next)next.string=`当前 ${this.levelName(snap.currentLevel)}  ·  最高 ${this.levelName(snap.maxLevel)}`;if(danger)danger.string=snap.dangerTicks?`快满了 · ${Math.max(1,3-Math.floor(snap.dangerTicks/60))}`:'同级相遇，合成更大颗';const durationTicks=Math.round(AppRuntime.rules!.shake.duration_seconds*AppRuntime.rules!.physics.fixed_hz),shakeLeft=Math.max(0,2-snap.shake.baseUsed),extraLeft=Math.max(0,snap.shake.extraGranted-snap.shake.extraUsed),activeLeft=snap.shake.activeStartTick===null?0:Math.max(0,snap.shake.activeStartTick+durationTicks-snap.tick),cooldownLeft=Math.max(0,snap.shake.cooldownUntilTick-snap.tick);const shakeLabel=activeLeft>0?'晃杯中':cooldownLeft>0?'稍等片刻':shakeLeft>0?`晃杯 ${shakeLeft}`:extraLeft>0?`奖励晃杯 ${extraLeft}`:this.rewarded?.policy.enabled&&this.rewardView()?.block===null?'看广告 +1 次':'本局次数已用完';const button=this.uiRoot?.getChildByName('P1BButton-shake')?.getChildByName('Label')?.getComponent(Label);if(button)button.string=shakeLabel;}
+  private refreshHud():void{if(this.screen!=='PLAYING')return;const snap=this.engine?.snapshot();if(!snap)return;BootDiagnostics.mark('playing',`score:${snap.score}`);const score=this.labels.get('score'),next=this.labels.get('next'),danger=this.labels.get('danger');const bucket=snap.boardType==='assisted'?'assisted':'standard';if(score)score.string=`分数 ${snap.score}  ·  纪录 ${this.bundle.profile.bestScoresByRules?.[snap.rulesVersion]?.classic?.[bucket]??0}`;if(next)next.string=`当前 ${this.levelName(snap.currentLevel)}  ·  最高 ${this.levelName(snap.maxLevel)}`;if(danger)danger.string=snap.dangerTicks?`快满了 · ${Math.max(1,3-Math.floor(snap.dangerTicks/60))}`:'同级相遇，合成更大颗';const button=this.uiRoot?.getChildByName('P1BButton-shake')?.getChildByName('Label')?.getComponent(Label);if(button)button.string=this.shakeControl(snap).label;}
   private enqueue(kind:'DROP'|'SHAKE',x?:number):void{if(!this.engine||this.screen!=='PLAYING')return;const snap=this.engine.snapshot();if(kind==='SHAKE'&&snap.shake.baseUsed>=2&&Math.max(0,snap.shake.extraGranted-snap.shake.extraUsed)===0){this.openRewardedOffer();return;}const commandId=this.makeUuid();const command:any={kind,runId:snap.runId,commandId,sequence:snap.nextCommandSequence,tick:snap.tick+1};if(kind==='DROP')command.xDu=x??this.previewX;else command.source=snap.shake.baseUsed<2?'base':'rewarded_ad';
     const result=this.engine.dispatch({command,ownerEpoch:snap.epoch});if(!result.ok){this.notice=result.error.message;this.render();return;}if(this.probeMode()==='full')this.commands.append(command);}
   private onTouchStart(event:any):void{this.ignoreMouseUntil=Date.now()+600;this.beginPointer(event,event.getID?.()??0);}
@@ -880,8 +995,8 @@ export class GameRoot extends Component {
   private async restoreRun():Promise<void>{if(this.loading||!this.bundle.run)return;this.runBestScoreAtStart=this.bundle.profile.bestScoresByRules?.[this.bundle.run.rulesVersion]?.classic?.standard??this.bundle.profile.bestScores[this.bundle.run.stageId]?.standard??0;if(this.bundle.run.rulesVersion!==AppRuntime.rules?.design_rules_version){this.notice='这是旧杯型的未完成局，已保留但不会载入新杯。确认开始新杯后才替换。';this.render();return;}this.loading=true;this.screen='PAUSED';this.render();const owner=++this.ownerEpoch,trace=this.startupTraceId=AppRuntime.startup.beginTrace(owner),artBudget=this.art.beginLoadScope(owner,trace,15000,'GAME_ART');
     try{const stored=await this.repo.readBundle();if(!this.isOwner()||owner!==this.ownerEpoch)return;if(!stored.ok)throw new Error(stored.error.message);if(!stored.data.envelope)throw new Error('没有可续局档案');this.bundle=stored.data.envelope.payload;this.bundleRevision=stored.data.envelope.revision;
       AppRuntime.startup.stage('GAME_ART','start',{assetId:`count:${this.art.catalog.ids.length}`},owner,trace);await this.loadGameArt();if(!this.isOwner()||owner!==this.ownerEpoch)return;this.art.settleLoadScope(artBudget);AppRuntime.startup.stage('GAME_ART','ok',{assetId:`loaded:${this.art.loadedCount}`},owner,trace);const rules=AppRuntime.rules!;const run=this.bundle.run!;this.adapter=this.createWorld();this.engine=new RunEngine(this.adapter,rules,run.runId,run.rng.state,run,this.reviveOptions());this.engine.setTimingDiagnostics(this.probeMode()!=='off');this.baseTick=run.tick;this.clock=new FixedClock(rules.physics.fixed_hz,rules.physics.max_catchup_steps,()=>this.advanceRunTick());this.clock.pause();this.pauseOwners=new Set(['RESTORING']);
-      this.pauseOwners.delete('RESTORING');if(HostLifecycleCoordinator.snapshot().resumeRequired)this.pauseOwners.add('RESUME_REQUIRED');this.screen=this.engine.spillPending?'REVIVE':'PAUSED';this.notice=this.engine.spillPending?'已恢复洒出局面：可观看广告复活一次，或结束本局。':'已从最近完整保存恢复；点击“继续”后才推进。';this.bindRewardedShake();this.bindSpillRevive();this.render();this.hideOverlay();AppRuntime.startup.stage('HUD_READY','ok',{assetId:`screen:${this.screen}`},owner,trace);
-    }catch(error){this.art.cancelScope(this.startupErrorCode(error),artBudget);if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace);}}finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}}
+      this.pauseOwners.delete('RESTORING');if(HostLifecycleCoordinator.snapshot().resumeRequired)this.pauseOwners.add('RESUME_REQUIRED');this.failureContext=null;this.attemptedRunId=null;this.pendingStart=null;this.screen=this.engine.spillPending?'REVIVE':'PAUSED';this.notice=this.engine.spillPending?'已恢复洒出局面：可观看广告复活一次，或结束本局。':'已从最近完整保存恢复；点击“继续”后才推进。';this.bindRewardedShake();this.bindSpillRevive();this.render();if(!this.renderFailureShown)this.hideOverlay();AppRuntime.startup.stage('HUD_READY','ok',{assetId:`screen:${this.screen}`},owner,trace);
+    }catch(error){this.art.cancelScope(this.startupErrorCode(error),artBudget);if(this.isOwner()&&owner===this.ownerEpoch){const code=this.startupErrorCode(error);AppRuntime.startup.stage('GAME_ART','error',{code,error},owner,trace);this.showStartupFailure(code,String(error),trace,'RESTORE');}}finally{if(this.isOwner()&&owner===this.ownerEpoch)this.loading=false;}}
   private async persistSettings():Promise<void>{const repository=this.activeSaveRepository();if(!repository){this.notice='设置仅保存在当前页面内存中。';return;}if(this.saveInFlight){this.settingsDirty=true;return;}const task=this.beginSaveTask();if(task===null){this.settingsDirty=true;return;}const owner=this.ownerEpoch,expectedRevision=this.bundleRevision,expectedRunId=this.bundle.run?.runId??null;
     const profile={...this.bundle.profile,settings:{...this.bundle.profile.settings,dropMode:this.mode,reducedMotion:this.reducedMotion},revision:this.bundle.profile.revision+1};const next={...this.bundle,profile};
     try{const r=await repository.commitBundle(expectedRevision,expectedRunId,next);if(!this.ownsSaveTask(task,owner))return;if(r.ok){this.bundle=next;this.bundleRevision=r.data.revision;}else{this.notice=`设置未保存：${r.error.message}`;}}
@@ -890,6 +1005,7 @@ export class GameRoot extends Component {
   private makeFixtureSnapshot(base:RunSnapshot,fixtureId:string,options:Record<string,unknown>):{snapshot:RunSnapshot;spec:Record<string,unknown>}{
     const rules=AppRuntime.rules!,allowedOptions=new Set(['level','xDu','contactOrder']);
     if(fixtureId==='shake-sample')allowedOptions.add('sampleIndex');
+    if(fixtureId==='guard-half')allowedOptions.add('layout');
     if(['danger-supported-continuous','danger-supported-continuous-shortcup','danger-reset','grace','danger-line','danger-alternate','merge-before-danger','merge-danger-inherit','danger-during-shake','entered','spill-never-entered','spill-return','spill-child','terminal-priority','side-escape','settlement-retry','restart-confirm','shake-cooldown','shake-drop','shake-pause'].includes(fixtureId)){allowedOptions.add('tick');allowedOptions.add('dangerTicks');}
     for(const key of Object.keys(options))if(!allowedOptions.has(key))throw new Error(`FIXTURE_OPTION_NOT_ALLOWED:${key}`);
     const levelValue=options.level??1;if(!Number.isSafeInteger(levelValue)||Number(levelValue)<1||Number(levelValue)>9)throw new Error('FIXTURE_LEVEL_INVALID');
@@ -899,6 +1015,8 @@ export class GameRoot extends Component {
     const add=(entityId:number,n:number,x:number,y:number,flags:Partial<IngredientState>={})=>{const item=definition(n);states.push({entityId,level:n as Level,positionDu:{x,y},velocityDuPerSecond:{x:0,y:0},angleRadians:0,angularVelocity:0,bornTick:0,dangerEligible:false,hasEnteredCup:false,spillTicks:0,sleeping:false,...flags});};
     const center=rules.cup.center_x_du,floor=rules.cup.inner_bottom_y_du+90;
     const pair=(a:number,b:number,y=floor,offset=0)=>{const ra=definition(a).radius_du,rb=definition(b).radius_du;const d=(ra+rb)*.94;add(states.length+1,a,center+offset-d/2,y);add(states.length+1,b,center+offset+d/2,y);};
+    const interiorHalf=(y:number)=>rules.cup.bottom_width_du/2+(y-rules.cup.inner_bottom_y_du)*(rules.cup.top_width_du-rules.cup.bottom_width_du)/(2*(rules.cup.inner_top_y_du-rules.cup.inner_bottom_y_du));
+    const ensureInterior=(x:number,y:number,r:number,margin=2)=>{if(y-r<rules.cup.inner_bottom_y_du+margin||y+r>rules.cup.inner_top_y_du-margin||Math.abs(x-center)+r>interiorHalf(y)-margin)throw new Error(`GUARD_FIXTURE_NOT_INSIDE_CUP:${x},${y},${r}`);};
     switch(fixtureId){
       case 'empty':case 'shake-empty':case 'initial-preview':case 'control-pump':case 'control-preempt':case 'clock-restore':
         pattern='empty';break;
@@ -915,20 +1033,21 @@ export class GameRoot extends Component {
         pattern='real-terminal-ready-entered-body-for-three-commit-faults-and-fourth-retry';geometry={entityId:1,spillTicks:29,topYDu:rules.cup.inner_top_y_du,expectedFaultCount:3};break;}
       case 'shake-sample':{
         const j=options.sampleIndex,r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+(rules.cup.inner_top_y_du-rules.cup.inner_bottom_y_du)*.72;
-        if(!Number.isSafeInteger(j)||Number(j)<0||Number(j)>48)throw new Error('SHAKE_SAMPLE_INDEX_INVALID');
+        const shakeSampleLimit=Math.round(rules.shake.duration_seconds*rules.physics.fixed_hz)-1;
+        if(!Number.isSafeInteger(j)||Number(j)<0||Number(j)>shakeSampleLimit)throw new Error('SHAKE_SAMPLE_INDEX_INVALID');
         if(y-r<=rules.cup.inner_bottom_y_du||y+r>=rules.cup.inner_top_y_du||Math.abs(center-rules.cup.center_x_du)+r>=rules.cup.top_width_du/2)throw new Error('SHAKE_SAMPLE_BODY_NOT_FINITE_CUP_INTERIOR');
         add(1,1,center,y,{hasEnteredCup:true,dangerEligible:true});tick=0;
         pattern='single-real-level1-body-inside-finite-cup-starting-with-no-shake-for-trusted-player-command';
         geometry={sampleIndex:Number(j),entityId:1,bodyCenterDu:{x:center,y},radiusDu:r,bottomClearanceDu:y-r-rules.cup.inner_bottom_y_du,topClearanceDu:rules.cup.inner_top_y_du-y-r,expectedSamplesThroughIndex:Number(j),initialShake:{...base.shake},cup:{centerXDu:center,bottomYDu:rules.cup.inner_bottom_y_du,topYDu:rules.cup.inner_top_y_du,bottomWidthDu:rules.cup.bottom_width_du,topWidthDu:rules.cup.top_width_du}};break;}
-      case 'shake-two':case 'shake-child':pair(1,1);pattern=fixtureId==='shake-child'?'two-real-parents-with-shake-active-for-next-step':'two-real-touching-level1-bodies';if(fixtureId==='shake-child'){tick=1;shake={...shake,baseUsed:1,activeStartTick:1,cooldownUntilTick:79};}break;
+      case 'shake-two':case 'shake-child':pair(1,1);pattern=fixtureId==='shake-child'?'two-real-parents-with-shake-active-for-next-step':'two-real-touching-level1-bodies';if(fixtureId==='shake-child'){tick=1;shake={...shake,baseUsed:1,activeStartTick:1,cooldownUntilTick:61};}break;
       case 'shake-rapid':{const r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+150;add(1,1,center,y,{dangerEligible:true,hasEnteredCup:true});pattern='single-no-contact-real-body-for-repeated-trusted-shake-input';geometry={entityId:1,radiusDu:r,centerDu:{x:center,y}};break;}
-      case 'shake-cooldown':{const r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+150;add(1,1,center,y,{dangerEligible:true,hasEnteredCup:true});tick=120;shake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:50,cooldownUntilTick:128};pattern='one-real-body-with-ended-active-shake-and-exact-m-plus-77-m-plus-78-cooldown-boundaries';geometry={acceptedShakeTick:50,rejectAtTick:127,acceptAtTick:128,cooldownUntilTick:128};break;}
-      case 'shake-drop':{const r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+150;add(1,1,center,y,{dangerEligible:true,hasEnteredCup:true});tick=90;shake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:50,cooldownUntilTick:128};pattern='real-drop-active-shake-m-plus-47-reject-and-m-plus-48-accept';geometry={shakeStartTick:50,dropRejectAtTick:97,dropAcceptAtTick:98,spawnXDu:center};break;}
-      case 'shake-pause':{const r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+r+150;add(1,1,center,y,{dangerEligible:true,hasEnteredCup:true});pattern='single-real-body-for-pausing-midway-through-48-step-shake-and-resuming-remaining-steps';geometry={durationTicks:48,observeAtElapsed:24};break;}
+      case 'shake-cooldown':{const r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+150;add(1,1,center,y,{dangerEligible:true,hasEnteredCup:true});tick=120;shake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:60,cooldownUntilTick:120,guardMembers:[],guardStableTicks:0,guardReleased:true};pattern='one-real-body-with-ended-active-shake-and-exact-m-plus-59-m-plus-60-cooldown-boundaries';geometry={acceptedShakeTick:60,rejectAtTick:119,acceptAtTick:120,cooldownUntilTick:120};break;}
+      case 'shake-drop':{const r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+150;add(1,1,center,y,{dangerEligible:true,hasEnteredCup:true});tick=90;shake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:60,cooldownUntilTick:120,guardMembers:[],guardStableTicks:0,guardReleased:true};pattern='real-drop-active-shake-m-plus-38-reject-and-m-plus-39-accept';geometry={shakeStartTick:60,dropRejectAtTick:98,dropAcceptAtTick:99,spawnXDu:center};break;}
+      case 'shake-pause':{const r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+r+150;add(1,1,center,y,{dangerEligible:true,hasEnteredCup:true});const durationTicks=Math.round(rules.shake.duration_seconds*rules.physics.fixed_hz);pattern='single-real-body-for-pausing-midway-through-the-current-shake-and-resuming-remaining-steps';geometry={durationTicks,observeAtElapsed:Math.floor(durationTicks/2)};break;}
       case 'shake-mass':{
         const y=rules.cup.inner_bottom_y_du+120;
         add(1,1,center-45,y,{dangerEligible:true,hasEnteredCup:true});add(2,2,center+45,y,{dangerEligible:true,hasEnteredCup:true});
-        pattern='two-separated-no-contact-real-level1-and-level2-bodies-for-force-mass-measurement';
+        pattern='two-separated-no-contact-real-level1-and-level2-bodies-for-impulse-mass-measurement';
         geometry={bodyIds:[1,2],centerDistanceDu:90,radiiDu:[definition(1).radius_du,definition(2).radius_du],noInitialContact:true};break;}
       case 'shake-sleep':{
         const r=definition(1).radius_du,y=rules.cup.inner_bottom_y_du+r;
@@ -943,11 +1062,11 @@ export class GameRoot extends Component {
         // 32 DU/s is exactly representable at PTM32 in Box2D; keep the
         // moving-body round-trip check byte-for-byte stable across WASM.
         add(3,1,450,800,{velocityDuPerSecond:{x:32,y:0},dangerEligible:true,hasEnteredCup:true});
-        shake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:tick-10,cooldownUntilTick:tick+18};
-        const bottomBody=states[0],dangerBody=states[1],movingBody=states[2];
-        if(dangerBody.positionDu.y+r<=rules.cup.danger_line_y_du||dangerBody.positionDu.y+r>=rules.cup.inner_top_y_du||!bottomBody.sleeping||movingBody.sleeping||shake.activeStartTick===null||tick-shake.activeStartTick>=48)throw new Error('SAVE_ROUNDTRIP_STATE_INVALID');
+        shake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick:tick-10,cooldownUntilTick:tick+Math.round((rules.shake.duration_seconds+rules.shake.cooldown_seconds)*rules.physics.fixed_hz)-10,guardMembers:[2],guardStableTicks:0,guardReleased:false};
+        const bottomBody=states[0],dangerBody=states[1],movingBody=states[2],shakeTicks=Math.round(rules.shake.duration_seconds*rules.physics.fixed_hz);
+        if(dangerBody.positionDu.y+r<=rules.cup.danger_line_y_du||dangerBody.positionDu.y+r>=rules.cup.inner_top_y_du||!bottomBody.sleeping||movingBody.sleeping||shake.activeStartTick===null||tick-shake.activeStartTick>=shakeTicks)throw new Error('SAVE_ROUNDTRIP_STATE_INVALID');
         pattern='valid-sleeping-floor-body-plus-danger-eligible-awake-moving-body-with-active-base-shake';
-        geometry={sleepingEntityId:1,dangerEntityId:2,movingEntityId:3,dangerTicks,shakeActiveRemainingTicks:48-(tick-shake.activeStartTick),cup:{centerXDu:center,bottomYDu:rules.cup.inner_bottom_y_du,topYDu:rules.cup.inner_top_y_du,bottomWidthDu:rules.cup.bottom_width_du,topWidthDu:rules.cup.top_width_du}};break;}
+        geometry={sleepingEntityId:1,dangerEntityId:2,movingEntityId:3,dangerTicks,shakeActiveRemainingTicks:shakeTicks-(tick-shake.activeStartTick),cup:{centerXDu:center,bottomYDu:rules.cup.inner_bottom_y_du,topYDu:rules.cup.inner_top_y_du,bottomWidthDu:rules.cup.bottom_width_du,topWidthDu:rules.cup.top_width_du}};break;}
       case 'cleanup20':pair(1,1);pattern='real-contact-pair-before-owned-world-rebuild';break;
       case 'persistent':{
         const r1=definition(1).radius_du,r2=definition(2).radius_du,y=rules.cup.inner_bottom_y_du+r1;
@@ -1060,8 +1179,8 @@ export class GameRoot extends Component {
       case 'danger-during-shake':{
         const r=definition(1).radius_du,line=rules.cup.danger_line_y_du;tick=Number(options.tick??100);dangerTicks=Number(options.dangerTicks??178);
         add(1,1,center,line-r+3,{bornTick:0,dangerEligible:true,hasEnteredCup:true});
-        const activeStartTick=tick-12;shake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick,cooldownUntilTick:tick+66};
-        pattern='qualified-real-body-continuously-over-danger-line-during-active-base-shake';geometry={lineYDu:line,radiusDu:r,bodyTopDu:states[0].positionDu.y+r,activeStartTick,activeUntilTick:activeStartTick+48,requestedDangerTicks:dangerTicks};break;}
+        const activeStartTick=tick-12,shakeTicks=Math.round(rules.shake.duration_seconds*rules.physics.fixed_hz);shake={baseUsed:1,extraGranted:0,extraUsed:0,activeStartTick,cooldownUntilTick:activeStartTick+shakeTicks+Math.round(rules.shake.cooldown_seconds*rules.physics.fixed_hz),guardMembers:[1],guardStableTicks:0,guardReleased:false};
+        pattern='qualified-real-body-continuously-over-danger-line-during-active-base-shake';geometry={lineYDu:line,radiusDu:r,bodyTopDu:states[0].positionDu.y+r,activeStartTick,activeUntilTick:activeStartTick+shakeTicks,requestedDangerTicks:dangerTicks};break;}
       case 'entered':{
         const r=definition(1).radius_du,top=rules.cup.inner_top_y_du;tick=Number(options.tick??0);
         add(1,1,center-45,top+r+8,{bornTick:tick,dangerEligible:false,hasEnteredCup:false});
@@ -1175,6 +1294,25 @@ export class GameRoot extends Component {
         const minWallClearance=Math.min(...candidates.reduce((all,p)=>all.concat([segmentDistance(p,leftBottom,leftTop),segmentDistance(p,rightBottom,rightTop),p.y-bottomY,topY-p.y].map(d=>d-r)),[] as number[]));
         if(minPairDistance<2*r||minWallClearance<boundaryClearanceDu||minInteriorSideMargin<r+boundaryClearanceDu||minEndpointClearance<boundaryClearanceDu)throw new Error('SAVE_COST_FIXTURE_GEOMETRY_INVALID');
         pattern='220-config-derived-level1-dynamic-bodies-nonoverlap-finite-cup-interior-and-endpoint-clearance';geometry={count:candidates.length,radiusDu:r,clearanceGapDu,boundaryClearanceDu,minPairDistanceDu:minPairDistance,minWallClearanceDu:minWallClearance,minInteriorSideMarginDu:minInteriorSideMargin,minEndpointClearanceDu:minEndpointClearance,gridSpacingDu:{x:dx,y:dy},allCentersInsideFiniteCup:true};break;}
+      case 'guard-half':{
+        const layout=Number(options.layout??1);if(![1,2,3].includes(layout))throw new Error('GUARD_HALF_LAYOUT_INVALID');
+        const rows:Array<[number,number,number]>=layout===1?[[4,270,406],[1,330,382],[2,376,388],[3,436,396],[1,500,382]]
+          :layout===2?[[1,340,382],[1,376,382],[2,358,424],[3,440,396],[1,500,382]]
+          :[[3,257,396],[2,375,388],[1,330,382],[1,420,382],[4,480,406]];
+        for(const [n,x,y] of rows){ensureInterior(x,y,definition(n).radius_du,3);add(states.length+1,n,x,y,{dangerEligible:false,hasEnteredCup:true});}
+        pattern=`half-cup-mixed-layout-${layout}`;geometry={layout,bodyIds:states.map(s=>s.entityId),levels:rows.map(r=>r[0])};break;}
+      case 'guard-near-full':{
+        const put=(n:number,x:number,y:number,entered=true)=>{const r=definition(n).radius_du;if(entered)ensureInterior(x,y,r,2);else ensureInterior(x,y,0,2);add(states.length+1,n,x,y,{dangerEligible:true,hasEnteredCup:true});};
+        for(const x of [255,335,415,495])put(2,x,387);
+        for(const x of [305,375,445])put(3,x,441);
+        for(const x of [330,420])put(4,x,513);
+        put(5,375,608);put(6,375,731);put(7,375,888);
+        // Centre still inside the finite rim while the top edge protrudes above it.
+        const protrudeEntityId=states.length+1;put(1,505,985,false);
+        // 1 DU overlap between two level-1 bodies: the merge child must inherit this guard window.
+        put(1,520,950);put(1,555,950);
+        pattern='near-full-mixed-radius-pyramid-with-rim-protrusion-and-same-level-merge-pair';
+        geometry={rimYDu:rules.cup.inner_top_y_du,protrudeEntityId,mergePairIds:[protrudeEntityId+1,protrudeEntityId+2],bodyCount:states.length};break;}
       default:throw new Error(`FIXTURE_NOT_IMPLEMENTED:${fixtureId}`);
     }
     const next={...base,state:'PAUSED' as const,tick,dangerTicks,shake,ingredients:states,nextEntityId:states.length+1,
@@ -1240,14 +1378,14 @@ export class GameRoot extends Component {
       readEventPage:(cursor=0,limit=256)=>{const p=this.events.page(cursor,limit);return {...p,records:p.records.map(row=>({seq:row.seq,event:row.value}))};},
       readDangerStepPage:(cursor=0,limit=256)=>{const p=this.dangerStepTrace.page(cursor,limit);return {...p,records:p.records.map(row=>({seq:row.seq,...row.value}))};},
       readPressureStepPage:(cursor=0,limit=128)=>{const p=this.pressureStepTrace.page(cursor,limit);return {...p,records:p.records.map(row=>({seq:row.seq,...row.value}))};},
-      readFixtureAccelerationProbe:()=>this.adapter?.readFixtureAccelerationProbe()??[],
+      readFixtureImpulseProbe:()=>this.adapter?.readFixtureImpulseProbe()??[],
       readFixtureMergeProbe:()=>this.adapter?.readFixtureMergeProbe()??[],
       readFixtureWallProbe:()=>this.adapter?.readFixtureWallProbe()??[],
       readFixtureWallGeometry:()=>this.adapter?.readFixtureWallGeometry()??[],
       readLifecycle:()=>HostLifecycleCoordinator.snapshot(),status:()=>({screen:this.screen,phase:this.engine?.phase??'MENU',paused:!!this.clock?.paused,pauseReasons:Array.from(this.pauseOwners),stepCount:this.adapter?.stepCount??0,clockTick:this.clock?.tick??0,baseTick:this.baseTick,tick:this.engine?.tick??0,lastCommandOutcome:this.engine?.currentOutcome??null,lastTickFault:this.engine?.lastTickFault??null,contactCount:this.adapter?.contactCount??0,contactBeginEvents:this.adapter?.contactBeginEvents??0,contactEndEvents:this.adapter?.contactEndEvents??0,contactEnumeration:this.adapter?.fixtureContactEnumeration??null,listenerCount:this.adapter?.listenerCount??0,worldId:this.worldId,notice:this.notice,saveRevision:this.bundleRevision,saveMode:this.debugMode?'attempt-scoped-debug':this.persistent?'persistent':'memory-only'}),
       enqueue:(command:RunCommand)=>this.engine?.dispatch({command,ownerEpoch:this.engine.snapshot().epoch})??{ok:false,error:{code:'NO_RUN',message:'no active run',retryable:false}},verifyResumeTransitions:()=>HostLifecycleCoordinator.verifyResumeTransitionsForTests(),
       replayLastConsumedMerge:()=>{if(!this.debugMode||this.lastConsumedDomainEvent?.kind!=='MergeCommitted')throw new Error('SEALED_MERGE_EVENT_REQUIRED');const event=this.lastConsumedDomainEvent,before={eventSeq:this.events.latestSeq,score:this.engine?.snapshot().score,saveRevision:this.bundleRevision,saveDirty:this.saveDirty};this.lastEvents.push(event);this.processEvents();return{eventId:event.eventId,before,after:{eventSeq:this.events.latestSeq,score:this.engine?.snapshot().score,saveRevision:this.bundleRevision,saveDirty:this.saveDirty}};}};
-    w.__P1B_FIXTURES__={version:'p1b-fixture-v13',supported:['empty','shake-empty','shake-sample','initial-preview','control-pump','control-preempt','clock-restore','restart-confirm','score-replay','five-substeps','uuid','view-only','settlement-retry','shake-two','shake-child','shake-rapid','shake-cooldown','shake-drop','shake-pause','shake-mass','shake-sleep','create-fault','commit-fault','stale-contact','roundtrip','cleanup20','level-pairs','level-pair','three','four','mixed-level','max-level','wall-projection','next-generation','merge-wall-impact','multi-contact','multi-pair','tie-order','persistent','inheritance','weighted-state','neighbor-overlap','angular-unit','linear-limit','contact-grace','grace','danger-line','danger-supported-continuous','danger-supported-continuous-shortcup','danger-reset','danger-alternate','danger-during-shake','entered','merge-before-danger','merge-danger-inherit','spill-child','terminal-priority','side-escape','mochi-milestone','danger179','danger180','spill-never-entered','spill-return','spill-threshold','revive-candidate','blocked-spawn','spawn-boundary','spawn-tangent','save-cost-220'],start:async({attemptId,seed=1,fixtureId='empty',storageNamespace,fixtureOptions={}}:{attemptId:string;seed?:number;fixtureId?:string;storageNamespace?:string;fixtureOptions?:Record<string,unknown>})=>{
+    w.__P1B_FIXTURES__={version:'p1b-fixture-v13',supported:['empty','shake-empty','shake-sample','initial-preview','control-pump','control-preempt','clock-restore','restart-confirm','score-replay','five-substeps','uuid','view-only','settlement-retry','shake-two','shake-child','shake-rapid','shake-cooldown','shake-drop','shake-pause','shake-mass','shake-sleep','create-fault','commit-fault','stale-contact','roundtrip','cleanup20','level-pairs','level-pair','three','four','mixed-level','max-level','wall-projection','next-generation','merge-wall-impact','multi-contact','multi-pair','tie-order','persistent','inheritance','weighted-state','neighbor-overlap','angular-unit','linear-limit','contact-grace','grace','danger-line','danger-supported-continuous','danger-supported-continuous-shortcup','danger-reset','danger-alternate','danger-during-shake','entered','merge-before-danger','merge-danger-inherit','spill-child','terminal-priority','side-escape','mochi-milestone','danger179','danger180','spill-never-entered','spill-return','spill-threshold','revive-candidate','blocked-spawn','spawn-boundary','spawn-tangent','save-cost-220','guard-half','guard-near-full'],start:async({attemptId,seed=1,fixtureId='empty',storageNamespace,fixtureOptions={}}:{attemptId:string;seed?:number;fixtureId?:string;storageNamespace?:string;fixtureOptions?:Record<string,unknown>})=>{
       if(!attemptId||!/^[A-Za-z0-9._-]+$/.test(attemptId))throw new Error('valid attemptId required');
       if(!w.__P1B_FIXTURES__.supported.includes(fixtureId))throw new Error(`FIXTURE_NOT_IMPLEMENTED:${fixtureId}`);
       const namespace=storageNamespace??`attempt-${attemptId}`;if(namespace!==`attempt-${attemptId}`)throw new Error('debug storage namespace must be attempt scoped');
@@ -1258,7 +1396,7 @@ export class GameRoot extends Component {
       if(!this.engine||!this.adapter)throw new Error('FIXTURE_START_DID_NOT_CREATE_OWNER');
       const base=this.engine.snapshot(),created=this.makeFixtureSnapshot(base,fixtureId,fixtureOptions);
       this.clock?.pause();this.engine.dispose();const runId=created.snapshot.runId,adapter=this.createWorld();
-      if(['shake-sample','shake-mass','shake-child','shake-sleep','shake-pause'].includes(fixtureId))adapter.enableFixtureAccelerationProbe();
+      if(['shake-sample','shake-mass','shake-child','shake-sleep','shake-pause','guard-half','guard-near-full'].includes(fixtureId))adapter.enableFixtureImpulseProbe();
       if(['inheritance','weighted-state','neighbor-overlap','linear-limit','merge-danger-inherit','spill-child','score-replay','five-substeps','uuid','wall-projection'].includes(fixtureId))adapter.enableFixtureMergeProbe();
       if(fixtureId==='wall-projection')adapter.enableFixtureWallProbe();
       if(fixtureId==='tie-order')adapter.setContactEnumerationReversedForFixture(fixtureOptions.contactOrder==='reverse');
@@ -1277,6 +1415,9 @@ export class GameRoot extends Component {
       return {attemptId,fixtureId,seed,namespace,fixtureHash,fixtureSpec:created.spec,buildId:AppRuntime.buildId,debugRevision:fixtureCommit.data.revision,owner:{sceneLifetimeId:this.sceneId,runId:snapshot.runId,epoch:snapshot.epoch,worldId:this.worldId},
         status:'started-paused',storageMode:'attempt-scoped-debug-repository',snapshot};
     },enqueue:(command:RunCommand)=>w.__P1B_DIAGNOSTICS__.enqueue(command),injectFault:({point}:{point:string})=>{if(!this.debugRepo)throw new Error('DEBUG_FIXTURE_NOT_STARTED');this.debugRepo.injectFaultOnce(point);},
+      injectActiveFault:({point}:{point:string})=>{this.repo.injectFaultOnce(point);},
+      readActiveBundle:async()=>this.repo.readBundle(),
+      injectRenderFault:({count=1}:{count?:number}={})=>{this.debugRenderFaults=count;},
       readDebugBundle:async()=>{if(!this.debugRepo)throw new Error('DEBUG_FIXTURE_NOT_STARTED');return this.debugRepo.readBundle();},
       commitDebugBundle:async({expectedRevision,expectedRunId,next}:{expectedRevision:number;expectedRunId:string|null;next:LocalSaveBundle})=>{if(!this.debugRepo)throw new Error('DEBUG_FIXTURE_NOT_STARTED');return this.debugRepo.commitBundle(expectedRevision,expectedRunId,next);},
       rebuildOwnedWorld:()=>{

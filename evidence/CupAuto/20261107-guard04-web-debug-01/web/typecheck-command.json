@@ -1,0 +1,9 @@
+{
+  "command": [
+    "node.exe",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-guard04-web-debug-01\\node_modules\\typescript\\bin\\tsc",
+    "--project",
+    "D:\\Workspace\\TapTap\\奶茶挤挤\\build-artifacts\\cocos-p1b-build-source\\20261107-guard04-web-debug-01\\tsconfig.json"
+  ],
+  "cwd": "D:\\Workspace\\TapTap\\奶茶挤挤"
+}
